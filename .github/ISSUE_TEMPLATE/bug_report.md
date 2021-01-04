@@ -12,6 +12,7 @@ Explanation of Problem:
 - OS:
 - HOI4 Version: 
 - Using Steam?
+- Missing any DLCs?
 - Any other Mods on?: 
 
 *To Reproduce
