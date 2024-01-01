@@ -1,0 +1,16 @@
+characters={
+	OHI_george_v = {
+		name = "George V" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OHI/george_v.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

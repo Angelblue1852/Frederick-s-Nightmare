@@ -1,0 +1,16 @@
+characters={
+	ETH_haile_selassie = {
+		name = "Haile Selassie" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ETH/ETH_haile_selassie.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

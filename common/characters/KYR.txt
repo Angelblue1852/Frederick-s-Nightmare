@@ -1,0 +1,41 @@
+characters={
+	KYR_mustafa_shokay = {
+		name = "Mustafa Shokay" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KYR/KYR_mustafa_shokay.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	KYR_mukhamedzhan_tynyshpaev = {
+		name = "Mukhamedzhan Tynyshpaev" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KYR/KYR_mukhamedzhan_tynyshpaev.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = mukhamedzhan_tynyshpaev
+			available = { is_country_leader = no }
+			ledger = civilian
+			traits = { local_administrator }
+		}
+	}
+}
+	

@@ -1,0 +1,186 @@
+characters={
+	TUR_abdulmejid_ii = {
+		name = "Abdulmejid II" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_abdulmejid_ii.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	TUR_cemil_cahit_toydemir = {
+		name = "Cemil Cahit Toydemir" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_cemil_cahit_toydemir.png"
+			}
+		}
+		field_marshal = {
+			skill = 4
+			traits = { turk old_guard hill_fighter }
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	TUR_fahrettin_altay = {
+		name = "Fahrettin Altay" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_fahrettin_altay.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { turk cavalry_leader }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	TUR_fakhri_pasha = {
+		name = "Fakhri Pasha" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_fakhri_pasha.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { turk desert_fox }
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	TUR_fevzi_cakmak = {
+		name = "Fevzi Çakmak" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_fevzi_cakmak.png"
+			}
+		}
+		field_marshal = {
+			skill = 5
+			traits = { turk brilliant_strategist offensive_doctrine organisational_leader }
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	TUR_hayrullah_fisek = {
+		name = "Fevzi Çakmak" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_hayrullah_fisek.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { turk career_officer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	TUR_kazım_orbay = {
+		name = "Kâzım Orbay" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_kazım_orbay.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { turk career_officer skilled_staffer }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	TUR_sefik_aker = {
+		name = "Şefik Aker" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_sefik_aker.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { turk politically_connected harsh_leader infantry_officer }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	TUR_tahsin_yazici = {
+		name = "Tahsin Yazıcı" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_tahsin_yazici.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { turk career_officer infantry_officer }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	TUR_abd_al_karim_qasim = {
+		name = "Abd al-Karim Qasim" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_abd_al_karim_qasim.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { iraqi career_officer desert_fox brilliant_strategist }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	TUR_fawzi_al_qawuqji = {
+		name = "Fawzi al-Qawuqji" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_fawzi_al_qawuqji.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { syrian desert_fox }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+	

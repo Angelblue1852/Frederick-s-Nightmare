@@ -1,0 +1,16 @@
+characters={
+	ROM_georgi_dimitrov = {
+		name = "Georgi Dimitrov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ROM/ROM_georgi_dimitrov.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

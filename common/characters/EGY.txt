@@ -1,0 +1,98 @@
+characters={
+	EGY_faud_i = {
+		name = "Faud I" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/EGY_faud_i.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	EGY_farouk_i = {
+		name = "Farouk I" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/EGY_farouk_i.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	EGY_abdel_hakim_amer = {
+		name = "Abdel Hakim Amer" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/EGY_abdel_hakim_amer.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	EGY_mohammed_naguib = {
+		name = "Mohammed Naguib" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/EGY_mohammed_naguib.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	EGY_hussein_refki = {
+		name = "Hussein Refki" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/EGY_hussein_refki.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	EGY_aziz_ezzat = {
+		name = "Aziz Ezzat" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/EGY_aziz_ezzat.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { old_guard }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}
+	

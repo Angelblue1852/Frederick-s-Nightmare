@@ -1,0 +1,16 @@
+characters={
+	BRA_getulio_vargas = {
+		name = "Getúlio Vargas" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRA/BRA_getulio_vargas.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,36 @@
+characters={
+	IRE_eamon_de_valera = {
+		name = "Éamon de Valera" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRE/IRE_eamon_de_valera.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	IRE_eoin_oduffy = {
+		name = "Eoin O'Duffy" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRE/IRE_eoin_oduffy.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+}
+	

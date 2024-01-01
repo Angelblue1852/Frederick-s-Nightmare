@@ -1,0 +1,16 @@
+characters={
+	SEQ_william_murray = {
+		name = "William 'Alfalfa Bill' Murray" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SEQ/SEQ_william_murray.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,16 @@
+characters={
+	BRM_arch_cochrane = {
+		name = "Archibald Cochrane" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRM/BRM_arch_cochrane.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

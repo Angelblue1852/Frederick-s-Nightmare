@@ -1,0 +1,16 @@
+characters={
+	SWB_fredrick_kaltenbach = {
+		name = "Frederick Wilhelm Kaltenbach" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SWB/SWB_fredrick_kaltenbach.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

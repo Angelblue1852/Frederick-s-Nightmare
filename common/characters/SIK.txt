@@ -1,0 +1,16 @@
+characters={
+	SIK_sheng_shicai = {
+		name = "Sheng Shicai" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIK/SIK_sheng_shicai.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

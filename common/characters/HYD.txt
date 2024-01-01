@@ -1,0 +1,30 @@
+characters={
+	HYD_asaf_jah_vii = {
+		name = "Asaf Jah VII" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HYD/HYD_asaf_jah_vii.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	HYD_vinayak_damodar_savarkar = {
+		name = "Vinayak Damodar Savarkar" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HYD/HYD_vinayak_damodar_savarkar.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

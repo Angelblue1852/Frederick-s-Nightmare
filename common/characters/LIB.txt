@@ -1,0 +1,16 @@
+characters={
+	LIB_edwin_barclay = {
+		name = "Edwin Barclay" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/LIB_edwin_barclay.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

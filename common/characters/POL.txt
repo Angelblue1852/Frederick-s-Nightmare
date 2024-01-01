@@ -1,0 +1,16 @@
+characters={
+	POL_pavel_yengalychev = {
+		name = "Pavel Yengalychev" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/POL_pavel_yengalychev.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

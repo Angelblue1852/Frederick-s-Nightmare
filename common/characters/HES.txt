@@ -1,0 +1,33 @@
+characters={
+	HES_ludwig_landmann = {
+		name = "Ludwig Landmann" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HES/HES_ludwig_landmann.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	HES_max_hoelz = {
+		name = "Ludwig Landmann" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/HES/HES_max_hoelz.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { spartakist }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+	

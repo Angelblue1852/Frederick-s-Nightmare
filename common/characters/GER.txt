@@ -1,0 +1,468 @@
+characters={
+	GER_otto_wels = {
+		name = "Otto Wels" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_otto_wels.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GER_manfred_von_richthofen = {
+		name = "Manfred von Richthofen" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_manfred_von_richthofen.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GER_albert_speer = {
+		name = "Albert Speer" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_albert_speer.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GER_kurt_von_schleicher = {
+		name = "Kurt von Schleicher" 
+		portraits = {
+			civilian = {
+				large = 
+				"gfx/leaders/GER/GER_kurt_von_schleicher.png"
+			}
+			army = {
+				large = 
+				"gfx/leaders/GER/GER_kurt_von_schleicher.png"
+			}
+		}
+		field_marshal = {
+			skill = 5
+			traits = { german_nationalist }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 5
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GER_rosa_luxemburg = {
+		name = "Rosa Luxemburg" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_rosa_luxemburg.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GER_wilhelm_ii = {
+		name = "Wilhelm II" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_wilhelm_ii.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GER_wilhelm_iii = {
+		name = "Wilhelm III" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_wilhelm_iii.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	#######Generals#######
+	
+	GER_august_von_mackensen = {
+		name = "August von Mackensen" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_august_von_mackensen.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { old_guard german_nationalist }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	GER_carl_heinrich_von_stuelpnagel = {
+		name = "Carl Heinrich von Stuelpnagel" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_carl_heinrich_von_stuelpnagel.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { skilled_staffer german_nationalist }
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	
+	GER_erich_ludendorff = {
+		name = "Erich Ludendorff" 
+		portraits = {
+			army = {
+				large =	"gfx/leaders/GER/GER_erich_ludendorff.png"
+			}
+		}
+		field_marshal = {
+			skill = 4
+			traits = { german_nationalist old_guard }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 5
+			logistics_skill = 1
+		}
+	}
+	
+	GER_erich_von_manstein = {
+		name = "Erich von Manstein" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_erich_von_manstein.png"
+			}
+		}
+		corps_commander = {
+			skill = 5
+			traits = { panzer_leader german_nationalist }
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+	
+	GER_erwin_von_witzleben = {
+		name = "Erwin von Witzleben" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_erwin_von_witzleben.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { old_guard german_nationalist infantry_leader skilled_staffer }
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	GER_fedor_von_boch = {
+		name = "Fedor von Boch" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_fedor_von_boch.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { german_nationalist infantry_leader }
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	GER_friedrich_shulz = {
+		name = "Friedrich Shulz" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_friedrich_shulz.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { german_nationalist infantry_leader }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	GER_georg_von_kuechler = {
+		name = "Georg von küchler" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_georg_von_kuechler.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { natsoc bearer_of_artillery }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	GER_gerd_von_rundstedt = {
+		name = "Gerd von Rundstedt" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_gerd_von_rundstedt.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { german_nationalist defensive_doctrine }
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	GER_gunther_von_kluge = {
+		name = "Günther von Kluge" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_gunther_von_kluge.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { german_nationalist panzer_leader }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	GER_hasso_von_manteuffel = {
+		name = "Hasso von Manteuffel" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_hasso_von_manteuffel.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { german_nationalist panzer_leader }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	GER_hermann_hoth = {
+		name = "Hermann Hoth" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_hermann_hoth.png"
+			}
+		}
+		corps_commander = {
+			skill = 5
+			traits = { panzer_leader natsoc brilliant_strategist }
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	
+	GER_johannes_blaskowitz = {
+		name = "Johannes Blaskowitz" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_johannes_blaskowitz.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { german_nationalist career_officer }
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	
+	GER_kurt_student = {
+		name = "Kurt Student" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_kurt_student.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { german_nationalist }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	
+	GER_paul_hausser = {
+		name = "Paul Hausser" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_paul_hausser.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { volkist }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	GER_walter_model = {
+		name = "Walter Model" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_walter_model.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { brilliant_strategist german_nationalist harsh_leader panzer_leader }
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	#######Admirals#######
+	
+	GER_alfred_saalwachter = {
+		name = "Alfred Saalwächter" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_alfred_saalwachter.png"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			traits = { superior_tactician german_nationalist blockade_runner }
+			coordination_skill = 3
+			maneuvering_skill = 3
+		}
+	}
+	
+	GER_erich_raeder = {
+		name = "Erich Raeder" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_erich_raeder.png"
+			}
+		}
+		navy_leader = {
+			skill = 4
+			traits = { spotter german_nationalist fly_swatter }
+			attack_skill = 4
+			defense_skill = 4
+			coordination_skill = 3
+			maneuvering_skill = 4
+		}
+	}
+	
+	GER_karl_donitz = {
+		name = "Karl Donitz" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_karl_donitz.png"
+			}
+		}
+		navy_leader = {
+			skill = 5
+			traits = { german_nationalist seawolf }
+			attack_skill = 3
+			defense_skill = 2
+			coordination_skill = 5
+			maneuvering_skill = 4
+		}
+	}
+	
+	GER_max_bastian = {
+		name = "Max Bastian" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_max_bastian.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			traits = { german_nationalist seawolf }
+			attack_skill = 2
+			defense_skill = 1
+			coordination_skill = 3
+			maneuvering_skill = 2
+		}
+	}
+	
+	GER_reinhard_heydrich = {
+		name = "Reinhard Heydrich" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/GER_reinhard_heydrich.png"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			traits = { volkist }
+			attack_skill = 1
+			defense_skill = 1
+			coordination_skill = 1
+			maneuvering_skill = 1
+		}
+	}
+	
+	
+}
+	

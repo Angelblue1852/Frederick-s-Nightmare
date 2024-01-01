@@ -1,0 +1,16 @@
+characters={
+	ABS_swickard = {
+		name = "A. R. Swickard" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ABS/ABS_swickard.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

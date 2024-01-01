@@ -1,0 +1,16 @@
+characters={
+	SAX_rudolf_friedrichs = {
+		name = "Rudolf Friedrichs" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAX/SAX_rudolf_friedrichs.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

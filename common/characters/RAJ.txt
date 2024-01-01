@@ -1,0 +1,16 @@
+characters={
+	RAJ_jcaz = {
+		name = "Joint Colonial Administration Zone"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RAJ/RAJ_jcaz.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

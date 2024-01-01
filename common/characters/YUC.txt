@@ -1,0 +1,16 @@
+characters={
+	YUC_felipe_carrillo_puerto = {
+		name = "Felipe Carrillo Puerto" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/YUC/YUC_felipe_carrillo_puerto.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

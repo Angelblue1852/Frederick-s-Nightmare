@@ -1,0 +1,50 @@
+characters={
+	GXC_huang_shaohong = {
+		name = "Huang Shaohong" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GXC/GXC_huang_shaohong.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			skill = 3
+			traits = {
+				politically_connected
+			}
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	GXC_li_zongren = {
+		name = "Li Zongren" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GXC/GXC_li_zongren.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 3
+			traits = {
+				politically_connected
+			}
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}
+	

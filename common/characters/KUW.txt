@@ -1,0 +1,27 @@
+characters={
+	KUW_ahmad_al_jaber_al_sabah = {
+		name = "Ahmad Al-Jaber Al-Sabah" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KUW/KUW_ahmad_al_jaber_al_sabah.png"
+			}
+			army = {
+				large = "gfx/leaders/KUW/KUW_ahmad_al_jaber_al_sabah.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			traits = { cavalry_officer }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}
+	

@@ -1,0 +1,16 @@
+characters={
+	COL_alfonso_pumarejo = {
+		name = "Alfonso López Pumarejo" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/COL/COL_alfonso_pumarejo.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

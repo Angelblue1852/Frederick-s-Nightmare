@@ -1,0 +1,21 @@
+characters={
+	TAN_mongush_buyan_badyrgy = {
+		name = "Mongush Buyan-Badyrgy" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TAN/TAN_mongush_buyan_badyrgy.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

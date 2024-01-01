@@ -1,0 +1,691 @@
+characters={
+	USA_wadsworth = {
+		name = "James Wadsworth Jr." 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_james_wadsworth.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	USA_charles_curtis = {
+		name = "Charles Curtis" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_charles_curtis.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	USA_fdr = {
+		name = "Franklin D. Roosevelt" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_fdr.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	USA_quentin_roosevelt = {
+		name = "Quentin Roosevelt" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_quentin_roosevelt.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	USA_eugene_talmadge = {
+		name = "Eugene Talmadge" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_eugene_talmadge.png"
+			}
+		}
+		country_leader = {
+			ideology = reactionism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	USA_harry_byrd = {
+		name = "Harry Byrd Sr." 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_harry_byrd.png"
+			}
+		}
+		country_leader = {
+			ideology = centrism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	USA_charles_lindbergh = {
+		name = "Charles Lindbergh" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_charles_lindbergh.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	USA_earl_browder = {
+		name = "Earl Browder" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_earl_browder.png"
+				small = "gfx/interface/ideas/usa/GFX_earl_browder.png"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = earl_browder
+			available = { is_country_leader = no }
+			ledger = civilian
+			traits = { communist_revolutionary }
+		}
+	}
+	
+	#####Advisors#####
+	
+	
+	
+	
+	USA_hap_arnold = {
+		name = "Henry 'Hap' Arnold" 
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/usa/GFX_hap_arnold.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = hap_arnold
+			available = {  }
+			ledger = air
+			traits = { air_chief_reform_3 }
+		}
+	}
+	USA_carl_spaatz = {
+		name = "Carl Spaatz" 
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/usa/GFX_carl_spaatz.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = carl_spaatz
+			available = {  }
+			ledger = air
+			traits = { air_chief_night_operations_2 }
+		}
+	}
+	USA_benjamin_foulois = {
+		name = "Benjamin Foulois" 
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/usa/GFX_benjamin_foulois.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = benjamin_foulois
+			available = {  }
+			ledger = air
+			traits = { air_air_combat_training_1 }
+		}
+	}
+	USA_felix_warburg = {
+		name = "Felix Warburg" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/usa/GFX_felix_warburg.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = felix_warburg
+			available = { has_completed_focus = USA_adopt_the_warburg_plan }
+			ledger = civilian
+			traits = { captain_of_industry }
+		}
+	}
+	USA_gerald_macguire = {
+		name = "Gerald Macguire" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/usa/GFX_gerald_macguire.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = gerald_macguire
+			available = { has_completed_focus = USA_adopt_the_macguire_plan }
+			ledger = civilian
+			traits = { war_industrialist }
+		}
+	}
+	
+	USA_william_pelley = {
+		name = "William Dudley Pelley" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/usa/GFX_william_pelley.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = william_pelley
+			available = { is_country_leader = no }
+			ledger = civilian
+			traits = { fascist_paramilitary }
+		}
+	}
+	
+	USA_asa_randolph = {
+		name = "Asa Randolph" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/usa/GFX_asa_randolph.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = asa_randolph
+			available = { 
+				is_country_leader = no
+				has_completed_focus = USA_pass_the_civil_rights_act
+			}
+			ledger = civilian
+			traits = { radical_reformer }
+		}
+	}
+	
+	USA_hiram_evans = {
+		name = "Hiram Evans" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/usa/GFX_hiram_evans.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = hiram_evans
+			available = { 
+				is_country_leader = no
+				has_completed_focus = USA_maintain_segregation
+			}
+			ledger = civilian
+			traits = { southern_segregationist }
+		}
+	}
+	
+	#####Generals#####
+	
+	USA_alexander_vandergrift = {
+		name = "Alexander Vandergrift" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_alexander_vandergrift.png"
+				small = "gfx/interface/ideas/usa/GFX_alexander_vandergrift.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = alexander_vandergrift
+			ledger = army
+			traits = { navy_amphibious_assault_2 }
+		}
+	}
+	
+	USA_benjamin_o_davis_sr = {
+		name = "Benjamin O. Davis Sr." 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_benjamin_o_davis_sr.png"
+			}
+		}
+		#corps_commander = {
+		#	skill = 2
+		#	traits = {  }
+		#	attack_skill = 2
+		#	defense_skill = 2
+		#	planning_skill = 3
+		#	logistics_skill = 2
+		#}
+	}
+	
+	USA_dwight_eisenhower = {
+		name = "Dwight D. Eisenhower" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_dwight_eisenhower.png"
+				small = "gfx/interface/ideas/usa/GFX_dwight_eisenhower.png"
+			}
+		}
+		field_marshal = {
+			skill = 5
+			traits = { brilliant_strategist }
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = dwight_eisenhower
+			ledger = army
+			traits = { army_chief_offensive_2 }
+		}
+	}
+	
+	USA_george_gunert = {
+		name = "George Gunert" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_george_gunert.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { career_officer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	USA_omar_bradley = {
+		name = "Omar Bradley" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_omar_bradley.png"
+				small = "gfx/interface/ideas/usa/GFX_omar_bradley.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { infantry_leader }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = theorist
+			idea_token = omar_bradley
+			ledger = army
+			traits = { superior_firepower_expert }
+		}
+	}
+	
+	USA_george_patton = {
+		name = "George S. Patton" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_george_patton.png"
+				small = "gfx/interface/ideas/usa/GFX_george_patton.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { panzer_leader harsh_leader }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = george_patton
+			ledger = army
+			traits = { army_chief_maneuver_2 }
+		}
+		advisor = {
+			slot = theorist
+			idea_token = george_patton
+			ledger = army
+			traits = { mobile_warfare_expert }
+		}
+	}
+	
+	USA_jacob_dever = {
+		name = "Jacob Devers" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_jacob_dever.png"
+				small = "gfx/interface/ideas/usa/GFX_jacob_devers.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = jacob_denver
+			ledger = army
+			traits = { army_regrouping_1 }
+		}
+	}
+	
+	USA_jonathan_wainwright = {
+		name = "Jonathan_ Wainwright" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_jonathan_wainwright.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { infantry_leader }
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	
+	USA_joseph_stilwell = {
+		name = "Joseph Stilwell" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_joseph_stilwell.png"
+				small = "gfx/interface/ideas/usa/GFX_joseph_stilwell.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { harsh_leader }
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = joseph_stilwell
+			ledger = army
+			traits = { army_logistics_2 }
+		}
+	}
+	
+	USA_mark_clark = {
+		name = "Mark Clark" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_mark_clark.png"
+				small = "gfx/interface/ideas/usa/GFX_mark_clark.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { harsh_leader }
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = mark_clark
+			ledger = army
+			traits = { army_infantry_2 }
+		}
+	}
+	
+	USA_willard_wyman = {
+		name = "Willard Wyman" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_willard_wyman.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { career_officer }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	USA_adna_chaffee = {
+		name = "Adna Chaffee Jr." 
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/usa/GFX_adna_chaffee.png"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = adna_chaffee
+			ledger = army
+			traits = { mobile_warfare_expert }
+		}
+	}
+	
+	USA_john_pershing = {
+		name = "John J. Pershing" 
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/usa/GFX_john_pershing.png"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = pershing
+			ledger = army
+			traits = { grand_battle_plan_expert }
+		}
+	}
+	
+	#########Admirals#########
+	
+	USA_arthur_bristol_jr = {
+		name = "Arthur Bristol Jr." 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_arthur_bristol_jr.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			traits = { fleet_protector destroyer_leader }
+			attack_skill = 2
+			defense_skill = 1
+			coordination_skill = 2
+			maneuvering_skill = 3
+		}
+	}
+	
+	USA_aubrey_fitch = {
+		name = "Aubrey Fitch" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_aubrey_fitch.png"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			traits = { aviation_enthusiast fleet_protector }
+			attack_skill = 2
+			defense_skill = 1
+			coordination_skill = 2
+			maneuvering_skill = 3
+		}
+	}
+	
+	USA_chester_nimitz = {
+		name = "Chester Nimitz" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_chester_nimitz.png"
+				small = "gfx/interface/ideas/usa/GFX_chester_nimitz.png"
+			}
+		}
+		navy_leader = {
+			skill = 5
+			traits = { gentlemanly naval_lineage superior_tactician spotter blue_water_expert }
+			attack_skill = 4
+			defense_skill = 4
+			coordination_skill = 5
+			maneuvering_skill = 4
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = chester_nimitz
+			available = { has_completed_focus = USA_adopt_the_nimitz_plan }
+			ledger = navy
+			traits = { navy_chief_naval_aviation_2 }
+		}	
+	}
+	
+	USA_ernest_king = {
+		name = "Ernest King" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_ernest_king.png"
+				small = "gfx/interface/ideas/usa/GFX_ernest_king.png"
+			}
+		}
+		navy_leader = {
+			skill = 5
+			traits = { career_officer aviation_enthusiast superior_tactician caustic_personality blockade_runner }
+			attack_skill = 4
+			defense_skill = 4
+			coordination_skill = 5
+			maneuvering_skill = 5
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ernest_king
+			ledger = navy
+			traits = { navy_chief_reform_3 }
+		}	
+	}
+	USA_william_halsey = {
+		name = "William Halsey Jr." 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_william_halsey.png"
+				small = "gfx/interface/ideas/usa/GFX_william_halsey.png"
+			}
+		}
+		navy_leader = {
+			skill = 4
+			traits = { battleship_adherent bold superior_tactician spotter }
+			attack_skill = 5
+			defense_skill = 4
+			coordination_skill = 4
+			maneuvering_skill = 4
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = william_halsey
+			ledger = navy
+			traits = { navy_chief_decisive_battle_2 }
+		}	
+	}
+	
+	USA_john_henry_towers = {
+		name = "John Henry Towers" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_john_henry_towers.png"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			traits = { aviation_enthusiast }
+			attack_skill = 3
+			defense_skill = 2
+			coordination_skill = 3
+			maneuvering_skill = 2
+		}
+	}
+	
+	USA_john_henry_towers = {
+		name = "John Henry Towers" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_john_henry_towers.png"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			traits = { aviation_enthusiast }
+			attack_skill = 3
+			defense_skill = 2
+			coordination_skill = 3
+			maneuvering_skill = 2
+		}
+	}
+	
+	USA_raymond_spruance = {
+		name = "Raymond Spruance" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/USA_raymond_spruance.png"
+			}
+		}
+		navy_leader = {
+			skill = 4
+			traits = { gentlemanly navy_career_officer superior_tactician }
+			attack_skill = 4
+			defense_skill = 3
+			coordination_skill = 3
+			maneuvering_skill = 3
+		}
+	}
+	
+}
+	

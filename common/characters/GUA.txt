@@ -1,0 +1,16 @@
+characters={
+	GUA_maria_recinos = {
+		name = "Maria Recinos" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUA/GUA_maria_recinos.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

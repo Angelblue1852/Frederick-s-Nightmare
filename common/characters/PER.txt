@@ -1,0 +1,44 @@
+characters={
+	PER_reza_shah = {
+		name = "Reza Shah" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/PER_reza_shah.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	PER_davud_monshizadeh = {
+		name = "Davud Monshizadeh" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/PER_davud_monshizadeh.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	PER_soleiman_eskandari = {
+		name = "Soleiman Eskandari" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PER/PER_soleiman_eskandari.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

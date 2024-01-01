@@ -1,0 +1,16 @@
+characters={
+	ANF_henri_sautot = {
+		name = "Henri Sautot" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ANF/ANF_henri_sautot.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

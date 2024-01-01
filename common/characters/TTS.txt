@@ -1,0 +1,42 @@
+characters={
+	TTS_achille_starace = {
+		name = "Achille Starace" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TTS/TTS_achille_starace.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	TTS_enrico_de_nicola = {
+		name = "Enrico de Nicola" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TTS/TTS_enrico_de_nicola.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	TTS_ferdinando_pio = {
+		name = "Ferdinand III" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TTS/TTS_ferdinando_pio.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

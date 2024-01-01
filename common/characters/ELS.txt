@@ -1,0 +1,16 @@
+characters={
+	ELS_hernandez_martinez = {
+		name = "Hernandez Martinez" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ELS/ELS_hernandez_martinez.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

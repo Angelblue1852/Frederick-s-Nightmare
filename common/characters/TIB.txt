@@ -1,0 +1,16 @@
+characters={
+	TIB_5th_reting_rinpoche = {
+		name = "5th Reting Rinpoche" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TIB/TIB_5th_reting_rinpoche.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

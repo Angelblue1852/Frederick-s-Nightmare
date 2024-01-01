@@ -1,0 +1,16 @@
+characters={
+	APH_arapho_tribe = {
+		name = "Arapho Tribe" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/APH/APH_arapho_tribe.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

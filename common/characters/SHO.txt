@@ -1,0 +1,16 @@
+characters={
+	SHO_tendoy = {
+		name = "Tendoy" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SHO/SHO_tendoy.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

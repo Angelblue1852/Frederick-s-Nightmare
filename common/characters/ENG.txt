@@ -1,0 +1,367 @@
+characters={
+	ENG_ramsay_mcdonald = {
+		name = "Ramsay Mcdonald" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/ENG_ramsay_mcdonald.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	ENG_oswald_mosley = {
+		name = "Oswald Mosely" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/ENG_oswald_mosley.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	ENG_harry_pollitt = {
+		name = "Harry Pollitt" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/ENG_harry_pollitt.png"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	#######Generals#######
+	
+	ENG_alan_brooke = {
+		name = "Alan Brooke" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_alan_brooke.png"
+			}
+		}
+		field_marshal = {
+			skill = 5
+			traits = { career_officer trait_cautious defensive_doctrine }
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 3
+		}
+	}
+	ENG_alan_cunningham = {
+		name = "Alan Cunningham" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_alan_cunningham.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = {  }
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	ENG_archibald_wavell = {
+		name = "Archibald Wavell" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_archibald_wavell.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { career_officer }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	ENG_arthur_percival = {
+		name = "Arthur Percival" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_arthur_percival.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { trait_cautious }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	ENG_bernard_montgomery = {
+		name = "Bernard Montgomery" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_bernard_montgomery.png"
+			}
+		}
+		field_marshal = {
+			skill = 4
+			traits = { inflexable_strategist trait_cautious media_personality organizer logistics_wizard offensive_doctrine }
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 5
+		}
+	}
+	ENG_brian_horrocks = {
+		name = "Brian Horrocks" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_brian_horrocks.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { career_officer armor_officer war_hero }
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ENG_claude_auchinleck = {
+		name = "Claude Auchinleck" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_claude_auchinleck.png"
+			}
+		}
+		corps_commander = {
+			skill = 5
+			traits = { inflexable_strategist career_officer }
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 6
+		}
+	}
+	ENG_george_giffard = {
+		name = "George Giffard" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_george_giffard.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { career_officer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ENG_harold_alexander = {
+		name = "Harold Alexander" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_harold_alexander.png"
+			}
+		}
+		corps_commander = {
+			skill = 5
+			traits = { politically_connected }
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ENG_henry_pownall = {
+		name = "Henry Pownall" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_henry_pownall.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { trait_trickster }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ENG_henry_wilson = {
+		name = "Henry Wilson" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_henry_wilson.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { old_guard politically_connected }
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	ENG_jock_campbell = {
+		name = "Jock Campbell" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_jock_campbell.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { armor_officer }
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	ENG_john_smyth = {
+		name = "Jackie Smyth" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_john_smyth.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { old_guard }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ENG_miles_dempsey = {
+		name = "Miles Dempsey" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_miles_dempsey.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { briliant_strategist politically_connected infantry_officer }
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 2
+		}
+	}
+	ENG_neil_ritchie = {
+		name = "Neil Ritchie" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_neil_ritchie.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { inflexable_strategist politically_connected armor_officer }
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	ENG_oliver_leese = {
+		name = "Oliver Leese" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_oliver_leese.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { politically_connected harsh_leader armor_officer }
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	ENG_richard_oconnor = {
+		name = "Richard O'Connor" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_richard_oconnor.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	ENG_thomas_hutton = {
+		name = "Thomas Hutton" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_thomas_hutton.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { old_guard }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	ENG_william_gott = {
+		name = "William Gott" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_william_gott.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { inflexable_strategist armor_officer war_hero }
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	ENG_william_slim = {
+		name = "William Slim" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_william_slim.png"
+			}
+		}
+		corps_commander = {
+			skill = 5
+			traits = { war_hero trait_trickster }
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+}
+	

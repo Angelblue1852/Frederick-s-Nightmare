@@ -1,0 +1,17 @@
+characters={
+	FER_kesago_nakajima = {
+		name = "Kesago Nakajima" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FER/FER_kesago_nakajima.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+		
+}
+	

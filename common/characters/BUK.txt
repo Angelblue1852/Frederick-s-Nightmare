@@ -1,0 +1,16 @@
+characters={
+	BUK_alim_khan = {
+		name = "Sayyid Mir Muhammad Alim Khan" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BUK/BUK_alim_khan.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

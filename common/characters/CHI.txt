@@ -1,0 +1,16 @@
+characters={
+	CHI_hu_hanmin = {
+		name = "Hu Hanmin" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHI/CHI_hu_hanmin.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

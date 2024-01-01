@@ -1,0 +1,16 @@
+characters={
+	MAL_thomas_shenton = {
+		name = "Thomas Shenton" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAL/MAL_thomas_shenton.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

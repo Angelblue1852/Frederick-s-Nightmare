@@ -1,0 +1,29 @@
+characters={
+	KHI_isfandiyar_khan = {
+		name = "Isfandiyar Khan" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KHI/KHI_isfandiyar_khan.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	KHI_sayid_abdullah = {
+		name = "Sayid Abdullah Khan" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KHI/KHI_sayid_abdullah.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

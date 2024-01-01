@@ -1,0 +1,16 @@
+characters={
+	DES_herber_grant = {
+		name = "Heber J. Grant" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DES/DES_herber_grant.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

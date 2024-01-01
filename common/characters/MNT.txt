@@ -1,0 +1,16 @@
+characters={
+	MNT_michael_i = {
+		name = "Michael I" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MNT/MNT_michael_i.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,16 @@
+characters={
+	PRU_luis_miguel_sanchez_cerro = {
+		name = "Luis Miguel Sánchez Cerro" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRU/PRU_luis_miguel_sanchez_cerro.png"
+			}
+		}
+		country_leader = {
+			ideology = falangism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

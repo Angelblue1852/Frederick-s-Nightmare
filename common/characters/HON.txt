@@ -1,0 +1,16 @@
+characters={
+	HON_tiburcio_andino = {
+		name = "Tiburcio Andino" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HON/HON_tiburcio_andino.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

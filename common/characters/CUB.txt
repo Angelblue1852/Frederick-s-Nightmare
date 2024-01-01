@@ -1,0 +1,16 @@
+characters={
+	CUB_blas_roca_calderio = {
+		name = "Blas Roca Calderio" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CUB/blas_roca_calderio.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,16 @@
+characters={
+	ALB_zogu = {
+		name = "Zog I" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALB/ALB_zogu.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,16 @@
+characters={
+	HAW_david_kawananakoa = {
+		name = "Kawānanakoa II" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HAW/HAW_david_kawananakoa.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

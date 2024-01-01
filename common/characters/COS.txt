@@ -1,0 +1,16 @@
+characters={
+	COS_ricardo_oreamuno = {
+		name = "Ricardo Oreamuno" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/COS/COS_ricardo_oreamuno.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,42 @@
+characters={
+	KUR_mahmud_barzanji = {
+		name = "Mahmud Barzanji" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KUR/KUR_mahmud_barzanji.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	KUR_ihsan_nuri_pasa = {
+		name = "Ishan Nuri" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KUR/KUR_ihsan_nuri_pasa.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	KUR_qazi_muhammad = {
+		name = "Gazi Muhammad" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KUR/KUR_qazi_muhammad.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

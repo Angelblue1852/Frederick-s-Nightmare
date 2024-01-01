@@ -1,0 +1,16 @@
+characters={
+	MON_anandyn_amar = {
+		name = "Anandyn Amar" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MON/MON_anandyn_amar.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

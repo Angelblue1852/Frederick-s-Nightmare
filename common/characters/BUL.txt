@@ -1,0 +1,18 @@
+characters={
+	BUL_ferdinand_i = {
+		name = "Ferdinand I" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BUL/BUL_ferdinand_i.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	
+}
+	

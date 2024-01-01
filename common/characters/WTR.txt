@@ -1,0 +1,17 @@
+characters={
+	WTR_james_mitchell = {
+		name = "Sir James Mitchell" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WTR/WTR_james_mitchell.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+}
+	

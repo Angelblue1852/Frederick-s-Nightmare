@@ -1,0 +1,16 @@
+characters={
+	SWI_federal_assembly = {
+		name = "Federal Assembly" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SWI/SWI_federal_assembly.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

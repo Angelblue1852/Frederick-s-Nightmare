@@ -1,0 +1,136 @@
+characters={
+	BAY_anton_drexler = {
+		name = "Anton Drexler" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAY/BAY_anton_drexler.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	BAY_adolf_hitler = {
+		name = "Adolf Hitler" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAY/BAY_adolf_hitler.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	BAY_eugene_levine = {
+		name = "Eugene Levine" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAY/BAY_eugene_levine.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	BAY_georg_stang = {
+		name = "Georg Stang" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAY/BAY_georg_stang.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	BAY_rupprecht_i = {
+		name = "Rupprecht I" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/BAY/BAY_rupprecht_i.png"
+			}
+			civilian = {
+				large = "gfx/leaders/BAY/BAY_rupprecht_i.png"
+			}
+		}
+		
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		
+		field_marshal = {
+			skill = 3
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	
+	####Generals####
+	
+	BAY_hans_beimler = {
+		name = "Hans Beimler" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/BAY/BAY_hans_beimler.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { spartakist }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	BAY_prince_karl = {
+		name = "Karl Luitpold" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/BAY/BAY_prince_karl.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	BAY_prince_franz = {
+		name = " Franz Luitpold" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/BAY/BAY_prince_franz.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+	

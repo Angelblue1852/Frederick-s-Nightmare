@@ -1,0 +1,16 @@
+characters={
+	NOR_johan_mowinckel = {
+		name = "Johan Mowinckel" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/NOR_johan_mowinckel.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

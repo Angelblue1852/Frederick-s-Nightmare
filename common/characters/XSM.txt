@@ -1,0 +1,42 @@
+characters={
+	XSM_ma_bufang = {
+		name = "Ma Bufang" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/XSM/XSM_ma_bufang.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	XSM_ma_hongkui = {
+		name = "Ma Hongkui" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/XSM/XSM_ma_hongkui.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	XSM_ma_zhongying = {
+		name = "Ma Zhongying" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/XSM/XSM_ma_zhongying.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

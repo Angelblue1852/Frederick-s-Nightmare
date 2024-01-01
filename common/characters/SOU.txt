@@ -1,0 +1,25 @@
+characters={
+	SOU_ben_reifel = {
+		name = "Ben Reifel" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOU/ben_reifel.png"
+			}
+		}
+	}
+	
+	SOU_hakadah = {
+		name = "Hakadah" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOU/hakadah.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

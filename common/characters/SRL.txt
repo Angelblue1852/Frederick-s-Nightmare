@@ -1,0 +1,16 @@
+characters={
+	SRL_c_n_annadurai = {
+		name = "C.N. Annadurai" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SRL/SRL_c_n_annadurai.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

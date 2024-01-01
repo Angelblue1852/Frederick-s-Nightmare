@@ -1,0 +1,16 @@
+characters={
+	SAF_jbm_hertzog = {
+		name = "J. B. M. Hertzog" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAF/SAF_jbm_hertzog.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

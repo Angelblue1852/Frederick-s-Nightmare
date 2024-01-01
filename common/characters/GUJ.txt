@@ -1,0 +1,16 @@
+characters={
+	GUJ_indulal_yagnik = {
+		name = "Indulal Yagnik" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUJ/GUJ_indulal_yagnik.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

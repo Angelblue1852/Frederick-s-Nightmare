@@ -1,0 +1,16 @@
+characters={
+	PWN_pawnee_tribe = {
+		name = "Pawnee Tribe" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PWN/PWN_pawnee_tribe.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

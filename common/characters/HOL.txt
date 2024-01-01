@@ -1,0 +1,30 @@
+characters={
+	HOL_frans_beelaerts_van_blokland = {
+		name = "Frans Beelaerts van Blokland" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HOL/HOL_frans_beelaerts_van_blokland.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	HOL_hendrikus_colijn = {
+		name = "Hendrikus Colijn" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HOL/HOL_hendrikus_colijn.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

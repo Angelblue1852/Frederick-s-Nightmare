@@ -1,0 +1,16 @@
+characters={
+	CYN_oakerhater = {
+		name = "Oakerhater" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CYN/oakerhater.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

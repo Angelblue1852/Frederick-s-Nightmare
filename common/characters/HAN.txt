@@ -1,0 +1,118 @@
+characters={
+	HAN_karl_abel = {
+		name = "Karl Abel" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HAN/HAN_karl_abel.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	HAN_ernst_thalmann = {
+		name = "Ernst Thälmann" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/HAN/HAN_ernst_thalmann.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { spartakist war_hero }
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	HAN_wilhelm_keitel = {
+		name = "Ernst Thälmann" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/HAN/HAN_wilhelm_keitel.png"
+			}
+		}
+		field_marshal = {
+			skill = 1
+			traits = { natsoc infantry_leader }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	HAN_erwin_jaenecke = {
+		name = "Erwin Jaenecke" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/HAN/HAN_erwin_jaenecke.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { german_nationalist skilled_staffer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	HAN_ernst_eberhard_hell = {
+		name = "Ernst-Eberhard Hell" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/HAN/HAN_ernst_eberhard_hell.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { german_nationalist winter_specialist }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 5
+		}
+	}
+	
+	HAN_harro_schulze_boysen = {
+		name = "Harro Schulze-Boysen" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/HAN/HAN_harro_schulze_boysen.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { spartakist }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	HAN_heinrich_laufenberg = {
+		name = "Heinrich Laufenberg" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/HAN/HAN_heinrich_laufenberg.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { strasserist }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+	

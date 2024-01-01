@@ -1,0 +1,61 @@
+characters={
+	CAL_congress = {
+		name = "California Congress" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAL/california_senate.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	CAL_wesley_smith = {
+		name = "Wesley Smith" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAL/CAL_wesley_smith.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	CAL_douglas_macarthur = {
+		name = "Douglas MacArthur" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAL/CAL_douglas_macarthur.png"
+			}
+			army = {
+				large = "gfx/leaders/CAL/CAL_douglas_macarthur.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 4
+			traits = {
+			}
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+}
+	

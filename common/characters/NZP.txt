@@ -1,0 +1,16 @@
+characters={
+	NZP_yellow_wolf = {
+		name = "Yellow Wolf" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NZP/NZP_yellow_wolf.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

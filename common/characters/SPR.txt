@@ -1,0 +1,16 @@
+characters={
+	SPR_jose_diaz_ramos = {
+		name = "José Díaz" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/SPR_jose_diaz_ramos.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

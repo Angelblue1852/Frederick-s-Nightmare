@@ -1,0 +1,16 @@
+characters={
+	VEN_eleazar_contreras = {
+		name = "Eleazar López Contreras" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/VEN_eleazar_contreras.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

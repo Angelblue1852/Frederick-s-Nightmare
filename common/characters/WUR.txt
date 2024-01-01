@@ -1,0 +1,16 @@
+characters={
+	WUR_alfred_rosenberg = {
+		name = "Alfred Rosenberg" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WUR/WUR_alfred_rosenberg.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

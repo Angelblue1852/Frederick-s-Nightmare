@@ -1,0 +1,17 @@
+characters={
+	AST_arthur_fadden = {
+		name = "Arthur Fadden" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AST/AST_arthur_fadden.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+}
+	

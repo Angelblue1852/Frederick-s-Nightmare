@@ -1,0 +1,16 @@
+characters={
+	SWE_axel_pehrsson = {
+		name = "Axel Pehrsson" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SWE/SWE_axel_pehrsson.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

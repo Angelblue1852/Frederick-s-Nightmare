@@ -1,0 +1,16 @@
+characters={
+	JBL_saud_bin_abdulaziz = {
+		name = "Saud bin Abdulaziz" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JBL/JBL_saud_bin_abdulaziz.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

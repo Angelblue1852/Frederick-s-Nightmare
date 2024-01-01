@@ -1,0 +1,16 @@
+characters={
+	TEX_dan_moody = {
+		name = "Dan Moody" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TEX/TEX_dan_moody.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

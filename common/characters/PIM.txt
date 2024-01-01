@@ -1,0 +1,16 @@
+characters={
+	PIM_ira_hayes = {
+		name = "Ira Hayes" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PIM/PIM_ira_hayes.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

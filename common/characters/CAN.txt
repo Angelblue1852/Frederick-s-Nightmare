@@ -1,0 +1,30 @@
+characters={
+	CAN_louis_laurent = {
+		name = "Louis-Étienne St-Laurent" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAN/CAN_louis_laurent.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	CAN_adrien_arcand = {
+		name = "Adrien Arcand" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAN/CAN_adrien_arcand.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

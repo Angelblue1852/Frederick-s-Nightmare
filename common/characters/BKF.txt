@@ -1,0 +1,16 @@
+characters={
+	BKF_mountain_cheif = {
+		name = "Mountain Cheif" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BKF/BKF_mountain_cheif.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

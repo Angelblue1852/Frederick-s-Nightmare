@@ -1,0 +1,16 @@
+characters={
+	AFG_habibullah_kalakani = {
+		name = "Habibullah Kalakani" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AFG/AFG_habibullah_kalakani.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,16 @@
+characters={
+	CZE_edvard_benes = {
+		name = "Edvard Beneš" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/CZE_edvard_benes.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

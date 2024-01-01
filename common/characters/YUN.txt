@@ -1,0 +1,16 @@
+characters={
+	YUN_long_yun = {
+		name = "Long Yun" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/YUN/YUN_long_yun.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

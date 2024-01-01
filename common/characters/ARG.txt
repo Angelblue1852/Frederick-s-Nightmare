@@ -1,0 +1,16 @@
+characters={
+	ARG_agustin_pedro_justo = {
+		name = "Agustin Pedro Justo" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/ARG_agustin_pedro_justo.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

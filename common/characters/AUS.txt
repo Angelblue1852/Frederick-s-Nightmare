@@ -1,0 +1,215 @@
+characters={
+	AUS_franz_ferdinand = {
+		name = "Franz Ferdinand" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/AUS_franz_ferdinand.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	
+	####Generals####
+	
+	AUS_alfred_jansa = {
+		name = "Alfred Jansa" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_alfred_jansa.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { defensive_doctrine }
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	
+	AUS_alois_hartenstein = {
+		name = "Alois Schönburg-Hartenstein" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_alois_hartenstein.png"
+			}
+		}
+		corps_command = {
+			skill = 4
+			traits = { career_officer brilliant_strategist }
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	AUS_emil_fey = {
+		name = "Emil Fey" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_emil_fey.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { heimwehr }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	AUS_engelbert_dollfuss = {
+		name = "Engelbert Dollfuss" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_engelbert_dollfuss.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { heimwehr }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	AUS_ernst_starhemberg = {
+		name = "Ernst Starhemberg" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_ernst_starhemberg.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { heimwehr }
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	AUS_eugene_of_austria = {
+		name = "Eugene of Austria" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_eugene_of_austria.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	AUS_franz_boehme = {
+		name = "Franz Boehme" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_franz_boehme.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	AUS_hermann_boehm = {
+		name = "Hermann Boehm" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_hermann_boehm.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			traits = {  }
+			coordination_skill = 3
+			maneuvering_skill = 2
+		}
+	}
+	
+	AUS_joseph_ferdinand = {
+		name = "Joseph Ferdinand" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_joseph_ferdinand.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	AUS_karl_eglseer = {
+		name = "Karl Eglseer" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_karl_eglseer.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	AUS_karl_graf_von_kirchbach = {
+		name = "Karl Graf von Kirchbach" 
+		portraits = {
+			army = {
+				large = 
+				"gfx/leaders/AUS/AUS_karl_graf_von_kirchbach.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { defensive_doctrine old_guard }
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+}
+	

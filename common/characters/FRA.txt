@@ -1,0 +1,304 @@
+characters={
+	FRA_jean_jaures = {
+		name = "Jean Jaurès" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/FRA_jean_jaures.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	FRA_alexandre_millerand = {
+		name = "Alexandre Millerand" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/FRA_alexandre_millerand.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	FRA_philippe_petain = {
+		name = "Philippe Pétain" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_philippe_petain.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			traits = { old_guard defensive_doctrine }
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	FRA_maurice_gamelin = {
+		name = "Maurice Gamelin" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_maurice_gamelin.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			traits = { old_guard offensive_doctrine }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	FRA_maxime_weygand = {
+		name = "Maxime Weygand" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_maxime_weygand.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			traits = { old_guard defensive_doctrine }
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	FRA_louis_franchet_d_esperey = {
+		name = "Louis Franchet d'Espérey" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_louis_franchet_d_esperey.png"
+			}
+		}
+		field_marshal = {
+			skill = 1
+			traits = { old_guard defensive_doctrine }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	FRA_charles_de_gaulle = {
+		name = "Charles de Gaulle" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_charles_de_gaulle.png"
+			}
+		}
+		corps_commander = {
+			skill = 5
+			traits = { panzer_officer career_officer }
+			attack_skill = 6
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	
+	FRA_alphonse_juin = {
+		name = "Alphonse Juin" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_alphonse_juin.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { commando inflexible_strategist }
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	
+	FRA_jean_de_lattre_de_tassigny = {
+		name = "Jean de Lattre de Tassigny" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_jean_de_lattre_de_tassigny.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { brilliant_strategist infantry_leader }
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	
+	FRA_philippe_leclerc = {
+		name = "Philippe Leclerc" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_philippe_leclerc.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { panzer_leader offensive_doctrine }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	
+	FRA_charles_nogues = {
+		name = "Charles Noguès" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_charles_nogues.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { desert_fox }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	FRA_marie_pierre_koenig = {
+		name = "Marie Pierre Koenig" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_marie_pierre_koenig.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { cavalry_officer }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	FRA_henri_navarre = {
+		name = "Henri Navarre" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_henri_navarre.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { panzer_officer }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	FRA_francois_darlan = {
+		name = "François Darlan" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_francois_darlan.png"
+			}
+		}
+		navy_leader = {
+			skill = 4
+			traits = { old_guard_navy blockade_runner superior_tactician }
+			attack_skill = 3
+			defense_skill = 2
+			coordination_skill = 3
+			maneuvering_skill = 4
+		}
+	}
+	
+	FRA_jean_marie_charles_abrial = {
+		name = "Jean-Marie Charles Abrial" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_jean_marie_charles_abrial.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			traits = { old_guard_navy }
+			attack_skill = 2
+			defense_skill = 2
+			coordination_skill = 2
+			maneuvering_skill = 2
+		}
+	}
+	
+	FRA_jean_pierre_esteva = {
+		name = "Jean-Pierre Esteva" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_jean_pierre_esteva.png"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			traits = { old_guard_navy ironside }
+			attack_skill = 2
+			defense_skill = 1
+			coordination_skill = 3
+			maneuvering_skill = 1
+		}
+	}
+	
+	FRA_jean_de_laborde = {
+		name = "Jean de Laborde" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_jean_de_laborde.png"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			traits = { seawolf }
+			attack_skill = 1
+			defense_skill = 1
+			coordination_skill = 2
+			maneuvering_skill = 3
+		}
+	}
+	
+	FRA_rene_emil_godfroy = {
+		name = "René-Émile Godfroy" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/FRA_rene_emil_godfroy.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			traits = { fly_swatter }
+			attack_skill = 1
+			defense_skill = 1
+			coordination_skill = 2
+			maneuvering_skill = 2
+		}
+	}
+	
+	
+	
+}
+	

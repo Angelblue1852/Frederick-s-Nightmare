@@ -1,0 +1,17 @@
+characters={
+	CAM_norodom_sihanouk = {
+		name = "Norodom Sihanouk" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAM/CAM_norodom_sihanouk.png"
+			}
+		}
+		country_leader = {
+			ideology = despotismu
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+}
+	

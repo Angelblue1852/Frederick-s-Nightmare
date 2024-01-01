@@ -1,0 +1,16 @@
+characters={
+	THR_hermann_kastner = {
+		name = "Hermann Kastner" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/THR/THR_hermann_kastner.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

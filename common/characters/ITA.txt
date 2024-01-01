@@ -1,0 +1,29 @@
+characters={
+	ITA_palmiro_togliatti = {
+		name = "Palmiro Togliatti" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_palmiro_togliatti.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	ITA_benito_mussolini = {
+		name = "Benito Mussolini" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/ITA_benito_mussolini.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

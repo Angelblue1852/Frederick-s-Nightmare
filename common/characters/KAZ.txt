@@ -1,0 +1,21 @@
+characters={
+	KAZ_alikhan_bukeikhanov = {
+		name = "Alikhan Bukeikhanov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAZ/KAZ_alikhan_bukeikhanov.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

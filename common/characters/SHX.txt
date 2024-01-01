@@ -1,0 +1,16 @@
+characters={
+	SHX_cao_rulin = {
+		name = "Cao Rulin" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SHX/SHX_cao_rulin.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

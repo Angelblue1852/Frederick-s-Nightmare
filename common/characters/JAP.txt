@@ -1,0 +1,387 @@
+characters={
+	JAP_hirohito = {
+		name = "Hirohito" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/JAP_hirohito.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	#######Generals#######
+	
+	JAP_akira_muto = {
+		name = "Akira Muto" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_akira_muto.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { career_officer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	JAP_hatazo_adachi = {
+		name = "Hatazo Adachi" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_hatazo_adachi.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { trickster infantry_officer trait_reckless samurai_lineage }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JAP_hisaichi_terauchi = {
+		name = "Hisaichi Terauchi" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_hisaichi_terauchi.png"
+			}
+		}
+		field_marshal = {
+			skill = 4
+			traits = { politicaly_connected offensice_doctrine samurai_lineage }
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	JAP_hitoshi_imamura = {
+		name = "Hitoshi Imamura" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_hitoshi_imamura.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { commando infantry_officer career_officer }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_iwane_matsui = {
+		name = "Iwane Matsui" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_iwane_matsui.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { old_guard trait_reckless }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_kanji_ishiwara = {
+		name = "Kanji Ishiwara" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_kanji_ishiwara.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { samurai_lineage }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_kenji_doihara = {
+		name = "Kenji Doihara" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_kenji_doihara.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { career_officer }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_kenkichi_ueda = {
+		name = "Kenkichi Ueda" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_kenkichi_ueda.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { old_guard trait_reckless cavalry_officer }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	JAP_kiichiro_iguchi = {
+		name = "Kiichiro Iguchi" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_kiichiro_iguchi.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { trait_cautious career_officer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	JAP_kuniaki_koiso = {
+		name = "Kuniak Koiso" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_kuniaki_koiso.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { old_guard politicaly_connected samurai_lineage }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	JAP_masaharu_homma = {
+		name = "Kuniak Koiso" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_masaharu_homma.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { trait_cautious media_personality }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	JAP_naruhiko_higashikuni = {
+		name = "Naruhiko Higashikuni" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_naruhiko_higashikuni.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { politicaly_connected samurai_lineage }
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JAP_rikichi_ando = {
+		name = "Rikichi Ando" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_rikichi_ando.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { career_officer }
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_sadao_araki = {
+		name = "Sadao Araki" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_sadao_araki.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { samurai_lineage }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	JAP_seishiro_itagaki = {
+		name = "Seishiro Itagaki" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_seishiro_itagaki.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { inflexable_strategist trait_reckless samurai_lineage }
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	JAP_shigeru_honjo = {
+		name = "Shigeru Honjo" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_shigeru_honjo.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { old_guard war_hero }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_shizuichi_tanaka = {
+		name = "Shizuichi Tanaka" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_shizuichi_tanaka.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			traits = { career_officer infantry_officer trickster }
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	JAP_shunroku_hata = {
+		name = "Shunroku Hata" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_shunroku_hata.png"
+			}
+		}
+		field_marshal = {
+			skill = 4
+			traits = { offensice_doctrine samurai_lineage }
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	JAP_takashi_sakai = {
+		name = "Takashi Sakai" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_takashi_sakai.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { trait_reckless infantry_officer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	JAP_toshizo_nishio = {
+		name = "Toshizo Nishio" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_toshizo_nishio.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { brilliant_strategist infantry_officer }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	JAP_yamashita_tomoyuki = {
+		name = "Tomoyuki Yamashita" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_yamashita_tomoyuki.png"
+			}
+		}
+		corps_commander = {
+			skill = 5
+			traits = { brilliant_strategist politicaly_connected trickster trait_engineer }
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	JAP_yasuji_okamura = {
+		name = "Yasuji Okamura" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_yasuji_okamura.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { trait_reckless }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JAP_yoshijiro_umezu = {
+		name = "Yoshijiro Umezu" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/JAP/JAP_yoshijiro_umezu.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { trait_trait_cautious politicaly_connected }
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+}
+	

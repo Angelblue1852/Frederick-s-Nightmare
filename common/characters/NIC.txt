@@ -1,0 +1,16 @@
+characters={
+	NIC_anastasio_somoza_garcia = {
+		name = "Anastasio Somoza Garcia" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NIC/NIC_anastasio_somoza_garcia.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

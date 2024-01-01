@@ -1,0 +1,58 @@
+characters={
+	BAD_berthold = {
+		name = "Berthold" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAD/BAD_berthold.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	BAD_joseph_wirth = {
+		name = "Joseph Wirth" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAD/BAD_joseph_wirth.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	BAD_hans_frank = {
+		name = "Hans Frank" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAD/BAD_hans_frank.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	
+	BAD_max_bock = {
+		name = "Hans Frank" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAD/BAD_max_bock.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	
