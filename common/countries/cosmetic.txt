@@ -1,0 +1,202 @@
+
+MAL_UK = {
+	color = rgb { 147 88 106 }
+	color_ui = rgb { 147 88 106 }
+}
+
+AST_UK = {
+	color = rgb { 147 88 106 }
+	color_ui = rgb { 147 88 106 }
+}
+
+WTR_UK = {
+	color = rgb { 147 88 106 }
+	color_ui = rgb { 147 88 106 }
+}
+
+BRM_UK = {
+	color = rgb { 147 88 106 }
+	color_ui = rgb { 147 88 106 }
+}
+
+RAJ_UK = {
+	color = rgb { 147 88 106 }
+	color_ui = rgb { 147 88 106 }
+}
+
+SRL_UK = {
+	color = rgb { 147 88 106 }
+	color_ui = rgb { 147 88 106 }
+}
+
+NIR_UK = {
+	color = rgb { 147 88 106 }
+	color_ui = rgb { 147 88 106 }
+}
+
+SOU_AA = {
+	color = rgb { 96 83 124 }
+	color_ui = rgb { 96 83 124 }
+}
+
+POL_SOV = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+FIN_SOV = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+TAN_SOV = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+KAZ_SOV = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+KHI_SOV = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+KYR_SOV = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+BUK_SOV = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+TRN_russian_puppet = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+CZE_russian_puppet = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+GER_unified_russian_puppet = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+KUR_russian_puppet = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+SYR_russian_puppet = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+TEX_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+CAL_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+SWB_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+LOU_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+ABS_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+SOU_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+DES_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+SEQ_USA = {
+	color = rgb { 22 109 186 }
+	color_ui = rgb { 5 137 76 }
+}
+
+
+BAV_unified = {
+	color = rgb { 163 146 105 }
+	color_ui = rgb { 163 146 105 }
+}
+
+BAV_south = {
+	color = rgb { 163 146 105 }
+	color_ui = rgb { 163 146 105 }
+}
+
+WES_unified = {
+	color = rgb { 69 108 127 }
+	color_ui = rgb { 69 108 127 }
+}
+
+HAN_unified = {
+	color = rgb { 150 0 55 }
+	color_ui = rgb { 150 0 55 }
+}
+
+
+
+
+
+russian_puppet = {
+	color = rgb { 5 137 76 }
+	color_ui = rgb { 5 137 76 }
+}
+
+
+
+CHI_JAP = {
+	color = rgb { 145 50 0 }
+	color_ui = rgb { 145 50 0 }
+}
+
+XSM_JAP = {
+	color = rgb { 200 120 70 }
+	color_ui = rgb { 200 120 70 }
+}
+
+MAN_JAP = {
+	color = rgb { 145 62 55 }
+	color_ui = rgb { 145 62 55 }
+}
+
+MAL_JAP = {
+	color = rgb { 155 70 0 }
+	color_ui = rgb { 155 70 0 }
+}
+
+BYA_JAP = {
+	color = rgb { 90 110 20 }
+	color_ui = rgb { 90 110 20 }
+}
+
+YAK_JAP = {
+	color = rgb { 65 65 170 }
+	color_ui = rgb { 65 65 170 }
+}

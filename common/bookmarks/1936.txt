@@ -1,0 +1,207 @@
+bookmarks = {
+	bookmark = {
+		name = "1936_NAME"
+		desc = "1936_DESC"
+		date = 1936.1.1.1
+		picture = "GFX_select_date_1936"
+		default_country = "FRA"
+		default = yes
+		
+		"ENG"={
+			history = ""
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {}
+		}
+		
+		"FRA"={
+			history = ""
+			ideology = democratic
+			ideas = {
+				france_history_02
+			}
+			focuses = {}
+		}
+		
+		"SOV"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {}
+		}
+		
+		"AUS"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {}
+		}
+		
+		"TUR"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {}
+		}
+		
+		"GER"={
+			history = ""
+			ideology = democratic
+			ideas = {
+				prussia_history_01
+			}
+			focuses = {}
+		}
+		
+		"JAP"={
+			history = ""
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {}
+		}
+		
+		
+		
+
+		"---"={
+			history = "OTHER_1936_DESC"
+		}
+		
+		"LOU"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"USA"={
+			minor = yes
+			history = ""
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"WUR"={
+			minor = yes
+			history = ""
+			ideology = fascism
+			ideas = {
+				dreams_of_greater_germany
+			}
+			focuses = {
+			}
+		}
+		
+		"CAN"={
+			minor = yes
+			history = ""
+			ideology = democratic
+			ideas = {
+				franco_american_discontent
+				statute_of_montreal
+			}
+			focuses = {
+			}
+		}
+		
+		"MEX"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"ITA"={
+			minor = yes
+			history = ""
+			ideology = communism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"TTS"={
+			minor = yes
+			history = ""
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"CHI"={
+			minor = yes
+			history = ""
+			ideology = fascism
+			ideas = {
+				china_subjugation
+				china_nanjing_warlord
+			}
+			focuses = {
+			}
+		}
+		
+		"HOL"={
+			minor = yes
+			history = ""
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"WES"={
+			minor = yes
+			history = ""
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"PAK"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			ideas = {
+				muhgal_history_01
+				afghan_resistance
+			}
+			focuses = {
+			}
+		}
+		
+		"RAJ"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

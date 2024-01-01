@@ -1,0 +1,88 @@
+
+TTS_balance_of_power = {
+	initial_value = 0
+	left_side = default_left_side
+	right_side = default_right_side
+	decision_category = TTS_balance_of_power
+	range = {
+		id = central_range
+		min = -0.1
+		max = 0.1
+		modifier = {
+			war_support_weekly = 0.5
+		}
+	}
+	side = {
+		id = default_left_side
+		icon = GFX_idea_bop_tts_starachisists_side
+		range = {
+			id = strong_staracists
+			min = -1
+			max = -0.5
+			modifier = {
+				political_power_gain = 0.6
+				war_support_factor = 0.15
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = TTS_balance_of_power
+					side = default_left_side
+					gfx = GFX_idea_bop_tts_starachisists_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = TTS_balance_of_power
+					side = default_left_side
+					gfx = GFX_idea_bop_tts_starachisists_side
+				}
+			}
+		}
+		range = {
+			id = weak_staracists
+			min = -0.5
+			max = -0.1
+			modifier = {
+				political_power_gain = 0.3
+				war_support_factor = 0.1
+			}
+		}
+	}
+	side = {
+		id = default_right_side
+		icon = GFX_idea_bop_tts_monarchist_side
+		range = {
+			id = weak_monarchists
+			min = 0.1
+			max = 0.5
+			modifier = {
+				neutrality_drift = 0.02
+				war_support_factor = -0.1
+			}
+		}
+		range = {
+			id = strong_monarchists
+			min = 0.5
+			max = 1
+			modifier = {
+				neutrality_drift = 0.05
+				war_support_factor = -0.2
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = TTS_balance_of_power
+					side = default_right_side
+					gfx = GFX_idea_bop_tts_monarchist_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = TTS_balance_of_power
+					side = default_right_side
+					gfx = GFX_idea_bop_tts_monarchist_side
+				}
+			}
+		}
+	}
+}
+
