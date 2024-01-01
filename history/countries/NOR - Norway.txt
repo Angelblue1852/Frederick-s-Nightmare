@@ -1,0 +1,37 @@
+﻿capital = 325
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+}
+
+recruit_character = NOR_johan_mowinckel
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = democratic
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 20
+	democratic = 60
+	communism = 15
+	fascism = 5
+}
+
+

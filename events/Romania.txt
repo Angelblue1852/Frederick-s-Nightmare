@@ -1,0 +1,15 @@
+﻿add_namespace = ROM
+
+#Setup Event
+country_event = {
+	id = ROM.1
+	title = ROM.1.t
+	desc = ROM.1.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROM.1.o1
+	}
+}

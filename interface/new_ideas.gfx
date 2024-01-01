@@ -1,0 +1,857 @@
+spriteTypes = { 
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_idea_yakut_japanese_dominion"
+		texturefile = "gfx/interface/ideas/GFX_yakut_japanese_dominion.png"
+	}
+	spriteType = {
+		name = "GFX_idea_aubert_frere"
+		texturefile = "gfx/interface/ideas/GFX_aubert_frere.png"
+	}
+	spriteType = {
+		name = "GFX_idea_anti_technology"
+		texturefile = "gfx/interface/ideas/GFX_anti_technological.png"
+	}
+	spriteType = {
+		name = "GFX_idea_prussia_history_01"
+		texturefile = "gfx/interface/ideas/GFX_fredricks_nightmare.png"
+	}
+	spriteType = {
+		name = "GFX_idea_muhgal_history_01"
+		texturefile = "gfx/interface/ideas/GFX_muhgal_history.png"
+	}
+	spriteType = {
+		name = "GFX_idea_china_history_01"
+		texturefile = "gfx/interface/ideas/GFX_china_history.png"
+	}
+	spriteType = {
+		name = "GFX_idea_china_subjugation"
+		texturefile = "gfx/interface/ideas/GFX_china_subjagation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_china_kmt_warlord"
+		texturefile = "gfx/interface/ideas/GFX_china_kmt_warlord.png"
+	}
+	spriteType = {
+		name = "GFX_idea_china_nanjing_warlord"
+		texturefile = "gfx/interface/ideas/GFX_china_nanjing_warlord.png"
+	}
+	spriteType = {
+		name = "GFX_idea_china_non_aligned_warlord"
+		texturefile = "gfx/interface/ideas/GFX_china_non_aligned_warlord.png"
+	}
+	spriteType = {
+		name = "GFX_idea_china_ccp_warlord"
+		texturefile = "gfx/interface/ideas/GFX_china_ccp_warlord.png"
+	}
+	spriteType = {
+		name = "GFX_idea_france_history_02"
+		texturefile = "gfx/interface/ideas/GFX_french_economy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ottoman_minorities"
+		texturefile = "gfx/interface/ideas/GFX_ottoman_minorities.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_franco_american_discontent"
+		texturefile = "gfx/interface/ideas/GFX_franco_american_discontent.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rising_louisianan_identity"
+		texturefile = "gfx/interface/ideas/GFX_rising_louisianan_identity.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_trotskyist_military"
+		texturefile = "gfx/interface/ideas/GFX_trotskyist_military.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_statute_of_montreal"
+		texturefile = "gfx/interface/ideas/GFX_statute_of_montreal.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_new_swabia"
+		texturefile = "gfx/interface/ideas/GFX_new_swabia.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_californian_army"
+		texturefile = "gfx/interface/ideas/GFX_californian_army.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_dreams_of_greater_germany"
+		texturefile = "gfx/interface/ideas/GFX_greater_germany.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_blackshirts"
+		texturefile = "gfx/interface/ideas/GFX_blackshirts.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_mongol_japanese_cooperation"
+		texturefile = "gfx/interface/ideas/GFX_mongol_japanese_cooperation.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_german_investment"
+		texturefile = "gfx/interface/ideas/GFX_german_investment.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_afghan_resistance"
+		texturefile = "gfx/interface/ideas/GFX_afghan_resistance.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ford_red"
+		texturefile = "gfx/interface/ideas/usa/GFX_ford_red.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ford_green"
+		texturefile = "gfx/interface/ideas/usa/GFX_ford_green.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ford_purple"
+		texturefile = "gfx/interface/ideas/usa/GFX_ford_purple.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ford_red"
+		texturefile = "gfx/interface/ideas/usa/GFX_ford_blue.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_great_depression"
+		texturefile = "gfx/interface/ideas/GFX_great_depression.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_empty_treasury"
+		texturefile = "gfx/interface/ideas/GFX_empty_treasury.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_segregation"
+		texturefile = "gfx/interface/ideas/GFX_segregation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_segregation_2"
+		texturefile = "gfx/interface/ideas/GFX_segregation_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_naples_parliament_broken"
+		texturefile = "gfx/interface/ideas/GFX_naples_parliament_broken.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_aef"
+		texturefile = "gfx/interface/ideas/usa/GFX_american_expeditionary_force.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_felix_warburg"
+		texturefile = "gfx/interface/ideas/usa/GFX_felix_warburg.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_gerald_macguire"
+		texturefile = "gfx/interface/ideas/usa/GFX_gerald_macguire.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_william_pelley"
+		texturefile = "gfx/interface/ideas/usa/GFX_william_pelly.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_heimwehr"
+		texturefile = "gfx/interface/ideas/GFX_heimwehr.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_low_popular_support3"
+		texturefile = "gfx/interface/ideas/politics/low_popular_support3.dds"
+	}
+	##########BofB##########
+	
+	spriteType = {
+		name = "GFX_idea_bop_tts_monarchist_side"
+		texturefile = "gfx/interface/bop/bop_tts_monarchist_side.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_bop_tts_starachisists_side"
+		texturefile = "gfx/interface/bop/bop_tts_starachisists_side.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_bop_tts_monarchist_improved_side"
+		texturefile = "gfx/interface/bop/bop_tts_monarchist_improved_side.png"
+	}
+	spriteType = {
+		name = "GFX_idea_bop_tts_starachisists_improved_side"
+		texturefile = "gfx/interface/bop/bop_tts_starachisists_improved_side.png"
+	}
+	
+	##########Ideologies#########
+	
+	spriteType = {
+		name = "GFX_ideology_USA_conservatism"
+		texturefile = "gfx/interface/ideologies/GFX_ideology_USA_conservatism.png"
+	}
+	
+	##########Decisions##########
+	
+	spriteType = {
+		name = "GFX_decision_category_japan_siberia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_japan_siberia.png"
+	}
+	
+	##########Traits##########
+	
+	spriteType = {
+		name = "GFX_trait_turk"
+		texturefile = "gfx/interface/traits/personal/trait_turk.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_iraqi"
+		texturefile = "gfx/interface/traits/personal/trait_iraqi.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_syrian"
+		texturefile = "gfx/interface/traits/personal/trait_syrian.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_heimwehr"
+		texturefile = "gfx/interface/traits/personal/trait_heimwehr.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_panslavic"
+		texturefile = "gfx/interface/traits/personal/trait_panslavic.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_fascist_russian"
+		texturefile = "gfx/interface/traits/personal/trait_fascist_russian.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_soviet"
+		texturefile = "gfx/interface/traits/personal/trait_soviet.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_belarussia"
+		texturefile = "gfx/interface/traits/personal/trait_belarussia.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_don"
+		texturefile = "gfx/interface/traits/personal/trait_don.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_estonia"
+		texturefile = "gfx/interface/traits/personal/trait_estonia.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_kuban"
+		texturefile = "gfx/interface/traits/personal/trait_kuban.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_latvia"
+		texturefile = "gfx/interface/traits/personal/trait_latvia.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_lithuania"
+		texturefile = "gfx/interface/traits/personal/trait_lithuania.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_tartar"
+		texturefile = "gfx/interface/traits/personal/trait_tartar.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_transbaikal"
+		texturefile = "gfx/interface/traits/personal/trait_transbaikal.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_georgia"
+		texturefile = "gfx/interface/traits/personal/trait_georgia.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_ukraine"
+		texturefile = "gfx/interface/traits/personal/trait_ukraine.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_balt"
+		texturefile = "gfx/interface/traits/personal/trait_balt.png"
+		legacy_lazy_load = no
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_trait_volkist"
+		texturefile = "gfx/interface/traits/personal/trait_volkist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_bavarian_nationalist"
+		texturefile = "gfx/interface/traits/personal/trait_bavarian_nationalist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_german_nationalist"
+		texturefile = "gfx/interface/traits/personal/trait_german_nationalist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_liberalist"
+		texturefile = "gfx/interface/traits/personal/trait_liberalist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_spartakist"
+		texturefile = "gfx/interface/traits/personal/trait_spartakist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_natsoc"
+		texturefile = "gfx/interface/traits/personal/trait_natsoc.png"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_trait_strasserist"
+		texturefile = "gfx/interface/traits/personal/trait_strasserist.png"
+		legacy_lazy_load = no
+	}
+	
+	##########National Focus##########
+	
+	spriteType = {
+		name = "GFX_USA_1937_election"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_1937_election.png"
+	}
+	
+	spriteType = {
+		name = "GFX_USA_republican_victory"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_republican_victory.png"
+	}
+	
+	spriteType = {
+		name = "GFX_USA_whig_victory"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_whig_victory.png"
+	}
+	
+	spriteType = {
+		name = "GFX_USA_democrat_victory"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_democrat_victory.png"
+	}
+	
+	spriteType = {
+		name = "GFX_USA_browder_plan"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_browder_plan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_USA_ford_factories"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_ford_factories.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_fate_of_siberia"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_fate_of_siberia.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_empower_the_hardliners"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_empower_the_hardliners.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_attack_the_far_west"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_attack_the_far_west.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_attack_shandong"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_attack_shandong.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_train_manchurian_army"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_train_manchurian_army.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_attack_liangguang"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_liangguang.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_tojo_as_pm"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_tojo_as_pm.png"
+	}
+	
+	spriteType = {
+		name = "GFX_JAP_develop_tanks"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_develop_tanks.png"
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_develop_tanks_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_develop_tanks.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_develop_tanks.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_develop_tanks.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_tojo_as_pm_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_tojo_as_pm.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_tojo_as_pm.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_tojo_as_pm.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_liangguang_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_liangguang.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_liangguang.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_liangguang.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_train_manchurian_army_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_train_manchurian_army.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_train_manchurian_army.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_train_manchurian_army.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_attack_shandong_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_attack_shandong.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_attack_shandong.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_attack_shandong.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_attack_the_far_west_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_attack_the_far_west.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_attack_the_far_west.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_attack_the_far_west.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_empower_the_hardliners_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_empower_the_hardliners.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_empower_the_hardliners.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_empower_the_hardliners.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_JAP_fate_of_siberia_shine"
+		texturefile = "gfx/interface/goals/japan/GFX_JAP_fate_of_siberia.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_fate_of_siberia.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/japan/GFX_JAP_fate_of_siberia.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_USA_ford_factories_shine"
+		texturefile = "gfx/interface/goals/GFX_USA_ford_factories.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_ford_factories.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_ford_factories.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_USA_1937_election_shine"
+		texturefile = "gfx/interface/goals/GFX_USA_browder_plan.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_browder_plan.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_browder_plan.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_USA_1937_election_shine"
+		texturefile = "gfx/interface/goals/GFX_USA_1937_election.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_1937_election.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_1937_election.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_USA_republican_victory_shine"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_republican_victory.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_republican_victory.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_republican_victory.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_USA_whig_victory_shine"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_whig_victory.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_whig_victory.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_whig_victory.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_USA_democrat_victory_shine"
+		texturefile = "gfx/interface/goals/united_states/GFX_USA_democrat_victory.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/Gunited_states/FX_USA_democrat_victory.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/united_states/GFX_USA_democrat_victory.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+}

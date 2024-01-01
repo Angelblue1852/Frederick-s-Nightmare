@@ -1,0 +1,299 @@
+﻿division_template = {
+	name = "Infantry Division"
+
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+division_template = {
+	name = "Motorized Division"
+
+	division_names_group = ENG_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+        motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Armored Division"
+	
+	division_names_group = ENG_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+        motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Colonial Brigade"
+	
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "1st English Armored"
+		location = 6103		#London
+		division_template = "Armored Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd English Armored"
+		location = 9297		#Birmingham
+		division_template = "Armored Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "1st Scottish Armored"
+		location = 9392		#Edinburgh
+		division_template = "Armored Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st English Infantry"
+		location = 6384		#Liverpool
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd English Infantry"
+		location = 9458		#Portsmouth
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "3rd English Infantry"
+		location = 6103		#London
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "4th English Infantry"
+		location = 6318		#Manchester
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "5th English Infantry"
+		location = 3369		#Bristol
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "6th English Infantry"
+		location = 9379		#Leeds
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "7th English Infantry"
+		location = 11253	#Norwich
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "8th English Infantry"
+		location = 11297	#Hull
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "9th English Infantry"
+		location = 9297		#Birmingham
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "10th English Infantry"
+		location = 351		#Newcastle
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "11th English Infantry"
+		location = 540		#Plymouth
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "12th English Infantry"
+		location = 3501		#Dover
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Welsh Infantry"
+		location = 377		#Cardiff
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd Welsh Infantry"
+		location = 377		#Cardiff
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Scottish Infantry"
+		location = 3273		#Glasgow
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd Scottish Infantry"
+		location = 11064	#Scapa Flow
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "3rd Scottish Infantry"
+		location = 9392		#Edinburgh
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "4th Scottish Infantry"
+		location = 6300		#Rosyth
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "Colonial Garrison Yemen"
+		location = 5074		#Aden
+		division_template = "Colonial Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Colonial Garrison Singapore"
+		location = 12299	#Singapore
+		division_template = "Colonial Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Colonial Garrison Bermuda"
+		location = 13010	#Bermuda
+		division_template = "Colonial Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+
+}
+
+air_wings = {
+	127 = {
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 76
+		}
+		name = "Fighter Group I"
+	}
+	132 = {
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 46
+		}
+		name = "Fighter Group II"
+	}
+	120 = {
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 52
+		}
+		name = "Fighter Group III"
+	}
+	336 = {
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 13
+		}
+		name = "Fighter Group IV"
+	}
+}
+
+instant_effect = {
+}

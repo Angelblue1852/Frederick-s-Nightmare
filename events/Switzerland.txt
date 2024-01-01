@@ -1,0 +1,15 @@
+﻿add_namespace = SWI
+
+#Setup Event
+country_event = {
+	id = SWI.1
+	title = SWI.1.t
+	desc = SWI.1.d
+	picture = GFX_report_event_political_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SWI.1.o1
+	}
+}

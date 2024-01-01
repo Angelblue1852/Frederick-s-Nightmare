@@ -1,0 +1,91 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "new_scripted_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 800 height= 650 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_scripted_gui_window_background_2"
+		}
+		
+		instantTextboxType = {
+			name = "title"
+			position = { x = 100 y = 50 }
+			format = centre
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "title_text"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+		iconType ={
+			name ="senate_icon"
+			position = { x= 125 y = 150 }
+		}	
+
+		instantTextboxType = {
+			name = "senate_support_title"
+			position = { x = 122 y = 245 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "senate_support_title"
+			maxWidth = 160
+			maxHeight = 20
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "senate_support_ammount"
+			position = { x = 122 y = 270 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "senate_support_text"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+		iconType ={
+			name ="house_icon"
+			position = { x= 322 y = 150 }
+		}
+		
+		buttonType ={
+			name ="back_button"
+			spriteType = "GFX_back_button"
+			position = { x= 525	 y = 30 }
+			hint_tag = ""
+		}
+
+		instantTextboxType = {
+			name = "house_support_title"
+			position = { x = 322 y = 245 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "house_support_title"
+			maxWidth = 160
+			maxHeight = 20
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "house_support_ammount"
+			position = { x = 322 y = 270 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "house_support_text"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+	}
+}

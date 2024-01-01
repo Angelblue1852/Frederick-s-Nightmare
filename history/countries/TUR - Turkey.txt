@@ -1,0 +1,50 @@
+﻿capital = 49
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	economic_crisis6
+	ottoman_minorities_discontent
+}
+
+recruit_character = TUR_abdulmejid_ii
+recruit_character = TUR_cemil_cahit_toydemir
+recruit_character = TUR_fahrettin_altay
+recruit_character = TUR_fakhri_pasha
+recruit_character = TUR_fevzi_cakmak
+recruit_character = TUR_hayrullah_fisek
+recruit_character = TUR_kazım_orbay
+recruit_character = TUR_sefik_aker
+recruit_character = TUR_tahsin_yazici
+recruit_character = TUR_abd_al_karim_qasim
+recruit_character = TUR_fawzi_al_qawuqji
+
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 60
+	democratic = 30
+	communism = 2
+	fascism = 8
+}
+
+

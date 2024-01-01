@@ -1,0 +1,59 @@
+﻿#add_namespace = occupation
+#
+#
+#country_event = {
+#	id = occupation.1
+#	title = occupation.1.t
+#	desc = occupation.1.d
+#	picture = GFX_report_event_guard_infantry2
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = occupation.1.o1
+#		every_owned_state = {
+#				if = {
+#					limit = {
+#						OR = {
+#							is_claimed_by = HUN
+#							is_core_of = HUN
+#						}
+#					}
+#					transfer_state_to = HUN
+#				}
+#			}
+#	}
+#	option = {
+#		name = occupation.1.o2
+#	}
+#}
+#
+#country_event = {
+#	id = occupation.2
+#	title = occupation.2.t
+#	desc = occupation.2.d
+#	picture = GFX_report_event_guard_infantry2
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = occupation.2.o1
+#		POL = {
+#			transfer_state = 88
+#			transfer_state = 80
+#			transfer_state = 89
+#			transfer_state = 91
+#		}
+#	}
+#	option = {
+#		name = occupation.2.o2
+#		POL = {
+#			transfer_state = 88
+#		}
+#		UKR = {
+#			transfer_state = 80
+#			transfer_state = 89
+#			transfer_state = 91
+#		}
+#	}
+#}

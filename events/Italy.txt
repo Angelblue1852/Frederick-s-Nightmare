@@ -1,0 +1,522 @@
+﻿add_namespace = ITA
+
+#Setup Event
+country_event = {
+	id = ITA.1
+	title = ITA.1.t
+	desc = ITA.1.d
+	picture = GFX_report_event_international_meeting2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ITA.1.o1
+	}
+}
+
+#Bologna Convention
+country_event = {
+	id = ITA.2
+	title = ITA.2.t
+	desc = ITA.2.d
+	picture = GFX_report_event_political_rally6
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = ITA.8 days = 3 }		#Libyan Communist Caucus
+			country_event = { id = ITA.9 days = 6 }		#Formation of the United Caucus
+			country_event = { id = ITA.10 days = 9 }		#National Question
+			country_event = { id = ITA.11 days = 12 }		#Genoese v Milanese economic delegations
+			country_event = { id = ITA.12 days = 15 }		#Bolshevichi arrested in Italian Switzerland
+			country_event = { id = ITA.13 days = 18 }		#Lombardy votes for Bolshevichi candidates
+		}
+	}
+	
+	option = {
+		name = ITA.2.o1
+	}
+}
+
+#France: Italian Retreat from Libya
+country_event = {
+	id = ITA.3
+	title = ITA.3.t
+	desc = ITA.3.d
+	picture = GFX_report_event_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ITA.3.o1
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -50
+		transfer_state = 448
+		transfer_state = 661
+		transfer_state = 449
+		transfer_state = 662
+		NAP = {
+			add_opinion_modifier = { target = FRA modifier = colonial_disagreements }
+		}
+		NAP = { country_event = { id = ITA.4 days = 4 } }
+	}
+	
+	option = {
+		name = ITA.3.o2
+		NAP = { country_event = { id = ITA.5 days = 4 } }
+	}
+}
+
+#Naples: France seizes Libya
+country_event = {
+	id = ITA.4
+	title = ITA.4.t
+	desc = ITA.4.d
+	picture = GFX_report_event_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ITA.4.o1
+	}
+	
+	option = {
+		name = ITA.4.o2
+		remove_state_claim = 448
+		remove_state_claim = 449
+		remove_state_claim = 661
+		remove_state_claim = 662
+		add_popularity = { ideology = fascism popularity = -0.05 }
+	}
+}
+
+#Naples: France surrenders Libya
+country_event = {
+	id = ITA.5
+	title = ITA.5.t
+	desc = ITA.5.d
+	picture = GFX_report_event_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ITA.5.o1
+		add_stability = 0.02
+		add_war_support = 0.03
+		transfer_state = 448
+		transfer_state = 661
+		transfer_state = 449
+		transfer_state = 662
+	}
+}
+
+#Spain: Italy demands proof of loyalty
+country_event = {
+	id = ITA.6
+	title = ITA.6.t
+	desc = ITA.6.d
+	picture = GFX_report_event_fascists
+	
+	is_triggered_only = yes
+	
+	option = {	#Transfer Equatorial Guinea to them
+		name = ITA.6.o1
+		add_stability = -0.05
+		ITA = {
+			transfer_state = 297
+			country_event = { id = generic.2 hours = 6 }
+			set_country_flag = spanish_proof_of_loyalty
+		}
+		trigger = {
+			has_full_control_of_state = 297
+		}
+	}
+	
+	option = {	#Offer them infrastructural aid
+		name = ITA.6.o2
+		add_stability = -0.05
+		add_political_power = -100
+		ITA = {
+			add_political_power = 100
+			country_event = { id = generic.2 hours = 6 }
+			set_country_flag = spanish_proof_of_loyalty
+		}
+	}
+	
+	option = {	#No can do
+		name = ITA.6.o3
+		add_stability = 0.05
+		country_event = { id = generic.3 hours = 6 }
+	}
+}
+
+#Invitation to the Habsburg League
+country_event = {
+	id = ITA.7
+	title = ITA.7.t
+	desc = ITA.7.d
+	picture = GFX_report_event_political_speech2
+	
+	is_triggered_only = yes
+	
+	option = {	#Yes
+		name = ITA.7.o1
+		add_ideas = anti_habsburg_league
+		every_other_country = {
+			limit = { has_idea = anti_habsburg_league }
+			add_opinion_modifier = { 
+				target = ROOT
+				modifier = anti_habsburg_league_member_positive 
+			}
+			reverse_add_opinion_modifier = { 
+				target = ROOT
+				modifier = anti_habsburg_league_member_positive 
+			}
+		}
+		every_other_country = {
+			limit = { OR = { original_tag = AUS is_subject_of = AUS } }
+			add_opinion_modifier = {
+				target = ROOT modifier = anti_habsburg_league_member_AUS
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = AUS
+				NOT = { is_subject_of = AUS }
+			}
+			add_opinion_modifier = {
+				target = ROOT modifier = anti_habsburg_league_member_negative
+			}
+		}
+		
+		ai_chance = {
+			base = 15
+			modifier = { threat > 20 add = 1 }
+			modifier = { threat > 40 add = 1 }
+			modifier = { threat > 60 add = 1 }
+			modifier = { threat > 80 add = 1 }
+			modifier = { AUS = { has_war = yes } add = 5 }
+			modifier = { ITA = { has_far_away_ideology = yes } add = -5 }
+			modifier = { ITA = { has_same_ideology = yes } add = 5 }
+			modifier = { ITA = { has_similar_ideology = yes } add = 5 }
+			modifier = { AUS = { has_far_away_ideology = yes } add = 5 }
+			modifier = { AUS = { has_same_ideology = yes } add = -5 }
+			modifier = { AUS = { has_similar_ideology = yes } add = -5 }
+		}
+	}
+	
+	option = {	#No
+		name = ITA.7.o2
+		
+		ai_chance = {
+			base = 15
+			modifier = { has_defensive_war = yes add = 5 }
+			modifier = { ITA = { has_same_ideology = yes } add = -5 }
+			modifier = { AUS = { has_far_away_ideology = yes } add = -5 }
+		}
+	}
+}
+
+#Bologna Convention: Antonio Gramsci demands Libyan presence
+country_event = {
+	id = ITA.8
+	title = ITA.8.t
+	desc = ITA.8.d
+	picture = GFX_report_event_political_speech6
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_full_control_of_state = 448
+		has_full_control_of_state = 449
+		has_full_control_of_state = 661
+		has_full_control_of_state = 662
+	}
+	
+	option = {	#Invite the Libyan delegation.
+		name = ITA.8.o1
+		add_political_power = -25
+		add_popularity = { ideology = communism popularity = 0.01 }
+		ITA_pci_add_10_globalisti = yes
+		ETH = { add_opinion_modifier = { target = ROOT modifier = supported_african_autonomy } }
+	}
+	
+	option = {	#Resist the notion.
+		name = ITA.8.o2
+		ITA_pci_remove_5_globalisti = yes
+		ITA_pci_add_2_moderati = yes
+		ITA_pci_add_2_protettori = yes
+		ITA_pci_add_1_bolscevichi = yes
+	}
+}
+
+#Bologna Convention: Formation of the United Caucus
+country_event = {
+	id = ITA.9
+	title = ITA.9.t
+	desc = ITA.9.d
+	picture = GFX_report_event_legislation
+	
+	is_triggered_only = yes
+	
+	option = {	#Send the goon squad.
+		name = ITA.9.o1
+		add_stability = -0.01
+		add_war_support = -0.01
+		add_popularity = { ideology = communism popularity = -0.02 }
+		ITA_pci_remove_5_globalisti = yes
+		ITA_pci_remove_3_moderati = yes
+		ITA_pci_remove_2_protettori = yes
+		ITA_pci_add_10_bolscevichi = yes
+		
+		ai_chance = { base = 10 }
+	}
+	
+	option = {	#Host spontaneous political debates.
+		name = ITA.9.o2
+		add_political_power = 20
+		ITA_pci_remove_5_bolscevichi = yes
+		ITA_pci_remove_3_protettori = yes
+		ITA_pci_remove_2_globalisti = yes
+		ITA_pci_add_10_moderati = yes
+		
+		ai_chance = { base = 30 }
+	}
+	
+	option = {	#The freedom of assembly is essential
+		name = ITA.9.o3
+		add_stability = 0.01
+		if = {
+			limit = { 
+				has_government = communism 
+				SPR. = { has_government = communism } 
+				is_in_faction_with = SPR. 
+			}
+			SPR. = { add_opinion_modifier = { target = ROOT modifier = ideologically_weak } }
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+#Mussolini wishes to debate the National Question
+country_event = {
+	id = ITA.10
+	title = ITA.10.t
+	desc = ITA.10.d
+	picture = GFX_report_event_fascists
+	
+	is_triggered_only = yes
+	
+	option = {	#Anti-National
+		name = ITA.10.o1
+		add_political_power = -15
+		add_popularity = { ideology = communism popularity = 0.01 }
+		if = {
+			limit = { is_in_faction_with = SPR. SPR. = { has_government = communism } }
+			SPR. = { add_opinion_modifier = { target = ROOT modifier = ideological_advancements } }
+		}
+		if = {
+			limit = {
+				HAN = { has_government = communism }
+				ROM = { has_government = communism }
+				CUB = { has_government = communism }
+			}
+			HAN = { add_opinion_modifier = { target = ROOT modifier = ideological_advancements } }
+			ROM = { add_opinion_modifier = { target = ROOT modifier = ideological_advancements } }
+			CUB = { add_opinion_modifier = { target = ROOT modifier = ideological_advancements } }
+		}
+		ITA_pci_remove_10_bolscevichi = yes
+		ITA_pci_add_10_protettori = yes
+	}
+	
+	option = {	#Pro-National
+		name = ITA.10.o2
+		add_stability = -0.01
+		add_popularity = { ideology = fascism popularity = 0.02 }
+		if = {
+			limit = { is_in_faction_with = SPR. SPR. = { has_government = communism } }
+			SPR. = { add_opinion_modifier = { target = ROOT modifier = ideologically_weak } }
+		}
+		ITA_pci_remove_5_moderati = yes
+		ITA_pci_remove_5_protettori = yes
+		ITA_pci_add_10_bolscevichi = yes
+	}
+	
+	option = {	#Don't commit
+		name = ITA.10.o3
+		add_political_power = -5
+		ITA_pci_remove_5_bolscevichi = yes
+		ITA_pci_remove_5_protettori = yes
+		ITA_pci_add_10_moderati = yes
+	}
+}
+
+#Expansion of the economic delegation
+country_event = {
+	id = ITA.11
+	title = ITA.11.t
+	desc = ITA.11.d
+	picture = GFX_report_event_factory
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_full_control_of_state = 158
+		has_full_control_of_state = 159
+	}
+	
+	option = {	#Genoa
+		name = ITA.11.o1
+		158 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		ITA_pci_add_10_globalisti = yes
+	}
+	
+	option = {	#Milan
+		name = ITA.11.o2
+		159 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		ITA_pci_add_10_bolscevichi = yes
+	}
+	
+	option = {	#Neutral approach
+		name = ITA.11.o3
+		add_stability = -0.01
+		add_political_power = 40
+		ITA_pci_add_10_globalisti = yes
+		ITA_pci_add_10_bolscevichi = yes
+	}
+}
+
+#Bolshevichi arrested in Switzerland
+country_event = {
+	id = ITA.12
+	title = ITA.12.t
+	desc = ITA.12.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_neighbor_of = SWI
+		NOT = { is_in_faction_with = SWI }
+		SWI = { NOT = { has_government = communism } }
+		NOT = { has_war_with = SWI }
+	}
+	
+	option = {	#Nothing we can do.
+		name = ITA.12.o1
+		ITA_pci_remove_10_bolscevichi = yes
+		SWI = {
+			add_opinion_modifier = { target = ROOT modifier = foreign_criminals }
+		}
+	}
+	
+	option = {	#Pay the bail and apologize.
+		name = ITA.12.o2
+		add_political_power = -50
+	}
+}
+
+#Bolshevichi arrested in Switzerland
+country_event = {
+	id = ITA.13
+	title = ITA.13.t
+	desc = ITA.13.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {	#Such is the will of the people
+		name = ITA.13.o1
+		ITA_pci_remove_10_moderati = yes
+		ITA_pci_add_10_bolscevichi = yes
+	}
+	
+	option = {	#Slow down the electoral progress
+		name = ITA.13.o2
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = ITA.14
+	title = ITA.14.t
+	desc = ITA.14.d
+	picture = GFX_report_event_international_meeting2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ITA.14.a
+		hidden_effect = {
+			ITA = { country_event = generic.2 }
+		}
+		every_owned_state = {
+			add_core_of = ITA
+		}
+		ITA = {
+			annex_country = { target = ROOT transfer_troops = yes }
+		}
+		ai_chance = { base = 185 }
+	}
+	option = {
+		name = ITA.14.b
+		hidden_effect = {
+			ITA = { country_event = generic.3 }
+		}
+		ITA =  { create_wargoal = {
+				type = annex_everything
+				target = PAP
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ITA.15
+	title = ITA.15.t
+	desc = ITA.15.d
+	picture = GFX_report_event_international_meeting2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ITA.15.a
+		hidden_effect = {
+			ITA = { country_event = generic.2 }
+		}
+		every_owned_state = {
+			add_core_of = ITA
+		}
+		ITA = {
+			annex_country = { target = ROOT transfer_troops = yes }
+		}
+		ai_chance = { base = 185 }
+	}
+	option = {
+		name = ITA.15.b
+		hidden_effect = {
+			ITA = { country_event = generic.3 }
+		}
+		ITA =  { create_wargoal = {
+				type = annex_everything
+				target = NAP
+			}
+		}
+	}
+}

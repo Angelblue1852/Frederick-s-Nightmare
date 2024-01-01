@@ -1,0 +1,160 @@
+﻿add_namespace = ENG
+
+#Setup Event
+country_event = {
+	id = ENG.1
+	title = ENG.1.t
+	desc = ENG.1.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = ENG.2 days = 115 }
+		}
+	}
+	
+	option = {
+		name = ENG.1.o1
+	}
+}
+
+#Austen Chamberlain retires
+country_event = {
+	id = ENG.2
+	title = ENG.2.t
+	desc = ENG.2.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ENG.2.o1
+		hidden_effect = {
+			random_list = { 88 = { country_event = { id = ENG.3 days = 30 } } 12 = { country_event = { id = ENG.4 days = 30 } } }
+			country_event = { id = ENG.7 days = 128 }
+		}
+		custom_effect_tooltip = "The fascist movement will soon select a new leader."
+	}
+}
+
+#Lord Rothermere wins fascist leadership
+country_event = {
+	id = ENG.3
+	title = ENG.3.t
+	desc = ENG.3.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ENG.3.o1
+		create_country_leader = {
+			name = "Harold Harmsworth"
+			picture = "Harold_Harmsworth.dds"
+			ideology = ultra_nationalism
+		}
+	}
+}
+
+#Oswald Mosley wins fascist leadership
+country_event = {
+	id = ENG.4
+	title = ENG.4.t
+	desc = ENG.4.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ENG.4.o1
+		create_country_leader = {
+			name = "Oswald Mosley"
+			picture = "Oswald_Mosley.dds"
+			ideology = nazism
+		}
+		hidden_effect = {
+			random_list = {
+				50 = {}
+				50 = { country_event = { id = ENG.5 days = 20 } }
+			}
+		}
+	}
+}
+
+#AoNF loses Rothermere's support
+country_event = {
+	id = ENG.5
+	title = ENG.5.t
+	desc = ENG.5.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_government = fascism 
+			has_government = neutrality
+		}
+		OHI = { has_government = neutrality }
+	}
+	
+	option = {
+		name = ENG.5.o1
+		add_popularity = { ideology = fascism popularity = -0.03 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+}
+
+#[From.GetName] wants to join the Commonwealth
+country_event = {
+	id = ENG.6
+	title = ENG.6.t
+	desc = ENG.6.d
+	picture = GFX_report_event_army_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ENG.6.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = ENG.6.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+#Revolutionary Remembrance Day 1936
+country_event = {
+	id = ENG.7
+	title = ENG.7.t
+	desc = ENG.7.d
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ENG.7.o1
+		add_stability = 0.005
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=936
+	name="STATE_936"
+
+	history={
+		owner = WTR
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = WTR
+
+	}
+
+	provinces={
+		2133 2177 2186 8134 8155 10473 12904 12912 12926 
+	}
+	manpower=8000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	impassable = yes
+	local_supplies=0.000
+}

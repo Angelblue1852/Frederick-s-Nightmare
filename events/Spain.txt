@@ -1,0 +1,52 @@
+﻿add_namespace = SPR
+
+#Setup Event
+country_event = {
+	id = SPR.1
+	title = SPR.1.t
+	desc = SPR.1.d
+	picture = GFX_report_event_riot
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPR.1.o1
+	}
+}
+
+#[From.GetName] wants to join the Barcelona Agreement
+country_event = {
+	id = SPR.2
+	title = SPR.2.t
+	desc = SPR.2.d
+	picture = GFX_report_event_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPR.2.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = SPR.2.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}

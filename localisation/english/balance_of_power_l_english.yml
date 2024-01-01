@@ -1,0 +1,10 @@
+﻿l_english:
+ TTS_balance_of_power:0 "National Balance of Power"
+ default_left_side:0 "Staracists"
+ default_right_side:0 "Monarchists"
+ weak_monarchists:0 "Growing Monarchist Power"
+ weak_staracists:0 "Growing Staracist Power"
+ strong_monarchists:0 "Powerful Monarchists"
+ strong_staracists:0 "Powerful Staracists"
+ central_range:0 "Deadlock"
+ 

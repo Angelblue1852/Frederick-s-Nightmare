@@ -1,0 +1,15 @@
+﻿add_namespace = THR
+
+#Setup Event
+country_event = {
+	id = THR.1
+	title = THR.1.t
+	desc = THR.1.d
+	picture = GFX_report_event_russian_judge
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = THR.1.o1
+	}
+}

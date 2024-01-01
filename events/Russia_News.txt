@@ -1,0 +1,205 @@
+﻿add_namespace = SOV_news
+
+#Death of Lenin
+news_event = {
+	id = SOV_news.1
+	title = SOV_news.1.t
+	desc = SOV_news.1.d
+	picture = GFX_news_event_funeral
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.1.o1
+	}
+}
+
+#Molotov takes power
+news_event = {
+	id = SOV_news.2
+	title = SOV_news.2.t
+	desc = SOV_news.2.d
+	picture = GFX_news_event_molotov_delegation
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.2.o1
+	}
+}
+
+#Trotzky takes power
+news_event = {
+	id = SOV_news.3
+	title = SOV_news.3.t
+	desc = SOV_news.3.d
+	picture = GFX_news_event_trotzky_rally
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.3.o1
+	}
+}
+
+#Stalin takes power
+news_event = {
+	id = SOV_news.4
+	title = SOV_news.4.t
+	desc = SOV_news.4.d
+	picture = GFX_news_event_stalin_government
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.4.o1
+	}
+}
+
+#Fight the Conspiracy
+news_event = {
+	id = SOV_news.5
+	title = SOV_news.5.t
+	desc = SOV_news.5.d
+	picture = GFX_news_event_prisoners_of_war
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.5.o1
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = SOV_news.5.o2
+		trigger = { NOT = { original_tag = SOV } is_in_faction_with = SOV }
+	}
+	option = {
+		name = SOV_news.5.o3
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV has_war_with = SOV has_government = communism } }
+	}
+	option = {
+		name = SOV_news.5.o4
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV has_war_with = SOV } has_government = communism }
+	}
+	option = {
+		name = SOV_news.5.o5
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV } has_war_with = SOV }
+	}
+}
+
+#Tolerate the Conspiracy
+news_event = {
+	id = SOV_news.6
+	title = SOV_news.6.t
+	desc = SOV_news.6.d
+	picture = GFX_news_event_trotzky_newspaper
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.6.o1
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = SOV_news.6.o2
+		trigger = { NOT = { original_tag = SOV } is_in_faction_with = SOV }
+	}
+	option = {
+		name = SOV_news.6.o3
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV has_war_with = SOV } }
+	}
+	option = {
+		name = SOV_news.6.o4
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV } has_war_with = SOV }
+	}
+}
+
+#Execute the Tsar
+news_event = {
+	id = SOV_news.7
+	title = SOV_news.7.t
+	desc = SOV_news.7.d
+	picture = GFX_news_event_cavalry_parade
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.7.o1
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = SOV_news.7.o2
+		trigger = { NOT = { original_tag = SOV } is_in_faction_with = SOV }
+	}
+	option = {
+		name = SOV_news.7.o3
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV has_war_with = SOV has_government = communism } }
+	}
+	option = {
+		name = SOV_news.7.o4
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV has_war_with = SOV } has_government = communism }
+	}
+	option = {
+		name = SOV_news.7.o5
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV } has_war_with = SOV }
+	}
+}
+
+#The Comintern
+news_event = {
+	id = SOV_news.8
+	title = SOV_news.8.t
+	desc = SOV_news.8.d
+	picture = GFX_news_event_stalin_government
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.8.o1
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = SOV_news.8.o2
+		trigger = { NOT = { original_tag = SOV } has_government = communism }
+	}
+	option = {
+		name = SOV_news.8.o3
+		trigger = { NOT = { original_tag = SOV has_government = communism } }
+	}
+}
+
+#The Global Tsardom
+news_event = {
+	id = SOV_news.9
+	title = SOV_news.9.t
+	desc = SOV_news.9.d
+	picture = GFX_news_event_welcome_invaders2
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = SOV_news.9.o1
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = SOV_news.9.o2
+		trigger = { NOT = { original_tag = SOV } is_in_faction_with = SOV }
+	}
+	option = {
+		name = SOV_news.9.o3
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV has_war_with = SOV } }
+	}
+	option = {
+		name = SOV_news.9.o4
+		trigger = { NOT = { original_tag = SOV is_in_faction_with = SOV } has_war_with = SOV }
+	}
+}

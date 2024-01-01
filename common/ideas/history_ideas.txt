@@ -1,0 +1,515 @@
+ideas = {
+
+	country = {
+		prussia_history_01 = {
+			picture = prussia_history_01
+			modifier = {
+			}
+		}
+	}
+	country = {
+		yakut_japanese_dominion = {
+			picture = yakut_japanese_dominion
+			modifier = {
+			}
+		}
+	}
+	country = {
+		muhgal_history_01 = {
+			picture = muhgal_history_01
+			modifier = {
+			}
+		}
+	}
+	country = {
+		trotskyist_military = {
+			picture = trotskyist_military
+			modifier = {
+			}
+		}
+	}
+	country = {
+		aef = {
+			picture = aef
+			modifier = {
+			}
+		}
+	}
+	country = {
+		china_history_01 = {
+			picture = china_history_01
+			modifier = {
+			}
+		}
+	}
+	country = {
+		ottoman_minorities_discontent = {
+			picture = ottoman_minorities
+			modifier = {
+			}
+		}
+	}
+	country = {
+		blackshirts = {
+			picture = blackshirts
+			modifier = {
+				army_org_factor = -0.2
+				army_attack_factor = 0.15
+				political_power_gain = 0.5
+			}
+		}
+	}
+	country = {
+		china_subjugation = {
+			picture = GFX_china_subjagation
+			modifier = {
+			}
+		}
+	}
+	country = {
+		afghan_resistance = {
+			picture = afghan_resistance
+			modifier = {
+			}
+		}
+	}
+	country = {
+		china_kmt_warlord = {
+			picture = china_kmt_warlord
+			modifier = {
+			}
+		}
+	}
+	country = {
+		china_nanjing_warlord = {
+			picture = china_nanjing_warlord
+			modifier = {
+			}
+		}
+	}
+	country = {
+		china_ccp_warlord = {
+			picture = china_ccp_warlord
+			modifier = {
+			}
+		}
+	}
+	country = {
+		china_non_aligned_warlord = {
+			picture = china_non_aligned_warlord
+			modifier = {
+			}
+		}
+	}
+	country = {
+		france_history_02 = {
+			picture = france_history_02
+			modifier = {
+			}
+		}
+	}
+	country = {
+		franco_american_discontent = {
+			picture = franco_american_discontent
+			modifier = {
+			}
+		}
+	}
+	country = {
+		rising_louisianan_identity = {
+			picture = rising_louisianan_identity
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		statute_of_montreal = {
+			picture = statute_of_montreal
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		new_swabian_movement = {
+			picture = new_swabia
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		californian_army = {
+			picture = californian_army
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		dreams_of_greater_germany = {
+			picture = dreams_of_greater_germany
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		mongol_japanese_cooperation = {
+			picture = mongol_japanese_cooperation
+			modifier = {
+				fascism_acceptance = 75
+				fascism_drift = 0.1
+			}
+		}
+	}
+	
+	country = {
+		heimwehr_rising = {
+			picture = heimwehr
+			modifier = {
+				fascism_drift = 0.05
+				stability_factor = -0.1
+				war_support_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
+	}
+	
+	country = {
+		german_investment = {
+			picture = german_investment
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		naples_parliament_broken_01 = {
+			picture = naples_parliament_broken
+			modifier = {
+				stability_factor = -0.05
+				power_balance_weekly = -0.02
+			}
+		}
+	}
+	
+	country = {
+		naples_parliament_broken_02 = {
+			picture = naples_parliament_broken
+			modifier = {
+				stability_factor = -0.1
+				power_balance_weekly = -0.01
+			}
+		}
+	}
+	
+	country = {
+		naples_parliament_broken_03 = {
+			picture = naples_parliament_broken
+			modifier = {
+				stability_factor = -0.05
+				power_balance_weekly = 0.01
+			}
+		}
+	}
+	
+	country = {
+		naples_parliament_broken_04 = {
+			picture = naples_parliament_broken
+			modifier = {
+				stability_factor = 0.15
+			}
+		}
+	}
+	
+	country = {
+		naples_parliament_broken_05 = {
+			picture = naples_parliament_broken
+			modifier = {
+				power_balance_weekly = 0.05
+				stability_factor = -0.05
+			}
+		}
+	}
+	
+	country = {
+		anti_technology = {
+			picture = anti_technology
+			modifier = {
+				research_speed_factor = -0.5
+				stability_factor = -0.15
+				production_speed_buildings_factor = -0.5
+				industrial_capacity_factory = -0.5
+			}
+		}
+	}
+	
+	country = {
+		aubert_frere = {
+			picture = aubert_frere
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		economic_crisis = {
+			picture = empty_treasury
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.03
+				war_support_factor = -0.04
+				consumer_goods_factor = 0.02
+				conscription_factor = -0.07
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				#political_advisor_cost_factor = 0.2
+				mobilization_laws_cost_factor = 0.2
+				trade_laws_cost_factor = 0.2
+				economy_cost_factor = 0.2
+			}
+		}
+	}
+	country = {
+		economic_crisis2 = {
+			picture = empty_treasury
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.06
+				war_support_factor = -0.08
+				consumer_goods_factor = 0.04
+				conscription_factor = -0.14
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				#political_advisor_cost_factor = 0.4
+				mobilization_laws_cost_factor = 0.4
+				trade_laws_cost_factor = 0.4
+				economy_cost_factor = 0.4
+			}
+		}
+	}
+	country = {
+		economic_crisis3 = {
+			picture = empty_treasury
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.09
+				war_support_factor = -0.12
+				consumer_goods_factor = 0.06
+				conscription_factor = -0.21
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.15
+				#political_advisor_cost_factor = 0.6
+				mobilization_laws_cost_factor = 0.6
+				trade_laws_cost_factor = 0.6
+				economy_cost_factor = 0.6
+			}
+		}
+	}
+	country = {
+		economic_crisis4 = {
+			picture = empty_treasury
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.12
+				war_support_factor = -0.16
+				consumer_goods_factor = 0.08
+				conscription_factor = -0.28
+				industrial_capacity_factory = -0.20
+				production_speed_buildings_factor = -0.20
+				#political_advisor_cost_factor = 0.8
+				mobilization_laws_cost_factor = 0.8
+				trade_laws_cost_factor = 0.8
+				economy_cost_factor = 0.8
+			}
+		}
+	}
+	country = {
+		economic_crisis5 = {
+			picture = empty_treasury
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.20
+				consumer_goods_factor = 0.10
+				conscription_factor = -0.35
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				#political_advisor_cost_factor = 1.0
+				mobilization_laws_cost_factor = 1.0
+				trade_laws_cost_factor = 1.0
+				economy_cost_factor = 1.0
+			}
+		}
+	}
+	country = {
+		economic_crisis6 = {
+			picture = great_depression
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.18
+				war_support_factor = -0.24
+				consumer_goods_factor = 0.12
+				conscription_factor = -0.42
+				industrial_capacity_factory = -0.30
+				production_speed_buildings_factor = -0.30
+				#political_advisor_cost_factor = 1.2
+				mobilization_laws_cost_factor = 1.2
+				trade_laws_cost_factor = 1.2
+				economy_cost_factor = 1.2
+			}
+		}
+	}
+	country = {
+		economic_crisis7 = {
+			picture = great_depression
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.21
+				war_support_factor = -0.28
+				consumer_goods_factor = 0.14
+				conscription_factor = -0.49
+				industrial_capacity_factory = -0.35
+				production_speed_buildings_factor = -0.35
+				#political_advisor_cost_factor = 1.4
+				mobilization_laws_cost_factor = 1.4
+				trade_laws_cost_factor = 1.4
+				economy_cost_factor = 1.4
+			}
+		}
+	}
+	country = {
+		economic_crisis8 = {
+			picture = great_depression
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.24
+				war_support_factor = -0.32
+				consumer_goods_factor = 0.16
+				conscription_factor = -0.56
+				industrial_capacity_factory = -0.40
+				production_speed_buildings_factor = -0.40
+				#political_advisor_cost_factor = 1.6
+				mobilization_laws_cost_factor = 1.6
+				trade_laws_cost_factor = 1.6
+				economy_cost_factor = 1.6
+			}
+		}
+	}
+	country = {
+		economic_crisis9 = {
+			picture = great_depression
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.27
+				war_support_factor = -0.36
+				consumer_goods_factor = 0.18
+				conscription_factor = -0.63
+				industrial_capacity_factory = -0.45
+				production_speed_buildings_factor = -0.45
+				#political_advisor_cost_factor = 1.8
+				mobilization_laws_cost_factor = 1.8
+				trade_laws_cost_factor = 1.8
+				economy_cost_factor = 1.8
+			}
+		}
+	}
+	country = {
+		economic_crisis10 = {
+			picture = great_depression
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.30
+				war_support_factor = -0.40
+				consumer_goods_factor = 0.20
+				conscription_factor = -0.70
+				industrial_capacity_factory = -0.50
+				production_speed_buildings_factor = -0.50
+				#political_advisor_cost_factor = 2.0
+				mobilization_laws_cost_factor = 2.0
+				trade_laws_cost_factor = 2.0
+				economy_cost_factor = 2.0
+			}
+		}
+	}
+	country = {		
+		racial_segregation = {
+			picture = segregation
+			
+			allowed = { always = no }
+			available = {}
+			cancel = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				resistance_target = 0.25
+				conscription_factor = -0.2
+			}
+		}
+	}	
+}

@@ -1,0 +1,35 @@
+﻿capital = 119
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+recruit_character = NIR_michael_collins
+
+
+
+
+
+
+set_war_support = 1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.6.16"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 60
+	democratic = 30
+	fascism = 5
+	communism = 5
+}
+
+

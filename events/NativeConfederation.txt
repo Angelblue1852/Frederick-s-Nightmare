@@ -1,0 +1,442 @@
+﻿add_namespace = SOU
+
+#Setup Event
+country_event = {
+	id = SOU.1
+	title = SOU.1.t
+	desc = SOU.1.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = SOU.2 days = 160 }
+		}
+	}
+	
+	option = {
+		name = SOU.1.o1
+	}
+}
+
+#Hakadah Dies
+country_event = {
+	id = SOU.2
+	title = SOU.2.t
+	desc = SOU.2.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.2.o1
+		ai_chance = { base = 1 }
+		SOU = {
+			retire_character = SOU_hakadah
+			add_country_leader_role = {
+				character = SOU_ben_reifel
+				promote_leader = yes
+				country_leader = {
+					ideology = oligarchism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
+			hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.6
+					days = 30
+				}
+			}
+		}
+		}
+		FRA = {
+			country_event = {
+				id = SOU.3
+				days = 14
+			}
+		}
+	}
+}
+
+#France Learns Hakadah Dies
+country_event = {
+	id = SOU.3
+	title = SOU.3.t
+	desc = SOU.3.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.3.o1
+		ai_chance = { base = 10 }
+		SOU = {
+			country_event = {
+				id = SOU.4
+				days = 14
+			}
+		}
+	}
+	
+	option = {
+		name = SOU.3.o2
+		ai_chance = { base = 15 }
+		SOU = {
+			country_event = {
+				id = SOU.5
+				days = 14
+			}
+		}
+	}
+}
+
+#France says Carry On
+country_event = {
+	id = SOU.4
+	title = SOU.4.t
+	desc = SOU.4.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.4.o1
+		ai_chance = { base = 10 }
+	}
+}
+
+#Frere Oversees the Election
+country_event = {
+	id = SOU.5
+	title = SOU.5.t
+	desc = SOU.5.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.5.o1
+		ai_chance = { base = 10 }
+	}
+}
+
+#Reifel Announces Bid
+country_event = {
+	id = SOU.6
+	title = SOU.6.t
+	desc = SOU.6.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.6.o1
+		ai_chance = { base = 10 }
+		hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.9
+					days = 100
+				}
+				country_event = {
+					id = SOU.7
+					days = 25
+				}
+			}
+		}
+	}
+}
+
+#Klan Organize Bid
+country_event = {
+	id = SOU.7
+	title = SOU.7.t
+	desc = SOU.7.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.7.o1
+		ai_chance = { base = 10 }
+		hidden_effect = { 
+			set_party_name = {
+				ideology = fascism
+				name = SOU_klan_plarty
+			}
+			country_event = {
+				id = SOU.8
+				days = 25
+			}
+		}
+		custom_effect_tooltip = klan_plarty_set
+		
+	}
+}
+
+#United Opposition Organize Bid
+country_event = {
+	id = SOU.8
+	title = SOU.8.t
+	desc = SOU.8.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.8.o1
+		ai_chance = { base = 10 }
+		hidden_effect = { 
+			set_party_name = {
+				ideology = democratic
+				name = SOU_united_party
+			}
+		}
+		custom_effect_tooltip = united_party_set
+		
+	}
+}
+
+#Reifel Wins Elections
+country_event = {
+	id = SOU.9
+	title = SOU.9.t
+	desc = SOU.9.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.9.o1
+		ai_chance = { base = 10 }
+		hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.10
+					days = 35
+				}
+			}
+		}
+	}
+}
+
+#Abasroka Revolts
+country_event = {
+	id = SOU.10
+	title = SOU.10.t
+	desc = SOU.10.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.10.o1
+		ai_chance = { base = 10 }
+		ABS = {
+			transfer_state = 912
+			transfer_state = 913
+		}
+		hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.11
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+#Chickasaw and Choctaw Revolts
+country_event = {
+	id = SOU.11
+	title = SOU.11.t
+	desc = SOU.11.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.11.o1
+		ai_chance = { base = 10 }
+		hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.12
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+#Sequoyah Standoff
+country_event = {
+	id = SOU.12
+	title = SOU.12.t
+	desc = SOU.12.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.12.o1
+		ai_chance = { base = 10 }
+		SEQ = {
+			transfer_state = 374
+		}
+		hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.13
+					days = 5
+				}
+			}
+		}
+		
+	}
+}
+
+#Big Uprising
+country_event = {
+	id = SOU.13
+	title = SOU.13.t
+	desc = SOU.13.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.13.o1
+		ai_chance = { base = 10 }
+		NZP = {
+			transfer_state = 909
+		}
+		UTE = {
+			transfer_state = 381
+		}
+		DES = {
+			transfer_state = 380
+			transfer_state = 910
+			transfer_state = 911
+		}
+		hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.14
+					days = 10
+				}
+			}
+		}
+		
+	}
+}
+
+#the Collapse
+country_event = {
+	id = SOU.14
+	title = SOU.14.t
+	desc = SOU.14.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.14.o1
+		ai_chance = { base = 10 }
+		BKF = {
+			transfer_state = 388
+			add_ideas = anti_technology
+		}
+		SHO = {
+			transfer_state = 387
+			transfer_state = 910
+			declare_war_on = {
+                target = DES
+                type = annex_everything
+            }
+			add_ideas = anti_technology
+		}
+		PWN = {
+			transfer_state = 383
+			transfer_state = 914
+			add_ideas = anti_technology
+		}
+		APH = {
+			transfer_state = 382
+			add_ideas = anti_technology
+		}
+		hidden_effect = { 
+			SOU = {
+				country_event = {
+					id = SOU.15
+					days = 2
+				}
+			}
+		}
+		
+	}
+}
+
+#the Escape
+country_event = {
+	id = SOU.15
+	title = SOU.15.t
+	desc = SOU.15.d
+	picture = GFX_report_event_government7
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.15.o1
+		ai_chance = { base = 10 }
+		SOU = {
+			transfer_state = 389
+			transfer_state = 390
+			add_state_core = 389
+			add_state_core = 390
+			drop_cosmetic_tag = yes
+			remove_ideas = {
+				anti_technology
+				aubert_frere
+			}
+		}
+		CYN = {
+			transfer_state = 384
+		}
+	}
+}
+
+#Collapse News
+news_event = {
+	id = SOU.16
+	title = SOU.16.t
+	desc = SOU.16.d
+	picture = GFX_news_event_protests
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = SOU.16.o1
+		ai_chance = { base = 10 }
+		
+	}
+}

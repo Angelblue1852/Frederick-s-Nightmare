@@ -1,0 +1,263 @@
+﻿add_namespace = MEX
+
+#Setup Event
+country_event = {
+	id = MEX.1
+	title = MEX.1.t
+	desc = MEX.1.d
+	picture = GFX_report_event_factory
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = MEX.2 days = 50 }
+		}
+	}
+	
+	option = {
+		name = MEX.1.o1
+	}
+}
+
+#Texan Uprising
+country_event = {
+	id = MEX.2
+	title = MEX.2.t
+	desc = MEX.2.d
+	picture = GFX_report_event_mexican_civil_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owns_state = 375
+		TEX = { exists = no }
+		NOT = {
+			has_government = democratic
+		}
+	}
+	
+	immediate = {
+		set_global_flag = texan_uprising
+		hidden_effect = {
+			add_political_power = -100
+			declare_war_on = { target = TEX type = annex_everything }
+			every_country = {
+				limit = { 
+					OR = { original_tag = USA original_tag = CAL } 
+					exists = yes 
+					is_subject = no
+				}
+				country_event = { id = MEX.3 days = 1 hours = 8 }
+			}
+			
+			TEX = { 
+				transfer_state = 375
+				country_event = { id = MEX.4 days = 100 }
+				load_oob = TEX_rebels
+				add_ideas = extensive_conscription
+				add_ideas = closed_economy
+				add_ideas = war_economy
+			}
+			MEX = {
+				set_province_controller = 10740
+				set_province_controller = 10894
+				set_province_controller = 5038
+				set_province_controller = 1954
+			}
+			news_event = { id = MEX_news.1 days = 1 }
+		}
+	}
+	
+	option = {
+		name = MEX.2.o1
+			add_political_power = -100
+			TEX = { transfer_state = 375 }
+			MEX = {
+				set_province_controller = 10740
+				set_province_controller = 10894
+				set_province_controller = 5038
+				set_province_controller = 1954
+			}
+			declare_war_on = { target = TEX type = annex_everything }
+	}
+	
+	option = {
+		name = MEX.2.o2
+			add_political_power = -100
+			TEX = { transfer_state = 375 }
+			MEX = {
+				set_province_controller = 10740
+				set_province_controller = 10894
+				set_province_controller = 5038
+				set_province_controller = 1954
+			}
+			declare_war_on = { target = TEX type = annex_everything }
+		TEX = { change_tag_from = MEX }
+	}
+}
+
+#Mexican Civil War: Send aid to Texas?
+country_event = {
+	id = MEX.3
+	title = MEX.3.t
+	desc = MEX.3.d
+	picture = GFX_report_event_tank_factory2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MEX.3.o1
+		add_political_power = -50
+		if = {
+			limit = { original_tag = USA }
+			TEX = { load_oob = TEX_american_nationalists }
+			TEX = {
+				set_country_flag = texas_american_volunteers
+			}
+		}
+		if = {
+			limit = { original_tag = CAL }
+			TEX = { load_oob = TEX_californian_nationalists }
+			TEX = {
+				set_country_flag = texas_californian_volunteers
+			}
+		}
+		news_event = {
+			id = MEX_news.3
+			hours = 4
+		}
+		ai_chance = { base = 90 }
+	}
+	
+	option = {
+		name = MEX.3.o2
+		add_stability = -0.05
+		add_war_support = -0.05
+		ai_chance = { base = 10 }
+	}
+}
+
+#Propose the Austin Accords
+country_event = {
+	id = MEX.4
+	title = MEX.4.t
+	desc = MEX.4.d
+	picture = GFX_report_event_international_meeting4
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = yes
+		has_war_with = MEX
+	}
+	
+	option = {
+		name = MEX.4.o1
+		MEX = { country_event = { id = MEX.5 hours = 10 } }
+		ai_chance = { base = 99 }
+	}
+	
+	option = {
+		name = MEX.4.o2
+		add_political_power = 75
+		ai_chance = { base = 1 }
+	}
+}
+
+#Texas proposes Austin Accords
+country_event = {
+	id = MEX.5
+	title = MEX.5.t
+	desc = MEX.5.d
+	picture = GFX_report_event_international_meeting4
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MEX.5.o1
+		white_peace = TEX
+		clr_global_flag = texan_uprising
+		news_event = { id = MEX_news.2 hours = 8 }
+		hidden_effect = {
+			TEX = { country_event = { id = TEX.2 days = 4 } }
+		}
+		ai_chance = { base = 99 }
+	}
+	
+	option = {
+		name = MEX.5.o2
+		every_country = {
+			limit = {
+				OR = { original_tag = CAL original_tag = USA }
+				NOT = { has_war_with = TEX }
+				NOT = { is_in_faction_with = MEX }
+				NOT = { has_war_with = MEX }
+			}
+			country_event = { id = MEX.6 hours = 3 }
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+#Mexico refuses peace with Texas
+country_event = {
+	id = MEX.6
+	title = MEX.6.t
+	desc = MEX.6.d
+	picture = GFX_report_event_army_casualties
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MEX.6.o1
+		add_to_war = {
+			targeted_alliance = TEX
+			enemy = MEX
+		}
+		ai_chance = { base = 85 }
+	}
+	
+	option = {
+		name = MEX.6.o2
+		add_political_power = -75
+		ai_chance = { base = 15 }
+	}
+}
+
+#[From.GetName] wants to join the Socialist Alliance
+country_event = {
+	id = MEX.7
+	title = MEX.7.t
+	desc = MEX.7.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MEX.7.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = MEX.7.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}

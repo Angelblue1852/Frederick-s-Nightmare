@@ -1,0 +1,33 @@
+﻿capital = 46
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+recruit_character = ROM_georgi_dimitrov
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = communism
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 17
+	democratic = 27
+	communism = 41
+	fascism = 15
+}
+
+

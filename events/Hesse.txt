@@ -1,0 +1,47 @@
+﻿add_namespace = HES
+
+#Setup Event
+country_event = {
+	id = HES.1
+	title = HES.1.t
+	desc = HES.1.d
+	picture = GFX_report_event_royal_visit
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = HES.2 days = 193 }
+		}
+	}
+	
+	option = {
+		name = HES.1.o1
+	}
+}
+
+#Economic Competition between Otschi and Von Adler
+country_event = {
+	id = HES.2
+	title = HES.2.t
+	desc = HES.2.d
+	picture = GFX_report_event_tank_factory2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = HES.2.o1
+		create_random_factory_CIV_2 = yes
+		add_ideas = automotive_industry
+	}
+	option = {
+		name = HES.2.o2
+		create_random_factory_MIL_1 = yes
+		random_owned_state = {
+			add_building_construction = { type = air_base level = 1 instant_build = yes }
+			add_building_construction = { type = anti_air_building level = 2 instant_build = yes }
+		}
+		air_experience = 50
+		add_ideas = military_industrialists
+	}
+}

@@ -1,0 +1,284 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### ATLANTIC FLEET #####
+	fleet = {
+		name = "Home Fleet"			
+		naval_base = 788 # Norfolk
+		
+		task_force = {
+			name = "Battle Force"				
+			location = 788 # Norfolk
+			#Battleship Division 1
+			ship = { name = "USS New York" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "New York Class" } } }
+			ship = { name = "USS South Carolina" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "New York Class" } } }	
+			ship = { name = "USS Pennsylvania" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Pennsylvania Class" } } }	
+			#Battleship Division 2
+			ship = { name = "USS Virginia" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Maryland Class" } } }
+			ship = { name = "USS Rhode Island" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Pennsylvania Class" } } }
+			ship = { name = "USS Maryland" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Maryland Class" } } }
+			ship = { name = "USS Delaware" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Maryland Class" } } }
+			#Cruiser Division 1
+			ship = { name = "USS Brooklyn" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Marblehead" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Charlotte Class" } } }
+			ship = { name = "USS Trenton" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Charlotte Class" } } }
+			ship = { name = "USS Concord" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Charlotte Class" } } }
+			#Escort Division 1
+			ship = { name = "USS Savannah" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Richmond" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Charlotte Class" } } }
+			ship = { name = "USS Charlotte" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Charlotte Class" } } }
+			ship = { name = "USS Clemson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Dahlgren" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Turner" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Stewart" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Smith Thompson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Edsall" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Reid" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Somers" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }			
+		}
+		
+		task_force = {
+			name = "Destroyer Division 1"				
+			location = 788 # Norfolk
+			#Destroyer Division 2
+			ship = { name = "USS Decatur" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Pruitt" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Sicard" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Clemson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Clemson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Clemson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Clemson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Converse" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Meyer" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Bancroft" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Goff" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+			ship = { name = "USS Childs" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+		}
+	}
+	
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Under Construction Notes ###
+	# CA: Quincy (New Orleans class, Comm. 9-Jun, 1936)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "USA"
+			version_name = "Brooklyn Class"
+		}
+		name = "USS Quincy" 
+		requested_factories = 2
+		progress = 0.60
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "USA"
+			version_name = "Charlotte Class"
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	# CA: Wichita (Wichita class
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "USA"
+			version_name = "Charlotte Class"
+		} 
+		requested_factories = 2
+		progress = 0.10
+		amount = 1
+	}
+	##2 Yorktowns (Yorktown, Enterprise)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "USA"
+			version_name = "Yorktown Class"
+		}
+		requested_factories = 2
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "USA"
+			version_name = "Yorktown Class"
+		}
+		requested_factories = 2
+		progress = 0.40
+		amount = 1
+	}
+
+	# DD: Porter (x14) ("USS Porter" "USS Phelps" "USS Clark" "USS Moffett")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Porter" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Phelps" 
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Clark" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Moffett" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+	# DD: Mahan class (x9) ("USS Mahan" "USS Cummings" "USS Flusser" "USS Case" "USS Conyngham" "USS Cassin" "USS Shaw" "USS Cushing" "USS Perkins")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Mahan" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Cummings" 
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Flusser" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Case" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Conyngham" 
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Cassin" 
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Shaw" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Cushing" 
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		name = "USS Perkins" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+	}
+	# SS: Shark class (x1) ("USS Tarpon")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "USA"
+			version_name = "Porpoise Class"
+		}
+		name = "USS Tarpon" 
+		requested_factories = 1
+		progress = 0.70
+		amount = 1
+	}
+}
+
+#####################

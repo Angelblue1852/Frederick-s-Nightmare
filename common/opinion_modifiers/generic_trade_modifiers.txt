@@ -1,0 +1,8 @@
+opinion_modifiers = {
+	
+	trade_deals = {
+		value = 25
+		trade = yes
+	}
+	
+}

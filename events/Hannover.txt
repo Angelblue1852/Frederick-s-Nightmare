@@ -1,0 +1,15 @@
+﻿add_namespace = HAN
+
+#Setup Event
+country_event = {
+	id = HAN.1
+	title = HAN.1.t
+	desc = HAN.1.d
+	picture = GFX_report_event_research_lab
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = HAN.1.o1
+	}
+}

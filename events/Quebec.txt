@@ -1,0 +1,39 @@
+﻿add_namespace = CAN
+
+#Setup Event
+country_event = {
+	id = CAN.1
+	title = CAN.1.t
+	desc = CAN.1.d
+	picture = GFX_report_event_royal_visit
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN.1.o1
+	}
+}
+
+#Labor Unions call for General Strike
+country_event = {
+	id = CAN.2
+	title = CAN.2.t
+	desc = CAN.2.d
+	picture = GFX_report_event_protests4
+	
+	is_triggered_only = yes
+	
+	#Ban the Labor Unions
+	option = {
+		name = CAN.2.o1
+		add_political_power = -100
+		remove_ideas = labor_unions
+	}
+	
+	#Ignore the Strikes
+	option = {
+		name = CAN.2.o2
+		add_stability = -0.05
+		add_popularity = { ideology = communism popularity = 0.03 }
+	}
+}

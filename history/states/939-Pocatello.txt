@@ -1,0 +1,27 @@
+
+state={
+	id=939
+	name="STATE_939"
+	resources={
+		tungsten=20.000
+	}
+
+	history={
+		owner = SOU
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SHO
+		add_core_of = DES
+
+	}
+
+	provinces={
+		1663 7756 9695 10582 12535 13153 
+	}
+	manpower=47890
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

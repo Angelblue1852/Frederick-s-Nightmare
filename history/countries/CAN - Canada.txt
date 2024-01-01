@@ -1,0 +1,46 @@
+﻿capital = 276
+
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.1
+
+add_ideas = {
+	franco_american_discontent
+	statute_of_montreal
+}
+
+recruit_character = CAN_louis_laurent
+recruit_character = CAN_adrien_arcand
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	basic_train = 1
+}
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.10.14"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 98
+	fascism = 1
+	communism = 1
+}
+
+set_convoys = 100
+set_stability = 0.75
+

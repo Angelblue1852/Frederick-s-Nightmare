@@ -1,0 +1,66 @@
+﻿	
+	
+air_wings = {
+
+	### 2 USAAF Wing -- Norfolk
+	362 = { 
+		# 1st Pursuit Group 
+		# 8th Pursuit Group 
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 72
+		}
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 72
+		}
+		# 2nd Bombardment Group 
+		# 9th Bombardment Group 
+		tac_bomber_equipment_0 = {
+			owner = "USA" 
+			amount = 96
+		}
+	}
+
+	### 19th Composite Wing -- Panama Canal
+	685 = { 
+		# 16th Pursuit Group 
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 96
+		}
+		# 6th Composite Group 
+		tac_bomber_equipment_0 = {
+			owner = "USA" 
+			amount = 12
+		}
+	}
+
+	### USN Atlantic Naval Patrol Division -- Norfolk
+	362 = { 
+		# Naval Patrol Wing 3 
+		nav_bomber_equipment_1 =  {
+			owner = "USA" 
+			amount = 36
+		}
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = cv_fighter_equipment_0
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:USA_grumman_organization
+	}
+
+}
+#####################

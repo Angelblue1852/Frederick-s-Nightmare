@@ -1,0 +1,82 @@
+﻿add_namespace = ENG_news
+
+#Singapore Decree
+news_event = {
+	id = ENG_news.1
+	title = ENG_news.1.t
+	desc = ENG_news.1.d
+	picture = GFX_news_event_international_treaty
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = ENG_news.1.o1
+		trigger = { original_tag = ENG }
+	}
+	option = {
+		name = ENG_news.1.o2
+		trigger = { is_subject_of = ENG }
+	}
+	option = {
+		name = ENG_news.1.o3
+		trigger = {
+			NOT = { original_tag = ENG }
+			NOT = { is_subject_of = ENG }
+		}
+	}
+}
+
+#Britain prepares to invade Saudi Arabia
+news_event = {
+	id = ENG_news.2
+	title = ENG_news.2.t
+	desc = ENG_news.2.d
+	picture = GFX_news_event_international_treaty
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = ENG_news.2.o1
+		trigger = { original_tag = ENG }
+	}
+	option = {
+		name = ENG_news.2.o2
+		trigger = { original_tag = SAU }
+	}
+	option = {
+		name = ENG_news.1.o3
+		trigger = {
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = SAU }
+		}
+	}
+}
+
+#Britain prepares to invade the Ottoman Empire
+news_event = {
+	id = ENG_news.3
+	title = ENG_news.3.t
+	desc = ENG_news.3.d
+	picture = GFX_news_event_international_treaty
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = ENG_news.3.o1
+		trigger = { original_tag = ENG }
+	}
+	option = {
+		name = ENG_news.3.o2
+		trigger = { original_tag = TUR }
+	}
+	option = {
+		name = ENG_news.3.o3
+		trigger = {
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = TUR }
+		}
+	}
+}

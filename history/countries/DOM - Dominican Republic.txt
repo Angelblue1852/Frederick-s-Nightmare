@@ -1,0 +1,40 @@
+﻿capital = 319
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	aef
+}
+
+recruit_character = DOM_rafael_trujillo
+
+
+
+
+
+
+
+
+
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.10"
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 50
+	fascism = 5
+	communism = 10
+	democratic = 35
+}
+
+

@@ -1,0 +1,15 @@
+﻿add_namespace = WES
+
+#Setup Event
+country_event = {
+	id = WES.1
+	title = WES.1.t
+	desc = WES.1.d
+	picture = GFX_report_event_guard_infantry2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WES.1.o1
+	}
+}

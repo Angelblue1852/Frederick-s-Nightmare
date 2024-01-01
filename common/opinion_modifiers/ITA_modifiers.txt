@@ -1,0 +1,15 @@
+opinion_modifiers = {
+	
+	anti_habsburg_league_member_positive = {
+		value = 20
+	}
+	
+	anti_habsburg_league_member_AUS = {
+		value = -50
+	}
+	
+	anti_habsburg_league_member_negative = {
+		value = -20
+	}
+	
+}

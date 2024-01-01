@@ -1,0 +1,44 @@
+﻿add_namespace = GUA
+
+#Setup Event
+country_event = {
+	id = GUA.1
+	title = GUA.1.t
+	desc = GUA.1.d
+	picture = GFX_report_event_political_speech5
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = GUA.2 days = 210 }
+		}
+	}
+	
+	option = {
+		name = GUA.1.o1
+	}
+}
+
+#Recinos Mission
+country_event = {
+	id = GUA.2
+	title = GUA.2.t
+	desc = GUA.2.d
+	picture = GFX_report_event_political_speech5
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government = democratic
+	}
+	
+	option = {
+		name = GUA.2.o1
+		add_popularity = {
+			ideology = democratic popularity = 0.10
+		}
+		create_random_factory_CIV_1 = yes
+		create_random_factory_MIL_1 = yes
+	}
+}

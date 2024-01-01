@@ -1,0 +1,924 @@
+focus_tree = {
+	
+	id = usa_test
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = SOU
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 0 y = 1700 }
+	
+	reset_on_civilwar = no
+	
+	
+	#Focus for 1937 Election
+	focus = {
+		id = UST_1937_election
+		icon = GFX_USA_1937_election
+		x = 8
+		y = 0
+		cost = 1
+		available = {
+			always = no
+		}
+		available_if_capitulated = no
+		prerequisite = {}
+		mutually_exclusive = {}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Align with France
+	focus = {
+		id = UST_align_with_france
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_1937_election
+		x = -6
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_1937_election
+		}
+		mutually_exclusive = {
+			focus = UST_american_idealism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for American Idealism
+	focus = {
+		id = UST_american_idealism
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_1937_election
+		x = 6
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_1937_election
+		}
+		mutually_exclusive = {
+			focus = UST_align_with_france
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Friendship with California
+	focus = {
+		id = UST_friendship_with_california
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_american_idealism
+		x = 6
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_american_idealism
+		}
+		mutually_exclusive = {
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	
+	
+	
+	####Economy###
+	
+	#Focus for Economic Recovery
+	focus = {
+		id = UST_economic_recovory
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_1937_election
+		x = 0
+		y = 3
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_align_with_france
+			focus = UST_american_idealism
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	##Ford Subranch##
+	
+	#Focus for Ford Investigation
+	focus = {
+		id = UST_ford_investigation
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_economic_recovory
+		x = -4
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_economic_recovory
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Wagner Anti-Trust Act
+	focus = {
+		id = UST_wagner_anti_trust_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_ford_investigation
+		x = -3
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_ford_investigation
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Labor Management Act
+	focus = {
+		id = UST_labor_management_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_wagner_anti_trust_act
+		x = 1
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_wagner_anti_trust_act
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Territorial Labor and Trust Act
+	focus = {
+		id = UST_territorial_labor_and_trust_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_wagner_anti_trust_act
+		x = -1
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_wagner_anti_trust_act
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Federal Trade Commission Act
+	focus = {
+		id = UST_federal_trade_commission_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_ford_investigation
+		x = 2
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_ford_investigation
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Lessons from Sweden
+	focus = {
+		id = UST_lessons_from_sweden
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_federal_trade_commission_act
+		x = -1
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_federal_trade_commission_act
+		}
+		mutually_exclusive = {
+			focus = UST_naftc
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Fair Labor Standards Act
+	focus = {
+		id = UST_fair_labor_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_lessons_from_sweden
+		x = 0
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_lessons_from_sweden
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for NAFTC
+	focus = {
+		id = UST_naftc
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_federal_trade_commission_act
+		x = 1
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_federal_trade_commission_act
+		}
+		mutually_exclusive = {
+			focus = UST_federal_trade_commission_act
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Reestablish the Gold Standard
+	focus = {
+		id = UST_reestablish_the_gold_standard
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_naftc
+		x = 0
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_naftc
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	##Generic Industry##
+	
+	#Focus for Adopt the MacGuire Plan
+	focus = {
+		id = UST_adopt_macguire_plan
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_adopt_warburg_plan
+		x = 2
+		y = 0
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_economic_recovory
+		}
+		mutually_exclusive = {
+			focus = UST_adopt_warburg_plan
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Adopt the Warburg Plan
+	focus = {
+		id = UST_adopt_warburg_plan
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_economic_recovory
+		x = 4
+		y = 1
+		
+		cost = 1
+		available = {
+			 
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_economic_recovory
+		}
+		mutually_exclusive = {
+			focus = UST_adopt_macguire_plan
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for New England Naval Procurement Act
+	focus = {
+		id = UST_ne_naval_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_adopt_warburg_plan
+		x = 0
+		y = 1
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_adopt_warburg_plan
+			focus = UST_adopt_macguire_plan
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Sherman Industries Subsidies Act
+	focus = {
+		id = UST_sherman_subsidies_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_adopt_macguire_plan
+		x = 0
+		y = 1
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_adopt_warburg_plan
+			focus = UST_adopt_macguire_plan
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Establish the CIO
+	focus = {
+		id = UST_establish_the_cio
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_ne_naval_act
+		x = -1
+		y = 1
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_ne_naval_act
+			focus = UST_sherman_subsidies_act
+		}
+		mutually_exclusive = {
+			focus = UST_establish_the_usnio
+			focus = UST_establish_the_usaio
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Establish the USNIO
+	focus = {
+		id = UST_establish_the_usnio
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_ne_naval_act
+		x = 1
+		y = 1
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_ne_naval_act
+			focus = UST_sherman_subsidies_act
+		}
+		mutually_exclusive = {
+			focus = UST_establish_the_cio
+			focus = UST_establish_the_usaio
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Establish the USAIO
+	focus = {
+		id = UST_establish_the_usaio
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_ne_naval_act
+		x = 3
+		y = 1
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_ne_naval_act
+			focus = UST_sherman_subsidies_act
+		}
+		mutually_exclusive = {
+			focus = UST_establish_the_cio
+			focus = UST_establish_the_usnio
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Taylor Young Projecty
+	focus = {
+		id = UST_taylor_young_project
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_establish_the_usnio
+		x = 0
+		y = 2
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_establish_the_cio
+			focus = UST_establish_the_usncio
+			focus = UST_establish_the_usaio
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Oppenheimer's Research
+	focus = {
+		id = UST_fund_oppenheimers_research
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_taylor_young_project
+		x = -2
+		y = 1
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_taylor_young_project
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for Found the CIA
+	focus = {
+		id = UST_found_the_cia
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_taylor_young_project
+		x = 2
+		y = 1
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_taylor_young_project
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	#Focus for The Black Chamber
+	focus = {
+		id = UST_the_black_chamber
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_taylor_young_project
+		x = 0
+		y = 2
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_taylor_young_project
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	####Civil Rights###
+	
+	focus = {
+		id = UST_state_of_civil_rights
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		x = 30
+		y = 0
+		
+		cost = 1
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_civil_rights_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_state_of_civil_rights
+		x = -2
+		y = 1
+		
+		cost = 3
+		available = {
+			OR = {
+				AND = { 
+					has_government = democratic
+					democratic > 0.5
+				}
+				AND = { 
+					has_government = communism
+					communism > 0.5
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_state_of_civil_rights
+		}
+		mutually_exclusive = {
+			focus = UST_maintain_segregation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_employer_desegregation_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_civil_rights_act
+		x = 0
+		y = 1
+		
+		cost = 3
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_civil_rights_act
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_equal_enlistment_act
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_employer_desegregation_act
+		x = 0
+		y = 1
+		
+		cost = 3
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = { 
+			focus = UST_employer_desegregation_act
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_liberian_statehood
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_equal_enlistment_act
+		x = 1
+		y = 1
+		
+		cost = 3
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_equal_enlistment_act
+			focus = UST_work_with_marcus_garvey
+		}
+		mutually_exclusive = {
+			focus = UST_liberty_in_liberia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_maintain_segregation
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_state_of_civil_rights
+		x = 2
+		y = 1
+		
+		cost = 3
+		available = {
+			OR = {
+				AND = { 
+					has_government = neutrality
+					neutrality > 0.5
+				}
+				AND = { 
+					has_government = fascism
+					fascism > 0.5
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_state_of_civil_rights
+		}
+		mutually_exclusive = {
+			focus = UST_civil_rights_act
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_federalize_jim_crow
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_maintain_segregation
+		x = 0
+		y = 1
+		
+		cost = 3
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_maintain_segregation
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_work_with_marcus_garvey
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_federalize_jim_crow
+		x = 0
+		y = 1
+		
+		cost = 3
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_federalize_jim_crow
+		}
+		mutually_exclusive = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = UST_liberty_in_liberia
+		icon = GFX_goal_generic_more_territorial_claims
+		
+		relative_position_id = UST_work_with_marcus_garvey
+		x = -1
+		y = 1
+		
+		cost = 3
+		available = {
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = UST_equal_enlistment_act
+			focus = UST_work_with_marcus_garvey
+		}
+		mutually_exclusive = {
+			focus = UST_liberian_statehood
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+}

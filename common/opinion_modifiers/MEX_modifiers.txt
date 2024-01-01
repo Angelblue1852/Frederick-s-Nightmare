@@ -1,0 +1,21 @@
+opinion_modifiers = {
+	
+	alamo_massacre = {
+		value = -10
+	}
+	
+	mexican_anti_imperialism_negative = {
+		value = -30
+	}
+	mexican_anti_imperialism_positive = {
+		value = 30
+	}
+	
+	revolutionary_friendship_negative = {
+		value = -30
+	}
+	revolutionary_friendship_positive = {
+		value = 30
+	}
+	
+}

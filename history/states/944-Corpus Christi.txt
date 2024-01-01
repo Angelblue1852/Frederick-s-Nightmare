@@ -1,0 +1,30 @@
+
+state={
+	id=944
+	name="STATE_944"
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			6785 = {
+				naval_base = 1
+
+			}
+		}
+		add_core_of = MEX
+		add_core_of = TEX
+		victory_points = {
+			12782 1 
+		}
+	}
+
+	provinces={
+		1927 2019 2042 4884 5061 6785 6798 6987 12369 12728 12782 
+	}
+	manpower=609403
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

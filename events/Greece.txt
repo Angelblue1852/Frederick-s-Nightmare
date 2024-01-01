@@ -1,0 +1,15 @@
+﻿add_namespace = GRE
+
+#Setup Event
+country_event = {
+	id = GRE.1
+	title = GRE.1.t
+	desc = GRE.1.d
+	picture = GFX_report_event_french_resistance2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GRE.1.o1
+	}
+}

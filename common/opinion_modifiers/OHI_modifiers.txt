@@ -1,0 +1,10 @@
+opinion_modifiers = {
+
+	claims_on_the_british_throne_negative = {
+		value = -10
+	}
+	claims_on_the_british_throne_very_negative = {
+		value = -25
+	}
+	
+}

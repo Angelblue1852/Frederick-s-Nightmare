@@ -1,0 +1,97 @@
+﻿capital = 219
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+recruit_character = SOV_nicholas_ii
+recruit_character = SOV_alexander_kerensky
+recruit_character = SOV_vladimir_lenin
+recruit_character = SOV_joseph_stalin
+recruit_character = SOV_vyacheslav_molotov
+recruit_character = SOV_leon_trotsky
+recruit_character = SOV_konstantin_rodzaevsky
+recruit_character = SOV_alexander_filimonov
+recruit_character = SOV_pavlo_skoropadskyi
+recruit_character = SOV_andrei_shkuro
+recruit_character = SOV_abram_dragomirov
+recruit_character = SOV_aleksandr_gorbatov
+recruit_character = SOV_aleksandr_vasilevsky
+recruit_character = SOV_alexander_yegorov
+recruit_character = SOV_alexey_kaledin
+recruit_character = SOV_anatoly_pepelyayev
+recruit_character = SOV_andrey_vlasov
+recruit_character = SOV_anton_denikin
+recruit_character = SOV_georgy_zhukov
+recruit_character = SOV_grigory_kulik
+recruit_character = SOV_grigory_semyonov
+recruit_character = SOV_jukums_vacietis
+recruit_character = SOV_mikhail_diterikhs
+recruit_character = SOV_mikhail_drozdovsky
+recruit_character = SOV_mikhail_tukhachevsky
+recruit_character = SOV_pyotr_krasnov
+recruit_character = SOV_pyotr_wrangel
+recruit_character = SOV_semyon_budyonny
+recruit_character = SOV_semyon_timoshenko
+
+
+recruit_character = EST_ernst_podder
+recruit_character = EST_johan_laidoner
+recruit_character = EST_johan_laidoner
+recruit_character = GEO_pavel_avalishvili
+recruit_character = LAT_janis_balodis
+recruit_character = LAT_roberts_dambitis
+recruit_character = LIT_aleksandras_plechavicius
+recruit_character = LIT_povilas_plechavicius
+recruit_character = LIT_silvestras_zukauskas
+recruit_character = KYR_mukhamedzhan_tynyshpaev
+
+
+
+
+
+
+
+
+
+
+
+add_ideas = {
+	economic_crisis4
+}
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+SOV = {
+	puppet = POL
+	puppet = FIN 
+	puppet = TAN
+}
+
+create_faction = "Svyashchenny Soyuz"
+add_to_faction = SOV
+add_to_faction = POL
+add_to_faction = FIN
+add_to_faction = TAN
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 75
+	democratic = 15
+	communism = 10
+}
+
+

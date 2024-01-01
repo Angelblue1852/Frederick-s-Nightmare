@@ -1,0 +1,39 @@
+﻿capital = 328
+
+oob = "MAN_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	china_non_aligned_warlord
+}
+
+recruit_character = MAN_zhang_xueliang
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 65
+	democratic = 15
+	communism = 5
+	fascism = 15
+}
+
+

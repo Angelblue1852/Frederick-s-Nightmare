@@ -1,0 +1,39 @@
+﻿add_namespace = OHI_news
+
+#Death of Lenin
+news_event = {
+	id = OHI_news.1
+	title = OHI_news.1.t
+	desc = OHI_news.1.d
+	picture = GFX_news_event_funeral
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = OHI_news.1.o1
+		trigger = { original_tag = OHI }
+	}
+	
+	option = {
+		name = OHI_news.1.o2
+		trigger = { original_tag = ENG }
+	}
+	
+	option = {
+		name = OHI_news.1.o3
+		trigger = {
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	
+	option = {
+		name = OHI_news.1.o4
+		trigger = { 
+			NOT = { original_tag = OHI original_tag = ENG original_tag = FRA is_in_faction_with = FRA }
+		}
+	}
+}

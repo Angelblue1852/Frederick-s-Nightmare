@@ -1,0 +1,39 @@
+﻿add_namespace = cheat
+
+#switch focus tree
+country_event = {
+	id = cheat.1
+	is_triggered_only = yes
+	
+	title = "Choose your Focus Tree"
+	desc = "Just choose, buddy"
+	
+	option = {
+		name = "PRS"
+		load_focus_tree = prussia_focus
+	}
+	
+	option = {
+		name = "USA"
+		load_focus_tree = usa_focus
+	}
+}
+
+#hold election
+country_event = {
+	id = cheat.2
+	is_triggered_only = yes
+	
+	title = "Hold Election?"
+	desc = "Wanna hold an election, chump?!"
+	
+	option = {
+		name = "Sure, dude!"
+		hold_election = ROOT
+	}
+	
+	option = {
+		name = "Uh, no."
+		add_political_power = -10000
+	}
+}

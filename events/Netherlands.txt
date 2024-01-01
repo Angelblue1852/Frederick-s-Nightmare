@@ -1,0 +1,16 @@
+﻿add_namespace = HOL
+
+
+#Setup Event
+country_event = {
+	id = HOL.1
+	title = HOL.1.t
+	desc = HOL.1.d
+	picture = GFX_report_event_army_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = HOL.1.o1
+	}
+}

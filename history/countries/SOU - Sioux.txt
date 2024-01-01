@@ -1,0 +1,47 @@
+﻿capital = 315
+
+oob = ""
+
+add_ideas = {
+	anti_technology
+	aubert_frere
+}
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+
+
+recruit_character = SOU_hakadah
+recruit_character = SOU_ben_reifel
+
+
+
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+set_cosmetic_tag = SOU_AA
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 50
+	democratic = 45
+	communism = 5
+}
+
+

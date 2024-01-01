@@ -1,0 +1,27 @@
+
+state={
+	id=368
+	name="STATE_368"
+	resources={
+		steel=60.000
+	}
+
+	history={
+		owner = LOU
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+
+		}
+		add_core_of = LOU
+
+	}
+
+	provinces={
+		1987 4510 7464 7615 7797 10410 10586 10615 10753 11717 12328 
+	}
+	manpower=2616555
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

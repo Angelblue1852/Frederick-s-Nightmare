@@ -1,0 +1,170 @@
+﻿add_namespace = OHI
+
+#Setup Event
+country_event = {
+	id = OHI.1
+	title = OHI.1.t
+	desc = OHI.1.d
+	picture = GFX_report_event_oval_office
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = OHI.2 days = 18 }
+			country_event = { id = OHI.4 days = 30 }
+		}
+	}
+	
+	option = {
+		name = OHI.1.o1
+	}
+}
+
+#Death of King George V
+country_event = {
+	id = OHI.2
+	title = OHI.2.t
+	desc = OHI.2.d
+	picture = GFX_report_event_funeral
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OHI.2.o1
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Edward VIII"
+			picture = "Edward_VIII.dds"
+			ideology = despotism
+		}
+		hidden_effect = {
+			news_event = OHI_news.1
+			country_event = { id = OHI.3 days = 100 }
+		}
+		complete_national_focus = OHI_the_new_king
+	}
+}
+
+#Edward VIII's marriage
+country_event = {
+	id = OHI.3
+	title = OHI.3.t
+	desc = OHI.3.d
+	picture = GFX_report_event_funeral2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government = neutrality
+		has_country_leader = { name = "Edward VIII" ruling_only = yes }
+	}
+	
+	option = {
+		name = OHI.3.o1
+		add_stability = 0.01
+		add_war_support = 0.01
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.008
+		}
+	}
+}
+
+#Georgia Program
+country_event = {
+	id = OHI.4
+	title = OHI.4.t
+	desc = OHI.4.d
+	picture = GFX_report_event_factory
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_government = communism }
+	}
+	
+	option = {
+		name = OHI.4.o1
+		add_war_support = 0.02
+		add_popularity = {
+			ideology = communism
+			popularity = -0.02
+		}
+	}
+	
+	option = {
+		name = OHI.4.o2
+		add_political_power = 40
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+#Russia: Ohio assigns Stachowicz to government
+country_event = {
+	id = OHI.5
+	title = OHI.5.t
+	desc = OHI.5.d
+	picture = GFX_report_event_international_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OHI.5.o1
+		add_political_power = 15
+		add_opinion_modifier = { target = OHI modifier = unacceptable_cabinet_assignments }
+		hidden_effect = { OHI = { country_event = { id = OHI.6 hours = 6 } } }
+		
+		ai_chance = { base = 95 }
+	}
+	option = {
+		name = OHI.5.o2
+		
+		ai_chance = { base = 5 }
+	}
+}
+
+#Russian protest
+country_event = {
+	id = OHI.6
+	title = OHI.6.t
+	desc = OHI.6.d
+	picture = GFX_report_event_international_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OHI.6.o1
+	}
+}
+
+#Stachowicz intends to travel to Polish World Congress
+country_event = {
+	id = OHI.7
+	title = OHI.7.t
+	desc = OHI.7.d
+	picture = GFX_report_event_international_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OHI.7.o1
+		POL = {
+			add_opinion_modifier = { target = ROOT modifier = polish_world_congress_positive }
+		}
+		POL = {
+			OVERLORD = {
+				add_opinion_modifier = { target = ROOT modifier = polish_world_congress_negative }
+			}
+		}
+	}
+	option = {
+		name = OHI.7.o2
+		add_political_power = -10
+	}
+}

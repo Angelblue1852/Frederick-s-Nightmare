@@ -1,0 +1,81 @@
+ideas = {
+
+	ford_crisis = {
+		picture = ford_red
+		
+		allowed = { always = no }
+		available = {}
+		cancel = {}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_weekly = -0.001
+			consumer_goods_factor = 0.02
+			political_power_factor = -0.1
+			political_advisor_cost_factor = 0.15
+			fascism_drift = 0.01
+		}
+	}
+	ford_crisis2 = {
+		picture = ford_red
+		
+		allowed = { always = no }
+		available = {}
+		cancel = {}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_weekly = -0.002
+			consumer_goods_factor = 0.04
+			political_power_factor = -0.2
+			political_advisor_cost_factor = 0.45
+			fascism_drift = 0.02
+		}
+	}
+	ford_crisis3 = {
+		picture = ford_red
+		
+		allowed = { always = no }
+		available = {}
+		cancel = {}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_weekly = -0.003
+			consumer_goods_factor = 0.06
+			political_power_factor = -0.3
+			political_advisor_cost_factor = 0.6
+			fascism_drift = 0.03
+		}
+	}
+	ford_crisis4 = {
+		picture = ford_red
+		
+		allowed = { always = no }
+		available = {}
+		cancel = {}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_weekly = -0.004
+			consumer_goods_factor = 0.08
+			political_power_factor = -0.4
+			political_advisor_cost_factor = 0.3
+			fascism_drift = 0.04
+		}
+	}
+	
+	country = {
+		economic_crisis = {
+			picture = ford_red
+			modifier = {
+			}
+		}
+	}
+
+	
+}

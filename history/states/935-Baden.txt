@@ -1,0 +1,32 @@
+
+state={
+	id=935
+	name="STATE_935"
+
+	history={
+		owner = BAD
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+
+		}
+		add_core_of = BAD
+		victory_points = {
+			3530 10
+		}
+		victory_points = {
+			11640 1
+		}
+		victory_points = {
+			6712 3
+		}
+	}
+
+	provinces={
+		3530 3679 6542 6568 6712 11640 
+	}
+	manpower=1834600
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

@@ -1,0 +1,65 @@
+﻿add_namespace = FRA_news
+
+#Jaurès resigns.
+news_event = {
+	id = FRA_news.1
+	title = FRA_news.1.t
+	desc = FRA_news.1.d
+	picture = GFX_news_event_jean_jaures
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = FRA_news.1.o1
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = FRA_news.1.o2
+		trigger = {
+			NOT = { original_tag = FRA }
+			NOT = { original_tag = ENG }
+			has_government = democratic
+		}
+	}
+	option = {
+		name = FRA_news.1.o3
+		trigger = {
+			NOT = { original_tag = FRA }
+			OR = {
+				original_tag = ENG
+				NOT = { has_government = democratic }
+			}
+		}
+	}
+}
+
+#Abandon the Entente
+news_event = {
+	id = FRA_news.2
+	title = FRA_news.2.t
+	desc = FRA_news.2.d
+	picture = GFX_news_event_international_treaty2
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = FRA_news.2.o1
+		trigger = { original_tag = FRA }
+	}
+	option = {
+		name = FRA_news.2.o2
+		trigger = { NOT = { original_tag = FRA } is_in_faction_with = FRA }
+	}
+	option = {
+		name = FRA_news.2.o3
+		trigger = { NOT = { original_tag = FRA is_in_faction_with = FRA } has_government = democratic }
+	}
+	option = {
+		name = FRA_news.2.o4
+		trigger = { NOT = { original_tag = FRA is_in_faction_with = FRA has_government = democratic } }
+	}
+}

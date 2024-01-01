@@ -1,0 +1,37 @@
+﻿capital = 314
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+}
+
+recruit_character = ELS_hernandez_martinez
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.10"
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 40
+	fascism = 10
+	communism = 20
+	democratic = 30
+}
+
+

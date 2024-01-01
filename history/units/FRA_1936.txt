@@ -1,0 +1,708 @@
+﻿division_template = {
+	name = "Infantry Division"
+	
+	division_names_group = FRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+division_template = {
+	name = "Motorized Division"
+	
+	division_names_group = FRA_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+        motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Armored Brigade"
+	
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Cavalry Brigade"
+	
+	division_names_group = FRA_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+division_template = {
+	name = "Infantry Brigade"
+	
+	division_names_group = FRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 587			#Cologne
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 778			#Annecy
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9503			#Strasbourg
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9737			#Bordeaux
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 9498			#Rotterdam
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 11506		#Paris
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 11483		#Lille
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 6613			#Lyon
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3838			#Ajaccio
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 9909			#Nice
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 11834		#Marseille
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 11465		#Nantes
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 1145			#Algiers
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 4401			#Saigon
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 6657			#La Rochelle
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 6583			#Luxembourg
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 11435		#Bitburg
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 516			#Brussels
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 11563		#Rouen
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 516			#Brussels
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = 6598			#Antwerpen
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 11506		#Paris
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 3652			#Dijon
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 3768			#Grenoble
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 3552			#Brest
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 11506		#Paris
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 6766			#Toulouse
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = 512			#Orleans
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 3594			#Vichy
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 11516		#Nancy
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 575			#Dunkerque
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = 11548		#Calais
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 6496			#Eindhoven
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 9642			#Besancon
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+		location = 3671			#Tours
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = 587			#Cologne
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 37
+		}
+		location = 11506		#Paris
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 38
+		}
+		location = 678			#Mulhouse
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 39
+		}
+		location = 13011		#Reims
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 9559			#Metz
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 41
+		}
+		location = 9490			#Troyes
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 42
+		}
+		location = 11548		#Calais
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 43
+		}
+		location = 6449			#Cherbourg
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 44
+		}
+		location = 9503			#Strasbourg
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 45
+		}
+		location = 9490			#Troyes
+		division_template = "Motorized Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 46
+		}
+		location = 9495			#Rennes
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	
+	division = {
+		name = "Algerian Garrison"
+		location = 1145			#Algiers
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "Tunisian Garrison"
+		location = 11969		#Tunis
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "Senegalese Garrison"
+		location = 4948			#Dakar
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "Congolese Garrison"
+		location = 5139			#Libreville
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "1st Indian Garrison"
+		location = 10149
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "2nd Indian Garrison"
+		location = 10149
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "3rd Indian Garrison"
+		location = 10149
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "Indochinese Garrison"
+		location = 4075			#Hanoi
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	
+	division = {
+		name = "1st Suez Garrison"
+		location = 12049
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "2nd Suez Garrison"
+		location = 4073
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "3rd Suez Garrison"
+		location = 1155
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "4th Suez Garrison"
+		location = 9947
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+}
+
+air_wings = {
+	16 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 50
+		}
+	}
+	18 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 56
+		}
+	}
+	18 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 45
+		}
+	}
+	16 = {
+		tac_bomber_equipment_0 = {
+			owner = "FRA" 
+			amount = 35
+		}
+	}
+	18 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 65
+		}
+	}
+	16 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 48
+		}
+	}
+	22 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 45
+		}
+	}
+	31 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 51
+		}
+	}
+	423 = {
+		tac_bomber_equipment_0 = {
+			owner = "FRA" 
+			amount = 31
+		}
+	}
+	286 = {
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 30
+		}
+	}
+}
+
+instant_effect = {
+}

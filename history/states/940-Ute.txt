@@ -1,0 +1,23 @@
+
+state={
+	id=940
+	name="STATE_940"
+
+	history={
+		owner = SOU
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = UTE
+
+	}
+
+	provinces={
+		868 1658 1756 6887 7688 10535 12561 12633 
+	}
+	manpower=7000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

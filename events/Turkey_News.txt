@@ -1,0 +1,135 @@
+﻿add_namespace = TUR_news
+
+#The Ottomans endorse the Fundamentalists
+news_event = {
+	id = TUR_news.1
+	title = TUR_news.1.t
+	desc = TUR_news.1.d
+	picture = GFX_news_event_amin_al_husseini
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = TUR_news.1.o1
+		trigger = { original_tag = TUR }
+	}
+	option = {
+		name = TUR_news.1.o2
+		trigger = { 
+			original_tag = AUS
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.1.o3
+		trigger = { 
+			is_in_faction_with = TUR
+		}
+	}
+	option = {
+		name = TUR_news.1.o4
+		trigger = {
+			NOT = { original_tag = TUR }
+			NOT = { original_tag = AUS }
+			NOT = { is_in_faction_with = TUR }
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.1.o5
+		trigger = {
+			has_war_with = TUR
+		}
+	}
+}
+
+#The Ottoman Reformers take over
+news_event = {
+	id = TUR_news.2
+	title = TUR_news.2.t
+	desc = TUR_news.2.d
+	picture = GFX_news_event_young_turks
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = TUR_news.2.o1
+		trigger = { original_tag = TUR }
+	}
+	option = {
+		name = TUR_news.2.o2
+		trigger = { 
+			original_tag = AUS
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.2.o3
+		trigger = { 
+			is_in_faction_with = TUR
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.2.o4
+		trigger = {
+			NOT = { original_tag = TUR }
+			NOT = { original_tag = AUS }
+			NOT = { is_in_faction_with = TUR }
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.2.o5
+		trigger = {
+			has_war_with = TUR
+		}
+	}
+}
+
+#The Middle Eastern Liberation Movement
+news_event = {
+	id = TUR_news.3
+	title = TUR_news.3.t
+	desc = TUR_news.3.d
+	picture = GFX_news_event_international_treaty3
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = TUR_news.3.o1
+		trigger = { original_tag = TUR }
+	}
+	option = {
+		name = TUR_news.3.o2
+		trigger = { 
+			original_tag = AUS
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.3.o3
+		trigger = { 
+			is_in_faction_with = TUR
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.3.o4
+		trigger = {
+			NOT = { original_tag = TUR }
+			NOT = { original_tag = AUS }
+			NOT = { is_in_faction_with = TUR }
+			NOT = { has_war_with = TUR }
+		}
+	}
+	option = {
+		name = TUR_news.3.o5
+		trigger = {
+			has_war_with = TUR
+		}
+	}
+}

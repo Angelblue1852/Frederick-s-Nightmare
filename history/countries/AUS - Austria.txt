@@ -1,0 +1,159 @@
+﻿capital = 333
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	economic_crisis5
+	heimwehr_rising
+	vielvoelkerstaat
+}
+
+recruit_character = AUS_franz_ferdinand
+recruit_character = AUS_alfred_jansa
+recruit_character = AUS_alois_hartenstein
+recruit_character = AUS_emil_fey
+recruit_character = AUS_engelbert_dollfuss
+recruit_character = AUS_ernst_starhemberg
+recruit_character = AUS_eugene_of_austria
+recruit_character = AUS_franz_boehme
+recruit_character = AUS_hermann_boehm
+recruit_character = AUS_joseph_ferdinand
+recruit_character = AUS_karl_eglseer
+recruit_character = AUS_karl_graf_von_kirchbach
+
+
+
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+create_faction = "Kaiserlicher Verteidigungspakt"
+add_to_faction = AUS
+add_to_faction = BAY
+add_to_faction = SAX
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 35
+	democratic = 30
+	communism = 15
+	fascism = 20
+}
+
+1936.1.1 = {
+	9 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	43 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	45 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	66 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	67 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	69 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	70 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	71 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	72 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	73 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	74 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	75 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	76 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	80 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	82 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	83 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	84 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	88 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	89 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	91 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	102 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	103 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	104 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	109 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	154 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	155 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	163 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	664 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	762 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	764 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	804 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	155 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+	853 = {
+		add_dynamic_modifier = { modifier = imperial_subject_content }
+	}
+}
+		

@@ -1,0 +1,103 @@
+﻿add_namespace = AUS_news
+
+#Austria prepares for war against [Root]
+news_event = {
+	id = AUS_news.1
+	title = AUS_news.1.t
+	desc = AUS_news.1.d
+	picture = GFX_news_event_infantry2
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = AUS_news.1.o1
+		trigger = { original_tag = AUS }
+	}
+	option = {
+		name = AUS_news.1.o2
+		trigger = { original_tag = ROOT }
+	}
+	option = {
+		name = AUS_news.1.o3
+		trigger = { NOT = { original_tag = AUS } is_in_faction_with = AUS }
+	}
+	option = {
+		name = AUS_news.1.o4
+		trigger = { 
+			NOT = { original_tag = ROOT }
+			is_in_faction_with = ROOT
+		}
+	}
+	option = {
+		name = AUS_news.1.o5
+		trigger = { 
+			NOT = { 
+				original_tag = AUS 
+				original_tag = ROOT
+				is_in_faction_with = AUS
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+}
+
+#Russia stands by Romania!
+news_event = {
+	id = AUS_news.2
+	title = AUS_news.2.t
+	desc = AUS_news.2.d
+	picture = GFX_news_event_international_treaty6
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = AUS_news.2.o1
+		trigger = { original_tag = AUS }
+	}
+	option = {
+		name = AUS_news.2.o2
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = AUS_news.2.o3
+		trigger = { original_tag = ROM }
+	}
+	option = {
+		name = AUS_news.2.o4
+		trigger = { 
+			NOT = { original_tag = AUS original_tag = SOV original_tag = ROM }
+		}
+	}
+}
+
+#Russia backs away from Romania
+news_event = {
+	id = AUS_news.3
+	title = AUS_news.3.t
+	desc = AUS_news.3.d
+	picture = GFX_news_event_anti_desertion_propaganda
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = AUS_news.3.o1
+		trigger = { original_tag = AUS }
+	}
+	option = {
+		name = AUS_news.3.o2
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = AUS_news.3.o3
+		trigger = { original_tag = ROM }
+	}
+	option = {
+		name = AUS_news.3.o4
+		trigger = { 
+			NOT = { original_tag = AUS original_tag = SOV original_tag = ROM }
+		}
+	}
+}

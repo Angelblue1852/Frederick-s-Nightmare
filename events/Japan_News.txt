@@ -1,0 +1,158 @@
+﻿add_namespace = JAP_news
+
+#Chinese Civil War
+news_event = {
+	id = JAP_news.1
+	title = JAP_news.1.t
+	desc = JAP_news.1.d
+	picture = GFX_news_event_bike_infantry
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = JAP_news.1.o1
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = JAP_news.1.o2
+		trigger = { original_tag = CHI has_government = fascist }
+	}
+	option = {
+		name = JAP_news.1.o3
+		trigger = { NOT = { original_tag = JAP } NOT = { original_tag = CHI } }
+	}
+}
+
+#Humanity Declaration
+news_event = {
+	id = JAP_news.2
+	title = JAP_news.2.t
+	desc = JAP_news.2.d
+	picture = GFX_news_event_japanese_athletes
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = JAP_news.2.o1
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = JAP_news.2.o2
+		trigger = { NOT = { original_tag = JAP } NOT = { has_war_with = JAP } has_government = democratic }
+	}
+	option = {
+		name = JAP_news.2.o3
+		trigger = { NOT = { original_tag = JAP } NOT = { has_war_with = JAP } has_government = neutrality }
+	}
+	option = {
+		name = JAP_news.2.o4
+		trigger = {
+			NOT = { original_tag = JAP }
+			NOT = { original_tag = CHI }
+			NOT = { has_war_with = JAP }
+			has_government = fascism
+		}
+	}
+	option = {
+		name = JAP_news.2.o5
+		trigger = { NOT = { original_tag = JAP } NOT = { has_war_with = JAP } has_government = communism }
+	}
+	option = {
+		name = JAP_news.2.o6
+		trigger = { has_war_with = JAP }
+	}
+	option = {
+		name = JAP_news.2.o7
+		trigger = { original_tag = CHI has_government = fascism NOT = { has_war_with = JAP } }
+	}
+}
+
+#Tojo is Prime Minister
+news_event = {
+	id = JAP_news.3
+	title = JAP_news.3.t
+	desc = JAP_news.3.d
+	picture = GFX_news_event_japanese_parade2
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = JAP_news.3.o1
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = JAP_news.3.o2
+		trigger = { original_tag = CHI }
+	}
+	option = {
+		name = JAP_news.3.o3
+		trigger = { NOT = { original_tag = JAP original_tag = CHI } has_government = fascism }
+	}
+	option = {
+		name = JAP_news.3.o4
+		trigger = { NOT = { original_tag = JAP original_tag = CHI has_government = fascism } }
+	}
+}
+
+#Kempeitai
+news_event = {
+	id = JAP_news.4
+	title = JAP_news.4.t
+	desc = JAP_news.4.d
+	picture = GFX_news_event_victorious_japanese_troops
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = JAP_news.4.o1
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = JAP_news.4.o2
+		trigger = { NOT = { original_tag = JAP } }
+	}
+}
+
+#Manchuria
+news_event = {
+	id = JAP_news.5
+	title = JAP_news.5.t
+	desc = JAP_news.5.d
+	picture = GFX_news_event_japanese_officers
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = JAP_news.5.o1
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = JAP_news.5.o2
+		trigger = { NOT = { original_tag = JAP } }
+	}
+}
+
+#The Manchurian Army
+news_event = {
+	id = JAP_news.6
+	title = JAP_news.6.t
+	desc = JAP_news.6.d
+	picture = GFX_news_event_chinese_infantry
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = JAP_news.6.o1
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = JAP_news.6.o2
+		trigger = { NOT = { original_tag = JAP } }
+	}
+}

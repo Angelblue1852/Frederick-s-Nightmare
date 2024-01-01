@@ -1,0 +1,15 @@
+﻿add_namespace = IRE
+
+#Setup Event
+country_event = {
+	id = IRE.1
+	title = IRE.1.t
+	desc = IRE.1.d
+	picture = GFX_report_event_international_meeting2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = IRE.1.o1
+	}
+}

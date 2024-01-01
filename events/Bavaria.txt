@@ -1,0 +1,116 @@
+﻿add_namespace = BAY
+
+#Setup Event
+country_event = {
+	id = BAY.1
+	title = BAY.1.t
+	desc = BAY.1.d
+	picture = GFX_report_event_army_parade
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_list = { 50 = { country_event = { id = BAY.2 days = 58 } } 50 = { } }
+			random_list = { 50 = { country_event = { id = BAY.3 days = 97 } } 50 = { } }
+		}
+	}
+	
+	option = {
+		name = BAY.1.o1
+	}
+}
+
+#King Rupprecht speaks out against communists
+country_event = {
+	id = BAY.2
+	title = BAY.2.t
+	desc = BAY.2.d
+	picture = GFX_report_event_political_speech4
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government = neutrality
+	}
+	
+	option = {
+		name = BAY.2.o1
+		add_political_power = -20
+		add_popularity = {
+			ideology = neutrality popularity = 0.02
+		}
+		add_popularity = {
+			ideology = communism popularity = -0.05
+		}
+		
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = BAY.2.o2
+		add_popularity = {
+			ideology = communism popularity = -0.02
+		}
+		
+		ai_chance = { base = 30 }
+	}
+}
+
+#Draxler murdered
+country_event = {
+	id = BAY.3
+	title = BAY.3.t
+	desc = BAY.3.d
+	picture = GFX_report_event_funeral2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_government = communism
+			has_government = fascism
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { country_event = { id = BAY.4 days = 23 } }
+	}
+	
+	option = {
+		name = BAY.3.o1
+		add_popularity = { ideology = fascism popularity = 0.01 }
+		create_country_leader = {
+			name = "Adolf Hitler"
+			ideology = nazism
+			picture = "Adolf_Hitler.dds"
+		}
+	}
+}
+
+#Beer Hall Rally
+country_event = {
+	id = BAY.4
+	title = BAY.4.t
+	desc = BAY.4.d
+	picture = GFX_report_event_adolf_hitler3
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_government = fascism }
+	}
+	
+	option = {
+		name = BAY.4.o1
+		add_popularity = { ideology = fascism popularity = 0.04 }
+		
+		ai_chance = { base = 75 }
+	}
+	option = {
+		name = BAY.4.o2
+		add_popularity = { ideology = fascism popularity = 0.01 }
+		add_political_power = -20
+		
+		ai_chance = { base = 25 }
+	}
+}

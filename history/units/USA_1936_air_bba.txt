@@ -1,0 +1,73 @@
+﻿	
+	
+air_wings = {
+	
+	### 2 USAAF Wing -- Norfolk
+	362 = { 
+		# 1st Pursuit Group 
+		# 8th Pursuit Group 
+		small_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 72
+			version_name = "P-26A"
+		}
+		small_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 72
+			version_name = "P-26A"
+		}
+		# 2nd Bombardment Group 
+		# 9th Bombardment Group 
+		medium_plane_airframe_1 = {
+			owner = "USA" 
+			amount = 96
+			version_name = "B-10"
+		}
+	}
+
+	### 19th Composite Wing -- Panama Canal
+	685 = { 
+		# 16th Pursuit Group 
+		small_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 96
+			version_name = "P-26A"
+		}
+		# 6th Composite Group 
+		medium_plane_airframe_1 = {
+			owner = "USA" 
+			amount = 12
+			version_name = "B-10"
+		}
+	}
+
+	### USN Atlantic Naval Patrol Division -- Norfolk
+	362 = { 
+		# Naval Patrol Wing 3 
+		medium_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 36
+			version_name = "P2Y"
+		}
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_1
+			creator = "USA" 
+			version_name = "P-35A"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:USA_north_american_aviation_organization
+	}
+
+}
+#####################

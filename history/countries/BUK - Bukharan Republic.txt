@@ -1,0 +1,35 @@
+﻿capital = 464
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+}
+
+recruit_character = BUK_alim_khan
+
+
+
+
+
+
+set_war_support = 0.7
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}
+
+

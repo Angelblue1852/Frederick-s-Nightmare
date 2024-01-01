@@ -1,0 +1,26 @@
+
+state={
+	id=392
+	name="STATE_392"
+
+	history={
+		owner = LOU
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+
+		}
+		add_core_of = LOU
+		add_core_of = SWB
+		
+
+	}
+
+	provinces={
+		1831 4664 4691 4807 7306 7458 7536 7539 9910 10478 11971 12418 
+	}
+	manpower=2470938
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=6.000
+}

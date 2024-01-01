@@ -1,0 +1,39 @@
+﻿capital = 325
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	economic_crisis
+}
+
+recruit_character = HES_ludwig_landmann
+recruit_character = HES_max_hoelz
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = democratic
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 15
+	democratic = 55
+	communism = 10
+	fascism = 20
+}
+
+

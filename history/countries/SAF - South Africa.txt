@@ -1,0 +1,38 @@
+﻿capital = 275
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+}
+
+recruit_character = SAF_jbm_hertzog
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 35
+	democratic = 45
+	communism = 10
+	fascism = 10
+}
+
+

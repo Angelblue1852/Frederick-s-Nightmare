@@ -1,0 +1,10 @@
+﻿l_english:
+ test_localisation:0 "fdfdfd"
+ title_text:0 "Congressional Support"
+ congress_button:0 "United States Congress"
+ congress_button_hinttag:0 "Click to Open Congressional Support View"
+ senate_support_title:0 "§YSenate Support§!"
+ senate_support_text:0 "§G[?senate_support]§!§Y/[?senate_support_max]§!"
+ house_support_title:0 "§YHouse Support§!"
+ house_support_text:0 "§G[?house_support]§!§Y/[?house_support_max]§!"
+ 

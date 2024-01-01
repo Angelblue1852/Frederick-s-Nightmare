@@ -1,0 +1,171 @@
+opinion_modifiers = {
+
+	anti_communist_policy_negative = {
+		value = -20
+	}
+	anti_communist_policy_positive = {
+		value = 20
+	}
+
+	anti_fascist_policy_negative = {
+		value = -20
+	}
+	anti_fascist_policy_positive = {
+		value = 20
+	}
+
+	anti_monarchist_policy_negative = {
+		value = -20
+	}
+	anti_monarchist_policy_positive = {
+		value = 20
+	}
+	
+	battlesome_democracy_negative = {
+		value = -15
+	}
+	battlesome_democracy_positive = {
+		value = 15
+	}
+	
+	border_fortifications_negative = {
+		value = -20
+	}
+	border_fortifications_positive = {
+		value = 20
+	}
+	
+	civil_war_opposition = {
+		value = -35
+	}
+	civil_war_support = {
+		value = 35
+	}
+	
+	colonial_disagreements = {
+		value = -10
+	}
+	
+	developing_friendship = {
+		value = 15
+	}
+	
+	diplomatic_alignment = {
+		value = 50
+	}
+	diplomatic_betrayal = {
+		value = -40
+	}
+	diplomatic_friendship = {
+		value = 30
+	}
+	diplomatic_hostility = {
+		value = -50
+	}
+	diplomatic_insult = {
+		value = -15
+	}
+	diplomatic_protection = {
+		value = 50
+	}
+	
+	diplomatic_request_accepted = {
+		value = 5
+	}
+	diplomatic_request_rejected = {
+		value = -5
+	}
+	
+	fascistic_partnership = {
+		value = 20
+	}
+	
+	foreign_criminals = {
+		value = -5
+	}
+	
+	government_liberalization_negative = {
+		value = -10
+	}
+	government_liberalization_positive = {
+		value = 10
+	}
+	
+	government_radicalization_negative = {
+		value = -10
+	}
+	government_radicalization_positive = {
+		value = 10
+	}
+	
+	historical_ally = {
+		value = 25
+	}
+	
+	historical_rival = {
+		value = -25
+	}
+	
+	ideologically_weak = {
+		value = -5
+	}
+	ideological_advancements = {
+		value = 5
+	}
+	
+	new_ambassadors = {
+		value = 5
+	}
+	
+	proper_diplomatic_reaction = {
+		value = 5
+	}
+	
+	recent_war = {
+		value = -20
+	}
+	
+	religious_bigotry = {
+		value = -10
+	}
+	
+	religious_dialogues = {
+		value = 10
+	}
+	
+	respected_our_sphere = {
+		value = 40
+	}
+	
+	secret_activities = {
+		value = -25
+	}
+	
+	successful_state_visit = {
+		value = 10
+	}
+	
+	territorial_betrayal = {
+		value = -50
+	}
+	
+	territorial_dispute = {
+		value = -10
+	}
+	
+	territorial_transfer = {
+		value = 20
+	}
+	territorial_transfer_denied = {
+		value = -20
+	}
+	
+	trade_missions = {
+		value = 10
+	}
+	
+	unacceptable_cabinet_assignments = {
+		value = -25
+	}
+	
+}

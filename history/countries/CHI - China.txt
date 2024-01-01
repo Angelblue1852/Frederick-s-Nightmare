@@ -1,0 +1,39 @@
+﻿capital = 315
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	china_nanjing_warlord
+	china_subjugation
+}
+
+recruit_character = CHI_hu_hanmin
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.10"
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 23
+	fascism = 62
+	communism = 4
+	democratic = 11
+}
+
+

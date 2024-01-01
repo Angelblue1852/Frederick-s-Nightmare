@@ -1,0 +1,416 @@
+﻿add_namespace = GER
+
+#Setup Event
+country_event = {
+	id = GER.1
+	title = GER.1.t
+	desc = GER.1.d
+	picture = GFX_report_event_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_unit_leader = {
+				limit = { has_id = 111 } 
+				unit_leader_event = { id = GER.3 days = 30 }
+			}
+			country_event = { id = GER.6 days = 412 }
+			country_event = { id = GER.7 days = 223 }
+			country_event = { id = GER.8 days = 182 }
+			country_event = { id = GER.9 days = 18 }
+			country_event = { id = GER.10 days = 122 }
+		}
+	}
+	
+	option = {
+		name = GER.1.o1
+	}
+}
+
+#Prussian Ultimatum to join the Confederation
+country_event = {
+	id = GER.2
+	title = GER.2.t
+	desc = GER.2.d
+	picture = GFX_report_event_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER.2.o1
+		PRS = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			add_named_threat = {
+				name = "Annexiation of Minor German States"
+				threat = 2
+			}
+			country_event = { id = generic.2 hours = 2 }
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				has_government = communism
+				add = -20
+			}
+			modifier = {
+				NOT = { is_neighbor_of = PRS }
+				add = -10
+			}
+		}
+	}
+	
+	option = {
+		name = GER.2.o2
+		PRS = {
+			create_wargoal = {
+				target = ROOT
+				type = annex_everything
+			}
+			country_event = { id = generic.3 hours = 2 }
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_in_faction = yes
+				add = 30
+			}
+			modifier = {
+				PRS = { has_war = yes }
+				add = 30
+			}
+		}
+	}
+}
+
+#Heydrich Affair
+unit_leader_event = {
+	id = GER.3
+	title = GER.3.t
+	desc = GER.3.d
+	picture = GFX_report_event_sailors
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_government = fascism }
+		NOT = { has_government = communism }
+	}
+	
+	option = {
+		name = GER.3.o1
+		PRS = {
+			add_stability = 0.0025
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.01
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						any_country = { is_minor_german_state = yes has_government = fascism }
+					}
+					random_list = {
+						85 = {
+							random_country = {
+								limit = { is_minor_german_state = yes has_government = fascism }
+								country_event = { id = GER.4 days = 6 }
+							}
+						}
+						15 = {}
+					}
+				}
+			}
+		}
+		ai_chance = { base = 80 }
+	}
+	
+	option = {
+		name = GER.3.o2
+		PRS = {
+			add_stability = -0.0025
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.02
+			}
+		}
+		ai_chance = { base = 20 }
+	}
+}
+
+#Heydrich flees to another fascist country
+country_event = {
+	id = GER.4
+	title = GER.4.t
+	desc = GER.4.d
+	picture = GFX_report_event_adolf_hitler
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER.4.o1
+		create_corps_commander = {
+			name = "Reinhard Heydrich"
+			picture = "gfx/leaders/PRS/admirals/Reinhard_Heydrich.dds"
+			traits = { commando }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		PRS = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = hired_reinhard_heydrich
+			}
+		}
+		hidden_effect = { PRS = { country_event = { id = GER.5 days = 3 } } }
+		
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = GER.4.o2
+		create_navy_leader = {
+			name = "Reinhard Heydrich"
+			picture = "gfx/leaders/PRS/admirals/Reinhard_Heydrich.dds"
+			skill = 2
+			traits = { blockade_runner }
+		}
+		PRS = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = hired_reinhard_heydrich
+			}
+		}
+		hidden_effect = { PRS = { country_event = { id = GER.5 days = 3 } } }
+		
+		ai_chance = { 
+			base = 0
+			modifier = { any_owned_state = { is_coastal = yes } add = 200 }
+		}
+	}
+	
+	option = {
+		name = GER.4.o3
+		ai_chance = { 
+			base = 0
+			modifier = { is_in_faction_with = PRS add = 125 }
+			modifier = { is_neighbor_of = PRS add = 50 }
+		}
+	}
+}
+#Reinhard Heydrich joins [From]
+country_event = {
+	id = GER.5
+	title = GER.5.t
+	desc = GER.5.d
+	picture = GFX_report_event_sailors
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER.5.o1
+		add_political_power = -5
+		effect_tooltip = { add_opinion_modifier = { target = FROM modifier = hired_reinhard_heydrich } }
+	}
+}
+
+#Guderian publishes "Panzerkampf"
+country_event = {
+	id = GER.6
+	title = GER.6.t
+	desc = GER.6.d
+	picture = GFX_report_event_panzer_attack
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER.6.o1
+		army_experience = 5
+		trigger = { NOT = { has_completed_focus = PRS_expand_the_general_staff } }
+	}
+	option = {
+		name = GER.6.o2
+		army_experience = 10
+		trigger = { has_completed_focus = PRS_expand_the_general_staff }
+	}
+}
+
+#Berlin Airport Expansion completed
+country_event = {
+	id = GER.7
+	title = GER.7.t
+	desc = GER.7.d
+	picture = GFX_report_event_fighter_planes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_war = no
+		has_full_control_of_state = 64
+	}
+	
+	option = {
+		name = GER.7.o1
+		add_political_power = 5
+		64 = { add_building_construction = { type = air_base level = 1 instant_build = yes } }
+	}
+}
+
+#Assassination of Karl Hartmann
+country_event = {
+	id = GER.8
+	title = GER.8.t
+	desc = GER.8.d
+	picture = GFX_report_event_funeral
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		HAN = {
+			exists = yes
+			has_government = communism
+			NOT = { has_war_with = PRS }
+		}
+	}
+	
+	#Launch an investigation
+	option = {
+		name = GER.8.o1
+		set_country_flag = hartmann_investigated
+		hidden_effect = {
+			news_event = { id = GER_news.12 hours = 18 }
+		}
+		random_country = {
+			limit = { original_tag = HAN has_government = communism }
+			add_opinion_modifier = {
+				target = ROOT modifier = proper_diplomatic_reaction
+			}
+		}
+		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_popularity = { ideology = communism popularity = 0.01 }
+		add_stability = 0.01
+		
+		ai_chance = { base = 50 }
+	}
+	#Ignore the issue
+	option = {
+		name = GER.8.o2
+		set_country_flag = hartmann_ignored
+		hidden_effect = {
+			news_event = { id = GER_news.12 hours = 18 }
+		}
+		random_country = {
+			limit = { original_tag = HAN has_government = communism }
+			add_opinion_modifier = {
+				target = ROOT modifier = diplomatic_insult
+			}
+		}
+		add_popularity = { ideology = fascism popularity = 0.01 }
+		add_popularity = { ideology = neutrality popularity = 0.01 }
+		add_war_support = 0.01
+		
+		ai_chance = { base = 50 }
+	}
+}
+
+#Wilhelm II embarasses Royal House of Prussia
+country_event = {
+	id = GER.9
+	title = GER.9.t
+	desc = GER.9.d
+	picture = GFX_report_event_international_meeting7
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER.9.o1
+		add_political_power = -10
+		add_popularity = {
+			ideology = neutrality popularity = -0.03
+		}
+		add_stability = -0.01
+	}
+}
+
+#Wilhelm II hosts state visit for Carol of Romania
+country_event = {
+	id = GER.10
+	title = GER.10.t
+	desc = GER.10.d
+	picture = GFX_report_event_carol_the_second
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_completed_focus = PRS_force_wilhelms_abdication }
+		any_country = {
+			original_tag = ROM
+			has_government = communism
+		}
+	}
+	
+	option = {
+		name = GER.10.o1
+		add_political_power = -15
+		add_popularity = { ideology = neutrality popularity = -0.02 }
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = GER.10.o2
+		add_political_power = -30
+		add_popularity = { ideology = neutrality popularity = 0.01 }
+		add_popularity = { ideology = communism popularity = -0.02 }
+		random_country = {
+			limit = { original_tag = ROM has_government = communism }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_insult
+			}
+		}
+		add_war_support = 0.01
+	}
+}
+
+#[From.GetName] wants to join the German Confederation
+country_event = {
+	id = GER.11
+	title = GER.11.t
+	desc = GER.11.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER.11.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = GER.11.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}

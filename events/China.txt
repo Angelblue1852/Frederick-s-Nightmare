@@ -1,0 +1,333 @@
+﻿add_namespace = CHI
+
+#Setup Event
+country_event = {
+	id = CHI.1
+	title = CHI.1.t
+	desc = CHI.1.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_list = { 75 = { country_event = { id = CHI.2 days = 41 } } 25 = { } }
+		}
+	}
+	
+	option = {
+		name = CHI.1.o1
+	}
+}
+
+#Kuomintang National Gathering
+country_event = {
+	id = CHI.2
+	title = CHI.2.t
+	desc = CHI.2.d
+	picture = GFX_report_event_chiang_kai_shek
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.2.o1
+		add_political_power = -100
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		hidden_effect = {
+			news_event = { id = CHI_news.1 }
+			create_country_leader = {	#Chiangs Wife
+				name = "Soong Mei-Ling"
+				picture = "Soong_Mei_Ling.dds"
+				ideology = authoritarian_conservatism
+			}
+		}
+		
+		ai_chance = { base = 75 }
+	}
+	
+	option = {
+		name = CHI.2.o2
+		add_war_support = 0.01
+		add_stability = 0.01
+		add_popularity = { ideology = neutrality popularity = 0.15 }
+		
+		ai_chance = { 
+			base = 25
+			modifier = { has_war = yes add = 200 }
+		}
+	}
+}
+
+#China demands to stand down TRIGGER
+country_event = {
+	id = CHI.3
+	title = "China threatens us!"
+	desc = "China is moving against us and is now trying to convince our protectors to give up their diplomatic and military defense of us!"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Oh no!"
+		every_country = {
+			limit = { has_guaranteed = ROOT NOT = { original_tag = CHI } }
+			country_event = CHI.4
+		}
+	}
+}
+
+#China demands to stand down regarding FROM
+country_event = {
+	id = CHI.4
+	title = CHI.4.t
+	desc = CHI.4.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {	#Agree to the Chinese Threats
+		name = CHI.4.o1
+		diplomatic_relation = { 
+			country = FROM 
+			relation = guarantee 
+			active = no
+		}
+		FROM = { news_event = news.16 }
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_betrayal
+			}
+		}
+		CHI = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = respected_our_sphere
+			}
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+	
+	option = {	#We stand with FROM
+		name = CHI.4.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_protection
+			}
+		}
+		CHI = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_hostility
+			}
+		}
+		ai_chance = {
+			base = 25
+			#A human China player should have a smoother experience.
+			modifier = {
+				CHI = { is_ai = no }
+				add = -20
+			}
+		}
+	}
+}
+
+#Maoist Operators in the country
+country_event = {
+	id = CHI.5
+	title = CHI.5.t
+	desc = CHI.5.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.5.o1
+		set_country_flag = maoist_subversion
+		add_ideas = maoist_rebels
+	}
+}
+
+#Assassination of the Chinese Leader [Japan Focus]
+country_event = {
+	id = CHI.6
+	title = CHI.6.t
+	desc = CHI.6.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.6.o1
+		news_event = news.18
+		if = {
+			limit = { has_government = communism }
+			create_country_leader = {
+				name = "Leadership Vacancy"
+				picture = "Vacancy.dds"
+				ideology = national_bolshevism
+			}
+		}
+		if = {
+			limit = { has_government = democratic }
+			create_country_leader = {
+				name = "Leadership Vacancy"
+				picture = "Vacancy.dds"
+				ideology = centrism
+			}
+		}
+		if = {
+			limit = { has_government = fascism }
+			create_country_leader = {
+				name = "Leadership Vacancy"
+				picture = "Vacancy.dds"
+				ideology = ultra_nationalism
+			}
+		}
+		if = {
+			limit = { has_government = neutrality }
+			create_country_leader = {
+				name = "Leadership Vacancy"
+				picture = "Vacancy.dds"
+				ideology = oligarchism
+			}
+		}
+		
+		#Hu Hanmin
+		if = {
+			limit = { has_country_leader = { name = "Hu Hanmin" } }
+			country_event = { id = CHI.7 days = 5 }
+		}
+		#Chen Duxiu
+		if = {
+			limit = { has_country_leader = { name = "Chen Duxiu" } }
+			country_event = { id = CHI.8 days = 5 }
+		}
+		#Mao Zedong
+		if = {
+			limit = { has_country_leader = { name = "Mao Zedong" } }
+			country_event = { id = CHI.9 days = 5 }
+		}
+		#Chiang Kai-shek
+		if = {
+			limit = { 
+				OR = {
+					has_country_leader = { name = "Chiang Kai-shek" }
+					has_country_leader = { name = "Soong Mei-Ling" }
+					has_country_leader = { name = "Wang Jingwei" }
+				}
+			}
+			country_event = { id = CHI.10 days = 5 }
+		}
+	}
+}
+
+#Hanmin's successor
+country_event = {
+	id = CHI.7
+	title = CHI.7.t
+	desc = CHI.7.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.7.o1
+		create_country_leader = {
+			name = "Zhou Fohai"
+			picture = "Zhou_Fohai.dds"
+			ideology = ultra_nationalism
+		}
+		news_event = news.19
+	}
+}
+
+#Duxiu's successor
+country_event = {
+	id = CHI.8
+	title = CHI.8.t
+	desc = CHI.8.d
+	picture = GFX_report_event_chinese_communists
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.8.o1
+		create_country_leader = {
+			name = "Mao Zedong"
+			picture = "Mao_Zedong.dds"
+			ideology = national_bolshevism
+		}
+		news_event = news.19
+	}
+}
+
+#Zedong's successor
+country_event = {
+	id = CHI.9
+	title = CHI.9.t
+	desc = CHI.9.d
+	picture = GFX_report_event_chinese_communists
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.9.o1
+		create_country_leader = {
+			name = "Chen Duxiu"
+			picture = "Chen_Duxiu.dds"
+			ideology = marxism
+		}
+		news_event = news.19
+	}
+}
+
+#Kuomintang successor
+country_event = {
+	id = CHI.10
+	title = CHI.10.t
+	desc = CHI.10.d
+	picture = GFX_report_event_chiang_kai_shek
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.10.o1
+		if = {
+			limit = { has_government = democratic }
+			create_country_leader = {
+				name = "Sun Fo"
+				picture = "Sun_Fo.dds"
+				ideology = conservatism
+			}
+		}
+		if = {
+			limit = { NOT = { has_government = democratic } }
+			create_country_leader = {
+				name = "Sun Fo"
+				picture = "Sun_Fo.dds"
+				ideology = authoritarian_conservatism
+			}
+		}
+		news_event = news.19
+	}
+}
+
+#Chiang Kai-Shek's Arrest
+country_event = {
+	id = CHI.11
+	title = CHI.11.t
+	desc = CHI.110.d
+	picture = GFX_report_event_chiang_kai_shek
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CHI.11.o1
+	}
+	option = {
+		name = CHI.11.o2
+	}
+}

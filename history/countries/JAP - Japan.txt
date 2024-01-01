@@ -1,0 +1,71 @@
+﻿capital = 282
+
+oob = "JAP_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+recruit_character = JAP_hirohito
+recruit_character = JAP_akira_muto
+recruit_character = JAP_hatazo_adachi
+recruit_character = JAP_hisaichi_terauchi
+recruit_character = JAP_hitoshi_imamura
+recruit_character = JAP_iwane_matsui
+recruit_character = JAP_kanji_ishiwara
+recruit_character = JAP_kenji_doihara
+recruit_character = JAP_kenkichi_ueda
+recruit_character = JAP_kiichiro_iguchi
+recruit_character = JAP_kuniaki_koiso
+recruit_character = JAP_masaharu_homma
+recruit_character = JAP_naruhiko_higashikuni
+recruit_character = JAP_rikichi_ando
+recruit_character = JAP_sadao_araki
+recruit_character = JAP_seishiro_itagaki
+recruit_character = JAP_shigeru_honjo
+recruit_character = JAP_shizuichi_tanaka
+recruit_character = JAP_shunroku_hata
+recruit_character = JAP_takashi_sakai
+recruit_character = JAP_toshizo_nishio
+recruit_character = JAP_yamashita_tomoyuki
+recruit_character = JAP_yasuji_okamura
+recruit_character = JAP_yoshijiro_umezu
+
+
+
+
+
+
+
+
+
+
+
+create_faction = "Dai Tōa Kyōeiken"
+add_to_faction = JAP
+
+declare_war_on = {
+	target = MAN
+	type = annex_everything
+}
+
+set_war_support = 0.1
+set_convoys = 300
+
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 23
+	democratic = 12
+	communism = 5
+	fascism = 60
+}
+
+

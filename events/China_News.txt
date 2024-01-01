@@ -1,0 +1,77 @@
+﻿add_namespace = CHI_news
+
+#Execution of Chiang Kai-Shek
+news_event = {
+	id = CHI_news.1
+	title = CHI_news.1.t
+	desc = CHI_news.1.d
+	picture = GFX_news_event_ruins_of_kiev
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = CHI_news.1.o1
+		trigger = { original_tag = CHI }
+	}
+	option = {
+		name = CHI_news.1.o2
+		trigger = { NOT = { original_tag = CHI } }
+	}
+}
+
+#Hanmin allies the Maoists
+news_event = {
+	id = CHI_news.2
+	title = CHI_news.2.t
+	desc = CHI_news.2.d
+	picture = GFX_news_event_mao_zedong
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = CHI_news.2.o1
+		trigger = { original_tag = CHI }
+	}
+	option = {
+		name = CHI_news.2.o2
+		trigger = { NOT = { original_tag = CHI } has_government = communism }
+	}
+	option = {
+		name = CHI_news.2.o3
+		trigger = { NOT = { original_tag = CHI } has_government = fascism }
+	}
+	option = {
+		name = CHI_news.2.o4
+		trigger = { NOT = { original_tag = CHI } OR = { has_government = democratic has_government = neutrality } }
+	}
+}
+
+#China issues the Jinan Threat
+news_event = {
+	id = CHI_news.3
+	title = CHI_news.3.t
+	desc = CHI_news.3.d
+	picture = GFX_news_event_political_rally
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = CHI_news.3.o1
+		trigger = { original_tag = CHI }
+	}
+	option = {
+		name = CHI_news.3.o2
+		trigger = { original_tag = SHX }
+	}
+	option = {
+		name = CHI_news.3.o3
+		trigger = { original_tag = PRS }
+	}
+	option = {
+		name = CHI_news.3.o4
+		trigger = { NOT = { original_tag = CHI original_tag = PRS original_tag = SHX } }
+	}
+}

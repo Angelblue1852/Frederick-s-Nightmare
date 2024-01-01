@@ -1,0 +1,15 @@
+﻿add_namespace = FIN
+
+#Setup Event
+country_event = {
+	id = FIN.1
+	title = FIN.1.t
+	desc = FIN.1.d
+	picture = GFX_report_event_winter_infantry
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FIN.1.o1
+	}
+}

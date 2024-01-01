@@ -1,0 +1,15 @@
+﻿add_namespace = SER
+
+#Setup Event
+country_event = {
+	id = SER.1
+	title = SER.1.t
+	desc = SER.1.d
+	picture = GFX_report_event_french_resistance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SER.1.o1
+	}
+}

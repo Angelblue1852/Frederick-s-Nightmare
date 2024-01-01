@@ -1,0 +1,29 @@
+﻿add_namespace = TTS_news
+
+#Accept Papal Authority
+news_event = {
+	id = TTS_news.1
+	title = TTS_news.1.t
+	desc = TTS_news.1.d
+	picture = GFX_news_event_international_treaty6
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = TTS_news.1.o1
+		trigger = { OR = { original_tag = NAP original_tag = PAP } }
+	}
+	option = {
+		name = TTS_news.1.o2
+		trigger = { has_government = fascist }
+	}
+	option = {
+		name = TTS_news.1.o3
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = TTS_news.1.o4
+		trigger = { OR = { has_government = communism has_government = democratic } }
+	}
+}

@@ -1,0 +1,115 @@
+﻿add_namespace = WUR
+
+#Setup Event
+country_event = {
+	id = WUR.1
+	title = WUR.1.t
+	desc = WUR.1.d
+	picture = GFX_report_event_wehrmacht2
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = WUR.2 days = 18 }
+			country_event = { id = WUR.4 days = 26 }
+			country_event = { id = WUR.3 days = 42 }
+		}
+	}
+	
+	option = {
+		name = WUR.1.o1
+	}
+}
+
+#Hitler's January Visit
+country_event = {
+	id = WUR.2
+	title = WUR.2.t
+	desc = WUR.2.d
+	picture = GFX_report_event_adolf_hitler
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government = fascism
+	}
+	
+	option = {
+		name = WUR.2.o1
+		add_political_power = 5
+	}
+}
+
+#Center of Racial Science re-opened in Stuttgart
+country_event = {
+	id = WUR.3
+	title = WUR.3.t
+	desc = WUR.3.d
+	picture = GFX_report_event_research_lab
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government = fascism
+	}
+	
+	option = {
+		name = WUR.3.o1
+		add_popularity = { ideology = fascism popularity = 0.01 }
+	}
+	
+	option = {
+		name = WUR.3.o2
+		add_political_power = -20
+		add_popularity = { ideology = fascism popularity = 0.02 }
+		every_other_country = {
+			limit = { has_government = fascism }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = ideological_advancements
+			}
+		}
+		hidden_effect = {
+			country_event = { id = WUR.5 days = 20 }
+		}
+	}
+}
+
+#Homosexuality Scandal in the Army
+country_event = {
+	id = WUR.4
+	title = WUR.4.t
+	desc = WUR.4.d
+	picture = GFX_report_event_infantry2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = { has_government = fascism has_government = neutrality }
+	}
+	
+	option = {
+		name = WUR.4.o1
+		add_war_support = -0.01
+	}
+}
+
+#Flandin speaks
+country_event = {
+	id = WUR.5
+	title = WUR.5.t
+	desc = WUR.5.d
+	picture = GFX_report_event_political_speech5
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government = fascism
+	}
+	
+	option = {
+		name = WUR.5.o1
+		add_political_power = 5
+	}
+}

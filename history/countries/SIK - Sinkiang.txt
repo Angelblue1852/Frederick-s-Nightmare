@@ -1,0 +1,39 @@
+﻿capital = 617
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	china_ccp_warlord
+	trotskyist_military
+}
+
+recruit_character = SIK_sheng_shicai
+
+
+
+
+
+
+set_war_support = 0.1
+set_convoys = 20
+
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 25
+	democratic = 10
+	communism = 65
+}
+
+

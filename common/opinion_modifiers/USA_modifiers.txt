@@ -1,0 +1,29 @@
+opinion_modifiers = {
+	
+	american_security_act = {
+		value = -20
+	}
+	
+	continued_segregation_negative = {
+		value = -15
+	}
+	continued_segregation_positive = {
+		value = 15
+	}
+	
+	end_of_segregation_negative = {
+		value = -15
+	}
+	end_of_segregation_positive = {
+		value = 15
+	}
+	
+	french_language_act = {
+		value = 10
+	}
+	
+	refused_statehood = {
+		value = -40
+	}
+	
+}

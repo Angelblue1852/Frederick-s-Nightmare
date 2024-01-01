@@ -1,0 +1,19 @@
+opinion_modifiers = {
+
+	austro_turkish_treaty = {
+		value = 40
+	}
+
+	mosque_imperialism = {
+		value = -30
+	}
+
+	sided_with_iraqi_nationalists = {
+		value = -25
+	}
+	
+	sided_with_zionists = {
+		value = -25
+	}
+	
+}

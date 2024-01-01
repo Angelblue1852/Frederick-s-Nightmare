@@ -1,0 +1,271 @@
+﻿add_namespace = TUR
+
+#Setup Event
+country_event = {
+	id = TUR.1
+	title = TUR.1.t
+	desc = TUR.1.d
+	picture = GFX_report_event_german_turkish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TUR.1.o1
+	}
+}
+
+#Egyptian Ultimatum
+country_event = {
+	id = TUR.2
+	title = TUR.2.t
+	desc = TUR.2.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TUR.2.o1
+		FROM = { annex_country = { target = ROOT transfer_troops = yes } }
+		add_opinion_modifier = {
+			target = FROM modifier = territorial_dispute
+		}
+		ai_chance = { factor = 25 }
+	}
+	
+	option = {
+		name = TUR.2.o2
+		FROM = { create_wargoal = { target = ROOT type = annex_everything } }
+		ai_chance = { factor = 75 }
+	}
+}
+
+#Suez Ultimatum
+country_event = {
+	id = TUR.3
+	title = TUR.3.t
+	desc = TUR.3.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TUR.3.o1
+		FROM = { transfer_state = 453 }
+		add_opinion_modifier = {
+			target = FROM modifier = territorial_dispute
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				add = -20 is_major = yes
+			}
+		}
+	}
+	
+	option = {
+		name = TUR.3.o2
+		FROM = { 
+			create_wargoal = { target = ROOT type = take_state_focus generator = { 453 } }
+		}
+		ai_chance = { factor = 75 }
+	}
+}
+
+#Ethnicity and Priesthood Debate
+country_event = {
+	id = TUR.4
+	title = TUR.4.t
+	desc = TUR.4.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {	#Allow Non-Turks to serve
+		name = TUR.4.o1
+		
+		add_popularity = { ideology = neutrality popularity = 0.025 }
+		add_popularity = { ideology = democratic popularity = 0.025 }
+		add_stability = 0.05
+		add_war_support = -0.025
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_favor_the_reformists
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_empower_the_reformers
+			}
+		}
+	}
+	option = {	#Clergy must be Turkish
+		name = TUR.4.o2
+		
+		add_popularity = { ideology = fascism popularity = 0.025 }
+		add_political_power = 200
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_favor_the_fundamentalists
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_mosque_imperialism
+			}
+		}
+	}
+}
+
+#Interreligious Marriages Debate
+country_event = {
+	id = TUR.5
+	title = TUR.5.t
+	desc = TUR.5.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {	#Allow interreligious marriage
+		name = TUR.5.o1
+		
+		add_stability = 0.05
+		
+		add_popularity = { ideology = neutrality popularity = 0.025 }
+		add_popularity = { ideology = democratic popularity = 0.025 }
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 15
+				AUS = {
+					has_completed_focus = AUS_befriend_the_ottoman_empire
+				}
+			}
+			modifier = {
+				add = 15
+				AUS = {
+					has_completed_focus = AUS_priests_and_muftis
+				}
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_empower_the_reformers
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_empower_the_reformers
+			}
+		}
+	}
+	option = {	#Muslims and non-Muslims can't marry
+		name = TUR.5.o2
+		
+		add_political_power = 250
+		
+		add_popularity = { ideology = fascism popularity = 0.025 }
+		every_neighbor_country = {
+			limit = { NOT = { has_idea = sunni_clergy } }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = religious_bigotry
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_favor_the_fundamentalists
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_mosque_imperialism
+			}
+		}
+	}
+}
+
+#Shariah Debate
+country_event = {
+	id = TUR.6
+	title = TUR.6.t
+	desc = TUR.6.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {	#The state must remain secular
+		name = TUR.6.o1
+		
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_stability = 0.05
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 15
+				AUS = {
+					has_completed_focus = AUS_befriend_the_ottoman_empire
+				}
+			}
+			modifier = {
+				add = 15
+				AUS = {
+					has_completed_focus = AUS_priests_and_muftis
+				}
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_favor_the_reformists
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_empower_the_reformers
+			}
+		}
+	}
+	option = {	#SHARIAH
+		name = TUR.6.o2
+		
+		add_political_power = 350
+		add_war_support = 0.025
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		
+		every_other_country = {
+			limit = {
+				OR = {
+					has_idea = catholic_clergy
+					has_idea = protestant_clergy
+					has_idea = orthodox_clergy
+					has_idea = buddhist_clergy
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT modifier = religious_bigotry
+			}
+		}
+		
+		ai_chance = {
+			base = 5
+			
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_favor_the_fundamentalists
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_mosque_imperialism
+			}
+		}
+	}
+}

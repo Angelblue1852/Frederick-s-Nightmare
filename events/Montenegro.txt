@@ -1,0 +1,37 @@
+﻿add_namespace = MNT
+
+#Setup Event
+country_event = {
+	id = MNT.1
+	title = MNT.1.t
+	desc = MNT.1.d
+	picture = GFX_report_event_political_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MNT.1.o1
+	}
+}
+
+#Popovic takes power
+country_event = {
+	id = MNT.2
+	title = MNT.2.t
+	desc = MNT.2.d
+	picture = GFX_report_event_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MNT.2.o1
+		hidden_effect = { retire_country_leader = yes }
+		effect_tooltip = {
+			create_country_leader = {
+				name = "Krsto Popović"
+				picture = "Krsto_Popovic.dds"
+				ideology = conservatism
+			}
+		}
+	}
+}

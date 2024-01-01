@@ -1,0 +1,261 @@
+﻿add_namespace = JAP
+
+#Setup Event
+country_event = {
+	id = JAP.1
+	title = JAP.1.t
+	desc = JAP.1.d
+	picture = GFX_report_event_hideki_tojo
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = JAP.1.o1
+	}
+}
+
+#Chinese Civil War started by Japan
+country_event = {
+	id = JAP.2
+	title = JAP.2.t
+	desc = JAP.2.d
+	picture = GFX_report_event_hideki_tojo
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = JAP.2.o1
+		add_war_support = -0.05
+		add_stability = -0.125
+		if = {
+			limit = { CHI = { has_government = fascism } }
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = neutrality
+				size = 0.55
+				capital = 608
+				states = {
+					621 608 614 615 616 622
+				}
+			}
+		}
+		if = {
+			limit = { CHI = { has_government = communism } }
+			start_civil_war = {
+				ruling_party = communism
+				ideology = neutrality
+				size = 0.55
+				capital = 608
+				states = {
+					621 608 614 615 616 622
+				}
+			}
+		}
+		random_other_country = {
+			limit = { original_tag = CHI has_government = neutrality }
+			set_equipment_fraction = 0.95
+			set_stability = 0.55
+			set_war_support = 0.35
+			save_event_target_as = kuomintang_china
+		}
+		event_target:kuomintang_china = {
+			add_named_threat = {
+				name = "Kuomintang Insurgency"
+				threat = 8
+			}
+			add_ideas = {
+				extensive_conscription
+				limited_exports
+				war_economy
+			}
+		}
+		JAP = {
+			add_to_faction = event_target:kuomintang_china
+			add_opinion_modifier = { 
+				target = event_target:kuomintang_china 
+				modifier = civil_war_support 
+			}
+			reverse_add_opinion_modifier = { 
+				target = event_target:kuomintang_china 
+				modifier = civil_war_support
+			}
+			add_opinion_modifier = { 
+				target = CHI 
+				modifier = civil_war_opposition 
+			}
+			reverse_add_opinion_modifier = { 
+				target = CHI 
+				modifier = civil_war_opposition 
+			}
+			add_timed_idea = { idea = international_military_programs days = 500 }
+		}
+		hidden_effect = {
+			news_event = { id = JAP_news.1 hours = 4 }
+		}
+	}
+}
+
+#[From.GetName] wants to join the Imperial Alliance
+country_event = {
+	id = JAP.4
+	title = JAP.4.t
+	desc = JAP.4.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = JAP.4.a
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = JAP.4.b
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+
+#Fate of Yakutia
+country_event = {
+	id = JAP.5
+	title = JAP.5.t
+	desc = JAP.5.d
+	picture = GFX_report_event_hideki_tojo
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = JAP.5.o1
+		JAP = {
+			release_autonomy = {
+				target = YAK
+				autonomy_state = autonomy_wtt_imperial_associate
+				freedom_level = 0.5
+			}
+			set_country_flag = yakutia_established
+		}
+		YAK = {
+			set_cosmetic_tag = YAK_JAP
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 45
+				neutrality = 12
+				fascism = 35
+				communism = 8
+			}
+			add_ideas = {
+				yakut_japanese_dominion
+			}
+		}
+	}
+	option = {
+		name = JAP.5.o2
+		trigger = { has_country_flag = fema_established }
+		FER = {
+			transfer_state = 574
+			transfer_state = 644
+			transfer_state = 876
+			transfer_state = 877
+		}
+		clr_country_flag = fema_established
+		set_country_flag = fema_expanded
+	}
+	option = {
+		name = JAP.5.o3
+		trigger = { has_country_flag = siberia_established }
+		BYA = {
+			transfer_state = 574
+			transfer_state = 644
+			transfer_state = 876
+			transfer_state = 877
+		}
+		clr_country_flag = siberia_established
+		set_country_flag = siberia_expanded
+	}
+	option = {
+		name = JAP.5.o4
+	}
+}
+
+#Fate of Transamur
+country_event = {
+	id = JAP.6
+	title = JAP.6.t
+	desc = JAP.6.d
+	picture = GFX_report_event_hideki_tojo
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = JAP.6.o1
+		trigger = { has_country_flag = manchuria_established }
+		MAN = {
+			transfer_state = 409
+			transfer_state = 560
+			transfer_state = 561
+			transfer_state = 657
+			transfer_state = 923
+		}
+		set_country_flag = manchuria_transamur
+	}
+	option = {
+		name = JAP.6.o2
+		trigger = { 
+			OR = {
+				has_country_flag = fema_established
+				has_country_flag = fema_expanded
+			}
+		}
+		FER = {
+			transfer_state = 409
+			transfer_state = 560
+			transfer_state = 561
+			transfer_state = 657
+			transfer_state = 923
+		}
+		set_country_flag = fema_transamur
+	}
+	option = {
+		name = JAP.6.o3
+		trigger = { 
+			OR = {
+				has_country_flag = siberia_established
+				has_country_flag = siberia_expanded
+			}
+		}
+		BYA = {
+			transfer_state = 409
+			transfer_state = 560
+			transfer_state = 561
+			transfer_state = 657
+			transfer_state = 923
+		}
+		set_country_flag = siberia_transamur
+	}
+	option = {
+		name = JAP.6.o4
+	}
+}
+
+

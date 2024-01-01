@@ -1,0 +1,109 @@
+﻿add_namespace = AUS
+
+#Setup Event
+country_event = {
+	id = AUS.1
+	title = AUS.1.t
+	desc = AUS.1.d
+	picture = GFX_report_event_wehrmacht2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS.1.o1
+	}
+}
+
+#Russia: Austria threatens Romania
+country_event = {
+	id = AUS.2
+	title = AUS.2.t
+	desc = AUS.2.d
+	picture = GFX_report_event_wehrmacht
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS.2.o1
+		news_event = { id = AUS_news.2 days = 4 }
+		ROM = { add_opinion_modifier = { target = ROOT modifier = diplomatic_protection } }
+		ai_chance = {
+			base = 50
+			modifier = {	#Make it a bit less harsh when Austria is a player.
+				AUS = { is_ai = no }
+				add = -25
+			}
+		}
+	}
+	option = {
+		name = AUS.2.o2
+		news_event = { id = AUS_news.3 days = 4 }
+		add_political_power = -25
+		diplomatic_relation = { country = ROM relation = guarantee active = no }
+		ROM = { add_opinion_modifier = { target = ROOT modifier = diplomatic_betrayal } }
+		ai_chance = {
+			base = 50
+			modifier = {	#But the Soviet comrades stand together, da.
+				has_government = communism
+				ROM = { has_government = communism }
+				add = -49
+			}
+		}
+	}
+}
+
+#[From.GetName] wants to join the Danube Pact
+country_event = {
+	id = AUS.3
+	title = AUS.3.t
+	desc = AUS.3.d
+	picture = GFX_report_event_royal_visit
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS.3.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = AUS.3.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+#Austrian Kulturkampf
+country_event = {
+	id = AUS.4
+	title = AUS.4.t
+	desc = AUS.4.d
+	picture = GFX_report_event_royal_visit
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS.4.o1
+		add_stability = 0.01
+		effect_tooltip = {
+			add_opinion_modifier = { target = FROM modifier = catholic_partnership }
+			reverse_add_opinion_modifier = { target = FROM modifier = catholic_partnership }
+		}
+	}
+}

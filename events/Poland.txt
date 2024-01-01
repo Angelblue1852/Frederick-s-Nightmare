@@ -1,0 +1,15 @@
+﻿add_namespace = POL
+
+#Setup Event
+country_event = {
+	id = POL.1
+	title = POL.1.t
+	desc = POL.1.d
+	picture = GFX_report_event_army_training2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = POL.1.o1
+	}
+}

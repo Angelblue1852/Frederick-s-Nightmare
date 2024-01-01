@@ -1,0 +1,210 @@
+﻿add_namespace = PAP
+
+#Setup Event
+country_event = {
+	id = PAP.1
+	title = PAP.1.t
+	desc = PAP.1.d
+	picture = GFX_report_event_international_meeting2
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = PAP.2 days = 64 }
+			country_event = { id = PAP.4 days = 686 }
+		}
+	}
+	
+	option = {
+		name = PAP.1.o1
+	}
+}
+
+#The Papal League
+country_event = {
+	id = PAP.2
+	title = PAP.2.t
+	desc = PAP.2.d
+	picture = GFX_report_event_international_treaty2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			is_guaranteed_by = FRA
+			is_guaranteed_by = AUS
+		}
+		has_country_leader = { name = "Pius XI" }
+	}
+	
+	option = {
+		name = PAP.2.o1
+		create_faction = papal_league
+		FRA = { diplomatic_relation = { country = ROOT relation = guarantee active = no } }
+		AUS = { diplomatic_relation = { country = ROOT relation = guarantee active = no } }
+		news_event = { id = PAP_news.1 hours = 4 }
+		ai_chance = { base = 85 }
+	}
+	
+	option = {
+		name = PAP.2.o2
+		add_political_power = -100
+		ai_chance = { base = 15 }
+	}
+}
+
+#[Country] assassinates Pope Pius XI
+country_event = {
+	id = PAP.3
+	title = PAP.3.t
+	desc = PAP.3.d
+	picture = GFX_report_event_international_treaty2
+	
+	trigger = { has_country_leader = { name = "Pius XI" } }
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PAP.3.o1
+		add_war_support = 0.05
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Vacancy"
+			ideology = despotism
+			picture = "Vacancy.dds"
+		}
+		add_opinion_modifier = { target = FROM modifier = diplomatic_hostility }
+	}
+}
+
+#Pius XI dies
+country_event = {
+	id = PAP.4
+	title = PAP.4.t
+	desc = PAP.4.d
+	picture = GFX_report_event_international_treaty2
+	
+	trigger = { has_country_leader = { name = "Pius XI" } }
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PAP.4.o1
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Vacancy"
+			ideology = despotism
+			picture = "Vacancy.dds"
+		}
+	}
+}
+
+#The Pope looks for foreign investors
+country_event = {
+	id = PAP.5
+	title = PAP.5.t
+	desc = PAP.5.d
+	picture = GFX_report_event_international_treaty2
+	
+	trigger = { has_country_leader = { name = "Pius XI" } }
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PAP.5.o1
+		add_political_power = -25
+		if = {
+			limit = { has_idea = catholic_clergy }
+			add_stability = 0.005
+		}
+		PAP = {
+			create_random_building_slot_1 = yes
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_friendship
+			}
+		}
+		
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_idea = catholic_clergy
+				add = 3
+			}
+		}
+	}
+	
+	option = {
+		name = PAP.5.o2
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#The Pope requests Westphalian steel
+country_event = {
+	id = PAP.6
+	title = PAP.6.t
+	desc = PAP.6.d
+	picture = GFX_report_event_international_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PAP.6.o1
+		add_political_power = -10
+		add_stability = 0.005
+		PAP = {
+			add_opinion_modifier = { target = ROOT modifier = diplomatic_friendship }
+		}
+		2 = {
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+		}
+		157 = {
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+		}
+	}
+	
+	option = {
+		name = PAP.6.o2
+		add_popularity = { ideology = communism popularity = 0.05 }
+	}
+}
+
+#The Pope requests Austrian expertise
+country_event = {
+	id = PAP.7
+	title = PAP.7.t
+	desc = PAP.7.d
+	picture = GFX_report_event_international_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PAP.7.o1
+		if = {
+			limit = { has_idea = catholic_clergy }
+			add_stability = 0.005
+		}
+		PAP = {
+			army_experience = 25
+			air_experience = 25
+			navy_experience = 25
+		}
+	}
+	
+	option = {
+		name = PAP.7.o2
+		add_popularity = { ideology = communism popularity = 0.03 }
+	}
+}

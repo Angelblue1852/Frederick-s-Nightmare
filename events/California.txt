@@ -1,0 +1,34 @@
+﻿add_namespace = CAL
+
+#Setup Event
+country_event = {
+	id = CAL.1
+	title = CAL.1.t
+	desc = CAL.1.d
+	picture = GFX_report_event_government6
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { country_event = { id = CAL.2 days = 542 } }
+	}
+	
+	option = {
+		name = CAL.1.o1
+	}
+}
+
+#Orson Welles publishes "War of the Worlds"
+country_event = {
+	id = CAL.2
+	title = CAL.2.t
+	desc = CAL.2.d
+	picture = GFX_report_event_diplomatic_message
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAL.2.o1
+		add_political_power = 10
+	}
+}

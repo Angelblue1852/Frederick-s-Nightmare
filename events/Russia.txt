@@ -1,0 +1,227 @@
+﻿add_namespace = SOV
+
+#Setup Event
+country_event = {
+	id = SOV.1
+	title = SOV.1.t
+	desc = SOV.1.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = SOV.2 days = 26 }
+		}
+	}
+	
+	option = {
+		name = SOV.1.o1
+	}
+}
+
+#Death of Lenin
+country_event = {
+	id = SOV.2
+	title = SOV.2.t
+	desc = SOV.2.d
+	picture = GFX_report_event_funeral
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { 
+			country_event = { id = SOV.3 days = 35 }
+			country_event = SOV_news.1
+			create_country_leader = {
+				name = "Vyacheslav Molotov"
+				picture = "Vyacheslav_Molotov.dds"
+				ideology = marxism
+			}
+		}
+	}
+	
+	option = {
+		name = SOV.2.o1
+	}
+}
+
+#Bolshevik Power Struggle
+country_event = {
+	id = SOV.3
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		random_list = {
+			65 = { country_event = SOV.4 }
+			25 = { country_event = SOV.5 }
+			10 = { country_event = SOV.6 }
+		}
+	}
+}
+##Molotov wins
+country_event = {
+	id = SOV.4
+	title = SOV.4.t
+	desc = SOV.4.d
+	picture = GFX_report_event_german_soviet_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV.4.o1
+		effect_tooltip = {
+			create_country_leader = { name = "Vyacheslav Molotov" picture = "Vyacheslav_Molotov.dds" ideology = marxism }
+		}
+		news_event = SOV_news.2
+	}
+}
+##Trotzky wins
+country_event = {
+	id = SOV.5
+	title = SOV.5.t
+	desc = SOV.5.d
+	picture = GFX_report_event_trotzky_government
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV.5.o1
+		create_country_leader = {
+			name = "Leon Trotzky"
+			picture = "Leon_Trotzky.dds"
+			ideology = leninism
+		}
+		news_event = SOV_news.3
+	}
+}
+##Stalin wins
+country_event = {
+	id = SOV.6
+	title = SOV.6.t
+	desc = SOV.6.d
+	picture = GFX_report_event_stalin_government
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV.6.o1
+		create_country_leader = {
+			name = "Joseph Stalin"
+			picture = "Joseph_Stalin.dds"
+			ideology = stalinism
+		}
+		news_event = SOV_news.4
+	}
+}
+
+#[From.GetName] wants to join the Holy Alliance
+country_event = {
+	id = SOV.7
+	title = SOV.7.t
+	desc = SOV.7.d
+	picture = GFX_report_event_russian_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV.7.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = SOV.7.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+#Tsar arrested
+country_event = {
+	id = SOV.8
+	title = SOV.8.t
+	desc = SOV.8.d
+	picture = GFX_report_event_russian_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV.8.o1
+		every_country = {
+			limit = { is_subject_of = ROOT }
+			country_event = { id = SOV.9 hours = 6 }
+		}
+	}
+}
+
+#Our chance to be free
+country_event = {
+	id = SOV.9
+	title = SOV.9.t
+	desc = SOV.9.d
+	picture = GFX_report_event_russian_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV.9.o1
+		SOV = { end_puppet = ROOT }
+	}
+}
+
+#[From.GetName] wants to join the Comitern
+country_event = {
+	id = SOV.10
+	title = SOV.10.t
+	desc = SOV.10.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV.10.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = SOV.10.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}

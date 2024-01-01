@@ -1,0 +1,3715 @@
+focus_tree = {
+	
+	id = usa_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = USA
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 100 y = 1200 }
+	
+	default = no
+	reset_on_civilwar = no
+	
+	#Align with France Tree
+	
+	focus = {
+		id = USA_align_with_france
+		icon = align_with_france
+		
+		x = 2
+		y = 0
+
+		cost = 8
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = USA_american_idealism
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		select_effect = {
+			country_event = { id = USA.16 days = 25 }
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic popularity = 0.05
+			}
+			every_country = {
+				limit = { 
+					original_tag = FRA
+					has_government = democratic
+					is_subject = no
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_alignment
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = french_language_act
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_adopt_the_hoover_plan
+		icon = industry_civilian
+		
+		relative_position_id = USA_align_with_france
+		x = -2
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_align_with_france
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_the_ford_investigations
+		icon = forceful_treaty
+		
+		relative_position_id = USA_align_with_france
+		x = 0
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_align_with_france
+		}
+		mutually_exclusive = {}
+		available = {
+			has_ford_crisis = yes
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.01 }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_silent_workhorse
+			add_stability = 0.05
+			ford_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_friendship_with_louisiana
+		icon = align_with_louisiana
+		
+		relative_position_id = USA_align_with_france
+		x = 2
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_align_with_france
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = LOU }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { LOU = { has_government = democratic } }
+				add_popularity = { ideology = democratic popularity = 0.01 }
+			}
+			random_country = {
+				limit = { original_tag = LOU has_government = democratic }
+				add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+				reverse_add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_join_the_entente
+		icon = major_alliance
+		
+		relative_position_id = USA_align_with_france
+		x = -1
+		y = 2
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_adopt_the_hoover_plan
+		}
+		prerequisite = {
+			focus = USA_the_ford_investigations
+		}
+		mutually_exclusive = {}
+		available = {
+			has_completed_focus = USA_pass_the_civil_rights_act
+			has_government = democratic
+			FRA = { has_government = democratic }
+			is_subject = no
+			FRA = { is_subject = no }
+			FRA = { is_faction_leader = yes }
+			is_in_faction = no
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = { 
+				country_event = {
+					id = FRA.3 days = 2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_lessons_from_fraus
+		icon = align_with_sweden
+		
+		relative_position_id = USA_align_with_france
+		x = 1
+		y = 2
+
+		cost = 5
+		
+		prerequisite = {
+			focus = USA_the_ford_investigations
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = SWE }
+			has_government = democratic
+			SWE = { has_government = democratic }
+			SWE = { has_completed_focus = SWE_investigate_the_royal_family }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_friendship_with_quebec
+		icon = align_with_quebec
+		
+		relative_position_id = USA_align_with_france
+		x = 3
+		y = 2
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_friendship_with_louisiana
+			focus = USA_friendship_with_california
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = CAN }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { CAN = { has_government = democratic } }
+				add_popularity = { ideology = democratic popularity = 0.01 }
+			}
+			random_country = {
+				limit = { original_tag = CAN has_government = democratic }
+				add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+				reverse_add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+				if = {
+					limit = { has_opinion_modifier = american_security_act }
+					remove_opinion_modifier = {
+						target = USA
+						modifier = american_security_act
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_naval_focus
+		icon = navy2
+		
+		relative_position_id = USA_align_with_france
+		x = -2
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_join_the_entente
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = generic_capital_ship_navy_chief
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = generic_maneuver_navy_chief
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = generic_submarine_navy_chief
+			navy_experience = 50
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.75
+				uses = 2
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.75
+				uses = 2
+				category = dd_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_pass_the_liberty_protection_act
+		icon = treaty
+		
+		relative_position_id = USA_align_with_france
+		x = 0
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_join_the_entente
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = democratic
+			is_in_faction = yes
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = liberty_protection_act
+			add_named_threat = {
+				threat = 1
+				name = "Liberty Protection Act"
+			}
+			if = {
+				limit = {
+					OR = { has_idea = disarmed_nation has_idea = volunteer_only }
+				}
+				add_ideas = limited_conscription
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = disarmed_nation has_idea = volunteer_only }
+				}
+				add_popularity = { ideology = democratic popularity = 0.01 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_friendship_with_the_confederation
+		icon = GFX_diplomacy_native_administration
+		
+		relative_position_id = USA_align_with_france
+		x = 2
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_friendship_with_louisiana
+			focus = USA_join_the_entente
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = SOU }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NAT = { has_government = democratic } }
+				add_popularity = { ideology = democratic popularity = 0.01 }
+			}
+			random_country = {
+				limit = { original_tag = NAT has_government = democratic }
+				add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+				reverse_add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_adopt_the_nimitz_plan
+		icon = anti_submarine
+		
+		relative_position_id = USA_align_with_france
+		x = -2
+		y = 4
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_naval_focus
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_anti_mexican_policy
+		icon = military_sphere
+		
+		relative_position_id = USA_align_with_france
+		x = 1
+		y = 5
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_pass_the_liberty_protection_act
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = {
+				MEX = { has_government = democratic }
+				MEX = { has_government = neutrality }
+			}
+		}
+		bypass = {
+			is_in_faction_with = MEX
+			OR = {
+				MEX = { has_government = democratic }
+				MEX = { has_government = neutrality }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.01 }
+			MEX = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = diplomatic_hostility
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = diplomatic_hostility
+				}
+			}
+			if = {
+				limit = {
+					LOU = { is_subject = no }
+					NOT = { is_in_faction_with = LOU } LOU = { is_neighbor_of = MEX }
+					LOU = { NOT = { has_government = communism } } LOU = { NOT = { has_government = fascism } }
+				}
+				give_guarantee = LOU
+			}
+			if = {
+				limit = {
+					CAL = { is_subject = no }
+					NOT = { is_in_faction_with = CAL } CAL = { is_neighbor_of = MEX }
+					CAL = { NOT = { has_government = communism } } CAL = { NOT = { has_government = fascism } }
+				}
+				give_guarantee = CAL
+			}
+			if = {
+				limit = {
+					NAT = { is_subject = no }
+					NOT = { is_in_faction_with = NAT } NAT = { is_neighbor_of = MEX }
+					NAT = { NOT = { has_government = communism } } NAT = { NOT = { has_government = fascism } }
+				}
+				give_guarantee = NAT
+			}
+			if = {
+				limit = {
+					GUA = { is_subject = no }
+					NOT = { is_in_faction_with = GUA } GUA = { is_neighbor_of = MEX }
+					GUA = { NOT = { has_government = communism } } GUA = { NOT = { has_government = fascism } }
+				}
+				give_guarantee = GUA
+			}
+			if = {
+				limit = {
+					NIC = { is_subject = no }
+					NOT = { is_in_faction_with = NIC } NIC = { is_neighbor_of = MEX }
+					NIC = { NOT = { has_government = communism } } NIC = { NOT = { has_government = fascism } }
+				}
+				give_guarantee = NIC
+			}
+			unlock_decision_tooltip = offer_statehood_to_texas
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_the_uss_alexander_hamilton
+		icon = carriers
+		
+		relative_position_id = USA_align_with_france
+		x = -2
+		y = 6
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_adopt_the_nimitz_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 362
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { 
+				create_equipment_variant = {
+					name = "Alexander Hamilton Class"
+					type = ship_hull_carrier_1
+					name_group = USA_CV_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						mid_1_custom_slot = ship_deck_space
+					}
+				}
+				load_oob = USA_alexander_hamilton
+			}
+			custom_effect_tooltip = "The USS Alexander Hamilton will be deployed in Norfolk Harbor."
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_rejuvenate_the_naval_industry
+		icon = navy
+		
+		relative_position_id = USA_align_with_france
+		x = -1
+		y = 7
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_expand_the_marine_corps
+		}
+		prerequisite = {
+			focus = USA_the_uss_alexander_hamilton
+		}
+		mutually_exclusive = {}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.02
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_invite_entente_experts
+		icon = research
+		
+		relative_position_id = USA_align_with_france
+		x = 0
+		y = 4
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_pass_the_liberty_protection_act
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = democratic
+			is_in_faction = yes
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_pass_the_federal_trade_commission_act
+		icon = treaty
+		
+		relative_position_id = USA_align_with_france
+		x = 2
+		y = 4
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_pass_the_liberty_protection_act
+			focus = USA_create_the_freedom_league
+		}
+		mutually_exclusive = {}
+		available = {
+			has_ford_crisis = yes
+			has_government = democratic
+			is_in_faction = yes
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_CIV_1 = yes
+			create_random_factory_MIL_1 = yes
+			create_random_factory_NAV_1 = yes
+			ford_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_demand_florida
+		icon = ultimatum
+		
+		relative_position_id = USA_align_with_france
+		x = 2
+		y = 6
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_anti_mexican_policy
+			focus = USA_offer_statehood_to_california
+		}
+		mutually_exclusive = {}
+		available = {
+			366 = {
+				owner = {
+					NOT = { has_war_with = USA }
+					NOT = { is_in_faction_with = USA }
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				366 = { owner = { has_war_with = USA } }
+				366 = { owner = { original_tag = USA } }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { name = "Floridian Ultimatum" threat = 4 }
+			366 = { owner = { country_event = { id = USA.11 days = 1 } } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_expand_the_marine_corps
+		icon = amphibious_assault
+		
+		relative_position_id = USA_align_with_france
+		x = -1
+		y = 5
+
+		cost = 5
+		
+		prerequisite = {
+			focus = USA_adopt_the_nimitz_plan
+		}
+		prerequisite = {
+			focus = USA_pass_the_liberty_protection_act
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = generic_high_command_navy_amphibious_assaulter
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.75
+				uses = 1
+				technology = marines
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_ultimatum_to_ohio
+		icon = ultimatum2
+		
+		relative_position_id = USA_align_with_france
+		x = 2
+		y = 7
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_demand_florida
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = OHI
+				is_neighbor_of = USA
+				NOT = { is_in_faction_with = USA }
+				NOT = { is_subject_of = USA }
+				NOT = { has_war_with = USA }
+			}
+		}
+		bypass = {
+			OHI = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { name = "Ultimatum to Ohio" threat = 2 }
+			OHI = {
+				country_event = { id = USA.12 days = 1 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_request_the_great_lakes_region
+		icon = tripartite_pact
+		
+		relative_position_id = USA_align_with_france
+		x = 1
+		y = 8
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_ultimatum_to_ohio
+		}
+		prerequisite = {
+			focus = USA_anti_mexican_policy
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				393 = { owner = { is_in_faction_with = ROOT } }
+				394 = { owner = { is_in_faction_with = ROOT } }
+				395 = { owner = { is_in_faction_with = ROOT } }
+				396 = { owner = { is_in_faction_with = ROOT } }
+			}
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { is_in_faction = no }
+				custom_effect_tooltip = "The Great Lakes Region will be requested from its owners."
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					OR = {
+						owns_state = 393
+						owns_state = 394
+						owns_state = 395
+						owns_state = 396
+					}
+				}
+				if = {
+					limit = { is_subject = yes }
+					overlord = {
+						country_event = { id = USA.13 days = 1 }
+					}
+				}
+				if = {
+					limit = { is_subject = no }
+					country_event = { id = USA.13 days = 1 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_the_louisiana_gamble
+		icon = political_pressure
+		
+		relative_position_id = USA_align_with_france
+		x = 3
+		y = 8
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_offer_statehood_to_california
+		}
+		prerequisite = {
+			focus = USA_ultimatum_to_ohio
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { name = "Louisiana Gamble" threat = 5 }
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 393	#Michigan
+						owns_state = 394	#Wisconsin
+						owns_state = 395	#Illinois
+						owns_state = 396	#Indiana
+					}
+				}
+				if = {
+					limit = { is_subject = yes }
+					overlord = {
+						country_event = { id = USA.14 days = 1 }
+					}
+				}
+				if = {
+					limit = { is_subject = no }
+					country_event = { id = USA.14 days = 1 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#American Idealism Tree
+	
+	focus = {
+		id = USA_american_idealism
+		icon = demand_territory
+		
+		x = 8
+		y = 0
+
+		cost = 8
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = USA_align_with_france
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			news_event = USA_news.1
+			every_country = {
+				limit = { 
+					is_in_faction_with = FRA
+					is_subject = no
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = american_security_act
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_friendship_with_california
+		icon = align_with_california
+		
+		relative_position_id = USA_american_idealism
+		x = -2
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_american_idealism
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = CAL }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_country = {
+				limit = { original_tag = CAL has_government = democratic }
+				add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+				reverse_add_opinion_modifier = {
+					target = USA
+					modifier = diplomatic_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_army_focus
+		icon = infantry_allies
+		
+		relative_position_id = USA_american_idealism
+		x = 0
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_american_idealism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_fortification_engineer
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_quartermaster_general
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = generic_organization_army_chief
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = generic_offensive_army_chief
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_embrace_the_corporatists
+		icon = dangerous_deal
+		
+		relative_position_id = USA_american_idealism
+		x = 2
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_american_idealism
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_completed_focus = USA_endorse_the_anti_fascists }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.05
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_create_the_us_foreign_legion
+		icon = army_logistics
+		
+		relative_position_id = USA_american_idealism
+		x = -1
+		y = 2
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_army_focus
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = american_foreign_legion
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_expand_the_ranger_corps
+		icon = paratroopers
+		
+		relative_position_id = USA_american_idealism
+		x = 1
+		y = 2
+
+		cost = 5
+		
+		prerequisite = {
+			focus = USA_army_focus
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = generic_high_command_air_airborne_commander
+			army_experience = 15
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.75
+				uses = 1
+				technology = paratroopers
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_expand_ford
+		icon = GFX_USA_ford_factories
+		
+		relative_position_id = USA_american_idealism
+		x = 3
+		y = 2
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_embrace_the_corporatists
+		}
+		prerequisite = {
+			focus = USA_adopt_the_warburg_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = ford_military_division
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = ford_airplane_division
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = ford_motor_company
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_create_the_freedom_league
+		icon = alliance
+		
+		relative_position_id = USA_american_idealism
+		x = -2
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_friendship_with_california
+		}
+		prerequisite = {
+			focus = USA_create_the_us_foreign_legion
+		}
+		mutually_exclusive = {
+			focus = USA_jacksonian_idealism
+		}
+		mutually_exclusive = {
+			focus = USA_ideological_reform
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = freedom_league
+			hidden_effect = {
+				news_event = { id = news.13 days = 1 }
+			}
+			if = {
+				limit = {
+					CAL = { has_government = democratic }
+					CAL = { is_subject = no }
+					CAL = { is_in_faction = no }
+					CAL = { NOT = { has_war_with = USA } }
+				}
+				CAL = { country_event = { id = generic.1 days = 1 } }
+			}
+			if = {
+				limit = {
+					OHI = { has_government = democratic }
+					OHI = { is_subject = no }
+					OHI = { is_in_faction = no }
+					OHI = { NOT = { has_war_with = USA } }
+				}
+				OHI = { country_event = { id = generic.1 days = 1 } }
+			}
+			if = {
+				limit = {
+					CAN = { has_government = democratic }
+					CAN = { is_subject = no }
+					CAN = { is_in_faction = no }
+					CAN = { NOT = { has_war_with = USA } }
+				}
+				CAN = { country_event = { id = generic.1 days = 1 } }
+			}
+			if = {
+				limit = {
+					LOU = { has_government = democratic }
+					LOU = { is_subject = no }
+					LOU = { is_in_faction = no }
+					LOU = { NOT = { has_war_with = USA } }
+				}
+				LOU = { country_event = { id = generic.1 days = 1 } }
+			}
+			if = {
+				limit = {
+					NAT = { has_government = democratic }
+					NAT = { is_subject = no }
+					NAT = { is_in_faction = no }
+					NAT = { NOT = { has_war_with = USA } }
+				}
+				NAT = { country_event = { id = generic.1 days = 1 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_north_american_free_trade
+		icon = trade
+		
+		relative_position_id = USA_create_the_freedom_league
+		x = 0
+		y = 3
+
+		cost = 10
+		
+		available = {
+			NOT = { has_government = communism }
+			NOT = { has_idea = moralism }
+		}
+		prerequisite = {
+			focus = USA_create_the_freedom_league
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_in_the_americas = yes
+					NOT = { has_war_with = ROOT }
+					NOT = { has_government = communism }
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = trade_deals
+				}
+			}
+			ford_crisis_remove = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_offer_statehood_to_california
+		icon = major_alliance2
+		
+		relative_position_id = USA_american_idealism
+		x = -3
+		y = 5
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_create_the_freedom_league
+		}
+		available = {
+			CAL = { is_in_faction_with = ROOT }
+		}
+		bypass = {
+			CAL = { is_subject_of = ROOT }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CAL = { 
+				country_event = { id = USA.15 hours = 18 }
+			}
+			unlock_decision_tooltip = offer_statehood_to_texas
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##Jacksonian Idealism Sub-Branch
+	
+	focus = {
+		id = USA_jacksonian_idealism
+		icon = treaty
+		
+		relative_position_id = USA_american_idealism
+		x = 0
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_create_the_us_foreign_legion
+		}
+		mutually_exclusive = {
+			focus = USA_ideological_reform
+		}
+		mutually_exclusive = {
+			focus = USA_create_the_freedom_league
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			news_event = USA_news.10
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+			ford_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 0		#The AI should not take this. This is exclusively for players who want to stay authoritarian.
+		}
+	}
+	focus = {
+		id = USA_ruralism
+		icon = industry
+		
+		relative_position_id = USA_jacksonian_idealism
+		x = -1
+		y = 1
+
+		cost = 5
+		
+		prerequisite = {
+			focus = USA_jacksonian_idealism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_war_support = 0.05
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_embrace_urban_northerners
+		icon = infrastructure
+		
+		relative_position_id = USA_jacksonian_idealism
+		x = -1
+		y = 4
+
+		cost = 12
+		
+		prerequisite = {
+			focus = USA_ruralism
+			focus = USA_adopt_the_browder_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 357
+			has_full_control_of_state = 358
+			has_full_control_of_state = 359
+			has_full_control_of_state = 360
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			357 = {
+				add_extra_state_shared_building_slots = 1
+				357 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			}
+			if = {
+				limit = { 357 = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } } }
+				357 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			}
+			358 = {
+				add_extra_state_shared_building_slots = 1
+				358 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			}
+			if = {
+				limit = { 358 = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } } }
+				358 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			}
+			359 = {
+				add_extra_state_shared_building_slots = 1
+				359 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			}
+			if = {
+				limit = { 359 = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } } }
+				359 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			}
+			360 = {
+				add_extra_state_shared_building_slots = 1
+				360 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			}
+			if = {
+				limit = { 360 = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } } }
+				360 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##Ideological Reform Sub-Branch
+	
+	focus = {
+		id = USA_ideological_reform
+		icon = political_pressure
+		
+		relative_position_id = USA_american_idealism
+		x = 2
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_create_the_us_foreign_legion
+		}
+		mutually_exclusive = {
+			focus = USA_jacksonian_idealism
+		}
+		mutually_exclusive = {
+			focus = USA_create_the_freedom_league
+		}
+		available = {
+			NOT = { has_government = democratic }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 1.5
+				name = "Ideological Reform"
+			}
+			add_popularity = {
+				ideology = communism popularity = 0.15
+			}
+			add_popularity = {
+				ideology = fascism popularity = 0.15
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_communist_revolutionary
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_fascist_demagogue
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	###Anti-Fascists Sub-Sub-Branch
+	focus = {
+		id = USA_endorse_the_anti_fascists
+		icon = communism
+		
+		relative_position_id = USA_ideological_reform
+		x = -1
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_ideological_reform
+		}
+		mutually_exclusive = {
+			focus = USA_invite_henry_ford_into_the_government
+		}
+		available = {
+			has_completed_focus = USA_pass_the_civil_rights_act
+			NOT = { has_completed_focus = USA_embrace_the_corporatists }
+			OR = {
+				communism > 0.5
+				has_idea = generic_communist_revolutionary
+			}
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = "American Communism"
+			}
+			ford_crisis_remove = yes
+			economic_crisis_downgrade = yes
+			add_popularity = { ideology = communism popularity = 0.2 }
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_adopt_the_browder_plan
+		icon = GFX_USA_browder_plan
+		
+		relative_position_id = USA_endorse_the_anti_fascists
+		x = -1
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_endorse_the_anti_fascists
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			every_neighbor_country = {
+				limit = { NOT = { has_war_with = ROOT } }
+				add_ideas = {
+					communist_influence
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_us_influence_in_california
+		icon = major_alliance3
+		
+		relative_position_id = USA_endorse_the_anti_fascists
+		x = 1
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_endorse_the_anti_fascists
+			focus = USA_invite_henry_ford_into_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_government = communism }
+				CAL = { add_ideas = communist_influence }
+			}
+			if = {
+				limit = { has_government = democratic }
+				CAL = { add_ideas = democratic_influence }
+			}
+			if = {
+				limit = { has_government = fascism }
+				CAL = { add_ideas = fascist_influence }
+			}
+			if = {
+				limit = { has_government = neutrality }
+				CAL = { add_ideas = authoritarian_influence }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+#	focus = {
+#		id = USA_offer_statehood_to_florida
+#		icon = demand_territory
+#		
+#		relative_position_id = USA_endorse_the_anti_fascists
+#		x = 0
+#		y = 2
+#
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = USA_endorse_the_anti_fascists
+#		}
+#		mutually_exclusive = {}
+#		available = {}
+#		bypass = {}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#
+#		ai_will_do = {
+#			base = 10
+#		}
+#	}
+	
+	focus = {
+		id = USA_attack_louisiana
+		icon = war
+		
+		will_lead_to_war_with = OHI
+		will_lead_to_war_with = LOU
+		
+		relative_position_id = USA_endorse_the_anti_fascists
+		x = 0
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_endorse_the_anti_fascists
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_government = democratic }
+			NOT = { has_government = neutrality }
+			NOT = { is_in_faction_with = LOU }
+		}
+		bypass = {
+			OHI = {
+				exists = no
+			}
+			LOU = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = LOU
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = OHI
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_ban_religious_education
+		icon = anti_catholicism
+		
+		relative_position_id = USA_endorse_the_anti_fascists
+		x = -1
+		y = 2
+
+		cost = 8
+		
+		prerequisite = {
+			focus = USA_adopt_the_browder_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_government = neutrality }
+			NOT = { has_government = fascism }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_socialist_enforcer
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_ideas = atheism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	###Henry Ford Sub-Sub-Branch
+	focus = {
+		id = USA_invite_henry_ford_into_the_government
+		icon = fascism
+		
+		relative_position_id = USA_ideological_reform
+		x = 1
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_ideological_reform
+		}
+		prerequisite = {
+			focus = USA_expand_ford
+		}
+		mutually_exclusive = {
+			focus = USA_endorse_the_anti_fascists
+		}
+		available = {
+			OR = {
+				fascism > 0.5
+				has_idea = generic_fascist_demagogue
+			}
+			has_completed_focus = USA_maintain_segregation
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ford_crisis_remove = yes
+			economic_crisis_upgrade = yes
+			add_named_threat = {
+				threat = 2
+				name = "American Fascism"
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = USA_henry_ford
+			add_ideas = USA_henry_ford
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_adopt_the_lindbergh_plan
+		icon = oil_production
+		
+		relative_position_id = USA_invite_henry_ford_into_the_government
+		x = 1
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_invite_henry_ford_into_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_tech = synth_oil_experiments } }
+				set_technology = { synth_oil_experiments = 1 }
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 1
+				category = synth_resources
+			}
+			custom_effect_tooltip = "This will create three synthetic refineries."
+			create_random_refinery_1 = yes
+			create_random_refinery_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_offer_statehood_to_ohio
+		icon = demand_territory2
+		
+		relative_position_id = USA_invite_henry_ford_into_the_government
+		x = 0
+		y = 2
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_invite_henry_ford_into_the_government
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			any_country = {
+				original_tag = OHI
+				exists = yes
+				is_subject = no
+				is_neighbor_of = USA
+				num_of_controlled_states < 2
+				NOT = { has_war_with = USA }
+			}
+		}
+		bypass = {
+			OHI = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			OHI = { 
+				country_event = { id = USA.17 days = 1 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_secure_florida
+		icon = war2
+		
+		relative_position_id = USA_invite_henry_ford_into_the_government
+		x = 0
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_offer_statehood_to_ohio
+		}
+		mutually_exclusive = {}
+		available = {
+			
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			366 = {
+				owner = {
+					USA = {
+						create_wargoal = {
+							target = PREV
+							type = take_state_focus
+							generator = { 366 }
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_break_the_french
+		icon = border_war
+		
+		relative_position_id = USA_invite_henry_ford_into_the_government
+		x = 0
+		y = 4
+		
+		will_lead_to_war_with = LOU
+		will_lead_to_war_with = FRA
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_secure_florida
+		}
+		mutually_exclusive = {}
+		available = {
+			LOU = {
+				exists = yes
+				is_neighbor_of = ROOT
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_puppet_of = ROOT }
+			}
+		}
+		bypass = {
+			has_war_with = LOU
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = LOU
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_Integrate_West
+		prerequisite = { focus = USA_request_the_great_lakes_region focus = USA_the_louisiana_gamble focus = USA_break_the_french focus = USA_attack_louisiana }
+		icon = goal_generic_demand_territory
+		x = 0
+		y = 2
+		relative_position_id = USA_attack_louisiana
+		cost = 15
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_state_core = 368
+			add_state_core = 369
+			add_state_core = 367
+			add_state_core = 370
+			add_state_core = 371
+			add_state_core = 372
+			add_state_core = 373
+			add_state_core = 395
+			add_state_core = 396
+			add_state_core = 393
+			add_state_core = 392
+			add_state_core = 394
+			add_state_core = 391
+			add_state_core = 261
+			add_state_core = 366
+		}
+	}
+	focus = {
+		id = USA_Unite_West
+		prerequisite = { focus = USA_Integrate_West }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = USA_Integrate_West
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = NAT }
+			create_wargoal = { type = annex_everything target = MEX }
+			add_state_claim = 389
+			add_state_claim = 390
+			add_state_claim = 384
+			add_state_claim = 383
+			add_state_claim = 374
+			add_state_claim = 387
+			add_state_claim = 382
+			add_state_claim = 381
+			add_state_claim = 388
+			add_state_claim = 380
+			}
+		}
+		focus = {
+			id = USA_integrate_farwest
+			prerequisite = { focus = USA_Unite_West }
+			icon = GFX_focus_generic_diplomatic_treaty
+			x = 0
+			y = 1
+			relative_position_id = USA_Unite_West
+			cost = 10
+			available_if_capitulated = yes
+			
+			completion_reward = {
+				add_state_core = 389
+				add_state_core = 390
+				add_state_core = 384
+				add_state_core = 383
+				add_state_core = 374
+				add_state_core = 387
+				add_state_core = 382
+				add_state_core = 381
+				add_state_core = 388
+				add_state_core = 380
+			}
+		}
+		
+		focus = {
+		id = USA_Take_California
+		prerequisite = { focus = USA_integrate_farwest }
+		available = {
+			has_completed_focus = USA_anti_mexican_policy
+			country_exists = CAL
+		}
+		bypass = {
+			CAL = { exists = no }
+		}
+		icon = GFX_focus_generic_diplomatic_treaty
+			x = 2
+			y = 1
+			relative_position_id = USA_integrate_farwest
+			cost = 10
+			available_if_capitulated = yes
+			
+			completion_reward = {
+			create_wargoal = { type = annex_everything target = CAL }
+			add_state_core = 378
+			add_state_core = 385
+			add_state_core = 386
+			add_state_core = 379
+		}
+	}
+	focus = {
+		id = USA_Take_Texas
+		prerequisite = { focus = USA_integrate_farwest }
+		available = {
+			OR = {MEX = {
+					owns_state = 375
+					owns_state = 376
+					owns_state = 377	
+			}
+			TEX = { exists = yes }
+		}
+	}
+		icon = GFX/interface/goals/focus_generic_diplomatic_treaty
+			x = -1
+			y = 1
+			relative_position_id = USA_integrate_farwest
+			cost = 10
+			available_if_capitulated = yes
+			
+			completion_reward = {
+			if = {
+				limit = {
+					TEX = { exists = yes }
+				}   
+				create_wargoal = { type = annex_everything target = TEX }
+				create_wargoal = {
+				type = take_state_focus
+				generator = { 375 376 377 }
+				target = MEX
+			}
+				add_state_core = 375
+				add_state_core = 376
+				add_state_core = 377	
+			}
+			else_if = {
+				limit = {
+					TEX = { exists = no }
+			}
+			create_wargoal = { type = take_state target = MEX }
+			add_state_core = 375
+			add_state_core = 376
+			add_state_core = 377	
+		}
+	}
+}
+		focus = {
+		id = USA_Looking_Out
+		prerequisite = { focus = USA_integrate_farwest }
+		x = 0
+		y = 3
+		relative_position_id = USA_integrate_farwest
+		cost = 10
+		available_if_capitulated = yes
+			
+		completion_reward = {
+			add_political_power = 50
+			}
+		}
+		
+		focus = {
+		id = USA_Communist_Alliance
+		prerequisite = { focus = USA_Looking_Out }
+		available = {
+			has_government = communism
+		}
+		mutually_exclusive = {
+			focus = USA_Neutral_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Democratic_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Freedom_League
+		}
+		mutually_exclusive = {
+			focus = USA_Fascist_Alliance
+		}
+		x = -6
+		y = 1
+		relative_position_id = USA_Looking_Out
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_Join_Comitern
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = USA_Communist_Alliance }
+		available = {
+			has_government = communism
+			SOV = { has_government = communism }
+			is_subject = no
+			SOV = { is_subject = no }
+			SOV = { is_faction_leader = yes }
+			is_in_faction = no
+			}
+		x = 1
+		y = 1
+		relative_position_id = USA_Communist_Alliance
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			SOV = { 
+				country_event = {
+					id = SOV.10 days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_Join_Socialist_Alliance
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = USA_Communist_Alliance }
+		available = {
+			has_government = communism
+			MEX = { has_government = communism }
+			is_subject = no
+			MEX = { is_subject = no }
+			MEX = { is_faction_leader = yes }
+			is_in_faction = no
+			}
+		x = -1
+		y = 1
+		relative_position_id = USA_Communist_Alliance
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			MEX = { 
+				country_event = {
+					id = MEX.7 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_Neutral_Alliance
+		prerequisite = { focus = USA_Looking_Out }
+		available = {
+			has_government = neutrality
+		}
+		mutually_exclusive = {
+			focus = USA_Freedom_League
+		}
+		mutually_exclusive = {
+			focus = USA_Democratic_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Communist_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Fascist_Alliance
+		}
+		x = 7
+		y = 1
+		relative_position_id = USA_Looking_Out
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = USA_Join_Holy_Alliance
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = USA_Neutral_Alliance }
+		available = {
+			has_government = neutrality
+			SOV = { has_government = neutrality }
+			is_subject = no
+			SOV = { is_subject = no }
+			SOV = { is_faction_leader = yes }
+			is_in_faction = no
+			}
+		x = -1
+		y = 1
+		relative_position_id = USA_Neutral_Alliance
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			SOV = { 
+				country_event = {
+					id = SOV.7 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_join_danube_pact
+		icon = major_alliance
+		prerequisite = { focus = USA_Neutral_Alliance }
+		available = {
+			has_government = neutrality
+			AUS = { has_government = neutrality }
+			is_subject = no
+			AUS = { is_subject = no }
+			AUS = { is_faction_leader = yes }
+			is_in_faction = no
+			}
+		x = 1
+		y = 1
+		relative_position_id = USA_Neutral_Alliance
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			AUS = { 
+				country_event = {
+					id = AUS.3 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_Democratic_Alliance
+		prerequisite = { focus = USA_Looking_Out }
+		available = {
+			has_government = democratic
+			has_completed_focus = USA_american_idealism
+			is_faction_leader = no
+		}
+		mutually_exclusive = {
+			focus = USA_Neutral_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Freedom_League
+		}
+		mutually_exclusive = {
+			focus = USA_Communist_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Fascist_Alliance
+		}
+		x = 11
+		y = 1
+		relative_position_id = USA_Looking_Out
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_Join_Commonwealth
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = USA_Democratic_Alliance }
+		available = {
+			has_government = democratic
+			ENG = { has_government = democratic }
+			is_subject = no
+			ENG = { is_subject = no }
+			ENG = { is_faction_leader = yes }
+			is_in_faction = no
+			}
+		x = 1
+		y = 1
+		relative_position_id = USA_Democratic_Alliance
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			ENG = { 
+				country_event = {
+					id = ENG.6 days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_Join_German_Alliance
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = USA_Democratic_Alliance }
+		available = {
+			has_government = democratic
+			PRS = { has_government = democratic }
+			is_subject = no
+			PRS = { is_subject = no }
+			PRS = { is_faction_leader = yes }
+			is_in_faction = no
+			}
+		x = -1
+		y = 1
+		relative_position_id = USA_Democratic_Alliance
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			PRS = { 
+				country_event = {
+					id = GER.11 days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_Fascist_Alliance
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = USA_Looking_Out }
+		available = {
+			has_government = fascism
+		}
+		mutually_exclusive = {
+			focus = USA_Neutral_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Democratic_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Communist_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Freedom_League
+		}
+		x = -9
+		y = 1
+		relative_position_id = USA_Looking_Out
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = USA_Join_Imperial_Alliance
+		prerequisite = { focus = USA_Fascist_Alliance }
+		available = {
+			has_government = fascism
+			JAP = { has_government = fascism }
+			is_subject = no
+			JAP = { is_subject = no }
+			JAP = { is_faction_leader = yes }
+			is_in_faction = no
+			}
+		x = 0
+		y = 1
+		relative_position_id = USA_Fascist_Alliance
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			JAP = { 
+				country_event = {
+					id = JAP.4 days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_Freedom_League
+		prerequisite = { focus = USA_Looking_Out }
+		available = {
+			is_faction_leader = yes
+		}
+		mutually_exclusive = {
+			focus = USA_Neutral_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Democratic_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Communist_Alliance
+		}
+		mutually_exclusive = {
+			focus = USA_Fascist_Alliance
+		}
+		x = 0
+		y = 1
+		relative_position_id = USA_Looking_Out
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			ENG = { 
+				country_event = {
+					id = USA.20 days = 2
+				}
+			}
+			FRA = {
+				country_event = {
+					id = USA.23 days = 2
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = USA_Invite_Quebec
+		prerequisite = { focus = USA_Freedom_League }
+		available = {
+			has_government = democratic
+			is_faction_leader = yes
+			CAN = { has_government = democratic }
+			is_subject = no
+			CAN = { is_subject = no }
+			CAN = { is_faction_leader = yes }
+		}
+		x = -2
+		y = 2
+		relative_position_id = USA_Freedom_League
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			CAN = {
+				country_event = {
+					id = USA.27 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_invite_japan
+		icon = major_alliance2
+		prerequisite = { focus = USA_Freedom_League }
+		available = {
+			has_government = democratic
+			is_faction_leader = yes
+			JAP = { has_government = democratic }
+			is_subject = no
+			JAP = { is_subject = no }
+			AND = {JAP = { is_in_faction = no }
+				  JAP = { NOT = { is_in_faction_with = USA } }
+		}
+		}
+		x = 2
+		y = 2
+		relative_position_id = USA_Freedom_League
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			JAP = {
+				country_event = {
+					id = USA.60 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_Expand_Freedom_League
+		prerequisite = { focus = USA_Freedom_League }
+		available = {
+			is_faction_leader = yes
+		}
+		x = 0
+		y = 5
+		relative_position_id = USA_Freedom_League
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			if = {
+				limit = {
+					COL = { has_government = democratic }
+					COL = { is_subject = no }
+					COL = { is_in_faction = no }
+					COL = { NOT = { has_war_with = USA } }
+				}
+				COL = { country_event = { id = generic.1 days = 1 } }
+			}
+			if = {
+				limit = {
+					DEN = { has_government = democratic }
+					DEN = { is_subject = no }
+					DEN = { is_in_faction = no }
+					DEN = { NOT = { has_war_with = USA } }
+				}
+				DEN = { country_event = { id = generic.1 days = 1 } }
+			}
+			if = {
+				limit = {
+					GUA = { has_government = democratic }
+					GUA = { is_subject = no }
+					GUA = { is_in_faction = no }
+					GUA = { NOT = { has_war_with = USA } }
+				}
+				GUA = { country_event = { id = generic.1 days = 1 } }
+			}
+			if = {
+				limit = {
+					NOR = { has_government = democratic }
+					NOR = { is_subject = no }
+					NOR = { is_in_faction = no }
+					NOR = { NOT = { has_war_with = USA } }
+				}
+				NOR = { country_event = { id = generic.1 days = 1 } }
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_Invite_Ireland
+		prerequisite = { focus = USA_Freedom_League }
+		available = {
+			has_government = democratic
+			is_faction_leader = yes
+			IRE = { has_government = democratic }
+			is_subject = no
+			IRE = { is_subject = no }
+			AND = {IRE = { is_in_faction = no }
+				  IRE = { NOT = { is_in_faction_with = USA } }
+		}
+	}
+		x = -3
+		y = 1
+		relative_position_id = USA_Freedom_League
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			IRE = { 
+				country_event = {
+					id = USA.46 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_Invite_Netherlands
+		prerequisite = { focus = USA_Freedom_League }
+		available = {
+			has_government = democratic
+			is_faction_leader = yes
+			HOL = { has_government = democratic }
+			is_subject = no
+			HOL = { is_subject = no }
+			AND = {HOL = { is_in_faction = no }
+				  HOL = { NOT = { is_in_faction_with = USA } }
+		}
+	}
+		x = -1
+		y = 1
+		relative_position_id = USA_Freedom_League
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			HOL = { 
+				country_event = {
+					id = USA.49 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_Invite_Greece
+		prerequisite = { focus = USA_Freedom_League }
+		available = {
+			has_government = democratic
+			is_faction_leader = yes
+			GRE = { has_government = democratic }
+			is_subject = no
+			GRE = { is_subject = no }
+			AND = {GRE = { is_in_faction = no }
+				  GRE = { NOT = { is_in_faction_with = USA } }
+		}
+	}
+		x = 1
+		y = 1
+		relative_position_id = USA_Freedom_League
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			GRE = { 
+				country_event = {
+					id = USA.52 days = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_Invite_Sweden
+		prerequisite = { focus = USA_Freedom_League }
+		available = {
+			has_government = democratic
+			is_faction_leader = yes
+			SWE = { has_government = democratic }
+			is_subject = no
+			SWE = { is_subject = no }
+			AND = {SWE = { is_in_faction = no }
+				  SWE = { NOT = { is_in_faction_with = USA } }
+		}
+	}
+		x = 3
+		y = 1
+		relative_position_id = USA_Freedom_League
+		cost = 10
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			SWE = { 
+				country_event = {
+					id = USA.55 days = 2
+				}
+			}
+		}
+	}
+			
+	focus = {
+		id = USA_Buy_Spanish_Phillippines
+		prerequisite = { focus = USA_Take_California }
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		relative_position_id = USA_Take_California
+		cost = 10
+		available_if_capitulated = yes
+			
+		completion_reward = {	
+			SPR = { country_event = { id = USA.30 hours = 12 } }
+			}
+		}
+			
+	focus = {
+		id = USA_Buy_Swedish_Phillippines
+		prerequisite = { focus = USA_Buy_Spanish_Phillippines }
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		relative_position_id = USA_Buy_Spanish_Phillippines
+		cost = 10
+		available_if_capitulated = yes
+			
+		completion_reward = {	
+			SWE = { country_event = { id = USA.32 hours = 12 } }
+			}
+		}
+		
+	focus = {
+		id = USA_buy_alaska
+		prerequisite = { focus = USA_Take_California }
+		icon = ultimatum
+		x = 2
+		y = 1
+		relative_position_id = USA_Take_California
+		cost = 10
+		available_if_capitulated = yes
+			
+		completion_reward = {	
+			CAN = { country_event = { id = USA.58 hours = 12 } }
+			}
+		}
+		
+	#Economic Recovery Tree
+	
+	focus = {
+		id = USA_economic_recovery
+		icon = consumer_goods
+		
+		x = 13
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_financial_expert
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_adopt_the_warburg_plan
+		icon = industry_civilian
+		
+		x = -1
+		y = 1
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_economic_recovery
+		}
+		mutually_exclusive = {
+			focus = USA_adopt_the_macguire_plan
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_captain_of_industry
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_adopt_the_macguire_plan
+		icon = industry_military
+		
+		x = 1
+		y = 1
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_economic_recovery
+		}
+		mutually_exclusive = {
+			focus = USA_adopt_the_warburg_plan
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 1
+				name = "MacGuire Plan"
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_war_industrialist
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_trigger_a_building_boom
+		icon = construction
+		
+		x = 4
+		y = 1
+		relative_position_id = USA_economic_recovery
+
+		cost = 12
+		
+		prerequisite = {
+			focus = USA_economic_recovery
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_adopt_the_new_england_plan
+		icon = naval_dockyard
+		
+		x = 0
+		y = 2
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_adopt_the_warburg_plan
+			focus = USA_adopt_the_macguire_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 357
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { 357 = { free_building_slots = { building = dockyard size > 2 include_locked = yes } } }
+				357 = {
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_expand_sherman_industries
+		icon = attack_democracy
+		
+		x = 2
+		y = 2
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_adopt_the_macguire_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_armaments_organizer
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_reform_the_central_bank
+		icon = consumer_goods
+		
+		x = 4
+		y = 2
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_trigger_a_building_boom
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 75
+			unlock_decision_category_tooltip = economic_crisis_decisions
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_establish_the_civilian_industrial_office
+		icon = industry_democratic
+		
+		x = -1
+		y = 3
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_adopt_the_warburg_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industrial_focus_civilian
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_establish_the_us_navy_industrial_office
+		icon = naval_dockyard
+		
+		x = 1
+		y = 3
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_adopt_the_new_england_plan
+		}
+		prerequisite = {
+			focus = USA_expand_sherman_industries
+		}
+		mutually_exclusive = {
+			focus = USA_establish_the_us_army_industrial_office
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industrial_focus_naval
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_establish_the_us_army_industrial_office
+		icon = industry_military
+		
+		x = 3
+		y = 3
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_expand_sherman_industries
+		}
+		mutually_exclusive = {
+			focus = USA_establish_the_us_navy_industrial_office
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industrial_focus_military
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_taylor_young_project
+		icon = radar
+		
+		x = 1
+		y = 4
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_establish_the_civilian_industrial_office
+			focus = USA_establish_the_us_army_industrial_office
+			focus = USA_establish_the_us_navy_industrial_office
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronic_bonus
+				bonus = 0.75
+				uses = 2
+				category = radar_tech
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_tech = electronic_mechanical_engineering } }
+					set_technology = { electronic_mechanical_engineering = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = radio } }
+					set_technology = { radio = 1 }
+				}
+			}
+			if = {
+				limit = { NOT = { has_tech = radio_detection } }
+				set_technology = { radio_detection = 1 }
+			}
+			custom_effect_tooltip = "This will create three radar stations."
+			create_random_radar_station_1 = yes
+			create_random_radar_station_1 = yes
+			create_random_radar_station_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_create_the_cia
+		icon = propaganda
+		
+		x = 2
+		y = 5
+		relative_position_id = USA_economic_recovery
+
+		cost = 5
+		
+		prerequisite = {
+			focus = USA_taylor_young_project
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_prince_of_terror
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = USA_oppenheimer_project
+		icon = research
+		
+		x = 1
+		y = 6
+		relative_position_id = USA_economic_recovery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_taylor_young_project
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 0.75
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Civil Rights Branch
+	focus = {
+		id = USA_pass_the_civil_rights_act
+		icon = national_unity
+		
+		x = 19
+		y = 0
+
+		cost = 12
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = USA_maintain_segregation
+		}
+		available = {
+			has_government = democratic
+			democratic > 0.50
+		}
+		bypass = {}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			news_event = USA_news.4
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_democratic_reformer
+			remove_ideas = racial_segregation
+			add_popularity = { ideology = neutrality popularity = -0.05 }
+			add_popularity = { ideology = fascism popularity = -0.05 }
+			every_country = {
+				limit = {
+					OR = {
+						has_completed_focus = generic_democratic_ideals
+						democratic > 0.5
+						has_completed_focus = generic_communist_tendencies
+						communism > 0.5
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = end_of_segregation_positive }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_completed_focus = generic_fascistic_reforms
+						fascism > 0.5
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = end_of_segregation_negative }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				add = 10
+				has_government = democratic
+			}
+			modifier = {
+				add = 10
+				has_ford_crisis = yes
+			}
+			modifier = {
+				add = 25
+				democratic > 0.55
+			}
+			modifier = {
+				add = 25
+				democratic > 0.60
+			}
+		}
+	}
+	focus = {
+		id = USA_maintain_segregation
+		icon = fascism2
+		
+		x = 2
+		y = 0
+		relative_position_id = USA_pass_the_civil_rights_act
+
+		cost = 12
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = USA_pass_the_civil_rights_act
+		}
+		available = {
+			NOT = { has_government = democratic }
+			democratic < 0.50
+		}
+		bypass = {}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_authoritarian_ideologue
+			add_popularity = { ideology = democratic popularity = -0.05 }
+			add_popularity = { ideology = communism popularity = -0.05 }
+			every_country = {
+				limit = {
+					OR = {
+						has_completed_focus = generic_fascistic_reforms
+						fascism > 0.5
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = continued_segregation_positive }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_completed_focus = generic_democratic_ideals
+						democratic > 0.5
+						has_completed_focus = generic_communist_tendencies
+						communism > 0.5
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = continued_segregation_negative }
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			#This focus is useless when aligning to France. We don't want the AI to uphold segregation when they go for France.
+			modifier = {
+				add = 10
+				has_completed_focus = USA_american_idealism
+			}
+		}
+	}
+	focus = {
+		id = USA_employment_desegregation_act
+		icon = treaty
+		
+		x = 0
+		y = 1
+		relative_position_id = USA_pass_the_civil_rights_act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_pass_the_civil_rights_act
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_plantation_program
+		icon = industry
+		
+		x = 2
+		y = 1
+		relative_position_id = USA_pass_the_civil_rights_act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_maintain_segregation
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_government = communism }
+			NOT = { has_government = democratic }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			363 = { add_extra_state_shared_building_slots = 1 }
+			364 = { add_extra_state_shared_building_slots = 1 }
+			365 = { add_extra_state_shared_building_slots = 1 }
+			362 = { add_extra_state_shared_building_slots = 1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_endorse_the_white_future_initiative
+		icon = fascism
+		
+		x = 4
+		y = 1
+		relative_position_id = USA_pass_the_civil_rights_act
+		
+		will_lead_to_war_with = NAT
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_maintain_segregation
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			has_defensive_war = no
+			NAT = {
+				exists = yes
+				is_neighbor_of = ROOT
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_puppet_of = ROOT }
+			}
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = NAT
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_desegregate_the_armed_forces
+		icon = entente
+		
+		x = 0
+		y = 2
+		relative_position_id = USA_pass_the_civil_rights_act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_employment_desegregation_act
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = grand_army
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_liberty_in_liberia
+		icon = align_with_liberia
+		
+		x = 2
+		y = 2
+		relative_position_id = USA_pass_the_civil_rights_act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_plantation_program
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 298
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			release_puppet = LIB
+			ford_crisis_downgrade = yes
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = USA_enforce_the_anglophone_union
+		icon = war3
+		
+		x = 4
+		y = 2
+		relative_position_id = USA_pass_the_civil_rights_act
+		
+		will_lead_to_war_with = NAT
+
+		cost = 10
+		
+		prerequisite = {
+			focus = USA_endorse_the_white_future_initiative
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = fascism
+			has_defensive_war = no
+			CAL = {
+				exists = yes
+				is_neighbor_of = ROOT
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_puppet_of = ROOT }
+			}
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = CAL
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}

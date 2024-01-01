@@ -1,0 +1,269 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_scripted_gui_window_background"
+		textureFile = "/gfx/interface/scripted_gui_graphics/scripted_gui_background.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_scripted_gui_window_background_2"
+		textureFile = "/gfx/interface/scripted_gui_graphics/scripted_gui_background_2.png"
+	}
+	
+	spriteType = {
+		name = "GFX_us_congress_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/GFX_usa_congress.png"
+	}
+	
+	spriteType = {
+		name = "GFX_back_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/button.png"
+	}
+	
+	###32 Seats###
+	spriteType = {
+		name = "GFX_senate_0_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.0.png"
+	}
+	spriteType = {
+		name = "GFX_senate_3_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.3.png"
+	}
+	spriteType = {
+		name = "GFX_senate_6_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.6.png"
+	}
+	spriteType = {
+		name = "GFX_senate_9_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.9.png"
+	}
+	spriteType = {
+		name = "GFX_senate_12_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.12.png"
+	}
+	spriteType = {
+		name = "GFX_senate_15_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.15.png"
+	}
+	spriteType = {
+		name = "GFX_senate_17_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.17.png"
+	}
+	spriteType = {
+		name = "GFX_senate_20_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.20.png"
+	}
+	spriteType = {
+		name = "GFX_senate_23_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.23.png"
+	}
+	spriteType = {
+		name = "GFX_senate_26_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.26.png"
+	}
+	spriteType = {
+		name = "GFX_senate_29_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.29.png"
+	}
+	spriteType = {
+		name = "GFX_senate_32_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/32/32.32.png"
+	}
+	###34###
+	spriteType = {
+		name = "GFX_senate_34_0_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.0.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_3_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.3.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_6_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.6.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_9_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.9.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_12_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.12.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_16_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.16.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_18_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.18.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_22_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.22.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_25_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.25.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_28_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.28.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_31_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.31.png"
+	}
+	spriteType = {
+		name = "GFX_senate_34_34_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/34/34.34.png"
+	}
+	###36###
+	spriteType = {
+		name = "GFX_senate_36_0_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.0.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_3_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.3.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_6_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.6.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_9_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.9.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_12_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.12.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_15_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.15.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_18_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.18.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_21_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.21.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_24_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.24.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_27_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.27.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_30_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.30.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_33_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.33.png"
+	}
+	spriteType = {
+		name = "GFX_senate_36_36_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/36/36.36.png"
+	}
+	###40###
+	spriteType = {
+		name = "GFX_senate_40_0_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.0.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_4_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.4.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_8_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.8.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_12_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.12.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_16_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.16.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_20_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.20.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_24_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.24.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_28_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.28.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_32_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.32.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_36_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.36.png"
+	}
+	spriteType = {
+		name = "GFX_senate_40_40_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/senate/40/40.40.png"
+	}
+	
+	###162 Seats###
+	spriteType = {
+		name = "GFX_house_162_1_seats"
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_1.png"
+	}                                                                     
+	spriteType = {
+		name = "GFX_house_162_2_seats"                                    
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_2.png"
+	}                                                                     
+	spriteType = {
+		name = "GFX_house_162_3_seats"                                    
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_3.png"
+	}                                                                     
+	spriteType = {
+		name = "GFX_house_162_4_seats"                                    
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_4.png"
+	}                                                                     
+	spriteType = {
+		name = "GFX_house_162_5_seats"                                    
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_5.png"
+	}                                                                     
+	spriteType = {
+		name = "GFX_house_162_6_seats"                                    
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_6.png"
+	}                                                                     
+	spriteType = {
+		name = "GFX_house_162_7_seats"                                    
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_7.png"
+	}                                                                     
+	spriteType = {
+	name = "GFX_house_162_8_seats"                                    
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_8.png"
+	}                                                                    
+	spriteType = {
+		name = "GFX_house_162_9_seats"                                   
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_9.png"
+	}                                                             
+	spriteType = {
+		name = "GFX_house_162_10_seats"                           
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_10.png"
+	}                                                                  
+	spriteType = {
+		name = "GFX_house_162_11_seats"                                
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_11.png"
+	}                                                                
+	spriteType = {
+		name = "GFX_house_162_12_seats"                              
+		textureFile = "/gfx/interface/scripted_gui_graphics/house/162/162_12.png"
+	}
+}

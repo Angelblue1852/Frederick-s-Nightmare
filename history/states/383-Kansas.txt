@@ -1,0 +1,31 @@
+
+state={
+	id=383
+	name="STATE_383"
+	resources={
+		oil=30.000
+	}
+
+	history={
+		owner = SOU
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = PWN
+		victory_points = {
+			7834 1 
+		}
+
+	}
+
+	provinces={
+		1352 1753 1806 2043 3708 4757 4811 7834 7892 9802 10532 10606 10676 12024 12513 
+	}
+	manpower=1880998
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

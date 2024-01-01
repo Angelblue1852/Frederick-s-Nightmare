@@ -1,0 +1,227 @@
+leader_traits = {
+
+	
+##################################
+# Germany Traits
+##################################
+	german_nationalist = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	natsoc = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	natsoc = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	bavarian_nationalist = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	liberalist = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	spartakist = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	strasserist = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	volkist = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+##################################
+# Ottoman Traits
+##################################
+
+	turk = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	syrian = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	iraqi = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+##################################
+# Austrian Traits
+##################################	
+	
+	heimwehr = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+##################################
+# Russian Traits
+##################################
+	
+	 balt = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 belarussia = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 don = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 estonia = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 fascist_russian = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 georgia = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 kuban = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 latvia = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 lithuania = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 panslavic = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 soviet = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 tartar = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 transbaikal = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	 ukraine = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+}

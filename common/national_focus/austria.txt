@@ -1,0 +1,2546 @@
+focus_tree = {
+	
+	id = austria_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = AUS
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 50 y = 600 }
+	
+	#Develop Military Doctrines
+	focus = {
+		id = AUS_develop_military_doctrines
+		icon = army_doctrine
+		
+		x = 3
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+				category = naval_doctrine
+				category = air_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_army_programs
+		icon = infantry_axis
+		
+		x = -2
+		y = 1
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_develop_military_doctrines
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+			create_random_factory_MIL_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_expand_dalmatian_naval_bases
+		icon = naval_dockyard
+		
+		x = 1
+		y = 1
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_develop_military_doctrines
+		}
+		available = {
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 736
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			103 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 3924
+				}
+			}
+			163 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 3943
+				}
+			}
+			736 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 6626
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_build_silesian_airfields
+		icon = air_production
+		
+		x = 3
+		y = 1
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_develop_military_doctrines
+		}
+		available = {
+			has_full_control_of_state = 66
+			has_full_control_of_state = 67
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_develop_the_infantry
+		icon = small_arms2
+		
+		x = -3
+		y = 2
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_army_programs
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				category = infantry_weapons
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_artillery_exercises
+		icon = artillery
+		
+		x = -1
+		y = 2
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_army_programs
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_build_convoy_ships
+		icon = cruisers
+		
+		x = 1
+		y = 2
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_expand_dalmatian_naval_bases
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 300 producer = AUS }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_develop_fighter_models
+		icon = fighters
+		
+		x = 3
+		y = 2
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_build_silesian_airfields
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_develop_the_special_forces
+		icon = paratroopers
+		
+		x = -3
+		y = 3
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_develop_the_infantry
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = para_tech
+				category = marine_tech
+				category = mountaineers_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_tank_exercises
+		icon = tanks
+		
+		x = -1
+		y = 3
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_artillery_exercises
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_modernize_austrian_battleships
+		icon = battleships
+		
+		x = 1
+		y = 3
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_build_convoy_ships
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 2
+				category = bb_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_develop_bomber_models
+		icon = bombers
+		
+		x = 3
+		y = 3
+		relative_position_id = AUS_develop_military_doctrines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_develop_fighter_models
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reform the Government
+	focus = {
+		id = AUS_reform_the_government
+		icon = treaty
+		
+		x = 17
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_new_bureaucrats
+		icon = industry
+		
+		x = 0
+		y = 1
+		relative_position_id = AUS_reform_the_government
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_reform_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_reichs_und_bundesbank
+		icon = consumer_goods
+		
+		x = -1
+		y = 2
+		relative_position_id = AUS_reform_the_government
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_new_bureaucrats
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_category_tooltip = economic_crisis_decisions
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_anti_prussian_policy
+		icon = military_deal
+		
+		x = 1
+		y = 2
+		relative_position_id = AUS_reform_the_government
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_new_bureaucrats
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			PRS = {
+				add_opinion_modifier = { target = ROOT modifier = diplomatic_hostility }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_build_fortress_grunberg
+		icon = military_fort
+		
+		x = 0
+		y = 1
+		relative_position_id = AUS_anti_prussian_policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_anti_prussian_policy
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 66
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "Fortress Grünberg"
+				threat = 1
+			}
+			66 = {
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = bunker level = 6 instant_build = yes province = 3438 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_eliminate_the_wurttembergian_threat
+		icon = war
+		
+		x = 0
+		y = 2
+		relative_position_id = AUS_anti_prussian_policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_build_fortress_grunberg
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			is_neighbor_of = WUR
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+			OR = {
+				WUR = { has_government = fascism }
+				WUR = { has_government = communism }
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = WUR
+				is_in_faction_with = WUR
+				AND = {
+					OR = { has_government = democratic has_government = neutrality }
+					WUR = { OR = { has_government = democratic has_government = neutrality } }
+				}
+			}
+		}
+		select_effect = {
+			WUR = { news_event = { id = AUS_news.1 days = 10 } }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "Mobilization against Württemberg"
+				threat = 2
+			}
+			create_wargoal = {
+				target = WUR
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = AUS_secure_the_pomeranian_corridor
+		icon = war3
+		
+		will_lead_to_war_with = PRS
+		
+		x = 0
+		y = 3
+		relative_position_id = AUS_anti_prussian_policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_eliminate_the_wurttembergian_threat
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			NOT = { is_in_faction_with = PRS }
+			is_neighbor_of = PRS
+			PRS = {
+				OR = {
+					has_full_control_of_state = 62
+					has_full_control_of_state = 63
+					has_full_control_of_state = 68
+					has_full_control_of_state = 86
+				}
+			}
+		}
+		bypass = {
+			has_war_with = PRS
+		}
+		select_effect = {
+			PRS = { news_event = { id = AUS_news.1 days = 10 } }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "Mobilization against Prussia"
+				threat = 5
+			}
+			if = { limit = { PRS = { has_full_control_of_state = 62 } } add_state_claim = 62 }
+			if = { limit = { PRS = { has_full_control_of_state = 63 } } add_state_claim = 63 }
+			if = { limit = { PRS = { has_full_control_of_state = 68 } } add_state_claim = 68 }
+			if = { limit = { PRS = { has_full_control_of_state = 86 } } add_state_claim = 86 }
+			create_wargoal = {
+				target = PRS
+				type = take_state_focus
+				generator = { 62 63 68 86 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	
+	##Befriend France Subbranch
+	focus = {
+		id = AUS_befriend_france
+		icon = align_with_france
+		
+		x = -5
+		y = -1
+		relative_position_id = AUS_reform_the_government
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = AUS_befriend_the_ottoman_empire
+		}
+		available = {
+			NOT = { has_war_with = FRA }
+			OR = {
+				any_country = {
+					is_neighbor_of = AUS
+					is_neighbor_of = FRA
+				}
+				is_neighbor_of = FRA
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+
+		ai_will_do = {
+			base = 15
+		}
+	}
+	focus = {
+		id = AUS_invite_french_intellectuals
+		icon = research
+		
+		x = -2
+		y = 1
+		relative_position_id = AUS_befriend_france
+
+		cost = 12
+		
+		prerequisite = {
+			focus = AUS_befriend_france
+		}
+		mutually_exclusive = {}
+		available = {
+			FRA = { has_government = democratic }
+			is_puppet = no
+			FRA = {
+				OR = { is_puppet = no is_puppet_of = ROOT }
+			}
+			NOT = { has_war_with = FRA }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_franco_austrian_trade_plan
+		icon = trade
+		
+		x = 0
+		y = 1
+		relative_position_id = AUS_befriend_france
+
+		cost = 5
+		
+		prerequisite = {
+			focus = AUS_befriend_france
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_catholic_kulturkampf
+		icon = catholicism
+		
+		x = 2
+		y = 1
+		relative_position_id = AUS_befriend_france
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_befriend_france
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = PAP }
+			PAP = { has_government = neutrality }
+			has_idea = catholic_clergy
+			any_other_country = {
+				has_idea = catholic_clergy
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+			PAP = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = catholic_loyalty
+				}
+			}
+			every_other_country = {
+				limit = { 
+					has_idea = catholic_clergy 
+					NOT = { has_war_with = ROOT }
+					OR = { is_puppet = no is_in_europe = yes }
+				}
+				add_opinion_modifier = {
+					target = ROOT modifier = catholic_partnership
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT modifier = catholic_partnership
+				}
+				country_event = AUS.4
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	###Modernize and Liberalize Subsubbranch
+	focus = {
+		id = AUS_modernize_and_liberalize
+		icon = democracy
+		
+		x = -6
+		y = 1
+		relative_position_id = AUS_reform_the_government
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_franco_austrian_trade_plan
+		}
+		prerequisite = {
+			focus = AUS_reform_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_create_the_slovak_parliament
+		icon = demand_territory
+		
+		x = -3
+		y = 1
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 7
+		
+		prerequisite = {
+			focus = AUS_modernize_and_liberalize
+		}
+		mutually_exclusive = {}
+		available = {
+			SLO = { exists = no }
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			every_owned_state = {
+				limit = { 
+					is_core_of = SLO 
+					NOT = { is_core_of = AUS }
+				}
+				add_core_of = AUS
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_create_the_czech_parliament
+		icon = demand_territory
+		
+		x = -1
+		y = 1
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 7
+		
+		prerequisite = {
+			focus = AUS_modernize_and_liberalize
+		}
+		mutually_exclusive = {}
+		available = {
+			CZE = { exists = no }
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			every_owned_state = {
+				limit = { 
+					is_core_of = CZE 
+					NOT = { is_core_of = AUS } 
+				}
+				add_core_of = AUS
+			}
+			delete_unit_template_and_units = { division_template = "Tschechen-Div." }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_create_the_hungarian_parliament
+		icon = demand_territory
+		
+		x = 1
+		y = 1
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 7
+		
+		prerequisite = {
+			focus = AUS_modernize_and_liberalize
+		}
+		mutually_exclusive = {}
+		available = {
+			HUN = { exists = no }
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			every_owned_state = {
+				limit = { 
+					is_core_of = HUN 
+					NOT = { is_core_of = AUS } 
+				}
+				add_core_of = AUS
+			}
+			delete_unit_template_and_units = { division_template = "Ungarn-Div." }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_create_the_yugoslav_parliament
+		icon = demand_territory
+		
+		x = 3
+		y = 1
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 7
+		
+		prerequisite = {
+			focus = AUS_modernize_and_liberalize
+		}
+		mutually_exclusive = {}
+		available = {
+			CRO = { exists = no }
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			every_owned_state = {
+				limit = { 
+					is_core_of = CRO 
+					NOT = { is_core_of = AUS } 
+				}
+				add_core_of = AUS
+			}
+			delete_unit_template_and_units = { division_template = "Kroaten-Div." }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_invest_in_slovakian_mines
+		icon = steel_production
+		
+		x = -3
+		y = 2
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_create_the_slovak_parliament
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+			has_full_control_of_state = 70
+			has_full_control_of_state = 71
+			has_full_control_of_state = 664
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			70 = { add_resource = { type = steel amount = 12 } }
+			71 = { add_resource = { type = steel amount = 12 } }
+			664 = { add_resource = { type = steel amount = 12 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_industrial_growth_in_bohemia
+		icon = industry2
+		
+		x = -1
+		y = 2
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_create_the_czech_parliament
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+			has_full_control_of_state = 9
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			9 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_anti_romanian_sentiment
+		icon = dangerous_deal
+		
+		x = 1
+		y = 2
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_create_the_hungarian_parliament
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+			has_full_control_of_state = 43
+			has_full_control_of_state = 154
+			has_full_control_of_state = 155
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ROM = { add_opinion_modifier = { target = ROOT modifier = diplomatic_insult } }
+			43 = { add_extra_state_shared_building_slots = 2 }
+			154 = { add_extra_state_shared_building_slots = 2 }
+			155 = { add_extra_state_shared_building_slots = 2 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_bribe_pavelic
+		icon = banovina_of_croatia
+		
+		x = 3
+		y = 2
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_create_the_yugoslav_parliament
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_completed_focus = AUS_the_danube_confederation }
+			has_full_control_of_state = 103
+			has_full_control_of_state = 109
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			103 = { 
+				add_extra_state_shared_building_slots = 1
+				add_resource = { type = steel amount = 8 }
+			}
+			109 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = { type = steel amount = 8 }
+			}
+			create_field_marshal = {
+				name = "Ante Pavelić"
+				gfx = "non_german_commanders/Ante_Pavelic.dds"
+				traits = { offensive_doctrine }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_the_danube_confederation
+		icon = national_unity
+		
+		x = 0
+		y = 3
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_invest_in_slovakian_mines
+			focus = AUS_industrial_growth_in_bohemia
+			focus = AUS_anti_romanian_sentiment
+			focus = AUS_bribe_pavelic
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = DNBCF
+			add_research_slot = 1
+			remove_ideas = vielvoelkerstaat
+			add_stability = 0.125
+			add_war_support = 0.075
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_enlist_non_german_commanders
+		icon = military_mission
+		
+		x = 0
+		y = 4
+		relative_position_id = AUS_modernize_and_liberalize
+
+		cost = 5
+		
+		prerequisite = {
+			focus = AUS_the_danube_confederation
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 15
+			add_ideas = army_officers
+			if = {
+				limit = { HUN = { exists = no } }
+				create_field_marshal = {
+					name = "Ferenc Feketehalmy-Czeydner"
+					gfx = "non_german_commanders/Ferenc_Feketehalmy_Czeydner.dds"
+					traits = { }
+					skill = 1
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Géza Lakatos"
+					gfx = "non_german_commanders/Geza_Lakatos.dds"
+					traits = { ranger fortress_buster }
+					skill = 2
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 4
+				}
+				create_navy_leader = {
+					name = "Miklós Horthy"
+					gfx = "non_german_commanders/Miklos_Horthy.dds"
+					traits = { blockade_runner }
+					skill = 3
+				}
+			}
+			if = {
+				limit = { CZE = { exists = no } }
+				create_corps_commander = {
+					name = "Richard Tesařík"
+					gfx = "non_german_commanders/Richard_Tesarik.dds"
+					traits = { armor_officer }
+					skill = 2
+					attack_skill = 4
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Sergej Vojcechovský"
+					gfx = "non_german_commanders/Sergej_Vojcechovsky.dds"
+					traits = { winter_specialist }
+					skill = 2
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+			}
+			if = {
+				limit = { CRO = { exists = no } }
+			}
+			if = {
+				limit = { SLO = { exists = no } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##Befriend Turkey Subbranch
+	focus = {
+		id = AUS_befriend_the_ottoman_empire
+		icon = align_with_the_ottoman_empire
+		
+		x = 5
+		y = -1
+		relative_position_id = AUS_reform_the_government
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = AUS_befriend_france
+		}
+		available = {
+			NOT = { has_war_with = TUR }
+			OR = {
+				any_country = {
+					is_neighbor_of = AUS
+					is_neighbor_of = TUR
+				}
+				is_neighbor_of = TUR
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+
+		ai_will_do = {
+			base = 40
+		}
+	}
+	focus = {
+		id = AUS_priests_and_muftis
+		icon = religious_partnership_catholic_sunni
+		
+		x = -3
+		y = 1
+		relative_position_id = AUS_befriend_the_ottoman_empire
+
+		cost = 3
+		
+		prerequisite = {
+			focus = AUS_befriend_the_ottoman_empire
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = TUR }
+			TUR = { has_completed_focus = TUR_host_religious_debates }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			TUR = {
+				add_opinion_modifier = { target = ROOT modifier = religious_dialogues }
+			}
+			add_research_slot = 1
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_revoke_the_dollfuss_policy
+		icon = renounce_treaty
+		
+		x = -1
+		y = 1
+		relative_position_id = AUS_befriend_the_ottoman_empire
+
+		cost = 2
+		
+		prerequisite = {
+			focus = AUS_befriend_the_ottoman_empire
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			NOT = { GRE = { is_guaranteed_by = AUS } }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			diplomatic_relation = { country = GRE relation = guarantee active = no }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_reassure_the_danube_pact
+		icon = military_sphere
+		
+		x = 1
+		y = 1
+		relative_position_id = AUS_befriend_the_ottoman_empire
+
+		cost = 4
+		
+		prerequisite = {
+			focus = AUS_befriend_the_ottoman_empire
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_other_country = {
+				limit = { 
+					is_in_faction_with = ROOT 
+					has_government = neutrality
+				}
+				add_opinion_modifier = { target = ROOT modifier = diplomatic_friendship }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_weststrasse
+		icon = infrastructure
+		
+		x = 1
+		y = 2
+		relative_position_id = AUS_befriend_the_ottoman_empire
+
+		cost = 9
+		
+		prerequisite = {
+			focus = AUS_reassure_the_danube_pact
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 69
+			has_full_control_of_state = 152
+			has_full_control_of_state = 9
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			69 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			152 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			9 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_alpenstrasse
+		icon = infrastructure
+		
+		x = 2
+		y = 3
+		relative_position_id = AUS_befriend_the_ottoman_empire
+
+		cost = 9
+		
+		prerequisite = {
+			focus = AUS_weststrasse
+		}
+		prerequisite = {
+			focus = AUS_the_south_tyrol_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 153
+			has_full_control_of_state = 39
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			153 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			39 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_banat_projects
+		icon = oil_production
+		
+		x = 1
+		y = 4
+		relative_position_id = AUS_befriend_the_ottoman_empire
+
+		cost = 9
+		
+		prerequisite = {
+			focus = AUS_alpenstrasse
+		}
+		prerequisite = {
+			focus = AUS_eliminate_the_romanian_threat
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 82
+			OR = {
+				81 = { is_owned_by = ROOT }
+				81 = { OWNER = { is_puppet_of = ROOT } }
+				81 = { OWNER = { is_in_faction_with = ROOT } }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			82 = { add_resource = { type = oil amount = 10 } }
+			82 = { add_resource = { type = steel amount = 15 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_veneto_industrial_efforts
+		icon = industry_civilian
+		
+		x = 3
+		y = 4
+		relative_position_id = AUS_befriend_the_ottoman_empire
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_alpenstrasse
+		}
+		prerequisite = {
+			focus = AUS_italian_fort_line
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 160
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			160 = {
+				add_resource = { type = aluminium amount = 12 }
+				add_resource = { type = steel amount = 16 }
+			}
+			160 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard level = 1 instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	###Centralize and Radicalize Subsubbranch
+	focus = {
+		id = AUS_centralize_and_radicalize
+		icon = monarchism2
+		
+		x = 4
+		y = 1
+		relative_position_id = AUS_reform_the_government
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_revoke_the_dollfuss_policy
+		}
+		prerequisite = {
+			focus = AUS_reform_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = jingoism
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_build_the_grand_palace
+		icon = construction
+		
+		x = -1
+		y = 1
+		relative_position_id = AUS_centralize_and_radicalize
+
+		cost = 13
+		
+		prerequisite = {
+			focus = AUS_centralize_and_radicalize
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_eliminate_the_romanian_threat
+		icon = attack_communism
+		
+		will_lead_to_war_with = ROM
+		
+		x = 1
+		y = 1
+		relative_position_id = AUS_centralize_and_radicalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_centralize_and_radicalize
+		}
+		prerequisite = {
+			focus = AUS_reassure_the_danube_pact
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			is_neighbor_of = ROM
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+			OR = {
+				ROM = { has_government = fascism }
+				ROM = { has_government = communism }
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = ROM
+				is_in_faction_with = ROM
+				AND = {
+					OR = { has_government = democratic has_government = neutrality }
+					ROM = {
+						OR = { has_government = democratic has_government = neutrality }
+					}
+				}
+			}
+		}
+		select_effect = {
+			ROM = { news_event = { id = AUS_news.1 days = 10 } }
+			if = {
+				limit = { SOV = { has_guaranteed = ROM } }
+				SOV = { country_event = { id = AUS.2 days = 15 } }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "Mobilization against Romania"
+				threat = 2
+			}
+			create_wargoal = {
+				target = ROM
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = AUS_secure_lombardy
+		icon = demand_territory3
+		
+		will_lead_to_war_with = ITA
+		
+		x = 0
+		y = 2
+		relative_position_id = AUS_centralize_and_radicalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_build_the_grand_palace
+		}
+		prerequisite = {
+			focus = AUS_eliminate_the_romanian_threat
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+			OR = {
+				ITA = { has_government = fascism }
+				ITA = { has_government = communism }
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = ITA
+				is_in_faction_with = ITA
+				AND = {
+					OR = { has_government = democratic has_government = neutrality }
+					ITA = {
+						OR = { has_government = democratic has_government = neutrality }
+					}
+				}
+			}
+		}
+		select_effect = {
+			ITA = { news_event = { id = AUS_news.1 days = 10 } }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "Mobilization against Italy"
+				threat = 2.5
+			}
+			add_state_claim = 159
+			create_wargoal = {
+				target = ITA
+				type = take_state_focus
+				generator = { 159 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = AUS_germanic_supremacy
+		icon = fascism
+		
+		x = -1
+		y = 3
+		relative_position_id = AUS_centralize_and_radicalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_secure_lombardy
+		}
+		mutually_exclusive = {
+			focus = AUS_proclaim_austria_hungary
+		}
+		available = {
+			is_subject = no
+			has_government = neutrality
+		}
+		bypass = {
+			has_government = fascism
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.4 }
+			add_research_slot = 1
+			set_politics = { ruling_party = fascism elections_allowed = no }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_prove_alpine_dominance
+		icon = war_against_switzerland
+		
+		will_lead_to_war_with = SWI
+		
+		x = -1
+		y = 4
+		relative_position_id = AUS_centralize_and_radicalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_germanic_supremacy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			OR = {
+				has_war_with = SWI
+				is_in_faction_with = SWI
+			}
+		}
+		select_effect = {
+			SWI = { news_event = { id = AUS_news.1 days = 10 } }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "Mobilization against Switzerland"
+				threat = 2.5
+			}
+			create_wargoal = {
+				target = SWI
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = AUS_vienna_budapest_league
+		icon = research
+		
+		x = 1
+		y = 4
+		relative_position_id = AUS_centralize_and_radicalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_proclaim_austria_hungary
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_proclaim_austria_hungary
+		icon = austria_hungary
+		
+		x = 1
+		y = 3
+		relative_position_id = AUS_centralize_and_radicalize
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_secure_lombardy
+		}
+		mutually_exclusive = {
+			focus = AUS_germanic_supremacy
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = AUH
+			every_state = {
+				limit = { is_core_of = HUN }
+				add_core_of = AUS
+			}
+			delete_unit_template_and_units = { division_template = "Ungarn-Div." }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Approve the Tyrol Plan
+	focus = {
+		id = AUS_approve_the_tyrol_plan
+		icon = construction
+		
+		x = 25
+		y = 0
+
+		cost = 4
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 153
+			NOT = { has_country_leader = { name = "Kurt Schuschnigg" } }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			153 = {
+				add_resource = { type = steel amount = 12 }
+				add_resource = { type = tungsten amount = 3 }
+				add_resource = { type = chromium amount = 2 }
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_reform_the_economy
+		icon = self_management
+		
+		x = 5
+		y = 0
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_militarize_silesia
+		icon = industry_military
+		
+		x = 7
+		y = 0
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 66
+			has_full_control_of_state = 67
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_refine_the_tyrol_plan
+		icon = construction2
+		
+		x = 0
+		y = 1
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_approve_the_tyrol_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 153
+			153 = { free_building_slots = { building = industrial_complex size > 2 include_locked = yes } }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			153 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_invest_in_salzburg
+		icon = industry_civilian
+		
+		x = 2
+		y = 1
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 12
+		
+		prerequisite = {
+			focus = AUS_reform_the_economy
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 152
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			152 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_invest_in_vienna
+		icon = industry_civilian
+		
+		x = 4
+		y = 1
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 12
+		
+		prerequisite = {
+			focus = AUS_reform_the_economy
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 4
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			4 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_invest_in_silesia
+		icon = production
+		
+		x = 6
+		y = 1
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 12
+		
+		prerequisite = {
+			focus = AUS_reform_the_economy
+		}
+		prerequisite = {
+			focus = AUS_militarize_silesia
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 66
+			has_full_control_of_state = 67
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_the_south_tyrol_plan
+		icon = construction
+		
+		x = 0
+		y = 2
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 9
+		
+		prerequisite = {
+			focus = AUS_refine_the_tyrol_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 39
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "South Tyrol Plan"
+				threat = 0.8
+			}
+			every_country = {
+				limit = { OR = { original_tag = ITA original_tag = PAP original_tag = NAP } exists = yes }
+				add_opinion_modifier = {
+					target = ROOT modifier = territorial_dispute
+				}
+			}
+			39 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_resource = { type = aluminium amount = 9 }
+				add_resource = { type = steel amount = 16 }
+				add_resource = { type = tungsten amount = 2 }
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_expand_the_autobahn
+		icon = infrastructure
+		
+		x = 2
+		y = 2
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_invest_in_salzburg
+		}
+		prerequisite = {
+			focus = AUS_invest_in_vienna
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 4
+			has_full_control_of_state = 39
+			has_full_control_of_state = 152
+			has_full_control_of_state = 153
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			4 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_resource = { type = steel amount = 3 }
+			}
+			39 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_resource = { type = steel amount = 3 }
+			}
+			152 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_resource = { type = steel amount = 3 }
+			}
+			153 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_resource = { type = steel amount = 3 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = AUS_italian_fort_line
+		icon = city_fort
+		
+		x = 1
+		y = 3
+		relative_position_id = AUS_approve_the_tyrol_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = AUS_expand_the_autobahn
+		}
+		prerequisite = {
+			focus = AUS_the_south_tyrol_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 39
+			has_full_control_of_state = 160
+			NOT = { owns_state = 159 }
+			NOT = { owns_state = 161 }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			160 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 603 }
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 9582 }
+				add_building_construction = { type = anti_air_building level = 2 instant_build = yes }
+			}
+			39 = {
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 6631 }
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 6675 }
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}

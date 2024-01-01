@@ -1,0 +1,10 @@
+opinion_modifiers = {
+	
+	polish_world_congress_negative = {
+		value = -25
+	}
+	polish_world_congress_positive = {
+		value = 25
+	}
+	
+}

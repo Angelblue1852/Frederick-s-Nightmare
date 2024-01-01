@@ -1,0 +1,15 @@
+﻿add_namespace = RAJ
+
+#Setup Event
+country_event = {
+	id = RAJ.1
+	title = RAJ.1.t
+	desc = RAJ.1.d
+	picture = GFX_report_event_army_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RAJ.1.o1
+	}
+}

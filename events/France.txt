@@ -1,0 +1,244 @@
+﻿add_namespace = FRA
+
+#Setup Event
+country_event = {
+	id = FRA.1
+	title = FRA.1.t
+	desc = FRA.1.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = FRA.2 days = 5 }
+			country_event = { id = FRA.7 days = 32 }
+			country_event = { id = FRA.8 days = 165 }
+		}
+	}
+	
+	option = {
+		name = FRA.1.o1
+	}
+}
+
+#Jaures resigns
+country_event = {
+	id = FRA.2
+	title = FRA.2.t
+	desc = FRA.2.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	immediate = { hidden_effect = { country_event = FRA_news.1 } }
+	
+	option = {
+		name = FRA.2.o1
+		retire_country_leader = yes
+	}
+}
+
+#[From.GetName] wants to join the Entente
+country_event = {
+	id = FRA.3
+	title = FRA.3.t
+	desc = FRA.3.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA.3.o1
+		add_to_faction = FROM
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_accepted
+			}
+		}
+		add_named_threat = {
+			threat = 0.5
+			name = "New Faction Member"
+		}
+		ai_chance = { base = 100 }
+	}
+	
+	option = {
+		name = FRA.3.o2
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = diplomatic_request_rejected
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+#End of the Entente
+country_event = {
+	id = FRA.4
+	title = FRA.4.t
+	desc = FRA.4.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA.4.o1
+		effect_tooltip = {
+			create_faction = reformed_entente
+		}
+	}
+}
+
+#France offers Military Attaches
+country_event = {
+	id = FRA.5
+	title = FRA.5.t
+	desc = FRA.5.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	#Choose an Army Attache
+	option = {
+		name = FRA.5.o1
+		army_experience = 20
+		add_doctrine_cost_reduction = {
+			category = land_doctrine
+			bonus = 0.25
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#Choose a Navy Attache
+	option = {
+		name = FRA.5.o2
+		navy_experience = 20
+		add_doctrine_cost_reduction = {
+			category = naval_doctrine
+			bonus = 0.25
+		}
+		trigger = {
+			any_owned_state = { is_coastal = yes }
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	#Choose an Air Force Attache
+	option = {
+		name = FRA.5.o3
+		air_experience = 20
+		add_doctrine_cost_reduction = {
+			category = air_doctrine
+			bonus = 0.25
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+#Claudel Plan Invitation
+country_event = {
+	id = FRA.6
+	title = FRA.6.t
+	desc = FRA.6.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	#Accept
+	option = {
+		name = FRA.6.o1
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = diplomatic_request_accepted }
+			reverse_add_opinion_modifier = { target = ROOT modifier = territorial_transfer }
+		}
+		FROM = { add_to_faction = ROOT }
+		if = { limit = { original_tag = HOL } transfer_state = 35 }
+		if = { limit = { original_tag = WES } transfer_state = 51 }
+		if = { limit = { original_tag = HES } transfer_state = 42 }
+		FROM = { country_event = generic.2 }
+		ai_chance = { base = 100 }
+	}
+	#Refuse
+	option = {
+		name = FRA.6.o2
+		FROM = { country_event = generic.3 }
+		ai_chance = { base = 0 }
+	}
+}
+
+#Flag Day, 1936
+country_event = {
+	id = FRA.7
+	title = FRA.7.t
+	desc = FRA.7.d
+	picture = GFX_report_event_political_rally4
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA.7.o1
+		add_political_power = 5
+	}
+}
+
+#Prevent the Polish World Congress?
+country_event = {
+	id = FRA.8
+	title = FRA.8.t
+	desc = FRA.8.d
+	picture = GFX_report_event_government
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_war_with = POL }
+		SOV = { exists = yes }
+		NOT = { is_in_faction_with = SOV }
+		POL = { is_subject = yes }
+	}
+	
+	option = {
+		name = FRA.8.o1
+		add_popularity = { ideology = democratic popularity = 0.01 }
+		POL = { add_opinion_modifier = { target = ROOT modifier = polish_world_congress_positive } }
+		POL = { OVERLORD = { add_opinion_modifier = { target = ROOT modifier = polish_world_congress_negative } } }
+		hidden_effect = {
+			OHI = { country_event = { id = OHI.7 hours = 8 } }
+			country_event = { id = FRA.9 days = 7 }
+		}
+		
+		ai_chance = { base = 99 }
+	}
+	
+	option = {
+		name = FRA.8.o2
+		POL = { add_opinion_modifier = { target = ROOT modifier = polish_world_congress_negative } }
+		add_political_power = -65
+		add_popularity = { ideology = democratic popularity = -0.05 }
+		
+		ai_chance = { base = 1 }
+	}
+}
+
+#The Polish World Congress
+country_event = {
+	id = FRA.9
+	title = FRA.9.t
+	desc = FRA.9.d
+	picture = GFX_report_event_government
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA.9.o1
+		add_political_power = 25
+	}
+}

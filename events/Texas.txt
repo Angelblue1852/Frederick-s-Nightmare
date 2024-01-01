@@ -1,0 +1,23 @@
+﻿add_namespace = TEX
+
+#Volunteers go home
+country_event = {
+	id = TEX.2
+	title = TEX.2.t
+	desc = TEX.2.d
+	picture = GFX_report_event_infantry5
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TEX.2.o1
+		delete_unit_template_and_units = { division_template = "American Volunteers" }
+		delete_unit_template_and_units = { division_template = "Californian Volunteers" }
+		hidden_effect = {
+			add_opinion_modifier = { target = USA modifier = texan_independence }
+			add_opinion_modifier = { target = CAL modifier = texan_independence }
+			reverse_add_opinion_modifier = { target = USA modifier = texan_independence }
+			reverse_add_opinion_modifier = { target = CAL modifier = texan_independence }
+		}
+	}
+}

@@ -1,0 +1,41 @@
+
+units = {
+	fleet = {
+		name = "Carrier Fleet 2"			
+		naval_base = 788 # Norfolk
+		task_force = {					
+			name = "Carrier Group 3"				
+			location = 788 # New York
+			ship = { name = "USS Alexander Hamilton" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "Alexander Hamilton Class" } } }
+		}
+	}
+}
+
+instant_effect = {
+
+	### Under Construction Notes ###
+	# CV: Alexander Hamilton
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "USA"
+			version_name = "Alexander Hamilton Class"
+		}
+		name = "USS George Washington" 
+		requested_factories = 2
+		progress = 0.60
+		amount = 1
+	}
+	# CV: Benjamin Franklin
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "USA"
+			version_name = "Alexander Hamilton Class"
+		}
+		name = "USS Benjamin Franklin" 
+		requested_factories = 2
+		progress = 0.60
+		amount = 1
+	}
+}
