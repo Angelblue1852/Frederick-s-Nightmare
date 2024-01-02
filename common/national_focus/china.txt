@@ -1,0 +1,2171 @@
+focus_tree = {
+	
+	id = china_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = CHI
+			add = 20
+		}
+	}
+	
+	#Replace the Rifles
+	focus = {
+		id = CHI_replace_the_rifles
+		icon = small_arms
+		
+		x = 1
+		y = 0
+
+		cost = 12
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 0.8
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_artillery_innovations
+		icon = artillery
+		
+		x = 0
+		y = 1
+		relative_position_id = CHI_replace_the_rifles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_replace_the_rifles
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			add_tech_bonus = {
+				category = artillery
+				uses = 2
+				bonus = 0.2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_vehicular_combat
+		icon = motorized
+		
+		x = 0
+		y = 2
+		relative_position_id = CHI_replace_the_rifles
+
+		cost = 14
+		
+		prerequisite = {
+			focus = CHI_artillery_innovations
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			create_random_factory_MIL_1 = yes
+			add_tech_bonus = {
+				category = motorized_equipment
+				bonus = 0.75
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_beijing_tank_factories
+		icon = industry_military
+		
+		x = -1
+		y = 3
+		relative_position_id = CHI_replace_the_rifles
+
+		cost = 14
+		
+		prerequisite = {
+			focus = CHI_vehicular_combat
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 608
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				category = armor
+				bonus = 0.25
+			}
+			608 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			608 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory level = 1 instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reaffirm the Security Decree
+	focus = {
+		id = CHI_reaffirm_the_security_decree
+		icon = demand_territory
+		
+		x = 4
+		y = 0
+
+		cost = 8
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_beijing_line
+		icon = military_fort
+		
+		x = -1
+		y = 1
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 12
+		
+		prerequisite = {
+			focus = CHI_reaffirm_the_security_decree
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 608
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = { OR = { owns_state = 609 owns_state = 611 } }
+				add_opinion_modifier = { target = ROOT modifier = border_fortifications_negative }
+			}
+			608 = {
+				add_building_construction = { type = bunker level = 4 instant_build = yes province = 10068 }
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 11761 }
+				add_building_construction = { type = bunker level = 5 instant_build = yes province = 9843 }
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 4140 }
+				add_building_construction = { type = bunker level = 1 instant_build = yes province = 12026 }
+				add_building_construction = { type = bunker level = 1 instant_build = yes province = 6828 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_naval_projection
+		icon = navy2
+		
+		x = 1
+		y = 1
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_reaffirm_the_security_decree
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 10
+			create_random_factory_NAV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_suiyuan_line
+		icon = military_fort
+		
+		x = -1
+		y = 2
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 9
+		
+		prerequisite = {
+			focus = CHI_beijing_line
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 621
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = { OR = { owns_state = 609 owns_state = 612 } }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = border_fortifications_negative
+				}
+			}
+			621 = {
+				add_building_construction = { type = bunker level = 1 instant_build = yes province = 12331 }
+				add_building_construction = { type = bunker level = 1 instant_build = yes province = 7048 }
+				add_building_construction = { type = bunker level = 1 instant_build = yes province = 12403 }
+				add_building_construction = { type = bunker level = 1 instant_build = yes province = 7158 }
+			}
+		}
+			
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_expand_the_shanghai_docks
+		icon = naval_dockyard
+		
+		x = 1
+		y = 2
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 7
+		
+		prerequisite = {
+			focus = CHI_naval_projection
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 613
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 5
+			613 = {
+				add_building_construction = { type = dockyard level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = 7014 }
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_naval_innovations
+		icon = destroyers
+		
+		x = 3
+		y = 2
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 8
+		
+		prerequisite = {
+			focus = CHI_naval_projection
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				category = dd_tech
+				uses = 2
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_found_military_academies
+		icon = tech_sharing
+		
+		x = -2
+		y = 3
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 6
+		
+		prerequisite = {
+			focus = CHI_vehicular_combat
+		}
+		prerequisite = {
+			focus = CHI_suiyuan_line
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_naval_glory
+		icon = battleships
+		
+		x = 0
+		y = 3
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_expand_the_shanghai_docks
+		}
+		mutually_exclusive = {
+			focus = CHI_naval_ruthlessness
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				category = bb_tech
+				category = cv_tech
+				bonus = 0.5
+			}
+			add_tech_bonus = {
+				uses = 2
+				category = cat_fleet_in_being
+				category = cat_base_strike
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_naval_ruthlessness
+		icon = submarines
+		
+		x = 2
+		y = 3
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_expand_the_shanghai_docks
+		}
+		mutually_exclusive = {
+			focus = CHI_naval_glory
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 4
+				category = ss_tech
+				category = cl_tech
+				category = dd_tech
+				bonus = 0.5
+			}
+			add_tech_bonus = {
+				uses = 2
+				category = cat_trade_interdiction
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_chongqing_army_school
+		icon = whampoa_military_academy
+		
+		x = -3
+		y = 4
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 8
+		
+		prerequisite = {
+			focus = CHI_found_military_academies
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 605
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				category = land_doctrine
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_shanghai_naval_school
+		icon = amphibious_assault
+		
+		x = -1
+		y = 4
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 8
+		
+		prerequisite = {
+			focus = CHI_naval_glory
+			focus = CHI_naval_ruthlessness
+		}
+		prerequisite = {
+			focus = CHI_found_military_academies
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 613
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				category = naval_doctrine
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_embolden_the_coastal_oligarchs
+		icon = treaty
+		
+		x = 1
+		y = 4
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_naval_glory
+			focus = CHI_naval_ruthlessness
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 595
+			has_full_control_of_state = 596
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			595 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+			596 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_elite_army
+		icon = army_reform
+		
+		x = -4
+		y = 5
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_chongqing_army_school
+		}
+		mutually_exclusive = {
+			focus = CHI_grand_army
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = elite_army
+			army_experience = 20
+			add_command_power = 50
+			add_tech_bonus = {
+				uses = 2
+				category = cat_superior_firepower
+				category = cat_mobile_warfare
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_grand_army
+		icon = entente
+		
+		x = -2
+		y = 5
+		relative_position_id = CHI_reaffirm_the_security_decree
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_chongqing_army_school
+		}
+		mutually_exclusive = {
+			focus = CHI_elite_army
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = grand_army
+			army_experience = 50
+			add_tech_bonus = {
+				uses = 2
+				category = cat_mass_assault
+				category = cat_grand_battle_plan
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Exclusive Imperialism
+	focus = {
+		id = CHI_exclusive_imperialism
+		icon = one_china_policy
+		
+		x = 9
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = CHI_alliance_with_the_maoists
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+
+		ai_will_do = {
+			base = 20
+		}
+	}
+	focus = {
+		id = CHI_supremacy_over_buddhism
+		icon = smiling_buddha
+		
+		x = -1
+		y = 1
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_exclusive_imperialism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			TIB = { country_event = china.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_supremacy_over_islam
+		icon = islamophobia
+		
+		x = 1
+		y = 1
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_exclusive_imperialism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SIK = { country_event = china.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_grant_monopolies_to_the_armament_lobby
+		icon = industry_military
+		
+		x = 0
+		y = 2
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_exclusive_imperialism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_challenge_tibet
+		icon = war2
+		
+		x = -1
+		y = 3
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		will_lead_to_war_with = TIB
+		
+		prerequisite = {
+			focus = CHI_supremacy_over_buddhism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			OR = {
+				TIB = { exists = no }
+				TIB = { is_in_faction_with = ROOT }
+				TIB = { is_subject_of = ROOT }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TIB
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_challenge_sinkiang
+		icon = war2
+		
+		x = 1
+		y = 3
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		will_lead_to_war_with = SIK
+		
+		prerequisite = {
+			focus = CHI_supremacy_over_islam
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			OR = {
+				SIK = { exists = no }
+				SIK = { is_in_faction_with = ROOT }
+				SIK = { is_subject_of = ROOT }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_the_jinan_threat
+		icon = attack_democracy2
+		
+		x = 0
+		y = 4
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_challenge_sinkiang
+			focus = CHI_challenge_tibet
+		}
+		prerequisite = {
+			focus = CHI_grant_monopolies_to_the_armament_lobby
+		}
+		mutually_exclusive = {}
+		available = {
+			SHX = {
+				exists = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+			any_country = {
+				has_guaranteed = SHX
+			}
+		}
+		bypass = {
+			all_country = {
+				NOT = { has_guaranteed = SHX }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 1.5 name = "Jinan Threat" }
+			news_event = china_news.3
+			SHX = { country_event = china.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_into_shandong
+		icon = war3
+		
+		x = -1
+		y = 5
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		will_lead_to_war_with = SHX
+		
+		prerequisite = {
+			focus = CHI_the_jinan_threat
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			OR = {
+				SHX = { exists = no }
+				SHX = { is_in_faction_with = ROOT }
+				SHX = { is_subject_of = ROOT }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SHX
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_call_the_xiamen_conference
+		icon = legislative_yuan
+		
+		x = 1
+		y = 5
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_the_jinan_threat
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 2.5 name = "Xiamen Conference" }
+			GXC = { country_event = china.3 }
+			YUN = { country_event = china.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_shandong_economic_projects
+		icon = industry2
+		
+		x = -1
+		y = 6
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_into_shandong
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = SHX }
+			has_full_control_of_state = 597
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			597 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			add_research_slot = 1
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_challenge_the_southerners
+		icon = war3
+		
+		x = 1
+		y = 6
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = GXC
+		
+		prerequisite = {
+			focus = CHI_call_the_xiamen_conference
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			OR = {
+				GXC = { exists = no }
+				GXC = { is_in_faction_with = ROOT }
+				GXC = { is_subject_of = ROOT }
+			}
+			OR = {
+				YUN = { exists = no }
+				YUN = { is_in_faction_with = ROOT }
+				YUN = { is_subject_of = ROOT }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					GXC = { exists = yes }
+					GXC = { NOT = { is_in_faction_with = ROOT } }
+					GXC = { NOT = { is_subject_of = ROOT } }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GXC
+				}
+			}
+			if = {
+				limit = {
+					YUN = { exists = yes }
+					YUN = { NOT = { is_in_faction_with = ROOT } }
+					YUN = { NOT = { is_subject_of = ROOT } }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YUN
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_the_government_of_national_unity
+		icon = chinese_glory
+		
+		x = 1
+		y = 7
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_challenge_the_southerners
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 617
+			has_full_control_of_state = 322
+			has_full_control_of_state = 325
+			has_full_control_of_state = 592
+			has_full_control_of_state = 597
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 1 name = "Government of National Unity" }
+			add_stability = 0.05
+			add_war_support = 0.05
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_take_the_colonial_cities
+		icon = renounce_treaty
+		
+		x = 0
+		y = 8
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_the_government_of_national_unity
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			owns_state = 728
+			owns_state = 729
+			owns_state = 326
+			owns_state = 743
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			728 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 728 } } } } }
+			729 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 729 } } } } }
+			326 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 326 } } } } }
+			743 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 743 } } } } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_avenge_the_humiliation
+		icon = war_against_japan
+		
+		x = 2
+		y = 8
+		relative_position_id = CHI_exclusive_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_the_government_of_national_unity
+		}
+		mutually_exclusive = {}
+		available = {
+			JAP = {
+				exists = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = JAP
+				type = take_core_state
+				generator = { 612 611 609 610 715 761 714 717 328 716 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Alliance with the Maoists
+	focus = {
+		id = CHI_alliance_with_the_maoists
+		icon = maoism
+		
+		x = 13
+		y = 0
+
+		cost = 18
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = CHI_exclusive_imperialism
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				news_event = china_news.2
+			}
+			add_popularity = { ideology = communism popularity = 0.1 }
+			create_country_leader = {
+				name = "Mao Zedong"
+				picture = "Mao_Zedong.dds"
+				ideology = national_bolshevism
+			}
+			hidden_effect = {
+				set_party_name = { ideology = communism name = "Maoists" long_name = "Maoists" }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_unions_of_laborers_and_farmers
+		icon = communism6
+		
+		x = 0
+		y = 1
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_alliance_with_the_maoists
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = agricultural_barons
+				add_idea = labor_unions
+			}
+			add_popularity = { ideology = communism popularity = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_conversion_through_subversion
+		icon = infiltration
+		
+		x = -1
+		y = 2
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_unions_of_laborers_and_farmers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_minor_chinese_state = yes
+					exists = yes
+					NOT = { has_government = communism }
+				}
+				add_popularity = { ideology = communism popularity = 0.1 }
+				country_event = china.5
+			}
+			unlock_decision_category_tooltip = conversion_through_subversion_decisions
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_five_year_plans
+		icon = industry_civilian
+		
+		x = 1
+		y = 2
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_unions_of_laborers_and_farmers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = five_year_plans
+			add_ideas = planned_economy
+			add_popularity = { ideology = communism popularity = 0.05 }
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_purge_the_bourgeoisie
+		icon = communism
+		
+		x = 3
+		y = 2
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 5
+		
+		prerequisite = {
+			focus = CHI_unions_of_laborers_and_farmers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#Proper Tooltip
+			if = { limit = { NOT = { has_completed_focus = CHI_conversion_through_subversion } } every_country = { limit = { is_minor_chinese_state = yes } add_popularity = { ideology = communism popularity = 0.05 } } }
+			#Actual Effect
+			every_country = { limit = { has_idea = maoist_rebels } add_popularity = { ideology = communism popularity = 0.05 } }
+			remove_ideas = aristocratic_elites
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_brown_to_red
+		icon = peoples_republic_of_china
+		
+		x = 0
+		y = 3
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_conversion_through_subversion
+		}
+		prerequisite = {
+			focus = CHI_five_year_plans
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_idea = aristocratic_elites }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			swap_ideas = {
+				remove_idea = ultra_nationalists
+				add_idea = radical_socialists
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_the_great_leap_forward
+		icon = national_unity
+		
+		x = 2
+		y = 3
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_five_year_plans
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 613 }
+				613 = {
+					add_manpower = -1000000
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex level = 1 instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 605 }
+				605 = {
+					add_manpower = -1000000
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex level = 1 instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 608 }
+				608 = {
+					add_manpower = -1000000
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex level = 1 instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 596 }
+				596 = {
+					add_manpower = -1000000
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex level = 1 instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_revolution_in_manchuria
+		icon = communist_army
+		
+		will_lead_to_war_with = JAP
+		
+		x = -1
+		y = 4
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_brown_to_red
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				JAP = { owns_state = 612 }
+				JAP = { owns_state = 611 }
+				JAP = { owns_state = 610 }
+				JAP = { owns_state = 609 }
+				JAP = { owns_state = 715 }
+				JAP = { owns_state = 714 }
+				JAP = { owns_state = 761 }
+				JAP = { owns_state = 328 }
+				JAP = { owns_state = 717 }
+				JAP = { owns_state = 716 }
+				JAP = { owns_state = 745 }
+			}
+		}
+		bypass = {}
+		select_effect = {
+			add_named_threat = {
+				threat = 2
+				name = "Preparation of a War in Manchuria"
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			declare_war_on = { target = JAP type = take_core_state generator = { 612 611 610 609 715 714 761 328 717 716 745 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_sino_mongolian_alliance
+		icon = alliance
+		
+		x = 1
+		y = 4
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_brown_to_red
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = MON
+				is_neighbor_of = ROOT
+				has_government = communism
+			}
+		}
+		bypass = {
+			all_country = {
+				OR = {
+					NOT = { original_tag = MON }
+					NOT = { has_government = communism }
+				}
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = liberation_pact
+			random_country = {
+				limit = {
+					original_tag = MON
+					has_government = communism
+					is_in_faction = no
+					is_subject = no
+				}
+				country_event = generic.1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_coastal_liberation
+		icon = demand_territory3
+		
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = SPR
+		will_lead_to_war_with = SWE
+		will_lead_to_war_with = PRS
+		
+		x = -1
+		y = 5
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_revolution_in_manchuria
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			728 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 728 } } } } }
+			729 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 729 } } } } }
+			326 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 326 } } } } }
+			743 = { owner = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 743 } } } } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+#	focus = {
+#		id = CHI_encourage_korean_communists
+#		icon = improve_relations_purple
+#		
+#		x = 2
+#		y = 5
+#		relative_position_id = CHI_alliance_with_the_maoists
+#
+#		cost = 10
+#		
+#		prerequisite = {
+#			focus = CHI_revolution_in_manchuria
+#		}
+#		mutually_exclusive = {}
+#		available = {}
+#		bypass = {
+#			KOR = {
+#				exists = yes
+#				OR = {
+#					is_subject = no
+#					is_subject_of = ROOT
+#				}
+#			}
+#			KOR = {
+#				has_government = communism
+#			}
+#		}
+#		select_effect = {}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#
+#		ai_will_do = {
+#			base = 10
+#		}
+#	}
+	focus = {
+		id = CHI_technocratic_communism
+		icon = socialist_science
+		
+		x = 1
+		y = 5
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_sino_mongolian_alliance
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = communism
+			is_in_faction = yes
+			is_faction_leader = yes
+			any_country = {
+				is_in_faction_with = ROOT
+				has_government = communism
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = atheism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_break_the_mughals
+		icon = war
+		
+		x = -1
+		y = 6
+		relative_position_id = CHI_alliance_with_the_maoists
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_coastal_liberation
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = communism
+			MUG = {
+				exists = yes
+				NOT = { has_government = communism }
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = MUG
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Economy Tree
+	focus = {
+		id = CHI_economic_reform
+		icon = construction2
+		
+		x = 18
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_beijing_industries
+		icon = industry_civilian
+		
+		x = 3
+		y = 0
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 608
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			608 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_chinese_steel
+		icon = steel_production
+		
+		x = -1
+		y = 1
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_economic_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 599 }
+				599 = { add_resource = { type = steel amount = 12 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 605 }
+				605 = { add_resource = { type = steel amount = 12 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 622 }
+				622 = { add_resource = { type = steel amount = 12 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 749 }
+				749 = { add_resource = { type = steel amount = 6 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_urbanization_efforts
+		icon = construction
+		
+		x = 1
+		y = 1
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_economic_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 608 }
+				608 = { add_extra_state_shared_building_slots = 1 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 613 }
+				613 = { add_extra_state_shared_building_slots = 1 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 605 }
+				605 = { add_extra_state_shared_building_slots = 1 }
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_chongqing_industries
+		icon = industry_civilian
+		
+		x = 3
+		y = 1
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_beijing_industries
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 605
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			605 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_centralize_the_banking_system
+		icon = consumer_goods
+		
+		x = 2
+		y = 2
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_urbanization_efforts
+		}
+		prerequisite = {
+			focus = CHI_chongqing_industries
+		}
+		mutually_exclusive = {}
+		available = {
+			
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_category_tooltip = economic_crisis_decisions
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_shanghai_industries
+		icon = industry_civilian
+		
+		x = 4
+		y = 2
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_chongqing_industries
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 613
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			613 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_nationalize_the_steel_industry
+		icon = communism3
+	
+		x = -1
+		y = 3
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_chinese_steel
+		}
+		prerequisite = {
+			focus = CHI_purge_the_bourgeoisie
+		}
+		mutually_exclusive = {}
+		available = {
+			
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 599 }
+				599 = { add_resource = { type = steel amount = 4 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 605 }
+				605 = { add_resource = { type = steel amount = 4 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 622 }
+				622 = { add_resource = { type = steel amount = 4 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 749 }
+				749 = { add_resource = { type = steel amount = 4 } }
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = CHI_unemployment_insurance
+		icon = treaty
+		
+		x = 3
+		y = 3
+		relative_position_id = CHI_economic_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CHI_centralize_the_banking_system
+		}
+		prerequisite = {
+			focus = CHI_shanghai_industries
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	
+}

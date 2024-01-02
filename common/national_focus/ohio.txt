@@ -1,0 +1,1693 @@
+focus_tree = {
+	
+	id = ohio_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = OHI
+			add = 20
+		}
+	}
+	
+	#Air Force
+	focus = {
+		id = OHI_expand_the_osc
+		icon = steel_production
+		
+		x = 0
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 261
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			261 = { add_resource = { type = steel amount = 25 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_modernize_the_factories
+		icon = production
+		
+		x = 0
+		y = 1
+		relative_position_id = OHI_expand_the_osc
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_expand_the_osc
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = production_efficiency2
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_steelmaking_innovations
+		icon = research
+		
+		x = 1
+		y = 2
+		relative_position_id = OHI_expand_the_osc
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_modernize_the_factories
+		}
+		prerequisite = {
+			focus = OHI_metal_monopoly_program
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 261
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			261 = { add_resource = { type = steel amount = 25 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_private_business_innovations
+		icon = research
+		
+		x = 2
+		y = 3
+		relative_position_id = OHI_expand_the_osc
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_steelmaking_innovations
+		}
+		prerequisite = {
+			focus = OHI_accessible_economy_act
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 261
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Air Force
+	focus = {
+		id = OHI_create_an_air_force
+		icon = air_production
+		
+		x = 3
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 261
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 25
+			261 = {
+				add_building_construction = { type = air_base level = 3 instant_build = yes }
+			}
+			hidden_effect = { load_oob = OHI_air_force }
+			custom_effect_tooltip = "Provides 72 Fighter Planes in the state of Ohio."
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_hire_foreign_workers
+		icon = construction
+		
+		x = 0
+		y = 1
+		relative_position_id = OHI_create_an_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_create_an_air_force
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 261
+			any_country = {
+				is_neighbor_of = ROOT
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			261 = { add_manpower = 10000 }
+			261 = { add_extra_state_shared_building_slots = 1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_metal_monopoly_program
+		icon = embargo
+		
+		x = -1
+		y = 2
+		relative_position_id = OHI_create_an_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_hire_foreign_workers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = autarky
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_fund_selby_industries
+		icon = industry
+		
+		x = 1
+		y = 2
+		relative_position_id = OHI_create_an_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_hire_foreign_workers
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 261
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			261 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_captain_of_industry
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_accessible_economy_act
+		icon = consumer_goods
+		
+		x = 0
+		y = 3
+		relative_position_id = OHI_create_an_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_fund_selby_industries
+		}
+		prerequisite = {
+			focus = OHI_metal_monopoly_program
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = consumer_goods_bonus5
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_factory_employment_act
+		icon = industry2
+		
+		x = 2
+		y = 3
+		relative_position_id = OHI_create_an_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_fund_selby_industries
+		}
+		prerequisite = {
+			focus = OHI_pact_with_the_military_industrialists
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 261
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			261 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Rejuvenate the Royal Societies
+	focus = {
+		id = OHI_rejuvenate_the_royal_societies
+		icon = demand_territory
+		
+		x = 8
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_pact_with_the_landowners
+		icon = agriculture
+		
+		x = -2
+		y = 1
+		relative_position_id = OHI_rejuvenate_the_royal_societies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_rejuvenate_the_royal_societies
+		}
+		mutually_exclusive = {}
+		available = {
+			has_idea = protectionism
+		}
+		bypass = {
+			has_idea = agricultural_barons
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = agricultural_barons
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_reform_the_ministry_of_war
+		icon = aggressive_diplomacy
+		
+		x = 0
+		y = 1
+		relative_position_id = OHI_rejuvenate_the_royal_societies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_rejuvenate_the_royal_societies
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = jingoism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_pact_with_the_military_industrialists
+		icon = industry_military
+		
+		x = -2
+		y = 2
+		relative_position_id = OHI_rejuvenate_the_royal_societies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_pact_with_the_landowners
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			has_idea = military_industrialists
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 261 }
+				261 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_ideas = military_industrialists
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_imitate_the_home_defense_act
+		icon = entente
+		
+		x = 1
+		y = 2
+		relative_position_id = OHI_rejuvenate_the_royal_societies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_reform_the_ministry_of_war
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				ENG = { has_completed_focus = ENG_pass_the_home_defense_act }
+				ENG = { is_puppet_of = ROOT }
+				ENG = { exists = no }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = conscription_bonus2
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_royal_infrastructure_plan
+		icon = infrastructure
+		
+		x = -1
+		y = 3
+		relative_position_id = OHI_rejuvenate_the_royal_societies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_pact_with_the_military_industrialists
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 261 }
+				261 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_sponsor_the_virginia_royal_society
+		icon = treaty
+		
+		x = 2
+		y = 3
+		relative_position_id = OHI_rejuvenate_the_royal_societies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_reaffirm_the_royal_claims
+		}
+		prerequisite = {
+			focus = OHI_imitate_the_home_defense_act
+		}
+		mutually_exclusive = {}
+		available = {
+			is_puppet = no
+			is_neighbor_of = USA
+			OR = {
+				owns_state = 362
+				USA = {
+					owns_state = 362
+				}
+			}
+			NOT = {
+				USA = { is_puppet_of = ROOT }
+				USA = { is_in_faction_with = ROOT }
+			}
+		}
+		bypass = {
+			USA = { exists = no }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_found_the_ohioan_officer_school
+		icon = army_logistics
+		
+		x = 0
+		y = 4
+		relative_position_id = OHI_rejuvenate_the_royal_societies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_imitate_the_home_defense_act
+		}
+		prerequisite = {
+			focus = OHI_royal_infrastructure_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_organize_the_army_around_artillery
+		icon = artillery
+		
+		x = -1
+		y = 1
+		relative_position_id = OHI_found_the_ohioan_officer_school
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_found_the_ohioan_officer_school
+		}
+		mutually_exclusive = {
+			focus = OHI_organize_the_army_around_tanks
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = artillery
+				category = infantry_weapons
+				bonus = 0.5
+				uses = 4
+			}
+			every_army_leader = {
+				add_defense = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_organize_the_army_around_tanks
+		icon = tanks
+		
+		x = 1
+		y = 1
+		relative_position_id = OHI_found_the_ohioan_officer_school
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_found_the_ohioan_officer_school
+		}
+		mutually_exclusive = {
+			focus = OHI_organize_the_army_around_artillery
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				bonus = 0.5
+				uses = 2
+			}
+			every_army_leader = {
+				add_attack = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_embrace_the_officer_class
+		icon = military_mission2
+		
+		x = 0
+		y = 2
+		relative_position_id = OHI_found_the_ohioan_officer_school
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_organize_the_army_around_artillery
+			focus = OHI_organize_the_army_around_tanks
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = highly_experienced_generals
+			add_ideas = army_officers
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#The New King
+	focus = {
+		id = OHI_the_new_king
+		icon = monarchism2
+		
+		x = 15
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			always = no
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##
+	focus = {
+		id = OHI_reaffirm_the_royal_claims
+		icon = monarchism
+		
+		x = -4
+		y = 1
+		relative_position_id = OHI_the_new_king
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_the_new_king
+		}
+		mutually_exclusive = {
+			focus = OHI_republican_tendencies
+		}
+		mutually_exclusive = {
+			focus = OHI_seek_proximity_to_france
+		}
+		available = {
+			NOT = { has_government = communism }
+			NOT = { has_government = democratic }
+			is_puppet = no
+			NOT = { is_in_faction_with = ENG }
+			NOT = { is_in_faction_with = USA }
+			ENG = {
+				OR = { has_government = communism has_government = democratic }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ENG = { add_opinion_modifier = { target = ROOT modifier = claims_on_the_british_throne_very_negative } }
+			USA = { add_opinion_modifier = { target = ROOT modifier = claims_on_the_british_throne_very_negative } }
+			every_country = {
+				limit = { OR = { original_tag = FRA is_puppet_of = FRA } }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = claims_on_the_british_throne_negative
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_authoritarian_ideologue
+		}
+
+		ai_will_do = {
+			base = 96
+		}
+	}
+	focus = {
+		id = OHI_censor_the_press
+		icon = attack_democracy
+		
+		x = 0
+		y = 1
+		relative_position_id = OHI_reaffirm_the_royal_claims
+
+		cost = 5
+		
+		prerequisite = {
+			focus = OHI_reaffirm_the_royal_claims
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = liberal_monarchists
+				add_idea = crown_loyalists
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_cancel_the_1827_agreement
+		icon = renounce_treaty
+		
+		x = 2
+		y = 1
+		relative_position_id = OHI_reaffirm_the_royal_claims
+
+		cost = 5
+		
+		prerequisite = {
+			focus = OHI_reaffirm_the_royal_claims
+			focus = OHI_republican_tendencies
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			NOT = { FRA = { has_guaranteed = ROOT } }
+			NOT = { has_idea = agreement_of_1827 }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = agreement_of_1827
+			FRA = { diplomatic_relation = { country = OHI relation = guarantee active = no } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_fund_the_anti_republican_society
+		icon = anti_democracy
+		
+		x = 0
+		y = 3
+		relative_position_id = OHI_reaffirm_the_royal_claims
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_sponsor_the_virginia_royal_society
+		}
+		prerequisite = {
+			focus = OHI_cancel_the_1827_agreement
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			USA = { add_popularity = { ideology = neutrality popularity = 0.05 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_undermine_the_united_states
+		icon = attack_democracy3
+		
+		x = 0
+		y = 1
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_fund_the_anti_republican_society
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { is_in_faction_with = USA }
+			is_neighbor_of = USA
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { target = USA type = annex_everything }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_integrate_greater_maryland
+		icon = dangerous_deal
+		
+		x = -1
+		y = 2
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_undermine_the_united_states
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 360
+			has_full_control_of_state = 361
+			has_full_control_of_state = 362
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_state_core = 360
+			add_state_core = 361
+			add_state_core = 362
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_reclaim_canada_for_the_crown
+		icon = war4
+		
+		x = 1
+		y = 2
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_undermine_the_united_states
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { is_in_faction_with = CAN }
+			is_neighbor_of = CAN
+		}
+		bypass = {
+			has_war_with = CAN
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { target = CAN type = annex_everything }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_integrate_the_remaining_colonies
+		icon = demand_territory3
+		
+		x = -2
+		y = 3
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_integrate_greater_maryland
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 357
+			has_full_control_of_state = 358
+			has_full_control_of_state = 359
+			has_full_control_of_state = 363
+			has_full_control_of_state = 364
+			has_full_control_of_state = 365
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_state_core = 357
+			add_state_core = 358
+			add_state_core = 359
+			add_state_core = 363
+			add_state_core = 364
+			add_state_core = 365
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_northern_mountain_troops
+		icon = recruitment
+		
+		x = 0
+		y = 3
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 5
+		
+		prerequisite = {
+			focus = OHI_reclaim_canada_for_the_crown
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_full_control_of_state = 682
+				has_full_control_of_state = 683
+				has_full_control_of_state = 466
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				category = mountaineers_tech
+				bonus = 0.75
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_restore_the_throne
+		icon = political_pressure
+		
+		x = 2
+		y = 3
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_reclaim_canada_for_the_crown
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { is_in_faction_with = ENG }
+		}
+		bypass = {
+			has_war_with = ENG
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { target = ENG type = annex_everything }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_american_factories
+		icon = industry_military
+		
+		x = -2
+		y = 4
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 4
+		
+		prerequisite = {
+			focus = OHI_integrate_the_remaining_colonies
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 357
+			has_full_control_of_state = 359
+			has_full_control_of_state = 364
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			357 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			359 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			364 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_glorious_revolution
+		icon = align_with_britain
+		
+		x = 1
+		y = 4
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 4
+		
+		prerequisite = {
+			focus = OHI_restore_the_throne
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				ENG = { is_puppet_of = ROOT }
+				ENG = { exists = no }
+			}
+			owns_state = 126
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = ENG
+			set_capital = 126
+			every_state = { limit = { is_core_of = ENG } add_core_of = OHI }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_british_naval_yards
+		icon = naval_dockyard
+		
+		x = 3
+		y = 4
+		relative_position_id = OHI_fund_the_anti_republican_society
+
+		cost = 4
+		
+		prerequisite = {
+			focus = OHI_restore_the_throne
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 121
+			has_full_control_of_state = 122
+			has_full_control_of_state = 126
+			has_full_control_of_state = 127
+			has_full_control_of_state = 132
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			126 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			132 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			121 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			127 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			122 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##
+	focus = {
+		id = OHI_republican_tendencies
+		icon = democracy5
+		
+		x = 0
+		y = 1
+		relative_position_id = OHI_the_new_king
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_the_new_king
+		}
+		mutually_exclusive = {
+			focus = OHI_reaffirm_the_royal_claims
+		}
+		mutually_exclusive = {
+			focus = OHI_seek_proximity_to_france
+		}
+		available = {
+			is_neighbor_of = USA
+		}
+		bypass = {
+			is_puppet_of = USA
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic popularity = 0.2
+			}
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	focus = {
+		id = OHI_abolish_the_monarchy
+		icon = anti_monarchism3
+		
+		x = 0
+		y = 2
+		relative_position_id = OHI_republican_tendencies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_republican_tendencies
+		}
+		prerequisite = {
+			focus = OHI_cancel_the_1827_agreement
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_join_the_united_states
+		icon = become_puppet
+		
+		x = 0
+		y = 3
+		relative_position_id = OHI_republican_tendencies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_abolish_the_monarchy
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = USA }
+			OR = {
+				is_neighbor_of = USA
+				is_puppet_of = USA
+			}
+			OR = {
+				is_puppet = no
+				is_puppet_of = USA
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = { annex_country = { target = ROOT transfer_troops = yes } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##
+	focus = {
+		id = OHI_seek_proximity_to_france
+		icon = align_with_france
+		
+		x = 4
+		y = 1
+		relative_position_id = OHI_the_new_king
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_the_new_king
+		}
+		mutually_exclusive = {
+			focus = OHI_republican_tendencies
+		}
+		mutually_exclusive = {
+			focus = OHI_reaffirm_the_royal_claims
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	focus = {
+		id = OHI_meeting_of_the_two_kings
+		icon = improve_relations
+		
+		x = 0
+		y = 1
+		relative_position_id = OHI_seek_proximity_to_france
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_seek_proximity_to_france
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			NOT = { has_government = communism }
+			FRA = {
+				is_subject = no
+				NOT = { has_government = communism }
+			}
+			NOT = { has_war_with = FRA }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_pass_the_french_language_act
+		icon = diplomacy
+		
+		x = 0
+		y = 2
+		relative_position_id = OHI_seek_proximity_to_france
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_meeting_of_the_two_kings
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_war_with = FRA }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = scientific_advances2
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_unite_with_louisiana
+		icon = become_puppet
+		
+		x = -1
+		y = 3
+		relative_position_id = OHI_seek_proximity_to_france
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_pass_the_french_language_act
+		}
+		mutually_exclusive = {
+			focus = OHI_approach_the_entente
+		}
+		available = {
+			NOT = { has_war_with = FRA }
+			country_exists = LOU
+			LOU = { is_puppet_of = FRA }
+			is_neighbor_of = LOU
+			LOU = { is_ai = yes }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			annex_country = { target = LOU transfer_troops = yes }
+			FRA = { puppet = ROOT }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_approach_the_entente
+		icon = alliance
+		
+		x = 1
+		y = 3
+		relative_position_id = OHI_seek_proximity_to_france
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_pass_the_french_language_act
+		}
+		mutually_exclusive = {
+			focus = OHI_unite_with_louisiana
+		}
+		available = {
+			NOT = { has_war_with = FRA }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = { country_event = { id = france.2 hours = 3 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = OHI_take_america_for_france
+		icon = war2
+		
+		x = -1
+		y = 4
+		relative_position_id = OHI_seek_proximity_to_france
+		
+		will_lead_to_war_with = USA
+
+		cost = 10
+		
+		prerequisite = {
+			focus = OHI_unite_with_louisiana
+		}
+		available = {
+			is_neighbor_of = USA
+			NOT = { is_in_faction_with = USA }
+			is_puppet_of = FRA
+			NOT = { has_war_with = FRA }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+}

@@ -1,0 +1,2131 @@
+focus_tree = {
+	
+	id = mexico_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = MEX
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 2200 y = 20 }
+	
+	#Create the CTM
+	focus = {
+		id = MEX_create_the_ctm
+		icon = labor_unions
+		
+		x = 2
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_war = no
+				has_war_with = TEX
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = { has_full_control_of_state = 277 }
+				277 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_captain_of_industry
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_mexican_universities
+		icon = research
+		
+		dynamic = yes
+		
+		x = 0
+		y = 1
+		relative_position_id = MEX_create_the_ctm
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_create_the_ctm
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_protect_guerrero_dock_workers
+		icon = naval_dockyard
+		
+		x = -2
+		y = 1
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_mexican_universities
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 485
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.01
+			485 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_industrialize_mexico_city
+		icon = industry_civilian
+		
+		x = 0
+		y = 1
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_mexican_universities
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 277
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.01
+			277 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_the_guatemala_motorway
+		icon = infrastructure
+		
+		x = 2
+		y = 1
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_mexican_universities
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 277
+			has_full_control_of_state = 477
+			has_full_control_of_state = 476
+			has_full_control_of_state = 475
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.01
+			277 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			477 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			476 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			475 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_develop_jualisco_rifle_companies
+		icon = industry_military
+		
+		x = -2
+		y = 2
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_protect_guerrero_dock_workers
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 478
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.01
+			478 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_grow_the_capital_suburbs
+		icon = industry2
+		
+		x = 0
+		y = 2
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_industrialize_mexico_city
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 277
+			has_full_control_of_state = 477
+			has_full_control_of_state = 485
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.01
+			277 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			477 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			485 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_yucatan_employment
+		icon = construction3
+		
+		x = 2
+		y = 2
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_the_guatemala_motorway
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 474
+			has_full_control_of_state = 475
+			has_full_control_of_state = 476
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.01
+			474 = {
+				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+			475 = {
+				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+			476 = {
+				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_oil_baron
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_appease_the_resistance
+		icon = national_unity
+		
+		x = 0
+		y = 3
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_develop_jualisco_rifle_companies
+		}
+		prerequisite = {
+			focus = MEX_grow_the_capital_suburbs
+		}
+		prerequisite = {
+			focus = MEX_yucatan_employment
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = anti_government_militias
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_modernize_the_education_system
+		icon = research2
+		
+		x = 0
+		y = 4
+		relative_position_id = MEX_mexican_universities
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_appease_the_resistance
+		}
+		mutually_exclusive = {}
+		available = {
+			has_offensive_war = no
+			is_puppet = no
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#
+	focus = {
+		id = MEX_secure_the_motherland
+		icon = defense
+		
+		x = 7
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_milicia_popular
+		icon = entente
+		
+		x = 5
+		y = 0
+		relative_position_id = MEX_secure_the_motherland
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			NOT = { has_idea = disarmed_nation }
+			NOT = { has_idea = volunteer_only }
+			NOT = { has_idea = limited_conscription }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reinforce Anti-Imperialism
+	focus = {
+		id = MEX_reinforce_anti_imperialism
+		icon = anti_monarchism
+		
+		x = -1
+		y = 1
+		relative_position_id = MEX_secure_the_motherland
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_secure_the_motherland
+		}
+		mutually_exclusive = {
+			focus = MEX_restore_revolutionary_friendship
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			every_country = {
+				limit = {
+					has_government = communism
+					NOT = {
+						original_tag = SPR
+						original_tag = ITA
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = mexican_anti_imperialism_positive
+				}
+			}
+			every_country = {
+				limit = {
+					has_government = communism
+					OR = {
+						original_tag = SPR
+						original_tag = ITA
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = mexican_anti_imperialism_negative
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_invite_nicaragua
+		icon = alliance
+		
+		x = 0
+		y = 1
+		relative_position_id = MEX_reinforce_anti_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_reinforce_anti_imperialism
+		}
+		mutually_exclusive = {}
+		available = {
+			NIC = { has_same_ideology = yes }
+			is_faction_leader = yes
+			NIC = { is_puppet = no }
+		}
+		bypass = {
+			OR = {
+				is_faction_leader = no
+				NIC = { is_puppet = yes }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			NIC = { country_event = generic.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reinforce Anti-Imperialism
+	focus = {
+		id = MEX_restore_revolutionary_friendship
+		icon = great_red_menace
+		
+		x = 2
+		y = 0
+		relative_position_id = MEX_reinforce_anti_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_secure_the_motherland
+		}
+		mutually_exclusive = {
+			focus = MEX_reinforce_anti_imperialism
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = communism
+					NOT = {
+						original_tag = SPR
+						original_tag = ITA
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = revolutionary_friendship_negative
+				}
+			}
+			every_country = {
+				limit = {
+					has_government = communism
+					OR = {
+						original_tag = SPR
+						original_tag = ITA
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = revolutionary_friendship_positive
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_join_the_barcelona_agreement
+		icon = improve_relations_orange
+		
+		x = 0
+		y = 1
+		relative_position_id = MEX_restore_revolutionary_friendship
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_restore_revolutionary_friendship
+		}
+		mutually_exclusive = {}
+		available = {
+			is_puppet = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			SPR = {
+				has_same_ideology = yes
+				is_faction_leader = yes
+				is_puppet = no
+			}
+		}
+		bypass = {
+			is_in_faction = yes
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SPR = { country_event = spain.2 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reinforce Anti-Imperialism
+	focus = {
+		id = MEX_reintegrate_texas
+		icon = texas
+		
+		x = 5
+		y = 0
+		relative_position_id = MEX_reinforce_anti_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_secure_the_motherland
+		}
+		prerequisite = {
+			focus = MEX_milicia_popular
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 375
+			has_global_flag = texan_uprising
+			TEX = { exists = no }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			375 = { add_extra_state_shared_building_slots = 3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_protect_anglophones
+		icon = diplomacy
+		
+		x = 0
+		y = 1
+		relative_position_id = MEX_reintegrate_texas
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_reintegrate_texas
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_northern_development
+		icon = industry
+		
+		x = 1
+		y = 2
+		relative_position_id = MEX_reintegrate_texas
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_protect_anglophones
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 376
+			has_full_control_of_state = 377
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			376 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			377 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Strengthen the Party
+	focus = {
+		id = MEX_strengthen_the_party
+		icon = communism2
+		
+		x = 1
+		y = 2
+		relative_position_id = MEX_reinforce_anti_imperialism
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_invite_nicaragua
+			focus = MEX_join_the_barcelona_agreement
+		}
+		mutually_exclusive = {
+			focus = MEX_allow_parliamentary_opposition
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_communist_revolutionary
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_suppress_the_liberals
+		icon = dangerous_deal2
+		
+		x = -2
+		y = 1
+		relative_position_id = MEX_strengthen_the_party
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_strengthen_the_party
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = liberal_reformers
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_a_new_economic_plan
+		icon = communist_factories
+		
+		x = 0
+		y = 1
+		relative_position_id = MEX_strengthen_the_party
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_strengthen_the_party
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = five_year_plans
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_revolutionary_fervor
+		icon = communism3
+		
+		x = -3
+		y = 2
+		relative_position_id = MEX_strengthen_the_party
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_a_new_economic_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = communism
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_create_a_secret_police
+		icon = espionage
+		
+		x = -1
+		y = 2
+		relative_position_id = MEX_strengthen_the_party
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_a_new_economic_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = secret_police
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_reassure_the_unions
+		icon = industry_communism
+		
+		x = 1
+		y = 2
+		relative_position_id = MEX_strengthen_the_party
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_a_new_economic_plan
+			focus = MEX_reform_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 277 }
+				277 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 480 }
+				480 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 479 }
+				479 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_attack_california
+		icon = attack_communism
+		
+		x = -3
+		y = 3
+		relative_position_id = MEX_strengthen_the_party
+
+		will_lead_to_war_with = CAL
+		will_lead_to_war_with = USA
+		
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_revolutionary_fervor
+		}
+		mutually_exclusive = {}
+		available = {
+			is_puppet = no
+			has_government = communism
+			OR = {
+				CAL = { exists = yes }
+				USA = {
+					owns_state = 378
+					owns_state = 379
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { CAL = { exists = yes } }
+				create_wargoal = {
+					type = annex_everything
+					target = CAL
+				}
+			}
+			if = {
+				limit = { USA = { owns_state = 378 owns_state = 379 } }
+				create_wargoal = {
+					type = take_state_focus
+					target = USA
+					generator = { 378 379 385 386 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_undermine_recinos
+		icon = communist_spies
+		
+		x = -1
+		y = 3
+		relative_position_id = MEX_strengthen_the_party
+
+		will_lead_to_war_with = HON
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_create_a_secret_police
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = communism
+			is_puppet = no
+			GUA = {
+				exists = yes
+				NOT = { has_government = communism }
+				OR = {
+					is_puppet = no
+					NOT = { is_puppet_of = ROOT }
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = GUA
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_liberate_the_natives
+		icon = war2
+		
+		x = -3
+		y = 4
+		relative_position_id = MEX_strengthen_the_party
+
+		will_lead_to_war_with = NAT
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_attack_california
+		}
+		mutually_exclusive = {}
+		available = {
+			is_puppet = no
+			has_government = communism
+			is_neighbor_of = NAT
+			NAT = {
+				NOT = { has_government = communism }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = NAT
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_strike_south
+		icon = war
+		
+		x = -1
+		y = 4
+		relative_position_id = MEX_strengthen_the_party
+
+		will_lead_to_war_with = HON
+		will_lead_to_war_with = ELS
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_undermine_recinos
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				HON = { exists = no }
+				ELS = { exists = no }
+				is_neighbor_of = HON
+				is_neighbor_of = ELS
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = HON
+					HON = { NOT = { has_government = communism } }
+				}
+				create_wargoal = {
+					target = HON
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ELS
+					ELS = { NOT = { has_government = communism } }
+				}
+				create_wargoal = {
+					target = ELS
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Allow Parliamentary Opposition
+	focus = {
+		id = MEX_allow_parliamentary_opposition
+		icon = democracy5
+		
+		x = -1
+		y = 2
+		relative_position_id = MEX_reintegrate_texas
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_protect_anglophones
+		}
+		mutually_exclusive = {
+			focus = MEX_strengthen_the_party
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { country_event = mexico_news.4 }
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			set_party_name = { ideology = democratic name = "PPS" long_name = "Partido Popular Socialista" }
+			add_stability = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_democratic_reformer
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_reform_the_government
+		icon = democracy2
+		
+		x = -1
+		y = 1
+		relative_position_id = MEX_allow_parliamentary_opposition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_allow_parliamentary_opposition
+		}
+		mutually_exclusive = {}
+		available = {
+			has_civil_war = no
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_restore_press_freedoms
+		icon = propaganda
+		
+		x = 2
+		y = 1
+		relative_position_id = MEX_allow_parliamentary_opposition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_allow_parliamentary_opposition
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_liberalize_the_economy
+		icon = self_management
+		
+		x = 0
+		y = 2
+		relative_position_id = MEX_allow_parliamentary_opposition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_reform_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = economic_intervention
+			if = {
+				limit = { has_full_control_of_state = 277 }
+				277 = { add_extra_state_shared_building_slots = 2 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 478 }
+				478 = { add_extra_state_shared_building_slots = 2 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 480 }
+				480 = { add_extra_state_shared_building_slots = 2 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 485 }
+				485 = { add_extra_state_shared_building_slots = 1 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 483 }
+				483 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_enforce_religious_liberties
+		icon = catholicism
+		
+		x = 2
+		y = 2
+		relative_position_id = MEX_allow_parliamentary_opposition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_restore_press_freedoms
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = secularism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_oppose_colonialism
+		icon = war4
+		
+		x = -1
+		y = 3
+		relative_position_id = MEX_allow_parliamentary_opposition
+
+		will_lead_to_war_with = LOU
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_liberalize_the_economy
+		}
+		mutually_exclusive = {
+			focus = MEX_join_the_entente
+		}
+		available = {
+			has_completed_focus = MEX_reinforce_anti_imperialism
+			is_neighbor_of = LOU
+			LOU = { is_puppet = yes }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = LOU
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_join_the_entente
+		icon = align_with_france
+		
+		x = 1
+		y = 3
+		relative_position_id = MEX_allow_parliamentary_opposition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_liberalize_the_economy
+		}
+		mutually_exclusive = {
+			focus = MEX_oppose_colonialism
+		}
+		available = {
+			FRA = {
+				NOT = { has_completed_focus = FRA_abandon_the_entente }
+			}
+			NOT = { has_completed_focus = MEX_reinforce_anti_imperialism }
+			NOT = { has_war_with = FRA }
+			any_country = {
+				is_neighbor_of = ROOT
+				is_in_faction_with = FRA
+			}
+			is_in_faction = no
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = { country_event = france.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_liberate_california
+		icon = war3
+		
+		x = 0
+		y = 1
+		relative_position_id = MEX_join_the_entente
+		
+		will_lead_to_war_with = CAL
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_join_the_entente
+		}
+		available = {
+			is_in_faction_with = FRA
+			has_government = democratic
+			FRA = { has_government = democratic }
+			is_puppet = no
+			CAL = { 
+				exists = yes
+				NOT = { has_government = democratic }
+			}
+		}
+		bypass = {
+			has_war_with = CAL
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = CAL
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Cardenas Plan
+	focus = {
+		id = MEX_cardenas_plan
+		icon = army_reform
+		
+		x = 16
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = generic_military_theorist
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			army_experience = 25
+			create_corps_commander = {
+				name = "Lázaro Cárdenas"
+				picture = "generals/Lazaro_Cardenas.dds"
+				traits = { }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "Plutarco Elías Calles"
+				picture = "generals/Plutarco_Elias_Calles.dds"
+				traits = { }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_infantry_training
+		icon = infantry_axis
+		
+		x = -2
+		y = 1
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_cardenas_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_mexico_city_military_academy
+		icon = military_academy
+		
+		x = 1
+		y = 1
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_cardenas_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = military_academy
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_artillery_programs
+		icon = artillery
+		
+		x = -2
+		y = 2
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_infantry_training
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_air_doctrines
+		icon = air_doctrine
+		
+		x = 0
+		y = 2
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_mexico_city_military_academy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_naval_doctrines
+		icon = naval_dockyard
+		
+		x = 2
+		y = 2
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_mexico_city_military_academy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_tactical_innovations
+		icon = recruitment
+		
+		x = 4
+		y = 2
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_mexico_city_military_academy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = generic_high_command_army_cavalry_commander
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = generic_high_command_army_artillery_commander
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = generic_high_command_army_infantry_commander
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_paratroopers
+		icon = paratroopers
+		
+		x = -1
+		y = 3
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_artillery_programs
+		}
+		prerequisite = {
+			focus = MEX_air_doctrines
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.75
+				uses = 2
+				category = para_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_naval_bases
+		icon = navy2
+		
+		x = 2
+		y = 3
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_naval_doctrines
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 476 }
+				476 = {
+					add_building_construction = { type = naval_base level = 3 instant_build = yes province = 10889 }
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 477 }
+				477 = {
+					add_building_construction = { type = naval_base level = 3 instant_build = yes province = 12810 }
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 485 }
+				485 = {
+					add_building_construction = { type = naval_base level = 3 instant_build = yes province = 8032 }
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 484 }
+				484 = {
+					add_building_construction = { type = naval_base level = 3 instant_build = yes province = 1892 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_armor_programs
+		icon = tanks3
+		
+		x = -2
+		y = 4
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_artillery_programs
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_air_bases
+		icon = air_force
+		
+		x = 0
+		y = 4
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_air_doctrines
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_light_ships
+		icon = destroyers
+		
+		x = 2
+		y = 4
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_naval_bases
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_light_planes
+		icon = fighters2
+		
+		x = 0
+		y = 5
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_air_bases
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				category = light_air
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_heavy_ships
+		icon = battleships2
+		
+		x = 2
+		y = 5
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_light_ships
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = MEX_heavy_planes
+		icon = bombers
+		
+		x = 0
+		y = 6
+		relative_position_id = MEX_cardenas_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = MEX_light_planes
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = heavy_air_bonus
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+}

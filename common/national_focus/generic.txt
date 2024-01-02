@@ -1,0 +1,2789 @@
+focus_tree = {
+	
+	id = generic_focus
+	
+	country = {
+		factor = 1
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+	
+	#Political Tree
+	
+	focus = {
+		id = generic_political_effort
+		icon = demand_territory
+		
+		x = 3
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				threat < 0.2 has_war = no
+				add = 10
+			}
+			modifier = {
+				threat < 0.1 has_war = no
+				add = 10
+			}
+		}
+	}
+	
+	##Political Tree: Communism
+	
+	focus = {
+		id = generic_communist_tendencies
+		icon = communism
+		
+		x = -3
+		y = 1
+		relative_position_id = generic_political_effort
+
+		cost = 15
+		
+		prerequisite = {
+			focus = generic_political_effort
+		}
+		mutually_exclusive = {
+			focus = generic_democratic_ideals
+		}
+		mutually_exclusive = {
+			focus = generic_authoritarian_ambitions
+		}
+		mutually_exclusive = {
+			focus = generic_fascistic_reforms
+		}
+		available = {
+			NOT = { has_idea = entente_influence }
+			is_subject = no
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = paragon_of_democracy }
+				remove_ideas = paragon_of_democracy
+			}
+			if = { limit = { has_government = communism } add_stability = 0.05 }
+			if = { limit = { has_government = democratic } add_stability = -0.05 }
+			if = { limit = { has_government = neutrality } add_stability = -0.10 }
+			if = { limit = { has_government = fascism } add_stability = -0.15 }
+			add_timed_idea = {
+				idea = communist_tendencies
+				days = 730
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				add = 10
+				has_government = communism
+			}
+			modifier = {
+				add = -5
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_democratic_ideals
+		icon = democracy
+		
+		x = -1
+		y = 1
+		relative_position_id = generic_political_effort
+
+		cost = 15
+		
+		prerequisite = {
+			focus = generic_political_effort
+		}
+		mutually_exclusive = {
+			focus = generic_communist_tendencies
+		}
+		mutually_exclusive = {
+			focus = generic_authoritarian_ambitions
+		}
+		mutually_exclusive = {
+			focus = generic_fascistic_reforms
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = { limit = { has_government = communism } add_stability = -0.05 }
+			if = { limit = { has_government = democratic } add_stability = 0.05 }
+			if = { limit = { has_government = neutrality } add_stability = -0.05 }
+			if = { limit = { has_government = fascism } add_stability = -0.10 }
+			add_timed_idea = {
+				idea = democratic_tendencies
+				days = 730
+			}
+			add_popularity = { ideology = democratic popularity = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				add = 50
+				has_idea = paragon_of_democracy
+			}
+			modifier = {
+				add = 10
+				has_government = democratic
+			}
+			modifier = {
+				add = -5
+				has_government = fascism
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_authoritarian_ambitions
+		icon = neutrality
+		
+		x = 1
+		y = 1
+		relative_position_id = generic_political_effort
+
+		cost = 15
+		
+		prerequisite = {
+			focus = generic_political_effort
+		}
+		mutually_exclusive = {
+			focus = generic_communist_tendencies
+		}
+		mutually_exclusive = {
+			focus = generic_democratic_ideals
+		}
+		mutually_exclusive = {
+			focus = generic_fascistic_reforms
+		}
+		available = {
+			NOT = { has_idea = entente_influence }
+			is_subject = no
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = { limit = { has_government = communism } add_stability = -0.10 }
+			if = { limit = { has_government = democratic } add_stability = -0.05 }
+			if = { limit = { has_government = neutrality } add_stability = 0.05 }
+			if = { limit = { has_government = fascism } add_stability = -0.05 }
+			if = {
+				limit = { has_idea = paragon_of_democracy }
+				remove_ideas = paragon_of_democracy
+			}
+			add_timed_idea = {
+				idea = authoritarian_tendencies
+				days = 730
+			}
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				add = 10
+				has_government = neutrality
+			}
+			modifier = {
+				add = -5
+				has_government = communism
+			}
+			modifier = { #Quebec really should not take this one.
+				add = -20
+				original_tag = CAN
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_fascistic_reforms
+		icon = fascism
+		
+		x = 3
+		y = 1
+		relative_position_id = generic_political_effort
+
+		cost = 15
+		
+		prerequisite = {
+			focus = generic_political_effort
+		}
+		mutually_exclusive = {
+			focus = generic_communist_tendencies
+		}
+		mutually_exclusive = {
+			focus = generic_democratic_ideals
+		}
+		mutually_exclusive = {
+			focus = generic_authoritarian_ambitions
+		}
+		available = {
+			NOT = { has_idea = entente_influence }
+			is_subject = no
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = { limit = { has_government = communism } add_stability = -0.15 }
+			if = { limit = { has_government = democratic } add_stability = -0.10 }
+			if = { limit = { has_government = neutrality } add_stability = -0.05 }
+			if = { limit = { has_government = fascism } add_stability = 0.05 }
+			if = {
+				limit = { has_idea = paragon_of_democracy }
+				remove_ideas = paragon_of_democracy
+			}
+			add_timed_idea = {
+				idea = fascist_tendencies
+				days = 730
+			}
+			add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				add = 10
+				has_government = fascism
+			}
+			modifier = {
+				add = -5
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_strengthen_the_unions
+		icon = industry_communism
+		
+		x = -2
+		y = 2
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_communist_tendencies
+			focus = generic_democratic_ideals
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.075 }
+			add_popularity = { ideology = democratic popularity = 0.075 }
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			add_ideas = labor_unions
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_secure_civil_rights
+		icon = national_unity
+		
+		x = 0
+		y = 2
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_democratic_ideals
+			focus = generic_authoritarian_ambitions
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.075 }
+			add_popularity = { ideology = neutrality popularity = 0.075 }
+			add_political_power = 150
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_national_militarism
+		icon = fascism2
+		
+		x = 2
+		y = 2
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_authoritarian_ambitions
+			focus = generic_fascistic_reforms
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.075 }
+			add_popularity = { ideology = fascism popularity = 0.075 }
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			add_ideas = militarism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_political_commissars
+		icon = communism2
+		
+		x = -3
+		y = 3
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_communist_tendencies
+		}
+		prerequisite = {
+			focus = generic_strengthen_the_unions
+		}
+		mutually_exclusive = {}
+		available = {
+			communism > 0.1
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = { ideology = communism popularity = 0.15 }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_communist_revolutionary
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_popular_defense
+		icon = defense
+		
+		x = -1
+		y = 3
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_democratic_ideals
+		}
+		prerequisite = {
+			focus = generic_strengthen_the_unions
+			focus = generic_secure_civil_rights
+		}
+		mutually_exclusive = {}
+		available = {
+			democratic > 0.1
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			create_random_factory_CIV_1 = yes
+			if = {
+				limit = { NOT = { any_owned_state = { is_coastal = yes } } }
+				create_random_factory_CIV_1 = yes
+			}
+			if = {
+				limit = { any_owned_state = { is_coastal = yes } }
+				create_random_factory_NAV_1 = yes
+			}
+			create_random_factory_MIL_1 = yes
+			add_ideas = defensive_preparations
+			every_army_leader = {
+				add_planning = 1
+				add_defense = 1
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_democratic_reformer
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_strengthen_the_officer_corps
+		icon = gentleman_officers
+		
+		x = 1
+		y = 3
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_authoritarian_ambitions
+		}
+		prerequisite = {
+			focus = generic_secure_civil_rights
+			focus = generic_national_militarism
+		}
+		mutually_exclusive = {}
+		available = {
+			neutrality > 0.1
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = army_officers
+			create_random_factory_CIV_1 = yes
+			create_random_factory_MIL_1 = yes
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			every_army_leader = {
+				add_attack = 1
+				add_logistics = 1
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_authoritarian_ideologue
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_assault_divisions
+		icon = infantry_axis
+		
+		x = 3
+		y = 3
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_fascistic_reforms
+		}
+		prerequisite = {
+			focus = generic_national_militarism
+		}
+		mutually_exclusive = {}
+		available = {
+			fascism > 0.1
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			add_ideas = assault_divisions
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_fascist_demagogue
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_militarize_the_workforce
+		icon = communism5
+		
+		x = -3
+		y = 4
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_political_commissars
+		}
+		mutually_exclusive = {}
+		available = {
+			communism > 0.2
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			if = {
+				limit = { NOT = { has_idea = radical_socialists } }
+				add_ideas = radical_socialists
+			}
+			if = {
+				limit = { has_idea = liberal_reformers }
+				remove_ideas = liberal_reformers
+			}
+			if = {
+				limit = { has_idea = crown_loyalists }
+				remove_ideas = crown_loyalists
+			}
+			if = {
+				limit = { has_idea = ultra_nationalists }
+				remove_ideas = ultra_nationalists
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_international_research_compact
+		icon = research
+		
+		x = -1
+		y = 4
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_popular_defense
+		}
+		mutually_exclusive = {}
+		available = {
+			democratic > 0.2
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_reinforce_traditional_values
+		icon = military_mission
+		
+		x = 1
+		y = 4
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_strengthen_the_officer_corps
+		}
+		mutually_exclusive = {}
+		available = {
+			neutrality > 0.2
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_rosenbergian_ideology
+		icon = propaganda
+		
+		x = 3
+		y = 4
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_assault_divisions
+		}
+		mutually_exclusive = {}
+		available = {
+			fascism > 0.2
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = fascism popularity = 0.1
+			}
+			if = {
+				limit = { has_idea = radical_socialists }
+				remove_ideas = radical_socialists
+			}
+			if = {
+				limit = { has_idea = liberal_reformers }
+				remove_ideas = liberal_reformers
+			}
+			if = {
+				limit = { has_idea = crown_loyalists }
+				remove_ideas = crown_loyalists
+			}
+			if = {
+				limit = { NOT = { has_idea = ultra_nationalists } }
+				add_ideas = ultra_nationalists
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_popular_revolution
+		icon = attack_communism
+		
+		x = -3
+		y = 5
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_militarize_the_workforce
+		}
+		mutually_exclusive = {}
+		available = {
+			communism > 0.3
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = communism } }
+				communist_coup = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_government_reform
+		icon = diplomatic_treaty
+		
+		x = -1
+		y = 5
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_international_research_compact
+		}
+		mutually_exclusive = {}
+		available = {
+			democratic > 0.3
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_government = democratic }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = democratic } }
+				democratic_coup = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_strengthen_the_reactionary_elites
+		icon = political_pressure
+		
+		x = 1
+		y = 5
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_reinforce_traditional_values
+		}
+		mutually_exclusive = {}
+		available = {
+			neutrality > 0.3
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_government = neutrality }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = neutrality } }
+				authoritarian_coup = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_fascist_coup
+		icon = fascism
+		
+		x = 3
+		y = 5
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_rosenbergian_ideology
+		}
+		mutually_exclusive = {}
+		available = {
+			fascism > 0.3
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = fascism } }
+				fascist_coup = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_leftist_alignment
+		icon = communism3
+		
+		x = -2
+		y = 6
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_strengthen_the_unions
+		}
+		mutually_exclusive = {
+			focus = generic_centrist_alignment
+		}
+		mutually_exclusive = {
+			focus = generic_right_wing_alignment
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = alignment_leftist
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_centrist_alignment
+		icon = industry_democratic
+		
+		x = 0
+		y = 6
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_secure_civil_rights
+		}
+		mutually_exclusive = {
+			focus = generic_leftist_alignment
+		}
+		mutually_exclusive = {
+			focus = generic_right_wing_alignment
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = alignment_centrist
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_right_wing_alignment
+		icon = fascism3
+		
+		x = 2
+		y = 6
+		relative_position_id = generic_political_effort
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_national_militarism
+		}
+		mutually_exclusive = {
+			focus = generic_leftist_alignment
+		}
+		mutually_exclusive = {
+			focus = generic_centrist_alignment
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = alignment_right_wing
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Economic Tree
+	
+	focus = {
+		id = generic_infrastructure_expansion_1
+		icon = infrastructure
+		
+		x = 9
+		y = 0
+
+		cost = 5
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_infrastructure_1 = yes
+			create_random_infrastructure_1 = yes
+			create_random_infrastructure_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				threat < 0.2 has_war = no
+				add = 10
+			}
+			modifier = {
+				threat < 0.1 has_war = no
+				add = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_construction_program
+		icon = construction
+		
+		x = -2
+		y = 0
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 5
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_real_estate_developer
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				threat < 0.2 has_war = no
+				add = 5
+			}
+			modifier = {
+				threat < 0.1 has_war = no
+				add = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_infrastructure_expansion_2
+		icon = infrastructure
+		
+		x = -1
+		y = 1
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 5
+		
+		prerequisite = {
+			focus = generic_infrastructure_expansion_1
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_infrastructure_2 = yes
+			create_random_infrastructure_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_industrial_effort_1
+		icon = industry
+		
+		x = 1
+		y = 1
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_infrastructure_expansion_1
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_CIV_1 = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_captain_of_industry
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				threat < 0.2 has_war = no
+				add = 5
+			}
+			modifier = {
+				threat < 0.1 has_war = no
+				add = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_financial_reform
+		icon = self_management
+		
+		x = -2
+		y = 2
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_construction_program
+		}
+		prerequisite = {
+			focus = generic_political_effort
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_financial_expert
+			
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_industrial_effort_2
+		icon = industry2
+		
+		x = 0
+		y = 2
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_infrastructure_expansion_2
+		}
+		prerequisite = {
+			focus = generic_industrial_effort_1
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				threat < 0.2 has_war = no
+				add = 5
+			}
+			modifier = {
+				threat < 0.1 has_war = no
+				add = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_infrastructure_expansion_3
+		icon = infrastructure
+		
+		x = -1
+		y = 3
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 5
+		
+		prerequisite = {
+			focus = generic_infrastructure_expansion_2
+		}
+		prerequisite = {
+			focus = generic_financial_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_infrastructure_3 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_military_industrial_effort_1
+		icon = industry_military
+		
+		x = 1
+		y = 3
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_industrial_effort_2
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_war_industrialist
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { threat > 0.1 add = 10 }
+			modifier = { threat > 0.2 add = 10 }
+			modifier = { threat > 0.3 add = 10 }
+			modifier = { threat > 0.4 add = 10 }
+		}
+	}
+	
+	focus = {
+		id = generic_industrial_effort_3
+		icon = industry3
+		
+		x = 0
+		y = 4
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_infrastructure_expansion_3
+		}
+		prerequisite = {
+			focus = generic_industrial_effort_2
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_CIV_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_infrastructure_expansion_4
+		icon = infrastructure
+		
+		x = -1
+		y = 5
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 5
+		
+		prerequisite = {
+			focus = generic_infrastructure_expansion_3
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_infrastructure_4 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_military_industrial_effort_2
+		icon = industry_military
+		
+		x = 1
+		y = 5
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_military_industrial_effort_1
+		}
+		prerequisite = {
+			focus = generic_industrial_effort_3
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_armaments_organizer
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { threat > 0.1 add = 10 }
+			modifier = { threat > 0.2 add = 10 }
+			modifier = { threat > 0.3 add = 10 }
+			modifier = { threat > 0.4 add = 10 }
+		}
+	}
+	
+	focus = {
+		id = generic_military_industrial_effort_3
+		icon = industry_military
+		
+		x = 0
+		y = 6
+		relative_position_id = generic_infrastructure_expansion_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_infrastructure_expansion_4
+		}
+		prerequisite = {
+			focus = generic_military_industrial_effort_2
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_2 = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_quartermaster_general
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { threat > 0.1 add = 10 }
+			modifier = { threat > 0.2 add = 10 }
+			modifier = { threat > 0.3 add = 10 }
+			modifier = { threat > 0.4 add = 10 }
+		}
+	}
+	
+	#Education Tree
+	
+	focus = {
+		id = generic_education_reform
+		icon = tech_sharing
+		
+		x = 14
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			scientific_advances_upgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { has_war = no add = 10 }
+		}
+	}
+	
+	focus = {
+		id = generic_expand_the_secret_service
+		icon = intelligence_exchange
+		
+		x = -2
+		y = 0
+		relative_position_id = generic_education_reform
+
+		cost = 5
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.02
+			add_war_support = 0.02
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_prince_of_terror
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { has_war = no add = 10 }
+		}
+	}
+	
+	focus = {
+		id = generic_invest_in_the_university_system
+		icon = scientific_exchange
+		
+		x = -1
+		y = 1
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_secret_service
+		}
+		prerequisite = {
+			focus = generic_education_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			scientific_advances_upgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_government_expansion
+		icon = treaty
+		
+		x = -3
+		y = 2
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_industrial_effort_1
+		}
+		prerequisite = {
+			focus = generic_invest_in_the_university_system
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_popular_figurehead
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_silent_workhorse
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { threat > 0.05 add = 10 }
+			modifier = { threat > 0.10 add = 10 }
+			modifier = { threat > 0.15 add = 10 }
+		}
+	}
+	
+	focus = {
+		id = generic_synthetic_oil_projects
+		icon = oil_production
+		
+		x = -1
+		y = 2
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_invest_in_the_university_system
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				technology = synth_oil_experiments
+				technology = oil_processing
+				technology = improved_oil_processing
+				technology = advanced_oil_processing
+				technology = modern_oil_processing
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_ballistics_research
+		icon = rocketry
+		
+		x = 0
+		y = 3
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_synthetic_oil_projects
+		}
+		prerequisite = {
+			focus = generic_establish_the_air_force_research_division
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_synthetic_rubber_projects
+		icon = rubber_production
+		
+		x = -2
+		y = 3
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_synthetic_oil_projects
+		}
+		mutually_exclusive = {}
+		available = {
+			has_tech = synth_oil_experiments
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				technology = rubber_processing
+				technology = improved_rubber_processing
+				technology = advanced_rubber_processing
+				technology = modern_rubber_processing
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_atomic_research
+		icon = nuclear_bomb
+		
+		x = 0
+		y = 4
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_ballistics_research
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_oil_refineries
+		icon = oil_production
+		
+		x = -3
+		y = 4
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_synthetic_oil_projects
+		}
+		prerequisite = {
+			focus = generic_military_industrial_effort_1
+		}
+		mutually_exclusive = {}
+		available = {
+			has_tech = synth_oil_experiments
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_refinery_1 = yes
+			create_random_refinery_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_extra_research_slot
+		icon = research
+		
+		x = -2
+		y = 5
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_synthetic_rubber_projects
+		}
+		mutually_exclusive = {}
+		available = {
+			num_of_civilian_factories > 50
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_extra_research_slot_2
+		icon = research
+		
+		x = -3
+		y = 6
+		relative_position_id = generic_education_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_military_industrial_effort_2
+		}
+		prerequisite = {
+			focus = generic_extra_research_slot
+		}
+		mutually_exclusive = {}
+		available = {
+			num_of_civilian_factories > 100
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Air Force Tree
+	
+	focus = {
+		id = generic_expand_the_air_force
+		icon = air_force
+		
+		x = 16
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_air_base_1 = yes
+			air_experience = 25
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_establish_the_air_force_research_division
+		icon = air_defense
+		
+		x = -1
+		y = 1
+		relative_position_id = generic_expand_the_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_air_force
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.2
+				category = air_equipment
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_air_bases_1
+		icon = air_force
+		
+		x = 1
+		y = 1
+		relative_position_id = generic_expand_the_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_air_force
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_fighter_production
+		icon = fighters
+		
+		x = 3
+		y = 1
+		relative_position_id = generic_expand_the_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_air_force
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = light_fighter
+				category = cat_heavy_fighter
+				category = cas_bomber
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_air_force_doctrine
+		icon = air_doctrine
+		
+		x = 0
+		y = 2
+		relative_position_id = generic_expand_the_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_establish_the_air_force_research_division
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				category = air_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_bomber_production
+		icon = bombers
+		
+		x = 2
+		y = 2
+		relative_position_id = generic_expand_the_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_fighter_production
+		}
+		prerequisite = {
+			focus = generic_air_bases_1
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_naval_bomber_production
+		icon = naval_bombers
+		
+		x = 3
+		y = 3
+		relative_position_id = generic_expand_the_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_bomber_production
+		}
+		prerequisite = {
+			focus = generic_carrier_focus
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = naval_bomber
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_air_bases_2
+		icon = air_force
+		
+		x = 1
+		y = 3
+		relative_position_id = generic_expand_the_air_force
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_bomber_production
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Navy Tree
+	
+	focus = {
+		id = generic_expand_the_navy
+		icon = navy
+		
+		x = 23
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 25
+			create_random_factory_NAV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_naval_dockyards_1
+		icon = naval_dockyard
+		
+		x = -2
+		y = 1
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_navy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_NAV_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_naval_bases
+		icon = navy2
+		
+		x = 0
+		y = 1
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_navy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 25
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_naval_doctrine_1
+		icon = naval_doctrine
+		
+		x = 2
+		y = 1
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_navy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = naval_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_carrier_focus
+		icon = carriers
+		
+		x = -3
+		y = 2
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_naval_dockyards_1
+		}
+		prerequisite = {
+			focus = generic_fighter_production
+		}
+		mutually_exclusive = {
+			focus = generic_battleship_focus
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = cv_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_battleship_focus
+		icon = battleships
+		
+		x = -1
+		y = 2
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_naval_dockyards_1
+		}
+		mutually_exclusive = {
+			focus = generic_carrier_focus
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = bb_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_expand_the_submarine_force
+		icon = submarines
+		
+		x = 1
+		y = 2
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_naval_doctrine_1
+		}
+		mutually_exclusive = {
+			focus = generic_destroyer_projects
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = ss_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_destroyer_projects
+		icon = anti_submarine
+		
+		x = 3
+		y = 2
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_naval_doctrine_1
+		}
+		mutually_exclusive = {
+			focus = generic_expand_the_submarine_force
+		}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = dd_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_naval_dockyards_2
+		icon = naval_dockyard
+		
+		x = -2
+		y = 3
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_carrier_focus
+			focus = generic_battleship_focus
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_naval_doctrine_2
+		icon = naval_doctrine
+		
+		x = 2
+		y = 3
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_submarine_force
+			focus = generic_destroyer_projects
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = naval_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_naval_dockyards_3
+		icon = naval_dockyard
+		
+		x = -2
+		y = 4
+		relative_position_id = generic_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_naval_dockyards_2
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Army Tree
+	
+	focus = {
+		id = generic_expand_the_army
+		icon = infantry_axis
+		
+		x = 29
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_fortification_engineer
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_army_doctrine_1
+		icon = army_doctrine
+		
+		x = -1
+		y = 1
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_army
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = land_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_rifle_production
+		icon = small_arms2
+		
+		x = 2
+		y = 1
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_expand_the_army
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				category = infantry_weapons
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_form_the_special_forces
+		icon = special_forces
+		
+		x = -1
+		y = 2
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_army_doctrine_1
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				category = mountaineers_tech
+				category = para_tech
+				category = marine_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_artillery_production
+		icon = artillery
+		
+		x = 1
+		y = 2
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_rifle_production
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_armored_production
+		icon = tanks
+		
+		x = 3
+		y = 2
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_rifle_production
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				category = armor
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_the_airborne_corps
+		icon = paratroopers
+		
+		x = -2
+		y = 3
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_form_the_special_forces
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				category = para_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_army_doctrine_2
+		icon = army_doctrine
+		
+		x = 0
+		y = 3
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_form_the_special_forces
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.4
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = generic_the_marine_corps
+		icon = amphibious_assault
+		
+		x = -3
+		y = 4
+		relative_position_id = generic_expand_the_army
+
+		cost = 10
+		
+		prerequisite = {
+			focus = generic_naval_doctrine_2
+		}
+		prerequisite = {
+			focus = generic_the_airborne_corps
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				category = marine_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}

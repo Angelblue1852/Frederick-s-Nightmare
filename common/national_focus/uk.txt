@@ -1,0 +1,1846 @@
+focus_tree = {
+	
+	id = britain_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = ENG
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 720 y = 550 }
+	
+	default = no
+	reset_on_civilwar = no
+	
+	#Midlands Investments
+	focus = {
+		id = ENG_midlands_investments
+		icon = consumer_goods
+		
+		x = 1
+		y = 0
+
+		cost = 8
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 128
+			has_full_control_of_state = 129
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			128 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_resource = { type = steel amount = 20 }
+			}
+			129 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_resource = { type = steel amount = 10 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_national_oil_projects
+		icon = construction3
+		
+		x = 2
+		y = 0
+		relative_position_id = ENG_midlands_investments
+
+		cost = 4
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_oil_baron
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_northern_economic_expansion
+		icon = industry_civilian
+		
+		x = -1
+		y = 1
+		relative_position_id = ENG_midlands_investments
+
+		cost = 12
+		
+		prerequisite = {
+			focus = ENG_midlands_investments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+			if = {
+				limit = { NOT = { has_government = fascism } }
+				add_popularity = { ideology = fascism popularity = -0.02 }
+			}
+			if = {
+				limit = { NOT = { has_government = communism } }
+				add_popularity = { ideology = communism popularity = -0.02 }
+			}
+			if = {
+				limit = { NOT = { has_government = democratic } }
+				add_popularity = { ideology = democratic popularity = -0.02 }
+			}
+			random_owned_state = {
+				limit = { region = 1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { region = 1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { region = 1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_north_sea_oil_production
+		icon = oil_production
+		
+		x = 1
+		y = 1
+		relative_position_id = ENG_midlands_investments
+
+		cost = 7
+		
+		prerequisite = {
+			focus = ENG_midlands_investments
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_full_control_of_state = 120
+				has_full_control_of_state = 121
+				has_full_control_of_state = 131
+				has_full_control_of_state = 136
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 120 }
+				120 = { add_resource = { type = oil amount = 12 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 121 }
+				121 = { add_resource = { type = oil amount = 12 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 131 }
+				131 = { add_resource = { type = oil amount = 12 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 136 }
+				136 = { add_resource = { type = oil amount = 12 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_reform_the_colonial_ministry
+		icon = demand_territory
+		
+		x = 4
+		y = 1
+		relative_position_id = ENG_midlands_investments
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_southern_economic_expansion
+		icon = industry_civilian
+		
+		x = -1
+		y = 2
+		relative_position_id = ENG_midlands_investments
+
+		cost = 12
+		
+		prerequisite = {
+			focus = ENG_northern_economic_expansion
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_state = {
+				limit = { 
+					OR = { region = 2 region = 3 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					OR = { region = 2 region = 3 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					OR = { region = 2 region = 3 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_irish_sea_oil_production
+		icon = oil_production
+		
+		x = 1
+		y = 2
+		relative_position_id = ENG_midlands_investments
+
+		cost = 7
+		
+		prerequisite = {
+			focus = ENG_north_sea_oil_production
+		}
+		prerequisite = {
+			focus = ENG_national_oil_projects
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_full_control_of_state = 131
+				has_full_control_of_state = 132
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = { 
+				limit = { has_full_control_of_state = 131 } 
+				131 = { 
+					add_resource = { type = oil amount = 11 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = { 
+				limit = { has_full_control_of_state = 132 } 
+				132 = { 
+					add_resource = { type = oil amount = 7 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_fortify_yemen
+		icon = military_fort
+		
+		x = 3
+		y = 2
+		relative_position_id = ENG_midlands_investments
+
+		cost = 6
+		
+		prerequisite = {
+			focus = ENG_reform_the_colonial_ministry
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 293
+			has_full_control_of_state = 659
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			293 = {
+				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 10840 }
+			}
+			659 = {
+				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 5074 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_pass_the_singapore_decree
+		icon = treaty
+		
+		x = 5
+		y = 2
+		relative_position_id = ENG_midlands_investments
+
+		cost = 7
+		
+		prerequisite = {
+			focus = ENG_reform_the_colonial_ministry
+		}
+		mutually_exclusive = {}
+		available = {
+			336 = { owner = { is_subject_of = ROOT } }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			news_event = britain_news.1
+			336 = {
+				owner = { add_opinion_modifier = { target = ROOT modifier = singapore_decree } }
+			}	
+			transfer_state = 336
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_persian_gulf_oil_production
+		icon = oil_production
+		
+		x = 2
+		y = 3
+		relative_position_id = ENG_midlands_investments
+
+		cost = 11
+		
+		prerequisite = {
+			focus = ENG_irish_sea_oil_production
+		}
+		prerequisite = {
+			focus = ENG_fortify_yemen
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 658
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			658 = { 
+				add_resource = { type = oil amount = 14 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_fortify_oman
+		icon = military_fort
+		
+		x = 4
+		y = 3
+		relative_position_id = ENG_midlands_investments
+
+		cost = 11
+		
+		prerequisite = {
+			focus = ENG_fortify_yemen
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 294
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			294 = {
+				add_building_construction = { type = naval_base level = 3 instant_build = yes province = 10760 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_construct_singapore_military_yard
+		icon = industry_military
+		
+		x = 6
+		y = 3
+		relative_position_id = ENG_midlands_investments
+
+		cost = 13
+		
+		prerequisite = {
+			focus = ENG_pass_the_singapore_decree
+		}
+		prerequisite = {
+			focus = ENG_construct_edinburgh_military_yard
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 336
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			336 = {
+				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 12299 }
+				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 10297 }
+				add_building_construction = { type = air_base level = 2 instant_build = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_arabian_desert_expedition
+		icon = oil_production
+		
+		x = 2
+		y = 4
+		relative_position_id = ENG_midlands_investments
+
+		cost = 14
+		
+		prerequisite = {
+			focus = ENG_persian_gulf_oil_production
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 678
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			678 = { 
+				add_manpower = 10000
+				add_resource = { type = oil amount = 7 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_fortify_the_trucial_states
+		icon = military_fort
+		
+		x = 4
+		y = 4
+		relative_position_id = ENG_midlands_investments
+
+		cost = 7
+		
+		prerequisite = {
+			focus = ENG_fortify_oman
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 658
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 10
+			658 = { 
+				add_building_construction = { type = naval_base level = 3 instant_build = yes province = 8051 }
+				add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = 8051 }
+				add_building_construction = { type = naval_base level = 4 instant_build = yes province = 7960 }
+				add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = 7960 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_challenge_the_saudis
+		icon = ultimatum
+		
+		will_lead_to_war_with = SAU
+		
+		x = 3
+		y = 5
+		relative_position_id = ENG_midlands_investments
+
+		cost = 7
+		
+		prerequisite = {
+			focus = ENG_arabian_desert_expedition
+		}
+		prerequisite = {
+			focus = ENG_fortify_the_trucial_states
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				NOT = { has_government = communism }
+				SAU = {
+					NOT = { has_government = communism }
+				}
+			}
+			is_neighbor_of = SAU
+		}
+		bypass = {}
+		select_effect = {
+			news_event = { id = britain_news.2 days = 16 }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = SAU
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_support_the_zionists
+		icon = improve_relations
+		
+		x = 2
+		y = 6
+		relative_position_id = ENG_midlands_investments
+
+		cost = 4
+		
+		prerequisite = {
+			focus = ENG_challenge_the_saudis
+		}
+		mutually_exclusive = {}
+		available = {
+			TUR = { 
+				NOT = { is_in_faction_with = ROOT }
+				exists = yes
+				has_full_control_of_state = 454
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			TUR = { add_opinion_modifier = { target = ENG modifier = sided_with_zionists } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_support_the_iraqi_nationalists
+		icon = improve_relations
+		
+		x = 4
+		y = 6
+		relative_position_id = ENG_midlands_investments
+
+		cost = 4
+		
+		prerequisite = {
+			focus = ENG_challenge_the_saudis
+		}
+		mutually_exclusive = {}
+		available = {
+			TUR = { 
+				NOT = { is_in_faction_with = ROOT }
+				exists = yes
+				OR = {
+					has_full_control_of_state = 291
+					has_full_control_of_state = 656
+					has_full_control_of_state = 675
+					has_full_control_of_state = 676
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			TUR = { add_opinion_modifier = { target = ENG modifier = sided_with_iraqi_nationalists } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_challenge_the_ottomans
+		icon = ultimatum2
+		
+		will_lead_to_war_with = TUR
+		
+		x = 3
+		y = 7
+		relative_position_id = ENG_midlands_investments
+
+		cost = 12
+		
+		prerequisite = {
+			focus = ENG_support_the_iraqi_nationalists
+		}
+		prerequisite = {
+			focus = ENG_support_the_zionists
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				NOT = { has_government = communism }
+				TUR = {
+					NOT = { has_government = communism }
+				}
+			}
+			has_full_control_of_state = 292
+		}
+		bypass = {}
+		select_effect = {
+			news_event = { id = britain_news.3 days = 16 }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#Palestine/Jordan
+			add_state_claim = 454
+			add_state_claim = 455
+			#Iraq
+			add_state_claim = 291
+			add_state_claim = 656
+			add_state_claim = 675
+			add_state_claim = 676
+			create_wargoal = {
+				target = TUR
+				type = take_state_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Pass the Home Defense Act
+	focus = {
+		id = ENG_pass_the_home_defense_act
+		icon = entente
+		
+		x = 9
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "British Home Defense Act"
+				threat = 2
+			}
+			if = {
+				limit = { OR = { has_idea = disarmed_nation has_idea = volunteer_only } }
+				add_ideas = limited_conscription
+			}
+			create_random_factory_MIL_1 = yes
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_construct_manchester_military_yard
+		icon = industry_military
+		
+		x = -1
+		y = 1
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 11
+		
+		prerequisite = {
+			focus = ENG_pass_the_home_defense_act
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 132
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			132 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_pass_the_technological_advancements_act
+		icon = research
+		
+		x = 2
+		y = 1
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 13
+		
+		prerequisite = {
+			focus = ENG_pass_the_home_defense_act
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_pass_the_currency_reform_act
+		icon = consumer_goods
+		
+		x = 4
+		y = 1
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_pass_the_home_defense_act
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.035
+			add_political_power = 25
+			unlock_decision_category_tooltip = economic_crisis_decisions
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	focus = {
+		id = ENG_construct_edinburgh_military_yard
+		icon = industry_military
+		
+		x = -1
+		y = 2
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 11
+		
+		prerequisite = {
+			focus = ENG_construct_manchester_military_yard
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 121
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			121 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = air_base level = 3 instant_build = yes }
+				add_building_construction = { type = anti_air_building level = 2 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_air_force_innovations
+		icon = air_force
+		
+		x = 1
+		y = 2
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 8
+		
+		prerequisite = {
+			focus = ENG_pass_the_technological_advancements_act
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+			create_random_air_base_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_radar_innovations
+		icon = radar
+		
+		x = 3
+		y = 2
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 8
+		
+		prerequisite = {
+			focus = ENG_pass_the_technological_advancements_act
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronic_bonus
+				bonus = 0.5
+				uses = 3
+				category = radar_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_pass_the_great_britain_air_defense_act
+		icon = air_defense
+		
+		x = 0
+		y = 3
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_air_force_innovations
+		}
+		prerequisite = {
+			focus = ENG_construct_edinburgh_military_yard
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_channel_coast_radar_system
+		icon = cryptologic_bomb
+		
+		x = 2
+		y = 3
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 9
+		
+		prerequisite = {
+			focus = ENG_radar_innovations
+		}
+		prerequisite = {
+			focus = ENG_air_force_innovations
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 123 }
+				123 = { add_building_construction = { type = radar_station level = 3 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 127 }
+				127 = { add_building_construction = { type = radar_station level = 3 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 126 }
+				126 = { add_building_construction = { type = radar_station level = 3 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 125 }
+				125 = { add_building_construction = { type = radar_station level = 3 instant_build = yes } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_operation_south_wind
+		icon = demand_territory
+		
+		x = 6
+		y = 4
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 6
+		
+		prerequisite = {
+			focus = ENG_channel_coast_radar_system
+		}
+		prerequisite = {
+			focus = ENG_the_southern_strategy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			navy_experience = 25
+			air_experience = 25
+			add_named_threat = {
+				name = "Preparations to invade France"
+				threat = 1
+			}
+			if = {
+				limit = { has_full_control_of_state = 127 }
+				127 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = 3501 } }
+				123 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = 540 } }
+				125 = { add_building_construction = { type = naval_base level = 4 instant_build = yes province = 271 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_settle_the_score
+		icon = franco_british_conflict
+		
+		will_lead_to_war_with = FRA
+		
+		x = 6
+		y = 5
+		relative_position_id = ENG_pass_the_home_defense_act
+
+		cost = 12
+		
+		prerequisite = {
+			focus = ENG_operation_south_wind
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				NOT = { has_government = communism }
+				FRA = {
+					NOT = { has_government = communism }
+				}
+			}
+			FRA = {
+				exists = yes
+				NOT = { is_in_faction_with = ENG }
+				OR = {
+					has_full_control_of_state = 14
+					has_full_control_of_state = 15
+					has_full_control_of_state = 29
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = { 
+				limit = { FRA = { has_full_control_of_state = 14 } }
+				add_state_claim = 14
+			}
+			if = { 
+				limit = { FRA = { has_full_control_of_state = 15 } }
+				add_state_claim = 15
+			}
+			if = { 
+				limit = { FRA = { has_full_control_of_state = 29 } }
+				add_state_claim = 29
+			}
+			create_wargoal = {
+				target = FRA
+				type = take_state_focus
+				generator = { 14 15 29 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Expand Liverpool Naval Yard
+	focus = {
+		id = ENG_expand_liverpool_naval_yard
+		icon = naval_dockyard
+		
+		x = 18
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 132
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 20
+			132 = {
+				add_building_construction = { type = dockyard level = 3 instant_build = yes }
+				add_building_construction = { type = naval_base level = 4 instant_build = yes province = 6384 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_battleship_strategy
+		icon = battleships
+		
+		x = -2
+		y = 1
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 9
+		
+		prerequisite = {
+			focus = ENG_expand_liverpool_naval_yard
+		}
+		mutually_exclusive = {
+			focus = ENG_submarine_strategy
+		}
+		mutually_exclusive = {
+			focus = ENG_carrier_strategy
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_submarine_strategy
+		icon = submarines
+		
+		x = 0
+		y = 1
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 9
+		
+		prerequisite = {
+			focus = ENG_expand_liverpool_naval_yard
+		}
+		mutually_exclusive = {
+			focus = ENG_battleship_strategy
+		}
+		mutually_exclusive = {
+			focus = ENG_carrier_strategy
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = trade_interdiction_bonus
+				bonus = 1.0
+				uses = 2
+				category = trade_interdiction_tree
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_carrier_strategy
+		icon = carriers
+		
+		x = 2
+		y = 1
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 9
+		
+		prerequisite = {
+			focus = ENG_expand_liverpool_naval_yard
+		}
+		mutually_exclusive = {
+			focus = ENG_battleship_strategy
+		}
+		mutually_exclusive = {
+			focus = ENG_submarine_strategy
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cat_base_strike
+				bonus = 0.5
+				uses = 2
+				category = base_strike_main
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_battleship_innovations
+		icon = battleships
+		
+		x = -2
+		y = 2
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 6
+		
+		prerequisite = {
+			focus = ENG_battleship_strategy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_submarine_innovations
+		icon = submarines
+		
+		x = 0
+		y = 2
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 6
+		
+		prerequisite = {
+			focus = ENG_submarine_strategy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_carrier_innovations
+		icon = carriers
+		
+		x = 2
+		y = 2
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 6
+		
+		prerequisite = {
+			focus = ENG_carrier_strategy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_the_southern_strategy
+		icon = air_production
+		
+		x = 0
+		y = 3
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_battleship_innovations
+			focus = ENG_carrier_innovations
+			focus = ENG_submarine_innovations
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 123
+			has_full_control_of_state = 338
+			has_full_control_of_state = 127
+			has_full_control_of_state = 126
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 20
+			127 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = dockyard level = 2 instant_build = yes }
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			126 = {
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			123 = {
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			338 = {
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_cruiser_innovations
+		icon = cruisers
+		
+		x = -1
+		y = 4
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_the_southern_strategy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				uses = 2
+				category = bc_tech
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_destroyer_innovations
+		icon = anti_submarine
+		
+		x = 1
+		y = 4
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_the_southern_strategy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_additional_naval_doctrines
+		icon = naval_doctrine
+		
+		x = 0
+		y = 5
+		relative_position_id = ENG_expand_liverpool_naval_yard
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_cruiser_innovations
+			focus = ENG_destroyer_innovations
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 20
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reform Parliament
+	focus = {
+		id = ENG_reform_parliament
+		icon = demand_territory2
+		
+		x = 1
+		y = 3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_southern_economic_expansion
+		}
+		prerequisite = {
+			focus = ENG_irish_sea_oil_production
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_end_the_macdonald_administration
+		icon = demand_territory
+		
+		x = 0
+		y = 1
+		relative_position_id = ENG_reform_parliament
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_reform_parliament
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			retire_country_leader = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##conservatives
+	focus = {
+		id = ENG_hand_power_to_the_conservatives
+		icon = democracy
+		
+		x = -1
+		y = 2
+		relative_position_id = ENG_reform_parliament
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_end_the_macdonald_administration
+		}
+		mutually_exclusive = {
+			focus = ENG_ally_with_the_radicals
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = { 
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Neville Chamberlain"
+					ideology = conservatism
+					picture = "Neville_Chamberlain.dds"
+				}
+			}
+			set_party_name = {
+				ideology = democratic
+				name = "BCU"
+				long_name = "British Conservative Union"
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	##radicals
+	focus = {
+		id = ENG_ally_with_the_radicals
+		icon = communism
+		
+		x = 1
+		y = 2
+		relative_position_id = ENG_reform_parliament
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_end_the_macdonald_administration
+		}
+		mutually_exclusive = {
+			focus = ENG_hand_power_to_the_conservatives
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			add_popularity = { ideology = communism popularity = 0.15 }
+			set_party_name = {
+				ideology = communism
+				name = "URLF"
+				long_name = "United Republican Labour Force"
+			}
+			set_party_name = {
+				ideology = democratic
+				name = "ACC"
+				long_name = "Anti-Communist Coalition"
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ENG_the_anglican_tax
+		icon = communism3
+		
+		x = 0
+		y = 2
+		relative_position_id = ENG_ally_with_the_radicals
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ENG_ally_with_the_radicals
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = atheism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+}

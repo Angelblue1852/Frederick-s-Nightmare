@@ -1,0 +1,1518 @@
+focus_tree = {
+	
+	id = papal_state_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = PAP
+			add = 20
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	
+	focus = {
+		id = PAP_foreign_investor_competition
+		icon = industry_democratic
+		
+		x = 6
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { AUS = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
+				AUS = { country_event = { id = papal_state.5 hours = 6 } }
+			}
+			if = {
+				limit = { ENG = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
+				ENG = { country_event = { id = papal_state.5 hours = 6 } }
+			}
+			if = {
+				limit = { FRA = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
+				FRA = { country_event = { id = papal_state.5 hours = 6 } }
+			}
+			if = {
+				limit = { PRS = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
+				PRS = { country_event = { id = papal_state.5 hours = 6 } }
+			}
+			if = {
+				limit = { SOV = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
+				SOV = { country_event = { id = papal_state.5 hours = 6 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_invitation_to_foreign_scientists
+		icon = research2
+		
+		x = -1
+		y = 1
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_foreign_investor_competition
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = scientific_advances2
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_concessions_to_the_middle_class
+		icon = industry_civilian
+		
+		x = 1
+		y = 1
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_foreign_investor_competition
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = middle_class_businesses
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_foreign_militarists
+		icon = industry_military
+		
+		x = 1
+		y = 2
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_concessions_to_the_middle_class
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				is_major = yes
+				is_guaranteed_by = FRA
+				is_guaranteed_by = AUS
+				is_guaranteed_by = PRS
+				is_guaranteed_by = SPR
+				is_guaranteed_by = TUR
+				is_guaranteed_by = ENG
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = military_industrialists
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_support_the_export_economy
+		icon = naval_dockyard
+		
+		x = 0
+		y = 3
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_foreign_militarists
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 2
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			2 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard level = 1 instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_industrial_investments
+		icon = industry
+		
+		x = 2
+		y = 3
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_foreign_militarists
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+			157 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_secure_aristocratic_support
+		icon = aristocratic_funding
+		
+		x = 1
+		y = 4
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_industrial_investments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = aristocratic_elites
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_invite_french_companies
+		icon = align_with_france
+		
+		x = 2
+		y = 5
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_industrial_investments
+		}
+		prerequisite = {
+			focus = PAP_join_the_entente
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = FRA
+				has_similar_ideology = yes
+				is_subject = no
+				is_in_faction_with = ROOT
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_invite_american_companies
+		icon = align_with_the_united_states
+		
+		x = 2
+		y = 6
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_invite_french_companies
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = USA
+				has_similar_ideology = yes
+				is_subject = no
+				is_in_faction_with = ROOT
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_attack_naples
+		icon = war4
+		
+		x = 4
+		y = 5
+		relative_position_id = PAP_foreign_investor_competition
+
+		cost = 10
+		
+		will_lead_to_war_with = NAP
+		
+		prerequisite = {
+			focus = PAP_join_the_entente
+			focus = PAP_join_the_danube_pact
+		}
+		mutually_exclusive = {}
+		available = {
+			country_exists = NAP
+			is_neighbor_of = NAP
+			NOT = { is_in_faction_with = NAP }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = NAP
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = PAP_the_new_pope
+		icon = catholicism
+		
+		x = 10
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_country_leader = { name = "Pius XI" } }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_pius_xii
+		icon = align_with_france
+		
+		x = -1
+		y = 1
+		relative_position_id = PAP_the_new_pope
+
+		cost = 10
+		
+		prerequisite = { 
+			focus = PAP_the_new_pope
+		}
+		mutually_exclusive = {
+			focus = PAP_john_xxiii
+		}
+		available = {
+			OR = {
+				is_guaranteed_by = FRA
+				AND = {
+					NOT = { is_guaranteed_by = FRA }
+					NOT = { is_guaranteed_by = AUS }
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_country_leader = {
+				name = "Pius XII"
+				picture = "Pius_XII.dds"
+				ideology = despotism
+			}
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_john_xxiii
+		icon = align_with_germany2
+		
+		x = 1
+		y = 1
+		relative_position_id = PAP_the_new_pope
+
+		cost = 10
+		
+		prerequisite = { 
+			focus = PAP_the_new_pope
+		}
+		mutually_exclusive = {
+			focus = PAP_pius_xii
+		}
+		available = {
+			is_guaranteed_by = AUS
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_country_leader = {
+				name = "John XXIII"
+				picture = "John_XXIII.dds"
+				ideology = despotism
+			}
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_trade_reform
+		icon = trade
+		
+		x = 0
+		y = 2
+		relative_position_id = PAP_the_new_pope
+
+		cost = 10
+		
+		prerequisite = { 
+			focus = PAP_pius_xii
+			focus = PAP_john_xxiii
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = limited_exports
+			add_stability = 0.025
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_renewed_military_reform
+		icon = infantry_allies
+		
+		x = 0
+		y = 3
+		relative_position_id = PAP_the_new_pope
+
+		cost = 10
+		
+		prerequisite = { 
+			focus = PAP_trade_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = volunteer_only
+			add_war_support = 0.025
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_join_the_entente
+		icon = major_alliance
+		
+		x = -1
+		y = 4
+		relative_position_id = PAP_the_new_pope
+
+		cost = 10
+		
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+		prerequisite = { 
+			focus = PAP_pius_xii
+		}
+		prerequisite = { 
+			focus = PAP_renewed_military_reform
+		}
+		mutually_exclusive = {
+			focus = PAP_join_the_danube_pact
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = { country_event = france.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_join_the_danube_pact
+		icon = major_alliance
+		
+		x = 1
+		y = 4
+		relative_position_id = PAP_the_new_pope
+
+		cost = 10
+		
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+		prerequisite = { 
+			focus = PAP_john_xxiii
+		}
+		prerequisite = { 
+			focus = PAP_renewed_military_reform
+		}
+		mutually_exclusive = {
+			focus = PAP_join_the_entente
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			AUS = { country_event = austria.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = PAP_resource_autarky_projects
+		icon = steel_production
+		
+		x = 3
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			2 = {
+				add_resource = { type = steel amount = 5 }
+				add_resource = { type = aluminium amount = 2 }
+			}
+			157 = {
+				add_resource = { type = steel amount = 8 }
+				add_resource = { type = tungsten amount = 3 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_invite_westphalian_steel_producers
+		icon = steel_production2
+		
+		x = -2
+		y = 1
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_resource_autarky_projects
+		}
+		mutually_exclusive = {}
+		available = {
+			has_idea = catholic_clergy
+			WES = { has_idea = catholic_clergy }
+			NOT = { has_war_with = WES }
+			country_exists = WES
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			WES = { country_event = { id = papal_state.6 hours = 5 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_request_austrian_production_expertise
+		icon = align_with_austria
+		
+		x = -3
+		y = 2
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_invite_westphalian_steel_producers
+		}
+		mutually_exclusive = {}
+		available = {
+			has_idea = catholic_clergy
+			AUS = { has_idea = catholic_clergy }
+			NOT = { has_war_with = AUS }
+			country_exists = AUS
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			AUS = { country_event = { id = papal_state.7 hours = 5 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_pilgrim_compact_with_the_sultan
+		icon = align_with_the_ottoman_empire
+		
+		x = -3
+		y = 3
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_request_austrian_production_expertise
+		}
+		mutually_exclusive = {}
+		available = {
+			has_idea = catholic_clergy
+			TUR = { has_idea = sunni_clergy }
+			NOT = { has_war_with = TUR }
+			country_exists = TUR
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			TUR = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = diplomatic_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_mountain_railroads
+		icon = infrastructure
+		
+		x = 0
+		y = 1
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_resource_autarky_projects
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			2 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+			157 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_expand_the_mining_sector
+		icon = construction2
+		
+		x = -1
+		y = 2
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_invite_westphalian_steel_producers
+		}
+		prerequisite = {
+			focus = PAP_mountain_railroads
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			2 = { add_resource = { type = aluminium amount = 10 } }
+			157 = { add_resource = { type = tungsten amount = 10 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_petroleum_innovations
+		icon = oil_production
+		
+		x = -1
+		y = 3
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_expand_the_mining_sector
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 157
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			157 = { add_resource = { type = oil amount = 5 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_oceangoing_trade_policy
+		icon = embargo
+		
+		x = 1
+		y = 3
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_additional_seaports
+		}
+		mutually_exclusive = {}
+		available = { has_completed_focus = PAP_trade_reform }
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = international_trade_specializations2
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_invite_polish_guest_workers
+		icon = align_with_poland
+		
+		x = -2
+		y = 4
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_request_austrian_production_expertise
+		}
+		prerequisite = {
+			focus = PAP_expand_the_mining_sector
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_rare_mountain_metals
+		icon = production
+		
+		x = -1
+		y = 5
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_invite_polish_guest_workers
+		}
+		prerequisite = {
+			focus = PAP_petroleum_innovations
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			2 = { add_resource = { type = chromium amount = 3 } }
+			157 = { add_resource = { type = tungsten amount = 4 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_additional_seaports
+		icon = naval_dockyard
+		
+		x = 1
+		y = 2
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_mountain_railroads
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_international_connections
+		icon = research
+		
+		x = 2
+		y = 4
+		relative_position_id = PAP_resource_autarky_projects
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_additional_seaports
+		}
+		prerequisite = {
+			focus = PAP_invitation_to_foreign_scientists
+		}
+		prerequisite = {
+			focus = PAP_support_the_export_economy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_weapons_of_desecration
+		icon = nuclear_bomb
+		
+		x = -1
+		y = 1
+		relative_position_id = PAP_international_connections
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_international_connections
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = nuclear
+				uses = 2
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_divine_spearhead
+		icon = tanks4
+		
+		x = 1
+		y = 1
+		relative_position_id = PAP_international_connections
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_international_connections
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				uses = 1
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_continued_scientific_excellence
+		icon = research
+		
+		x = 0
+		y = 2
+		relative_position_id = PAP_international_connections
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_weapons_of_desecration
+		}
+		prerequisite = {
+			focus = PAP_divine_spearhead
+		}
+		mutually_exclusive = {}
+		available = {
+			num_of_factories > 40
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = PAP_defense_of_the_fathers_land
+		icon = defense
+		
+		x = 14
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			add_command_power = 25
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_recruitment_of_the_faithful
+		icon = recruitment
+		
+		x = -1
+		y = 1
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_defense_of_the_fathers_land
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = conscription_bonus
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_artillery_improvements
+		icon = artillery
+		
+		x = 1
+		y = 1
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_defense_of_the_fathers_land
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = artillery
+				bonus = 0.5
+				uses = 1
+			}	
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_request_foreign_leadership_assistance
+		icon = military_mission
+		
+		x = -2
+		y = 2
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_recruitment_of_the_faithful
+		}
+		mutually_exclusive = {}
+		available = {
+			NOT = { has_idea = disarmed_nation }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+				add_defense = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_doctrine_review
+		icon = army_doctrine
+		
+		x = 0
+		y = 2
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_recruitment_of_the_faithful
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = land_doctrine
+				bonus = 0.5
+				uses = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_establish_the_holy_military_academy
+		icon = military_academy
+		
+		x = -1
+		y = 3
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_request_foreign_leadership_assistance
+		}
+		prerequisite = {
+			focus = PAP_doctrine_review
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_attack = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_tank_improvements
+		icon = tanks3
+		
+		x = 1
+		y = 3
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_artillery_improvements
+		}
+		prerequisite = {
+			focus = PAP_doctrine_review
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				bonus = 0.5
+				uses = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_glorify_the_military
+		icon = propaganda
+		
+		x = 0
+		y = 4
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_establish_the_holy_military_academy
+		}
+		prerequisite = {
+			focus = PAP_tank_improvements
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_anti_communist_treaty_with_the_habsburgs
+		icon = treaty
+		
+		x = -2
+		y = 5
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		will_lead_to_war_with = ITA
+		
+		prerequisite = {
+			focus = PAP_join_the_danube_pact
+		}
+		prerequisite = {
+			focus = PAP_request_foreign_leadership_assistance
+		}
+		mutually_exclusive = {}
+		available = {
+			is_neighbor_of = ITA
+			NOT = { has_government = communism }
+			ITA = { has_government = communism }
+			AUS = {
+				is_neighbor_of = ITA
+				NOT = { has_government = communism }
+			}
+			AUS = {
+				NOT = { is_in_faction_with = ITA }
+			}
+			NOT = { is_in_faction_with = ITA }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = ITA
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = PAP_declare_a_holy_war
+		icon = border_war
+		
+		x = 0
+		y = 5
+		relative_position_id = PAP_defense_of_the_fathers_land
+
+		cost = 10
+		
+		prerequisite = {
+			focus = PAP_glorify_the_military
+		}
+		mutually_exclusive = {}
+		available = { has_government = neutrality has_idea = catholic_clergy }
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = deus_vult
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+}

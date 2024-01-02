@@ -1,0 +1,1987 @@
+focus_tree = {
+	
+	id = sweden_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = SWE
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 1100 y = 0 }
+	
+	default = no
+	reset_on_civilwar = no
+	
+	#ARMY
+	focus = {
+		id = SWE_armen_reform
+		icon = army_reform
+		
+		x = 7
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+			hidden_effect = { load_oob = SWE_army_reform }
+			custom_effect_tooltip = "Enables a Motorized Infantry Template and a Light Armor Template."
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_artillery_experiments
+		icon = artillery
+		
+		x = -1
+		y = 1
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_armen_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = artillery
+				bonus = 0.5
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_swedish_marines
+		icon = amphibious_assault
+		
+		x = 1
+		y = 1
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_armen_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = marine_tech
+				bonus = 0.5
+			}
+			hidden_effect = { load_oob = SWE_marines }
+			custom_effect_tooltip = "Enables a Marine Infantry Template."
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_new_rifles
+		icon = small_arms
+		
+		x = 0
+		y = 2
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_artillery_experiments
+		}
+		prerequisite = {
+			focus = SWE_swedish_marines
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 0.5
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_swedish_paratroopers
+		icon = paratroopers
+		
+		x = 2
+		y = 2
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_swedish_marines
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = para_tech
+				bonus = 0.5
+			}
+			hidden_effect = { load_oob = SWE_paratroopers }
+			custom_effect_tooltip = "Enables a Paratrooper Template."
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_restructure_the_officer_school
+		icon = army_doctrine
+		
+		x = 0
+		y = 3
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_new_rifles
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+				add_defense = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_new_tanks
+		icon = tanks
+		
+		x = 2
+		y = 3
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_new_rifles
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				bonus = 0.75
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_air_force_reform
+		icon = air_doctrine
+		
+		x = 1
+		y = 4
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_restructure_the_officer_school
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = air_doctrine
+				bonus = 0.75
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_fighter_programs
+		icon = fighters2
+		
+		x = 0
+		y = 5
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_air_force_reform
+		}
+		mutually_exclusive = {
+			focus = SWE_bomber_programs
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = light_air
+				bonus = 0.5
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_bomber_programs
+		icon = bombers
+		
+		x = 2
+		y = 5
+		relative_position_id = SWE_armen_reform
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_air_force_reform
+		}
+		mutually_exclusive = {
+			focus = SWE_fighter_programs
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = heavy_air
+				bonus = 0.5
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#ECONOMY TREE
+	focus = {
+		id = SWE_anti_unemployment_efforts
+		icon = consumer_goods
+		
+		x = 1
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_urbanization_efforts
+		icon = production2
+		
+		x = 0
+		y = 1
+		relative_position_id = SWE_anti_unemployment_efforts
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_anti_unemployment_efforts
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 38 has_full_control_of_state = 141 }
+				38 = { add_manpower = -10000 } 141 = { add_manpower = 10000 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 666 has_full_control_of_state = 141 }
+				666 = { add_manpower = -10000 } 141 = { add_manpower = 10000 }
+			}
+			if = {
+				limit = { has_full_control_of_state = 139 has_full_control_of_state = 138 }
+				139 = { add_manpower = -10000 } 138 = { add_manpower = 10000 }
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_create_jobs_in_the_major_cities
+		icon = industry_civilian
+		
+		x = 0
+		y = 2
+		relative_position_id = SWE_anti_unemployment_efforts
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_urbanization_efforts
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 138
+			has_full_control_of_state = 140
+			has_full_control_of_state = 141
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			138 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			140 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			141 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#FRAUS PLAN TREE
+	focus = {
+		id = SWE_endorse_the_fraus_plan
+		icon = demand_territory
+		
+		x = 4
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_anti_corruption_efforts
+		icon = anti_establishment2
+		
+		x = 0
+		y = 1
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_endorse_the_fraus_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_dismiss_corrupt_officials
+		icon = self_management
+		
+		x = -1
+		y = 2
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_anti_corruption_efforts
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = stockholm_crisis
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_investigate_the_clergy
+		icon = demand_territory3
+		
+		x = 1
+		y = 2
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_anti_corruption_efforts
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+			add_war_support = 0.025
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_spending_reform
+		icon = trade
+		
+		x = -2
+		y = 3
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_create_jobs_in_the_major_cities
+		}
+		prerequisite = {
+			focus = SWE_dismiss_corrupt_officials
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_secularize_the_government
+		icon = national_unity
+		
+		x = 1
+		y = 3
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_investigate_the_clergy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = -0.02 }
+			remove_ideas = protestant_clergy
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_invite_foreign_companies
+		icon = industry_democratic
+		
+		x = -3
+		y = 4
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_spending_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_expand_the_military_industrial_complex
+		icon = industry_military
+		
+		x = -1
+		y = 4
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_spending_reform
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_secularize_the_officer_corps
+		icon = military_mission
+		
+		x = 2
+		y = 4
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_secularize_the_government
+		}
+		prerequisite = {
+			focus = SWE_restructure_the_officer_school
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = -0.02 }
+			add_tech_bonus = {
+				category = land_doctrine
+				bonus = 0.75
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_colonial_contracts
+		icon = treaty
+		
+		x = -3
+		y = 5
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_invite_foreign_companies
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 274 }
+				274 = { add_resource = { type = rubber amount = 6 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 334 }
+				334 = { add_resource = { type = rubber amount = 20 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 333 }
+				333 = { add_resource = { type = rubber amount = 10 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 623 }
+				623 = { add_resource = { type = steel amount = 8 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_the_de_champs_grants
+		icon = naval_dockyard
+		
+		x = -1
+		y = 5
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_expand_the_military_industrial_complex
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = naval_doctrine
+				bonus = 0.5
+			}
+			create_random_factory_NAV_1 = yes
+			create_random_factory_NAV_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_seize_church_property
+		icon = demand_territory2
+		
+		x = 1
+		y = 5
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_secularize_the_government
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_colonial_regiments
+		icon = entente
+		
+		x = -3
+		y = 6
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_colonial_contracts
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = colonial_regiments
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_bring_bjorkquist_to_justice
+		icon = forceful_treaty
+		
+		x = 0
+		y = 6
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_seize_church_property
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_transform_the_church_schools
+		icon = research
+		
+		x = 2
+		y = 6
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_seize_church_property
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_investigate_the_royal_family
+		icon = anti_monarchism3
+		
+		x = 0
+		y = 7
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_bring_bjorkquist_to_justice
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = -0.05 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_demand_berggrav
+		icon = forceful_treaty
+		
+		x = 2
+		y = 7
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_bring_bjorkquist_to_justice
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_force_the_prime_ministers_resignation
+		icon = monarchism
+		
+		x = 1
+		y = 8
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_investigate_the_royal_family
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			retire_country_leader = yes
+			hidden_effect = {
+				create_country_leader = {
+					name = "Temporary Government"
+					picture = "Vacancy.dds"
+					ideology = liberalism
+					traits = { vacancy }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#LIBERAL APPOINTMENTS
+	focus = {
+		id = SWE_liberal_appointments
+		icon = democracy
+		
+		x = -1
+		y = 9
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_force_the_prime_ministers_resignation
+		}
+		mutually_exclusive = {
+			focus = SWE_conservative_appointments
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.15 }
+			create_country_leader = {
+				name = "Gustav Möller"
+				picture = "Gustav_Moller.dds"
+				ideology = socialism
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_ban_fascism
+		icon = anti_fascism
+		
+		x = -2
+		y = 1
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_liberal_appointments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = { ideology = fascism popularity = -0.05 }
+			every_country = {
+				limit = { committed_to_fascism = yes }
+				add_opinion_modifier = {
+					target = ROOT modifier = anti_fascist_policy_negative
+				}
+			}
+			every_country = {
+				limit = { OR = { committed_to_democracy = yes committed_to_communism = yes } }
+				add_opinion_modifier = {
+					target = ROOT modifier = anti_fascist_policy_positive
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_seize_royal_property
+		icon = anti_monarchism
+		
+		x = 0
+		y = 1
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_liberal_appointments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = colonial_elites
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_fight_the_reactionaries
+		icon = manchurian_project
+		
+		x = -2
+		y = 2
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_ban_fascism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality popularity = -0.025
+			}
+			add_popularity = {
+				ideology = fascism popularity = -0.025
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_revoke_the_minor_titles
+		icon = renounce_treaty
+		
+		x = 0
+		y = 2
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 5
+		
+		prerequisite = {
+			focus = SWE_seize_royal_property
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = { 
+				limit = { committed_to_autocracy = yes }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = anti_monarchist_policy_negative
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_liberal_intellectualism
+		icon = tech_sharing
+		
+		x = 2
+		y = 2
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 12
+		
+		prerequisite = {
+			focus = SWE_seize_royal_property
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = suffragettes
+				add_idea = leftist_intellectuals
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_declare_the_republic
+		icon = democracy
+		
+		x = 0
+		y = 3
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 8
+		
+		prerequisite = {
+			focus = SWE_revoke_the_minor_titles
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = democratic popularity = 0.15
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_contain_norway
+		icon = attack_democracy
+		
+		x = -3
+		y = 4
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_declare_the_republic
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = NOR
+				NOT = { has_government = democratic }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			NOR = {
+				add_opinion_modifier = { target = ROOT modifier = diplomatic_hostility }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_contain_prussia
+		icon = attack_democracy2
+		
+		x = -1
+		y = 4
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_declare_the_republic
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = PRS
+				NOT = { has_government = democratic }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			PRS = {
+				add_opinion_modifier = { target = ROOT modifier = diplomatic_hostility }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_contain_russia
+		icon = strike_the_kremlin
+		
+		x = 1
+		y = 4
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_declare_the_republic
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = SOV
+				NOT = { has_government = democratic }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = { target = ROOT modifier = diplomatic_hostility }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_liberate_norway
+		icon = war3
+		
+		x = -3
+		y = 5
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		will_lead_to_war_with = NOR
+		
+		prerequisite = {
+			focus = SWE_contain_norway
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = NOR
+				NOT = { has_government = democratic }
+				has_civil_war = no
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = "Anti-Norwegian Agenda"
+			}
+			create_wargoal = {
+				target = NOR
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_liberate_pomerania
+		icon = war3
+		
+		x = -1
+		y = 5
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		will_lead_to_war_with = PRS
+		
+		prerequisite = {
+			focus = SWE_contain_prussia
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = PRS
+				NOT = { has_government = democratic }
+				has_civil_war = no
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 4
+				name = "Pomeranian Liberation Societies"
+			}
+			create_wargoal = {
+				target = PRS
+				type = take_state_focus
+				generator = { 62 63 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_liberate_finland
+		icon = war3
+		
+		x = 1
+		y = 5
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		will_lead_to_war_with = SOV
+		
+		prerequisite = {
+			focus = SWE_contain_russia
+		}
+		mutually_exclusive = {}
+		available = {
+			FIN = { is_subject = yes has_war = no }
+			any_country = {
+				original_tag = SOV
+				NOT = { has_government = democratic }
+				has_civil_war = no
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = "Finnish Liberation Agenda"
+			}
+			create_wargoal = {
+				target = FIN
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_liberate_denmark
+		icon = war3
+		
+		x = -3
+		y = 6
+		relative_position_id = SWE_liberal_appointments
+
+		cost = 10
+		
+		will_lead_to_war_with = DEN
+		
+		prerequisite = {
+			focus = SWE_liberate_norway
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = DEN
+				NOT = { has_government = democratic }
+				has_civil_war = no
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = "Anti-Danish Aspirations"
+			}
+			create_wargoal = {
+				target = DEN
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#CONSERVATIVE APPOINTMENTS
+	focus = {
+		id = SWE_conservative_appointments
+		icon = neutrality
+		
+		x = 3
+		y = 9
+		relative_position_id = SWE_endorse_the_fraus_plan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_force_the_prime_ministers_resignation
+		}
+		mutually_exclusive = {
+			focus = SWE_liberal_appointments
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.25 }
+			create_country_leader = {
+				name = "Fritiof Domö"
+				picture = "Fritiof_Domo.dds"
+				ideology = conservatism
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_ally_the_northern_nationalists
+		icon = tripartite_pact
+		
+		x = -1
+		y = 1
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_conservative_appointments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+			add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_declare_the_king_innocent
+		icon = dangerous_deal
+		
+		x = 1
+		y = 1
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_conservative_appointments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.025
+			add_war_support = 0.075
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_weaken_the_riksdag
+		icon = neutrality
+		
+		x = 0
+		y = 2
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_ally_the_northern_nationalists
+		}
+		prerequisite = {
+			focus = SWE_declare_the_king_innocent
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.10 }
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_endorse_the_norwegian_occupation_narrative
+		icon = demand_territory
+		
+		x = -1
+		y = 3
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_weaken_the_riksdag
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 4
+				name = "Norwegian Occupation Narrative"
+			}
+			random_country = {
+				limit = { original_tag = NOR }
+				add_opinion_modifier = { target = ROOT modifier = diplomatic_hostility }
+			}
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_reinforce_the_southern_rivalry
+		icon = anti_monarchism2
+		
+		x = 1
+		y = 3
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_weaken_the_riksdag
+		}
+		mutually_exclusive = {
+			focus = SWE_germanic_brotherhood
+		}
+		available = {}
+		bypass = {
+			has_war_with = PRS
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_country = {
+				limit = { original_tag = PRS }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = diplomatic_hostility
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_germanic_brotherhood
+		icon = monarchism2
+		
+		x = 3
+		y = 3
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_weaken_the_riksdag
+		}
+		mutually_exclusive = {
+			focus = SWE_reinforce_the_southern_rivalry
+		}
+		available = {
+			NOT = { has_war_with = PRS }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_country = {
+				limit = { original_tag = PRS }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = diplomatic_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_ultimatum_to_norway
+		icon = ultimatum2
+		
+		x = -1
+		y = 4
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		will_lead_to_war_with = NOR
+		
+		prerequisite = {
+			focus = SWE_endorse_the_norwegian_occupation_narrative
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = NOR
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_pomeranian_demands
+		icon = ultimatum
+		
+		x = 1
+		y = 4
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_reinforce_the_southern_rivalry
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = PRS
+				generator = { 62 63 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_partition_of_denmark
+		icon = military_deal
+		
+		x = 3
+		y = 4
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_germanic_brotherhood
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = SWE_extra_research_slot
+		icon = tech_sharing
+		
+		x = 5
+		y = 1
+		relative_position_id = SWE_conservative_appointments
+
+		cost = 10
+		
+		prerequisite = {
+			focus = SWE_conservative_appointments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}

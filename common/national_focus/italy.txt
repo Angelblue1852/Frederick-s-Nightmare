@@ -1,0 +1,2471 @@
+focus_tree = {
+	
+	id = italy_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = ITA
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 200 y = 1080 }
+	
+	default = no
+	reset_on_civilwar = no
+	
+	#The Bologna Convention
+	focus = {
+		id = ITA_the_bologna_convention
+		icon = self_management
+		
+		x = 10
+		y = 0
+
+		cost = 3
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = italy.2 hours = 3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Hold Libya Branch
+	focus = {
+		id = ITA_hold_libya
+		icon = colonialism
+		
+		x = -2
+		y = 2
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = ITA_retreat_from_libya
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.03
+			NAP = { add_opinion_modifier = { target = ROOT modifier = territorial_dispute } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_recruit_libyan_tribesmen
+		icon = recruitment
+		
+		x = 2
+		y = 1
+		relative_position_id = ITA_hold_libya
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_hold_libya
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			colonial_upkeep_downgrade = yes
+			add_ideas = conscription_bonus2
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Retreat from Libya SubBranch
+	focus = {
+		id = ITA_retreat_from_libya
+		icon = dangerous_deal
+		
+		x = 4
+		y = 0
+		relative_position_id = ITA_hold_libya
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = ITA_hold_libya
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			colonial_upkeep_remove = yes
+			FRA = { country_event = { id = italy.3 hours = 3 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_fortress_sardinia
+		icon = amphibious_assault
+		
+		x = 0
+		y = 1
+		relative_position_id = ITA_retreat_from_libya
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_retreat_from_libya
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 114
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			colonial_upkeep_downgrade = yes
+			114 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = air_base level = 2 instant_build = yes }
+				add_building_construction = { type = naval_base level = 3 instant_build = yes province = 11773 }
+				add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = 11773 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_naval_power_projection
+		icon = navy2
+		
+		x = -2
+		y = 2
+		relative_position_id = ITA_retreat_from_libya
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_fortress_sardinia
+			focus = ITA_recruit_libyan_tribesmen
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			colonial_upkeep_downgrade = yes
+			add_tech_bonus = {
+				category = naval_doctrine
+				bonus = 0.4
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_foreign_aid_projects
+		icon = economic_crisis
+		
+		x = 0
+		y = 2
+		relative_position_id = ITA_retreat_from_libya
+
+		cost = 4
+		
+		prerequisite = {
+			focus = ITA_fortress_sardinia
+		}
+		prerequisite = {
+			focus = ITA_reinforce_the_welfare_state
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			every_other_country = {
+				limit = { has_same_ideology = yes }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = developing_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Support the Revolutionary Committee
+	focus = {
+		id = ITA_support_the_revolutionary_committee
+		icon = communism3
+		
+		x = -3
+		y = 1
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_the_bologna_convention
+		}
+		mutually_exclusive = {
+			focus = ITA_support_the_united_caucus
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_assassinate_pius_xi
+		icon = gunpoint_diplomacy
+		
+		x = -6
+		y = 2
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_support_the_revolutionary_committee
+		}
+		mutually_exclusive = {}
+		available = {
+			is_neighbor_of = PAP
+			PAP = { has_government = neutrality }
+			NOT = {
+				has_government = neutrality
+				has_government = democratic
+			}
+		}
+		bypass = {
+			PAP = { NOT = { has_country_leader = { name = "Pius XI" } } }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			PAP = { country_event = { id = papal_state.3 hours = 3 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_restrict_civil_liberties
+		icon = communism
+		
+		x = -4
+		y = 2
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_support_the_revolutionary_committee
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.05
+			remove_ideas = liberal_reformers
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Endorse the Protettori
+	focus = {
+		id = ITA_endorse_the_protettori
+		icon = communist_repression
+		
+		x = -6
+		y = 3
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_restrict_civil_liberties
+		}
+		mutually_exclusive = {
+			focus = ITA_reassure_the_moderates
+		}
+		mutually_exclusive = {
+			focus = ITA_support_the_national_bolsheviks
+		}
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = "Protettori Majority"
+					check_variable = {
+						var = ITA_protettori_influence
+						value = ITA_delegates_threshold
+						compare = greater_than_or_equals
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Globalisti Majority"
+					check_variable = {
+						var = ITA_globalisti_influence
+						value = ITA_delegates_threshold
+						compare = greater_than_or_equals
+					}
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = "Joint Majority"
+						check_variable = {
+							var = ITA_protettori_globalisti_alliance_sum
+							value = ITA_delegates_threshold
+							compare = greater_than_or_equals
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = "Globalisti and Protettori allied"
+						check_variable = {
+							var = ITA_protettori_globalisti_alliance_value
+							value = ITA_protettori_globalisti_alliance_threshold
+							compare = greater_than_or_equals
+						}
+					}
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = { is_in_faction_with = SPR }
+				SPR = {
+					add_opinion_modifier = { target = ROOT modifier = diplomatic_friendship }
+				}
+			}
+			if = {
+				limit = { has_idea = pci_divided }
+				remove_ideas = pci_divided
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_cater_to_the_globalisti
+		icon = communist_purge
+		
+		x = -3
+		y = 1
+		relative_position_id = ITA_endorse_the_protettori
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_endorse_the_protettori
+		}
+		mutually_exclusive = {
+			focus = ITA_protect_the_colonies
+		}
+		available = {
+			NOT = { has_completed_focus = ITA_hold_libya }
+			custom_trigger_tooltip = {
+				tooltip = "Globalisti Majority"
+				check_variable = {
+					var = ITA_globalisti_influence
+					value = ITA_delegates_threshold
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.05
+			SPR = { add_opinion_modifier = { target = ROOT modifier = diplomatic_insult } }
+			if = {
+				limit = { 
+					country_exists = LBA 
+					has_full_control_of_state = 448
+					has_full_control_of_state = 449
+					has_full_control_of_state = 661
+					has_full_control_of_state = 662
+				}
+				LBA = {
+					transfer_state = 448
+					transfer_state = 449
+					transfer_state = 661
+					transfer_state = 662
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = LBA } }
+				release_puppet = LBA
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_protect_the_colonies
+		icon = colonial_crackdown
+		
+		x = -1
+		y = 1
+		relative_position_id = ITA_endorse_the_protettori
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_endorse_the_protettori
+		}
+		mutually_exclusive = {
+			focus = ITA_endorse_the_protettori
+		}
+		available = {
+			has_completed_focus = ITA_hold_libya
+			custom_trigger_tooltip = {
+				tooltip = "Protettori Majority"
+				check_variable = {
+					var = ITA_protettori_influence
+					value = ITA_delegates_threshold
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_end_all_elections
+		icon = anti_democracy3
+		
+		x = 0
+		y = 2
+		relative_position_id = ITA_endorse_the_protettori
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_endorse_the_protettori
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = communism
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			if = {
+				limit = { has_idea = pci_divided }
+				remove_ideas = pci_divided
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reassure the Moderates
+	focus = {
+		id = ITA_reassure_the_moderates
+		icon = communism2
+		
+		x = -4
+		y = 3
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_restrict_civil_liberties
+		}
+		mutually_exclusive = {
+			focus = ITA_reassure_the_moderates
+		}
+		mutually_exclusive = {
+			focus = ITA_support_the_national_bolsheviks
+		}
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = "Moderate Majority"
+				check_variable = {
+					var = ITA_moderati_influence
+					value = ITA_delegates_threshold
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = communism popularity = 0.05 }
+			if = {
+				limit = { is_in_faction_with = SPR }
+				SPR = {
+					add_opinion_modifier = { target = ROOT modifier = diplomatic_friendship }
+				}
+			}
+			if = {
+				limit = { has_idea = pci_divided }
+				remove_ideas = pci_divided
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_strengthen_the_secret_police
+		icon = communist_repression
+		
+		x = -2
+		y = 2
+		relative_position_id = ITA_endorse_the_protettori
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_cater_to_the_globalisti
+			focus = ITA_protect_the_colonies
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = communism
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = secret_police
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_prince_of_terror
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_reform_factory_control_policy
+		icon = communist_factories
+		
+		x = -1
+		y = 3
+		relative_position_id = ITA_reassure_the_moderates
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_endorse_the_protettori
+			focus = ITA_socialist_science_directive
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_real_estate_developer
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_socialist_science_directive
+		icon = socialist_science
+		
+		x = 0
+		y = 1
+		relative_position_id = ITA_reassure_the_moderates
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_reassure_the_moderates
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_concealed_deals_with_foreign_capitalists
+		icon = air_production
+		
+		x = -1
+		y = 4
+		relative_position_id = ITA_reassure_the_moderates
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_reform_factory_control_policy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industrial_focus_civilian
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_support_the_national_bolsheviks
+		icon = mussolini
+		
+		x = -2
+		y = 3
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_restrict_civil_liberties
+		}
+		prerequisite = {
+			focus = ITA_hold_libya
+		}
+		mutually_exclusive = {
+			focus = ITA_endorse_the_protettori
+		}
+		mutually_exclusive = {
+			focus = ITA_reassure_the_moderates
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Bolscevichi Majority"
+				check_variable = {
+					var = ITA_bolscevichi_influence
+					value = ITA_delegates_threshold
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			set_party_name = {
+				ideology = communism
+				long_name = "Avanguardia Operaia di Sinistra"
+				name = "AOS"
+			}
+			create_country_leader = {
+				name = "Benito Mussolini"
+				ideology = stalinism
+				picture = "Benito_Mussolini.dds"
+			}
+			if = {
+				limit = { has_idea = pci_divided }
+				remove_ideas = pci_divided
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_demand_a_spanish_proof_of_loyalty
+		icon = communism5
+		
+		x = -2
+		y = 4
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_support_the_national_bolsheviks
+		}
+		mutually_exclusive = {}
+		available = {
+			is_in_faction_with = SPR
+			NOT = { is_puppet_of = SPR }
+		}
+		bypass = {
+			NOT = { is_in_faction_with = SPR }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SPR = { country_event = { id = italy.6 hours = 3 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_reaffirm_the_barcelona_agreement
+		icon = alliance
+		
+		x = -3
+		y = 5
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_reassure_the_moderates
+			focus = ITA_demand_a_spanish_proof_of_loyalty
+		}
+		mutually_exclusive = {
+			focus = ITA_break_with_spain
+		}
+		available = {
+			is_in_faction_with = SPR
+			SPR = {
+				is_faction_leader = yes
+			}
+			OR = {
+				has_completed_focus = ITA_reform_factory_control_policy
+				has_country_flag = spanish_proof_of_loyalty
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = { is_in_faction_with = SPR }
+				SPR = { is_faction_leader = no }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			SPR = { add_opinion_modifier = { target = ROOT modifier = diplomatic_alignment } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_break_with_spain
+		icon = renounce_treaty
+		
+		x = -1
+		y = 5
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_demand_a_spanish_proof_of_loyalty
+		}
+		mutually_exclusive = {
+			focus = ITA_reaffirm_the_barcelona_agreement
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SPR = { add_opinion_modifier = { target = ROOT modifier = diplomatic_insult } }
+			if = {
+				limit = { has_country_flag = spanish_proof_of_loyalty }
+				SPR = { add_opinion_modifier = { target = ROOT modifier = diplomatic_insult } }
+				add_stability = -0.1
+				add_war_support = -0.1
+				add_popularity = {
+					ideology = communism
+					popularity = -0.05
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_liberate_the_venetian_workers
+		icon = war
+		
+		x = -2
+		y = 6
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		will_lead_to_war_with = AUS
+		
+		prerequisite = {
+			focus = ITA_reaffirm_the_barcelona_agreement
+			focus = ITA_break_with_spain
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = AUS
+				type = take_core_state
+				generator = { 39 160 736 }
+			}
+			if = {
+				limit = { has_idea = pci_divided }
+				remove_ideas = pci_divided
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_bring_the_revolution_to_switzerland
+		icon = war_against_switzerland
+		
+		x = -2
+		y = 7
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_liberate_the_venetian_workers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = AUS
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Support the United Caucus
+	focus = {
+		id = ITA_support_the_united_caucus
+		icon = democracy5
+		
+		x = 3
+		y = 1
+		relative_position_id = ITA_the_bologna_convention
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_the_bologna_convention
+		}
+		mutually_exclusive = {
+			focus = ITA_support_the_revolutionary_committee
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_make_peace_with_the_clergy
+		icon = national_unity
+		
+		x = 1
+		y = 1
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_support_the_united_caucus
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = secularism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_reinforce_the_welfare_state
+		icon = agriculture
+		
+		x = 1
+		y = 2
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_make_peace_with_the_clergy
+		}
+		prerequisite = {
+			focus = ITA_retreat_from_libya
+		}
+		mutually_exclusive = {
+			focus = ITA_market_liberal_idealism
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_market_liberal_idealism
+		icon = consumer_goods
+		
+		x = 3
+		y = 2
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_make_peace_with_the_clergy
+		}
+		mutually_exclusive = {
+			focus = ITA_reinforce_the_welfare_state
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = consumer_goods_bonus2
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_call_de_gasperi_into_office
+		icon = demand_territory
+		
+		x = 1
+		y = 3
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_reinforce_the_welfare_state
+			focus = ITA_market_liberal_idealism
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			has_government = democratic
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			if = {
+				limit = { has_idea = pci_divided }
+				remove_ideas = pci_divided
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_pardon_the_king
+		icon = monarchism2
+		
+		x = 0
+		y = 4
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_call_de_gasperi_into_office
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = italian_monarchy_in_exile
+			add_stability = 0.1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_restore_citizen_rights
+		icon = national_unity
+		
+		x = 2
+		y = 4
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_call_de_gasperi_into_office
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = laissez_faire
+			remove_ideas = radical_socialists
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_increase_steel_productions
+		icon = steel_production
+		
+		x = 1
+		y = 5
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_restore_citizen_rights
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			159 = { add_resource = { type = steel amount = 10 } }
+			161 = { add_resource = { type = steel amount = 10 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_invite_foreign_capitalists
+		icon = production2
+		
+		x = 3
+		y = 5
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_restore_citizen_rights
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industrial_focus_civilian
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_join_the_entente
+		icon = align_with_france
+		
+		x = 2
+		y = 6
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_invite_foreign_capitalists
+		}
+		mutually_exclusive = {
+			focus = ITA_anti_habsburg_compact
+		}
+		available = {
+			has_government = democratic
+			is_in_faction = no
+			is_subject = no
+			FRA = {
+				is_faction_leader = yes
+				is_subject = no
+				has_government = democratic
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = { country_event = france.3 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_anti_habsburg_compact
+		icon = major_alliance
+		
+		x = 4
+		y = 6
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_invite_foreign_capitalists
+		}
+		mutually_exclusive = {
+			focus = ITA_join_the_entente
+		}
+		available = {
+			is_neighbor_of = AUS
+			NOT = { is_in_faction_with = AUS }
+			is_subject = no
+			is_in_faction = no
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = anti_habsburg_league
+			every_other_country = {
+				limit = { 
+					OR = {
+						original_tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				add_opinion_modifier = { 
+					target = ROOT modifier = anti_habsburg_league_member_AUS 
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = AUS
+					NOT = { original_tag = AUS }
+					NOT = { is_subject_of = AUS }
+				}
+				add_opinion_modifier = {
+					target = ROOT modifier = anti_habsburg_league_member_negative
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = { has_war_with = AUS }
+					NOT = { has_war_with = ROOT }
+					is_neighbor_of = AUS
+					is_subject = no
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_in_faction_with = AUS }
+				}
+				country_event = { id = italy.7 hours = 3 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_global_liberal_compacts
+		icon = research
+		
+		x = 1
+		y = 7
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_increase_steel_productions
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = democratic
+			any_country = {
+				has_government = democratic
+				is_in_faction_with = ROOT
+				num_of_factories > 40
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_war_against_austria
+		icon = war
+		
+		x = 3
+		y = 7
+		relative_position_id = ITA_support_the_united_caucus
+
+		cost = 10
+		
+		will_lead_to_war_with = AUS
+		
+		prerequisite = {
+			focus = ITA_join_the_entente
+			focus = ITA_anti_habsburg_compact
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = AUS
+				generator = { 39 160 736 }
+				type = take_core_state
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#The Bologna Convention
+	focus = {
+		id = ITA_fight_unemployment
+		icon = industry_civilian
+		
+		x = 18
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_renew_the_alliance_with_the_unions
+		icon = industry_communism
+		
+		x = -2
+		y = 1
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_fight_unemployment
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_captain_of_industry
+			add_ideas = labor_unions
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_establish_the_north_south_axis
+		icon = infrastructure
+		
+		x = 0
+		y = 1
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_fight_unemployment
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 159
+			has_full_control_of_state = 161
+			has_full_control_of_state = 162
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			159 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			161 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			162 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_transform_lombardy_carmakers
+		icon = tank_production
+		
+		x = 2
+		y = 1
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_fight_unemployment
+		}
+		mutually_exclusive = {
+			focus = ITA_libyan_frontline_jobs
+		}
+		available = {
+			has_completed_focus = ITA_retreat_from_libya
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			159 = {
+				add_building_construction = { type = industrial_complex level = -2 instant_build = yes }
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			add_tech_bonus = {
+				category = armor
+				uses = 2
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_policy_of_guaranteed_employment
+		icon = production
+		
+		x = -2
+		y = 2
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_renew_the_alliance_with_the_unions
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 449
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industry_bonus
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_further_centralizations_of_private_businesses
+		icon = consumer_goods
+		
+		x = 1
+		y = 2
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_establish_the_north_south_axis
+			focus = ITA_transform_lombardy_carmakers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.5
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_armor_innovations
+		icon = tanks
+		
+		x = 3
+		y = 2
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_transform_lombardy_carmakers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				uses = 3
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_artillery_projects
+		icon = artillery
+		
+		x = 0
+		y = 1
+		relative_position_id = ITA_armor_innovations
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_armor_innovations
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = artillery
+				uses = 3
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_doctrinal_reform
+		icon = army_doctrine
+		
+		x = 0
+		y = 2
+		relative_position_id = ITA_armor_innovations
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_artillery_projects
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = land_doctrine
+				uses = 2
+				bonus = 0.75
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_expand_the_suburbs
+		icon = construction3
+		
+		x = 0
+		y = 3
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_further_centralizations_of_private_businesses
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+			create_random_building_slot_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_synthetic_projects
+		icon = oil_production
+		
+		x = 1
+		y = 4
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 5
+		
+		prerequisite = {
+			focus = ITA_further_centralizations_of_private_businesses
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = synth_resources
+				uses = 2
+				bonus = 0.75
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_expand_domestic_military_production
+		icon = industry_military
+		
+		x = -1
+		y = 4
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_renew_the_alliance_with_the_unions
+		}
+		prerequisite = {
+			focus = ITA_expand_the_suburbs
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_1 = yes
+			create_random_factory_MIL_1 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_intellectual_advances
+		icon = research
+		
+		x = 1
+		y = 5
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_synthetic_projects
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_reform_the_unions
+		icon = industry
+		
+		x = -1
+		y = 5
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_expand_domestic_military_production
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			158 = { add_extra_state_shared_building_slots = 2 }
+			159 = { add_extra_state_shared_building_slots = 2 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_libyan_frontline_jobs
+		icon = border_war
+		
+		x = 5
+		y = 1
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_fight_unemployment
+		}
+		mutually_exclusive = {
+			focus = ITA_transform_lombardy_carmakers
+		}
+		available = {
+			has_completed_focus = ITA_hold_libya
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			449 = { add_building_construction = { type = bunker level = 3 instant_build = yes province = 1198 } }
+			662 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 4200 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_attack_the_pope
+		icon = anti_catholicism
+		
+		x = 0
+		y = 1
+		relative_position_id = ITA_libyan_frontline_jobs
+		
+		will_lead_to_war_with = PAP
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_libyan_frontline_jobs
+		}
+		mutually_exclusive = {}
+		available = {
+			is_neighbor_of = PAP
+			NOT = { is_in_faction_with = PAP }
+			NOT = {
+				is_subject_of = PAP
+				is_subject_of = NAP
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PAP
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_the_long_march
+		icon = attack_communism
+		
+		x = 0
+		y = 2
+		relative_position_id = ITA_libyan_frontline_jobs
+		
+		will_lead_to_war_with = NAP
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_attack_the_pope
+		}
+		mutually_exclusive = {}
+		available = {
+			is_neighbor_of = NAP
+			NOT = { is_in_faction_with = NAP }
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+			NOT = {
+				is_subject_of = PAP
+				is_subject_of = NAP
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = NAP
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_expand_the_navy
+		icon = navy
+		
+		x = 8
+		y = 1
+		relative_position_id = ITA_fight_unemployment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_fight_unemployment
+		}
+		mutually_exclusive = {}
+		available = {
+			has_completed_focus = ITA_naval_power_projection
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = { category = naval_doctrine uses = 1 bonus = 0.5 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_expand_the_submarine_fleet
+		icon = submarines
+		
+		x = -1
+		y = 1
+		relative_position_id = ITA_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_expand_the_navy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { category = ss_tech uses = 2 bonus = 0.75 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_oceangoing_innovations
+		icon = cruisers2
+		
+		x = 1
+		y = 1
+		relative_position_id = ITA_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_expand_the_navy
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { 
+				category = bb_tech 
+				category = dd_tech 
+				category = cl_tech 
+				uses = 3 
+				bonus = 0.5 
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_tactical_changes
+		icon = naval_doctrine
+		
+		x = 1
+		y = 2
+		relative_position_id = ITA_expand_the_navy
+
+		cost = 5
+		
+		prerequisite = {
+			focus = ITA_oceangoing_innovations
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { category = naval_doctrine uses = 1 bonus = 0.5 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_attain_global_outreach
+		icon = carriers
+		
+		x = 1
+		y = 3
+		relative_position_id = ITA_expand_the_navy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_tactical_changes
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { category = cv_tech uses = 2 bonus = 0.6 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_attack_papal_state
+		icon = anti_catholicism
+		
+		x = 3
+		y = 0
+		relative_position_id = ITA_war_against_austria
+		
+		will_lead_to_war_with = PAP
+
+		cost = 10
+		
+		mutually_exclusive = { focus = ITA_Papal_Integration }
+		available = {
+			has_completed_focus = ITA_retreat_from_libya
+			is_neighbor_of = PAP
+			NOT = { is_in_faction_with = PAP }
+			NOT = {
+				is_subject_of = PAP
+				is_subject_of = NAP
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_stability = -0.20
+			create_wargoal = {
+				type = annex_everything
+				target = PAP
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_Papal_Integration
+		icon = anti_catholicism
+		
+		x = 5
+		y = 0
+		relative_position_id = ITA_war_against_austria
+		
+		cost = 10
+		
+		mutually_exclusive = { focus = ITA_attack_papal_state }
+		available = {
+			has_completed_focus = ITA_retreat_from_libya
+			has_government = democratic
+			is_neighbor_of = PAP
+			NOT = { is_in_faction_with = PAP }
+			NOT = {
+				is_subject_of = PAP
+				is_subject_of = NAP
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			PAP = { country_event = { id = italy.14 hours = 12 } } 
+			}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	focus = {
+		id = ITA_attack_naples
+		icon = attack_communism
+		
+		x = -1
+		y = 2
+		relative_position_id = ITA_attack_papal_state
+		
+		will_lead_to_war_with = NAP
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_attack_papal_state focus = ITA_Papal_Integration 
+		}
+		mutually_exclusive = { focus = ITA_Integrate_Naples }
+		available = {
+			is_neighbor_of = NAP
+			NOT = { is_in_faction_with = NAP }
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+			NOT = {
+				is_subject_of = PAP
+				is_subject_of = NAP
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = NAP
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = ITA_Integrate_Naples
+		icon = attack_communism
+		
+		x = 1
+		y = 2
+		relative_position_id = ITA_Papal_Integration
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_attack_papal_state focus = ITA_Papal_Integration 
+		}
+		mutually_exclusive = { focus = ITA_attack_naples }
+		available = {
+			is_neighbor_of = NAP
+			NOT = { is_in_faction_with = NAP }
+			NAP = { has_completed_focus = NAP_accept_papal_authority }
+			has_full_control_of_state = 2
+			has_full_control_of_state = 157
+			NOT = {
+				is_subject_of = PAP
+				is_subject_of = NAP
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			NAP = { country_event = { id = italy.15 hours = 12 } } 
+		}
+	}
+	
+	focus = {
+		id = ITA_Integrate_Italy
+		icon = attack_communism
+		
+		x = -2
+		y = 1
+		relative_position_id = ITA_Integrate_Naples
+
+		cost = 10
+		
+		prerequisite = {
+			focus = ITA_Integrate_Naples focus = ITA_attack_naples
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = {
+					limit = {
+						OR = {
+							is_core_of = PAP
+							is_core_of = NAP
+						}
+					}
+					add_core_of = ITA
+				}
+		}
+	}
+	
+}

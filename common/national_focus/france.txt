@@ -1,0 +1,2584 @@
+focus_tree = {
+	
+	id = france_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = FRA
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 850 y = 960 }
+	
+	default = no
+	reset_on_civilwar = no
+	
+	#Future of France
+	focus = {
+		id = FRA_the_future_of_france
+		icon = demand_territory
+		
+		x = 1
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_strengthen_the_unions
+		icon = industry_civilian
+		
+		x = -1
+		y = 1
+		relative_position_id = FRA_the_future_of_france
+
+		cost = 12
+		
+		prerequisite = {
+			focus = FRA_the_future_of_france
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = labor_unions
+			create_random_factory_CIV_1 = yes
+			create_random_factory_CIV_1 = yes
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_anti_fascist_legislation
+		icon = anti_fascism
+		
+		x = 1
+		y = 1
+		relative_position_id = FRA_the_future_of_france
+
+		cost = 7
+		
+		prerequisite = {
+			focus = FRA_the_future_of_france
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism popularity = -0.05
+			}
+			every_country = {
+				limit = { committed_to_fascism = yes }
+				add_opinion_modifier = {
+					target = ROOT modifier = anti_fascist_policy_negative
+				}
+			}
+			every_country = {
+				limit = { 
+					OR = {
+						committed_to_communism = yes
+						committed_to_democracy = yes
+						committed_to_autocracy = yes
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT modifier = anti_fascist_policy_positive
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_form_the_constitutional_reform_committee
+		icon = national_unity
+		
+		x = 0
+		y = 2
+		relative_position_id = FRA_the_future_of_france
+
+		cost = 5
+		
+		prerequisite = {
+			focus = FRA_strengthen_the_unions
+		}
+		prerequisite = {
+			focus = FRA_anti_fascist_legislation
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Economic Tree
+	focus = {
+		id = FRA_initiate_additional_economic_programs
+		icon = industry_civilian
+		
+		x = 7
+		y = 0
+
+		cost = 14
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industrial_focus_civilian
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_reform_the_national_employment_office
+		icon = construction3
+		
+		x = -3
+		y = 1
+		relative_position_id = FRA_initiate_additional_economic_programs
+
+		cost = 6
+		
+		prerequisite = {
+			focus = FRA_initiate_additional_economic_programs
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+			unlock_decision_category_tooltip = economic_crisis_decisions
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_expand_amiot
+		icon = construction2
+		
+		x = -1
+		y = 1
+		relative_position_id = FRA_initiate_additional_economic_programs
+
+		cost = 7
+		
+		prerequisite = {
+			focus = FRA_initiate_additional_economic_programs
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 15
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 5
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = amiot_airplane_company
+			15 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_expand_peugeot
+		icon = production
+		
+		x = 1
+		y = 1
+		relative_position_id = FRA_initiate_additional_economic_programs
+
+		cost = 7
+		
+		prerequisite = {
+			focus = FRA_initiate_additional_economic_programs
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 17
+		}	
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = peugeot
+			17 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_expand_levasseur
+		icon = production2
+		
+		x = 3
+		y = 1
+		relative_position_id = FRA_initiate_additional_economic_programs
+
+		cost = 7
+		
+		prerequisite = {
+			focus = FRA_initiate_additional_economic_programs
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 16
+		}	
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = levasseur_rifle_company
+			16 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_remove_taxation_loopholes
+		icon = concessions
+		
+		x = -4
+		y = 2
+		relative_position_id = FRA_initiate_additional_economic_programs
+
+		cost = 9
+		
+		prerequisite = {
+			focus = FRA_reform_the_national_employment_office
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = aristocratic_elites
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_create_the_emergency_preparation_bureau
+		icon = intelligence_exchange
+		
+		x = -2
+		y = 2
+		relative_position_id = FRA_initiate_additional_economic_programs
+
+		cost = 13
+		
+		prerequisite = {
+			focus = FRA_reform_the_national_employment_office
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				ENG = { has_completed_focus = ENG_pass_the_home_defense_act }
+				JAP = { has_completed_focus = JAP_empower_the_hardliners }
+				USA = { has_completed_focus = USA_american_idealism }
+				PRS = { has_completed_focus = PRS_friendship_with_russia }
+				AUS = { has_completed_focus = AUS_befriend_the_ottoman_empire }
+				threat > 0.5
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Military Tree
+	focus = {
+		id = FRA_reform_the_military
+		icon = infantry_allies
+		
+		x = 12
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_expand_the_armament_industry
+		icon = industry_military
+		
+		x = -5
+		y = 1
+		relative_position_id = FRA_reform_the_military
+
+		cost = 15
+		
+		prerequisite = {
+			focus = FRA_reform_the_military
+		}
+		prerequisite = {
+			focus = FRA_initiate_additional_economic_programs
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				AND = {
+					has_government = democratic
+					threat > 0.25
+				}
+				AND = {
+					has_government = communism
+					threat > 0.35
+				}
+				AND = {
+					has_government = neutrality
+					threat > 0.20
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_random_factory_MIL_2 = yes
+			create_random_factory_MIL_2 = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_reform_the_paris_officer_school
+		icon = army_logistics
+		
+		x = -3
+		y = 1
+		relative_position_id = FRA_reform_the_military
+
+		cost = 8
+		
+		prerequisite = {
+			focus = FRA_reform_the_military
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_expand_metropolitan_naval_bases
+		icon = naval_dockyard
+		
+		x = -1
+		y = 1
+		relative_position_id = FRA_reform_the_military
+
+		cost = 7
+		
+		prerequisite = {
+			focus = FRA_reform_the_military
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 5
+			if = {
+				limit = { has_full_control_of_state = 19 }
+				19 = { add_building_construction = { type = naval_base level = 5 instant_build = yes province = 9737 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 22 }
+				22 = { add_building_construction = { type = naval_base level = 4 instant_build = yes province = 9898 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 29 }
+				29 = { add_building_construction = { type = naval_base level = 3 instant_build = yes province = 575 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_enact_conscription
+		icon = infiltration
+		
+		x = -6
+		y = 2
+		relative_position_id = FRA_reform_the_military
+
+		cost = 12
+		
+		prerequisite = {
+			focus = FRA_create_the_emergency_preparation_bureau
+		}
+		prerequisite = {
+			focus = FRA_expand_the_armament_industry
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = limited_conscription
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_draft_army_doctrines
+		icon = army_doctrine
+		
+		x = -4
+		y = 2
+		relative_position_id = FRA_reform_the_military
+
+		cost = 5
+		
+		prerequisite = {
+			focus = FRA_reform_the_paris_officer_school
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.40
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_draft_naval_doctrines
+		icon = naval_doctrine
+		
+		x = -2
+		y = 2
+		relative_position_id = FRA_reform_the_military
+
+		cost = 5
+		
+		prerequisite = {
+			focus = FRA_reform_the_paris_officer_school
+			focus = FRA_expand_metropolitan_naval_bases
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.40
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_accelerate_the_abrial_program
+		icon = cruisers
+
+		x = 0
+		y = 2
+		relative_position_id = FRA_reform_the_military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_expand_metropolitan_naval_bases
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = cl_tech
+				category = ca_tech
+				bonus = 0.6
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_artillery_projects
+		icon = artillery
+		
+		x = -5
+		y = 3
+		relative_position_id = FRA_reform_the_military
+
+		cost = 8
+		
+		prerequisite = {
+			focus = FRA_expand_the_armament_industry
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = artillery
+				bonus = 0.5
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_draft_air_doctrines
+		icon = air_doctrine
+
+		x = -3
+		y = 3
+		relative_position_id = FRA_reform_the_military
+
+		cost = 5
+		
+		prerequisite = {
+			focus = FRA_draft_army_doctrines
+			focus = FRA_draft_naval_doctrines
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.40
+				uses = 2
+				category = air_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_expand_north_african_naval_bases
+		icon = naval_dockyard
+
+		x = -1
+		y = 3
+		relative_position_id = FRA_reform_the_military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_accelerate_the_abrial_program
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 5
+			if = {
+				limit = { has_full_control_of_state = 459 }
+				459 = { add_building_construction = { type = naval_base level = 3 instant_build = yes province = 1145 } }
+				459 = { add_building_construction = { type = naval_base level = 3 instant_build = yes province = 7132 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 458 }
+				458 = { add_building_construction = { type = naval_base level = 4 instant_build = yes province = 7162 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_abrial_b
+		icon = battleships
+
+		x = 1
+		y = 3
+		relative_position_id = FRA_reform_the_military
+
+		cost = 4
+		
+		prerequisite = {
+			focus = FRA_accelerate_the_abrial_program
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = bb_tech
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_force_national_cooperation
+		icon = research
+		
+		x = -5
+		y = 4
+		relative_position_id = FRA_reform_the_military
+
+		cost = 4
+		
+		prerequisite = {
+			focus = FRA_artillery_projects
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			threat > 0.4
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_french_airfields
+		icon = air_force
+
+		x = -3
+		y = 4
+		relative_position_id = FRA_reform_the_military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_draft_air_doctrines
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 10
+			if = {
+				limit = { has_full_control_of_state = 28 }
+				28 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 27 }
+				27 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 31 }
+				31 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 14 }
+				14 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_fortify_indochina
+		icon = military_fort
+
+		x = -1
+		y = 4
+		relative_position_id = FRA_reform_the_military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_expand_north_african_naval_bases
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 286
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			navy_experience = 5
+			286 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+				add_building_construction = { type = air_base level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker level = 4 instant_build = yes province = 4401 }
+				add_building_construction = { type = naval_base level = 4 instant_build = yes province = 4401 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_abrial_c
+		icon = carriers
+
+		x = 1
+		y = 4
+		relative_position_id = FRA_reform_the_military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_abrial_b
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = cv_tech
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_colonial_airfields
+		icon = air_force
+
+		x = -3
+		y = 5
+		relative_position_id = FRA_reform_the_military
+
+		cost = 8
+		
+		prerequisite = {
+			focus = FRA_french_airfields
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 10
+			if = {
+				limit = { has_full_control_of_state = 543 }
+				543 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 539 }
+				539 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 320 }
+				320 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 635 }
+				635 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_create_the_laborde_program
+		icon = submarines
+
+		x = 0
+		y = 5
+		relative_position_id = FRA_reform_the_military
+
+		cost = 7
+		
+		prerequisite = {
+			focus = FRA_accelerate_the_abrial_program
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = ss_tech
+				uses = 3
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Grand Assembly
+	focus = {
+		id = FRA_call_the_grand_assembly
+		icon = home_defense
+
+		x = 3
+		y = 3
+
+		cost = 13
+		
+		prerequisite = {
+			focus = FRA_form_the_constitutional_reform_committee
+		}
+		prerequisite = {
+			focus = FRA_remove_taxation_loopholes
+		}
+		prerequisite = {
+			focus = FRA_create_the_emergency_preparation_bureau
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_defensive_war = yes
+				threat > 0.25
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_authoritarian_ideologue
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_communist_revolutionary
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_democratic_reformer
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_draft_a_republican_constitution
+		icon = communism3
+
+		x = -2
+		y = 1
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 22
+		
+		prerequisite = {
+			focus = FRA_call_the_grand_assembly
+		}
+		mutually_exclusive = {
+			focus = FRA_draft_a_liberal_constitution
+		}
+		mutually_exclusive = {
+			focus = FRA_draft_a_reactionary_constitution
+		}
+		available = {
+			has_completed_focus = FRA_abandon_the_entente
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = {
+				name = "Communism in France"
+				threat = 3
+			}
+			add_political_power = -300
+			add_popularity = {
+				ideology = communism popularity = 0.125
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_draft_a_liberal_constitution
+		icon = democracy
+
+		x = 0
+		y = 1
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_call_the_grand_assembly
+		}
+		mutually_exclusive = {
+			focus = FRA_draft_a_republican_constitution
+		}
+		mutually_exclusive = {
+			focus = FRA_draft_a_reactionary_constitution
+		}
+		available = {
+			has_completed_focus = FRA_reassure_the_entente
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic popularity = 0.125
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_draft_a_reactionary_constitution
+		icon = monarchism2
+
+		x = 2
+		y = 1
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 22
+		
+		prerequisite = {
+			focus = FRA_call_the_grand_assembly
+		}
+		mutually_exclusive = {
+			focus = FRA_draft_a_republican_constitution
+		}
+		mutually_exclusive = {
+			focus = FRA_draft_a_liberal_constitution
+		}
+		available = {
+			has_completed_focus = FRA_abandon_the_entente
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = jingoism
+			add_named_threat = {
+				name = "Reactionary France"
+				threat = 3
+			}
+			add_political_power = -300
+			add_popularity = {
+				ideology = neutrality popularity = 0.125
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_pass_redistribution_laws
+		icon = self_management
+
+		x = -1
+		y = 2
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_draft_a_republican_constitution
+			focus = FRA_draft_a_liberal_constitution
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_pass_national_security_laws
+		icon = tanks2
+
+		x = 1
+		y = 2
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_draft_a_liberal_constitution
+			focus = FRA_draft_a_reactionary_constitution
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_join_the_barcelona_agreement
+		icon = communism2
+
+		x = -2
+		y = 3
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 8
+		
+		prerequisite = {
+			focus = FRA_draft_a_republican_constitution
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			is_in_faction = no
+			SPR = {
+				has_government = communism
+				is_subject = no
+				is_faction_leader = yes
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SPR = {
+				country_event = spain.2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_ally_portugal
+		icon = neutrality
+
+		x = 2
+		y = 3
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_draft_a_reactionary_constitution
+		}
+		mutually_exclusive = {}
+		available = {
+			is_in_faction = no
+			POR = {
+				exists = yes
+				is_in_faction = no
+			}
+		}
+		bypass = {
+			OR = {
+				is_in_faction = yes
+				POR = { exists = no }
+				POR = { is_in_faction = yes }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = alliance_francaise
+			POR = { country_event = generic.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_challenge_the_habsburgs
+		icon = anti_monarchism
+
+		x = -1
+		y = 4
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 11
+		
+		prerequisite = {
+			focus = FRA_join_the_barcelona_agreement
+		}
+		prerequisite = {
+			focus = FRA_pass_redistribution_laws
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = AUS
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_anti_communist_crusade
+		icon = anti_communism
+
+		x = 1
+		y = 4
+		relative_position_id = FRA_call_the_grand_assembly
+
+		cost = 11
+		
+		prerequisite = {
+			focus = FRA_pass_national_security_laws
+		}
+		prerequisite = {
+			focus = FRA_ally_portugal
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				every_neighbor_country = {
+					limit = { has_government = communism }
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = puppet_wargoal_focus
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = "Grants a wargoal against every neighboring communist country."
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reassure the Entente
+	focus = {
+		id = FRA_reassure_the_entente
+		icon = align_with_france
+
+		x = 15
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = FRA_abandon_the_entente
+		}
+		available = {
+			NOT = {
+				has_completed_focus = FRA_draft_a_reactionary_constitution
+				has_completed_focus = FRA_draft_a_republican_constitution
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = diplomatic_protection
+				}
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 40
+		}
+	}
+	focus = {
+		id = FRA_turn_over_st_pierre
+		icon = forceful_treaty
+
+		x = -1
+		y = 1
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_reassure_the_entente
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = democratic
+			is_faction_leader = yes
+			has_full_control_of_state = 730
+			CAN = {
+				exists = yes
+				has_government = democratic
+				is_in_faction_with = ROOT
+				has_full_control_of_state = 331
+				has_full_control_of_state = 464
+			}
+		}
+		bypass = {
+			CAN = { 
+				has_full_control_of_state = 730
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CAN = {
+				add_opinion_modifier = { target = ROOT modifier = territorial_transfer }
+			}
+			CAN = {
+				transfer_state = 730
+				add_state_core = 730
+			}
+			remove_state_core = 730
+			remove_state_claim = 730
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_entente_attaches
+		icon = military_mission
+
+		x = 1
+		y = 1
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_reassure_the_entente
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			has_government = democratic
+			is_faction_leader = yes
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				country_event = france.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_claudel_plan
+		icon = alliance
+
+		x = 0
+		y = 2
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_entente_attaches
+		}
+		mutually_exclusive = {
+			focus = FRA_maginot_plan
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			every_country = {
+				limit = {
+					NOT = { has_war_with = FRA }
+					is_in_faction = no
+					is_subject = no
+					has_government = democratic
+					OR = {
+						original_tag = HOL
+						original_tag = WES
+						original_tag = HES
+					}
+				}
+				country_event = { id = france.6 hours = 3 }
+			}
+			if = {
+				limit = {
+					any_country = { 
+						original_tag = BAD 
+						exists = yes 
+						is_subject = no 
+						is_in_faction = no 
+						has_government = democratic
+					}
+				}
+				every_country = {
+					limit = {
+						original_tag = BAD exists = yes is_subject = no is_in_faction = no has_government = democratic
+					}
+					country_event = { id = generic.1 hours = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_maginot_plan
+		icon = military_fort
+
+		x = 2
+		y = 2
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_entente_attaches
+		}
+		mutually_exclusive = {
+			focus = FRA_claudel_plan
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.075
+			add_ideas = defensive_preparations
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_invite_ireland
+		icon = align_with_ireland
+
+		x = 0
+		y = 3
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 8
+		
+		prerequisite = {
+			focus = FRA_claudel_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			is_faction_leader = yes
+			is_subject = no
+			has_government = democratic
+			IRE = {
+				exists = yes
+				is_in_faction = no
+				has_government = democratic
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {
+			IRE = { is_in_faction = yes }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			IRE = { country_event = generic.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_invite_sweden
+		icon = align_with_sweden
+
+		x = 2
+		y = 3
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 8
+		
+		prerequisite = {
+			focus = FRA_maginot_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			is_faction_leader = yes
+			is_subject = no
+			has_government = democratic
+			SWE = {
+				exists = yes
+				is_in_faction = no
+				has_government = democratic
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {
+			SWE = { is_in_faction = yes }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SWE = { country_event = generic.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_invite_greece
+		icon = align_with_greece
+
+		x = 1
+		y = 4
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 8
+		
+		prerequisite = {
+			focus = FRA_invite_ireland
+			focus = FRA_invite_sweden
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			is_faction_leader = yes
+			has_government = democratic
+			GRE = {
+				is_subject = no
+				has_government = democratic
+			}
+		}
+		bypass = {
+			OR = {
+				GRE = { NOT = { has_government = democratic } }
+				GRE = { is_in_faction = yes }
+				GRE = { is_subject = yes }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			GRE = { country_event = generic.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_north_american_partnership
+		icon = major_alliance
+
+		x = 0
+		y = 5
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_invite_ireland
+		}
+		mutually_exclusive = {}
+		available = {
+			USA = { is_in_faction_with = ROOT }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					exists = yes
+					OR = {
+						original_tag = CAN
+						original_tag = USA
+						original_tag = NAT
+						original_tag = CAL
+						original_tag = TEX
+						original_tag = MEX
+						original_tag = CUB
+						original_tag = HAI
+						original_tag = GUA
+						original_tag = NIC
+						original_tag = ELS
+						original_tag = COS
+						original_tag = PAN
+					}
+					OR = {
+						is_in_faction = no
+						is_in_faction_with = ROOT
+					}
+					has_government = democratic
+					is_subject = no
+					OR = {
+						has_war = no
+						has_war_together_with = ROOT
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT modifier = diplomatic_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_german_partnership
+		icon = major_alliance
+
+		x = 2
+		y = 5
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_invite_sweden
+		}
+		mutually_exclusive = {}
+		available = {
+			PRS = { is_in_faction_with = ROOT }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					exists = yes
+					OR = {
+						is_minor_german_state = yes
+						original_tag = PRS
+						original_tag = AUS
+						original_tag = SWI
+					}
+					OR = {
+						is_in_faction = no
+						is_in_faction_with = ROOT
+					}
+					has_government = democratic
+					is_subject = no
+					OR = {
+						has_war = no
+						has_war_together_with = ROOT
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT modifier = diplomatic_friendship
+				}
+			}
+			add_tech_bonus = {
+				category = armor
+				uses = 3
+				bonus = 0.6
+			}
+			add_tech_bonus = {
+				category = land_doctrine
+				uses = 2
+				bonus = 0.5
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_american_innovations
+		icon = research
+
+		x = -1
+		y = 6
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_turn_over_st_pierre
+		}
+		prerequisite = {
+			focus = FRA_north_american_partnership
+		}
+		mutually_exclusive = {}
+		available = {
+			is_faction_leader = yes
+			is_in_faction_with = USA
+			USA = {
+				OR = {
+					has_completed_focus = USA_expand_the_ranger_corps
+					has_completed_focus = USA_expand_the_marine_corps
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_badener_mountaineers
+		icon = infantry_axis
+
+		x = 3
+		y = 6
+		relative_position_id = FRA_reassure_the_entente
+
+		cost = 6
+		
+		prerequisite = {
+			focus = FRA_german_partnership
+			focus = FRA_construct_the_barthou_line
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				is_in_faction_with = BAD
+				has_full_control_of_state = 50
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = mountaineers_tech
+				bonus = 0.75
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reassure the Entente
+	focus = {
+		id = FRA_abandon_the_entente
+		icon = renounce_treaty
+
+		x = 19
+		y = 0
+
+		cost = 16
+		
+		prerequisite = {}
+		mutually_exclusive = {
+			focus = FRA_reassure_the_entente
+		}
+		available = {
+			NOT = {
+				has_completed_focus = FRA_draft_a_liberal_constitution
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				news_event = { id = france_news.2 hours = 2 }
+			}
+			if = {
+				limit = { 
+					NOT = { is_in_faction_with = USA }
+				}
+				CAN = { create_faction = reformed_entente }
+				every_country = {
+					limit = {
+						is_in_faction_with = FRA
+						NOT = { original_tag = FRA original_tag = CAN }
+					}
+					CAN = { add_to_faction = PREV }
+				}
+				CAN = { country_event = france.4 }
+			}
+			if = {
+				limit = { 
+					is_in_faction_with = USA
+				}
+				USA = { create_faction = reformed_entente }
+				every_country = {
+					limit = {
+						is_in_faction_with = FRA
+						NOT = { original_tag = FRA original_tag = USA }
+					}
+					USA = { add_to_faction = PREV }
+				}
+				USA = { country_event = france.4 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_construct_the_barthou_line
+		icon = city_fort
+
+		x = -1
+		y = 1
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_abandon_the_entente
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 35
+			has_full_control_of_state = 51
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						is_in_faction_with = FRA
+						has_war_with = FRA
+					}
+					OR = {
+						controls_state = 57
+						controls_state = 36
+						controls_state = 7
+						owns_state = 57
+						owns_state = 36
+						owns_state = 7
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = border_fortifications_negative
+				}
+			}
+			35 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9498 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 11456 }
+			}
+			51 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3444 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 587 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3547 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_construct_the_maginot_line
+		icon = city_fort
+
+		x = 1
+		y = 1
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_abandon_the_entente
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 42
+			has_full_control_of_state = 28
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						is_in_faction_with = FRA
+						has_war_with = FRA
+					}
+					OR = {
+						controls_state = 50
+						controls_state = 55
+						owns_state = 50
+						owns_state = 55
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = border_fortifications_negative
+				}
+			}
+			42 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 11494 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3423 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 11560 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3558 }
+			}
+			28 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 549 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9503 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 6529 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 678 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_expand_the_defensive_plan
+		icon = defense
+
+		x = 0
+		y = 2
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_construct_the_barthou_line
+		}
+		prerequisite = {
+			focus = FRA_construct_the_maginot_line
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = defensive_preparations
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = generic_fortification_engineer
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_construct_the_pichon_line
+		icon = city_fort
+
+		x = 0
+		y = 3
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_expand_the_defensive_plan
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 735
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						is_in_faction_with = FRA
+						has_war_with = FRA
+					}
+					OR = {
+						controls_state = 158
+						owns_state = 158
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = border_fortifications_negative
+				}
+			}
+			735 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 778 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9745 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 764 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3764 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 6975 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3959 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9909 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_savoyan_tankworks
+		icon = tanks
+
+		x = 1
+		y = 4
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_construct_the_pichon_line
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				bonus = 0.6
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_construct_the_bonnevay_line
+		icon = city_fort
+
+		x = 0
+		y = 5
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_construct_the_pichon_line
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 31
+			has_full_control_of_state = 19
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						is_in_faction_with = FRA
+						has_war_with = FRA
+					}
+					OR = {
+						controls_state = 165
+						controls_state = 166
+						controls_state = 172
+						owns_state = 165
+						owns_state = 166
+						owns_state = 172
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = border_fortifications_negative
+				}
+			}
+			19 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 743 }
+			}
+			31 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 11697 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9884 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9882 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3915 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 6931 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 6915 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9853 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_toulouse_radars
+		icon = radar
+
+		x = 1
+		y = 6
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_savoyan_tankworks
+		}
+		prerequisite = {
+			focus = FRA_construct_the_bonnevay_line
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 3
+				category = radar_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_construct_the_millerand_line
+		icon = city_fort
+
+		x = 0
+		y = 7
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_construct_the_bonnevay_line
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 17
+			has_full_control_of_state = 20
+			has_full_control_of_state = 735
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						is_in_faction_with = FRA
+						has_war_with = FRA
+					}
+					OR = {
+						controls_state = 3
+						owns_state = 3
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = border_fortifications_negative
+				}
+			}
+			17 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 698 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3666 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 3646 }
+			}
+			20 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 6668 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 6639 }
+			}
+			735 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9603 }
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 11573 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = FRA_mobilize_the_national_militias
+		icon = entente
+
+		x = 1
+		y = 8
+		relative_position_id = FRA_abandon_the_entente
+
+		cost = 10
+		
+		prerequisite = {
+			focus = FRA_toulouse_radars
+		}
+		prerequisite = {
+			focus = FRA_construct_the_millerand_line
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = militarism
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
