@@ -37,7 +37,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-				bonus = 0.5
+				cost_reduction = 0.5
 				category = land_doctrine
 			}
 		}
@@ -70,7 +70,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-				bonus = 0.5
+				cost_reduction = 0.5
 				category = cat_trade_interdiction
 			}
 			add_tech_bonus = {
@@ -560,7 +560,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			add_doctrine_cost_reduction = {
-				bonus = 0.75
+				cost_reduction = 0.75
 				category = cat_mobile_warfare
 				category = cat_superior_firepower
 			}
@@ -2071,7 +2071,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = 0.05 }
 			add_doctrine_cost_reduction = {
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}

@@ -451,11 +451,11 @@ focus_tree = {
 				category = cv_tech
 				bonus = 0.5
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				uses = 2
 				category = cat_fleet_in_being
 				category = cat_base_strike
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 		}
 
@@ -495,10 +495,10 @@ focus_tree = {
 				category = dd_tech
 				bonus = 0.5
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				uses = 2
 				category = cat_trade_interdiction
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 		}
 
@@ -531,10 +531,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				uses = 2
 				category = land_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 		}
 
@@ -571,10 +571,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				uses = 2
 				category = naval_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 		}
 
@@ -653,11 +653,11 @@ focus_tree = {
 			add_ideas = elite_army
 			army_experience = 20
 			add_command_power = 50
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				uses = 2
 				category = cat_superior_firepower
 				category = cat_mobile_warfare
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 		}
 
@@ -692,11 +692,11 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = grand_army
 			army_experience = 50
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				uses = 2
 				category = cat_mass_assault
 				category = cat_grand_battle_plan
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 		}
 

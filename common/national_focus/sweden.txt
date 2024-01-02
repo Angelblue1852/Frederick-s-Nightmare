@@ -275,9 +275,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = air_doctrine
-				bonus = 0.75
+				cost_reduction = 0.75
 			}
 		}
 
@@ -744,9 +744,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = -0.02 }
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = land_doctrine
-				bonus = 0.75
+				cost_reduction = 0.75
 			}
 		}
 
@@ -822,9 +822,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = naval_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 			create_random_factory_NAV_1 = yes
 			create_random_factory_NAV_1 = yes

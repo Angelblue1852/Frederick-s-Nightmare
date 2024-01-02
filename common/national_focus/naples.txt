@@ -131,8 +131,8 @@ focus_tree = {
 			show_ideas_tooltip = generic_mobile_warfare_theorist
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = generic_grand_battleplan_theorist
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 				category = air_doctrine
@@ -273,8 +273,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.75
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
 				uses = 2
 				category = land_doctrine
 			}

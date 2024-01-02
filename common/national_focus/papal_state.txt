@@ -1318,9 +1318,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = land_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 			}
 		}

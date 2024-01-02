@@ -1980,10 +1980,10 @@ focus_tree = {
 				uses = 3
 				bonus = 0.6
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = land_doctrine
 				uses = 2
-				bonus = 0.5
+				cost_reduction = 0.5
 			}
 		}
 

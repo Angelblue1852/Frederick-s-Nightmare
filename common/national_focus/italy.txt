@@ -204,9 +204,9 @@ focus_tree = {
 
 		completion_reward = {
 			colonial_upkeep_downgrade = yes
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = naval_doctrine
-				bonus = 0.4
+				cost_reduction = 0.4
 				uses = 2
 			}
 		}
@@ -1819,10 +1819,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = land_doctrine
 				uses = 2
-				bonus = 0.75
+				cost_reduction = 0.75
 			}
 		}
 
@@ -2142,7 +2142,11 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 25
-			add_tech_bonus = { category = naval_doctrine uses = 1 bonus = 0.5 }
+			add_doctrine_cost_reduction = {
+				category = naval_doctrine
+				uses = 1
+				cost_reduction = 0.5
+			}
 		}
 
 		ai_will_do = {
@@ -2172,7 +2176,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = { category = ss_tech uses = 2 bonus = 0.75 }
+			add_tech_bonus = {
+				category = ss_tech
+				uses = 2
+				bonus = 0.75
+			}
 		}
 
 		ai_will_do = {
@@ -2238,7 +2246,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = { category = naval_doctrine uses = 1 bonus = 0.5 }
+			add_doctrine_cost_reduction = {
+				category = naval_doctrine
+				uses = 1
+				cost_reduction = 0.5
+			}
 		}
 
 		ai_will_do = {
@@ -2268,7 +2280,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = { category = cv_tech uses = 2 bonus = 0.6 }
+			add_tech_bonus = {
+				category = cv_tech
+				uses = 2
+				bonus = 0.6
+			}
 		}
 
 		ai_will_do = {
