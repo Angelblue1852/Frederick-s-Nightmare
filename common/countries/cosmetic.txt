@@ -1,37 +1,37 @@
 
 MAL_UK = {
-	color = rgb { 147 88 106 }
-	color_ui = rgb { 147 88 106 }
+	color = rgb { 187 88 90 }
+	color_ui = rgb { 187 88 90 }
 }
 
 AST_UK = {
-	color = rgb { 147 88 106 }
-	color_ui = rgb { 147 88 106 }
+	color = rgb { 187 88 90 }
+	color_ui = rgb { 187 88 90 }
 }
 
 WTR_UK = {
-	color = rgb { 147 88 106 }
-	color_ui = rgb { 147 88 106 }
+	color = rgb { 187 88 90 }
+	color_ui = rgb { 187 88 90 }
 }
 
 BRM_UK = {
-	color = rgb { 147 88 106 }
-	color_ui = rgb { 147 88 106 }
+	color = rgb { 187 88 90 }
+	color_ui = rgb { 187 88 90 }
 }
 
 RAJ_UK = {
-	color = rgb { 147 88 106 }
-	color_ui = rgb { 147 88 106 }
+	color = rgb { 187 88 90 }
+	color_ui = rgb { 187 88 90 }
 }
 
 SRL_UK = {
-	color = rgb { 147 88 106 }
-	color_ui = rgb { 147 88 106 }
+	color = rgb { 187 88 90 }
+	color_ui = rgb { 187 88 90 }
 }
 
 NIR_UK = {
-	color = rgb { 147 88 106 }
-	color_ui = rgb { 147 88 106 }
+	color = rgb { 187 88 90 }
+	color_ui = rgb { 187 88 90 }
 }
 
 SOU_AA = {
@@ -172,23 +172,28 @@ russian_puppet = {
 
 
 CHI_JAP = {
-	color = rgb { 145 50 0 }
-	color_ui = rgb { 145 50 0 }
+	color = rgb { 135 70 80 }
+	color_ui = rgb { 135 70 80 }
 }
 
 XSM_JAP = {
-	color = rgb { 200 120 70 }
-	color_ui = rgb { 200 120 70 }
+	color = rgb { 135 100 125 }
+	color_ui = rgb { 135 100 125 }
 }
 
 MAN_JAP = {
-	color = rgb { 145 62 55 }
-	color_ui = rgb { 145 62 55 }
+	color = rgb { 122 82 96 }
+	color_ui = rgb { 122 82 96 }
+}
+
+MEN_JAP = {
+	color = rgb { 125 90 90 }
+	color_ui = rgb { 125 90 90 }
 }
 
 MAL_JAP = {
-	color = rgb { 155 70 0 }
-	color_ui = rgb { 155 70 0 }
+	color = rgb { 152 92 116 }
+	color_ui = rgb { 152 92 116 }
 }
 
 BYA_JAP = {
