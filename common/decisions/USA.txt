@@ -1,0 +1,80 @@
+USA_decisions = {
+
+	lessons_from_apartheid = {
+		
+		icon = DI_nationalism
+		
+		cost = 25
+		
+		allowed = { original_tag = USA }
+		visible = {
+			has_government = fascism
+		}
+		
+		available = {
+			has_government = fascism
+			is_puppet = no
+			SAF = {
+				OR = {
+					is_puppet = no
+					is_puppet_of = USA
+				}
+				has_government = fascism
+				NOT = { has_war_with = USA }
+			}
+		}
+		
+		complete_effect = {
+			add_opinion_modifier = {
+				target = SAF modifier = fascistic_partnership
+			}
+			reverse_add_opinion_modifier = {
+				target = SAF modifier = fascistic_partnership
+			}
+		}
+	
+		ai_will_do = {
+			base = 20
+		}
+		
+	}
+	
+	offer_statehood_to_texas = {
+		
+		icon = DI_border_war
+		
+		cost = 150
+		
+		allowed = { original_tag = USA }
+		visible = {
+			TEX = { exists = yes }
+		}
+		available = {
+			is_puppet = no
+			TEX = { has_same_ideology = yes }
+			TEX = {
+				OR = { is_puppet = no is_puppet_of = ROOT }
+			}
+			NOT = { has_war_with = TEX }
+			has_offensive_war = no
+			TEX = { has_war = no }
+			OR = {
+				has_completed_focus = USA_offer_statehood_to_california
+				has_completed_focus = USA_anti_mexican_policy
+				is_neighbor_of = TEX
+			}
+		}
+		
+		complete_effect = {
+			TEX = { 
+				country_event = { id = usa.15 hours = 5 }
+			}
+		}
+	
+		ai_will_do = {
+			base = 15
+		}
+		
+	}
+
+}

@@ -24,6 +24,20 @@ recruit_character = BAY_prince_franz
 
 
 
+AUS = {
+    if = {
+        limit = {
+            has_dlc = "Together for Victory"
+        }
+        set_autonomy = {
+            target = BAY
+            autonomous_state = autonomy_dominion
+        }
+    }
+    else = {
+        puppet = BAY
+    }
+}
 
 set_war_support = 0.1
 set_convoys = 20

@@ -1,0 +1,42 @@
+#Category allowed for JAP
+JAP_fengtian_war = {
+	JAP_fengtian_deadline = {
+		available =  {
+			OR = {
+				NOT = {
+					has_war_with = MAN 
+				}
+				MAN = {
+					exists = no
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					has_war_with = MAN 
+				}
+				MAN = {
+					exists = no
+				}
+			}
+		}
+		icon = mission_icon     
+		is_good = no
+		days_mission_timeout = 120
+		complete_effect = {
+			
+		}
+		timeout_effect = {
+			white_peace = {
+				tag = MAN
+			}
+			MAN = {
+				annex_country = {
+					target = MEN
+					transfer_troops = no
+				}
+			}
+		}
+	}	
+}

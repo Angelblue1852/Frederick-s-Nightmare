@@ -56,6 +56,11 @@ if = {
 	}
 }
 
+set_variable = {
+    var = france_jcaz_influence
+    value = 3
+}
+
 set_research_slots = 3
 set_stability = 0.5
 add_command_power = 20

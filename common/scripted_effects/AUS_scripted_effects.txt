@@ -1,0 +1,24 @@
+croatian_appeasement = {
+}
+croatian_DFI_decrease_by_1 = {
+}
+croatian_DFI_decrease_by_2 = {
+}
+croatian_DFI_decrease_by_3 = {
+}
+croatian_DFI_decrease_by_5 = {
+}
+croatian_DFI_decrease_by_10 = {
+}
+croatian_DFI_increase_by_1 = {
+}
+croatian_DFI_increase_by_2 = {
+}
+croatian_DFI_increase_by_3 = {
+}
+croatian_DFI_increase_by_5 = {
+}
+croatian_DFI_increase_by_10 = {
+}
+croatian_uprising = {
+}

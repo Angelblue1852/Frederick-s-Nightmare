@@ -228,3 +228,11 @@
  PHI_JAP_subject_DEF:0 "the First Philippine Republic"
  PHI_JAP_subject_ADJ:0 "Philippine"
  
+ ##JCAZ Puppets
+ RAJ_JCAZ:0 "Jabalpur JCEZ"
+ RAJ_JCAZ_DEF:0 "the Jabalpur Joint Colonial Economic Zone"
+ HYD_JCAZ:0 "Hyderabad AEZ"
+ HYD_JCAZ_DEF:0 "the Hyderabad Autonomous Economic Zone"
+ SRL_JCAZ:0 "Madras JCEZ"
+ SRL_JCAZ_DEF:0 "the Madras Joint Colonial Economic Zone"
+ 

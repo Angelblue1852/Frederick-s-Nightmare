@@ -13,6 +13,11 @@ add_ideas = {
 	vielvoelkerstaat
 }
 
+set_variable = {
+    var = austria_jcaz_influence
+    value = 0
+}
+
 recruit_character = AUS_franz_ferdinand
 recruit_character = AUS_alfred_jansa
 recruit_character = AUS_alois_hartenstein

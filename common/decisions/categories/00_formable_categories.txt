@@ -1,0 +1,30 @@
+form_germany_category = {
+	icon = DCI_GER
+	picture = DCP_hre
+	allowed = {
+		OR = { original_tag = PRS original_tag = AUS is_minor_german_state = yes }
+	}
+	visible = {
+		OR = { original_tag = PRS original_tag = AUS is_minor_german_state = yes }
+	}
+}
+form_scandinavia_category = {
+	icon = DCI_scandinavia
+	picture = DCP_scandinavia
+	allowed = {
+		OR = { original_tag = DEN original_tag = ICE original_tag = SWE original_tag = NOR }
+	}
+	visible = {
+		OR = { original_tag = DEN original_tag = ICE original_tag = SWE original_tag = NOR }
+	}
+}
+form_yugoslavia_category = {
+	icon = DCI_monarchism
+	picture = DCP_yugoslavia
+	allowed = {
+		OR = { original_tag = CRO original_tag = SER original_tag = MNT }
+	}
+	visible = {
+		OR = { original_tag = CRO original_tag = SER original_tag = MNT }
+	}
+}

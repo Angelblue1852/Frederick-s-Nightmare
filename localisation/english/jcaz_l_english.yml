@@ -1,0 +1,33 @@
+﻿l_english:
+ 
+ jcaz_influence_01:0 "Joint Colonial Economic Zone"
+ jcaz_influence_02:0 "Joint Colonial Economic Zone"
+ jcaz_influence_03:0 "Joint Colonial Economic Zone"
+ jcaz_influence_04:0 "Joint Colonial Economic Zone"
+ jcaz_influence_05:0 "Joint Colonial Economic Zone"
+ jcaz_influence_06:0 "Joint Colonial Economic Zone"
+ jcaz_influence_07:0 "Joint Colonial Economic Zone"
+ jcaz_influence_08:0 "Joint Colonial Economic Zone"
+ jcaz_influence_01_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ jcaz_influence_02_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ jcaz_influence_03_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ jcaz_influence_04_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ jcaz_influence_05_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ jcaz_influence_06_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ jcaz_influence_07_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ jcaz_influence_08_desc:0 "§YFrench Influence§!: [france_jcaz_level]\n§YBritish Influence§!: [britain_jcaz_level]\n§YRussian Influence§!: [russia_jcaz_level]\n§YPrussian Influence§!: [prussia_jcaz_level]\n§YPortugese Influence§!: [portugal_jcaz_level]\n§YSpainish Influence§!: [spain_jcaz_level]\n§YAustrian Influence§!: [austria_jcaz_level]\n§YOttoman Influence§!: [ottoman_jcaz_level]"
+ 
+ 
+ 
+ jcaz_level_none:0 "§GInconsequential§!"
+ jcaz_level_small:0 "§YMinor§!"
+ jcaz_level_medium:0 "§OModerate§!"
+ jcaz_level_large:0 "§RSignificant§!"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

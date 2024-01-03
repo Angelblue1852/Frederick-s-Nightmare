@@ -1,0 +1,271 @@
+create_random_air_base_1 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_building_construction = {
+			type = air_base
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+create_random_air_base_2 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 1
+				include_locked = yes
+			}
+		}
+		add_building_construction = {
+			type = air_base
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+create_random_air_base_3 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 2
+				include_locked = yes
+			}
+		}
+		add_building_construction = {
+			type = air_base
+			level = 3
+			instant_build = yes
+		}
+	}
+}
+
+create_random_building_slot_1 = {
+	random_owned_state = {
+		add_extra_state_shared_building_slots = 1
+	}
+}
+create_random_building_slot_2 = {
+	random_owned_state = {
+		add_extra_state_shared_building_slots = 2
+	}
+}
+
+create_random_factory_CIV_1 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+create_random_factory_CIV_2 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 1
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+
+create_random_factory_MIL_1 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = arms_factory
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+create_random_factory_MIL_2 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = arms_factory
+				size > 1
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+
+create_random_factory_NAV_1 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = dockyard
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+create_random_factory_NAV_2 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = dockyard
+				size > 1
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+
+create_random_infrastructure_1 = {
+	random_owned_state = {
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+create_random_infrastructure_2 = {
+	random_owned_state = {
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+create_random_infrastructure_3 = {
+	random_owned_state = {
+		add_building_construction = {
+			type = infrastructure
+			level = 3
+			instant_build = yes
+		}
+	}
+}
+create_random_infrastructure_4 = {
+	random_owned_state = {
+		add_building_construction = {
+			type = infrastructure
+			level = 4
+			instant_build = yes
+		}
+	}
+}
+
+create_random_radar_station_1 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = radar_station
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = radar_station
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+create_random_radar_station_2 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = radar_station
+				size > 1
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = radar_station
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+
+create_random_refinery_1 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = synthetic_refinery
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = synthetic_refinery
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+create_random_refinery_2 = {
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = synthetic_refinery
+				size > 1
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = synthetic_refinery
+			level = 2
+			instant_build = yes
+		}
+	}
+}

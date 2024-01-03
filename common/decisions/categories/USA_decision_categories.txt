@@ -1,0 +1,9 @@
+USA_decisions = {
+	icon = DCI_USA
+	allowed = {
+		original_tag = USA
+	}
+	visible = {
+		original_tag = USA
+	}
+}

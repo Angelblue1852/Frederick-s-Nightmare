@@ -1,0 +1,110 @@
+################
+##### AUS ######
+################
+
+#Independence Movement in Croatia
+croatian_separatists = {
+	icon = DCI_politics
+	allowed = {
+		CRO = { exists = no }
+	}
+	visible = { 
+		OR = {
+			original_tag = AUS
+			is_neighbor_of = AUS
+			is_major = yes
+		}
+	}
+}
+#Independence Movement in Bohemia
+czech_separatists = {
+	icon = DCI_politics
+	allowed = {
+		CZE = { exists = no }
+	}
+	visible = { 
+		OR = {
+			original_tag = AUS
+			is_neighbor_of = AUS
+			is_major = yes
+		}
+	}
+}
+hungarian_separatists = {
+	icon = DCI_politics
+	allowed = {
+		HUN = { exists = no }
+	}
+	visible = { 
+		OR = {
+			original_tag = AUS
+			is_neighbor_of = AUS
+			is_major = yes
+		}
+	}
+}
+#Independence Movement in Slovakia
+slovak_separatists = {
+	icon = DCI_politics
+	allowed = {
+		SLO = { exists = no }
+	}
+	visible = { 
+		OR = {
+			original_tag = AUS
+			is_neighbor_of = AUS
+			is_major = yes
+		}
+	}
+}
+#Separatist Movement in Italy
+italian_insurgency_in_austria = {
+	icon = DCI_politics
+	allowed = {
+	}
+	visible = { 
+		any_state = {
+			is_owned_by = AUS
+			is_core_of = ITA
+		}
+		OR = {
+			original_tag = AUS
+			is_neighbor_of = AUS
+			is_major = yes
+		}
+	}
+}
+#Separatist Movement in Poland
+polish_insurgency_in_austria = {
+	icon = DCI_politics
+	allowed = {
+	}
+	visible = { 
+		any_state = {
+			is_owned_by = AUS
+			is_core_of = POL
+		}
+		OR = {
+			original_tag = AUS
+			is_neighbor_of = AUS
+			is_major = yes
+		}
+	}
+}
+#Separatist Movement in Romania
+romanian_insurgency_in_austria = {
+	icon = DCI_politics
+	allowed = {
+	}
+	visible = { 
+		any_state = {
+			is_owned_by = AUS
+			is_core_of = ROM
+		}
+		OR = {
+			original_tag = AUS
+			is_neighbor_of = AUS
+			is_major = yes
+		}
+	}
+}

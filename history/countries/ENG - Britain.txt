@@ -64,6 +64,11 @@ if = {
 	}
 }
 
+set_variable = {
+    var = britain_jcaz_influence
+    value = 3
+}
+
 
 set_research_slots = 4
 

@@ -1,0 +1,199 @@
+diplomatic_decisions = {
+	
+	seek_friendship_of_neighbor = {
+	
+		icon = DI_nationalism
+	
+		allowed = { always = yes }
+		visible = { always = yes }
+
+		target_trigger = {
+			exists = yes
+			FROM = { is_neighbor_of = ROOT }
+		}
+		
+		available = {
+			FROM = { has_similar_ideology = yes }
+			FROM = { NOT = { has_war_with = ROOT } }
+			FROM = {
+				OR = { is_puppet = no is_puppet_of = ROOT }
+			}
+			has_opinion = { target = FROM value > 0 }
+			FROM = {
+				has_opinion = { target = ROOT value > 0 }
+			}
+		}
+		
+		complete_effect = {
+			FROM = {
+				add_opinion_modifier = { target = ROOT modifier = diplomatic_friendship }
+			}
+			if = {
+				limit = { FROM = { has_government = communism } }
+				add_popularity = { ideology = communism popularity = 0.03 }
+			}
+			if = {
+				limit = { FROM = { has_government = democratic } }
+				add_popularity = { ideology = democratic popularity = 0.03 }
+			}
+			if = {
+				limit = { FROM = { has_government = neutrality } }
+				add_popularity = { ideology = neutrality popularity = 0.03 }
+			}
+			if = {
+				limit = { FROM = { has_government = fascism } }
+				add_popularity = { ideology = fascism popularity = 0.03 }
+			}
+		}
+		
+		cost = 20
+		fire_only_once = yes
+	
+	}
+	
+	propaganda_against_neighbor = {
+	
+		icon = DI_civil_support
+	
+		allowed = { always = yes }
+		visible = { always = yes }
+
+		target_trigger = {
+			exists = yes
+			FROM = { is_neighbor_of = ROOT }
+		}
+		
+		available = {
+			NOT = { has_war_with = FROM }
+			NOT = { has_idea = diplomatic_neutrality }
+			NOT = { has_idea = disarmed_nation }
+			is_puppet = no
+			FROM = {
+				OR = { is_puppet = no NOT = { is_puppet_of = ROOT } }
+			}
+			NOT = { is_in_faction_with = FROM }
+			
+			#Ideology Clause
+			OR = {
+				has_government = fascism
+				NOT = { FROM = { has_same_ideology = yes } }
+				threat > 0.5
+			}
+			
+			#Relation Clause
+			OR = {
+				has_opinion = { target = FROM value < -19 }
+				AND = {
+					threat > 0.1
+					has_opinion = { target = FROM value < -14 }
+				}
+				AND = {
+					threat > 0.2
+					has_opinion = { target = FROM value < -9 }
+				}
+				AND = {
+					threat > 0.3
+					has_opinion = { target = FROM value < -4 }
+				}
+				AND = {
+					threat > 0.4
+					has_opinion = { target = FROM value < 1 }
+				}
+				AND = {
+					threat > 0.5
+					has_opinion = { target = FROM value < 6 }
+				}
+				AND = {
+					threat > 0.6
+					has_opinion = { target = FROM value < 11 }
+				}
+			}
+			
+			#Doctrine Clause
+			OR = {
+				AND = {
+					has_idea = jingoism
+					OR = {
+						FROM = { ic_ratio = { tag = ROOT ratio > 0.5 } }
+						threat > 0.2
+					}
+				}
+				AND = {
+					has_idea = assertiveness
+					threat > 0.15
+					OR = {
+						FROM = { has_offensive_war = yes }
+						any_country = {
+							is_guaranteed_by = ROOT
+							is_neighbor_of = FROM
+						}
+					}
+				}
+				AND = {
+					has_idea = diplomatic_solidarity
+					threat > 0.3
+					OR = {
+						FROM = { has_offensive_war = yes }
+						FROM = { has_added_tension_amount > 5 }
+					}
+				}
+				AND = {
+					has_idea = pacifism
+					threat > 0.45
+					FROM = { has_offensive_war = yes }
+				}
+			}
+		}
+		
+		complete_effect = {
+			add_war_support = 0.01
+			add_named_threat = {
+				threat = 0.5
+				name = "Propaganda against Neighbor"
+			}	
+		}
+		
+		cost = 125
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			base = 1
+			#
+			modifier = { add = 4 has_government = fascism }
+			modifier = { add = 2 has_government = neutrality }
+			modifier = { add = 1 has_government = communism }
+			modifier = { add = -1 has_government = democratic }
+			#
+			modifier = { add = 1 has_opinion = { target = FROM value < -70 } }
+			modifier = { add = 1 has_opinion = { target = FROM value < -60 } }
+			modifier = { add = 1 has_opinion = { target = FROM value < -50 } }
+			modifier = { add = 1 has_opinion = { target = FROM value < -40 } }
+			modifier = { add = 1 has_opinion = { target = FROM value < -30 } }
+			modifier = { add = 1 has_opinion = { target = FROM value < -20 } }
+			modifier = { add = 1 has_opinion = { target = FROM value < -10 } }
+			modifier = { add = 1 has_opinion = { target = FROM value < 0 } }
+			modifier = { add = -1 has_opinion = { target = FROM value > 10 } }
+			modifier = { add = -1 has_opinion = { target = FROM value > 20 } }
+			modifier = { add = -1 has_opinion = { target = FROM value > 30 } }
+			modifier = { add = -1 has_opinion = { target = FROM value > 40 } }
+			modifier = { add = -1 has_opinion = { target = FROM value > 50 } }
+			modifier = { add = -1 has_opinion = { target = FROM value > 60 } }
+			modifier = { add = -1 has_opinion = { target = FROM value > 70 } }
+			#
+			modifier = { add = -1 has_idea = libertarian_trade }
+			modifier = { add = -1 has_idea = secularism }
+			modifier = { add = -1 has_idea = pluralism }
+			modifier = { add = -1 has_idea = diplomatic_solidarity }
+			modifier = { add = -3 has_idea = pacifism }
+			#
+			modifier = { add = 1 threat > 0.15 }
+			modifier = { add = 1 threat > 0.3 }
+			modifier = { add = 1 threat > 0.45 }
+			modifier = { add = 1 threat > 0.6 }
+			modifier = { add = 1 threat > 0.75 }
+		}
+	
+	}
+	
+}

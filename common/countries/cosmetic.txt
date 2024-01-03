@@ -200,3 +200,20 @@ YAK_JAP = {
 	color = rgb { 65 65 170 }
 	color_ui = rgb { 65 65 170 }
 }
+
+
+
+RAJ_JCAZ = {
+	color = rgb { 120 120 120 }
+	color_ui = rgb { 120 120 120 }
+}
+
+HYD_JCAZ = {
+	color = rgb { 145 145 145 }
+	color_ui = rgb { 145 145 145 }
+}
+
+SRL_JCAZ = {
+	color = rgb { 145 145 145 }
+	color_ui = rgb { 145 145 145 }
+}

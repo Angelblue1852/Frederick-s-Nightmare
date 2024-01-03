@@ -1,0 +1,10 @@
+NAP_italian_unity = {
+	icon = DCI_tank
+	picture = DCP_supply_depot
+	allowed = {
+		original_tag = NAP
+	}
+	visible = {
+		has_completed_focus = NAP_pan_italian_ambition
+	}
+}

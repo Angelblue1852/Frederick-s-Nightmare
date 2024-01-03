@@ -1,0 +1,10 @@
+ITA_pci_divided_decisions = {
+	icon = DCI_communism
+	picture = DCP_political_support
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_idea = pci_divided
+	}
+}

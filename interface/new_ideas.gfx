@@ -8,6 +8,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/GFX_yakut_japanese_dominion.png"
 	}
 	spriteType = {
+		name = "GFX_idea_lon_symbol"
+		texturefile = "gfx/interface/ideas/GFX_lon.png"
+	}
+	spriteType = {
 		name = "GFX_idea_aubert_frere"
 		texturefile = "gfx/interface/ideas/GFX_aubert_frere.png"
 	}

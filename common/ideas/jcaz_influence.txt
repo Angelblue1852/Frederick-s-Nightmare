@@ -1,0 +1,35 @@
+ideas = {
+
+	country = {
+		jcaz_influence_00 = {
+			picture = lon_symbol
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		jcaz_influence_01 = {
+			picture = lon_symbol
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		jcaz_influence_02 = {
+			picture = lon_symbol
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		jcaz_influence_03 = {
+			picture = lon_symbol
+			modifier = {
+			}
+		}
+	}
+	
+}

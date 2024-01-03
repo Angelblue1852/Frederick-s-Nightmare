@@ -1,0 +1,347 @@
+ITA_update_pci_threshold = {
+	set_variable = { var = ITA_delegates_threshold value = ITA_number_of_delegates }
+	multiply_variable = { var = ITA_delegates_threshold value = 0.5 }
+	round_variable = ITA_delegates_threshold
+}
+ITA_update_protettori_globalisti_relations = {
+	set_variable = { var = ITA_protettori_globalisti_alliance_sum value = ITA_protettori_influence }
+	add_to_variable = { var = ITA_protettori_globalisti_alliance_sum value = ITA_globalisti_influence }
+	round_variable = ITA_protettori_globalisti_alliance_sum
+}
+
+ITA_pci_improve_protettori_globalisti_relations = {
+	add_to_variable = { var = ITA_protettori_globalisti_alliance_value value = 1 }
+	custom_effect_tooltip = tt_ita_improve_relationship_p_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_worsen_protettori_globalisti_relations = {
+	add_to_variable = { var = ITA_protettori_globalisti_alliance_value value = -1 }
+	custom_effect_tooltip = tt_ita_worsen_relationship_p_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_increase_protettori_globalisti_threshold = {
+	add_to_variable = { var = ITA_protettori_globalisti_alliance_threshold value = 1 }
+	custom_effect_tooltip = tt_ita_increase_threshold_p_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_decrease_protettori_globalisti_threshold = {
+	add_to_variable = { var = ITA_protettori_globalisti_alliance_threshold value = -1 }
+	custom_effect_tooltip = tt_ita_decrease_threshold_p_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+
+ITA_pci_add_20_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = 20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = 20 }
+	custom_effect_tooltip = tt_ita_add_20_m
+}
+ITA_pci_add_10_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = 10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = 10 }
+	custom_effect_tooltip = tt_ita_add_10_m
+}
+ITA_pci_add_5_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = 5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = 5 }
+	custom_effect_tooltip = tt_ita_add_5_m
+}
+ITA_pci_add_3_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = 3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = 3 }
+	custom_effect_tooltip = tt_ita_add_3_m
+}
+ITA_pci_add_2_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = 2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = 2 }
+	custom_effect_tooltip = tt_ita_add_2_m
+}
+ITA_pci_add_1_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = 1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = 1 }
+	custom_effect_tooltip = tt_ita_add_1_m
+}
+ITA_pci_remove_20_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = -20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = -20 }
+	custom_effect_tooltip = tt_ita_remove_20_m
+}
+ITA_pci_remove_10_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = -10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = -10 }
+	custom_effect_tooltip = tt_ita_remove_10_m
+}
+ITA_pci_remove_5_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = -5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = -5 }
+	custom_effect_tooltip = tt_ita_remove_5_m
+}
+ITA_pci_remove_3_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = -3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = -3 }
+	custom_effect_tooltip = tt_ita_remove_3_m
+}
+ITA_pci_remove_2_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = -2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = -2 }
+	custom_effect_tooltip = tt_ita_remove_2_m
+}
+ITA_pci_remove_1_moderati = {
+	add_to_variable = { var = ITA_number_of_delegates value = -1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_moderati_influence value = -1 }
+	custom_effect_tooltip = tt_ita_remove_1_m
+}
+
+ITA_pci_add_20_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = 20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = 20 }
+	custom_effect_tooltip = tt_ita_add_20_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_10_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = 10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = 10 }
+	custom_effect_tooltip = tt_ita_add_10_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_5_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = 5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = 5 }
+	custom_effect_tooltip = tt_ita_add_5_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_3_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = 3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = 3 }
+	custom_effect_tooltip = tt_ita_add_3_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_2_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = 2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = 2 }
+	custom_effect_tooltip = tt_ita_add_2_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_1_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = 1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = 1 }
+	custom_effect_tooltip = tt_ita_add_1_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_20_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = -20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = -20 }
+	custom_effect_tooltip = tt_ita_remove_20_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_10_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = -10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = -10 }
+	custom_effect_tooltip = tt_ita_remove_10_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_5_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = -5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = -5 }
+	custom_effect_tooltip = tt_ita_remove_5_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_3_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = -3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = -3 }
+	custom_effect_tooltip = tt_ita_remove_3_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_2_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = -2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = -2 }
+	custom_effect_tooltip = tt_ita_remove_2_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_1_globalisti = {
+	add_to_variable = { var = ITA_number_of_delegates value = -1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_globalisti_influence value = -1 }
+	custom_effect_tooltip = tt_ita_remove_1_g
+	ITA_update_protettori_globalisti_relations = yes
+}
+
+ITA_pci_add_20_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = 20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = 20 }
+	custom_effect_tooltip = tt_ita_add_20_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_10_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = 10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = 10 }
+	custom_effect_tooltip = tt_ita_add_10_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_5_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = 5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = 5 }
+	custom_effect_tooltip = tt_ita_add_5_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_3_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = 3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = 3 }
+	custom_effect_tooltip = tt_ita_add_3_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_2_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = 2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = 2 }
+	custom_effect_tooltip = tt_ita_add_2_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_add_1_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = 1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = 1 }
+	custom_effect_tooltip = tt_ita_add_1_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_20_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = -20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = -20 }
+	custom_effect_tooltip = tt_ita_remove_20_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_10_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = -10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = -10 }
+	custom_effect_tooltip = tt_ita_remove_10_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_5_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = -5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = -5 }
+	custom_effect_tooltip = tt_ita_remove_5_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_3_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = -3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = -3 }
+	custom_effect_tooltip = tt_ita_remove_3_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_2_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = -2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = -2 }
+	custom_effect_tooltip = tt_ita_remove_2_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+ITA_pci_remove_1_protettori = {
+	add_to_variable = { var = ITA_number_of_delegates value = -1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_protettori_influence value = -1 }
+	custom_effect_tooltip = tt_ita_remove_1_p
+	ITA_update_protettori_globalisti_relations = yes
+}
+
+ITA_pci_add_20_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = 20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = 20 }
+	custom_effect_tooltip = tt_ita_add_20_b
+}
+ITA_pci_add_10_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = 10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = 10 }
+	custom_effect_tooltip = tt_ita_add_10_b
+}
+ITA_pci_add_5_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = 5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = 5 }
+	custom_effect_tooltip = tt_ita_add_5_b
+}
+ITA_pci_add_3_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = 3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = 3 }
+	custom_effect_tooltip = tt_ita_add_3_b
+}
+ITA_pci_add_2_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = 2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = 2 }
+	custom_effect_tooltip = tt_ita_add_2_b
+}
+ITA_pci_add_1_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = 1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = 1 }
+	custom_effect_tooltip = tt_ita_add_1_b
+}
+ITA_pci_remove_20_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = -20 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = -20 }
+	custom_effect_tooltip = tt_ita_remove_20_b
+}
+ITA_pci_remove_10_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = -10 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = -10 }
+	custom_effect_tooltip = tt_ita_remove_10_b
+}
+ITA_pci_remove_5_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = -5 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = -5 }
+	custom_effect_tooltip = tt_ita_remove_5_b
+}
+ITA_pci_remove_3_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = -3 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = -3 }
+	custom_effect_tooltip = tt_ita_remove_3_b
+}
+ITA_pci_remove_2_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = -2 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = -2 }
+	custom_effect_tooltip = tt_ita_remove_2_b
+}
+ITA_pci_remove_1_bolscevichi = {
+	add_to_variable = { var = ITA_number_of_delegates value = -1 }
+	ITA_update_pci_threshold = yes
+	add_to_variable = { var = ITA_bolscevichi_influence value = -1 }
+	custom_effect_tooltip = tt_ita_remove_1_b
+}

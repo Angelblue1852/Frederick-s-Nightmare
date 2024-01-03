@@ -1,0 +1,35 @@
+conversion_through_subversion_decisions = {
+	
+	annex_converted_communist_state = {
+	
+		icon = DI_border_war
+		
+		cost = 80
+	
+		allowed = { original_tag = CHI }
+		visible = { 
+			always = yes
+		}
+
+		target_trigger = {
+			exists = yes
+			FROM = { is_minor_chinese_state = yes }
+			FROM = { exists = yes }
+		}
+		
+		available = {
+			has_government = communism
+			NOT = { has_war_with = FROM }
+			FROM = { communism > 0.5 }
+			FROM = { has_idea = maoist_rebels }
+			FROM = { OR = { is_subject = no is_subject_of = ROOT } }
+		}
+		
+		complete_effect = {
+			FROM = { news_event = { id = news.17 hours = 3 } }
+			annex_country = { target = FROM transfer_troops = yes }
+		}
+		
+	}
+	
+}

@@ -7,6 +7,11 @@ set_technology = {
 	infantry_weapons = 1
 }
 
+set_variable = {
+    var = russia_jcaz_influence
+    value = 0
+}
+
 recruit_character = SOV_nicholas_ii
 recruit_character = SOV_alexander_kerensky
 recruit_character = SOV_vladimir_lenin

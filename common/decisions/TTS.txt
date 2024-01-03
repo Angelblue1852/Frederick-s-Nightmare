@@ -1,0 +1,47 @@
+#Category allowed for TTS
+TTS_balance_of_power = {
+	TTS_more_monarchists = {
+		available =  {
+		}
+		icon = mission_icon
+		complete_effect = {
+			add_power_balance_value = {
+				id = TTS_balance_of_power
+				value = 1
+			}
+		}
+	}
+	TTS_some_monarchists = {
+		available =  {
+		}
+		icon = mission_icon
+		complete_effect = {
+			add_power_balance_value = {
+				id = TTS_balance_of_power
+				value = 0.4
+			}
+		}
+	}
+	TTS_more_staracists = {
+		available =  {
+		}
+		icon = mission_icon
+		complete_effect = {
+			add_power_balance_value = {
+				id = TTS_balance_of_power
+				value = -1
+			}
+		}
+	}
+	TTS_some_staracists = {
+		available =  {
+		}
+		icon = mission_icon
+		complete_effect = {
+			add_power_balance_value = {
+				id = TTS_balance_of_power
+				value = -0.4
+			}
+		}
+	}
+}

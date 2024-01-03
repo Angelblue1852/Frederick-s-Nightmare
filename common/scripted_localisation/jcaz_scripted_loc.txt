@@ -1,0 +1,288 @@
+
+	defined_text = {
+		name = france_jcaz_level
+		text = {
+			trigger = {
+				FRA = {
+					check_variable = { france_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				FRA = {
+					check_variable = { france_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				FRA = {
+					check_variable = { france_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				FRA = {
+					check_variable = { france_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}
+	
+	defined_text = {
+		name = britain_jcaz_level
+		text = {
+			trigger = {
+				ENG = {
+					check_variable = { britain_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				ENG = {
+					check_variable = { britain_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				ENG = {
+					check_variable = { britain_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				ENG = {
+					check_variable = { britain_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}
+	
+	defined_text = {
+		name = russia_jcaz_level
+		text = {
+			trigger = {
+				SOV = {
+					check_variable = { russia_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				SOV = {
+					check_variable = { russia_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				SOV = {
+					check_variable = { russia_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				SOV = {
+					check_variable = { russia_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}
+	
+	defined_text = {
+		name = prussia_jcaz_level
+		text = {
+			trigger = {
+				GER = {
+					check_variable = { prussia_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				GER = {
+					check_variable = { prussia_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				GER = {
+					check_variable = { prussia_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				GER = {
+					check_variable = { prussia_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}
+	
+	defined_text = {
+		name = portugal_jcaz_level
+		text = {
+			trigger = {
+				POR = {
+					check_variable = { portugal_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				POR = {
+					check_variable = { portugal_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				POR = {
+					check_variable = { portugal_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				POR = {
+					check_variable = { portugal_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}
+	
+	defined_text = {
+		name = spain_jcaz_level
+		text = {
+			trigger = {
+				SPR = {
+					check_variable = { spain_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				SPR = {
+					check_variable = { spain_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				SPR = {
+					check_variable = { spain_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				SPR = {
+					check_variable = { spain_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}
+	
+	defined_text = {
+		name = austria_jcaz_level
+		text = {
+			trigger = {
+				AUS = {
+					check_variable = { austria_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				AUS = {
+					check_variable = { austria_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				AUS = {
+					check_variable = { austria_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				AUS = {
+					check_variable = { austria_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}
+	
+	defined_text = {
+		name = ottoman_jcaz_level
+		text = {
+			trigger = {
+				TUR = {
+					check_variable = { ottoman_jcaz_influence = 0 }
+				}
+			}
+			localization_key = jcaz_level_none
+		}
+		text = {
+			trigger = {
+				TUR = {
+					check_variable = { ottoman_jcaz_influence = 1 }
+				}
+			}
+			localization_key = jcaz_level_small
+		}
+		text = {
+			trigger = {
+				TUR = {
+					check_variable = { ottoman_jcaz_influence = 2 }
+				}
+			}
+			localization_key = jcaz_level_medium
+		}
+		text = {
+			trigger = {
+				TUR = {
+					check_variable = { ottoman_jcaz_influence = 3 }
+				}
+			}
+			localization_key = jcaz_level_large
+		}
+	}

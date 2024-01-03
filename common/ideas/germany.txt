@@ -9,7 +9,7 @@ ideas = {
 			visible = {
 				OR = {
 					is_minor_german_state = yes
-					original_tag = PRS
+					original_tag = GER
 					original_tag = AUS
 				}
 			}

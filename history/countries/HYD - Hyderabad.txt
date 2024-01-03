@@ -11,9 +11,31 @@ recruit_character = HYD_asaf_jah_vii
 recruit_character = HYD_vinayak_damodar_savarkar
 
 
+set_cosmetic_tag = HYD_JCAZ
 
+RAJ = {
+    if = {
+        limit = {
+            has_dlc = "Together for Victory"
+        }
+        set_autonomy = {
+            target = HYD
+            autonomous_state = autonomy_integrated_puppet
+        }
+    }
+    else = {
+        puppet = HYD
+    }
+}
 
-
+give_military_access = FRA
+give_military_access = ENG
+give_military_access = SOV
+give_military_access = TUR
+give_military_access = GER
+give_military_access = AUS
+give_military_access = SPR
+give_military_access = POR
 
 set_war_support = 0.1
 set_convoys = 20
