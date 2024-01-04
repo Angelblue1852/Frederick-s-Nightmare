@@ -11,7 +11,7 @@ state={
 
 		}
 		add_core_of = LOU
-		add_core_of = SWB
+		add_claim_by = SWB
 		
 
 	}

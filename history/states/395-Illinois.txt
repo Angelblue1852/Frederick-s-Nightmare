@@ -13,7 +13,7 @@ state={
 
 		}
 		add_core_of = LOU
-		add_claim_by = SWB
+		add_core_of = SWB
 		victory_points = {
 			9450 30.0 
 		}

@@ -12,6 +12,7 @@ state={
 		}
 		add_core_of = LOU
 		add_claim_by = SWB
+		add_claim_by = OHI
 		victory_points = {
 			1595 5 
 		}
