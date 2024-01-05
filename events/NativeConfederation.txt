@@ -245,8 +245,8 @@ country_event = {
 		name = SOU.10.o1
 		ai_chance = { base = 10 }
 		ABS = {
-			transfer_state = 912
-			transfer_state = 913
+			transfer_state = 381
+			transfer_state = 941
 		}
 		hidden_effect = { 
 			SOU = {
@@ -325,15 +325,15 @@ country_event = {
 		name = SOU.13.o1
 		ai_chance = { base = 10 }
 		NZP = {
-			transfer_state = 909
+			transfer_state = 387
 		}
 		UTE = {
-			transfer_state = 381
+			transfer_state = 940
 		}
 		DES = {
 			transfer_state = 380
-			transfer_state = 910
-			transfer_state = 911
+			transfer_state = 938
+			transfer_state = 939
 		}
 		hidden_effect = { 
 			SOU = {
@@ -365,8 +365,7 @@ country_event = {
 			add_ideas = anti_technology
 		}
 		SHO = {
-			transfer_state = 387
-			transfer_state = 910
+			transfer_state = 939
 			declare_war_on = {
                 target = DES
                 type = annex_everything
@@ -375,7 +374,6 @@ country_event = {
 		}
 		PWN = {
 			transfer_state = 383
-			transfer_state = 914
 			add_ideas = anti_technology
 		}
 		APH = {
@@ -410,8 +408,6 @@ country_event = {
 		SOU = {
 			transfer_state = 389
 			transfer_state = 390
-			add_state_core = 389
-			add_state_core = 390
 			drop_cosmetic_tag = yes
 			remove_ideas = {
 				anti_technology

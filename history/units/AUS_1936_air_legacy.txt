@@ -1,0 +1,125 @@
+﻿
+
+### Air Wings
+air_wings = {
+	# Vienna
+	# Luftfahrtruppen I
+	# Vienna
+	# Fliegerkompanie I
+	# Fliegerkompanie III
+	# Grossflugzeugkompagnie I
+	# Schlachtfliegerkompagnie II
+	4 = { 
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+		}
+		name = "Fliegerkompanie I"
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+		}
+		name = "Fliegerkompanie III"
+		tac_bomber_equipment_0 =  {	# Bloch MB.200
+			owner = "AUS" 
+			amount = 72
+		}
+		name = "Grossflugzeugkompagnie I"
+		CAS_equipment_1 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 24
+		}
+		name = "Schlachtfliegerkompagnie II"
+	}
+	# Innsbruk
+	# Fliegerkompanie II
+	# Schlachtfliegerkompagnie I
+	153 = { 
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+		}
+		name = "Fliegerkompanie II"
+		CAS_equipment_1 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 25
+		}
+		name = "Schlachtfliegerkompagnie I"
+	}
+	# Sarajevo
+	# Fliegerkompanie IV
+	# Fliegerkompanie V
+	104 = { 
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+		}
+		name = "Fliegerkompanie IV"
+		fighter_equipment_0 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 36
+		}
+		name = "Fliegerkompanie V"
+	}
+	
+	# Prague
+	Luftfahrtruppen II
+	#Prague
+	# Fliegerkompanie VI
+	# Grossflugzeugkompagnie III
+	# Schlachtfliegerkompagnie III
+	70 = { 
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+		}
+		name = "Fliegerkompanie VI"
+		tac_bomber_equipment_0 =  {	# Bloch MB.200
+			owner = "AUS" 
+			amount = 72
+		}
+		name = "Grossflugzeugkompagnie III"
+		CAS_equipment_1 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 24
+		}
+		name = "Schlachtfliegerkompagnie III"
+	}
+
+	# Breslau
+	# Fliegerkompanie VII
+	66 = {
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+		}
+	}
+	name = "Fliegerkompanie VII"
+	
+	# Lvov
+	# Fliegerkompanie VIII
+	91 = {
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+		}
+	}
+	name = "Fliegerkompanie VIII"
+
+	# Krakow
+	# Fliegerkompanie IX
+	# Schlachtfliegerkompagnie IV
+	88 = {
+		fighter_equipment_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 72
+		}
+		name = "Fliegerkompanie IX"
+		CAS_equipment_1 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 24
+		}
+	}
+	name = "Schlachtfliegerkompagnie IV"
+}
+

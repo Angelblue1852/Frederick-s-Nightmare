@@ -1,0 +1,166 @@
+﻿
+
+### Air Wings
+air_wings = {
+	# Vienna
+	# Luftfahrtruppen I
+	# Vienna
+	# Fliegerkompanie I
+	# Fliegerkompanie III
+	# Grossflugzeugkompagnie I
+	# Schlachtfliegerkompagnie II
+	4 = { 
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie I"
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie III"
+		medium_plane_airframe_0 =  {	# Do 23
+			owner = "AUS"
+			creator = "GER"
+			amount = 72
+			version_name = "Do 23"
+		}
+		name = "Grossflugzeugkompagnie I"
+		small_plane_cas_airframe_0 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 24
+			version_name = "Aero A.101"
+		}
+		name = "Schlachtfliegerkompagnie II"
+	}
+	# Innsbruk
+	# Fliegerkompanie II
+	# Schlachtfliegerkompagnie I
+	153 = { 
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie II"
+		small_plane_cas_airframe_0 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 25
+			version_name = "Aero A.101"
+		}
+		name = "Schlachtfliegerkompagnie I"
+	}
+	# Sarajevo
+	# Fliegerkompanie IV
+	# Fliegerkompanie V
+	104 = { 
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie IV"
+		small_plane_airframe_0 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie V"
+	}
+	
+	# Prague
+	Luftfahrtruppen II
+	#Prague
+	# Fliegerkompanie VI
+	# Grossflugzeugkompagnie III
+	# Schlachtfliegerkompagnie III
+	70 = { 
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie VI"
+		medium_plane_airframe_0 =  {	# Do 23
+			owner = "AUS"
+			creator = "GER"
+			amount = 72
+			version_name = "Do 23"
+		}
+		name = "Grossflugzeugkompagnie III"
+		small_plane_cas_airframe_0 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 24
+			version_name = "Aero A.101"
+		}
+		name = "Schlachtfliegerkompagnie III"
+	}
+
+	# Breslau
+	# Fliegerkompanie VII
+	66 = {
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie VII"
+	}
+	# Lvov
+	# Fliegerkompanie VIII
+	91 = {
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 36
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie VIII"
+	}
+	# Krakow
+	# Fliegerkompanie IX
+	# Schlachtfliegerkompagnie IV
+	88 = {
+		small_plane_airframe_0 = {		# Avia B.534
+			owner = "AUS" 
+			amount = 72
+			version_name = "Avia B.534"
+		}
+		name = "Fliegerkompanie IX"
+		small_plane_cas_airframe_0 =  {		# Aero A-101
+			owner = "AUS" 
+			amount = 24
+			version_name = "Aero A.101"
+		}
+		name = "Schlachtfliegerkompagnie IV"
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "AUS" 
+			version_name = "Avia B.534"
+		}
+		requested_factories = 3
+		progress = 0.15
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_cas_airframe_0
+			creator = "AUS" 
+			version_name = "Aero A.101"
+		}
+		requested_factories = 2
+		progress = 0.15
+		efficiency = 50
+	}
+}
