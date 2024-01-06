@@ -17,7 +17,20 @@ recruit_character = BUL_ferdinand_i
 
 
 
-
+TUR = {
+    if = {
+        limit = {
+            has_dlc = "Together for Victory"
+        }
+        set_autonomy = {
+            target = BUL
+            autonomous_state = autonomy_dominion
+        }
+    }
+    else = {
+        puppet = BUL
+    }
+}
 
 set_war_support = 0.1
 set_convoys = 20

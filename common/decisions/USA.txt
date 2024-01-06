@@ -67,7 +67,7 @@ USA_decisions = {
 		
 		complete_effect = {
 			TEX = { 
-				country_event = { id = usa.15 hours = 5 }
+				country_event = { id = USA.16 hours = 5 }
 			}
 		}
 	

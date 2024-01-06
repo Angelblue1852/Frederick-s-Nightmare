@@ -1,0 +1,31 @@
+characters={
+	GRE_emmanouil_tsouderos = {
+		name = "Emmanouil Tsouderos" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/GRE_emmanouil_tsouderos.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GRE_nikolaos_plastiras = {
+		name = "Nikolaos Plastiras" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/GRE_nikolaos_plastiras.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}

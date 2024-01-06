@@ -41,3 +41,5 @@ set_popularities = {
 }
 
 
+add_opinion_modifier = { target = ITA modifier = historical_rival }
+add_opinion_modifier = { target = NAP modifier = historical_ally }

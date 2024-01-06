@@ -3351,7 +3351,7 @@ focus_tree = {
 		completion_reward = {
 			USA = { 
 				country_event = {
-					id = USA.26 days = 2
+					id = USA.21 days = 2
 				}
 			}
 		}

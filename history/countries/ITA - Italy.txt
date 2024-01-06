@@ -54,3 +54,6 @@ recruit_character = ITA_palmiro_togliatti
 
 
 
+add_opinion_modifier = { target = AUS modifier = historical_rival }
+add_opinion_modifier = { target = PAP modifier = historical_rival }
+add_opinion_modifier = { target = TTS modifier = historical_rival }

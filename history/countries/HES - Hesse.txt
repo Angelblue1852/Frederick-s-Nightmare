@@ -36,4 +36,5 @@ set_popularities = {
 	fascism = 20
 }
 
-
+add_opinion_modifier = { target = BAD modifier = dreibruederabkommen }
+add_opinion_modifier = { target = WES modifier = dreibruederabkommen }

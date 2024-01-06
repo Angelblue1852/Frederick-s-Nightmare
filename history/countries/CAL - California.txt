@@ -27,7 +27,7 @@ recruit_character = CAL_douglas_macarthur
 set_war_support = 0.1
 set_convoys = 20
 
-
+add_opinion_modifier = { target = MEX modifier = alamo_massacre }
 
 set_politics = {
 	ruling_party = democratic

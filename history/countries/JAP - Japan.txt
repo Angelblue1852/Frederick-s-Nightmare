@@ -170,7 +170,7 @@ declare_war_on = {
 	type = annex_everything
 }
 
-set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
+set_stability = 0.6 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
 
 set_research_slots = 4
@@ -192,6 +192,8 @@ set_popularities = {
 	fascism = 60
 }
 
+add_opinion_modifier = { target = CHI modifier = historical_rival }
+add_opinion_modifier = { target = CHI modifier = recent_war }
 
 if = {
 	limit = {

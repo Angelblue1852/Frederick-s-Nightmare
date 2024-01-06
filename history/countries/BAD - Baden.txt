@@ -24,7 +24,8 @@ recruit_character = BAD_joseph_wirth
 set_war_support = 0.1
 set_convoys = 20
 
-
+add_opinion_modifier = { target = HES modifier = dreibruederabkommen }
+add_opinion_modifier = { target = WES modifier = dreibruederabkommen }
 
 set_politics = {
 	ruling_party = democratic

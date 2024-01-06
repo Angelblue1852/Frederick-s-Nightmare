@@ -85,7 +85,8 @@ if = {
 	}
 }
 
-
+add_opinion_modifier = { target = JAP modifier = historical_rival }
+add_opinion_modifier = { target = JAP modifier = recent_war }
 
 set_politics = {
 	ruling_party = fascism

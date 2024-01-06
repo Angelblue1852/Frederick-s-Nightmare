@@ -32,4 +32,4 @@ set_popularities = {
 	fascism = 10
 }
 
-
+add_opinion_modifier = { target = ENG modifier = historical_rival }

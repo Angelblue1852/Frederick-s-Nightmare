@@ -38,7 +38,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		select_effect = {
-			country_event = { id = USA.16 days = 25 }
+			country_event = { id = USA.17 days = 25 }
 		}
 
 		completion_reward = {
@@ -813,7 +813,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_named_threat = { name = "Floridian Ultimatum" threat = 4 }
-			366 = { owner = { country_event = { id = USA.11 days = 1 } } }
+			366 = { owner = { country_event = { id = USA.12 days = 1 } } }
 		}
 
 		ai_will_do = {
@@ -897,7 +897,7 @@ focus_tree = {
 		completion_reward = {
 			add_named_threat = { name = "Ultimatum to Ohio" threat = 2 }
 			OHI = {
-				country_event = { id = USA.12 days = 1 }
+				country_event = { id = USA.13 days = 1 }
 			}
 		}
 
@@ -955,12 +955,12 @@ focus_tree = {
 				if = {
 					limit = { is_subject = yes }
 					overlord = {
-						country_event = { id = USA.13 days = 1 }
+						country_event = { id = USA.14 days = 1 }
 					}
 				}
 				if = {
 					limit = { is_subject = no }
-					country_event = { id = USA.13 days = 1 }
+					country_event = { id = USA.14 days = 1 }
 				}
 			}
 		}
@@ -1008,12 +1008,12 @@ focus_tree = {
 				if = {
 					limit = { is_subject = yes }
 					overlord = {
-						country_event = { id = USA.14 days = 1 }
+						country_event = { id = USA.15 days = 1 }
 					}
 				}
 				if = {
 					limit = { is_subject = no }
-					country_event = { id = USA.14 days = 1 }
+					country_event = { id = USA.15 days = 1 }
 				}
 			}
 		}
@@ -1449,7 +1449,7 @@ focus_tree = {
 
 		completion_reward = {
 			CAL = { 
-				country_event = { id = USA.15 hours = 18 }
+				country_event = { id = USA.16 hours = 18 }
 			}
 			unlock_decision_tooltip = offer_statehood_to_texas
 		}
@@ -2036,7 +2036,7 @@ focus_tree = {
 
 		completion_reward = {
 			OHI = { 
-				country_event = { id = USA.17 days = 1 }
+				country_event = { id = USA.18 days = 1 }
 			}
 		}
 
@@ -2614,12 +2614,12 @@ focus_tree = {
 		completion_reward = {
 			ENG = { 
 				country_event = {
-					id = USA.20 days = 2
+					id = USA.21 days = 2
 				}
 			}
 			FRA = {
 				country_event = {
-					id = USA.23 days = 2
+					id = USA.24 days = 2
 				}
 			}
 		}
@@ -2646,7 +2646,7 @@ focus_tree = {
 		completion_reward = {
 			CAN = {
 				country_event = {
-					id = USA.27 days = 2
+					id = USA.22 days = 2
 				}
 			}
 		}
@@ -2811,7 +2811,7 @@ focus_tree = {
 		completion_reward = {
 			GRE = { 
 				country_event = {
-					id = USA.52 days = 2
+					id = USA.22 days = 2
 				}
 			}
 		}
@@ -2856,7 +2856,7 @@ focus_tree = {
 		available_if_capitulated = yes
 			
 		completion_reward = {	
-			SPR = { country_event = { id = USA.30 hours = 12 } }
+			SPR = { country_event = { id = USA.25 hours = 12 } }
 			}
 		}
 			
@@ -2871,7 +2871,7 @@ focus_tree = {
 		available_if_capitulated = yes
 			
 		completion_reward = {	
-			SWE = { country_event = { id = USA.32 hours = 12 } }
+			SWE = { country_event = { id = USA.27 hours = 12 } }
 			}
 		}
 		
@@ -2886,7 +2886,7 @@ focus_tree = {
 		available_if_capitulated = yes
 			
 		completion_reward = {	
-			CAN = { country_event = { id = USA.58 hours = 12 } }
+			CAN = { country_event = { id = USA.28 hours = 12 } }
 			}
 		}
 		

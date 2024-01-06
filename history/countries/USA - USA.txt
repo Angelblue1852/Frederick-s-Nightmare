@@ -202,6 +202,7 @@ set_popularities = {
 	fascism = 15
 }
 
+add_opinion_modifier = { target = MEX modifier = alamo_massacre }
 
 ### VARIANTS ###
 # 1936 Start #

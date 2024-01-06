@@ -1,0 +1,45 @@
+﻿
+
+
+### Air Wings ###
+air_wings = {
+	49 = { 
+		# 1. Russian Imports
+		small_plane_airframe_0 = {
+			owner = "TUR" 
+			amount = 15
+			creator = "SOV"
+			version_name = "I-15"
+		}
+		# 2. Austrian Imports
+		small_plane_airframe_0 = {
+			owner = "TUR" 
+			amount = 30
+			creator = "AUS"
+			version_name = "Avia B.534"
+		}
+		# 3. Austrian Imports
+		small_plane_cas_airframe_0 = {
+			owner = "TUR" 
+			amount = 25
+			creator = "AUS"
+			version_name = "Letov S-16"
+		}
+	}
+	454 = {
+		# 1. Austrian Imports
+		small_plane_airframe_0 = {
+			owner = "TUR" 
+			amount = 20
+			creator = "AUS"
+			version_name = "Avia B.534"
+		}
+		# 1. Austrian Imports
+		small_plane_cas_airframe_0 = {
+			owner = "TUR" 
+			amount = 20
+			creator = "AUS"
+			version_name = "Letov S-16"
+		}
+	}
+}
