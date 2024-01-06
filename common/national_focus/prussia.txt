@@ -885,6 +885,12 @@ focus_tree = {
 					has_government = communism
 					has_government = fascism
 				}
+				GER = {
+					NOT = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
 				NOT = { has_war_with = GER }
 			}
 		}
@@ -974,6 +980,12 @@ focus_tree = {
 				NOT = {
 					has_government = communism
 					has_government = fascism
+				}
+				GER = {
+					NOT = {
+						has_government = communism
+						has_government = fascism
+					}
 				}
 				NOT = { has_war_with = GER }
 			}
@@ -1069,6 +1081,12 @@ focus_tree = {
 				NOT = {
 					has_government = communism
 					has_government = fascism
+				}
+				GER = {
+					NOT = {
+						has_government = communism
+						has_government = fascism
+					}
 				}
 				NOT = { has_war_with = GER }
 			}
