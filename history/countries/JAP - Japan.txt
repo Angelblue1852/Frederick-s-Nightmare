@@ -164,6 +164,9 @@ recruit_character = JAP_yoshijiro_umezu
 
 create_faction = "Dai Tōa Kyōeiken"
 add_to_faction = JAP
+ 
+give_guarantee = MON
+give_guarantee = SIA
 
 declare_war_on = {
 	target = MAN

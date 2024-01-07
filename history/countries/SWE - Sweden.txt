@@ -8,7 +8,10 @@ set_technology = {
 }
 
 add_ideas = {
+	stockholm_crisis
+	colonial_upkeep
 	economic_crisis2
+	paragon_of_democracy
 }
 
 recruit_character = SWE_axel_pehrsson
@@ -34,6 +37,8 @@ set_popularities = {
 	communism = 15
 	fascism = 15
 }
+
+give_guarantee = GXC
 
 add_opinion_modifier = { target = FRA modifier = historical_ally }
 add_opinion_modifier = { target = SOV modifier = historical_rival }

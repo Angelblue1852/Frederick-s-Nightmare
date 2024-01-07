@@ -12,6 +12,10 @@ set_variable = {
     value = 2
 }
 
+add_ideas = {
+	economic_crisis3
+}
+
 recruit_character = SPR_jose_diaz_ramos
 
 
@@ -26,6 +30,7 @@ create_faction = "Barcelona Agreement"
 add_to_faction = SPR
 add_to_faction = ITA
 
+give_guarantee = GXC
 
 set_politics = {
 	ruling_party = communism

@@ -155,6 +155,10 @@ if = {
 	}
 }
 
+give_guarantee = HAN
+give_guarantee = SAX
+give_guarantee = SHX
+give_guarantee = THU
 
 set_variable = {
     var = prussia_jcaz_influence

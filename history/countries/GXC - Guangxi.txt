@@ -9,6 +9,7 @@ set_technology = {
 
 add_ideas = {
 	china_kmt_warlord
+	economic_crisis3
 }
 
 recruit_character = GXC_huang_shaohong

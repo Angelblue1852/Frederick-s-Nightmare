@@ -68,7 +68,9 @@ if = {
 
 set_convoys = 10
 
-
+add_ideas = {
+	economic_crisis2
+}
 
 set_politics = {
 	ruling_party = democratic

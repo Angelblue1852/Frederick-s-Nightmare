@@ -220,6 +220,10 @@ add_to_faction = POL
 add_to_faction = FIN
 add_to_faction = TAN
 
+give_guarantee = MNT
+give_guarantee = MON
+#give_guarantee = SER
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.10"

@@ -188,7 +188,7 @@ ENG = {
 
 }
 
-
+give_guarantee = POR
 
 if = {
 	limit = { has_dlc = "Together for Victory" }

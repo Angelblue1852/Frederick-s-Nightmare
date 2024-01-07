@@ -151,6 +151,10 @@ add_to_faction = AUS
 add_to_faction = BAY
 add_to_faction = SAX
 
+give_guarantee = GRE
+give_guarantee = PAP
+give_guarantee = SWI
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.10"

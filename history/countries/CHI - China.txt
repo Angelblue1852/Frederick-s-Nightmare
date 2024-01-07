@@ -23,6 +23,7 @@ if = {
 add_ideas = {
 	china_nanjing_warlord
 	china_subjugation
+	economic_crisis6
 }
 
 if = {
@@ -36,7 +37,10 @@ if = {
    }
    else = {
        puppet = YUN
-   }
+  }
+
+give_guarantee = MON
+give_guarantee = TIB
 
 recruit_character = CHI_hu_hanmin
 

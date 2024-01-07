@@ -279,20 +279,20 @@ units = {
 		start_equipment_factor = 0.75
 	}
 	
-	division = {
-		name = "1st Egyptian"
-		location = 11979
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.75
-	}
-	division = {
-		name = "2nd Egyptian"
-		location = 11922
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.75
-	}
+	#division = {
+	#	name = "1st Egyptian"
+	#	location = 11979
+	#	division_template = "Infantry Division"
+	#	start_experience_factor = 0.2
+	#	start_equipment_factor = 0.75
+	#}
+	#division = {
+	#	name = "2nd Egyptian"
+	#	location = 11922
+	#	division_template = "Infantry Division"
+	#	start_experience_factor = 0.2
+	#	start_equipment_factor = 0.75
+	#}
 	
 	division = {
 		name = "Anatolian Cavalry"

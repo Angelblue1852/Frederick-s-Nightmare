@@ -24,7 +24,7 @@ country_event = {
 	}
 }
 
-#Election of 1936
+#Election of 1937
 country_event = {
 	id = USA.2
 	title = USA.2.t
@@ -36,7 +36,7 @@ country_event = {
 	trigger = {
 		original_tag = USA
 		NOT = { has_country_flag = USA_1936_elections }
-		date > 1936.11.7
+		date > 1937.1.3
 	}
 	
 	mean_time_to_happen = {
@@ -45,108 +45,144 @@ country_event = {
 	
 	immediate = { 
 		set_country_flag = USA_1936_elections
-		hidden_effect = { news_event = { id = USA_news.9 days = 7 } }
 	}
 	
-	##Republicans
+	##Whigs
 	#Wadsworth
 	option = {
 		name = USA.2.o1
 		trigger = {
-			OR = {
 				has_country_flag = USA_1936_nomination_wadsworth
-				AND = {
-					NOT = { has_country_flag = USA_1936_nomination_wadsworth }
-					NOT = { has_country_flag = USA_1936_nomination_quentin }
-					NOT = { has_country_flag = USA_1936_nomination_fdr }
-				}
 			}
 		}
-		set_country_flag = USA_1936_wadsworth
-		set_politics = { ruling_party = democratic elections_allowed = yes }
-		create_country_leader = {
-			name = "James W. Wadsworth"
-			picture = "James_W_Wadsworth_Jr.dds"
-			ideology = conservatism
+		set_country_flag = USA_1937_wadsworth
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
+		}
+	}
+
+	#Charles Curtis
+	option = {
+		name = USA.2.o2
+		trigger = {
+			has_country_flag = USA_1936_nomination_curtis
+		}
+		set_country_flag = USA_1937_curtis
+		set_politics = {
+			ruling_party = democratic
+		}
+		promote_character = USA_charles_curtis
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 	
+	##Republicans
 	#Quentin Roosevelt
 	option = {
-		name = USA.2.o2
-		trigger = { has_country_flag = USA_1936_nomination_quentin }
+		name = USA.2.o3
+		trigger = {
+			has_country_flag = USA_1936_nomination_quentin
+		}
 		set_country_flag = USA_1936_quentin
-		set_politics = { ruling_party = democratic elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Quentin Roosevelt"
-			picture = "Quentin_Roosevelt.dds"
-			ideology = socialism
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 	
 	#FDR
 	option = {
-		name = USA.2.o3
-		trigger = { has_country_flag = USA_1936_nomination_fdr }
+		name = USA.2.o4
+		trigger = {
+			has_country_flag = USA_1936_nomination_fdr
+		}
 		set_country_flag = USA_1936_fdr
-		set_politics = { ruling_party = democratic elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Franklin D. Roosevelt"
-			picture = "Franklin_D_Roosevelt.dds"
-			ideology = liberalism
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
+		}
+	}
+
+	#Al Smith
+	option = {
+		name = USA.2.o5
+		trigger = {
+			has_country_flag = USA_1936_nomination_smith
+		}
+		set_country_flag = USA_1936_smith
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 	
 	##Democrats
-	#Al Smith
-	option = {
-		name = USA.2.o4
-		trigger = {
-			OR = {
-				has_country_flag = USA_1936_nomination_smith
-				AND = {
-					NOT = { has_country_flag = USA_1936_nomination_smith }
-					NOT = { has_country_flag = USA_1936_nomination_garner }
-					NOT = { has_country_flag = USA_1936_nomination_curtis }
-				}
-			}
-		}
-		set_country_flag = USA_1936_smith
-		set_politics = { ruling_party = neutrality elections_allowed = yes }
-		create_country_leader = {
-			name = "Al Smith"
-			picture = "Al_Smith.dds"
-			ideology = authoritarian_conservatism
-		}
-	}
-	
-	#John N Garner
-	option = {
-		name = USA.2.o5
-		trigger = { has_country_flag = USA_1936_nomination_garner }
-		set_country_flag = USA_1936_garner
-		set_politics = { ruling_party = neutrality elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "John Nance Garner"
-			picture = "John_Nance_Garner.dds"
-			ideology = oligarchism
-		}
-	}
-	
-	#Charles Curtis
+	#Eugene Talmadge
 	option = {
 		name = USA.2.o6
-		trigger = { has_country_flag = USA_1936_nomination_curtis }
-		set_country_flag = USA_1936_curtis
-		set_politics = { ruling_party = neutrality elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Charles Curtis"
-			picture = "Charles_Curtis.dds"
-			ideology = oligarchism
+		trigger = {
+			has_country_flag = USA_1936_nomination_talmadge
+		}
+		set_country_flag = USA_1936_talmadge
+		set_politics = {
+			ruling_party = neutrality
+		}
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
+		}
+	}
+	#Harry F Byrd
+	option = {
+		name = USA.2.o7
+		trigger = {
+			has_country_flag = USA_1936_nomination_byrd
+		}
+		set_country_flag = USA_1936_byrd
+		set_politics = {
+			ruling_party = neutrality
+		}
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 }
@@ -166,14 +202,17 @@ country_event = {
 		add_stability = -0.02
 		hidden_effect = {
 			random_list = {
-				50 = { country_event = { id = USA.4 days = 100 } }		#Wadsworth
-				28 = { country_event = { id = USA.6 days = 100 } }		#FDR
-				22 = { country_event = { id = USA.5	days = 100 } }		#Quentin
+				55 = { country_event = { id = USA.4 days = 100 } }		#Wadsworth
+				45 = { country_event = { id = USA.5 days = 100 } }		#Curtis
 			}
 			random_list = {
-				55 = { country_event = { id = USA.7 days = 120 } }		#Smith
-				25 = { country_event = { id = USA.8	days = 120 } }		#Garner
-				20 = { country_event = { id = USA.9 days = 120 } }		#Curtis
+				40 = { country_event = { id = USA.6 days = 120 } }		#Quentin
+				35 = { country_event = { id = USA.7	days = 120 } }		#FDR
+				25 = { country_event = { id = USA.8 days = 120 } }		#Smith
+			}
+			random_list = {
+				60 = { country_event = { id = USA.9 days = 120 } }		#Talmadge
+				40 = { country_event = { id = USA.10 days = 120 } }		#Byrd
 			}
 		}
 	}

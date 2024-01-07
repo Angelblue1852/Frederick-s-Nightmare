@@ -10,6 +10,7 @@ set_technology = {
 add_ideas = {
 	blackshirts
 	naples_parliament_broken_02
+	economic_crisis4
 }
 
 recruit_character = TTS_achille_starace
@@ -27,6 +28,8 @@ set_power_balance = {
 	set_default = no  # whether or not to reset the power balance to the initial value, default = no
 }
 
+give_guarantee = EGY
+give_guarantee = GRE
 
 set_politics = {
 	ruling_party = fascism

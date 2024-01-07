@@ -1,0 +1,40 @@
+on_actions = {
+
+	#ROOT is capitulated country, FROM is winner.
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = JAP }
+					ROOT = { tag = MAN }
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					add_to_faction = MEN
+				}
+				MEN = {
+					transfer_state = 612
+					transfer_state = 819
+				}
+			}
+		}
+	}
+	
+	on_startup = {
+			effect = {
+				every_country = {
+				meta_effect = {
+					text = {
+						[X] = { country_event = [X].1 }
+					}
+					X = "[This.GetTag]"
+				}
+			}
+		}
+    }
+	
+	
+}
