@@ -5230,7 +5230,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_ford_crisis"
-		texturefile = "gfx/interface/ideas/united_states/ford_crisis.dds"
+		texturefile = "gfx/interface/ideas/usa/GFX_ford_blue.png"
 	}
 
 	spriteType = {

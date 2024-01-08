@@ -17,6 +17,7 @@ on_actions = {
 				}
 				MEN = {
 					transfer_state = 612
+					transfer_state = 817
 					transfer_state = 819
 				}
 			}

@@ -9,18 +9,15 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	#Trigger all preset events.
-	immediate = {
+	
+	option = {
+		name = USA.1.o1
 		hidden_effect = {
 			country_event = { id = USA.11 days = 25 }	#Ford Crisis
 			country_event = { id = USA.19 days = 61 }	#General Davis
 			country_event = { id = USA.3 days = 72 }	#Primary Season
 			country_event = { id = USA.20 days = 36 }	#TRU
 		}
-	}
-	
-	option = {
-		name = USA.1.o1
 	}
 }
 
@@ -53,7 +50,6 @@ country_event = {
 		name = USA.2.o1
 		trigger = {
 				has_country_flag = USA_1936_nomination_wadsworth
-			}
 		}
 		set_country_flag = USA_1937_wadsworth
 		hidden_effect = {
@@ -202,13 +198,13 @@ country_event = {
 		add_stability = -0.02
 		hidden_effect = {
 			random_list = {
-				55 = { country_event = { id = USA.4 days = 100 } }		#Wadsworth
-				45 = { country_event = { id = USA.5 days = 100 } }		#Curtis
+				55 = { country_event = { id = USA.4 days = 80 } }		#Wadsworth
+				45 = { country_event = { id = USA.5 days = 80 } }		#Curtis
 			}
 			random_list = {
-				40 = { country_event = { id = USA.6 days = 120 } }		#Quentin
-				35 = { country_event = { id = USA.7	days = 120 } }		#FDR
-				25 = { country_event = { id = USA.8 days = 120 } }		#Smith
+				40 = { country_event = { id = USA.6 days = 100 } }		#Quentin
+				35 = { country_event = { id = USA.7	days = 100 } }		#FDR
+				25 = { country_event = { id = USA.8 days = 100 } }		#Smith
 			}
 			random_list = {
 				60 = { country_event = { id = USA.9 days = 120 } }		#Talmadge
@@ -302,7 +298,7 @@ country_event = {
 	
 	option = {
 		name = USA.9.o1
-		set_country_flag = USA_1936_nomination_garner
+		set_country_flag = USA_1936_nomination_talmadge
 	}
 }
 ##Harry Byrd wins
@@ -316,7 +312,7 @@ country_event = {
 	
 	option = {
 		name = USA.10.o1
-		set_country_flag = USA_1936_nomination_garner
+		set_country_flag = USA_1936_nomination_byrd
 	}
 }
 #Ford Crisis
@@ -336,7 +332,6 @@ country_event = {
 			ideology = fascism
 			popularity = 0.03
 		}
-		economic_crisis_upgrade = yes
 	}
 }
 
@@ -1021,18 +1016,18 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = USA.30
-	title = USA.30.t
-	desc = USA.30.d
-	
-	picture = "blank"
-		
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	option = {
-		name = USA.30.a
-	}
-}
+#country_event = {
+#	id = USA.30
+#	title = USA.30.t
+#	desc = USA.30.d
+#	
+#	picture = "blank"
+#		
+#	is_triggered_only = yes
+#	
+#	fire_only_once = yes
+#	
+#	option = {
+#		name = USA.30.a
+#	}
+#}

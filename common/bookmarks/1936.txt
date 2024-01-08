@@ -7,195 +7,208 @@ bookmarks = {
 		default_country = "FRA"
 		default = yes
 		
-		"ENG"={
-			history = ""
-			ideology = democratic
-			ideas = {
-			}
-			focuses = {}
-		}
-		
-		"FRA"={
-			history = ""
-			ideology = democratic
-			ideas = {
-				france_history_02
-			}
-			focuses = {}
-		}
-		
-		"SOV"={
-			history = ""
-			ideology = neutrality
-			ideas = {
-			}
-			focuses = {}
-		}
-		
 		"AUS"={
-			history = ""
+			history = "AUS_1936_DESC"
 			ideology = neutrality
 			ideas = {
+				vielvoelkerstaat
 			}
-			focuses = {}
-		}
-		
-		"TUR"={
-			history = ""
-			ideology = neutrality
-			ideas = {
+			focuses = {
+				AUS_the_danube_confederation
+				AUS_befriend_the_ottoman_empire
+				AUS_eliminate_the_romanian_threat
 			}
-			focuses = {}
 		}
-		
-		"GER"={
-			history = ""
+		"ENG"={
+			history = "ENG_1936_DESC"
 			ideology = democratic
 			ideas = {
-				prussia_history_01
 			}
-			focuses = {}
+			focuses = {
+				ENG_settle_the_score
+				ENG_challenge_the_ottomans
+				ENG_pass_the_home_defense_act
+			}
 		}
-		
 		"JAP"={
-			history = ""
+			history = "JAP_1936_DESC"
 			ideology = fascism
+			ideas = {}
+			focuses = {
+				JAP_publish_the_humanity_declaration
+				JAP_third_sino_japanese_war
+				JAP_massive_warships
+			}
+		}
+		"FRA"={
+			history = "FRA_1936_DESC"
+			ideology = democratic
 			ideas = {
 			}
-			focuses = {}
+			focuses = {
+				FRA_draft_a_republican_constitution
+				FRA_reassure_the_entente
+				FRA_call_the_grand_assembly
+			}
 		}
-		
-		
-		
+		"TUR"={
+			history = "TUR_1936_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+				TUR_empower_the_reformers
+				TUR_favor_the_fundamentalists
+				TUR_forts_in_bulgaria
+			}
+		}
+		"GER"={
+			history = "PRS_1936_DESC"
+			ideology = democratic
+			ideas = {
+				prussian_militarism
+			}
+			focuses = {
+				GER_support_the_lohmeyer_plan
+				GER_the_unification_of_germany
+				GER_equality_for_askaris
+			}
+		}
+		"SOV"={
+			history = "SOV_1936_DESC"
+			ideology = neutrality
+			ideas = {
+				bolshevik_insurgents2
+				orthodox_church_content
+			}
+			focuses = {
+				SOV_execute_the_tsar
+				SOV_create_the_yezhov_office
+				SOV_finish_the_tsar_line
+			}
+		}
 
 		"---"={
 			history = "OTHER_1936_DESC"
 		}
 		
-		"LOU"={
-			minor = yes
-			history = ""
-			ideology = neutrality
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		
-		"USA"={
-			minor = yes
-			history = ""
-			ideology = democratic
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		
-		"WUR"={
-			minor = yes
-			history = ""
-			ideology = fascism
-			ideas = {
-				dreams_of_greater_germany
-			}
-			focuses = {
-			}
-		}
-		
 		"CAN"={
 			minor = yes
-			history = ""
+			history = "CAN_1936_DESC"
 			ideology = democratic
-			ideas = {
-				franco_american_discontent
-				statute_of_montreal
-			}
-			focuses = {
-			}
+			ideas = {}
+			focuses = {}
 		}
-		
-		"MEX"={
-			minor = yes
-			history = ""
-			ideology = neutrality
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		
 		"ITA"={
 			minor = yes
-			history = ""
+			history = "ITA_1936_DESC"
 			ideology = communism
 			ideas = {
+				pci_divided
+				italian_monarchy_in_exile
 			}
 			focuses = {
+				ITA_support_the_national_bolsheviks
+				ITA_call_de_gasperi_into_office
+				ITA_further_centralizations_of_private_businesses
 			}
 		}
-		
-		"TTS"={
-			minor = yes
-			history = ""
-			ideology = fascism
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		
 		"CHI"={
 			minor = yes
-			history = ""
+			history = "CHI_1936_DESC"
 			ideology = fascism
 			ideas = {
-				china_subjugation
-				china_nanjing_warlord
+				lessons_of_humiliation
 			}
 			focuses = {
+				CHI_found_military_academies
+				CHI_avenge_the_humiliation
+				CHI_alliance_with_the_maoists
 			}
 		}
-		
-		"HOL"={
+		"LOU"={
 			minor = yes
-			history = ""
+			history = "LOU_1936_DESC"
+			ideology = neutrality
+			ideas = {}
+			focuses = {}
+		}
+		"MEX"={
+			minor = yes
+			history = "MEX_1936_DESC"
+			ideology = communism
+			ideas = {}
+			focuses = {
+				MEX_allow_parliamentary_opposition
+				MEX_attack_california
+				MEX_mexico_city_military_academy
+			}
+		}
+		"MUG"={
+			minor = yes
+			history = "MUG_1936_DESC"
+			ideology = neutrality
+			ideas = {}
+			focuses = {}
+		}
+		"TTS"={
+			minor = yes
+			history = "NAP_1936_DESC"
+			ideology = fascism
+			ideas = {}
+			focuses = {
+				TTS_pan_italian_ambition
+				TTS_assassinate_the_pope
+				TTS_reinforce_the_national_militias
+			}
+		}
+		"OHI"={
+			minor = yes
+			history = "OHI_1936_DESC"
+			ideology = neutrality
+			ideas = {}
+			focuses = {
+				OHI_cancel_the_1827_agreement
+				OHI_the_new_king
+				OHI_reform_the_ministry_of_war
+			}
+		}
+		"PAP"={
+			minor = yes
+			history = "PAP_1936_DESC"
+			ideology = neutrality
+			ideas = {}
+			focuses = {
+				PAP_the_new_pope
+				PAP_weapons_of_desecration
+				PAP_invite_polish_guest_workers
+			}
+		}
+		"SWE"={
+			minor = yes
+			history = "SWE_1936_DESC"
 			ideology = democratic
 			ideas = {
+				stockholm_crisis
 			}
 			focuses = {
+				SWE_endorse_the_fraus_plan
+				SWE_bring_bjorkquist_to_justice
+				SWE_endorse_the_norwegian_occupation_narrative
 			}
 		}
-		
-		"WES"={
+		"USA"={
 			minor = yes
-			history = ""
+			history = "USA_1936_DESC"
 			ideology = democratic
 			ideas = {
+				racial_segregation
+				economic_crisis4
 			}
 			focuses = {
-			}
-		}
-		
-		"PAK"={
-			minor = yes
-			history = ""
-			ideology = neutrality
-			ideas = {
-				muhgal_history_01
-				afghan_resistance
-			}
-			focuses = {
-			}
-		}
-		
-		"RAJ"={
-			minor = yes
-			history = ""
-			ideology = neutrality
-			ideas = {
-			}
-			focuses = {
+				USA_align_with_france
+				USA_oppenheimer_project
+				USA_invite_henry_ford_into_the_government
 			}
 		}
 

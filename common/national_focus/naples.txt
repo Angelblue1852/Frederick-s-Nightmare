@@ -5,7 +5,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			original_tag = NAP
+			original_tag = TTS
 			add = 20
 		}
 	}
@@ -14,7 +14,7 @@ focus_tree = {
 	reset_on_civilwar = no
 	
 	focus = {
-		id = NAP_reinforce_the_national_militias
+		id = TTS_reinforce_the_national_militias
 		icon = infantry_axis
 		
 		x = 2
@@ -42,17 +42,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_compact_with_wurttemberg
+		id = TTS_compact_with_wurttemberg
 		icon = tanks
 		
 		x = -2
 		y = 1
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_reinforce_the_national_militias
+			focus = TTS_reinforce_the_national_militias
 		}
 		mutually_exclusive = {}
 		available = {
@@ -75,17 +75,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_ideological_officers
+		id = TTS_ideological_officers
 		icon = military_academy
 		
 		x = 0
 		y = 1
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_reinforce_the_national_militias
+			focus = TTS_reinforce_the_national_militias
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -105,17 +105,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_doctrinal_reform
+		id = TTS_doctrinal_reform
 		icon = combined_arms
 		
 		x = 2
 		y = 1
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_reinforce_the_national_militias
+			focus = TTS_reinforce_the_national_militias
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -145,20 +145,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_emphasis_on_mobility
+		id = TTS_emphasis_on_mobility
 		icon = motorized
 		
 		x = -2
 		y = 2
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_compact_with_wurttemberg
+			focus = TTS_compact_with_wurttemberg
 		}
 		mutually_exclusive = {
-			focus = NAP_emphasis_on_glory
+			focus = TTS_emphasis_on_glory
 		}
 		available = {}
 		bypass = {}
@@ -178,20 +178,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_emphasis_on_glory
+		id = TTS_emphasis_on_glory
 		icon = secret_weapons
 		
 		x = 0
 		y = 2
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_ideological_officers
+			focus = TTS_ideological_officers
 		}
 		mutually_exclusive = {
-			focus = NAP_emphasis_on_mobility
+			focus = TTS_emphasis_on_mobility
 		}
 		available = {}
 		bypass = {}
@@ -211,17 +211,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_naval_innovations
+		id = TTS_naval_innovations
 		icon = navy
 		
 		x = 3
 		y = 2
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_doctrinal_reform
+			focus = TTS_doctrinal_reform
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -250,18 +250,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_doctrine_of_glorious_advance
+		id = TTS_doctrine_of_glorious_advance
 		icon = infantry_axis2
 		
 		x = -1
 		y = 3
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_emphasis_on_glory
-			focus = NAP_emphasis_on_mobility
+			focus = TTS_emphasis_on_glory
+			focus = TTS_emphasis_on_mobility
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -285,17 +285,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_air_innovations
+		id = TTS_air_innovations
 		icon = air_force
 		
 		x = 2
 		y = 3
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_doctrinal_reform
+			focus = TTS_doctrinal_reform
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -316,17 +316,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_light_planes
+		id = TTS_light_planes
 		icon = fighters
 		
 		x = 1
 		y = 4
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_air_innovations
+			focus = TTS_air_innovations
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -351,17 +351,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_heavy_planes
+		id = TTS_heavy_planes
 		icon = bombers
 		
 		x = 3
 		y = 4
-		relative_position_id = NAP_reinforce_the_national_militias
+		relative_position_id = TTS_reinforce_the_national_militias
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_air_innovations
+			focus = TTS_air_innovations
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -388,7 +388,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = NAP_accept_papal_authority
+		id = TTS_accept_papal_authority
 		icon = catholicism
 		
 		x = 9
@@ -398,7 +398,7 @@ focus_tree = {
 		
 		prerequisite = {}
 		mutually_exclusive = {
-			focus = NAP_pan_italian_ambition
+			focus = TTS_pan_italian_ambition
 		}
 		available = {
 			is_neighbor_of = PAP
@@ -424,17 +424,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_anti_liberal_agitation
+		id = TTS_anti_liberal_agitation
 		icon = attack_democracy2
 		
 		x = -3
 		y = 1
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_accept_papal_authority
+			focus = TTS_accept_papal_authority
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -459,17 +459,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_catholic_militias
+		id = TTS_catholic_militias
 		icon = demand_territory
 		
 		x = -1
 		y = 1
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_accept_papal_authority
+			focus = TTS_accept_papal_authority
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -489,17 +489,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_invite_roman_industrial_planners
+		id = TTS_invite_roman_industrial_planners
 		icon = industry_civilian
 		
 		x = 1
 		y = 1
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_accept_papal_authority
+			focus = TTS_accept_papal_authority
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -520,17 +520,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_strategic_conclusions
+		id = TTS_strategic_conclusions
 		icon = infiltration
 		
 		x = -2
 		y = 2
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_catholic_militias
+			focus = TTS_catholic_militias
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -550,20 +550,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_naval_power_projection
+		id = TTS_naval_power_projection
 		icon = amphibious_assault
 		
 		x = -3
 		y = 3
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_strategic_conclusions
+			focus = TTS_strategic_conclusions
 		}
 		prerequisite = {
-			focus = NAP_naval_innovations
+			focus = TTS_naval_innovations
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -583,17 +583,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_ally_the_pope
+		id = TTS_ally_the_pope
 		icon = alliance
 		
 		x = -1
 		y = 3
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_strategic_conclusions
+			focus = TTS_strategic_conclusions
 		}
 		mutually_exclusive = {}
 		available = {
@@ -622,17 +622,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_ideological_conclusions
+		id = TTS_ideological_conclusions
 		icon = fascism
 		
 		x = 0
 		y = 2
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_catholic_militias
+			focus = TTS_catholic_militias
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -661,18 +661,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_anti_communist_zeal
+		id = TTS_anti_communist_zeal
 		icon = anti_communism
 		
 		x = 1
 		y = 3
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_ideological_conclusions
-			focus = NAP_the_axis_powers
+			focus = TTS_ideological_conclusions
+			focus = TTS_the_axis_powers
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -696,17 +696,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_request_canonization_for_the_army
+		id = TTS_request_canonization_for_the_army
 		icon = entente
 		
 		x = -2
 		y = 4
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_ally_the_pope
+			focus = TTS_ally_the_pope
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -726,17 +726,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_modern_crusades
+		id = TTS_modern_crusades
 		icon = islamophobia
 		
 		x = 0
 		y = 4
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_ideological_conclusions
+			focus = TTS_ideological_conclusions
 		}
 		mutually_exclusive = {}
 		available = {
@@ -768,20 +768,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_deus_vult
+		id = TTS_deus_vult
 		icon = catholicism
 		
 		x = -1
 		y = 5
-		relative_position_id = NAP_accept_papal_authority
+		relative_position_id = TTS_accept_papal_authority
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_ally_the_pope
+			focus = TTS_ally_the_pope
 		}
 		prerequisite = {
-			focus = NAP_modern_crusades
+			focus = TTS_modern_crusades
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -801,19 +801,19 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_crusade_for_albania
+		id = TTS_crusade_for_albania
 		icon = war
 		
 		x = -2
 		y = 1
-		relative_position_id = NAP_deus_vult
+		relative_position_id = TTS_deus_vult
 
 		cost = 10
 		
 		will_lead_to_war_with = TUR
 		
 		prerequisite = {
-			focus = NAP_deus_vult
+			focus = TTS_deus_vult
 		}
 		mutually_exclusive = {}
 		available = {
@@ -847,19 +847,19 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_reclaim_the_maltese_fortress
+		id = TTS_reclaim_the_maltese_fortress
 		icon = war2
 		
 		x = 0
 		y = 1
-		relative_position_id = NAP_deus_vult
+		relative_position_id = TTS_deus_vult
 
 		cost = 10
 		
 		will_lead_to_war_with = FRA
 		
 		prerequisite = {
-			focus = NAP_deus_vult
+			focus = TTS_deus_vult
 		}
 		mutually_exclusive = {}
 		available = {
@@ -893,19 +893,19 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_take_egypt_for_jesus
+		id = TTS_take_egypt_for_jesus
 		icon = war3
 		
 		x = 2
 		y = 1
-		relative_position_id = NAP_deus_vult
+		relative_position_id = TTS_deus_vult
 
 		cost = 10
 		
 		will_lead_to_war_with = EGY
 		
 		prerequisite = {
-			focus = NAP_deus_vult
+			focus = TTS_deus_vult
 		}
 		mutually_exclusive = {}
 		available = {
@@ -978,7 +978,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = NAP_pan_italian_ambition
+		id = TTS_pan_italian_ambition
 		icon = italian_fascism
 		
 		x = 13
@@ -988,7 +988,7 @@ focus_tree = {
 		
 		prerequisite = {}
 		mutually_exclusive = {
-			focus = NAP_accept_papal_authority
+			focus = TTS_accept_papal_authority
 		}
 		available = {}
 		bypass = {}
@@ -1007,17 +1007,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_call_a_fascistic_world_congress
+		id = TTS_call_a_fascistic_world_congress
 		icon = fascism3
 		
 		x = -1
 		y = 1
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_pan_italian_ambition
+			focus = TTS_pan_italian_ambition
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1042,17 +1042,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_assassinate_the_pope
+		id = TTS_assassinate_the_pope
 		icon = gunpoint_diplomacy
 		
 		x = 1
 		y = 1
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_pan_italian_ambition
+			focus = TTS_pan_italian_ambition
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1077,17 +1077,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_the_axis_powers
+		id = TTS_the_axis_powers
 		icon = major_alliance
 		
 		x = -2
 		y = 2
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_call_a_fascistic_world_congress
+			focus = TTS_call_a_fascistic_world_congress
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1109,7 +1109,7 @@ focus_tree = {
 						has_government = fascism
 						is_puppet = no
 						is_in_faction = no
-						NOT = { has_war_with = NAP }
+						NOT = { has_war_with = TTS }
 					}
 				}
 				WUR = {
@@ -1123,17 +1123,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_deals_with_south_american_warlords
+		id = TTS_deals_with_south_american_warlords
 		icon = industry_military
 		
 		x = -1
 		y = 3
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_call_a_fascistic_world_congress
+			focus = TTS_call_a_fascistic_world_congress
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1159,19 +1159,19 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_march_on_rome
+		id = TTS_march_on_rome
 		icon = war
 		
 		x = 1
 		y = 2
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		will_lead_to_war_with = PAP
 		
 		prerequisite = {
-			focus = NAP_assassinate_the_pope
+			focus = TTS_assassinate_the_pope
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1202,17 +1202,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_move_the_capital
+		id = TTS_move_the_capital
 		icon = diplomacy
 		
 		x = 1
 		y = 3
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_march_on_rome
+			focus = TTS_march_on_rome
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1236,20 +1236,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_destroy_the_communists
+		id = TTS_destroy_the_communists
 		icon = war2
 		
 		x = 0
 		y = 4
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		will_lead_to_war_with = ITA
 		
 		prerequisite = {
-			focus = NAP_march_on_rome
-			focus = NAP_anti_communist_zeal
+			focus = TTS_march_on_rome
+			focus = TTS_anti_communist_zeal
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1285,17 +1285,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_fight_central_italian_unemployment
+		id = TTS_fight_central_italian_unemployment
 		icon = industry_civilian
 		
 		x = 2
 		y = 4
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_move_the_capital
+			focus = TTS_move_the_capital
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1333,20 +1333,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_italian_unity
+		id = TTS_italian_unity
 		icon = align_with_italy
 		
 		x = 1
 		y = 5
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_move_the_capital
+			focus = TTS_move_the_capital
 		}
 		prerequisite = {
-			focus = NAP_destroy_the_communists
+			focus = TTS_destroy_the_communists
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1376,17 +1376,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_conquer_austrian_italy
+		id = TTS_conquer_austrian_italy
 		icon = war4
 		
 		x = 1
 		y = 6
-		relative_position_id = NAP_pan_italian_ambition
+		relative_position_id = TTS_pan_italian_ambition
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_italian_unity
+			focus = TTS_italian_unity
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -1432,7 +1432,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = NAP_reinforce_political_repression
+		id = TTS_reinforce_political_repression
 		icon = demand_territory
 		
 		x = 19
@@ -1460,17 +1460,17 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = NAP_arrest_unruly_labor_leaderships
+		id = TTS_arrest_unruly_labor_leaderships
 		icon = espionage
 		
 		x = -1
 		y = 1
-		relative_position_id = NAP_reinforce_political_repression
+		relative_position_id = TTS_reinforce_political_repression
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_reinforce_political_repression
+			focus = TTS_reinforce_political_repression
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -1490,17 +1490,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_puppet_labor_leaderships
+		id = TTS_puppet_labor_leaderships
 		icon = espionage2
 		
 		x = -1
 		y = 1
-		relative_position_id = NAP_arrest_unruly_labor_leaderships
+		relative_position_id = TTS_arrest_unruly_labor_leaderships
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_arrest_unruly_labor_leaderships
+			focus = TTS_arrest_unruly_labor_leaderships
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -1527,17 +1527,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_undermine_foreign_labor_movements
+		id = TTS_undermine_foreign_labor_movements
 		icon = stolen_papers
 		
 		x = 1
 		y = 1
-		relative_position_id = NAP_arrest_unruly_labor_leaderships
+		relative_position_id = TTS_arrest_unruly_labor_leaderships
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_arrest_unruly_labor_leaderships
+			focus = TTS_arrest_unruly_labor_leaderships
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -1563,17 +1563,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_technological_warfare
+		id = TTS_technological_warfare
 		icon = cryptologic_bomb
 		
 		x = 3
 		y = 1
-		relative_position_id = NAP_arrest_unruly_labor_leaderships
+		relative_position_id = TTS_arrest_unruly_labor_leaderships
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_public_universities
+			focus = TTS_public_universities
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -1600,17 +1600,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_limited_concessions_to_the_workforce
+		id = TTS_limited_concessions_to_the_workforce
 		icon = concessions
 		
 		x = -1
 		y = 2
-		relative_position_id = NAP_arrest_unruly_labor_leaderships
+		relative_position_id = TTS_arrest_unruly_labor_leaderships
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_puppet_labor_leaderships
+			focus = TTS_puppet_labor_leaderships
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -1659,20 +1659,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_abduct_foreign_scientists
+		id = TTS_abduct_foreign_scientists
 		icon = research2
 		
 		x = 2
 		y = 2
-		relative_position_id = NAP_arrest_unruly_labor_leaderships
+		relative_position_id = TTS_arrest_unruly_labor_leaderships
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_undermine_foreign_labor_movements
+			focus = TTS_undermine_foreign_labor_movements
 		}
 		prerequisite = {
-			focus = NAP_public_universities
+			focus = TTS_public_universities
 		}
 		mutually_exclusive = {}
 		available = {}
@@ -1692,17 +1692,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_repurpose_southern_maserati
+		id = TTS_repurpose_southern_maserati
 		icon = industry_military
 		
 		x = -1
 		y = 3
-		relative_position_id = NAP_arrest_unruly_labor_leaderships
+		relative_position_id = TTS_arrest_unruly_labor_leaderships
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_limited_concessions_to_the_workforce
+			focus = TTS_limited_concessions_to_the_workforce
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1736,17 +1736,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_urbanization_effort
+		id = TTS_urbanization_effort
 		icon = industry_civilian
 		
 		x = 1
 		y = 3
-		relative_position_id = NAP_arrest_unruly_labor_leaderships
+		relative_position_id = TTS_arrest_unruly_labor_leaderships
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_limited_concessions_to_the_workforce
+			focus = TTS_limited_concessions_to_the_workforce
 		}
 		mutually_exclusive = {}
 		available = {
@@ -1772,17 +1772,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NAP_public_universities
+		id = TTS_public_universities
 		icon = research
 		
 		x = 1
 		y = 1
-		relative_position_id = NAP_reinforce_political_repression
+		relative_position_id = TTS_reinforce_political_repression
 
 		cost = 10
 		
 		prerequisite = {
-			focus = NAP_reinforce_political_repression
+			focus = TTS_reinforce_political_repression
 		}
 		mutually_exclusive = {}
 		available = {}
