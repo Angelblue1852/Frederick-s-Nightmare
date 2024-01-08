@@ -31,4 +31,4 @@ set_popularities = {
 	fascism = 30
 }
 
-
+add_opinion_modifier = { target = JBL modifier = historical_rival }

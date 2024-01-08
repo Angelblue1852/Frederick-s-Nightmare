@@ -1,0 +1,174 @@
+bolshevik_insurgents_downgrade = {
+	if = {
+		limit = { has_idea = bolshevik_insurgents }
+		remove_ideas = bolshevik_insurgents
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents2 }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents2
+			add_idea = bolshevik_insurgents
+		}
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents3 }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents3
+			add_idea = bolshevik_insurgents2
+		}
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents4 }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents4
+			add_idea = bolshevik_insurgents3
+		}
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents5 }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents5
+			add_idea = bolshevik_insurgents4
+		}
+	}
+}
+bolshevik_insurgents_upgrade = {
+	if = {
+		limit = { has_idea = bolshevik_insurgents5 }
+		add_stability = -0.05
+		add_popularity = { ideology = communism popularity = 0.05 }
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents4 }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents4
+			add_idea = bolshevik_insurgents5
+		}
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents3 }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents3
+			add_idea = bolshevik_insurgents4
+		}
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents2 }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents2
+			add_idea = bolshevik_insurgents3
+		}
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents }
+		swap_ideas = {
+			remove_idea = bolshevik_insurgents
+			add_idea = bolshevik_insurgents2
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_idea = bolshevik_insurgents }
+			NOT = { has_idea = bolshevik_insurgents2 }
+			NOT = { has_idea = bolshevik_insurgents3 }
+			NOT = { has_idea = bolshevik_insurgents4 }
+			NOT = { has_idea = bolshevik_insurgents5 }
+		}
+		add_ideas = bolshevik_insurgents
+	}
+}
+bolshevik_insurgents_remove = {
+	if = {
+		limit = { has_idea = bolshevik_insurgents }
+		remove_ideas = bolshevik_insurgents
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents2 }
+		remove_ideas = bolshevik_insurgents2
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents3 }
+		remove_ideas = bolshevik_insurgents3
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents4 }
+		remove_ideas = bolshevik_insurgents4
+	}
+	if = {
+		limit = { has_idea = bolshevik_insurgents5 }
+		remove_ideas = bolshevik_insurgents5
+	}
+}
+
+orthodox_church_downgrade = {
+	if = {
+		limit = { has_idea = orthodox_church_unhappy }
+		add_stability = -0.05
+	}
+	if = {
+		limit = { has_idea = orthodox_church_discontent }
+		swap_ideas = {
+			remove_idea = orthodox_church_discontent
+			add_idea = orthodox_church_unhappy
+		}
+	}
+	if = {
+		limit = { has_idea = orthodox_church_content }
+		swap_ideas = {
+			remove_idea = orthodox_church_content
+			add_idea = orthodox_church_discontent
+		}
+	}
+	if = {
+		limit = { has_idea = orthodox_church_happy }
+		swap_ideas = {
+			remove_idea = orthodox_church_happy
+			add_idea = orthodox_church_content
+		}
+	}
+}
+orthodox_church_upgrade = {
+	if = {
+		limit = { has_idea = orthodox_church_happy }
+		add_stability = 0.05
+	}
+	if = {
+		limit = { has_idea = orthodox_church_content }
+		swap_ideas = {
+			remove_idea = orthodox_church_content
+			add_idea = orthodox_church_happy
+		}
+	}
+	if = {
+		limit = { has_idea = orthodox_church_discontent }
+		swap_ideas = {
+			remove_idea = orthodox_church_discontent
+			add_idea = orthodox_church_content
+		}
+	}
+	if = {
+		limit = { has_idea = orthodox_church_unhappy }
+		swap_ideas = {
+			remove_idea = orthodox_church_unhappy
+			add_idea = orthodox_church_discontent
+		}
+	}
+}
+orthodox_church_remove = {
+	if = {
+		limit = { has_idea = orthodox_church_happy }
+		remove_ideas = orthodox_church_happy
+	}
+	if = {
+		limit = { has_idea = orthodox_church_content }
+		remove_ideas = orthodox_church_content
+	}
+	if = {
+		limit = { has_idea = orthodox_church_discontent }
+		remove_ideas = orthodox_church_discontent
+	}
+	if = {
+		limit = { has_idea = orthodox_church_unhappy }
+		remove_ideas = orthodox_church_unhappy
+	}
+}

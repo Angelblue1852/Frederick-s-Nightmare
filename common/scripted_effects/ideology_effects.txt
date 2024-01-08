@@ -1,0 +1,28 @@
+communist_coup = {
+	set_politics = {
+		ruling_party = communism
+		elections_allowed = no
+	}
+	news_event = news.9
+}
+democratic_coup = {
+	set_politics = {
+		ruling_party = democratic
+		elections_allowed = yes
+	}
+	news_event = news.10
+}
+authoritarian_coup = {
+	set_politics = {
+		ruling_party = neutrality
+		elections_allowed = no
+	}
+	news_event = news.11
+}
+fascist_coup = {
+	set_politics = {
+		ruling_party = fascism
+		elections_allowed = no
+	}
+	news_event = news.12
+}

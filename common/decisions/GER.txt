@@ -1,0 +1,72 @@
+form_germany_category = {
+	
+	form_germany = {
+		
+		icon = DI_civil_support
+		
+		cost = 100
+	
+		allowed = { always = yes }
+		visible = {
+			NOT = { has_cosmetic_tag = GPR }
+			OR = {
+				original_tag = GER
+				original_tag = AUS
+				original_tag = WES
+				original_tag = 
+			}
+		}
+		available = {
+			all_country = {
+				NOT = { has_cosmetic_tag = GPR }
+			}
+			if = {
+				limit = { original_tag = GER }
+				has_completed_focus = PRS_the_unification_of_germany
+			}
+			if = {
+				limit = { original_tag = AUS }
+				OR = {
+					has_completed_focus = AUS_the_danube_confederation
+					has_completed_focus = AUS_proclaim_austria_hungary
+					has_completed_focus = AUS_germanic_supremacy
+				}
+			}
+			has_full_control_of_state = 59
+			has_full_control_of_state = 60
+			has_full_control_of_state = 57
+			has_full_control_of_state = 55
+			has_full_control_of_state = 50
+			has_full_control_of_state = 788
+			has_full_control_of_state = 52
+			has_full_control_of_state = 65
+			OR = {
+				has_full_control_of_state = 4
+				has_full_control_of_state = 64
+			}
+		}
+		
+		complete_effect = {
+			set_cosmetic_tag = GPR
+			add_stability = 0.05
+			add_war_support = 0.05
+			every_state = {
+				limit = { has_state_flag = core_german_state }
+				add_core_of = ROOT
+			}
+			add_named_threat = {
+				name = "Unification of Germany"
+				threat = 5
+			}
+		}
+	
+		ai_will_do = {
+			base = 100		
+		}
+		
+	}
+	
+}
+
+german_decisions = {
+}

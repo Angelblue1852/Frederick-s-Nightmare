@@ -1,0 +1,8 @@
+german_decisions = {
+	allowed = {
+		OR = { original_tag = GER original_tag = AUS is_minor_german_state = yes }
+	}
+	visible = {
+		OR = { original_tag = GER original_tag = AUS is_minor_german_state = yes }
+	}
+}

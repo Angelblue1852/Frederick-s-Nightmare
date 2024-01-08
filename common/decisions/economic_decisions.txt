@@ -1,0 +1,25 @@
+economic_decisions = {
+}
+
+economic_crisis_decisions = {
+	
+	new_employment_opportunities = {
+	
+		icon = DI_construction
+	
+		allowed = { always = yes }
+		visible = { has_economic_crisis = yes }
+		
+		available = {}
+		
+		complete_effect = {
+			economic_crisis_downgrade = yes
+		}
+		
+		cost = 150
+
+		days_re_enable = 90
+		
+	}
+	
+}

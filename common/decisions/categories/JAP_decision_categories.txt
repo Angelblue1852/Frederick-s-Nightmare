@@ -1,0 +1,9 @@
+JAP_fengtian_war = {
+	allowed = {
+		original_tag = JAP
+	}
+	priority = {
+			base = 50
+		}
+	
+}

@@ -200,6 +200,23 @@ characters={
 		}
 	}
 	
+	USA_theodor_geisel = {
+		name = "Theodor 'Dr.' Seuss Geise" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/usa/GFX_theodor_geisel.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = theodor_geisel
+			available = {
+			}
+			ledger = civilian
+			traits = { anti_reactionary_author }
+		}
+	}
+	
 	USA_william_pelley = {
 		name = "William Dudley Pelley" 
 		portraits = {

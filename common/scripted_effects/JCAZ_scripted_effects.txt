@@ -1,0 +1,245 @@
+jcaz_influence_math = {
+	add_to_variable  = {
+		var = jcaz_math
+		value = [france_jcaz_influence]
+	}
+	add_to_variable  = {
+		var = jcaz_math
+		value = [britain_jcaz_influence]
+	}
+	add_to_variable  = {
+		var = jcaz_math
+		value = [russia_jcaz_influence]
+	}
+	add_to_variable  = {
+		var = jcaz_math
+		value = [prussia_jcaz_influence]
+	}
+	add_to_variable  = {
+		var = jcaz_math
+		value = [portugal_jcaz_influence]
+	}
+	add_to_variable  = {
+		var = jcaz_math
+		value = [spain_jcaz_influence]
+	}
+	add_to_variable  = {
+		var = jcaz_math
+		value = [austria_jcaz_influence]
+	}
+	add_to_variable  = {
+		var = jcaz_math
+		value = [ottoman_jcaz_influence]
+	}
+	divide_variable = {
+		var = jcaz_math
+		value = 8
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = jcaz_math
+				value = 1
+				compare = less_than
+			}
+		}
+		jcaz_influence_set_0 = yes
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = jcaz_math
+				value = 1
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = jcaz_math
+				value = 2
+				compare = less_than
+			}
+		}
+		jcaz_influence_set_1 = yes
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = jcaz_math
+				value = 2
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = jcaz_math
+				value = 3
+				compare = less_than
+			}
+		}
+		jcaz_influence_set_2 = yes
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = jcaz_math
+				value = 3
+				compare = greater_than_or_equals
+			}
+		}
+		jcaz_influence_set_3 = yes
+	}
+}
+jcaz_influence_set_0 = {
+	if = {
+		limit = {
+			has_idea = jcaz_influence_00
+		}
+		add_stability =  0.03
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_01
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_01
+			add_idea = jcaz_influence_00
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_02
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_02
+			add_idea = jcaz_influence_00
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_03
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_03
+			add_idea = jcaz_influence_00
+		}
+	}
+	set_variable = {
+		var = jcaz_math
+		value = 0
+	}
+}
+
+jcaz_influence_set_1 = {
+	if = {
+		limit = {
+			has_idea = jcaz_influence_00
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_00
+			add_idea = jcaz_influence_01
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_01
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_02
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_02
+			add_idea = jcaz_influence_01
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_03
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_03
+			add_idea = jcaz_influence_01
+		}
+	}
+	set_variable = {
+		var = jcaz_math
+		value = 0
+	}
+}
+
+jcaz_influence_set_2 = {
+	if = {
+		limit = {
+			has_idea = jcaz_influence_00
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_00
+			add_idea = jcaz_influence_02
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_01
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_01
+			add_idea = jcaz_influence_02
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_02
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_03
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_03
+			add_idea = jcaz_influence_02
+		}
+	}
+	set_variable = {
+		var = jcaz_math
+		value = 0
+	}
+}
+
+jcaz_influence_set_3 = {
+	if = {
+		limit = {
+			has_idea = jcaz_influence_00
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_00
+			add_idea = jcaz_influence_03
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_01
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_01
+			add_idea = jcaz_influence_03
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_02
+		}
+		swap_ideas = {
+			remove_idea = jcaz_influence_02
+			add_idea = jcaz_influence_03
+		}
+	}
+	if = {
+		limit = {
+			has_idea = jcaz_influence_03
+		}
+		add_stability =  -0.03
+	}
+	set_variable = {
+		var = jcaz_math
+		value = 0
+	}
+}

@@ -32,4 +32,5 @@ set_popularities = {
 	fascism = 30
 }
 
-
+add_opinion_modifier = { target = SAU modifier = historical_rival }
+add_opinion_modifier = { target = TUR modifier = historical_ally }

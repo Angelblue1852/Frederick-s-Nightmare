@@ -1,0 +1,354 @@
+﻿division_template = {
+	name = "Infantry Division"
+	
+	division_names_group = TUR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+division_template = {
+	name = "Motorized Division"
+	
+	division_names_group = TUR_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+        motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Armored Brigade"
+	
+	division_names_group = TUR_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Cavalry Force"
+	
+	division_names_group = TUR_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+        cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+division_template = {
+	name = "Infantry Brigade"
+	
+	division_names_group = TUR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	
+	support = {
+	}
+	
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "1st Armored"
+		location = 9833
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd Armored"
+		location = 11747
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "3rd Armored"
+		location = 949
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Turkish"
+		location = 9833
+		division_template = "Motorized Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd Turkish"
+		location = 4112
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "3rd Turkish"
+		location = 11746
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "4th Turkish"
+		location = 9932
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "5th Turkish"
+		location = 947
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "6th Turkish"
+		location = 890
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "7th Turkish"
+		location = 1005
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "8th Turkish"
+		location = 9893
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "9th Turkish"
+		location = 890
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "10th Turkish"
+		location = 9833
+		division_template = "Motorized Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "11th Turkish"
+		location = 4112
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Bulgarian"
+		location = 949
+		division_template = "Motorized Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd Bulgarian"
+		location = 6923
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "3rd Bulgarian"
+		location = 9783
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "4th Bulgarian"
+		location = 3882
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Albanian"
+		location = 9914
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Greek"
+		location = 11818
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Kurdish"
+		location = 10106
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Iraqi"
+		location = 2097
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Syrian"
+		location = 4111
+		division_template = "Motorized Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd Syrian"
+		location = 12473
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	division = {
+		name = "1st Palestinian"
+		location = 1086
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	#division = {
+	#	name = "1st Egyptian"
+	#	location = 11979
+	#	division_template = "Infantry Division"
+	#	start_experience_factor = 0.2
+	#	start_equipment_factor = 0.75
+	#}
+	#division = {
+	#	name = "2nd Egyptian"
+	#	location = 11922
+	#	division_template = "Infantry Division"
+	#	start_experience_factor = 0.2
+	#	start_equipment_factor = 0.75
+	#}
+	
+	division = {
+		name = "Anatolian Cavalry"
+		location = 9954
+		division_template = "Cavalry Force"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Syrian Cavalry"
+		location = 3942
+		division_template = "Cavalry Force"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Iraqi Cavalry"
+		location = 2004
+		division_template = "Cavalry Force"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Palestinian Cavalry"
+		location = 1015
+		division_template = "Cavalry Force"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Garrison Rhodes"
+		location = 10007
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Garrison Aegean"
+		location = 8435
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+}
+
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "TUR"
+		}
+		requested_factories = 1
+		progress = 0.43
+		efficiency = 100
+	}
+}

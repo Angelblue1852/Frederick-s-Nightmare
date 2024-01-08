@@ -1,6 +1,6 @@
 characters={
 	SWB_fredrick_kaltenbach = {
-		name = "Frederick Wilhelm Kaltenbach" 
+		name = "Frederick Kaltenbach" 
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/SWB/SWB_fredrick_kaltenbach.png"
@@ -8,6 +8,19 @@ characters={
 		}
 		country_leader = {
 			ideology = nazism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	SWB_wilhelm_langer = {
+		name = "Wilhelm Langer" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SWB/SWB_wilhelm_langer.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
 			expire = "1960.1.1.1"
 			id = -1
 		}

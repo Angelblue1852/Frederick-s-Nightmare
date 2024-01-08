@@ -1,0 +1,45 @@
+﻿
+units= {
+	##### NAVAL UNITS #####
+	### AUSLY ###
+	fleet = {
+		name = "Comando Navale Ionio e Basso Adriatico"			
+		naval_base = 11837 # Taranto, AUSly
+		task_force = { 
+			name = "I Squadra Navale" # Dipartimento MilAUSre Marittimo 'Ionio e Basso Adriatico' / I Squadra
+			location = 11837 # Taranto, AUSly
+			# V Divisione Corazzate
+			ship = { name = "RN Caio Duilio" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_pre_dreadnought = { amount = 1 owner = AUS version_name = "Deutschland Class"  } } } 
+			ship = { name = "RN Andrea Doria" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_pre_dreadnought = { amount = 1 owner = AUS version_name = "Deutschland Class"  } } } 
+			# I Divisione Incrociatori
+			ship = { name = "RI Zara" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Bremse Class" } } } 
+			ship = { name = "RI Gorizia" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Bremse Class" } } } 
+			ship = { name = "RI Fiume" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Bremse Class" } } } 
+			# IV Divisione Incrociatori
+			ship = { name = "RI Luigi Cadorna" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Emden Class" } } } 
+			ship = { name = "RI Armando Diaz" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Emden Class" } } } 
+			ship = { name = "RI Alberico da Barbiano" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Emden Class" } } } 
+			ship = { name = "RI Alberto da Giussano" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Emden Class" } } } 
+			# Gruppo Incrociatori (Obsoleti)
+			ship = { name = "RI Taranto" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Königsberg Class" } } } 
+			ship = { name = "RI Bari" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AUS version_name = "Königsberg Class" } } }	
+			# Gruppo Esploratori Leggeri (Obsoleti)
+			ship = { name = "RCT Carlo Mirabello" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class"  } } } 
+			ship = { name = "RCT Augusto Riboty" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class"  } } } 
+			# II Squadriglia Cacciatorpediniere
+			ship = { name = "RCT Espero" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			ship = { name = "RCT Borea" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			ship = { name = "RCT Zeffiro" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			ship = { name = "RCT Ostro" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			# VI Squadriglia Cacciatorpediniere
+			ship = { name = "RCT Bettino Ricasoli" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			ship = { name = "RCT Giovanni Nicotera" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			# VI Squadriglia Torpediniere
+			ship = { name = "RCT Rosolino Pilo" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			ship = { name = "RCT Giuseppe Missori" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			ship = { name = "RCT Francesco Stocco" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			ship = { name = "RCT Giuseppe Sirtori" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Type 24 Class" } } } 
+			
+			} 
+		}
+	}

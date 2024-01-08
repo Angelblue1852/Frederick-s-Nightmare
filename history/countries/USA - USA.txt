@@ -169,7 +169,7 @@ recruit_character = USA_hiram_evans
 recruit_character = USA_omar_bradley
 recruit_character = USA_adna_chaffee
 recruit_character = USA_john_pershing
-
+recruit_character = USA_theodor_geisel
 
 
 
@@ -202,6 +202,7 @@ set_popularities = {
 	fascism = 15
 }
 
+add_opinion_modifier = { target = MEX modifier = alamo_massacre }
 
 ### VARIANTS ###
 # 1936 Start #

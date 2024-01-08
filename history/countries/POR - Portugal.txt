@@ -8,6 +8,12 @@ set_technology = {
 }
 
 add_ideas = {
+	economic_crisis1
+}
+
+set_variable = {
+    var = portugal_jcaz_influence
+    value = 2
 }
 
 recruit_character = POR_antonio_salazar

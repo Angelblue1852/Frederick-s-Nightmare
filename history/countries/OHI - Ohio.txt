@@ -7,6 +7,10 @@ set_technology = {
 	infantry_weapons = 1
 }
 
+add_ideas = {
+	economic_crisis1
+}
+
 recruit_character = OHI_george_v
 
 
@@ -32,4 +36,4 @@ set_popularities = {
 	fascism = 10
 }
 
-
+add_opinion_modifier = { target = ENG modifier = historical_rival }

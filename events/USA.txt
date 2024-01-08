@@ -9,22 +9,19 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	#Trigger all preset events.
-	immediate = {
-		hidden_effect = {
-			country_event = { id = USA.10 days = 25 }	#Ford Crisis
-			country_event = { id = USA.18 days = 61 }	#General Davis
-			country_event = { id = USA.3 days = 72 }	#Primary Season
-			country_event = { id = USA.19 days = 36 }	#TRU
-		}
-	}
 	
 	option = {
 		name = USA.1.o1
+		hidden_effect = {
+			country_event = { id = USA.11 days = 25 }	#Ford Crisis
+			country_event = { id = USA.19 days = 61 }	#General Davis
+			country_event = { id = USA.3 days = 72 }	#Primary Season
+			country_event = { id = USA.20 days = 36 }	#TRU
+		}
 	}
 }
 
-#Election of 1936
+#Election of 1937
 country_event = {
 	id = USA.2
 	title = USA.2.t
@@ -36,7 +33,7 @@ country_event = {
 	trigger = {
 		original_tag = USA
 		NOT = { has_country_flag = USA_1936_elections }
-		date > 1936.11.7
+		date > 1937.1.3
 	}
 	
 	mean_time_to_happen = {
@@ -45,108 +42,143 @@ country_event = {
 	
 	immediate = { 
 		set_country_flag = USA_1936_elections
-		hidden_effect = { news_event = { id = USA_news.9 days = 7 } }
 	}
 	
-	##Republicans
+	##Whigs
 	#Wadsworth
 	option = {
 		name = USA.2.o1
 		trigger = {
-			OR = {
 				has_country_flag = USA_1936_nomination_wadsworth
-				AND = {
-					NOT = { has_country_flag = USA_1936_nomination_wadsworth }
-					NOT = { has_country_flag = USA_1936_nomination_quentin }
-					NOT = { has_country_flag = USA_1936_nomination_fdr }
-				}
-			}
 		}
-		set_country_flag = USA_1936_wadsworth
-		set_politics = { ruling_party = democratic elections_allowed = yes }
-		create_country_leader = {
-			name = "James W. Wadsworth"
-			picture = "James_W_Wadsworth_Jr.dds"
-			ideology = conservatism
+		set_country_flag = USA_1937_wadsworth
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
+		}
+	}
+
+	#Charles Curtis
+	option = {
+		name = USA.2.o2
+		trigger = {
+			has_country_flag = USA_1936_nomination_curtis
+		}
+		set_country_flag = USA_1937_curtis
+		set_politics = {
+			ruling_party = democratic
+		}
+		promote_character = USA_charles_curtis
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 	
+	##Republicans
 	#Quentin Roosevelt
 	option = {
-		name = USA.2.o2
-		trigger = { has_country_flag = USA_1936_nomination_quentin }
+		name = USA.2.o3
+		trigger = {
+			has_country_flag = USA_1936_nomination_quentin
+		}
 		set_country_flag = USA_1936_quentin
-		set_politics = { ruling_party = democratic elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Quentin Roosevelt"
-			picture = "Quentin_Roosevelt.dds"
-			ideology = socialism
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 	
 	#FDR
 	option = {
-		name = USA.2.o3
-		trigger = { has_country_flag = USA_1936_nomination_fdr }
+		name = USA.2.o4
+		trigger = {
+			has_country_flag = USA_1936_nomination_fdr
+		}
 		set_country_flag = USA_1936_fdr
-		set_politics = { ruling_party = democratic elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Franklin D. Roosevelt"
-			picture = "Franklin_D_Roosevelt.dds"
-			ideology = liberalism
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
+		}
+	}
+
+	#Al Smith
+	option = {
+		name = USA.2.o5
+		trigger = {
+			has_country_flag = USA_1936_nomination_smith
+		}
+		set_country_flag = USA_1936_smith
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 	
 	##Democrats
-	#Al Smith
-	option = {
-		name = USA.2.o4
-		trigger = {
-			OR = {
-				has_country_flag = USA_1936_nomination_smith
-				AND = {
-					NOT = { has_country_flag = USA_1936_nomination_smith }
-					NOT = { has_country_flag = USA_1936_nomination_garner }
-					NOT = { has_country_flag = USA_1936_nomination_curtis }
-				}
-			}
-		}
-		set_country_flag = USA_1936_smith
-		set_politics = { ruling_party = neutrality elections_allowed = yes }
-		create_country_leader = {
-			name = "Al Smith"
-			picture = "Al_Smith.dds"
-			ideology = authoritarian_conservatism
-		}
-	}
-	
-	#John N Garner
-	option = {
-		name = USA.2.o5
-		trigger = { has_country_flag = USA_1936_nomination_garner }
-		set_country_flag = USA_1936_garner
-		set_politics = { ruling_party = neutrality elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "John Nance Garner"
-			picture = "John_Nance_Garner.dds"
-			ideology = oligarchism
-		}
-	}
-	
-	#Charles Curtis
+	#Eugene Talmadge
 	option = {
 		name = USA.2.o6
-		trigger = { has_country_flag = USA_1936_nomination_curtis }
-		set_country_flag = USA_1936_curtis
-		set_politics = { ruling_party = neutrality elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Charles Curtis"
-			picture = "Charles_Curtis.dds"
-			ideology = oligarchism
+		trigger = {
+			has_country_flag = USA_1936_nomination_talmadge
+		}
+		set_country_flag = USA_1936_talmadge
+		set_politics = {
+			ruling_party = neutrality
+		}
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
+		}
+	}
+	#Harry F Byrd
+	option = {
+		name = USA.2.o7
+		trigger = {
+			has_country_flag = USA_1936_nomination_byrd
+		}
+		set_country_flag = USA_1936_byrd
+		set_politics = {
+			ruling_party = neutrality
+		}
+		hidden_effect = {
+			clr_country_flag = USA_1936_nomination_wadsworth
+			clr_country_flag = USA_1936_nomination_curtis
+			clr_country_flag = USA_1936_nomination_quentin
+			clr_country_flag = USA_1936_nomination_fdr
+			clr_country_flag = USA_1936_nomination_smith
+			clr_country_flag = USA_1936_nomination_talmadge
+			clr_country_flag = USA_1936_nomination_byrd
 		}
 	}
 }
@@ -166,20 +198,23 @@ country_event = {
 		add_stability = -0.02
 		hidden_effect = {
 			random_list = {
-				50 = { country_event = { id = USA.4 days = 100 } }		#Wadsworth
-				28 = { country_event = { id = USA.6 days = 100 } }		#FDR
-				22 = { country_event = { id = USA.5	days = 100 } }		#Quentin
+				55 = { country_event = { id = USA.4 days = 80 } }		#Wadsworth
+				45 = { country_event = { id = USA.5 days = 80 } }		#Curtis
 			}
 			random_list = {
-				55 = { country_event = { id = USA.7 days = 120 } }		#Smith
-				25 = { country_event = { id = USA.8	days = 120 } }		#Garner
-				20 = { country_event = { id = USA.9 days = 120 } }		#Curtis
+				40 = { country_event = { id = USA.6 days = 100 } }		#Quentin
+				35 = { country_event = { id = USA.7	days = 100 } }		#FDR
+				25 = { country_event = { id = USA.8 days = 100 } }		#Smith
+			}
+			random_list = {
+				60 = { country_event = { id = USA.9 days = 120 } }		#Talmadge
+				40 = { country_event = { id = USA.10 days = 120 } }		#Byrd
 			}
 		}
 	}
 }
 
-#Democratic Primary of 1936
+#Whig Primary of 1937
 ##Wadsworth wins
 country_event = {
 	id = USA.4
@@ -191,18 +226,10 @@ country_event = {
 	
 	option = {
 		name = USA.4.o1
-		if = {
-			limit = { NOT = { has_government = democratic } }
-			create_country_leader = {
-				name = "James W. Wadsworth"
-				picture = "James_W_Wadsworth_Jr.dds"
-				ideology = conservatism
-			}
-		}
 		set_country_flag = USA_1936_nomination_wadsworth
 	}
 }
-##Quentin wins
+##Curtis wins
 country_event = {
 	id = USA.5
 	title = USA.5.t
@@ -213,18 +240,11 @@ country_event = {
 	
 	option = {
 		name = USA.5.o1
-		if = {
-			limit = { NOT = { has_government = democratic } }
-			create_country_leader = {
-				name = "Quentin Roosevelt"
-				picture = "Quentin_Roosevelt.dds"
-				ideology = socialism
-			}
-		}
-		set_country_flag = USA_1936_nomination_quentin
+		set_country_flag = USA_1936_nomination_curtis
 	}
 }
-##FDR wins
+#Republican Primary of 1937
+##Quentin wins
 country_event = {
 	id = USA.6
 	title = USA.6.t
@@ -235,20 +255,10 @@ country_event = {
 	
 	option = {
 		name = USA.6.o1
-		if = {
-			limit = { NOT = { has_government = democratic } }
-			create_country_leader = {
-				name = "Franklin D. Roosevelt"
-				picture = "Franklin_D_Roosevelt.dds"
-				ideology = liberalism
-			}
-		}
-		set_country_flag = USA_1936_nomination_fdr
+		set_country_flag = USA_1936_nomination_quentin
 	}
 }
-
-#Republican Primary of 1936
-##Smith wins
+##FDR wins
 country_event = {
 	id = USA.7
 	title = USA.7.t
@@ -259,18 +269,10 @@ country_event = {
 	
 	option = {
 		name = USA.7.o1
-		if = {
-			limit = { NOT = { has_government = neutrality } }
-			create_country_leader = {
-				name = "Al Smith"
-				picture = "Al_Smith.dds"
-				ideology = oligarchism
-			}
-		}
-		set_country_flag = USA_1936_nomination_smith
+		set_country_flag = USA_1936_nomination_fdr
 	}
 }
-##Garner wins
+##Smith wins
 country_event = {
 	id = USA.8
 	title = USA.8.t
@@ -281,18 +283,11 @@ country_event = {
 	
 	option = {
 		name = USA.8.o1
-		if = {
-			limit = { NOT = { has_government = neutrality } }
-			create_country_leader = {
-				name = "John Nance Garner"
-				picture = "John_Nance_Garner.dds"
-				ideology = authoritarian_conservatism
-			}
-		}
-		set_country_flag = USA_1936_nomination_garner
+		set_country_flag = USA_1936_nomination_smith
 	}
 }
-##Curtis wins
+#Democratic Primary of 1937
+##Talmadge wins
 country_event = {
 	id = USA.9
 	title = USA.9.t
@@ -303,19 +298,10 @@ country_event = {
 	
 	option = {
 		name = USA.9.o1
-		if = {
-			limit = { NOT = { has_government = neutrality } }
-			create_country_leader = {
-				name = "Charles Curtis"
-				picture = "Charles_Curtis.dds"
-				ideology = conservative_libertarianism
-			}
-		}
-		set_country_flag = USA_1936_nomination_curtis
+		set_country_flag = USA_1936_nomination_talmadge
 	}
 }
-
-#Ford Crisis
+##Harry Byrd wins
 country_event = {
 	id = USA.10
 	title = USA.10.t
@@ -326,17 +312,10 @@ country_event = {
 	
 	option = {
 		name = USA.10.o1
-		add_ideas = ford_crisis2
-		add_stability = -0.05
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.03
-		}
-		economic_crisis_upgrade = yes
+		set_country_flag = USA_1936_nomination_byrd
 	}
 }
-
-#USA.11: The United States demands Florida
+#Ford Crisis
 country_event = {
 	id = USA.11
 	title = USA.11.t
@@ -347,6 +326,26 @@ country_event = {
 	
 	option = {
 		name = USA.11.o1
+		add_ideas = ford_crisis2
+		add_stability = -0.05
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+	}
+}
+
+#USA.12: The United States demands Florida
+country_event = {
+	id = USA.12
+	title = USA.12.t
+	desc = USA.12.d
+	picture = GFX_report_event_oval_office
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = USA.12.o1
 		add_stability = -0.05
 		USA = {
 			transfer_state = 366
@@ -359,7 +358,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.11.o2
+		name = USA.12.o2
 		USA = {
 			declare_war_on = {
 				target = ROOT
@@ -378,35 +377,7 @@ country_event = {
 	}
 }
 
-#USA.12: The Ultimatum to Ohio
-country_event = {
-	id = USA.12
-	title = USA.12.t
-	desc = USA.12.d
-	picture = GFX_report_event_oval_office
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = USA.12.o1
-		USA = {
-			annex_country = { target = ROOT transfer_troops = yes }
-		}
-		news_event = USA_news.7
-		ai_chance = { base = 80 }
-	}
-	
-	option = {
-		name = USA.12.o2
-		USA = {
-			declare_war_on = { target = ROOT type = annex_everything }
-		}
-		news_event = USA_news.8
-		ai_chance = { base = 20 }
-	}
-}
-
-#USA.13: Great Lakes Request
+#USA.13: The Ultimatum to Ohio
 country_event = {
 	id = USA.13
 	title = USA.13.t
@@ -417,6 +388,34 @@ country_event = {
 	
 	option = {
 		name = USA.13.o1
+		USA = {
+			annex_country = { target = ROOT transfer_troops = yes }
+		}
+		news_event = USA_news.7
+		ai_chance = { base = 80 }
+	}
+	
+	option = {
+		name = USA.13.o2
+		USA = {
+			declare_war_on = { target = ROOT type = annex_everything }
+		}
+		news_event = USA_news.8
+		ai_chance = { base = 20 }
+	}
+}
+
+#USA.14: Great Lakes Request
+country_event = {
+	id = USA.14
+	title = USA.14.t
+	desc = USA.14.d
+	picture = GFX_report_event_oval_office
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = USA.14.o1
 		if = {
 			limit = {
 				OR = {
@@ -454,23 +453,23 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.13.o2
+		name = USA.14.o2
 		USA = { add_opinion_modifier = { target = ROOT modifier = territorial_transfer_denied } }
 		ai_chance = { base = 0 }
 	}
 }
 
-#USA.14: The Louisiana Gamble
+#USA.15: The Louisiana Gamble
 country_event = {
-	id = USA.14
-	title = USA.14.t
-	desc = USA.14.d
+	id = USA.15
+	title = USA.15.t
+	desc = USA.15.d
 	picture = GFX_report_event_oval_office
 	
 	is_triggered_only = yes
 	
 	option = {	#Accept
-		name = USA.14.o1
+		name = USA.15.o1
 		if = {
 			limit = {
 				OR = {
@@ -544,7 +543,7 @@ country_event = {
 	}
 	
 	option = {	#Refuse
-		name = USA.14.o2
+		name = USA.15.o2
 		if = {
 			limit = {
 				OR = {
@@ -599,17 +598,17 @@ country_event = {
 	}
 }
 
-#USA.15: Statehood for California
+#USA.16: Statehood for California
 country_event = {
-	id = USA.15
-	title = USA.15.t
-	desc = USA.15.d
+	id = USA.16
+	title = USA.16.t
+	desc = USA.16.d
 	picture = GFX_report_event_oval_office
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = USA.15.o1
+		name = USA.16.o1
 		hidden_effect = {
 			USA = { country_event = generic.2 }
 			news_event = USA_news.3
@@ -624,7 +623,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.15.o2
+		name = USA.16.o2
 		hidden_effect = {
 			USA = { country_event = generic.2 }
 		}
@@ -633,7 +632,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.15.o3
+		name = USA.16.o3
 		hidden_effect = {
 			USA = { country_event = generic.3 }
 		}
@@ -644,9 +643,9 @@ country_event = {
 
 #The King of France visits the USA
 country_event = {
-	id = USA.16
-	title = USA.16.t
-	desc = USA.16.d
+	id = USA.17
+	title = USA.17.t
+	desc = USA.17.d
 	picture = GFX_report_event_royal_visit
 	
 	is_triggered_only = yes
@@ -656,7 +655,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.16.o1
+		name = USA.17.o1
 		add_political_power = 10
 		FRA = {
 			add_opinion_modifier = { target = ROOT modifier = successful_state_visit }
@@ -665,17 +664,17 @@ country_event = {
 	}
 }
 
-#USA.17: Statehood for Ohio
+#USA.18: Statehood for Ohio
 country_event = {
-	id = USA.17
-	title = USA.17.t
-	desc = USA.17.d
+	id = USA.18
+	title = USA.18.t
+	desc = USA.18.d
 	picture = GFX_report_event_oval_office
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = USA.17.o1
+		name = USA.18.o1
 		hidden_effect = {
 			USA = { country_event = generic.2 }
 			news_event = USA_news.2
@@ -687,7 +686,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.17.o2
+		name = USA.18.o2
 		hidden_effect = {
 			USA = { country_event = generic.2 }
 		}
@@ -696,7 +695,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.17.o3
+		name = USA.18.o3
 		hidden_effect = {
 			USA = { country_event = generic.3 }
 		}
@@ -707,9 +706,9 @@ country_event = {
 
 #Benjamin Davis suggested for generalship
 country_event = {
-	id = USA.18
-	title = USA.18.t
-	desc = USA.18.d
+	id = USA.19
+	title = USA.19.t
+	desc = USA.19.d
 	picture = GFX_report_event_army_officers
 	
 	is_triggered_only = yes
@@ -719,7 +718,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.18.o1
+		name = USA.19.o1
 		add_popularity = { ideology = democratic popularity = 0.03 }
 		add_popularity = { ideology = fascism popularity = -0.02 }
 		create_corps_commander = {
@@ -742,7 +741,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.18.o2
+		name = USA.19.o2
 		add_stability = -0.01
 		add_popularity = { ideology = neutrality popularity = 0.03 }
 		add_popularity = { ideology = fascism popularity = 0.03 }
@@ -758,180 +757,30 @@ country_event = {
 
 #Theodore Roosevelt University opened
 country_event = {
-	id = USA.19
-	title = USA.19.t
-	desc = USA.19.d
+	id = USA.20
+	title = USA.20.t
+	desc = USA.20.d
 	picture = GFX_report_event_army_officers
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = USA.19.o1
+		name = USA.20.o1
 		add_stability = 0.01
-	}
-}
-
-country_event = {
-	id = USA.20
-	title = USA.20.t
-	desc = USA.20.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.20.a
-		ai_chance = {
-			base = 15
-		}
-		USA = { country_event = { id = USA.21 hours = 5 } }
-		hidden_effect = {
-			every_country = {
-				limit = {
-					is_in_faction_with = ENG
-				}
-				set_country_flag = engally
-			}
-		}
-	}
-	
-	option = {
-		name = USA.20.b
-		ai_chance = {
-			base = 85
-		}
-		USA = { country_event = { id = USA.22 } }
-	}
-}
-
-country_event = {
-	id = USA.21
-	title = "The Growth of the Freedom League"
-	desc = USA.21.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.21.a
-		ENG = { 
-			dismantle_faction = yes
-		}
-		every_country = {
-			limit = {
-				OR = {
-					has_country_flag = engally
-				}
-			}
-			USA = { add_to_faction = PREV }
-		}
-	}
-}
-
-country_event = {
-	id = USA.22
-	title = USA.22.t
-	desc = USA.22.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.22.a
-	}
-}
-
-country_event = {
-	id = USA.23
-	title = USA.23.t
-	desc = USA.23.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.23.a
-		ai_chance = {
-			base = 15
-		}
-		USA = { country_event = { id = USA.24 hours = 5 } }
-		hidden_effect = {
-			every_country = {
-				limit = {
-					is_in_faction_with = FRA
-				}
-				set_country_flag = fraally
-			}
-		}
-	}
-	
-	option = {
-		name = USA.23.b
-		ai_chance = {
-			base = 85
-		}
-		USA = { country_event = { id = USA.25 } }
-	}
-}
-
-country_event = {
-	id = USA.24
-	title = USA.24.t
-	desc = USA.24.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.24.a
-		FRA = { 
-			dismantle_faction = yes
-		}
-		every_country = {
-			limit = {
-					has_country_flag = fraally
-			}
-			USA = { add_to_faction = PREV }
-		}
-	}
-}
-
-country_event = {
-	id = USA.25
-	title = USA.25.t
-	desc = USA.25.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.25.a
 	}
 }
 
 #[From.GetName] wants to join the Freedom League
 country_event = {
-	id = USA.26
-	title = USA.26.t
-	desc = USA.26.d
+	id = USA.21
+	title = USA.21.t
+	desc = USA.21.d
 	picture = GFX_report_event_paris
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = USA.26.o1
+		name = USA.21.o1
 		add_to_faction = FROM
 		FROM = {
 			add_opinion_modifier = {
@@ -947,7 +796,7 @@ country_event = {
 	}
 	
 	option = {
-		name = USA.26.o2
+		name = USA.21.o2
 		FROM = {
 			add_opinion_modifier = {
 				target = ROOT
@@ -959,9 +808,9 @@ country_event = {
 }
 
 country_event = {
-	id = USA.27
-	title = USA.27.t
-	desc = USA.27.d
+	id = USA.22
+	title = USA.22.t
+	desc = USA.22.d
 	picture = "blank"
 	
 	is_triggered_only = yes
@@ -969,34 +818,40 @@ country_event = {
     fire_only_once = yes
 	
 	option = {
-		name = USA.27.a
+		name = USA.22.a
 		ai_chance = {
 			base = 50
 		}
-		USA = { country_event = { id = USA.28 hours = 5 } }
+		USA = { country_event = { id = USA.23 hours = 5 } }
 		hidden_effect = {
 			every_country = {
 				limit = {
-					is_in_faction_with = CAN
+					ROOT = {
+						is_faction_leader = yes
+					}
+					is_in_faction_with = ROOT
 				}
+				set_country_flag = queally
+			}
+			ROOT = {
 				set_country_flag = queally
 			}
 		}
 	}
 	
 	option = {
-		name = USA.27.b
+		name = USA.22.b
 		ai_chance = {
 			base = 50
 		}
-		USA = { country_event = { id = USA.29 } }
+		USA = { country_event = { id = USA.24 } }
 	}
 }
 
 country_event = {
-	id = USA.28
-	title = USA.28.t
-	desc = USA.28.d
+	id = USA.23
+	title = USA.23.t
+	desc = USA.23.d
 	picture = report_event_merchant_ship_01
 	
 	is_triggered_only = yes
@@ -1004,23 +859,28 @@ country_event = {
     fire_only_once = yes
 	
 	option = {
-		name = USA.28.a
-		CAN = { 
+		name = USA.23.a
+		random_country = {
+			limit = {
+				has_country_flag = queally
+				is_faction_leader = yes
+			}
 			dismantle_faction = yes
 		}
 		every_country = {
 			limit = {
-					has_country_flag = queally
+				has_country_flag = queally
 			}
 			USA = { add_to_faction = PREV }
+			clr_country_flag = queally
 		}
 	}
 }
 
 country_event = {
-	id = USA.29
-	title = USA.29.t
-	desc = USA.29.d
+	id = USA.24
+	title = USA.24.t
+	desc = USA.24.d
 	picture = report_event_merchant_ship_01
 	
 	is_triggered_only = yes
@@ -1028,20 +888,20 @@ country_event = {
     fire_only_once = yes
 	
 	option = {
-		name = USA.29.a
+		name = USA.24.a
 	}
 }
 
 country_event = {
-	id = USA.30
-	title = USA.30.t
-	desc = USA.30.d	
+	id = USA.25
+	title = USA.25.t
+	desc = USA.25.d	
 	picture = "blank"
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = { # Why not?
-		name =  USA.30.a
+		name =  USA.25.a
 		ai_chance = {
 			base = 10
 		}
@@ -1055,18 +915,18 @@ country_event = {
 			}
 	}
 	option = { # Never!
-		name =  USA.30.b
+		name =  USA.25.b
 		ai_chance = {
 			base = 10
 		}
-			USA = { country_event = { id = USA.31 hours = 12 } }
+			USA = { country_event = { id = USA.26 hours = 12 } }
 	}
 }
 
 country_event = {
-	id = USA.31
-	title = USA.31.t
-	desc = USA.31.d
+	id = USA.26
+	title = USA.26.t
+	desc = USA.26.d
 	
 	picture = "blank"
 		
@@ -1075,7 +935,7 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = USA.31.a
+		name = USA.26.a
 		create_wargoal = { type = take_claimed_state target = SPR. }
 		add_state_claim = 624
 		add_state_claim = 628
@@ -1087,15 +947,15 @@ country_event = {
 }
 
 country_event = {
-	id = USA.32
-	title = USA.32.t
-	desc = USA.32.d	
+	id = USA.27
+	title = USA.27.t
+	desc = USA.27.d	
 	picture = "blank"
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = { # Why not?
-		name =  USA.22.a
+		name =  USA.23.a
 		ai_chance = {
 			base = 10
 		}
@@ -1106,18 +966,18 @@ country_event = {
 			}
 	}
 	option = { # Never!
-		name =  USA.32.b
+		name =  USA.27.b
 		ai_chance = {
 			base = 10
 		}
-			USA = { country_event = { id = USA.33 hours = 12 } }
+			USA = { country_event = { id = USA.27 hours = 12 } }
 	}
 }
 
 country_event = {
-	id = USA.33
-	title = USA.33.t
-	desc = USA.33.d
+	id = USA.28
+	title = USA.28.t
+	desc = USA.28.d
 	
 	picture = "blank"
 		
@@ -1126,7 +986,7 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = USA.33.a
+		name = USA.28.a
 		create_wargoal = { type = take_claimed_state target = SWE }
 		add_state_claim = 327
 		add_state_claim = 623
@@ -1134,495 +994,15 @@ country_event = {
 }
 
 country_event = {
-	id = USA.34
-	title = USA.34.t
-	desc = USA.34.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.34.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.35 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.34.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.36 } }
-	}
-}
-
-country_event = {
-	id = USA.35
-	title = USA.35.t
-	desc = USA.35.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = DEN
-		}
-	}
-}
-
-country_event = {
-	id = USA.36
-	title = USA.36.t
-	desc = USA.36.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.36.a
-	}
-}
-
-country_event = {
-	id = USA.37
-	title = USA.37.t
-	desc = USA.37.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.37.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.38 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.37.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.39 } }
-	}
-}
-
-country_event = {
-	id = USA.38
-	title = USA.38.t
-	desc = USA.38.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = NOR
-		}
-	}
-}
-
-country_event = {
-	id = USA.39
-	title = USA.39.t
-	desc = USA.39.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.39.a
-	}
-}
-
- country_event = {
-	id = USA.40
-	title = USA.40.t
-	desc = USA.40.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.40.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.41 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.40.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.42 } }
-	}
-}
-
-country_event = {
-	id = USA.41
-	title = USA.41.t
-	desc = USA.41.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = COL
-		}
-	}
-}
-
-country_event = {
-	id = USA.42
-	title = USA.42.t
-	desc = USA.42.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.42.a
-	}
-}
-
-country_event = {
-	id = USA.43
-	title = USA.43.t
-	desc = USA.43.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.43.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.44 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.43.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.45 } }
-	}
-}
-
-country_event = {
-	id = USA.44
-	title = USA.44.t
-	desc = USA.44.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = GUA
-		}
-	}
-}
-
-country_event = {
-	id = USA.45
-	title = USA.45.t
-	desc = USA.45.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.45.a
-	}
-}
-
-country_event = {
-	id = USA.46
-	title = USA.46.t
-	desc = USA.46.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.46.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.47 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.46.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.48 } }
-	}
-}
-
-country_event = {
-	id = USA.47
-	title = USA.47.t
-	desc = USA.47.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = IRE
-		}
-	}
-}
-
-country_event = {
-	id = USA.48
-	title = USA.48.t
-	desc = USA.48.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.48.a
-	}
-}
-
- country_event = {
-	id = USA.49
-	title = USA.49.t
-	desc = USA.49.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.49.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.50 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.49.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.51 } }
-	}
-}
-
-country_event = {
-	id = USA.50
-	title = USA.50.t
-	desc = USA.50.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = HOL
-		}
-	}
-}
-
-country_event = {
-	id = USA.51
-	title = USA.51.t
-	desc = USA.51.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.51.a
-	}
-}
-
-country_event = {
-	id = USA.52
-	title = USA.52.t
-	desc = USA.52.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.52.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.53 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.52.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.54 } }
-	}
-}
-
-country_event = {
-	id = USA.53
-	title = USA.53.t
-	desc = USA.53.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = GRE
-		}
-	}
-}
-
-country_event = {
-	id = USA.54
-	title = USA.54.t
-	desc = USA.54.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.54.a
-	}
-}
-
-country_event = {
-	id = USA.55
-	title = USA.55.t
-	desc = USA.55.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.55.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.56 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.55.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.57 } }
-	}
-}
-
-country_event = {
-	id = USA.56
-	title = USA.56.t
-	desc = USA.56.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = SWE
-		}
-	}
-}
-
-country_event = {
-	id = USA.57
-	title = USA.57.t
-	desc = USA.57.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.57.a
-	}
-}
-
-country_event = {
-	id = USA.58
-	title = USA.58.t
-	desc = USA.58.d	
+	id = USA.29
+	title = USA.29.t
+	desc = USA.29.d	
 	picture = "blank"
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = { # Why not?
-		name =  USA.58.a
+		name =  USA.29.a
 		ai_chance = { factor = 50 }
 			USA = {
 				transfer_state = 463
@@ -1630,84 +1010,24 @@ country_event = {
 			}
 	}
 	option = { # Never!
-		name =  USA.58.b
+		name =  USA.29.b
 		ai_chance = { factor = 50 }
-			USA = { country_event = { id = USA.59 hours = 12 } }
+			USA = { country_event = { id = USA.29 hours = 12 } }
 	}
 }
 
-country_event = {
-	id = USA.59
-	title = USA.59.t
-	desc = USA.59.d
-	
-	picture = "blank"
-		
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	option = {
-		name = USA.59.a
-	}
-}
-
-country_event = {
-	id = USA.60
-	title = USA.60.t
-	desc = USA.60.d
-	picture = "blank"
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.60.a
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.61 hours = 1 } }
-		
-	}
-	
-	option = {
-		name = USA.60.b
-		ai_chance = {
-			base = 50
-		}
-		USA = { country_event = { id = USA.62 } }
-	}
-}
-
-country_event = {
-	id = USA.61
-	title = USA.61.t
-	desc = USA.61.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		USA = {
-			add_to_faction = JAP
-		}
-	}
-}
-
-country_event = {
-	id = USA.62
-	title = USA.62.t
-	desc = USA.62.d
-	picture = report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-    fire_only_once = yes
-	
-	option = {
-		name = USA.62.a
-	}
-}
+#country_event = {
+#	id = USA.30
+#	title = USA.30.t
+#	desc = USA.30.d
+#	
+#	picture = "blank"
+#		
+#	is_triggered_only = yes
+#	
+#	fire_only_once = yes
+#	
+#	option = {
+#		name = USA.30.a
+#	}
+#}

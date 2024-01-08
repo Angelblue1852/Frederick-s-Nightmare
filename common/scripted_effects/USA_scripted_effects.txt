@@ -1,0 +1,66 @@
+ford_crisis_downgrade = {
+	if = {
+		limit = { has_idea = ford_crisis }
+		remove_ideas = ford_crisis
+	}
+	if = {
+		limit = { has_idea = ford_crisis2 }
+		swap_ideas = {
+			remove_idea = ford_crisis2
+			add_idea = ford_crisis
+		}
+	}
+	if = {
+		limit = { has_idea = ford_crisis3 }
+		swap_ideas = {
+			remove_idea = ford_crisis3
+			add_idea = ford_crisis2
+		}
+	}
+	if = {
+		limit = { has_idea = ford_crisis4 }
+		swap_ideas = {
+			remove_idea = ford_crisis4
+			add_idea = ford_crisis3
+		}
+	}
+}
+ford_crisis_remove = {
+	remove_ideas = ford_crisis
+	remove_ideas = ford_crisis2
+	remove_ideas = ford_crisis3
+	remove_ideas = ford_crisis4
+}
+ford_crisis_upgrade = {
+	if = {
+		limit = { has_idea = ford_crisis4 }
+		add_stability = -0.05
+	}
+	if = {
+		limit = { has_idea = ford_crisis3 }
+		swap_ideas = {
+			remove_idea = ford_crisis3
+			add_idea = ford_crisis4
+		}
+	}
+	if = {
+		limit = { has_idea = ford_crisis2 }
+		swap_ideas = {
+			remove_idea = ford_crisis2
+			add_idea = ford_crisis3
+		}
+	}
+	if = {
+		limit = { has_idea = ford_crisis }
+		swap_ideas = {
+			remove_idea = ford_crisis
+			add_idea = ford_crisis2
+		}
+	}
+	if = {
+		limit = {
+			has_ford_crisis = no
+		}
+		add_ideas = ford_crisis
+	}
+}

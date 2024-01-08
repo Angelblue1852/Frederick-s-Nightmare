@@ -1,0 +1,9 @@
+ottoman_religious_debates = {
+	icon = DCI_politics
+	allowed = {
+		original_tag = TUR
+	}
+	visible = {
+		has_completed_focus = TUR_host_religious_debates
+	}
+}

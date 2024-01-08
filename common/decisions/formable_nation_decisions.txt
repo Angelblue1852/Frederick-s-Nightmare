@@ -1,0 +1,70 @@
+formable_nations_decisions = {
+	
+	form_central_america = {
+		
+		icon = DI_civil_support
+		
+		cost = 100
+		
+		fire_only_once = yes
+	
+		allowed = { always = yes }
+		visible = {
+			OR = {
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+				original_tag = PAN
+			}
+		}
+		
+		fire_only_once = yes
+		
+		available = {
+			is_subject = no
+			OR = {
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+				original_tag = PAN
+			}
+			has_war = no
+			has_full_control_of_state = 313
+			has_full_control_of_state = 311
+			has_full_control_of_state = 312
+			has_full_control_of_state = 314
+			has_full_control_of_state = 317
+			has_full_control_of_state = 316
+			has_full_control_of_state = 304
+			has_full_control_of_state = 685
+		}
+		
+		complete_effect = {
+			set_cosmetic_tag = USC_UNIFIED
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_named_threat = {
+				threat = 5
+				name = "Unification of Central America"
+			}
+			add_state_core = 313
+			add_state_core = 311
+			add_state_core = 312
+			add_state_core = 314
+			add_state_core = 317
+			add_state_core = 316
+			add_state_core = 304
+			add_state_core = 685
+		}
+	
+		ai_will_do = {
+			base = 100		
+		}
+		
+	}
+	
+}

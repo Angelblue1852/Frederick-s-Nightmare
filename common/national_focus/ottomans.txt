@@ -1,0 +1,1986 @@
+focus_tree = {
+	
+	id = TUR
+	
+	country = {
+		factor = 0
+		modifier = {
+			original_tag = TUR
+			add = 20
+		}
+	}
+	
+	continuous_focus_position = { x = 650 y = 950 }
+	
+	#Support the Ankara Industrial Clique
+	focus = {
+		id = TUR_support_the_ankara_industrial_clique
+		icon = industry_civilian
+		
+		x = 2
+		y = 0
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 49		#Ankara
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			49 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex level = 2 instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 346 }
+				346 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 347 }
+				347 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_handle_minority_unemployment
+		icon = industry
+		
+		x = -2
+		y = 1
+		relative_position_id = TUR_support_the_ankara_industrial_clique
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_support_the_ankara_industrial_clique
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 48
+			has_full_control_of_state = 554
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			48 = { add_extra_state_shared_building_slots = 1 }
+			554 = { add_extra_state_shared_building_slots = 1 }
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_endorse_the_military_magnates
+		icon = industry_military
+		
+		x = 0
+		y = 1
+		relative_position_id = TUR_support_the_ankara_industrial_clique
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_support_the_ankara_industrial_clique
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 49 }
+				49 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 341 }
+				341 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_all_turkish_banking_system
+		icon = consumer_goods
+		
+		x = -2
+		y = 2
+		relative_position_id = TUR_support_the_ankara_industrial_clique
+
+		cost = 8
+		
+		prerequisite = {
+			focus = TUR_handle_minority_unemployment
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_category_tooltip = economic_crisis_decisions
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_fund_the_self_sufficiency_bureau
+		icon = construction3
+		
+		x = 0
+		y = 2
+		relative_position_id = TUR_support_the_ankara_industrial_clique
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_endorse_the_military_magnates
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_full_control_of_state = 339
+				has_full_control_of_state = 342
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 339 }
+				339 = {
+					add_resource = { type = chromium amount = 85 }
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 342 }
+				342 = {
+					add_resource = { type = chromium amount = 30 }
+				}
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_syrian_oil_investments
+		icon = oil_production
+		
+		x = -1
+		y = 3
+		relative_position_id = TUR_support_the_ankara_industrial_clique
+
+		cost = 12
+		
+		prerequisite = {
+			focus = TUR_fund_the_self_sufficiency_bureau
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 554
+			has_full_control_of_state = 677
+			has_full_control_of_state = 680
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			544 = { add_resource = { type = oil amount = 10 } }
+			677 = { add_resource = { type = oil amount = 10 } }
+			680 = { add_resource = { type = oil amount = 10 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_create_employment_opportunities
+		icon = production
+		
+		x = -1
+		y = 5
+		relative_position_id = TUR_support_the_ankara_industrial_clique
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_syrian_oil_investments
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = industrial_focus_civilian
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Strengthen the Sultan's Position
+	focus = {
+		id = TUR_strengthen_the_sultans_position
+		icon = demand_territory2
+		
+		x = 5
+		y = 0
+
+		cost = 8
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_invite_intellectuals
+		icon = research
+		
+		x = -1
+		y = 1
+		relative_position_id = TUR_strengthen_the_sultans_position
+
+		cost = 12
+		
+		prerequisite = {
+			focus = TUR_strengthen_the_sultans_position
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_host_religious_debates
+		icon = national_unity
+		
+		x = 1
+		y = 1
+		relative_position_id = TUR_strengthen_the_sultans_position
+
+		cost = 7
+		
+		prerequisite = {
+			focus = TUR_strengthen_the_sultans_position
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_category_tooltip = ottoman_religious_debates
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_favor_the_reformists
+		icon = democracy
+		
+		x = -1
+		y = 2
+		relative_position_id = TUR_strengthen_the_sultans_position
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_invite_intellectuals
+		}
+		mutually_exclusive = {
+			focus = TUR_favor_the_fundamentalists
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = democratic popularity = 0.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_favor_the_fundamentalists
+		icon = neutrality
+		
+		x = 1
+		y = 2
+		relative_position_id = TUR_strengthen_the_sultans_position
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_host_religious_debates
+		}
+		mutually_exclusive = {
+			focus = TUR_favor_the_reformists
+		}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = crown_loyalists
+			add_war_support = 0.05
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_mosque_imperialism
+		icon = demand_territory3
+		
+		x = 1
+		y = 3
+		relative_position_id = TUR_strengthen_the_sultans_position
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_favor_the_fundamentalists
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				news_event = turkey_news.1
+			}
+			add_political_power = 150
+			add_war_support = 0.05
+			every_neighbor_country = {
+				limit = {
+					NOT = { 
+						is_in_faction_with = TUR
+						is_subject_of = TUR
+						has_idea = state_religion_sunni
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT modifier = mosque_imperialism
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Fill the Austrian Embassy Vacancy
+	focus = {
+		id = TUR_fill_the_austrian_embassy_vacancy
+		icon = military_deal
+		
+		x = 8
+		y = 0
+
+		cost = 4
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				exists = yes
+				original_tag = AUS
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_country = {
+				limit = { exists = yes original_tag = AUS NOT = { has_war_with = ROOT } }
+				add_opinion_modifier = { target = TUR modifier = developing_friendship }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_befriend_the_habsburgs
+		icon = improve_relations
+		
+		x = 0
+		y = 1
+		relative_position_id = TUR_fill_the_austrian_embassy_vacancy
+
+		cost = 8
+		
+		prerequisite = {
+			focus = TUR_fill_the_austrian_embassy_vacancy
+		}
+		mutually_exclusive = {}
+		available = {
+			AUS = { has_similar_ideology = yes }
+			any_country = {
+				exists = yes
+				original_tag = AUS
+				NOT = { has_war_with = ROOT }
+				has_completed_focus = AUS_befriend_the_ottoman_empire
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			random_country = {
+				limit = { exists = yes original_tag = AUS NOT = { has_war_with = ROOT } }
+				add_opinion_modifier = {
+					target = ROOT modifier = diplomatic_friendship
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_trade_missions_in_germany
+		icon = trade
+		
+		x = 0
+		y = 2
+		relative_position_id = TUR_fill_the_austrian_embassy_vacancy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_befriend_the_habsburgs
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				exists = yes
+				original_tag = AUS
+				NOT = { has_war_with = ROOT }
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+			AUS = { is_faction_leader = no }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = { is_minor_german_state = yes is_in_faction_with = AUS }
+				add_opinion_modifier = {
+					target = ROOT modifier = trade_missions
+				}
+				add_opinion_modifier = {
+					target = ROOT modifier = trade_deals
+				}
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Fortify the Dardanelles
+	focus = {
+		id = TUR_fortify_the_dardanelles
+		icon = naval_dockyard
+		
+		x = 11
+		y = 1
+
+		cost = 10
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 340
+			has_full_control_of_state = 341
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			navy_experience = 5
+			340 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 6864 }
+				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 9887 }
+				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 6912 }
+				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 9887 }
+			}
+			341 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 849 }
+				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 3879 }
+				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 849 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_naval_innovations
+		icon = navy
+		
+		x = -1
+		y = 1
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_fortify_the_dardanelles
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 15
+			add_doctrine_cost_reduction = {
+				category = naval_doctrine
+				cost_reduction = 0.6
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_expand_levantine_naval_bases
+		icon = navy2
+		
+		x = 1
+		y = 1
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_fortify_the_dardanelles
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				has_full_control_of_state = 677
+				has_full_control_of_state = 553
+				has_full_control_of_state = 454
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 677 }
+				677 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = 1088 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 553 }
+				553 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = 792 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 454 }
+				454 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = 4206 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_execute_the_zeki_dogan_plan
+		icon = air_force
+		
+		x = 3
+		y = 1
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_fortify_the_dardanelles
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 10
+			add_doctrine_cost_reduction = {
+				category = air_doctrine
+				uses = 2
+				cost_reduction = 0.45
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_forts_in_bulgaria
+		icon = military_fort
+		
+		x = 5
+		y = 1
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 14
+		
+		prerequisite = {
+			focus = TUR_fortify_the_dardanelles
+		}
+		mutually_exclusive = {}
+		available = {
+			48 = {
+				owner = {
+					OR = {
+						original_tag = ROOT
+						is_subject_of = ROOT
+					}
+				}	
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			48 = {
+				add_building_construction = { type = bunker level = 3 instant_build = yes province = 9771 }
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 965 }
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 935 }
+				add_building_construction = { type = bunker level = 2 instant_build = yes province = 9771 }
+			}
+			if = {
+				limit = {
+					108 = {
+						owner = {
+							NOT = { original_tag = TUR }
+							NOT = { is_subject_of = TUR }
+						}
+					}
+				}
+				108 = {
+					owner = {
+						add_opinion_modifier = { target = ROOT modifier = territorial_dispute }
+					}
+				}
+			}
+			if = {
+				limit = {
+					81 = {
+						owner = {
+							NOT = { original_tag = TUR }
+							NOT = { is_subject_of = TUR }
+						}
+					}
+				}
+				81 = {
+					owner = {
+						add_opinion_modifier = { target = ROOT modifier = territorial_dispute }
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_mighty_behemoths
+		icon = battleships
+		
+		x = 0
+		y = 2
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_naval_innovations
+		}
+		mutually_exclusive = {
+			focus = TUR_silent_hunters
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				category = bb_tech
+				category = cv_tech
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_silent_hunters
+		icon = submarines
+		
+		x = 2
+		y = 2
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_naval_innovations
+		}
+		mutually_exclusive = {
+			focus = TUR_mighty_behemoths
+		}
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				category = ss_tech
+				uses = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_import_foreign_equipment
+		icon = license_production
+		
+		x = 4
+		y = 2
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_forts_in_bulgaria
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_war_with = PRS } }
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1 amount = 25 producer = PRS
+				}
+			}
+			if = {
+				limit = { NOT = { has_war_with = AUS } }
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0 amount = 25 producer = AUS
+				}
+			}
+			if = {
+				limit = { NOT = { has_war_with = FRA } }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1 amount = 125 producer = FRA
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_develop_tank_prototypes
+		icon = bob_semple
+		
+		x = 6
+		y = 2
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_forts_in_bulgaria
+		}
+		prerequisite = {
+			focus = TUR_artillery_efforts
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				category = armor
+				uses = 3
+				bonus = 0.3
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_develop_new_fighters
+		icon = fighters
+		
+		x = 3
+		y = 3
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_execute_the_zeki_dogan_plan
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 15
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_modern_army_tactics
+		icon = army_logistics
+		
+		x = 5
+		y = 3
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_import_foreign_equipment
+		}
+		prerequisite = {
+			focus = TUR_develop_tank_prototypes
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_develop_new_bombers
+		icon = bombers
+		
+		x = 3
+		y = 4
+		relative_position_id = TUR_fortify_the_dardanelles
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_develop_new_fighters
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 15
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Reform the Army
+	focus = {
+		id = TUR_reform_the_army
+		icon = army_reform
+		
+		x = 18
+		y = 0
+
+		cost = 9
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+			is_puppet = no
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_cavalry_tactics
+		icon = cavalry
+		
+		x = -3
+		y = 1
+		relative_position_id = TUR_reform_the_army
+
+		cost = 4
+		
+		prerequisite = {
+			focus = TUR_reform_the_army
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = generic_high_command_army_cavalry_commander
+			army_experience = 5
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_infantry_tactics
+		icon = small_arms
+		
+		x = -1
+		y = 1
+		relative_position_id = TUR_reform_the_army
+
+		cost = 4
+		
+		prerequisite = {
+			focus = TUR_reform_the_army
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = generic_high_command_army_infantry_commander
+			army_experience = 5
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_artillery_efforts
+		icon = artillery
+		
+		x = 0
+		y = 2
+		relative_position_id = TUR_reform_the_army
+
+		cost = 12
+		
+		prerequisite = {
+			focus = TUR_reform_the_army
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				category = artillery
+				uses = 2
+				bonus = 0.5
+			}	
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Empower the Reformers
+	focus = {
+		id = TUR_empower_the_reformers
+		icon = diplomatic_treaty
+		
+		x = 1
+		y = 3
+		relative_position_id = TUR_support_the_ankara_industrial_clique
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_fund_the_self_sufficiency_bureau
+		}
+		prerequisite = {
+			focus = TUR_favor_the_reformists
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = sunni_clergy
+			hidden_effect = {
+				news_event = turkey_news.2
+			}
+			add_popularity = {
+				ideology = democratic popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_cooperate_with_the_young_turks
+		icon = demand_territory
+		
+		x = -1
+		y = 1
+		relative_position_id = TUR_empower_the_reformers
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_empower_the_reformers
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			release_puppet = ALB
+			release_puppet = BUL
+			hidden_effect = {
+				if = {
+					limit = { 
+						owns_state = 106 owns_state = 731
+					}
+					ALB = { transfer_state = 731 }
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { owns_state = 106 }
+					ALB = { transfer_state = 106 }
+				}
+			}
+			add_political_power = 150
+			add_research_slot = 1
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_modernize_the_capital
+		icon = infrastructure
+		
+		x = 1
+		y = 1
+		relative_position_id = TUR_empower_the_reformers
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_empower_the_reformers
+		}
+		mutually_exclusive = {}
+		available = {
+			has_full_control_of_state = 341
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_province_name = {
+				id = 9833 name = "Istanbul"
+			}
+			341 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_create_the_middle_eastern_liberation_movement
+		icon = democracy
+		
+		x = 0
+		y = 2
+		relative_position_id = TUR_empower_the_reformers
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_cooperate_with_the_young_turks
+		}
+		prerequisite = {
+			focus = TUR_modernize_the_capital
+		}
+		mutually_exclusive = {}
+		available = {}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				news_event = turkey_news.3
+			}
+			every_country = {
+				limit = { committed_to_democracy = yes }
+				add_opinion_modifier = { target = ROOT modifier = battlesome_democracy_positive }
+			}
+			every_country = {
+				limit = {
+					OR = { committed_to_communism = yes committed_to_fascism = yes }
+				}
+				add_opinion_modifier = { target = ROOT modifier = battlesome_democracy_negative }
+			}
+			set_rule = { can_create_factions = yes }
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_liberate_the_caucasians
+		icon = war
+		
+		will_lead_to_war_with = SOV
+		
+		x = -1
+		y = 3
+		relative_position_id = TUR_empower_the_reformers
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_create_the_middle_eastern_liberation_movement
+		}
+		mutually_exclusive = {}
+		available = {
+			OR = {
+				OR = {
+					GEO = { NOT = { has_government = democratic } }
+					GEO = { exists = no }
+				}
+				OR = {
+					ARM = { NOT = { has_government = democratic } }
+					ARM = { exists = no }
+				}
+				OR = {
+					AZR = { NOT = { has_government = democratic } }
+					AZR = { exists = no }
+				}
+			}
+			OR = {
+				229 = { owner = { NOT = { has_government = democratic } } }
+				230 = { owner = { NOT = { has_government = democratic } } }
+				231 = { owner = { NOT = { has_government = democratic } } }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					any_country = {
+						owns_state = 229
+						owns_state = 230
+						owns_state = 231
+						NOT = {
+							original_tag = GEO
+							original_tag = AZR
+							original_tag = ARM
+						}
+					}
+				}
+				if = {
+					limit = { any_country = { owns_state = 229 owns_state = 230 owns_state = 231 original_tag = SOV } }
+					create_wargoal = { target = SOV type = take_state_focus generator = { 229 230 231 } }
+				}
+				if = {
+					limit = { any_country = { owns_state = 229 owns_state = 230 owns_state = 231 NOT = { original_tag = SOV } } }
+					random_country = {
+						limit = { owns_state = 229 owns_state = 230 owns_state = 231 }
+						ROOT = {
+							create_wargoal = { target = PREV type = take_state_focus generator = { 229 230 231 } }
+						}
+					}
+				}
+				else = {
+					#Georgia
+					if = {
+						limit = { GEO = { exists = yes NOT = { has_government = democratic } } }
+						create_wargoal = { target = GEO type = topple_government }
+					}
+					if = {
+						limit = {
+							GEO = { exists = no }
+							231 = {
+								owner = {
+									NOT = { has_government = democratic }
+									NOT = { original_tag = ROOT }
+									NOT = { is_in_faction_with = ROOT }
+								}
+							}
+						}
+						ROOT = { create_wargoal = { target = GEO type = liberate_wargoal } }
+					}
+					#Armenia
+					if = {
+						limit = { ARM = { exists = yes NOT = { has_government = democratic } } }
+						create_wargoal = { target = ARM type = topple_government }
+					}
+					if = {
+						limit = {
+							ARM = { exists = no }
+							230 = {
+								owner = {
+									NOT = { has_government = democratic }
+									NOT = { original_tag = ROOT }
+									NOT = { is_in_faction_with = ROOT }
+								}
+							}
+						}
+						ROOT = { create_wargoal = { target = ARM type = liberate_wargoal } }
+					}
+					#Azerbaijan
+					if = {
+						limit = { AZR = { exists = yes NOT = { has_government = democratic } } }
+						create_wargoal = { target = AZR type = topple_government }
+					}
+					if = {
+						limit = {
+							AZR = { exists = no }
+							229 = {
+								owner = {
+									NOT = { has_government = democratic }
+									NOT = { original_tag = ROOT }
+									NOT = { is_in_faction_with = ROOT }
+								}
+							}
+						}
+						ROOT = { create_wargoal = { target = AZR type = liberate_wargoal } }
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_liberate_iran
+		icon = war2
+		
+		will_lead_to_war_with = PER
+		
+		x = 1
+		y = 3
+		relative_position_id = TUR_empower_the_reformers
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_create_the_middle_eastern_liberation_movement
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			has_government = democratic
+			PER = { NOT = { has_government = democratic } }
+		}
+		bypass = {
+			PER = { has_government = democratic }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = PER type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_liberate_afghanistan
+		icon = war3
+		
+		will_lead_to_war_with = AFG
+		
+		x = 1
+		y = 4
+		relative_position_id = TUR_empower_the_reformers
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_liberate_iran
+		}
+		mutually_exclusive = {}
+		available = {
+			is_subject = no
+			has_government = democratic
+			AFG = { NOT = { has_government = democratic } }
+		}
+		bypass = {
+			AFG = { has_government = democratic }
+		}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = AFG type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	#Join the Danube Pact
+	focus = {
+		id = TUR_join_the_danube_pact
+		icon = alliance
+		
+		x = 1
+		y = 3
+		relative_position_id = TUR_fill_the_austrian_embassy_vacancy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_favor_the_fundamentalists
+		}
+		prerequisite = {
+			focus = TUR_trade_missions_in_germany
+		}
+		prerequisite = {
+			focus = TUR_naval_innovations
+		}
+		mutually_exclusive = {}
+		available = {
+			has_government = neutrality
+			is_in_faction = no
+			any_country = {
+				exists = yes
+				original_tag = AUS
+				has_government = neutrality
+				is_faction_leader = yes
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_country = {
+				limit = { original_tag = AUS has_government = neutrality is_faction_leader = yes }
+				country_event = austria.3
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_subjugate_the_arabian_warlords
+		icon = military_sphere
+		
+		x = -3
+		y = 1
+		relative_position_id = TUR_join_the_danube_pact
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_empower_the_reformers
+			focus = TUR_join_the_danube_pact
+		}
+		mutually_exclusive = {}
+		available = {
+			is_neighbor_of = SAU
+			OR = {
+				has_completed_focus = TUR_join_the_danube_pact
+				SAU = { NOT = { has_government = democratic } }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { target = SAU type = annex_everything }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_egyptian_ultimatum
+		icon = ultimatum
+		
+		x = -1
+		y = 1
+		relative_position_id = TUR_join_the_danube_pact
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_join_the_danube_pact
+		}
+		mutually_exclusive = {}
+		available = {
+			EGY = {
+				exists = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			EGY = { country_event = { id = turkey.2 days = 1 } }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_austro_turkish_neighborhood_treaty
+		icon = treaty
+		
+		x = 1
+		y = 1
+		relative_position_id = TUR_join_the_danube_pact
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_join_the_danube_pact
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = AUS
+				is_in_faction_with = ROOT
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ROOT modifier = austro_turkish_treaty
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT modifier = austro_turkish_treaty
+			}
+			economic_crisis_downgrade = yes
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_suez_ultimatum
+		icon = ultimatum2
+		
+		x = -1
+		y = 2
+		relative_position_id = TUR_join_the_danube_pact
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_egyptian_ultimatum
+		}
+		mutually_exclusive = {}
+		available = {
+			763 = {
+				OWNER = {
+					NOT = { original_tag = ROOT }
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			763 = {
+				OWNER = { country_event = { id = turkey.3 days = 1 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_create_the_austro_turkish_army_corps
+		icon = infantry_axis
+		
+		x = 1
+		y = 2
+		relative_position_id = TUR_join_the_danube_pact
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_austro_turkish_neighborhood_treaty
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = AUS
+				is_in_faction_with = ROOT
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+			AUS = {
+				army_experience = 50
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_create_the_austro_turkish_naval_corps
+		icon = amphibious_assault
+		
+		x = 3
+		y = 2
+		relative_position_id = TUR_join_the_danube_pact
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_austro_turkish_neighborhood_treaty
+		}
+		prerequisite = {
+			focus = TUR_mighty_behemoths
+			focus = TUR_silent_hunters
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = AUS
+				is_in_faction_with = ROOT
+			}
+			any_owned_state = { is_coastal = yes }
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			AUS = {
+				navy_experience = 50
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		id = TUR_found_the_austro_turkish_officer_school
+		icon = research
+		
+		x = 2
+		y = 3
+		relative_position_id = TUR_join_the_danube_pact
+
+		cost = 10
+		
+		prerequisite = {
+			focus = TUR_austro_turkish_neighborhood_treaty
+		}
+		mutually_exclusive = {}
+		available = {
+			any_country = {
+				original_tag = AUS
+				is_in_faction_with = ROOT
+			}
+		}
+		bypass = {}
+		select_effect = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			AUS = {
+				add_research_slot = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+}

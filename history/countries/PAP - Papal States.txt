@@ -8,6 +8,7 @@ set_technology = {
 }
 
 add_ideas = {
+	economic_crisis2
 }
 
 recruit_character = PAP_pius_xi
@@ -35,3 +36,5 @@ set_popularities = {
 }
 
 
+add_opinion_modifier = { target = ITA modifier = historical_rival }
+add_opinion_modifier = { target = PAP modifier = historical_ally }

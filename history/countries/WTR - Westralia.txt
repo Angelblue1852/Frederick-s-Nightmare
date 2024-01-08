@@ -8,6 +8,7 @@ set_technology = {
 }
 
 add_ideas = {
+	economic_crisis2
 }
 
 recruit_character = WTR_james_mitchell

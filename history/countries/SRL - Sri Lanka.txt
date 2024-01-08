@@ -13,6 +13,23 @@ add_ideas = {
 recruit_character = SRL_c_n_annadurai
 
 
+set_cosmetic_tag = SRL_JCAZ
+
+RAJ = {
+    if = {
+        limit = {
+            has_dlc = "Together for Victory"
+        }
+        set_autonomy = {
+            target = SRL
+            autonomous_state = autonomy_integrated_puppet
+        }
+    }
+    else = {
+        puppet = SRL
+    }
+}
+
 give_military_access = FRA
 give_military_access = ENG
 give_military_access = SOV

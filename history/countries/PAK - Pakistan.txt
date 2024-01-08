@@ -53,6 +53,9 @@ if = {
 }
 
 
+give_guarantee = RAJ
+give_guarantee = HYD
+give_guarantee = TIB
 
 set_convoys = 20
 

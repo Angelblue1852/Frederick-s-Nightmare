@@ -56,6 +56,11 @@ if = {
 	}
 }
 
+set_variable = {
+    var = france_jcaz_influence
+    value = 3
+}
+
 set_research_slots = 3
 set_stability = 0.5
 add_command_power = 20
@@ -154,7 +159,6 @@ if = {
 		basic_dp_light_battery = 1
 		cruiser_submarines = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
 }
 if = {
 	limit = {
@@ -197,6 +201,8 @@ recruit_character = FRA_rene_emil_godfroy
 
 add_ideas = {
 	france_history_02
+	colonial_upkeep5
+	economic_crisis4
 }
 
 
@@ -209,6 +215,18 @@ add_to_faction = ANF
 add_to_faction = CAN
 add_to_faction = SOU
 add_to_faction = LOU
+
+give_guarantee = BAD
+give_guarantee = EGY
+give_guarantee = GUJ
+give_guarantee = GXC
+give_guarantee = HES
+give_guarantee = HOL
+give_guarantee = IRE
+give_guarantee = OHI
+give_guarantee = PAP
+give_guarantee = SWI
+give_guarantee = WES
 
 set_politics = {
 	ruling_party = democratic
@@ -223,7 +241,10 @@ set_popularities = {
 	fascism = 10
 }
 
-
+add_opinion_modifier = { target = AUS modifier = historical_ally }
+add_opinion_modifier = { target = ENG modifier = historical_rival }
+add_opinion_modifier = { target = PRS modifier = historical_rival }
+add_opinion_modifier = { target = SWE modifier = historical_ally }
 
 
 ### VARIANTS ###

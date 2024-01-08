@@ -6,9 +6,9 @@ state={
 		owner = USA
 		add_core_of = USA
 		buildings = {
-			industrial_complex = 2
-			infrastructure = 3
-			air_base = 3
+			industrial_complex = 1
+			infrastructure = 2
+			air_base = 2
 		}
 		victory_points = {
 			7588 3

@@ -64,6 +64,11 @@ if = {
 	}
 }
 
+set_variable = {
+    var = britain_jcaz_influence
+    value = 3
+}
+
 
 set_research_slots = 4
 
@@ -183,6 +188,7 @@ ENG = {
 
 }
 
+give_guarantee = POR
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
@@ -203,6 +209,9 @@ set_popularities = {
 	communism = 1
 }
 
+add_opinion_modifier = { target = FRA modifier = historical_rival }
+add_opinion_modifier = { target = OHI modifier = historical_rival }
+add_opinion_modifier = { target = PRS modifier = historical_ally }
 
 create_faction = Commonwealth
 add_to_faction = ENG

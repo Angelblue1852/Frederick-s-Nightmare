@@ -1,0 +1,453 @@
+﻿division_template = {
+	name = "Infanteriedivision"
+	
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+        artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Mot. Infanteriedivision"
+	
+	division_names_group = GER_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+        motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+        recon = { x = 0 y = 2 }
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Panzerbrigade"
+	
+	division_names_group = GER_Arm_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+	}
+	
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Kavalleriebrigade"
+	
+	division_names_group = GER_Cav_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+	
+	priority = 0
+}
+division_template = {
+	name = "Kolonialgarde"
+	
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+	
+	is_locked = yes
+	priority = 0
+}
+units = {
+	division = {
+		name = "1. Husarenbrigade"
+		location = 6558			#Poznan
+		division_template = "Kavalleriebrigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Husarenbrigade"
+		location = 3522			#Magdeburg
+		division_template = "Kavalleriebrigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1. Panzerbrigade"
+		location = 6521			#Berlin
+		division_template = "Panzerbrigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Panzerbrigade"
+		location = 3522			#Magdeburg
+		division_template = "Panzerbrigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Panzerbrigade"
+		location = 6332			#Königsberg
+		division_template = "Panzerbrigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4. Panzerbrigade"
+		location = 6558			#Poznan
+		division_template = "Panzerbrigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1. Infanteriedivision"
+		location = 6521			#Berlin
+		division_template = "Mot. Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Infanteriedivision"
+		location = 9347			#Hamburg
+		division_template = "Mot. Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Infanteriedivision"
+		location = 6332			#Königsberg
+		division_template = "Mot. Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4. Infanteriedivision"
+		location = 362			#Danzig
+		division_template = "Mot. Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5. Infanteriedivision"
+		location = 6389			#Kiel
+		division_template = "Mot. Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "6. Infanteriedivision"
+		location = 321			#Rostock
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "7. Infanteriedivision"
+		location = 6521			#Berlin
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "8. Infanteriedivision"
+		location = 6332			#Königsberg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "9. Infanteriedivision"
+		location = 3522			#Magdeburg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "10. Infanteriedivision"
+		location = 6389			#Kiel
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "11. Infanteriedivision"
+		location = 6558			#Poznan
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "12. Infanteriedivision"
+		location = 6521			#Berlin
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "13. Infanteriedivision"
+		location = 6282			#Stettin
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "14. Infanteriedivision"
+		location = 6332			#Königsberg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "15. Infanteriedivision"
+		location = 9347			#Hamburg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "16. Infanteriedivision"
+		location = 6558			#Poznan
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "17. Infanteriedivision"
+		location = 9347			#Hamburg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "18. Infanteriedivision"
+		location = 6282			#Stettin
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "19. Infanteriedivision"
+		location = 9347			#Hamburg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "20. Infanteriedivision"
+		location = 3522			#Magdeburg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "21. Infanteriedivision"
+		location = 9347			#Hamburg
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "22. Infanteriedivision"
+		location = 6282			#Stettin
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "23. Infanteriedivision"
+		location = 6558			#Poznan
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "24. Infanteriedivision"
+		location = 6558			#Poznan
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "25. Infanteriedivision"
+		location = 6558			#Poznan
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "26. Infanteriedivision"
+		location = 6521			#Berlin
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "27. Infanteriedivision"
+		location = 6521			#Berlin
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "28. Infanteriedivision"
+		location = 6558			#Poznan
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Festungsbrigade Tansania"
+		location = 2196			#Dar Es Salaam
+		division_template = "Kolonialgarde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Festungsbrigade Tsingtau"
+		location = 10000		#Qingdao
+		division_template = "Kolonialgarde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Festungsbrigade Südwest"
+		location = 4879			#Windhoek
+		division_template = "Kolonialgarde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+}
+
+air_wings = {
+	64= {
+		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		name = "JG Ost 1"
+	}
+	64 = {
+		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		name = "JG Ost 2"
+	}
+	64 = {
+		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		name = "JG West"
+	}
+	86 = {
+		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		name = "JG Mitte"
+	}
+	64 = {
+		tac_bomber_equipment_0 = { owner = "PRS" amount = 125 }
+		name = "BG Preußen"
+	}
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:GER_mauser_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+		industrial_manufacturer = mio:GER_rheinmetall_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 50
+		industrial_manufacturer = mio:GER_henschel_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 50
+		industrial_manufacturer = mio:GER_opel_organization
+	}
+}
+
+#####################

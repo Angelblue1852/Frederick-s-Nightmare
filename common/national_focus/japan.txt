@@ -1137,7 +1137,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = mobile_warfare_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 3
 				category = cat_mobile_warfare
 			}
@@ -1178,7 +1178,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = superior_firepower_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 3
 				category = cat_superior_firepower
 			}
@@ -1220,7 +1220,7 @@ focus_tree = {
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 3
 				category = land_doctrine
 			}

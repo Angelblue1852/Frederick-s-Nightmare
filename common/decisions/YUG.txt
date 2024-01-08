@@ -1,0 +1,64 @@
+form_yugoslavia_category = {
+	
+	form_yugoslavia = {
+		
+		icon = DI_civil_support
+		
+		cost = 100
+	
+		allowed = { always = yes }
+		visible = { always = yes }
+		
+		fire_only_once = yes
+		
+		available = {
+			is_subject = no
+			OR = {
+				original_tag = CRO
+				original_tag = MNT
+				original_tag = SER
+			}
+			has_full_control_of_state = 108
+			has_full_control_of_state = 107
+			has_full_control_of_state = 104
+			has_full_control_of_state = 103
+			has_full_control_of_state = 102
+			has_full_control_of_state = 109
+			has_full_control_of_state = 105
+			OR = {
+				has_full_control_of_state = 45
+				has_full_control_of_state = 736
+				has_full_control_of_state = 106
+			}
+		}
+		
+		complete_effect = {
+			set_cosmetic_tag = YUG
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_named_threat = {
+				name = "Unification of Yugoslavia"
+				threat = 5
+			}
+			add_state_core = 108
+			add_state_core = 107
+			add_state_core = 104
+			add_state_core = 103
+			add_state_core = 102
+			add_state_core = 109
+			add_state_core = 105
+			add_state_core = 45
+			add_state_core = 736
+			add_state_core = 106
+		}
+	
+		ai_will_do = {
+			base = 100		
+		}
+		
+	}
+	
+}
+
+german_decisions = {
+}

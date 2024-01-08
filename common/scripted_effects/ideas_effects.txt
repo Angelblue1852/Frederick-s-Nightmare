@@ -1,0 +1,346 @@
+colonial_upkeep_remove = {
+	if = {
+		limit = { has_idea = colonial_upkeep } remove_ideas = colonial_upkeep
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep2 } remove_ideas = colonial_upkeep2
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep3 } remove_ideas = colonial_upkeep3
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep4 } remove_ideas = colonial_upkeep4
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep5 } remove_ideas = colonial_upkeep5
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep6 } remove_ideas = colonial_upkeep6
+	}
+}
+
+colonial_upkeep_downgrade = {
+	if = {
+		limit = { has_colonial_upkeep = no }
+		add_stability = 0.01
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep }
+		if = {
+			limit = { NOT = { has_country_flag = colonial_upkeep_over } }
+			country_event = generic.5
+		}
+		remove_ideas = colonial_upkeep
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep2 }
+		swap_ideas = {
+			remove_idea = colonial_upkeep2
+			add_idea = colonial_upkeep
+		}
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep3 }
+		swap_ideas = {
+			remove_idea = colonial_upkeep3
+			add_idea = colonial_upkeep2
+		}
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep4 }
+		swap_ideas = {
+			remove_idea = colonial_upkeep4
+			add_idea = colonial_upkeep3
+		}
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep5 }
+		swap_ideas = {
+			remove_idea = colonial_upkeep5
+			add_idea = colonial_upkeep4
+		}
+	}
+}
+colonial_upkeep_upgrade = {
+	if = {
+		limit = { has_idea = colonial_upkeep5 }
+		add_stability = -0.01
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep4 }
+		swap_ideas = {
+			remove_idea = colonial_upkeep4
+			add_idea = colonial_upkeep5
+		}
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep3 }
+		swap_ideas = {
+			remove_idea = colonial_upkeep3
+			add_idea = colonial_upkeep4
+		}
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep2 }
+		swap_ideas = {
+			remove_idea = colonial_upkeep2
+			add_idea = colonial_upkeep3
+		}
+	}
+	if = {
+		limit = { has_idea = colonial_upkeep }
+		swap_ideas = {
+			remove_idea = colonial_upkeep
+			add_idea = colonial_upkeep2
+		}
+	}
+	if = {
+		limit = { 
+			has_colonial_upkeep = no
+		}
+		add_ideas = colonial_upkeep
+	}
+}
+
+economic_crisis_downgrade = {
+	if = {
+		limit = { has_economic_crisis = no }
+		add_stability = 0.01
+	}
+	if = {
+		limit = { has_idea = economic_crisis }
+		if = {
+			limit = { NOT = { has_country_flag = economic_crisis_over } }
+			country_event = generic.5
+		}
+		remove_ideas = economic_crisis
+	}
+	if = {
+		limit = { has_idea = economic_crisis2 }
+		swap_ideas = {
+			remove_idea = economic_crisis2
+			add_idea = economic_crisis
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis3 }
+		swap_ideas = {
+			remove_idea = economic_crisis3
+			add_idea = economic_crisis2
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis4 }
+		swap_ideas = {
+			remove_idea = economic_crisis4
+			add_idea = economic_crisis3
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis5 }
+		swap_ideas = {
+			remove_idea = economic_crisis5
+			add_idea = economic_crisis4
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis6 }
+		swap_ideas = {
+			remove_idea = economic_crisis6
+			add_idea = economic_crisis5
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis7 }
+		swap_ideas = {
+			remove_idea = economic_crisis7
+			add_idea = economic_crisis6
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis8 }
+		swap_ideas = {
+			remove_idea = economic_crisis8
+			add_idea = economic_crisis7
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis9 }
+		swap_ideas = {
+			remove_idea = economic_crisis9
+			add_idea = economic_crisis8
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis10 }
+		swap_ideas = {
+			remove_idea = economic_crisis10
+			add_idea = economic_crisis9
+		}
+	}
+}
+economic_crisis_upgrade = {
+	if = {
+		limit = { has_idea = economic_crisis10 }
+		add_stability = -0.01
+	}
+	if = {
+		limit = { has_idea = economic_crisis9 }
+		swap_ideas = {
+			remove_idea = economic_crisis9
+			add_idea = economic_crisis10
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis8 }
+		swap_ideas = {
+			remove_idea = economic_crisis8
+			add_idea = economic_crisis9
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis7 }
+		swap_ideas = {
+			remove_idea = economic_crisis7
+			add_idea = economic_crisis8
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis6 }
+		swap_ideas = {
+			remove_idea = economic_crisis6
+			add_idea = economic_crisis7
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis5 }
+		swap_ideas = {
+			remove_idea = economic_crisis5
+			add_idea = economic_crisis6
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis4 }
+		swap_ideas = {
+			remove_idea = economic_crisis4
+			add_idea = economic_crisis5
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis3 }
+		swap_ideas = {
+			remove_idea = economic_crisis3
+			add_idea = economic_crisis4
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis2 }
+		swap_ideas = {
+			remove_idea = economic_crisis2
+			add_idea = economic_crisis3
+		}
+	}
+	if = {
+		limit = { has_idea = economic_crisis }
+		swap_ideas = {
+			remove_idea = economic_crisis
+			add_idea = economic_crisis2
+		}
+	}
+	if = {
+		limit = { 
+			has_economic_crisis = no
+		}
+		add_ideas = economic_crisis
+	}
+}
+
+scientific_advances_downgrade = {
+	if = {
+		limit = { has_idea = scientific_advances }
+		remove_ideas = scientific_advances
+	}
+	if = {
+		limit = { has_idea = scientific_advances2 }
+		swap_ideas = {
+			remove_idea = scientific_advances2
+			add_idea = scientific_advances
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances3 }
+		swap_ideas = {
+			remove_idea = scientific_advances3
+			add_idea = scientific_advances2
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances4 }
+		swap_ideas = {
+			remove_idea = scientific_advances4
+			add_idea = scientific_advances3
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances5 }
+		swap_ideas = {
+			remove_idea = scientific_advances5
+			add_idea = scientific_advances4
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances6 }
+		swap_ideas = {
+			remove_idea = scientific_advances6
+			add_idea = scientific_advances5
+		}
+	}
+}
+scientific_advances_upgrade = {
+	if = {
+		limit = { has_idea = scientific_advances5 }
+		swap_ideas = {
+			remove_idea = scientific_advances5
+			add_idea = scientific_advances6
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances4 }
+		swap_ideas = {
+			remove_idea = scientific_advances4
+			add_idea = scientific_advances5
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances3 }
+		swap_ideas = {
+			remove_idea = scientific_advances3
+			add_idea = scientific_advances4
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances2 }
+		swap_ideas = {
+			remove_idea = scientific_advances2
+			add_idea = scientific_advances3
+		}
+	}
+	if = {
+		limit = { has_idea = scientific_advances }
+		swap_ideas = {
+			remove_idea = scientific_advances
+			add_idea = scientific_advances2
+		}
+	}
+	if = {
+		limit = { 
+			NOT = { has_idea = scientific_advances }
+			NOT = { has_idea = scientific_advances2 }
+			NOT = { has_idea = scientific_advances3 }
+			NOT = { has_idea = scientific_advances4 }
+			NOT = { has_idea = scientific_advances5 }
+			NOT = { has_idea = scientific_advances6 }
+		}
+		add_ideas = scientific_advances
+	}
+}

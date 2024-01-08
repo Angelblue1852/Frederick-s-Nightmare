@@ -12,6 +12,7 @@ state={
 
 		}
 		add_core_of = LOU
+		add_claim_by = USA
 		victory_points = {
 			6696 1 
 		}

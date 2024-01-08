@@ -7,6 +7,15 @@ set_technology = {
 	infantry_weapons = 1
 }
 
+set_variable = {
+    var = spain_jcaz_influence
+    value = 2
+}
+
+add_ideas = {
+	economic_crisis3
+}
+
 recruit_character = SPR_jose_diaz_ramos
 
 
@@ -21,6 +30,7 @@ create_faction = "Barcelona Agreement"
 add_to_faction = SPR
 add_to_faction = ITA
 
+give_guarantee = GXC
 
 set_politics = {
 	ruling_party = communism
@@ -35,4 +45,4 @@ set_popularities = {
 	fascism = 15
 }
 
-
+add_opinion_modifier = { target = SWE modifier = recent_war }

@@ -8,6 +8,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/GFX_yakut_japanese_dominion.png"
 	}
 	spriteType = {
+		name = "GFX_idea_lon_symbol"
+		texturefile = "gfx/interface/ideas/GFX_lon.png"
+	}
+	spriteType = {
 		name = "GFX_idea_aubert_frere"
 		texturefile = "gfx/interface/ideas/GFX_aubert_frere.png"
 	}
@@ -204,11 +208,6 @@ spriteTypes = {
 	}
 	
 	##########Ideologies#########
-	
-	spriteType = {
-		name = "GFX_ideology_USA_conservatism"
-		texturefile = "gfx/interface/ideologies/GFX_ideology_USA_conservatism.png"
-	}
 	
 	##########Decisions##########
 	

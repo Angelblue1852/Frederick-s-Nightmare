@@ -1,0 +1,67 @@
+ottoman_religious_debates = {
+	
+	religious_debate_ethnicity_of_priests = {
+	
+		icon = DI_civil_support
+		
+		fire_only_once = yes
+	
+		allowed = { always = yes }
+		visible = { always = yes }
+		
+		available = {}
+		
+		complete_effect = {
+			set_country_flag = religious_debate_ethnicity_of_priests_flag
+			country_event = turkey.4
+		}
+		
+		cost = 100
+		
+	}
+	
+	religious_debate_interreligious_marriages = {
+	
+		icon = DI_political_discourse
+		
+		fire_only_once = yes
+	
+		allowed = { always = yes }
+		visible = { always = yes }
+		
+		available = {
+			has_country_flag = religious_debate_ethnicity_of_priests_flag
+		}
+		
+		complete_effect = {
+			set_country_flag = religious_debate_interreligious_marriages_flag
+			country_event = turkey.5
+		}
+		
+		cost = 100
+		
+	}
+	
+	religious_debate_shariah_law = {
+	
+		icon = DI_nationalism
+		
+		fire_only_once = yes
+	
+		allowed = { always = yes }
+		visible = { always = yes }
+		
+		available = {
+			has_country_flag = religious_debate_interreligious_marriages_flag
+		}
+		
+		complete_effect = {
+			set_country_flag = religious_debate_shariah_law_flag
+			country_event = turkey.6
+		}
+		
+		cost = 100
+		
+	}
+	
+}

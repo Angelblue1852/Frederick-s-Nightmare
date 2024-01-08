@@ -6,6 +6,8 @@ set_stability = 0.8
 set_war_support = 0.1
 
 add_ideas = {
+	diplomatic_neutrality
+	economic_crisis
 }
 
 recruit_character = SWI_federal_assembly

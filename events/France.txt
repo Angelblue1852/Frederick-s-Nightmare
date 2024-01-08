@@ -108,7 +108,7 @@ country_event = {
 		army_experience = 20
 		add_doctrine_cost_reduction = {
 			category = land_doctrine
-			bonus = 0.25
+			cost_reduction = 0.25
 		}
 		ai_chance = {
 			base = 100
@@ -120,7 +120,7 @@ country_event = {
 		navy_experience = 20
 		add_doctrine_cost_reduction = {
 			category = naval_doctrine
-			bonus = 0.25
+			cost_reduction = 0.25
 		}
 		trigger = {
 			any_owned_state = { is_coastal = yes }
@@ -135,7 +135,7 @@ country_event = {
 		air_experience = 20
 		add_doctrine_cost_reduction = {
 			category = air_doctrine
-			bonus = 0.25
+			cost_reduction = 0.25
 		}
 		ai_chance = {
 			base = 0

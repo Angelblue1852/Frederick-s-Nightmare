@@ -1,0 +1,9 @@
+TTS_balance_of_power = {
+	allowed = {
+		original_tag = TTS
+	}
+	priority = {
+			base = 50
+		}
+	
+}
