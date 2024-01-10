@@ -397,7 +397,7 @@ focus_tree = {
 				ENG = { has_completed_focus = ENG_pass_the_home_defense_act }
 				JAP = { has_completed_focus = JAP_empower_the_hardliners }
 				USA = { has_completed_focus = USA_american_idealism }
-				PRS = { has_completed_focus = PRS_friendship_with_russia }
+				GER = { has_completed_focus = PRS_friendship_with_russia }
 				AUS = { has_completed_focus = AUS_befriend_the_ottoman_empire }
 				threat > 0.5
 			}
@@ -1370,7 +1370,7 @@ focus_tree = {
 
 		completion_reward = {
 			SPR = {
-				country_event = spain.2
+				country_event = SPR.2
 			}
 		}
 
@@ -1628,7 +1628,7 @@ focus_tree = {
 		completion_reward = {
 			every_other_country = {
 				limit = { is_in_faction_with = ROOT }
-				country_event = france.5
+				country_event = FRA.5
 			}
 		}
 
@@ -1674,7 +1674,7 @@ focus_tree = {
 						original_tag = HES
 					}
 				}
-				country_event = { id = france.6 hours = 3 }
+				country_event = { id = FRA.6 hours = 3 }
 			}
 			if = {
 				limit = {
@@ -1893,7 +1893,7 @@ focus_tree = {
 					OR = {
 						original_tag = CAN
 						original_tag = USA
-						original_tag = NAT
+						original_tag = SOU
 						original_tag = CAL
 						original_tag = TEX
 						original_tag = MEX
@@ -1941,7 +1941,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			PRS = { is_in_faction_with = ROOT }
+			GER = { is_in_faction_with = ROOT }
 		}
 		bypass = {}
 		select_effect = {}
@@ -1956,7 +1956,7 @@ focus_tree = {
 					exists = yes
 					OR = {
 						is_minor_german_state = yes
-						original_tag = PRS
+						original_tag = GER
 						original_tag = AUS
 						original_tag = SWI
 					}
@@ -2102,7 +2102,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				news_event = { id = france_news.2 hours = 2 }
+				news_event = { id = FRA_news.2 hours = 2 }
 			}
 			if = {
 				limit = { 
@@ -2116,7 +2116,7 @@ focus_tree = {
 					}
 					CAN = { add_to_faction = PREV }
 				}
-				CAN = { country_event = france.4 }
+				CAN = { country_event = FRA.4 }
 			}
 			if = {
 				limit = { 
@@ -2130,7 +2130,7 @@ focus_tree = {
 					}
 					USA = { add_to_faction = PREV }
 				}
-				USA = { country_event = france.4 }
+				USA = { country_event = FRA.4 }
 			}
 		}
 

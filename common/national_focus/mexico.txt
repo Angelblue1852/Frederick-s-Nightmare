@@ -696,7 +696,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			SPR = { country_event = spain.2 }
+			SPR = { country_event = SPR.2 }
 		}
 
 		ai_will_do = {
@@ -1158,7 +1158,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = MEX_strengthen_the_party
 
-		will_lead_to_war_with = NAT
+		will_lead_to_war_with = SOU
 
 		cost = 10
 		
@@ -1169,8 +1169,8 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_government = communism
-			is_neighbor_of = NAT
-			NAT = {
+			is_neighbor_of = SOU
+			SOU = {
 				NOT = { has_government = communism }
 			}
 		}
@@ -1184,7 +1184,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
-				target = NAT
+				target = SOU
 			}
 		}
 
@@ -1278,7 +1278,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			hidden_effect = { country_event = mexico_news.4 }
+			hidden_effect = { country_event = MEX_news.4 }
 			add_popularity = { ideology = democratic popularity = 0.05 }
 			set_party_name = { ideology = democratic name = "PPS" long_name = "Partido Popular Socialista" }
 			add_stability = 0.05
@@ -1514,7 +1514,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			FRA = { country_event = france.3 }
+			FRA = { country_event = FRA.3 }
 		}
 
 		ai_will_do = {

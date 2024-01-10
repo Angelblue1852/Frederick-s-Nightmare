@@ -1,0 +1,179 @@
+﻿division_template = {
+	name = "Infantry Division"
+	
+	division_names_group = ITA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+division_template = {
+	name = "Motorized Division"
+	
+	division_names_group = ITA_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+        motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Armored Division"
+	
+	division_names_group = ITA_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "Red Guards"
+		location = 6606
+		division_template = "Armored Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Western Division"
+		location = 6780
+		division_template = "Armored Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd Western Division"
+		location = 11891
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3rd Western Division"
+		location = 11721
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Northern Division"
+		location = 11568
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd Northern Division"
+		location = 6793
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3rd Northern Division"
+		location = 3776
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4th Northern Division"
+		location = 11734
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5th Northern Division"
+		location = 11587
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Southern Division"
+		location = 9907
+		division_template = "Armored Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd Southern Division"
+		location = 6875
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3rd Southern Division"
+		location = 3885
+		division_template = "Motorized Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4th Southern Division"
+		location = 9924
+		division_template = "Infantry Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1.0
+	}
+}
+
+#air_wings = {
+#	158 = {
+#		fighter_equipment_0 = { owner = "ITA" amount = 131 }
+#	}
+#	159 = {
+#		fighter_equipment_0 = { owner = "ITA" amount = 123 }
+#	}
+#	162 = {
+#		fighter_equipment_0 = { owner = "ITA" amount = 94 }
+#	}
+#	159 = {
+#		tac_bomber_equipment_0 = { owner = "ITA" amount = 31 }
+#	}
+#	162 = {
+#		tac_bomber_equipment_0 = { owner = "ITA" amount = 23 }
+#	}
+#}
+
+instant_effect = {
+}

@@ -399,7 +399,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			news_event = britain_news.1
+			news_event = ENG_news.1
 			336 = {
 				owner = { add_opinion_modifier = { target = ROOT modifier = singapore_decree } }
 			}	
@@ -635,7 +635,7 @@ focus_tree = {
 		}
 		bypass = {}
 		select_effect = {
-			news_event = { id = britain_news.2 days = 16 }
+			news_event = { id = ENG_news.2 days = 16 }
 		}
 
 		cancel_if_invalid = yes
@@ -760,7 +760,7 @@ focus_tree = {
 		}
 		bypass = {}
 		select_effect = {
-			news_event = { id = britain_news.3 days = 16 }
+			news_event = { id = ENG_news.3 days = 16 }
 		}
 
 		cancel_if_invalid = yes

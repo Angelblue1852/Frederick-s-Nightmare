@@ -1,0 +1,67 @@
+﻿division_template = {
+	name = "Californian Volunteers"
+	
+	division_names_group = BRENGL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	is_locked = yes
+	
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "1st Californian Volunteers"
+		location = 3960
+		division_template = "Californian Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2nd Californian Volunteers"
+		location = 10778
+		division_template = "Californian Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3rd Californian Volunteers"
+		location = 3960
+		division_template = "Californian Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "4th Californian Volunteers"
+		location = 10861
+		division_template = "Californian Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "5th Californian Volunteers"
+		location = 9920
+		division_template = "Californian Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "6th Californian Volunteers"
+		location = 3960
+		division_template = "Californian Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.9
+	}
+}
+
+instant_effect = {
+}

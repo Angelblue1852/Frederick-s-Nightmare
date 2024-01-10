@@ -1643,7 +1643,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			FRA = { country_event = { id = france.2 hours = 3 } }
+			FRA = { country_event = { id = FRA.2 hours = 3 } }
 		}
 
 		ai_will_do = {

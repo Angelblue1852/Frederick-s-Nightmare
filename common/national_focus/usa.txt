@@ -467,11 +467,11 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NAT = { has_government = democratic } }
+				limit = { SOU = { has_government = democratic } }
 				add_popularity = { ideology = democratic popularity = 0.01 }
 			}
 			random_country = {
-				limit = { original_tag = NAT has_government = democratic }
+				limit = { original_tag = SOU has_government = democratic }
 				add_opinion_modifier = {
 					target = USA
 					modifier = diplomatic_friendship
@@ -588,11 +588,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NAT = { is_subject = no }
-					NOT = { is_in_faction_with = NAT } NAT = { is_neighbor_of = MEX }
-					NAT = { NOT = { has_government = communism } } NAT = { NOT = { has_government = fascism } }
+					SOU = { is_subject = no }
+					NOT = { is_in_faction_with = SOU } SOU = { is_neighbor_of = MEX }
+					SOU = { NOT = { has_government = communism } } SOU = { NOT = { has_government = fascism } }
 				}
-				give_guarantee = NAT
+				give_guarantee = SOU
 			}
 			if = {
 				limit = {
@@ -1366,12 +1366,12 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NAT = { has_government = democratic }
-					NAT = { is_subject = no }
-					NAT = { is_in_faction = no }
-					NAT = { NOT = { has_war_with = USA } }
+					SOU = { has_government = democratic }
+					SOU = { is_subject = no }
+					SOU = { is_in_faction = no }
+					SOU = { NOT = { has_war_with = USA } }
 				}
-				NAT = { country_event = { id = generic.1 days = 1 } }
+				SOU = { country_event = { id = generic.1 days = 1 } }
 			}
 		}
 
@@ -2170,7 +2170,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		completion_reward = {
-			create_wargoal = { type = annex_everything target = NAT }
+			create_wargoal = { type = annex_everything target = SOU }
 			create_wargoal = { type = annex_everything target = MEX }
 			add_state_claim = 389
 			add_state_claim = 390
@@ -2514,10 +2514,10 @@ focus_tree = {
 		prerequisite = { focus = USA_Democratic_Alliance }
 		available = {
 			has_government = democratic
-			PRS = { has_government = democratic }
+			GER = { has_government = democratic }
 			is_subject = no
-			PRS = { is_subject = no }
-			PRS = { is_faction_leader = yes }
+			GER = { is_subject = no }
+			GER = { is_faction_leader = yes }
 			is_in_faction = no
 			}
 		x = -1
@@ -2527,7 +2527,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		completion_reward = {
-			PRS = { 
+			GER = { 
 				country_event = {
 					id = GER.11 days = 2
 				}
@@ -3490,7 +3490,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 0
-			#This focus is useless when aligning to France. We don't want the AI to uphold segregation when they go for France.
+			#This focus is useless when aligning to FRA. We don't want the AI to uphold segregation when they go for FRA.
 			modifier = {
 				add = 10
 				has_completed_focus = USA_american_idealism
@@ -3569,7 +3569,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_pass_the_civil_rights_act
 		
-		will_lead_to_war_with = NAT
+		will_lead_to_war_with = SOU
 
 		cost = 10
 		
@@ -3583,7 +3583,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 			has_defensive_war = no
-			NAT = {
+			SOU = {
 				exists = yes
 				is_neighbor_of = ROOT
 				NOT = { is_in_faction_with = ROOT }
@@ -3598,7 +3598,7 @@ focus_tree = {
 
 		completion_reward = {
 			create_wargoal = {
-				target = NAT
+				target = SOU
 				type = annex_everything
 			}
 		}
@@ -3677,7 +3677,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_pass_the_civil_rights_act
 		
-		will_lead_to_war_with = NAT
+		will_lead_to_war_with = SOU
 
 		cost = 10
 		

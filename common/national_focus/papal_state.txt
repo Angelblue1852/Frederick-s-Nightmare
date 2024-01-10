@@ -35,23 +35,23 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { AUS = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
-				AUS = { country_event = { id = papal_state.5 hours = 6 } }
+				AUS = { country_event = { id = PAP.5 hours = 6 } }
 			}
 			if = {
 				limit = { ENG = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
-				ENG = { country_event = { id = papal_state.5 hours = 6 } }
+				ENG = { country_event = { id = PAP.5 hours = 6 } }
 			}
 			if = {
 				limit = { FRA = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
-				FRA = { country_event = { id = papal_state.5 hours = 6 } }
+				FRA = { country_event = { id = PAP.5 hours = 6 } }
 			}
 			if = {
-				limit = { PRS = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
-				PRS = { country_event = { id = papal_state.5 hours = 6 } }
+				limit = { GER = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
+				GER = { country_event = { id = PAP.5 hours = 6 } }
 			}
 			if = {
 				limit = { SOV = { exists = yes is_major = yes NOT = { has_war_with = ROOT } } }
-				SOV = { country_event = { id = papal_state.5 hours = 6 } }
+				SOV = { country_event = { id = PAP.5 hours = 6 } }
 			}
 		}
 
@@ -138,7 +138,7 @@ focus_tree = {
 				is_major = yes
 				is_guaranteed_by = FRA
 				is_guaranteed_by = AUS
-				is_guaranteed_by = PRS
+				is_guaranteed_by = GER
 				is_guaranteed_by = SPR
 				is_guaranteed_by = TUR
 				is_guaranteed_by = ENG
@@ -363,7 +363,7 @@ focus_tree = {
 
 		cost = 10
 		
-		will_lead_to_war_with = NAP
+		will_lead_to_war_with = TTS
 		
 		prerequisite = {
 			focus = PAP_join_the_entente
@@ -371,9 +371,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			country_exists = NAP
-			is_neighbor_of = NAP
-			NOT = { is_in_faction_with = NAP }
+			country_exists = TTS
+			is_neighbor_of = TTS
+			NOT = { is_in_faction_with = TTS }
 		}
 		bypass = {}
 		select_effect = {}
@@ -384,7 +384,7 @@ focus_tree = {
 
 		completion_reward = {
 			create_wargoal = {
-				target = NAP
+				target = TTS
 				type = puppet_wargoal_focus
 			}
 		}
@@ -602,7 +602,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			FRA = { country_event = france.3 }
+			FRA = { country_event = FRA.3 }
 		}
 
 		ai_will_do = {
@@ -641,7 +641,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			AUS = { country_event = austria.3 }
+			AUS = { country_event = AUS.3 }
 		}
 
 		ai_will_do = {
@@ -714,7 +714,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			WES = { country_event = { id = papal_state.6 hours = 5 } }
+			WES = { country_event = { id = PAP.6 hours = 5 } }
 		}
 
 		ai_will_do = {
@@ -749,7 +749,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			AUS = { country_event = { id = papal_state.7 hours = 5 } }
+			AUS = { country_event = { id = PAP.7 hours = 5 } }
 		}
 
 		ai_will_do = {

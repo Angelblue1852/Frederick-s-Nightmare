@@ -456,7 +456,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			news_event = russia_news.5
+			news_event = SOV_news.5
 			add_popularity = { ideology = communism popularity = -0.05 }
 		}
 
@@ -1055,7 +1055,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			news_event = russia_news.9
+			news_event = SOV_news.9
 			add_named_threat = {
 				threat = 10
 				name = "Global Tsardom"
@@ -1093,7 +1093,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			news_event = russia_news.6
+			news_event = SOV_news.6
 			add_popularity = { ideology = communism popularity = 0.05 }
 		}
 
@@ -1217,7 +1217,7 @@ focus_tree = {
 		}
 		bypass = {}
 		select_effect = {
-			country_event = { id = russia.8 days = 30 }
+			country_event = { id = SOV.8 days = 30 }
 		}
 
 		cancel_if_invalid = yes
@@ -1225,7 +1225,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			news_event = russia_news.7
+			news_event = SOV_news.7
 			add_ideas = secularism
 			dismantle_faction = yes
 			set_politics = {
@@ -1262,7 +1262,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			news_event = russia_news.8
+			news_event = SOV_news.8
 			hidden_effect = { dismantle_faction = yes }
 			create_faction = comintern
 		}
@@ -1528,7 +1528,7 @@ focus_tree = {
 
 		completion_reward = {
 			create_wargoal = {
-				target = PRS
+				target = GER
 				type = puppet_wargoal_focus
 			}
 		}
@@ -1915,8 +1915,8 @@ focus_tree = {
 		mutually_exclusive = {}
 		available = {
 			is_faction_leader = yes
-			is_in_faction_with = PRS
-			PRS = { exists = yes }
+			is_in_faction_with = GER
+			GER = { exists = yes }
 		}
 		bypass = {}
 		select_effect = {}

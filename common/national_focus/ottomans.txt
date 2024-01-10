@@ -470,7 +470,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				news_event = turkey_news.1
+				news_event = TUR_news.1
 			}
 			add_political_power = 150
 			add_war_support = 0.05
@@ -964,9 +964,9 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NOT = { has_war_with = PRS } }
+				limit = { NOT = { has_war_with = GER } }
 				add_equipment_to_stockpile = {
-					type = light_tank_equipment_1 amount = 25 producer = PRS
+					type = light_tank_equipment_1 amount = 25 producer = GER
 				}
 			}
 			if = {
@@ -1295,7 +1295,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = sunni_clergy
 			hidden_effect = {
-				news_event = turkey_news.2
+				news_event = TUR_news.2
 			}
 			add_popularity = {
 				ideology = democratic popularity = 0.25
@@ -1424,7 +1424,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				news_event = turkey_news.3
+				news_event = TUR_news.3
 			}
 			every_country = {
 				limit = { committed_to_democracy = yes }
@@ -1701,7 +1701,7 @@ focus_tree = {
 		completion_reward = {
 			random_country = {
 				limit = { original_tag = AUS has_government = neutrality is_faction_leader = yes }
-				country_event = austria.3
+				country_event = AUS.3
 			}
 		}
 
@@ -1775,7 +1775,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			EGY = { country_event = { id = turkey.2 days = 1 } }
+			EGY = { country_event = { id = TUR.2 days = 1 } }
 		}
 
 		ai_will_do = {
@@ -1855,7 +1855,7 @@ focus_tree = {
 
 		completion_reward = {
 			763 = {
-				OWNER = { country_event = { id = turkey.3 days = 1 } }
+				OWNER = { country_event = { id = TUR.3 days = 1 } }
 			}
 		}
 

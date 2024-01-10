@@ -36,7 +36,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			country_event = { id = italy.2 hours = 3 }
+			country_event = { id = ITA.2 hours = 3 }
 		}
 
 		ai_will_do = {
@@ -69,7 +69,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_war_support = 0.03
-			NAP = { add_opinion_modifier = { target = ROOT modifier = territorial_dispute } }
+			TTS = { add_opinion_modifier = { target = ROOT modifier = territorial_dispute } }
 		}
 
 		ai_will_do = {
@@ -133,7 +133,7 @@ focus_tree = {
 
 		completion_reward = {
 			colonial_upkeep_remove = yes
-			FRA = { country_event = { id = italy.3 hours = 3 } }
+			FRA = { country_event = { id = ITA.3 hours = 3 } }
 		}
 
 		ai_will_do = {
@@ -322,7 +322,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			PAP = { country_event = { id = papal_state.3 hours = 3 } }
+			PAP = { country_event = { id = PAP.3 hours = 3 } }
 		}
 
 		ai_will_do = {
@@ -865,7 +865,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			SPR = { country_event = { id = italy.6 hours = 3 } }
+			SPR = { country_event = { id = ITA.6 hours = 3 } }
 		}
 
 		ai_will_do = {
@@ -1368,7 +1368,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			FRA = { country_event = france.3 }
+			FRA = { country_event = FRA.3 }
 		}
 
 		ai_will_do = {
@@ -1436,7 +1436,7 @@ focus_tree = {
 					NOT = { is_in_faction_with = ROOT }
 					NOT = { is_in_faction_with = AUS }
 				}
-				country_event = { id = italy.7 hours = 3 }
+				country_event = { id = ITA.7 hours = 3 }
 			}
 		}
 
@@ -2050,7 +2050,7 @@ focus_tree = {
 			NOT = { is_in_faction_with = PAP }
 			NOT = {
 				is_subject_of = PAP
-				is_subject_of = NAP
+				is_subject_of = TTS
 			}
 		}
 		bypass = {}
@@ -2079,7 +2079,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_libyan_frontline_jobs
 		
-		will_lead_to_war_with = NAP
+		will_lead_to_war_with = TTS
 
 		cost = 10
 		
@@ -2088,13 +2088,13 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			is_neighbor_of = NAP
-			NOT = { is_in_faction_with = NAP }
+			is_neighbor_of = TTS
+			NOT = { is_in_faction_with = TTS }
 			has_full_control_of_state = 2
 			has_full_control_of_state = 157
 			NOT = {
 				is_subject_of = PAP
-				is_subject_of = NAP
+				is_subject_of = TTS
 			}
 		}
 		bypass = {}
@@ -2107,7 +2107,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
-				target = NAP
+				target = TTS
 			}
 		}
 
@@ -2311,7 +2311,7 @@ focus_tree = {
 			NOT = { is_in_faction_with = PAP }
 			NOT = {
 				is_subject_of = PAP
-				is_subject_of = NAP
+				is_subject_of = TTS
 			}
 		}
 		bypass = {}
@@ -2351,7 +2351,7 @@ focus_tree = {
 			NOT = { is_in_faction_with = PAP }
 			NOT = {
 				is_subject_of = PAP
-				is_subject_of = NAP
+				is_subject_of = TTS
 			}
 		}
 		bypass = {}
@@ -2362,7 +2362,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			PAP = { country_event = { id = italy.14 hours = 12 } } 
+			PAP = { country_event = { id = ITA.14 hours = 12 } } 
 			}
 
 		ai_will_do = {
@@ -2378,7 +2378,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_attack_papal_state
 		
-		will_lead_to_war_with = NAP
+		will_lead_to_war_with = TTS
 
 		cost = 10
 		
@@ -2387,13 +2387,13 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = ITA_Integrate_Naples }
 		available = {
-			is_neighbor_of = NAP
-			NOT = { is_in_faction_with = NAP }
+			is_neighbor_of = TTS
+			NOT = { is_in_faction_with = TTS }
 			has_full_control_of_state = 2
 			has_full_control_of_state = 157
 			NOT = {
 				is_subject_of = PAP
-				is_subject_of = NAP
+				is_subject_of = TTS
 			}
 		}
 		bypass = {}
@@ -2406,7 +2406,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
-				target = NAP
+				target = TTS
 			}
 		}
 
@@ -2429,14 +2429,14 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = ITA_attack_naples }
 		available = {
-			is_neighbor_of = NAP
-			NOT = { is_in_faction_with = NAP }
-			NAP = { has_completed_focus = NAP_accept_papal_authority }
+			is_neighbor_of = TTS
+			NOT = { is_in_faction_with = TTS }
+			TTS = { has_completed_focus = NAP_accept_papal_authority }
 			has_full_control_of_state = 2
 			has_full_control_of_state = 157
 			NOT = {
 				is_subject_of = PAP
-				is_subject_of = NAP
+				is_subject_of = TTS
 			}
 		}
 		bypass = {}
@@ -2447,7 +2447,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			NAP = { country_event = { id = italy.15 hours = 12 } } 
+			TTS = { country_event = { id = ITA.15 hours = 12 } } 
 		}
 	}
 	
@@ -2476,7 +2476,7 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_core_of = PAP
-							is_core_of = NAP
+							is_core_of = TTS
 						}
 					}
 					add_core_of = ITA

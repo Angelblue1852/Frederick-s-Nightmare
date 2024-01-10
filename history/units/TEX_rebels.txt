@@ -1,0 +1,82 @@
+﻿division_template = {
+	name = "Infantry Division"
+	
+	division_names_group = BRENGL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "1st Home Guard"
+		location = 4955
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "2nd Home Guard"
+		location = 12728
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "3rd Home Guard"
+		location = 2019
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "4th Home Guard"
+		location = 5061
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "5th Home Guard"
+		location = 12369
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "6th Home Guard"
+		location = 3960
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "7th Home Guard"
+		location = 3960
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "8th Home Guard"
+		location = 3960
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.99
+	}
+}
+
+instant_effect = {
+}

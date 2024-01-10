@@ -1357,7 +1357,7 @@ focus_tree = {
 		mutually_exclusive = {}
 		available = {
 			any_country = {
-				original_tag = PRS
+				original_tag = GER
 				NOT = { has_government = democratic }
 			}
 		}
@@ -1369,7 +1369,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			PRS = {
+			GER = {
 				add_opinion_modifier = { target = ROOT modifier = diplomatic_hostility }
 			}
 		}
@@ -1470,7 +1470,7 @@ focus_tree = {
 
 		cost = 10
 		
-		will_lead_to_war_with = PRS
+		will_lead_to_war_with = GER
 		
 		prerequisite = {
 			focus = SWE_contain_prussia
@@ -1478,7 +1478,7 @@ focus_tree = {
 		mutually_exclusive = {}
 		available = {
 			any_country = {
-				original_tag = PRS
+				original_tag = GER
 				NOT = { has_government = democratic }
 				has_civil_war = no
 			}
@@ -1496,7 +1496,7 @@ focus_tree = {
 				name = "Pomeranian Liberation Societies"
 			}
 			create_wargoal = {
-				target = PRS
+				target = GER
 				type = take_state_focus
 				generator = { 62 63 }
 			}
@@ -1793,7 +1793,7 @@ focus_tree = {
 		}
 		available = {}
 		bypass = {
-			has_war_with = PRS
+			has_war_with = GER
 		}
 		select_effect = {}
 
@@ -1803,7 +1803,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_country = {
-				limit = { original_tag = PRS }
+				limit = { original_tag = GER }
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = diplomatic_hostility
@@ -1832,7 +1832,7 @@ focus_tree = {
 			focus = SWE_reinforce_the_southern_rivalry
 		}
 		available = {
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 		bypass = {}
 		select_effect = {}
@@ -1843,7 +1843,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_country = {
-				limit = { original_tag = PRS }
+				limit = { original_tag = GER }
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = diplomatic_friendship
@@ -1915,7 +1915,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				type = take_state_focus
-				target = PRS
+				target = GER
 				generator = { 62 63 }
 			}
 		}

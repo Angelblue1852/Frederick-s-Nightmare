@@ -67,7 +67,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			WUR = { country_event = { id = naples.2 hours = 16 } }
+			WUR = { country_event = { id = TTS.2 hours = 16 } }
 		}
 
 		ai_will_do = {
@@ -416,7 +416,7 @@ focus_tree = {
 			PAP = {
 				add_opinion_modifier = { target = ROOT modifier = diplomatic_friendship }
 			}
-			news_event = { id = naples_news.1 hours = 4 }
+			news_event = { id = TTS_news.1 hours = 4 }
 		}
 
 		ai_will_do = {
@@ -614,7 +614,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			PAP = { country_event = { id = naples.3 hours = 6 } }
+			PAP = { country_event = { id = TTS.3 hours = 6 } }
 		}
 
 		ai_will_do = {
@@ -718,7 +718,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			PAP = { country_event = { id = naples.4 hours = 8 } }
+			PAP = { country_event = { id = TTS.4 hours = 8 } }
 		}
 
 		ai_will_do = {
@@ -1069,7 +1069,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			PAP = { country_event = { id = papal_state.3 hours = 3 } }
+			PAP = { country_event = { id = PAP.3 hours = 3 } }
 		}
 
 		ai_will_do = {

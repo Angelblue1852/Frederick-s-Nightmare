@@ -1,0 +1,81 @@
+﻿division_template = {
+	name = "American Volunteers"
+	
+	division_names_group = BRENGL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	is_locked = yes
+	
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "1st U.S. Volunteers"
+		location = 10337
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+	division = {
+		name = "2nd U.S. Volunteers"
+		location = 10337
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+	division = {
+		name = "3rd U.S. Volunteers"
+		location = 10337
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+	division = {
+		name = "4th U.S. Volunteers"
+		location = 10337
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+	division = {
+		name = "5th U.S. Volunteers"
+		location = 1500
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+	division = {
+		name = "6th U.S. Volunteers"
+		location = 7628
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+	division = {
+		name = "7th U.S. Volunteers"
+		location = 10337
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+	division = {
+		name = "8th U.S. Volunteers"
+		location = 12410
+		division_template = "American Volunteers"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.97
+	}
+}
+
+instant_effect = {
+}

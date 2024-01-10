@@ -1106,7 +1106,7 @@ focus_tree = {
 				}
 			}
 			
-			hidden_effect = { country_event = { id = quebec.2 days = 5 } }
+			hidden_effect = { country_event = { id = CAN.2 days = 5 } }
 			
 		}
 

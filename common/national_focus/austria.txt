@@ -563,7 +563,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			PRS = {
+			GER = {
 				add_opinion_modifier = { target = ROOT modifier = diplomatic_hostility }
 			}
 		}
@@ -675,7 +675,7 @@ focus_tree = {
 		id = AUS_secure_the_pomeranian_corridor
 		icon = war3
 		
-		will_lead_to_war_with = PRS
+		will_lead_to_war_with = GER
 		
 		x = 0
 		y = 3
@@ -689,9 +689,9 @@ focus_tree = {
 		mutually_exclusive = {}
 		available = {
 			is_subject = no
-			NOT = { is_in_faction_with = PRS }
-			is_neighbor_of = PRS
-			PRS = {
+			NOT = { is_in_faction_with = GER }
+			is_neighbor_of = GER
+			GER = {
 				OR = {
 					has_full_control_of_state = 62
 					has_full_control_of_state = 63
@@ -701,10 +701,10 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			has_war_with = PRS
+			has_war_with = GER
 		}
 		select_effect = {
-			PRS = { news_event = { id = AUS_news.1 days = 10 } }
+			GER = { news_event = { id = AUS_news.1 days = 10 } }
 		}
 
 		cancel_if_invalid = yes
@@ -716,12 +716,12 @@ focus_tree = {
 				name = "Mobilization against Prussia"
 				threat = 5
 			}
-			if = { limit = { PRS = { has_full_control_of_state = 62 } } add_state_claim = 62 }
-			if = { limit = { PRS = { has_full_control_of_state = 63 } } add_state_claim = 63 }
-			if = { limit = { PRS = { has_full_control_of_state = 68 } } add_state_claim = 68 }
-			if = { limit = { PRS = { has_full_control_of_state = 86 } } add_state_claim = 86 }
+			if = { limit = { GER = { has_full_control_of_state = 62 } } add_state_claim = 62 }
+			if = { limit = { GER = { has_full_control_of_state = 63 } } add_state_claim = 63 }
+			if = { limit = { GER = { has_full_control_of_state = 68 } } add_state_claim = 68 }
+			if = { limit = { GER = { has_full_control_of_state = 86 } } add_state_claim = 86 }
 			create_wargoal = {
-				target = PRS
+				target = GER
 				type = take_state_focus
 				generator = { 62 63 68 86 }
 			}
@@ -2414,7 +2414,7 @@ focus_tree = {
 				threat = 0.8
 			}
 			every_country = {
-				limit = { OR = { original_tag = ITA original_tag = PAP original_tag = NAP } exists = yes }
+				limit = { OR = { original_tag = ITA original_tag = PAP original_tag = TTS } exists = yes }
 				add_opinion_modifier = {
 					target = ROOT modifier = territorial_dispute
 				}

@@ -38,5 +38,93 @@ characters={
 			id = -1
 		}
 	}
+	
+	TTS_italo_balbo = {
+		name = "Italo Balbo" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TTS/TTS_italo_balbo.png"
+				small = "gfx/interface/ideas/naples/GFX_italo_balbo.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = { brilliant_strategist }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = italo_balbo
+			available = { 
+			}
+			ledger = army
+			traits = { army_chief_morale_2 }
+		}
+	}
+	
+	TTS_giovanni_messe = {
+		name = "Giovanni Messe" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TTS/TTS_giovanni_messe.png"
+				small = "gfx/interface/ideas/naples/GFX_giovanni_messe.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { brilliant_strategist infantry_leader }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = giovanni_messe
+			available = { 
+			}
+			ledger = army
+			traits = { army_infantry_3 }
+		}
+	}
+	
+	TTS_brunetto_brunetti = {
+		name = "Brunetto Brunetti" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TTS/TTS_brunetto_brunetti.png"
+				small = "gfx/interface/ideas/naples/GFX_brunetto_brunetti.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	TTS_ubaldo_soddu = {
+		name = "Ubaldo Soddu" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TTS/TTS_ubaldo_soddu.png"
+				small = "gfx/interface/ideas/naples/GFX_ubaldo_soddu.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
 }
 	

@@ -12,5 +12,114 @@ characters={
 			id = -1
 		}
 	}
+	
+	PAP_rodolfo_graziani = {
+		name = "Rodolfo Graziani" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/PAP/PAP_rodolfo_graziani.png"
+				small = "gfx/interface/ideas/papal_states/GFX_rodolfo_graziani.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			traits = { }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		country_leader = {
+			ideology = rexism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = rodolfo_graziani
+			available = { 
+			}
+			ledger = army
+			traits = { army_chief_planning_2 }
+		}
+	}
+	
+	PAP_amedeo_guillet = {
+		name = "Amedeo Guillet" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/PAP/PAP_amedeo_guillet.png"
+				small = "gfx/interface/ideas/papal_states/GFX_amedeo_guillet.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { cavalry_officer trait_reckless }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = amedeo_guillet
+			ledger = army
+			traits = { army_cavalry_2 }
+		}
+	}
+	
+	PAP_guglielmo_nasi = {
+		name = "Guglielmo Nasi" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/PAP/PAP_guglielmo_nasi.png"
+				small = "gfx/interface/ideas/papal_states/GFX_guglielmo_nasi.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	PAP_peppino_garibaldi = {
+		name = "Peppino Garibaldi" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/PAP/PAP_peppino_garibaldi.png"
+				small = "gfx/interface/ideas/papal_states/GFX_peppino_garibaldi.png"
+			}
+			civilian = {
+				large = "gfx/leaders/PAP/PAP_peppino_garibaldi.png"
+				small = "gfx/interface/ideas/papal_states/GFX_peppino_garibaldi.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			available = { 
+				is_country_leader = no
+			}
+			idea_token = peppino_garibaldi
+			ledger = civilian
+			traits = { liberal_italian_nationalist }
+		}
+	}
 }
 	

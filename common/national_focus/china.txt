@@ -758,7 +758,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			TIB = { country_event = china.3 }
+			TIB = { country_event = CHI.3 }
 		}
 
 		ai_will_do = {
@@ -788,7 +788,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			SIK = { country_event = china.3 }
+			SIK = { country_event = CHI.3 }
 		}
 
 		ai_will_do = {
@@ -951,8 +951,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_named_threat = { threat = 1.5 name = "Jinan Threat" }
-			news_event = china_news.3
-			SHX = { country_event = china.3 }
+			news_event = CHI_news.3
+			SHX = { country_event = CHI.3 }
 		}
 
 		ai_will_do = {
@@ -1024,8 +1024,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_named_threat = { threat = 2.5 name = "Xiamen Conference" }
-			GXC = { country_event = china.3 }
-			YUN = { country_event = china.3 }
+			GXC = { country_event = CHI.3 }
+			YUN = { country_event = CHI.3 }
 		}
 
 		ai_will_do = {
@@ -1282,7 +1282,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				news_event = china_news.2
+				news_event = CHI_news.2
 			}
 			add_popularity = { ideology = communism popularity = 0.1 }
 			create_country_leader = {
@@ -1363,7 +1363,7 @@ focus_tree = {
 					NOT = { has_government = communism }
 				}
 				add_popularity = { ideology = communism popularity = 0.1 }
-				country_event = china.5
+				country_event = CHI.5
 			}
 			unlock_decision_category_tooltip = conversion_through_subversion_decisions
 		}
@@ -1675,7 +1675,7 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 		will_lead_to_war_with = SPR
 		will_lead_to_war_with = SWE
-		will_lead_to_war_with = PRS
+		will_lead_to_war_with = GER
 		
 		x = -1
 		y = 5
