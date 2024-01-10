@@ -80,11 +80,11 @@
  ITA_radicalization_efforts_desc:0 "Togliatti's Moderati are the largest and most overextended faction. By making a specific effort to sabotage their unity, less loyal delegates could be easily pushed to abandon the Prime Minister in favor of one of his rivals.\nHowever, it would not be possible to guide such propaganda as to conceal the true intentions behind the political sabotage. It could be possible that such an act ends up shifting power from the Moderati to yet another hostile faction."
  ITA_spread_antisemitic_conspiracy_theories:0 "Spread antisemitic Conspiracy Theories"
  ITA_spread_antisemitic_conspiracy_theories_desc:0 "It is usually hard to convince internationalists of committing themselves to ethnoreligious prejudice, but if Mussolini's anti-Jewish messaging were to be disguised as criticisms of vague concepts of evil international financiers, his supporters could find excuses for how he sells the exact same messages as Alfred Rosenberg in Germany."
- #NAP
- NAP_italian_unity:0 "Italian Unity"
- NAP_italian_unity_desc:0 "Naples is aiming at Italian unification - this goal must be achieved by any means necessary."
- NAP_integrate_the_bolscevichi:0 "Integrate the Bolscevichi"
- NAP_integrate_the_bolscevichi_desc:0 "Although they view themselves as communists, the Bolscevichi have long been sympathetic to the Staracist cause. Maybe they could be useful as our allies."
+ #TTS
+ TTS_italian_unity:0 "Italian Unity"
+ TTS_italian_unity_desc:0 "Naples is aiming at Italian unification - this goal must be achieved by any means necessary."
+ TTS_integrate_the_bolscevichi:0 "Integrate the Bolscevichi"
+ TTS_integrate_the_bolscevichi_desc:0 "Although they view themselves as communists, the Bolscevichi have long been sympathetic to the Staracist cause. Maybe they could be useful as our allies."
  #SWE
  form_scandinavia_category:0 "Form Scandinavia"
  form_scandinavia_category_desc:0 "The Danish, Norwegian, Swedish and Icelandic peoples are united by common faiths and similar languages. Our peoples are not meant to be divided."

@@ -20,7 +20,6 @@ recruit_character = BAD_joseph_wirth
 
 
 
-
 set_war_support = 0.1
 set_convoys = 20
 

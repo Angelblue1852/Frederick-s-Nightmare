@@ -1,6 +1,6 @@
 ideas = {
 
-	social_faction = {
+	country = {
 	
 		anglo_minority = {
 			picture = british_stoicism

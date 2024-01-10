@@ -115,10 +115,7 @@ country_event = {
 	option = {
 		name = PAP.5.o1
 		add_political_power = -25
-		if = {
-			limit = { has_idea = catholic_clergy }
-			add_stability = 0.005
-		}
+		add_stability = 0.01
 		PAP = {
 			create_random_building_slot_1 = yes
 			add_opinion_modifier = {
@@ -129,10 +126,6 @@ country_event = {
 		
 		ai_chance = {
 			base = 0
-			modifier = {
-				has_idea = catholic_clergy
-				add = 3
-			}
 		}
 	}
 	
@@ -192,10 +185,6 @@ country_event = {
 	
 	option = {
 		name = PAP.7.o1
-		if = {
-			limit = { has_idea = catholic_clergy }
-			add_stability = 0.005
-		}
 		PAP = {
 			army_experience = 25
 			air_experience = 25

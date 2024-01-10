@@ -855,10 +855,6 @@ focus_tree = {
 		available = {
 			NOT = { has_war_with = PAP }
 			PAP = { has_government = neutrality }
-			has_idea = catholic_clergy
-			any_other_country = {
-				has_idea = catholic_clergy
-			}
 		}
 		bypass = {}
 		select_effect = {}
@@ -876,8 +872,7 @@ focus_tree = {
 				}
 			}
 			every_other_country = {
-				limit = { 
-					has_idea = catholic_clergy 
+				limit = {
 					NOT = { has_war_with = ROOT }
 					OR = { is_puppet = no is_in_europe = yes }
 				}
@@ -1325,7 +1320,6 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 15
-			add_ideas = army_officers
 			if = {
 				limit = { HUN = { exists = no } }
 				create_field_marshal = {
@@ -1734,7 +1728,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = jingoism
 			add_war_support = 0.05
 			add_popularity = {
 				ideology = neutrality

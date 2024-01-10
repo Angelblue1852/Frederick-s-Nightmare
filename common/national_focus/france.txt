@@ -368,7 +368,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			remove_ideas = aristocratic_elites
 			add_popularity = { ideology = communism popularity = 0.05 }
 			add_popularity = { ideology = democratic popularity = 0.05 }
 			economic_crisis_downgrade = yes
@@ -397,7 +396,7 @@ focus_tree = {
 				ENG = { has_completed_focus = ENG_pass_the_home_defense_act }
 				JAP = { has_completed_focus = JAP_empower_the_hardliners }
 				USA = { has_completed_focus = USA_american_idealism }
-				GER = { has_completed_focus = PRS_friendship_with_russia }
+				GER = { has_completed_focus = GER_friendship_with_russia }
 				AUS = { has_completed_focus = AUS_befriend_the_ottoman_empire }
 				threat > 0.5
 			}
@@ -1257,7 +1256,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = jingoism
 			add_named_threat = {
 				name = "Reactionary France"
 				threat = 3

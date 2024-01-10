@@ -402,10 +402,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			has_idea = protectionism
 		}
 		bypass = {
-			has_idea = agricultural_barons
 		}
 		select_effect = {}
 
@@ -414,7 +412,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = agricultural_barons
 		}
 
 		ai_will_do = {
@@ -444,7 +441,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = jingoism
 		}
 
 		ai_will_do = {
@@ -766,8 +762,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = highly_experienced_generals
-			add_ideas = army_officers
 		}
 
 		ai_will_do = {
@@ -883,10 +877,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
-			swap_ideas = {
-				remove_idea = liberal_monarchists
-				add_idea = crown_loyalists
-			}
 		}
 
 		ai_will_do = {

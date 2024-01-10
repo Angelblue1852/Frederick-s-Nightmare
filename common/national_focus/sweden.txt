@@ -1157,7 +1157,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			remove_ideas = colonial_elites
 		}
 
 		ai_will_do = {

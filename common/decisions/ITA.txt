@@ -44,9 +44,9 @@ ITA_pci_divided_decisions = {
 		available = {
 			has_completed_focus = ITA_the_bologna_convention
 			NOT = { has_completed_focus = ITA_support_the_united_caucus }
-			country_exists = NAP
-			NAP = { has_government = fascism }
-			NOT = { is_in_faction_with = NAP }
+			country_exists = TTS
+			TTS = { has_government = fascism }
+			NOT = { is_in_faction_with = TTS }
 			custom_trigger_tooltip = {
 				tooltip = "At least 10 Bolscevichi delegates."
 				check_variable = { ITA_globalisti_influence > 9 }

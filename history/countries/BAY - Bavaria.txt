@@ -23,7 +23,6 @@ recruit_character = BAY_prince_franz
 
 
 
-
 AUS = {
     if = {
         limit = {

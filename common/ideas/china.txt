@@ -22,35 +22,5 @@ ideas = {
 		
 	}
 	
-	social_faction = {
-	
-		maoist_rebels = {
-			picture = communist_army
-			
-			allowed = {}
-			visible = {
-				OR = {
-					is_minor_chinese_state = yes
-					original_tag = CHI
-				}
-			}
-			available = { always = no }
-			cancel = {
-				OR = {
-					communism < 0.05
-					has_government = communism
-				}
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				communism_drift = 0.05
-				stability_factor = -0.05
-				war_support_factor = -0.05
-			}
-		}
-	
-	}
 	
 }

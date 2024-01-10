@@ -1396,7 +1396,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = five_year_plans
-			add_ideas = planned_economy
 			add_popularity = { ideology = communism popularity = 0.05 }
 			create_random_factory_CIV_1 = yes
 			create_random_factory_CIV_1 = yes
@@ -1430,11 +1429,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			#Proper Tooltip
-			if = { limit = { NOT = { has_completed_focus = CHI_conversion_through_subversion } } every_country = { limit = { is_minor_chinese_state = yes } add_popularity = { ideology = communism popularity = 0.05 } } }
-			#Actual Effect
-			every_country = { limit = { has_idea = maoist_rebels } add_popularity = { ideology = communism popularity = 0.05 } }
-			remove_ideas = aristocratic_elites
 		}
 
 		ai_will_do = {
@@ -1459,7 +1453,6 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			NOT = { has_idea = aristocratic_elites }
 		}
 		bypass = {}
 		select_effect = {}
@@ -1780,7 +1773,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1
-			add_ideas = atheism
 		}
 
 		ai_will_do = {

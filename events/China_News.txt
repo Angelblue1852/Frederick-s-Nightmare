@@ -68,10 +68,10 @@ news_event = {
 	}
 	option = {
 		name = CHI_news.3.o3
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = CHI_news.3.o4
-		trigger = { NOT = { original_tag = CHI original_tag = PRS original_tag = SHX } }
+		trigger = { NOT = { original_tag = CHI original_tag = GER original_tag = SHX } }
 	}
 }

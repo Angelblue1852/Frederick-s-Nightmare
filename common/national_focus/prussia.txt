@@ -106,7 +106,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			#add_ideas = army_officers
 			#create_field_marshal = {
 			#	name = "Günther von Kluge"
 			#	picture = "generals/Gunther_von_Kluge.dds"
@@ -1970,7 +1969,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			remove_ideas = crown_loyalists
 			news_event = GER_news.6
 			swap_ideas = {
 				remove_idea = prussian_militarism
@@ -2454,7 +2452,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = colonial_peoples
 			remove_ideas = colonial_upkeep
 			add_state_core = 546
 			KEN = { remove_state_core = 546 }
@@ -2489,7 +2486,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = colonial_elites
 			if = {
 				limit = { has_full_control_of_state = 541 }
 				541 = {
@@ -3423,30 +3419,6 @@ focus_tree = {
 			add_popularity = { ideology = democracy popularity = -0.15 }
 			add_popularity = { ideology = communism popularity = 0.10 }
 			add_popularity = { ideology = fascism popularity = 0.10 }
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_fascist_demagogue
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_communist_revolutionary
-			swap_ideas = {
-				remove_idea = liberal_reformers
-				add_idea = radical_socialists
-			}
-			swap_ideas = {
-				remove_idea = crown_loyalists
-				add_idea = ultra_nationalists
-			}
-			swap_ideas = {
-				remove_idea = prussian_militarism
-				add_idea = prussian_militarism_radical
-			}
-			swap_ideas = {
-				remove_idea = dynamic_trade
-				add_idea = protectionism
-			}
-			swap_ideas = {
-				remove_idea = assertiveness
-				add_idea = jingoism
-			}
 		}
 
 		ai_will_do = {

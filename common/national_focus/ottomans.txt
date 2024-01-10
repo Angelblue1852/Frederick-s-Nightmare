@@ -436,7 +436,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = crown_loyalists
 			add_war_support = 0.05
 			add_popularity = { ideology = fascism popularity = 0.1 }
 			add_popularity = { ideology = neutrality popularity = 0.1 }

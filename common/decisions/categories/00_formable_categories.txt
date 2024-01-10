@@ -2,10 +2,10 @@ form_germany_category = {
 	icon = DCI_GER
 	picture = DCP_hre
 	allowed = {
-		OR = { original_tag = PRS original_tag = AUS is_minor_german_state = yes }
+		OR = { original_tag = GER original_tag = AUS is_minor_german_state = yes }
 	}
 	visible = {
-		OR = { original_tag = PRS original_tag = AUS is_minor_german_state = yes }
+		OR = { original_tag = GER original_tag = AUS is_minor_german_state = yes }
 	}
 }
 form_scandinavia_category = {

@@ -236,7 +236,7 @@ set_popularities = {
 add_opinion_modifier = { target = AUS modifier = historical_rival }
 add_opinion_modifier = { target = ENG modifier = historical_ally }
 add_opinion_modifier = { target = FRA modifier = historical_rival }
-add_opinion_modifier = { target = PRS modifier = historical_rival }
+add_opinion_modifier = { target = GER modifier = historical_rival }
 
 if = {
 	limit = {

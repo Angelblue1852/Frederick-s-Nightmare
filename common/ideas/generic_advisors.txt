@@ -44,7 +44,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_civilian_industrial_expansion
+					has_completed_focus = GER_civilian_industrial_expansion
 				}
 				if = { 
 					limit = { has_focus_tree = usa_focus }
@@ -78,7 +78,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_military_industrial_expansion
+					has_completed_focus = GER_military_industrial_expansion
 				}
 				if = { 
 					limit = { has_focus_tree = usa_focus }
@@ -140,7 +140,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_financial_reform
+					has_completed_focus = GER_financial_reform
 				}
 				if = { 
 					limit = { has_focus_tree = usa_focus }
@@ -178,7 +178,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_invest_in_koenigsberg_artillery
+					has_completed_focus = GER_invest_in_koenigsberg_artillery
 				}
 				if = { 
 					limit = { has_focus_tree = usa_focus }
@@ -214,7 +214,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_schutzplan_sued
+					has_completed_focus = GER_schutzplan_sued
 				}
 				if = { 
 					limit = { has_focus_tree = usa_focus }
@@ -253,7 +253,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_schutzplan_ost
+					has_completed_focus = GER_schutzplan_ost
 				}
 				if = { 
 					limit = { has_focus_tree = usa_focus }
@@ -293,7 +293,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_social_reform
+					has_completed_focus = GER_social_reform
 				}
 			}
 			traits = { real_estate_developer }
@@ -333,7 +333,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_strengthen_the_monarchy
+					has_completed_focus = GER_strengthen_the_monarchy
 				}
 				if = { 
 					limit = { has_focus_tree = usa_focus }
@@ -379,7 +379,7 @@ ideas = {
 				}
 				if = {
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_radical_drift
+					has_completed_focus = GER_radical_drift
 				}
 			}
 			traits = { communist_revolutionary }
@@ -420,7 +420,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_defend_prussian_democracy
+					has_completed_focus = GER_defend_prussian_democracy
 				}
 				if = { 
 					limit = { has_focus_tree = quebec_focus }
@@ -467,7 +467,7 @@ ideas = {
 				}
 				if = {
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_radical_drift
+					has_completed_focus = GER_radical_drift
 				}
 			}
 			traits = { fascist_demagogue }
@@ -505,12 +505,12 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = naples_focus }
-					NOT = { has_completed_focus = NAP_accept_papal_authority }
+					NOT = { has_completed_focus = TTS_accept_papal_authority }
 					has_country_flag = integrated_the_bolscevichi
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_pan_nationalistic_ambition
+					has_completed_focus = GER_pan_nationalistic_ambition
 				}
 				if = { 
 					limit = { has_focus_tree = quebec_focus }
@@ -548,7 +548,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_social_democratic_dominance
+					has_completed_focus = GER_social_democratic_dominance
 				}
 				if = { 
 					limit = {   }
@@ -581,7 +581,7 @@ ideas = {
 				}
 				if = { 
 					limit = { has_focus_tree = prussia_focus }
-					has_completed_focus = PRS_conservative_dominance
+					has_completed_focus = GER_conservative_dominance
 				}
 				if = { 
 					limit = {   }
@@ -1296,7 +1296,7 @@ ideas = {
 			available = {
 				if = {
 					limit = { has_focus_tree = naples_focus }
-					has_completed_focus = NAP_doctrinal_reform
+					has_completed_focus = TTS_doctrinal_reform
 				}
 			}
 			
@@ -1355,7 +1355,7 @@ ideas = {
 			available = {
 				if = {
 					limit = { has_focus_tree = naples_focus }
-					has_completed_focus = NAP_doctrinal_reform
+					has_completed_focus = TTS_doctrinal_reform
 				}
 			}
 			

@@ -1,6 +1,6 @@
 ideas = {
 	
-	social_faction = {
+	country = {
 	
 		voelkisch_movement = {
 			picture = iron_cross

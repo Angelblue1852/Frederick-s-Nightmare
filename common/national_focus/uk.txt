@@ -1834,7 +1834,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = atheism
 		}
 
 		ai_will_do = {

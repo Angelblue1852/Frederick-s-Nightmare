@@ -98,11 +98,11 @@ characters={
 		}
 	}
 	
-	TUR_kazım_orbay = {
+	TUR_kazim_orbay = {
 		name = "Kâzım Orbay" 
 		portraits = {
 			army = {
-				large = "gfx/leaders/TUR/TUR_kazım_orbay.png"
+				large = "gfx/leaders/TUR/TUR_kazim_orbay.png"
 			}
 		}
 		corps_commander = {

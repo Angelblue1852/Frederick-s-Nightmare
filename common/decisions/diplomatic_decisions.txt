@@ -181,12 +181,6 @@ diplomatic_decisions = {
 			modifier = { add = -1 has_opinion = { target = FROM value > 60 } }
 			modifier = { add = -1 has_opinion = { target = FROM value > 70 } }
 			#
-			modifier = { add = -1 has_idea = libertarian_trade }
-			modifier = { add = -1 has_idea = secularism }
-			modifier = { add = -1 has_idea = pluralism }
-			modifier = { add = -1 has_idea = diplomatic_solidarity }
-			modifier = { add = -3 has_idea = pacifism }
-			#
 			modifier = { add = 1 threat > 0.15 }
 			modifier = { add = 1 threat > 0.3 }
 			modifier = { add = 1 threat > 0.45 }

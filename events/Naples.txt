@@ -26,7 +26,7 @@ country_event = {
 	option = {
 		name = TTS.2.o1
 		add_tech_bonus = { category = armor uses = 1 bonus = 0.5 }
-		NAP = { add_tech_bonus = { category = armor uses = 1 bonus = 0.5 } }
+		TTS = { add_tech_bonus = { category = armor uses = 1 bonus = 0.5 } }
 		add_popularity = { ideology = fascism popularity = 0.02 }
 	}
 	
@@ -49,12 +49,12 @@ country_event = {
 		name = TTS.3.o1
 		if = {
 			limit = { is_faction_leader = yes }
-			add_to_faction = NAP
+			add_to_faction = TTS
 		}
 		if = {
 			limit = { is_in_faction = yes }
 			create_faction = papal_league
-			add_to_faction = NAP
+			add_to_faction = TTS
 		}
 	}
 	
@@ -85,7 +85,7 @@ country_event = {
 	
 	option = {
 		name = TTS.4.o2
-		NAP = {
+		TTS = {
 			add_opinion_modifier = { target = ROOT modifier = diplomatic_insult }
 		}
 	}

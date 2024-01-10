@@ -1392,7 +1392,6 @@ focus_tree = {
 		
 		available = {
 			NOT = { has_government = communism }
-			NOT = { has_idea = moralism }
 		}
 		prerequisite = {
 			focus = USA_create_the_freedom_league
@@ -1888,10 +1887,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_socialist_enforcer
 			add_popularity = { ideology = communism popularity = 0.05 }
-			add_ideas = atheism
 		}
 
 		ai_will_do = {

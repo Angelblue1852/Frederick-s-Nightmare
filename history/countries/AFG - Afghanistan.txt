@@ -13,7 +13,6 @@ recruit_character = AFG_habibullah_kalakani
 
 
 
-
 set_war_support = 0.1
 set_convoys = 20
 

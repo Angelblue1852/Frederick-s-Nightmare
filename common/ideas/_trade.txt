@@ -6,7 +6,6 @@ ideas = {
 		free_trade = {
 			
 			available = {
-				NOT = { has_idea = protectionism }
 			}
 			
 			cost = 150

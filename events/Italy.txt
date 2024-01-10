@@ -57,15 +57,15 @@ country_event = {
 		transfer_state = 661
 		transfer_state = 449
 		transfer_state = 662
-		NAP = {
+		TTS = {
 			add_opinion_modifier = { target = FRA modifier = colonial_disagreements }
 		}
-		NAP = { country_event = { id = ITA.4 days = 4 } }
+		TTS = { country_event = { id = ITA.4 days = 4 } }
 	}
 	
 	option = {
 		name = ITA.3.o2
-		NAP = { country_event = { id = ITA.5 days = 4 } }
+		TTS = { country_event = { id = ITA.5 days = 4 } }
 	}
 }
 
@@ -515,7 +515,7 @@ country_event = {
 		}
 		ITA =  { create_wargoal = {
 				type = annex_everything
-				target = NAP
+				target = TTS
 			}
 		}
 	}

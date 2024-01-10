@@ -12,37 +12,37 @@ news_event = {
 	
 	option = {
 		name = GER_news.1.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.1.o2
 		trigger = { 
-			NOT = { original_tag = PRS } 
+			NOT = { original_tag = GER } 
 			OR = {
-				is_in_faction_with = PRS
-				has_opinion = { target = PRS value > 30 }
+				is_in_faction_with = GER
+				has_opinion = { target = GER value > 30 }
 			}
 		}
 	}
 	option = {
 		name = GER_news.1.o3
 		trigger = { 
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = SOV }
-			NOT = { is_in_faction_with = PRS }
-			NOT = { has_war_with = PRS }
-			NOT = { has_opinion = { target = PRS value < -30 } }
-			NOT = { has_opinion = { target = PRS value > 30 } }
+			NOT = { is_in_faction_with = GER }
+			NOT = { has_war_with = GER }
+			NOT = { has_opinion = { target = GER value < -30 } }
+			NOT = { has_opinion = { target = GER value > 30 } }
 		}
 	}
 	option = {
 		name = GER_news.1.o4
 		trigger = { 
-			NOT = { original_tag = PRS }
-			NOT = { is_in_faction_with = PRS }
+			NOT = { original_tag = GER }
+			NOT = { is_in_faction_with = GER }
 			OR = { 
-				has_war_with = PRS
-				has_opinion = { target = PRS value < -30 }
+				has_war_with = GER
+				has_opinion = { target = GER value < -30 }
 			}
 		}
 	}
@@ -50,7 +50,7 @@ news_event = {
 		name = GER_news.1.o5
 		trigger = { 
 			original_tag = SOV
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 }
@@ -66,7 +66,7 @@ news_event = {
 	
 	option = {
 		name = GER_news.2.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.2.o2
@@ -75,17 +75,17 @@ news_event = {
 	option = {
 		name = GER_news.2.o3
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = SOV }
 			NOT = { 
-				has_war_with = PRS 
+				has_war_with = GER 
 				has_war_with = SOV
 			}
 		}
 	}
 	option = {
 		name = GER_news.2.o4
-		trigger = { OR = { has_war_with = PRS has_war_with = SOV } }
+		trigger = { OR = { has_war_with = GER has_war_with = SOV } }
 	}
 }
 #End the Erbfeindschaft
@@ -100,7 +100,7 @@ news_event = {
 	
 	option = {
 		name = GER_news.3.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.3.o2
@@ -113,41 +113,41 @@ news_event = {
 	option = {
 		name = GER_news.3.o4
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = FRA }
 			OR = {
 				is_in_faction_with = FRA
-				is_in_faction_with = PRS
+				is_in_faction_with = GER
 			}
 		}
 	}
 	option = {
 		name = GER_news.3.o5
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = FRA }
 			NOT = {
 				is_in_faction_with = FRA
-				is_in_faction_with = PRS
+				is_in_faction_with = GER
 			}
 			NOT = {
 				has_war_with = FRA
-				has_war_with = PRS
+				has_war_with = GER
 			}
 		}
 	}
 	option = {
 		name = GER_news.3.o6
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = FRA }
 			NOT = {
 				is_in_faction_with = FRA
-				is_in_faction_with = PRS
+				is_in_faction_with = GER
 			}
 			OR = {
 				has_war_with = FRA
-				has_war_with = PRS
+				has_war_with = GER
 			}
 		}
 	}
@@ -164,7 +164,7 @@ news_event = {
 	
 	option = {
 		name = GER_news.4.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.4.o2
@@ -177,41 +177,41 @@ news_event = {
 	option = {
 		name = GER_news.4.o4
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = ENG }
 			OR = {
 				is_in_faction_with = ENG
-				is_in_faction_with = PRS
+				is_in_faction_with = GER
 			}
 		}
 	}
 	option = {
 		name = GER_news.4.o5
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = ENG }
 			NOT = {
 				is_in_faction_with = ENG
-				is_in_faction_with = PRS
+				is_in_faction_with = GER
 			}
 			NOT = {
 				has_war_with = ENG
-				has_war_with = PRS
+				has_war_with = GER
 			}
 		}
 	}
 	option = {
 		name = GER_news.4.o6
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = ENG }
 			NOT = {
 				is_in_faction_with = ENG
-				is_in_faction_with = PRS
+				is_in_faction_with = GER
 			}
 			OR = {
 				has_war_with = ENG
-				has_war_with = PRS
+				has_war_with = GER
 			}
 		}
 	}
@@ -228,34 +228,34 @@ news_event = {
 	
 	option = {
 		name = GER_news.5.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.5.o2
-		trigger = { NOT = { original_tag = PRS } is_in_faction_with = PRS }
+		trigger = { NOT = { original_tag = GER } is_in_faction_with = GER }
 	}
 	option = {
 		name = GER_news.5.o3
 		trigger = {
-			NOT = { original_tag = PRS }
-			NOT = { is_in_faction_with = PRS }
+			NOT = { original_tag = GER }
+			NOT = { is_in_faction_with = GER }
 			NOT = { has_government = communism }
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.5.o4
 		trigger = { 
-			NOT = { original_tag = PRS }
-			NOT = { is_in_faction_with = PRS }
+			NOT = { original_tag = GER }
+			NOT = { is_in_faction_with = GER }
 			has_government = communism
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.5.o5
 		trigger = { 
-			has_war_with = PRS
+			has_war_with = GER
 		}
 	}
 }
@@ -271,40 +271,40 @@ news_event = {
 	
 	option = {
 		name = GER_news.6.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.6.o2
 		trigger = { 
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			has_government = democratic
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.6.o3
 		trigger = { 
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			has_government = neutrality
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.6.o4
 		trigger = { 
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = {
 				has_government = democratic
 				has_government = neutrality
 			}
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.6.o5
 		trigger = { 
-			NOT = { original_tag = PRS }
-			has_war_with = PRS
+			NOT = { original_tag = GER }
+			has_war_with = GER
 		}
 	}
 }
@@ -322,25 +322,25 @@ news_event = {
 		name = GER_news.7.o1
 		trigger = { 
 			OR = {
-				original_tag = PRS
-				is_in_faction_with = PRS				
+				original_tag = GER
+				is_in_faction_with = GER				
 			}
 		}
 	}
 	option = {
 		name = GER_news.7.o2
 		trigger = {
-			NOT = { original_tag = PRS } 
-			NOT = { is_in_faction_with = PRS } 
-			NOT = { has_war_with = PRS }
+			NOT = { original_tag = GER } 
+			NOT = { is_in_faction_with = GER } 
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.7.o3
 		trigger = { 
-			NOT = { original_tag = PRS } 
-			NOT = { is_in_faction_with = PRS } 
-			has_war_with = PRS
+			NOT = { original_tag = GER } 
+			NOT = { is_in_faction_with = GER } 
+			has_war_with = GER
 		}
 	}
 }
@@ -356,26 +356,26 @@ news_event = {
 	
 	option = {
 		name = GER_news.8.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.8.o2
 		trigger = {
 			is_minor_german_state = yes
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.8.o3
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			is_minor_german_state = no
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	option = {
 		name = GER_news.8.o4
-		trigger = { has_war_with = PRS }
+		trigger = { has_war_with = GER }
 	}
 }
 #Kaisertum Preussen
@@ -390,19 +390,19 @@ news_event = {
 	
 	option = {
 		name = GER_news.9.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.9.o2
-		trigger = { NOT = { original_tag = PRS } is_in_faction_with = PRS }
+		trigger = { NOT = { original_tag = GER } is_in_faction_with = GER }
 	}
 	option = {
 		name = GER_news.9.o3
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } NOT = { has_war_with = PRS } }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } NOT = { has_war_with = GER } }
 	}
 	option = {
 		name = GER_news.9.o4
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } has_war_with = PRS }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } has_war_with = GER }
 	}
 }
 #Unification of Germany
@@ -417,19 +417,19 @@ news_event = {
 	
 	option = {
 		name = GER_news.10.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.10.o2
-		trigger = { NOT = { original_tag = PRS } is_in_faction_with = PRS }
+		trigger = { NOT = { original_tag = GER } is_in_faction_with = GER }
 	}
 	option = {
 		name = GER_news.10.o3
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } NOT = { has_war_with = PRS } }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } NOT = { has_war_with = GER } }
 	}
 	option = {
 		name = GER_news.10.o4
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } has_war_with = PRS }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } has_war_with = GER }
 	}
 }
 #Wilhelm II forced to abdicate
@@ -444,12 +444,12 @@ news_event = {
 	
 	option = {
 		name = GER_news.11.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.11.o2
 		trigger = { 
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = {
 				has_government = communism
 				has_government = neutrality
@@ -459,14 +459,14 @@ news_event = {
 	option = {
 		name = GER_news.11.o3
 		trigger = { 
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			has_government = communism
 		}
 	}
 	option = {
 		name = GER_news.11.o4
 		trigger = { 
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			has_government = neutrality
 		}
 	}
@@ -477,11 +477,11 @@ news_event = {
 	title = GER_news.12.t
 	desc = {
 		text = GER_news.12.d1
-		trigger = { PRS = { has_country_flag = hartmann_investigated } }
+		trigger = { GER = { has_country_flag = hartmann_investigated } }
 	}
 	desc = {
 		text = GER_news.12.d2
-		trigger = { PRS = { has_country_flag = hartmann_ignored } }
+		trigger = { GER = { has_country_flag = hartmann_ignored } }
 	}
 	picture = GFX_news_event_reichstag_rally
 	
@@ -490,7 +490,7 @@ news_event = {
 	
 	option = {
 		name = GER_news.12.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.12.o2
@@ -499,7 +499,7 @@ news_event = {
 	option = {
 		name = GER_news.12.o3
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = HAN }
 			has_government = communism
 		}
@@ -507,7 +507,7 @@ news_event = {
 	option = {
 		name = GER_news.12.o4
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = HAN }
 			has_government = fascism
 		}
@@ -515,7 +515,7 @@ news_event = {
 	option = {
 		name = GER_news.12.o5
 		trigger = {
-			NOT = { original_tag = PRS }
+			NOT = { original_tag = GER }
 			NOT = { original_tag = HAN }
 			NOT = {
 				has_government = communism
@@ -536,19 +536,19 @@ news_event = {
 	
 	option = {
 		name = GER_news.13.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.13.o2
-		trigger = { NOT = { original_tag = PRS } is_in_faction_with = PRS }
+		trigger = { NOT = { original_tag = GER } is_in_faction_with = GER }
 	}
 	option = {
 		name = GER_news.13.o3
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } NOT = { has_war_with = PRS } }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } NOT = { has_war_with = GER } }
 	}
 	option = {
 		name = GER_news.13.o4
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } has_war_with = PRS }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } has_war_with = GER }
 	}
 }
 
@@ -563,18 +563,18 @@ news_event = {
 	
 	option = {
 		name = GER_news.14.o1
-		trigger = { original_tag = PRS }
+		trigger = { original_tag = GER }
 	}
 	option = {
 		name = GER_news.14.o2
-		trigger = { NOT = { original_tag = PRS } is_in_faction_with = PRS }
+		trigger = { NOT = { original_tag = GER } is_in_faction_with = GER }
 	}
 	option = {
 		name = GER_news.14.o3
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } NOT = { has_war_with = PRS } }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } NOT = { has_war_with = GER } }
 	}
 	option = {
 		name = GER_news.14.o4
-		trigger = { NOT = { original_tag = PRS } NOT = { is_in_faction_with = PRS } has_war_with = PRS }
+		trigger = { NOT = { original_tag = GER } NOT = { is_in_faction_with = GER } has_war_with = GER }
 	}
 }

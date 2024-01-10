@@ -243,12 +243,6 @@ country_event = {
 		
 		every_other_country = {
 			limit = {
-				OR = {
-					has_idea = catholic_clergy
-					has_idea = protestant_clergy
-					has_idea = orthodox_clergy
-					has_idea = buddhist_clergy
-				}
 			}
 			add_opinion_modifier = {
 				target = ROOT modifier = religious_bigotry

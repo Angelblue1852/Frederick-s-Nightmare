@@ -1094,7 +1094,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = secularism
 		}
 
 		ai_will_do = {
@@ -1265,8 +1264,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_war_support = 0.05
-			add_ideas = laissez_faire
-			remove_ideas = radical_socialists
 		}
 
 		ai_will_do = {
@@ -2431,7 +2428,7 @@ focus_tree = {
 		available = {
 			is_neighbor_of = TTS
 			NOT = { is_in_faction_with = TTS }
-			TTS = { has_completed_focus = NAP_accept_papal_authority }
+			TTS = { has_completed_focus = TTS_accept_papal_authority }
 			has_full_control_of_state = 2
 			has_full_control_of_state = 157
 			NOT = {

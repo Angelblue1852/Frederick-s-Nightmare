@@ -63,7 +63,7 @@ bookmarks = {
 			}
 		}
 		"GER"={
-			history = "PRS_1936_DESC"
+			history = "GER_1936_DESC"
 			ideology = democratic
 			ideas = {
 				prussian_militarism
@@ -153,7 +153,7 @@ bookmarks = {
 		}
 		"TTS"={
 			minor = yes
-			history = "NAP_1936_DESC"
+			history = "TTS_1936_DESC"
 			ideology = fascism
 			ideas = {}
 			focuses = {

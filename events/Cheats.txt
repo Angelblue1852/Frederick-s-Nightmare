@@ -9,7 +9,7 @@ country_event = {
 	desc = "Just choose, buddy"
 	
 	option = {
-		name = "PRS"
+		name = "GER"
 		load_focus_tree = prussia_focus
 	}
 	

@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = despotismu
+			ideology = despotism
 			expire = "1960.1.1.1"
 			id = -1
 		}

@@ -740,7 +740,6 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			has_idea = catholic_clergy
 			NOT = { has_government = communism }
 			NOT = { has_government = democratic }
 		}
@@ -793,7 +792,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = deus_vult
 		}
 
 		ai_will_do = {
@@ -821,7 +819,6 @@ focus_tree = {
 				OWNER = {
 					NOT = { original_tag = ROOT }
 					NOT = { is_in_faction_with = ROOT }
-					NOT = { has_idea = catholic_clergy }
 					NOT = { has_war_together_with  = ROOT }
 				}
 			}
@@ -867,7 +864,6 @@ focus_tree = {
 				OWNER = {
 					NOT = { original_tag = ROOT }
 					NOT = { is_in_faction_with = ROOT }
-					NOT = { has_idea = catholic_clergy }
 					NOT = { has_war_together_with  = ROOT }
 				}
 			}
@@ -913,7 +909,6 @@ focus_tree = {
 				OWNER = {
 					NOT = { original_tag = ROOT }
 					NOT = { is_in_faction_with = ROOT }
-					NOT = { has_idea = catholic_clergy }
 					NOT = { has_war_together_with  = ROOT }
 				}
 			}
@@ -921,7 +916,6 @@ focus_tree = {
 				OWNER = {
 					NOT = { original_tag = ROOT }
 					NOT = { is_in_faction_with = ROOT }
-					NOT = { has_idea = catholic_clergy }
 					NOT = { has_war_together_with  = ROOT }
 				}
 			}
@@ -929,7 +923,6 @@ focus_tree = {
 				OWNER = {
 					NOT = { original_tag = ROOT }
 					NOT = { is_in_faction_with = ROOT }
-					NOT = { has_idea = catholic_clergy }
 					NOT = { has_war_together_with  = ROOT }
 				}
 			}

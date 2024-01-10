@@ -1226,7 +1226,6 @@ focus_tree = {
 
 		completion_reward = {
 			news_event = SOV_news.7
-			add_ideas = secularism
 			dismantle_faction = yes
 			set_politics = {
 				ruling_party = communism
@@ -1458,7 +1457,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = atheism
 			orthodox_church_remove = yes
 		}
 

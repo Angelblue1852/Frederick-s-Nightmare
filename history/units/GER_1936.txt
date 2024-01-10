@@ -368,23 +368,23 @@ units = {
 
 air_wings = {
 	64= {
-		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		fighter_equipment_0 = { owner = "GER" amount = 100 }
 		name = "JG Ost 1"
 	}
 	64 = {
-		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		fighter_equipment_0 = { owner = "GER" amount = 100 }
 		name = "JG Ost 2"
 	}
 	64 = {
-		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		fighter_equipment_0 = { owner = "GER" amount = 100 }
 		name = "JG West"
 	}
 	86 = {
-		fighter_equipment_0 = { owner = "PRS" amount = 100 }
+		fighter_equipment_0 = { owner = "GER" amount = 100 }
 		name = "JG Mitte"
 	}
 	64 = {
-		tac_bomber_equipment_0 = { owner = "PRS" amount = 125 }
+		tac_bomber_equipment_0 = { owner = "GER" amount = 125 }
 		name = "BG Preußen"
 	}
 }

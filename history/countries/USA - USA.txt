@@ -126,7 +126,6 @@ if = {
 		improved_airplane_launcher = 1
 		basic_dp_light_battery = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
 }
 add_ideas = {
 	racial_segregation
@@ -187,6 +186,7 @@ set_variable = { var = senate_support value = 15 }
 set_variable = { var = senate_support_max value = 32 }
 set_variable = { var = house_support value = 59 }
 set_variable = { var = house_support_max value = 162 }
+USA_recalc_congress_icon_frames = yes
 set_country_flag = us_16_states
 
 

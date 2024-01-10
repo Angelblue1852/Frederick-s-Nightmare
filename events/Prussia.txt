@@ -39,7 +39,7 @@ country_event = {
 	
 	option = {
 		name = GER.2.o1
-		PRS = {
+		GER = {
 			annex_country = {
 				target = ROOT
 				transfer_troops = yes
@@ -57,7 +57,7 @@ country_event = {
 				add = -20
 			}
 			modifier = {
-				NOT = { is_neighbor_of = PRS }
+				NOT = { is_neighbor_of = GER }
 				add = -10
 			}
 		}
@@ -65,7 +65,7 @@ country_event = {
 	
 	option = {
 		name = GER.2.o2
-		PRS = {
+		GER = {
 			create_wargoal = {
 				target = ROOT
 				type = annex_everything
@@ -79,7 +79,7 @@ country_event = {
 				add = 30
 			}
 			modifier = {
-				PRS = { has_war = yes }
+				GER = { has_war = yes }
 				add = 30
 			}
 		}
@@ -102,7 +102,7 @@ unit_leader_event = {
 	
 	option = {
 		name = GER.3.o1
-		PRS = {
+		GER = {
 			add_stability = 0.0025
 			add_popularity = {
 				ideology = fascism
@@ -130,7 +130,7 @@ unit_leader_event = {
 	
 	option = {
 		name = GER.3.o2
-		PRS = {
+		GER = {
 			add_stability = -0.0025
 			add_popularity = {
 				ideology = fascism
@@ -154,7 +154,7 @@ country_event = {
 		name = GER.4.o1
 		create_corps_commander = {
 			name = "Reinhard Heydrich"
-			picture = "gfx/leaders/PRS/admirals/Reinhard_Heydrich.dds"
+			picture = "gfx/leaders/GER/admirals/Reinhard_Heydrich.dds"
 			traits = { commando }
 			skill = 1
 			attack_skill = 2
@@ -162,13 +162,13 @@ country_event = {
 			planning_skill = 1
 			logistics_skill = 1
 		}
-		PRS = {
+		GER = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = hired_reinhard_heydrich
 			}
 		}
-		hidden_effect = { PRS = { country_event = { id = GER.5 days = 3 } } }
+		hidden_effect = { GER = { country_event = { id = GER.5 days = 3 } } }
 		
 		ai_chance = { base = 100 }
 	}
@@ -177,17 +177,17 @@ country_event = {
 		name = GER.4.o2
 		create_navy_leader = {
 			name = "Reinhard Heydrich"
-			picture = "gfx/leaders/PRS/admirals/Reinhard_Heydrich.dds"
+			picture = "gfx/leaders/GER/admirals/Reinhard_Heydrich.dds"
 			skill = 2
 			traits = { blockade_runner }
 		}
-		PRS = {
+		GER = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = hired_reinhard_heydrich
 			}
 		}
-		hidden_effect = { PRS = { country_event = { id = GER.5 days = 3 } } }
+		hidden_effect = { GER = { country_event = { id = GER.5 days = 3 } } }
 		
 		ai_chance = { 
 			base = 0
@@ -199,8 +199,8 @@ country_event = {
 		name = GER.4.o3
 		ai_chance = { 
 			base = 0
-			modifier = { is_in_faction_with = PRS add = 125 }
-			modifier = { is_neighbor_of = PRS add = 50 }
+			modifier = { is_in_faction_with = GER add = 125 }
+			modifier = { is_neighbor_of = GER add = 50 }
 		}
 	}
 }
@@ -232,12 +232,12 @@ country_event = {
 	option = {
 		name = GER.6.o1
 		army_experience = 5
-		trigger = { NOT = { has_completed_focus = PRS_expand_the_general_staff } }
+		trigger = { NOT = { has_completed_focus = GER_expand_the_general_staff } }
 	}
 	option = {
 		name = GER.6.o2
 		army_experience = 10
-		trigger = { has_completed_focus = PRS_expand_the_general_staff }
+		trigger = { has_completed_focus = GER_expand_the_general_staff }
 	}
 }
 
@@ -275,7 +275,7 @@ country_event = {
 		HAN = {
 			exists = yes
 			has_government = communism
-			NOT = { has_war_with = PRS }
+			NOT = { has_war_with = GER }
 		}
 	}
 	
@@ -348,7 +348,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_completed_focus = PRS_force_wilhelms_abdication }
+		NOT = { has_completed_focus = GER_force_wilhelms_abdication }
 		any_country = {
 			original_tag = ROM
 			has_government = communism

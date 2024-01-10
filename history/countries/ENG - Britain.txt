@@ -211,7 +211,7 @@ set_popularities = {
 
 add_opinion_modifier = { target = FRA modifier = historical_rival }
 add_opinion_modifier = { target = OHI modifier = historical_rival }
-add_opinion_modifier = { target = PRS modifier = historical_ally }
+add_opinion_modifier = { target = GER modifier = historical_ally }
 
 create_faction = Commonwealth
 add_to_faction = ENG

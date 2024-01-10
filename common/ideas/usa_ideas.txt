@@ -1,5 +1,5 @@
 ideas = {
-
+	country = {
 	ford_crisis = {
 		picture = ford_red
 		
@@ -69,13 +69,12 @@ ideas = {
 		}
 	}
 	
-	country = {
-		economic_crisis = {
-			picture = ford_red
-			modifier = {
+		country = {
+			economic_crisis = {
+				picture = ford_red
+				modifier = {
+				}
 			}
 		}
 	}
-
-	
 }

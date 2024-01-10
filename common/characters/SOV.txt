@@ -77,7 +77,7 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = trotskyism
+			ideology = marxism
 			expire = "1960.1.1.1"
 			id = -1
 		}

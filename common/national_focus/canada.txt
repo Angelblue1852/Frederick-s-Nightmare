@@ -359,10 +359,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = labor_unions
-				add_idea = aristocratic_elites
-			}
 			add_war_support = -0.10
 			add_popularity = { ideology = democratic popularity = 0.05 }
 			add_popularity = { ideology = fascism popularity = 0.05 }
@@ -1034,25 +1030,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_fascist_demagogue
 			add_timed_idea = {
 				idea = fascist_tendencies
 				days = 730
-			}
-			if = {
-				limit = { has_idea = dynamic_trade }
-				swap_ideas = {
-					add_idea = protectionism
-					remove_idea = dynamic_trade
-				}
-			}
-			if = {
-				limit = { has_idea = libertarian_trade }
-				swap_ideas = {
-					add_idea = dynamic_trade
-					remove_idea = libertarian_trade
-				}
 			}
 		}
 
@@ -1211,10 +1191,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = pluralism
-				add_idea = secularism
-			}
 		}
 
 		ai_will_do = {

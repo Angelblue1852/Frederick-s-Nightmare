@@ -16,7 +16,6 @@ recruit_character = ARG_agustin_pedro_justo
 
 
 
-
 set_war_support = 0.1
 set_convoys = 20
 

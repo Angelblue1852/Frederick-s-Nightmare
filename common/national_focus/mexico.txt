@@ -401,7 +401,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			remove_ideas = anti_government_militias
 		}
 
 		ai_will_do = {
@@ -1379,7 +1378,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = economic_intervention
 			if = {
 				limit = { has_full_control_of_state = 277 }
 				277 = { add_extra_state_shared_building_slots = 2 }
@@ -1430,7 +1428,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_war_support = 0.05
-			add_ideas = secularism
 		}
 
 		ai_will_do = {

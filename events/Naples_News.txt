@@ -12,7 +12,7 @@ news_event = {
 	
 	option = {
 		name = TTS_news.1.o1
-		trigger = { OR = { original_tag = NAP original_tag = PAP } }
+		trigger = { OR = { original_tag = TTS original_tag = PAP } }
 	}
 	option = {
 		name = TTS_news.1.o2

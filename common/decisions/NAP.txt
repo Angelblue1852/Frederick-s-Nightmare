@@ -1,6 +1,6 @@
-NAP_italian_unity = {
+TTS_italian_unity = {
 	
-	NAP_integrate_the_bolscevichi = {
+	TTS_integrate_the_bolscevichi = {
 		
 		icon = DI_political_discourse
 		
@@ -8,16 +8,16 @@ NAP_italian_unity = {
 
 		fire_only_once = yes
 	
-		allowed = { original_tag = NAP }
+		allowed = { original_tag = TTS }
 		visible = {
-			has_completed_focus = NAP_pan_italian_ambition
+			has_completed_focus = TTS_pan_italian_ambition
 		}
 		available = {
 			OR = {
 				has_government = fascism
 				has_government = communism
 			}
-			has_completed_focus = NAP_destroy_the_communists
+			has_completed_focus = TTS_destroy_the_communists
 			has_full_control_of_state = 159
 			ITA = { exists = no }
 		}
