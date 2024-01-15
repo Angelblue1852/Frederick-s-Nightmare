@@ -18,16 +18,14 @@ set_convoys = 5
 
 
 recruit_character = IRQ_nuri_al_said
-
-
-
-
-
+recruit_character = IRQ_Tawfik_Suwaidi
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 }
 set_popularities = {
 	fascism = 20
-	neutrality = 80
+	neutrality = 20
+	democratic = 50
+	communism = 10
 }
 
