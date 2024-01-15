@@ -31,7 +31,7 @@ GER_henschel_organization = {
 
 GER_man_organization = {
 	include = generic_medium_tank_organization
-	icon = GFX_idea_GER_MAN
+	icon = GFX_idea_man
 	
 	allowed = {	
 		tag = GER
@@ -40,6 +40,7 @@ GER_man_organization = {
 
 #Benz 
 GER_daimler_benz_organization = {
+	name = "Daimler-Benz"
 	include = generic_tank_organization
 	icon = GFX_idea_generic_tank_manufacturer_2 # TODO change
 	
@@ -132,6 +133,7 @@ GER_germaniawerft_organization = {
 }
 
 GER_blohm_und_voss_organization = {
+	name = "Blohm und Voss"
 	include = generic_raider_ship_organization
 	icon = GFX_idea_blohm_und_voss
 	
@@ -151,6 +153,7 @@ GER_blohm_und_voss_organization = {
 ###########################
 
 GER_messerschmitt_organization = {
+	name = "Messerschmitt"
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_messerschmitt
 	
@@ -199,6 +202,7 @@ GER_messerschmitt_organization = {
 }
 
 GER_junkers_organization = {
+	name = "Junkers"
 	include = generic_cas_aircraft_organization
 	icon = GFX_idea_junkers
 	
@@ -230,6 +234,7 @@ GER_junkers_organization = {
 }
 
 GER_focke_wulf_organization = {
+	name = "Focke-Wulf"
 	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_focke_wulf
 	
@@ -239,6 +244,7 @@ GER_focke_wulf_organization = {
 }
 
 GER_heinkel_organization = {
+	name = "Heinkel"
 	include = generic_medium_aircraft_organization
 	icon = GFX_idea_heinkel
 	
@@ -248,6 +254,7 @@ GER_heinkel_organization = {
 }
 
 GER_dornier_organization = {
+	name = "Dornier"
 	include = generic_naval_aircraft_organization
 	icon = GFX_idea_dornier
 	

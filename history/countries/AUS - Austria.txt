@@ -170,103 +170,103 @@ set_popularities = {
 
 1936.1.1 = {
 	9 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	43 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	45 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	66 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	67 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	69 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	70 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	71 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	72 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	73 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	74 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	75 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	76 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	80 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	82 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	83 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	84 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	88 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	89 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	91 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	102 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	103 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	104 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	109 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	154 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	155 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	163 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	664 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	762 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	764 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	804 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_discontent }
 	}
 	155 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 	853 = {
-		add_dynamic_modifier = { modifier = imperial_subject_content }
+		add_dynamic_modifier = { modifier = aus_imperial_subject_content }
 	}
 }
 

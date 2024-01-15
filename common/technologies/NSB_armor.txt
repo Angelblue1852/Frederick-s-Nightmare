@@ -715,7 +715,8 @@ technologies = {
 			if = { #Italian templates
 				limit = {
 					original_tag = ITA
-					has_completed_focus = ITA_ferrea_mole_ferreo_cuore
+					original_tag = PAP
+					original_tag = TTS
 				}
 				ITA_add_advanced_medium_tank_templates = yes
 			}
@@ -915,10 +916,8 @@ technologies = {
 			if = { #Italian templates
 				limit = {
 					original_tag = ITA
-					OR = {
-						has_completed_focus = ITA_end_fiat_ansaldo_duopoly
-						has_completed_focus = ITA_modernize_ansaldo_facilities
-					}
+					original_tag = PAP
+					original_tag = TTS
 				}
 				ITA_add_improved_heavy_tank_templates = yes
 			}
@@ -982,7 +981,8 @@ technologies = {
 			if = { #Italian templates
 				limit = {
 					original_tag = ITA
-					has_completed_focus = ITA_ferrea_mole_ferreo_cuore
+					original_tag = PAP
+					original_tag = TTS
 				}
 				ITA_add_advanced_heavy_tank_templates = yes
 			}

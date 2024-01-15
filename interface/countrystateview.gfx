@@ -535,6 +535,14 @@ spriteTypes = {
 	### STATE MODIFIERS ###
 	
 	spriteType = {
+		name = "GFX_modifiers_aus_imperial_subject_content"
+		textureFile = "gfx/interface/state_modifiers/modifiers_aus_imperial_subject_content.png"
+	}
+	spriteType = {
+		name = "GFX_modifiers_aus_imperial_subject_discontent"
+		textureFile = "gfx/interface/state_modifiers/modifiers_aus_imperial_subject_discontent.png"
+	}
+	spriteType = {
 		name = "GFX_modifiers_tur_kemalist_loyalties"
 		textureFile = "gfx/interface/state_modifiers/modifiers_tur_kemalist_loyalties.dds"
 	}

@@ -9,8 +9,9 @@
  #################### 
 
 CZE_ckd_organization = {
+	name = "CKD"
 	include = generic_mobile_tank_organization
-	icon = GFX_idea_CZE_ckd
+	icon = GFX_idea_ckd
 	
 	allowed = {	
 		OR = {
@@ -21,16 +22,19 @@ CZE_ckd_organization = {
 }
 
 CZE_tatra_organization = {
+	name = "Tatra"
 	include = generic_medium_tank_organization
-	icon = GFX_idea_CZE_tatra
+	icon = GFX_idea_tatra
 	allowed = { 
 		tag = CZE
+		tag = AUS
 	}
 }
 
 CZE_skoda_armor_organization = {
+	name = "Skoda Armor"
 	include = generic_heavy_tank_organization
-	icon = GFX_idea_CZE_skoda_armor
+	icon = GFX_idea_skoda_armor
 	
 	allowed = {	
 		OR = {
@@ -51,6 +55,7 @@ CZE_skoda_armor_organization = {
 #####################
 
 CZE_skoda_shipyards_organization = {
+	name = "Skoda Shipyards"
 	include = generic_escort_ship_organization
 	icon = GFX_idea_CZE_skoda_shipyards
 	allowed = {	
@@ -72,8 +77,9 @@ CZE_skoda_shipyards_organization = {
 ###########################
 
 CZE_ckd_praga_organization = {
+	name = "CKD Praga"
 	include = generic_naval_aircraft_organization
-	icon = GFX_idea_CZE_ckd_praga
+	icon = GFX_idea_ckd_praga
 	allowed = {	
 		OR = {
 			tag = CZE
@@ -83,8 +89,9 @@ CZE_ckd_praga_organization = {
 }
 
 CZE_aero_organization = {
+	name = "Areo"
 	include = generic_medium_aircraft_organization
-	icon = GFX_idea_CZE_aero
+	icon = GFX_idea_aero
 	allowed = {	
 		OR = {
 			tag = CZE
@@ -94,8 +101,9 @@ CZE_aero_organization = {
 }
 
 CZE_letov_organization = {
+	name = "Letov"
 	include = generic_heavy_aircraft_organization
-	icon = GFX_idea_CZE_letov
+	icon = GFX_idea_letov
 	allowed = {	
 		OR = {
 			tag = CZE
@@ -105,9 +113,9 @@ CZE_letov_organization = {
 }
 
 CZE_avia_organization = {
-name = CZE_avia
+	name = "Avia"
 	include = generic_light_aircraft_organization
-	icon = GFX_idea_CZE_avia
+	icon = GFX_idea_avia
 	allowed = {	
 		OR = {
 			tag = CZE
@@ -128,8 +136,9 @@ name = CZE_avia
 ###################################
 
 CZE_zbrojovka_brno_organization = {
+	name = "Zbrojovka Brno"
 	include = generic_infantry_equipment_organization
-	icon = GFX_idea_CZE_zbrojovka_brno
+	icon = GFX_idea_zbrojovka_brno
 	allowed = {	
 		OR = {
 			tag = CZE
@@ -139,8 +148,9 @@ CZE_zbrojovka_brno_organization = {
 }
 
 CZE_skoda_artillery_organization = {
+	name = "Skoda Artillery"
 	include = generic_artillery_organization
-	icon = GFX_idea_CZE_skoda_artillery
+	icon = GFX_idea_skoda_artillery
 	allowed = {	
 		OR = {
 			tag = CZE
@@ -150,8 +160,9 @@ CZE_skoda_artillery_organization = {
 }
 
 CZE_praga_organization = {
+	name = "Praga"
 	include = generic_motorized_mechanized_organization
-	icon = GFX_idea_CZE_praga
+	icon = GFX_idea_praga
 	allowed = {	
 		OR = {
 			tag = CZE
