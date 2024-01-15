@@ -53,8 +53,7 @@ units= {
 			ship = { name = "USS Gregory" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 			ship = { name = "USS Little" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 			ship = { name = "USS McKean" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
-			ship = { name = "USS Stringham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
-			ship = { name = "USS Clemson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+			ship = { name = "USS Stringham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
 			ship = { name = "USS Goldsborough" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 			ship = { name = "USS McFarland" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 			ship = { name = "USS Osmond Ingram" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
