@@ -74,51 +74,51 @@ USA_chrysler_organization = {
 	}
 }
 
-USA_army_ordnance_department_organization = {
-	include = generic_medium_tank_organization
-	icon = GFX_idea_army_ordnance_department
-	
-	allowed = {	
-		tag = USA
-	}
+#USA_army_ordnance_department_organization = {
+#	include = generic_medium_tank_organization
+#	icon = GFX_idea_army_ordnance_department
+#	
+#	allowed = {	
+#		tag = USA
+#	}
+#
+#	add_trait = { 
+#		token = USA_mio_trait_periscope_sights
+#		name = USA_mio_trait_periscope_sights
+#		icon = GFX_generic_mio_department_icon_tank_medium_tank_armor
+#		special_trait_background = yes
+#
+#		position = { x=1 y=1 }
+#		relative_position_id = generic_mio_trait_all_round_cupola
+#
+#		all_parents = { generic_mio_trait_all_round_cupola }
+#		equipment_bonus = {
+#			breakthrough = 0.1
+#			defense = 0.05
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = USA_mio_trait_mass_production_of_armor
+#		name = USA_mio_trait_mass_production_of_armor
+#		icon = GFX_generic_mio_department_icon_tank_medium_tank_line_efficiency
+#		special_trait_background = yes
+#
+#		position = { x=2 y=1 }
+#		relative_position_id = generic_mio_trait_simplified_turret_design
+#
+#		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
+#		production_bonus = {
+#			production_efficiency_cap_factor = 0.05
+#			production_efficiency_gain_factor = 0.1
+#		}
+#	}
+#}
 
-	add_trait = { 
-		token = USA_mio_trait_periscope_sights
-		name = USA_mio_trait_periscope_sights
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_armor
-		special_trait_background = yes
-
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_all_round_cupola
-
-		all_parents = { generic_mio_trait_all_round_cupola }
-		equipment_bonus = {
-			breakthrough = 0.1
-			defense = 0.05
-		}
-	}
-
-	add_trait = { 
-		token = USA_mio_trait_mass_production_of_armor
-		name = USA_mio_trait_mass_production_of_armor
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_line_efficiency
-		special_trait_background = yes
-
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_turret_design
-
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
-		production_bonus = {
-			production_efficiency_cap_factor = 0.05
-			production_efficiency_gain_factor = 0.1
-		}
-	}
-}
-
-USA_detroit_arsenal_organization = {
-	name = detroit_arsenal
+USA_ford_tank_organization = {
+	name = "Ford Tank Design Bureau"
 	include = generic_tank_organization
-	icon = GFX_idea_generic_industrial_concern_1
+	icon = GFX_idea_ford_green
 	allowed = {	
 		tag = USA
 	}
@@ -213,6 +213,16 @@ USA_newport_news_shipbuilding_organization = {
 #    ### #  # #  # ### ##  
 
 ###########################
+
+USA_ford_aircraft_organization = {
+	name = "Ford Aircraft Design Bureau"
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_ford_purple
+	
+	allowed = {	
+		tag = USA
+	}
+}
 
 USA_north_american_aviation_organization = {
 	include = generic_range_focused_aircraft_organization
@@ -441,7 +451,7 @@ USA_springfield_armory_organization = {
 
 USA_ford_motor_company_organization = {
 	include = generic_motorized_mechanized_organization
-	icon = GFX_idea_ford_motor_company
+	icon = GFX_idea_ford_blue
 	
 	allowed = {	
 		tag = USA

@@ -128,7 +128,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/usa/GFX_ford_purple.png"
 	}
 	spriteType = {
-		name = "GFX_idea_ford_red"
+		name = "GFX_idea_ford_blue"
 		texturefile = "gfx/interface/ideas/usa/GFX_ford_blue.png"
 	}
 	

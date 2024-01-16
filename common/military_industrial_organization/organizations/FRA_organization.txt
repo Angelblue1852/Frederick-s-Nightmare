@@ -10,6 +10,7 @@
 
 
 FRA_renault_organization = {
+	name = "Renault"
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_renault
 	allowed = {	
@@ -59,6 +60,7 @@ FRA_renault_organization = {
 }
 
 FRA_hotchkiss_organization = {
+	name = "Hotchkiss"
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_generic_tank_manufacturer_3
 	allowed = {	
@@ -85,6 +87,7 @@ FRA_hotchkiss_organization = {
 }
 
 FRA_apx_organization = {
+	name = "APX"
 	include = generic_medium_tank_organization
 	icon = GFX_idea_FRA_atelier_puteaux
 	allowed = {	
@@ -112,6 +115,7 @@ FRA_apx_organization = {
 #####################
 
 FRA_fcm_organization = {
+	name = "FCM"
 	include = generic_escort_ship_organization
 	icon = GFX_idea_fcm
 	allowed = {	
@@ -121,6 +125,7 @@ FRA_fcm_organization = {
 }
 
 FRA_aeb_organization = {
+	name = "AEB"
 	include = generic_task_force_ship_organization
 	icon = GFX_idea_FRA_aeb
 	allowed = {	
@@ -130,6 +135,7 @@ FRA_aeb_organization = {
 }
 
 FRA_acl_organization = {
+	name = "ACL"
 	include = generic_battle_line_ship_organization
 	icon = GFX_idea_FRA_acl
 	allowed = {	
@@ -139,6 +145,7 @@ FRA_acl_organization = {
 }
 
 FRA_acf_organization = {
+	name = "ACF"
 	include = generic_raider_ship_organization
 	icon = GFX_idea_FRA_acf
 	allowed = {	
@@ -158,6 +165,7 @@ FRA_acf_organization = {
 ###########################
 
 FRA_morane_saulnier_organization = {
+	name = "Morane Saulnier"
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_morane_saulnier
 	allowed = {	
@@ -167,6 +175,7 @@ FRA_morane_saulnier_organization = {
 }
 
 FRA_bloch_organization = {
+	name = "Bloch"
 	include = generic_medium_aircraft_organization
 	icon = GFX_idea_bloch
 	allowed = {	
@@ -175,6 +184,7 @@ FRA_bloch_organization = {
 }
 
 FRA_amiot_organization = {
+	name = "Amiot"
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_amiot
 	allowed = {	
@@ -184,6 +194,7 @@ FRA_amiot_organization = {
 }
 
 FRA_levasseur_organization = {
+	name = "Levasseur"
 	include = generic_naval_aircraft_organization
 	icon = GFX_idea_levasseur
 	allowed = {	
@@ -219,6 +230,7 @@ FRA_levasseur_organization = {
 
 
 FRA_panhard_organization = {
+	name = "Panhard"
 	include = generic_armored_car_organization
 	icon = GFX_idea_FRA_panhard
 	allowed = {	
@@ -228,6 +240,7 @@ FRA_panhard_organization = {
 }
 
 FRA_somua_organization = {
+	name = "Somua"
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_somua
 	
@@ -237,6 +250,7 @@ FRA_somua_organization = {
 }
 
 FRA_mas_organization = {
+	name = "Mas"
 	include = generic_infantry_equipment_organization
 	icon = GFX_idea_mas
 	
@@ -246,6 +260,7 @@ FRA_mas_organization = {
 }
 
 FRA_schneider_organization = {
+	name = "Schneider"
 	include = generic_artillery_organization
 	icon = GFX_idea_schneider
 	allowed = {	
