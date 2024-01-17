@@ -260,6 +260,10 @@
  SOU_communism_party:0 ""
  SOU_klan_plarty:0 "White Brotherhood"
  SOU_united_party:0 "United Opposition"
+ GXC_fascism_party:0 "United Way"
+ GXC_democratic_party:0 "Koumintang Left"
+ GXC_neutrality_party:0 "Koumintang Right"
+ GXC_communism_party:0 "CCP"
  klan_plarty_set:0 "The §YFascst party§! will be called the '§YWhite Brotherhood§!'"
  united_party_set:0 "The §YDemocratic party§! will be called the '§YUnited Opposition§!'"
  

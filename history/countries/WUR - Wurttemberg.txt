@@ -1,6 +1,6 @@
 ﻿capital = 50
 
-oob = ""
+set_oob = "WUR_1936"
 
 # Starting tech
 set_technology = {

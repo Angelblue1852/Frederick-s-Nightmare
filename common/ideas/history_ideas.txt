@@ -143,6 +143,8 @@ ideas = {
 		californian_army = {
 			picture = californian_army
 			modifier = {
+				army_attack_factor = -0.15
+				army_org_factor = -0.25
 			}
 		}
 	}

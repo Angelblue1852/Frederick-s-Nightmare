@@ -559,7 +559,11 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = JAP_expand_the_kenpeitai
 		}
-		available = {}
+		available = {
+			MAN = {
+				exists = no
+			}
+		}
 		bypass = {}
 		select_effect = {}
 
@@ -570,16 +574,15 @@ focus_tree = {
 		completion_reward = {
 			release_puppet = MAN
 			MAN = {
-				create_country_leader = {
-					name = "Puyi"
-					picture = "Pu_Yi.dds"
-					ideology = despotism
+				set_cosmetic_tag = MAN_JAP
+				add_ideas = {
+					monarch_puyi
 				}
 				set_politics = {
-					ruling_party = neutrality
+					ruling_party = fascism
 					elections_allowed = no
 				}
-				add_popularity = { ideology = neutrality popularity = 0.5 }
+				add_popularity = { ideology = fascism popularity = 0.5 }
 			}
 			news_event = JAP_news.5
 		}
