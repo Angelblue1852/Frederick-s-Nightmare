@@ -12,5 +12,106 @@ characters={
 			id = -1
 		}
 	}
+	SHX_zhang_zongchang = {
+		name = "Zhang Zongchang" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/SHX/SHX_zhang_zongchang.png"
+				small = "gfx/interface/ideas/shandong/GFX_zhang_zongchang.png"
+			}
+			civilian = {
+				large = "gfx/leaders/SHX/SHX_zhang_zongchang.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	SHX_duan_qirui = {
+		name = "Duan Qirui" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/SHX/SHX_duan_qirui.png"
+				small = "gfx/interface/ideas/shandong/GFX_duan_qirui.png"
+			}
+			civilian = {
+				large = "gfx/leaders/SHX/SHX_duan_qirui.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			skill = 3
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	SHX_wu_peifu = {
+		name = "Wu Peifu" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/SHX/SHX_wu_peifu.png"
+				small = "gfx/interface/ideas/shandong/GFX_wu_peifu.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	SHX_feng_yuxiang = {
+		name = "Feng Yuziang" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/SHX/SHX_feng_yuxiang.png"
+				small = "gfx/interface/ideas/shandong/GFX_feng_yuxiang.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	SHX_xu_shuzheng = {
+		name = "Xu Shuzheng" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/SHX/SHX_xu_shuzheng.png"
+				small = "gfx/interface/ideas/shandong/GFX_xu_shuzheng.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {  }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
 }
 	

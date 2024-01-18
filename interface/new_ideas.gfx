@@ -2,7 +2,10 @@ spriteTypes = {
 	
 	
 	
-	
+	spriteType = {
+		name = "GFX_idea_monarch_puyi"
+		texturefile = "gfx/interface/ideas/manchuria/GFX_puyi.png"
+	}
 	spriteType = {
 		name = "GFX_idea_yakut_japanese_dominion"
 		texturefile = "gfx/interface/ideas/GFX_yakut_japanese_dominion.png"
@@ -128,7 +131,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/usa/GFX_ford_purple.png"
 	}
 	spriteType = {
-		name = "GFX_idea_ford_red"
+		name = "GFX_idea_ford_blue"
 		texturefile = "gfx/interface/ideas/usa/GFX_ford_blue.png"
 	}
 	

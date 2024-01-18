@@ -1,0 +1,79 @@
+
+CAL_INF_01 = {
+	name = "State Guard"
+
+	for_countries = { CAL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAL_INF_01 }
+
+	fallback_name = "%d State Guard"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered ={
+		6 = { "%d California Guard Division" }
+		7 = { "%d Baja Guard Division" }
+		8 = { "%d Columbia Guard Division" }
+		9 = { "%d Oregon Guard Division" }
+		10 = { "%d Nevada Guard Division" }
+		11 = { "%d California Guard Division" }
+		12 = { "%d Columbia Guard Division" }
+		13 = { "%d Baja Guard Division" }
+		14 = { "%d Oregon Guard Division" }
+		15 = { "%d California Guard Division" }
+		16 = { "%d Oregon Guard Division" }
+		17 = { "%d Columbia Guard Division" }
+		18 = { "%d Nevada Guard Division" }
+		19 = { "%d Baja Guard Division" }
+		20 = { "%d California Guard Division" }
+	}
+}
+
+CAL_MILITIA_01 = {
+	name = "Militia"
+
+	for_countries = { CAL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAL_MILITIA_01 }
+
+	fallback_name = "%d Militia"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered ={
+		11 = { "%d Salem Militia" }
+		12 = { "%d Astoria Militia" }
+		13 = { "%d Redding Militia" }
+		14 = { "%d Reno Militia" }
+		15 = { "%d Mariposa Militia" }
+		16 = { "%d Silver Peak Militia" }
+		17 = { "%d Sacramento Militia" }
+		18 = { "%d Needles Militia" }
+		19 = { "%d Tijuana Militia" }
+		20 = { "%d Blythe Militia" }
+		21 = { "%d San Diego Militia" }
+		22 = { "%d Seattle Militia" }
+		23 = { "%d Santa Rosalia Militia" }
+		24 = { "%d Winnemucca Militia" }
+		25 = { "%d Eugene Militia" }
+		26 = { "%d Klamath Militia" }
+		27 = { "%d Puyallup Militia" }
+		28 = { "%d San Quintin Militia" }
+		29 = { "%d Bremerton Militia" }
+		30 = { "%d Richland Militia" }
+		31 = { "%d Olympia Militia" }
+		32 = { "%d Redmond Militia" }
+		33 = { "%d Long Beach Militia" }
+		34 = { "%d San Fransisco Militia" }
+	}
+}

@@ -13,6 +13,11 @@ add_ideas = {
 }
 
 recruit_character = SHX_cao_rulin
+recruit_character = SHX_duan_qirui
+recruit_character = SHX_wu_peifu
+recruit_character = SHX_zhang_zongchang
+recruit_character = SHX_feng_yuxiang
+recruit_character = SHX_xu_shuzheng
 
 
 

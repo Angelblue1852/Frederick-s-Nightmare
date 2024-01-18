@@ -1,6 +1,6 @@
 ﻿capital = 919
 
-oob = ""
+oob = "BAD_1936"
 
 # Starting tech
 set_technology = {

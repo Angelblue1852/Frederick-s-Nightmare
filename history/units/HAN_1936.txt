@@ -1,0 +1,147 @@
+﻿division_template = {
+	name = "Infanteriedivision"
+	
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+        infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Schnelle Brigade"
+	
+	division_names_group = GER_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	
+	priority = 2
+}
+division_template = {
+	name = "Panzerbrigade"
+	
+	division_names_group = GER_Arm_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "Thälmann-Division"
+		location = 6377
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "Pieck-Division"
+		location = 6263
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "Marx-Division"
+		location = 3326
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "Liebknecht-Division"
+		location = 241
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "Division 'Roter März'"
+		location = 11264
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "Manabendra-Division"
+		location = 6513
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "Volkseingreifbrigade"
+		location = 6377
+		division_template = "Schnelle Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "Panzerbrigade 'Lenin'"
+		location = 526
+		division_template = "Panzerbrigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.95
+	}
+}
+
+#air_wings = {
+#	56 = {
+#		fighter_equipment_0 = {
+#			owner = "HAN" 
+#			amount = 34
+#		}
+#	}
+#	56 = {
+#		fighter_equipment_0 = {
+#			owner = "HAN" 
+#			amount = 35
+#		}
+#	}
+#	56 = {
+#		fighter_equipment_0 = {
+#			owner = "HAN" 
+#			amount = 28
+#		}
+#	}
+#}
+
+instant_effect = {
+}

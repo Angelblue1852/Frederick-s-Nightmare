@@ -5,11 +5,77 @@ characters={
 			civilian = {
 				large = "gfx/leaders/MAN/MAN_zhang_xueliang.png"
 			}
+			army = {
+				large = "gfx/leaders/MAN/MAN_zhang_xueliang.png"
+				small = "gfx/interface/ideas/manchuria/GFX_zhang_xueliang.png"
+			}
 		}
 		country_leader = {
 			ideology = despotism
 			expire = "1960.1.1.1"
 			id = -1
+		}
+		field_marshal = {
+			skill = 3
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	MAN_zhang_jinghui = {
+		name = "Zhang Jinghui" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/MAN_zhang_jinghui.png"
+			}
+			army = {
+				large = "gfx/leaders/MAN/MAN_zhang_jinghui.png"
+				small = "gfx/interface/ideas/manchuria/GFX_zhang_jinghui.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			traits = {  }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	MAN_yu_zhishan = {
+		name = "Yu Zhishan" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/MAN_yu_zhishan.png"
+				small = "gfx/interface/ideas/manchuria/GFX_yu_zhishan.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {  }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	MAN_puyi = {
+		name = "Puyi" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/MAN_puyi.png"
+				small = "gfx/interface/ideas/manchuria/GFX_puyi.png"
+			}
 		}
 	}
 }

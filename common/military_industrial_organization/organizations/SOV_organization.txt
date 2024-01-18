@@ -11,6 +11,7 @@
 
 
 SOV_morozov_design_bureau_organization = {
+	name = "Morozov Design Bureau"
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_morozov_design_bureau
 	
@@ -20,6 +21,7 @@ SOV_morozov_design_bureau_organization = {
 }
 
 SOV_astrov_design_bureau_organization = {
+	name = "Astrov Design Bureau"
 	include = generic_medium_tank_organization
 	icon = GFX_idea_astrov_design_bureau
 	
@@ -29,6 +31,7 @@ SOV_astrov_design_bureau_organization = {
 }
 
 SOV_okmo_organization = {
+	name = "OKMO"
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_okmo
 	
@@ -38,8 +41,9 @@ SOV_okmo_organization = {
 }
 
 SOV_mytishchy_machine_building_plant_organization = {
+	name = "Mytishchy Machine Building Plant"
 	include = generic_tank_refurbishment_plant_organization
-	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+	icon = GFX_idea_mytishchy_machine_building_plant
 	
 	allowed = {	
 		original_tag = SOV
@@ -47,8 +51,9 @@ SOV_mytishchy_machine_building_plant_organization = {
 }
 
 SOV_kirov_organization = {
+	name = "Kirov"
 	include = generic_heavy_tank_organization
-	icon = GFX_idea_SOV_kirov
+	icon = GFX_idea_kirov
 	
 	allowed = {	
 		original_tag = SOV
@@ -66,8 +71,9 @@ SOV_kirov_organization = {
  ######  ##     ## #### ##         ######  
 
 SOV_nevskoye_design_bureau_organization = {
+	name = "Nevskoye Design Bureau"
 	include = generic_battle_line_ship_organization
-	icon = GFX_idea_nevskoye_design_bureau
+	icon = GFX_idea_rubin_design_bureau
 	
 	allowed = {	
 		original_tag = SOV
@@ -75,6 +81,7 @@ SOV_nevskoye_design_bureau_organization = {
 }
 
 SOV_rubin_design_bureau_organization = {
+	name = "Rubin Design Bureau"
 	include = generic_raider_ship_organization
 	icon = GFX_idea_SOV_rubin_design_bureau
 	
@@ -84,6 +91,7 @@ SOV_rubin_design_bureau_organization = {
 }
 
 SOV_black_sea_shipyard_organization = {
+	name = "Black Sea Shipyard"
 	include = generic_black_sea_fleet_organization
 	icon = GFX_idea_SOV_black_sea_shipyard
 	
@@ -93,8 +101,9 @@ SOV_black_sea_shipyard_organization = {
 }
 
 SOV_sevastopol_marine_plant_organization = {
+	name = "Sevastopol Marine Plant"
 	include = generic_refurbishment_repair_organization
-	icon = GFX_idea_SOV_sevastopol_marine_plant
+	icon = GFX_idea_sevastopol_marine_plant
 	
 	allowed = {	
 		original_tag = SOV
@@ -116,6 +125,7 @@ SOV_sevastopol_marine_plant_organization = {
 
 
 SOV_mig_design_bureau_organization = {
+	name = "MiG Design Bureau"
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_mig_design_bureau
 	
@@ -125,6 +135,7 @@ SOV_mig_design_bureau_organization = {
 }
 
 SOV_ilyushin_design_bureau_organization = {
+	name = "Ilyushin Design Bureau"
 	include = generic_medium_aircraft_organization
 	icon = GFX_idea_ilyushin_design_bureau
 	
@@ -134,6 +145,7 @@ SOV_ilyushin_design_bureau_organization = {
 }
 
 SOV_yakovlev_design_bureau_organization = {
+	name = "Yakovlev Design Bureau"
 	include = generic_naval_aircraft_organization
 	icon = GFX_idea_yakovlev_design_bureau
 	
@@ -143,6 +155,7 @@ SOV_yakovlev_design_bureau_organization = {
 }
 
 SOV_tupolev_design_bureau_organization = {
+	name = "Tupolev Design Bureau"
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_tupolev_design_bureau
 	
@@ -170,6 +183,7 @@ SOV_tupolev_design_bureau_organization = {
 
 
 SOV_grabin_design_bureau_organization = {
+	name = "Grabin Design Bureau"
 	include = generic_artillery_organization
 	icon = GFX_idea_grabin_design_bureau
 	
@@ -179,6 +193,7 @@ SOV_grabin_design_bureau_organization = {
 }
 
 SOV_tula_arms_plant_organization = {
+	name = "Tula Arms Plant"
 	include = generic_infantry_equipment_organization	
 	icon = GFX_idea_tula_arms_plant
 	
@@ -188,6 +203,7 @@ SOV_tula_arms_plant_organization = {
 }
 
 SOV_gaz_organization = {
+	name = "GAZ"
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_gaz
 	

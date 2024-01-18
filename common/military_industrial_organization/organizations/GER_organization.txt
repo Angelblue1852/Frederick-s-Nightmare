@@ -10,6 +10,7 @@
 
 
 GER_porsche_organization = {
+	name = "Porsche"
 	include = generic_heavy_tank_organization
 	icon = GFX_idea_porsche
 	
@@ -20,6 +21,7 @@ GER_porsche_organization = {
 }
 
 GER_henschel_organization = {
+	name = "Henschel"
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_henschel
 	
@@ -30,6 +32,7 @@ GER_henschel_organization = {
 }
 
 GER_man_organization = {
+	name = ger_MAN
 	include = generic_medium_tank_organization
 	icon = GFX_idea_man
 	
@@ -124,6 +127,7 @@ GER_daimler_benz_organization = {
 #####################
 
 GER_germaniawerft_organization = {
+	name = "Germaniawerft"
 	include = generic_battle_line_ship_organization
 	icon = GFX_idea_germaniawerft
 	
@@ -276,6 +280,7 @@ GER_dornier_organization = {
 ###################################
 
 GER_rheinmetall_organization = {
+	name = "Rheinmetall"
 	include = generic_artillery_organization
 	icon = GFX_idea_rheinmetall
 	
@@ -285,6 +290,7 @@ GER_rheinmetall_organization = {
 }
 
 GER_mauser_organization = {
+	name = "Mauser"
 	include = generic_infantry_equipment_organization
 	icon = GFX_idea_mauser
 	
@@ -300,6 +306,7 @@ GER_mauser_organization = {
 }
 
 GER_opel_organization = {
+	name = "Opel"
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_opel
 	

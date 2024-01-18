@@ -1,0 +1,108 @@
+﻿division_template = {
+	name = "Infanteriedivision"
+	
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+division_template = {
+	name = "Panzerdivision"
+	
+	division_names_group = GER_Arm_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "Deutschland-Division"
+		location = 9517
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "1. Infanteriedivision"
+		location = 9517
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "2. Infanteriedivision"
+		location = 519
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "3. Infanteriedivision"
+		location = 9655
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "4. Infanteriedivision"
+		location = 6581
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "5. Infanteriedivision"
+		location = 11499
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "6. Infanteriedivision"
+		location = 9517
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.00
+	}
+}
+
+#air_wings = {
+#	762 = {
+#		fighter_equipment_0 = {
+#			owner = "GER" 
+#			amount = 134
+#		}
+#		name = "Luftwaffe"
+#	}
+#}
+
+instant_effect = {
+}

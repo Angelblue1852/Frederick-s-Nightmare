@@ -1,0 +1,183 @@
+﻿division_template = {
+	name = "State Guard"
+	is_locked = yes
+	division_names_group = CAL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Militia"
+	is_locked = yes
+	force_allow_recruiting = yes
+	division_names_group = CAL_MILITIA_01
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 2 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	
+}
+
+units = {
+	
+	division = {
+		name = "1st California Guard Division"
+		location = 9671			#
+		division_template = "State Guard"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "2nd California Guard Division"
+		location = 9814			#
+		division_template = "State Guard"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Baja Guard Division"
+		location = 12461			#
+		division_template = "State Guard"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Oregon Guard Division"
+		location = 3513			#
+		division_template = "State Guard"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Columbia Guard Division"
+		location = 7315			#
+		division_template = "State Guard"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "1st Grand Coulee Militia"
+		location = 10198
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st Walla Walla Militia"
+		location = 10687
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st Carson City Militia"
+		location = 12134
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st Bolder Militia"
+		location = 4799
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st Barstow Militia"
+		location = 10387
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st New Leon Militia"
+		location = 13215
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st La Paz Militia"
+		location = 12736
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st Eureka Militia"
+		location = 7315
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st Portland Militia"
+		location = 610
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1st Fresno Militia"
+		location = 6876
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	
+}
+
+instant_effect = {
+	
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CAL"
+		}
+		requested_factories = 1
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "CAL"
+		}
+		requested_factories = 1
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CAL"
+		}
+		requested_factories = 1
+		efficiency = 100
+	}
+	
+}

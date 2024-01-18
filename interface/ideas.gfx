@@ -4484,6 +4484,16 @@ spriteTypes = {
 		name = "GFX_idea_astrov_design_bureau"
 		texturefile = "gfx/interface/ideas/russia/companies/astrov_design_bureau.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_mytishchy_machine_building_plant"
+		texturefile = "gfx/interface/ideas/russia/companies/mytishchy_machine_building_plant.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_kirov"
+		texturefile = "gfx/interface/ideas/russia/companies/kirov.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_gaz"
@@ -4508,6 +4518,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_mig_design_bureau"
 		texturefile = "gfx/interface/ideas/russia/companies/mig_design_bureau.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_sevastopol_marine_plant"
+		texturefile = "gfx/interface/ideas/russia/companies/sevastopol_marine_plant.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rubin_design_bureau"
+		texturefile = "gfx/interface/ideas/russia/companies/rubin_design_bureau.dds"
 	}
 
 	spriteType = {
@@ -4976,254 +4996,259 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_carl_spaatz"
-		texturefile = "gfx/interface/ideas/united_states/advisors/carl_spaatz.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/carl_spaatz.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_charles_coughlin"
-		texturefile = "gfx/interface/ideas/united_states/advisors/charles_coughlin.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/charles_coughlin.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_chester_nimitz"
-		texturefile = "gfx/interface/ideas/united_states/advisors/chester_nimitz.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/chester_nimitz.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_claire_chennault"
-		texturefile = "gfx/interface/ideas/united_states/advisors/claire_chennault.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/claire_chennault.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_claire_chennault2"
-		texturefile = "gfx/interface/ideas/united_states/advisors/claire_chennault2.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/claire_chennault2.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_courtney_hodges"
-		texturefile = "gfx/interface/ideas/united_states/advisors/courtney_hodges.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/courtney_hodges.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_curtis_lemay"
-		texturefile = "gfx/interface/ideas/united_states/advisors/curtis_lemay.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/curtis_lemay.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_dewitt_clinton_ramsey"
-		texturefile = "gfx/interface/ideas/united_states/advisors/dewitt_clinton_ramsey.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/dewitt_clinton_ramsey.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_douglas_macarthur"
-		texturefile = "gfx/interface/ideas/united_states/advisors/douglas_macarthur.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/douglas_macarthur.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_dwight_d_eisenhower"
-		texturefile = "gfx/interface/ideas/united_states/advisors/dwight_d_eisenhower.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/dwight_d_eisenhower.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_earl_browder"
-		texturefile = "gfx/interface/ideas/united_states/advisors/earl_browder.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/earl_browder.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_ernest_king"
-		texturefile = "gfx/interface/ideas/united_states/advisors/ernest_king.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/ernest_king.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_frank_jack_fletcher"
-		texturefile = "gfx/interface/ideas/united_states/advisors/frank_jack_fletcher.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/frank_jack_fletcher.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_george_kenney"
-		texturefile = "gfx/interface/ideas/united_states/advisors/george_kenney.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/george_kenney.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_george_marshall"
-		texturefile = "gfx/interface/ideas/united_states/advisors/george_marshall.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/george_marshall.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_george_patton"
-		texturefile = "gfx/interface/ideas/united_states/advisors/george_patton.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/george_patton.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_harold_ickes"
-		texturefile = "gfx/interface/ideas/united_states/advisors/harold_ickes.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/harold_ickes.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_harold_mcclelland"
-		texturefile = "gfx/interface/ideas/united_states/advisors/harold_mcclelland.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/harold_mcclelland.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_henry_arnold"
-		texturefile = "gfx/interface/ideas/united_states/advisors/henry_arnold.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/henry_arnold.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_jimmy_doolittle"
-		texturefile = "gfx/interface/ideas/united_states/advisors/jimmy_doolittle.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/jimmy_doolittle.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_john_cannon"
-		texturefile = "gfx/interface/ideas/united_states/advisors/john_cannon.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/john_cannon.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_joseph_stilwell"
-		texturefile = "gfx/interface/ideas/united_states/advisors/joseph_stilwell.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/joseph_stilwell.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_marc_mitscher"
-		texturefile = "gfx/interface/ideas/united_states/advisors/marc_mitscher.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/marc_mitscher.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_mark_clark"
-		texturefile = "gfx/interface/ideas/united_states/advisors/mark_clark.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/mark_clark.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_omar_bradley"
-		texturefile = "gfx/interface/ideas/united_states/advisors/omar_bradley.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/omar_bradley.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_raymond_spruance"
-		texturefile = "gfx/interface/ideas/united_states/advisors/raymond_spruance.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/raymond_spruance.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_robert_goddard"
-		texturefile = "gfx/interface/ideas/united_states/advisors/robert_goddard.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/robert_goddard.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_robert_oppenheimer"
-		texturefile = "gfx/interface/ideas/united_states/advisors/robert_oppenheimer.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/robert_oppenheimer.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_thomas_kinkaid"
-		texturefile = "gfx/interface/ideas/united_states/advisors/thomas_kinkaid.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/thomas_kinkaid.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_william_halsey"
-		texturefile = "gfx/interface/ideas/united_states/advisors/william_halsey.dds"
+		texturefile = "gfx/interface/ideas/usa/advisors/william_halsey.dds"
 	}
 	
 	##COMPANIES##
 
 	spriteType = {
 		name = "GFX_idea_army_ordnance_department"
-		texturefile = "gfx/interface/ideas/united_states/companies/army_ordnance_department.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/army_ordnance_department.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_usa_tank_destroyer_board"
+		texturefile = "gfx/interface/ideas/usa/companies/usa_tank_destroyer_board.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_bell"
-		texturefile = "gfx/interface/ideas/united_states/companies/bell.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/bell.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_boeing"
-		texturefile = "gfx/interface/ideas/united_states/companies/boeing.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/boeing.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_chrysler"
-		texturefile = "gfx/interface/ideas/united_states/companies/chrysler.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/chrysler.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_consolidated_aircraft"
-		texturefile = "gfx/interface/ideas/united_states/companies/consolidated_aircraft.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/consolidated_aircraft.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_douglas_aircraft_company"
-		texturefile = "gfx/interface/ideas/united_states/companies/douglas_aircraft_company.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/douglas_aircraft_company.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_electric_boat_company"
-		texturefile = "gfx/interface/ideas/united_states/companies/electric_boat_company.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/electric_boat_company.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_ford"
-		texturefile = "gfx/interface/ideas/united_states/companies/ford.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/ford.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_ford_green"
-		texturefile = "gfx/interface/ideas/united_states/companies/ford_green.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/ford_green.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_ford_purple"
-		texturefile = "gfx/interface/ideas/united_states/companies/ford_purple.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/ford_purple.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_general_electric"
-		texturefile = "gfx/interface/ideas/united_states/companies/general_electric.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/general_electric.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_grumman"
-		texturefile = "gfx/interface/ideas/united_states/companies/grumman.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/grumman.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_marmon_herrington"
-		texturefile = "gfx/interface/ideas/united_states/companies/marmon_herrington.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/marmon_herrington.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_newport_news_shipbuilding"
-		texturefile = "gfx/interface/ideas/united_states/companies/newport_news_shipbuilding.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/newport_news_shipbuilding.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_norfolk_naval_yard"
-		texturefile = "gfx/interface/ideas/united_states/companies/norfolk_naval_yard.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/norfolk_naval_yard.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_north_american_aviation"
-		texturefile = "gfx/interface/ideas/united_states/companies/north_american_aviation.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/north_american_aviation.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_office_of_strategic_services"
-		texturefile = "gfx/interface/ideas/united_states/companies/office_of_strategic_services.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/office_of_strategic_services.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_rock_island_arsenal"
-		texturefile = "gfx/interface/ideas/united_states/companies/rock_island_arsenal.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/rock_island_arsenal.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_springfield_armory"
-		texturefile = "gfx/interface/ideas/united_states/companies/springfield_armory.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/springfield_armory.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_standard_oil_california"
-		texturefile = "gfx/interface/ideas/united_states/companies/standard_oil_california.dds"
+		texturefile = "gfx/interface/ideas/usa/companies/standard_oil_california.dds"
 	}
 	
 	##
@@ -5235,12 +5260,12 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_new_deal"
-		texturefile = "gfx/interface/ideas/united_states/new_deal.dds"
+		texturefile = "gfx/interface/ideas/usa/new_deal.dds"
 	}
 
 	spriteType = {
 		name = "GFX_idea_republican_new_deal"
-		texturefile = "gfx/interface/ideas/united_states/republican_new_deal.dds"
+		texturefile = "gfx/interface/ideas/usa/republican_new_deal.dds"
 	}
 	
 	#YUGOSLAVIA#
