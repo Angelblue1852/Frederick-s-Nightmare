@@ -1,0 +1,84 @@
+﻿division_template = {
+	name = "Infantry Brigade"
+	
+	division_names_group = BRENGL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	
+	support = {
+	}
+}
+division_template = {
+	name = "Royal Division"
+	
+	division_names_group = BRENGL_INF_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+        motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+	
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "1st Royal Division"
+		location = 6890		#Georgeland
+		division_template = "Royal Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd Royal Division"
+		location = 6855		#Britannia
+		division_template = "Royal Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4th Royal Brigade"
+		location = 6890		#Georgeland
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "6th Royal Brigade"
+		location = 6890		#Georgeland
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "7th Royal Brigade"
+		location = 6890		#Georgeland
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "9th Royal Brigade"
+		location = 6890		#Georgeland
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+}

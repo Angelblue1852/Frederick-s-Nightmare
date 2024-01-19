@@ -5,14 +5,22 @@ oob = ""
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	tech_recon = 1
+	basic_train = 1
 }
 
 add_ideas = {
-	china_ccp_warlord
 	trotskyist_military
 }
 
+set_cosmetic_tag = SIK_sheng
+
 recruit_character = SIK_sheng_shicai
+recruit_character = SIK_ehmetjan_qasim
+recruit_character = SIK_khoja_niyaz
+recruit_character = SIK_masud_sabri
 
 
 

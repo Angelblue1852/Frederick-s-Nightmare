@@ -21,7 +21,6 @@ if = {
 }
 
 add_ideas = {
-	china_nanjing_warlord
 	china_subjugation
 	economic_crisis6
 }
@@ -34,15 +33,18 @@ if = {
            target = YUN
            autonomous_state = autonomy_reichskommissariat
        }
-   }
-   else = {
+	    else = {
        puppet = YUN
   }
+}
 
 give_guarantee = MON
 give_guarantee = TIB
 
 recruit_character = CHI_hu_hanmin
+recruit_character = CHI_chiang_kai_shek
+recruit_character = CHI_mao_zedong
+recruit_character = CHI_wang_jingwei
 
 
 

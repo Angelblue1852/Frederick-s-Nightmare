@@ -5,10 +5,13 @@ oob = "GXC_1936"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	tech_recon = 1
+	basic_train = 1
 }
 
 add_ideas = {
-	china_kmt_warlord
 	economic_crisis3
 }
 

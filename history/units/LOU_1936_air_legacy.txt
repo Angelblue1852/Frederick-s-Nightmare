@@ -1,0 +1,9 @@
+﻿
+air_wings = {
+	371 = {
+		fighter_equipment_0 = { owner = "LOU" amount = 85 }
+	}
+}
+
+instant_effect = {
+}

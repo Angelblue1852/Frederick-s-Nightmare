@@ -12,5 +12,44 @@ characters={
 			id = -1
 		}
 	}
+	SIK_ehmetjan_qasim = {
+		name = "Ehmetjan Qasim" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIK/SIK_ehmetjan_qasim.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	SIK_khoja_niyaz = {
+		name = "Khoja Niyaz" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIK/SIK_khoja_niyaz.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	SIK_masud_sabri = {
+		name = "Masud Sabri" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIK/SIK_masud_sabri.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
 }
 	
