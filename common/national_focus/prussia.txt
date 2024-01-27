@@ -106,98 +106,74 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			#create_field_marshal = {
-			#	name = "Günther von Kluge"
-			#	picture = "generals/Gunther_von_Kluge.dds"
-			#	traits = { offensive_doctrine }
-			#	skill = 2
-			#	attack_skill = 3
-			#	defense_skill = 1
-			#	planning_skill = 2
-			#	logistics_skill = 2
-			#	id = 112
-			#}
-			#create_corps_commander = {
-			#	name = "Heinz Guderian"
-			#	picture = "generals/Heinz_Guderian.dds"
-			#	traits = { panzer_leader }
-			#	skill = 5
-			#	attack_skill = 6
-			#	defense_skill = 1
-			#	planning_skill = 3
-			#	logistics_skill = 2
-			#	id = 113
-			#}
-			#create_corps_commander = {
-			#	name = "Walter Model"
-			#	picture = "generals/Walter_Model.dds"
-			#	traits = {}
-			#	skill = 5
-			#	attack_skill = 2
-			#	defense_skill = 5
-			#	planning_skill = 3
-			#	logistics_skill = 3
-			#	id = 114
-			#}
-			#create_corps_commander = {
-			#	name = "Kurt Student"
-			#	picture = "generals/Kurt_Student.dds"
-			#	traits = { commando }
-			#	skill = 4
-			#	attack_skill = 5
-			#	defense_skill = 1
-			#	planning_skill = 1
-			#	logistics_skill = 5
-			#}
-			#create_corps_commander = {
-			#	name = "Paul Hausser"
-			#	picture = "generals/Paul_Hausser.dds"
-			#	traits = { panzer_leader }
-			#	skill = 2
-			#	attack_skill = 4
-			#	defense_skill = 2
-			#	planning_skill = 1
-			#	logistics_skill = 1
-			#	id = 115
-			#}
-			#create_corps_commander = {
-			#	name = "Johannes Blaskowitz"
-			#	picture = "generals/Johannes_Blaskowitz.dds"
-			#	traits = {}
-			#	skill = 2
-			#	attack_skill = 1
-			#	defense_skill = 1
-			#	planning_skill = 3
-			#	logistics_skill = 3
-			#	id = 116
-			#}
-			#create_corps_commander = {
-			#	name = "Hermann Hoth"
-			#	picture = "generals/Hermann_Hoth.dds"
-			#	traits = {}
-			#	skill = 1
-			#	attack_skill = 1
-			#	defense_skill = 2
-			#	planning_skill = 1
-			#	logistics_skill = 2
-			#	id = 117
-			#}
-			#create_corps_commander = {
-			#	name = "Friedrich Schulz"
-			#	picture = "generals/Friedrich_Schulz.dds"
-			#	traits = {}
-			#	skill = 1
-			#	attack_skill = 3
-			#	defense_skill = 1
-			#	planning_skill = 1
-			#	logistics_skill = 1
-			#	id = 118
-			#}
+		add_corps_commander_role = {
+			Character = GER_heinz_guderian
+			traits={ brilliant_strategist career_officer armor_officer trickster panzer_leader }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
 		}
+		add_corps_commander_role = {
+			Character = GER_friedrich_paulus
+			traits={ trait_cautious armor_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}	
+		add_corps_commander_role = {
+			Character = GER_wilhelm_list
+			traits={ inflexible_strategist career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		add_corps_commander_role = {
+			Character = GER_ewald_von_kleist
+			traits={ trait_cautious armor_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		add_corps_commander_role = {
+			Character = GER_albert_kesselring
+			traits={ brilliant_strategist trait_cautious war_hero }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		add_corps_commander_role = {
+			Character = GER_wilhelm_ritter_von_leeb
+			traits={ old_guard infantry_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}	
+		add_corps_commander_role = {
+			Character = GER_friedrich_schulz
+			traits={ infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}	
 
 		ai_will_do = {
 			base = 10
 		}
+	}
 	}
 	focus = {
 		id = GER_support_the_lohmeyer_plan
@@ -310,7 +286,8 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_armaments_organizer
+			show_ideas_tooltip = GER_Muller
+			
 			add_tech_bonus = {
 				bonus = 0.5
 				category = artillery
@@ -944,8 +921,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_financial_expert
+			#custom_effect_tooltip = available_political_advisor
+			#show_ideas_tooltip = generic_financial_expert
 			add_stability = 0.05
 			create_random_factory_CIV_1 = yes
 			create_random_factory_CIV_1 = yes
@@ -3392,600 +3369,601 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = GER_radical_drift
-		icon = neutrality
+	# focus = {
+		# id = GER_radical_drift
+		# icon = neutrality
 		
-		x = 10
-		y = 2
-		relative_position_id = GER_social_reform
+		# x = 10
+		# y = 2
+		# relative_position_id = GER_social_reform
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_military_industrial_expansion
-			focus = GER_civilian_industrial_expansion
-		}
+		# prerequisite = {
+			# focus = GER_military_industrial_expansion
+			# focus = GER_civilian_industrial_expansion
+		# }
 		
-		available = {}
-		bypass = {}
-		select_effect = {}
+		# available = {}
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_popularity = { ideology = democracy popularity = -0.15 }
-			add_popularity = { ideology = communism popularity = 0.10 }
-			add_popularity = { ideology = fascism popularity = 0.10 }
-		}
+		# completion_reward = {
+			# add_popularity = { ideology = democracy popularity = -0.15 }
+			# add_popularity = { ideology = communism popularity = 0.10 }
+			# add_popularity = { ideology = fascism popularity = 0.10 }
+		# }
 
-		ai_will_do = {
-			base = -10
-		}
-	}
+		# ai_will_do = {
+			# base = -10
+		# }
+	# }
 	
-	focus = {
-		id = GER_fascist_coup
-		icon = neutrality
+	# focus = {
+		# id = GER_fascist_coup
+		# icon = neutrality
 		
-		x = -1
-		y = 1
-		relative_position_id = GER_radical_drift
+		# x = -1
+		# y = 1
+		# relative_position_id = GER_radical_drift
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_radical_drift
-		}
-		mutually_exclusive = {
-			focus = GER_defend_prussian_democracy
-			focus = GER_strengthen_the_monarchy
-			focus = GER_communist_coup
-		}
-		available = {
-			fascism > 0.50
-		}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_radical_drift
+		# }
+		# mutually_exclusive = {
+			# focus = GER_defend_prussian_democracy
+			# focus = GER_strengthen_the_monarchy
+			# focus = GER_communist_coup
+		# }
+		# available = {
+			# fascism > 0.50
+		# }
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = no
-			}
+		# completion_reward = {
+			# set_politics = {
+				# ruling_party = fascism
+				# elections_allowed = no
+			# }
 			
-		}
+		# }
 
-		ai_will_do = {
-			base = -100
-		}
-	}
+		# ai_will_do = {
+			# base = -100
+		# }
+	# }
 	
-	focus = {
-		id = GER_communist_coup
-		icon = neutrality
+	# focus = {
+		# id = GER_communist_coup
+		# icon = neutrality
 		
-		x = 1
-		y = 1
-		relative_position_id = GER_radical_drift
+		# x = 1
+		# y = 1
+		# relative_position_id = GER_radical_drift
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_radical_drift
-		}
-		mutually_exclusive = {
-			focus = GER_defend_prussian_democracy
-			focus = GER_strengthen_the_monarchy
-			focus = GER_fascist_coup
-		}
-		available = {
-			communism > 0.50
-		}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_radical_drift
+		# }
+		# mutually_exclusive = {
+			# focus = GER_defend_prussian_democracy
+			# focus = GER_strengthen_the_monarchy
+			# focus = GER_fascist_coup
+		# }
+		# available = {
+			# communism > 0.50
+		# }
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			set_politics = {
-				ruling_party = communism
-				elections_allowed = no
-			}
+		# completion_reward = {
+			# set_politics = {
+				# ruling_party = communism
+				# elections_allowed = no
+			# }
 			
-		}
+		# }
 
-		ai_will_do = {
-			base = -100
-		}
-	}
+		# ai_will_do = {
+			# base = -100
+		# }
+	# }
 	
-	focus = {
-		id = GER_secure_northern_germany_radical
-		icon = war2
+	# focus = {
+		# id = GER_secure_northern_germany_radical
+		# icon = war2
 		
-		x = -1
-		y = 2
-		relative_position_id = GER_radical_drift
+		# x = -1
+		# y = 2
+		# relative_position_id = GER_radical_drift
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_fascist_coup
-			focus = GER_communist_coup
-		}
-		mutually_exclusive = {}
-		available = {}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_fascist_coup
+			# focus = GER_communist_coup
+		# }
+		# mutually_exclusive = {}
+		# available = {}
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 2.5
-				name = "Aggression in Northern Germany"
-			}
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = HAN
-					}
-					NOT = { is_in_faction_with = GER }
-					NOT = { is_subject_of = GER }
-					NOT = { has_war_with = GER }
-				}
-				every_owned_state = {
-					add_core_of = GER
-				}
-				GER = {
-					create_wargoal = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 2.5
+				# name = "Aggression in Northern Germany"
+			# }
+			# every_country = {
+				# limit = {
+					# OR = {
+						# original_tag = HAN
+					# }
+					# NOT = { is_in_faction_with = GER }
+					# NOT = { is_subject_of = GER }
+					# NOT = { has_war_with = GER }
+				# }
+				# every_owned_state = {
+					# add_core_of = GER
+				# }
+				# GER = {
+					# create_wargoal = {
+						# target = PREV
+						# type = annex_everything
+					# }
+				# }
+			# }
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
-	focus = {
-		id = GER_annex_hannover
-		icon = war2
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
+	# focus = {
+		# id = GER_annex_hannover
+		# icon = war2
 		
-		x = 2
-		y = 2
-		relative_position_id = GER_communist_coup
+		# x = 2
+		# y = 2
+		# relative_position_id = GER_communist_coup
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_communist_coup
-			focus = GER_fascist_coup
-		}
-		mutually_exclusive = {}
-		available = {	
-			OR = { 
-				has_government = communism
-				has_government = fascism
-			}
-		}
-		bypass = {
-			HAN = {
-			exists = no
-		}
-		}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_communist_coup
+		# }
+		# mutually_exclusive = {}
+		# available = {	
+			# has_government = communism
+		# }
+		# bypass = {
+			# HAN = {
+			# exists = no
+		# }
+		# }
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 1.0
-				name = "Aggression in Northern Germany"
-			}
-			HAN = {
-				country_event = HAN.2
-			}
-		}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 1.0
+				# name = "Aggression in Northern Germany"
+			# }
+			# HAN = {
+			# every_unit_leader = {
+				# set_nationality = ROOT
+			# }
+		# }
+			# annex_country = { target = HAN transfer_troops = yes }
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
 	
-	focus = {
-		id = GER_secure_eastern_germany_radical
-		icon = war2
+	# focus = {
+		# id = GER_secure_eastern_germany_radical
+		# icon = war2
 		
-		x = 1
-		y = 2
-		relative_position_id = GER_radical_drift
+		# x = 1
+		# y = 2
+		# relative_position_id = GER_radical_drift
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_fascist_coup
-			focus = GER_communist_coup
-		}
-		mutually_exclusive = {}
-		available = {}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_fascist_coup
+			# focus = GER_communist_coup
+		# }
+		# mutually_exclusive = {}
+		# available = {}
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 2.5
-				name = "Aggression in Eastern Germany"
-			}
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = SAX
-						original_tag = THU
-					}
-					NOT = { is_in_faction_with = GER }
-					NOT = { is_subject_of = GER }
-					NOT = { has_war_with = GER }
-				}
-				every_owned_state = {
-					add_core_of = GER
-				}
-				GER = {
-					create_wargoal = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 2.5
+				# name = "Aggression in Eastern Germany"
+			# }
+			# every_country = {
+				# limit = {
+					# OR = {
+						# original_tag = SAX
+						# original_tag = THU
+					# }
+					# NOT = { is_in_faction_with = GER }
+					# NOT = { is_subject_of = GER }
+					# NOT = { has_war_with = GER }
+				# }
+				# every_owned_state = {
+					# add_core_of = GER
+				# }
+				# GER = {
+					# create_wargoal = {
+						# target = PREV
+						# type = annex_everything
+					# }
+				# }
+			# }
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
-	focus = {
-		id = GER_secure_southern_germany_radical
-		icon = war2
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
+	# focus = {
+		# id = GER_secure_southern_germany_radical
+		# icon = war2
 		
-		x = -1
-		y = 3
-		relative_position_id = GER_radical_drift
+		# x = -1
+		# y = 3
+		# relative_position_id = GER_radical_drift
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_secure_northern_germany_radical
-		}
-		mutually_exclusive = {}
-		available = {}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_secure_northern_germany_radical
+		# }
+		# mutually_exclusive = {}
+		# available = {}
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 2.5
-				name = "Aggression in Southern Germany"
-			}
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = BAV
-						original_tag = BAD
-						original_tag = WUR
-					}
-					NOT = { is_in_faction_with = GER }
-					NOT = { is_subject_of = GER }
-					NOT = { has_war_with = GER }
-				}
-				every_owned_state = {
-					add_core_of = GER
-				}
-				GER = {
-					create_wargoal = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 2.5
+				# name = "Aggression in Southern Germany"
+			# }
+			# every_country = {
+				# limit = {
+					# OR = {
+						# original_tag = BAV
+						# original_tag = BAD
+						# original_tag = WUR
+					# }
+					# NOT = { is_in_faction_with = GER }
+					# NOT = { is_subject_of = GER }
+					# NOT = { has_war_with = GER }
+				# }
+				# every_owned_state = {
+					# add_core_of = GER
+				# }
+				# GER = {
+					# create_wargoal = {
+						# target = PREV
+						# type = annex_everything
+					# }
+				# }
+			# }
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
-		focus = {
-		id = GER_annex_wuttemburg
-		icon = war2
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
+		# focus = {
+		# id = GER_annex_wuttemburg
+		# icon = war2
 		
-		x = -2
-		y = 2
-		relative_position_id = GER_secure_northern_germany_radical
+		# x = -2
+		# y = 2
+		# relative_position_id = GER_secure_northern_germany_radical
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_secure_northern_germany_radical
-		}
-		mutually_exclusive = {}
-		available = {
-			OR {
-			has_government = fascism
-			has_government = communism
-			}
-		}
-		bypass = {
-			WUR = {
-			exists = no
-		}
-		}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_secure_northern_germany_radical
+		# }
+		# mutually_exclusive = {}
+		# available = {
+			# has_government = fascism
+		# }
+		# bypass = {
+			# WUR = {
+			# exists = no
+		# }
+		# }
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 1.0
-				name = "Aggression in Southern Germany"
-			}
-			WUR = {
-				country_event = WUR.6
-			}
-		}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 1.0
+				# name = "Aggression in Southern Germany"
+			# }
+			# WUR = {
+			# every_unit_leader = {
+				# set_nationality = ROOT
+			# }
+		# }
+			# annex_country = { target = WUR transfer_troops = yes }
+			
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
 	
-	focus = {
-		id = GER_secure_western_germany_radical
-		icon = war2
+	# focus = {
+		# id = GER_secure_western_germany_radical
+		# icon = war2
 		
-		x = 1
-		y = 3
-		relative_position_id = GER_radical_drift
+		# x = 1
+		# y = 3
+		# relative_position_id = GER_radical_drift
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_secure_eastern_germany_radical
-		}
-		mutually_exclusive = {}
-		available = {}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_secure_eastern_germany_radical
+		# }
+		# mutually_exclusive = {}
+		# available = {}
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 2.5
-				name = "Aggression in Western Germany"
-			}
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = HES
-						original_tag = WES
-					}
-					NOT = { is_in_faction_with = GER }
-					NOT = { is_subject_of = GER }
-					NOT = { has_war_with = GER }
-				}
-				every_owned_state = {
-					add_core_of = GER
-				}
-				GER = {
-					create_wargoal = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 2.5
+				# name = "Aggression in Western Germany"
+			# }
+			# every_country = {
+				# limit = {
+					# OR = {
+						# original_tag = HES
+						# original_tag = WES
+					# }
+					# NOT = { is_in_faction_with = GER }
+					# NOT = { is_subject_of = GER }
+					# NOT = { has_war_with = GER }
+				# }
+				# every_owned_state = {
+					# add_core_of = GER
+				# }
+				# GER = {
+					# create_wargoal = {
+						# target = PREV
+						# type = annex_everything
+					# }
+				# }
+			# }
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
 	
-		focus = {
-		id = GER_german_reich
-		icon = wehrmacht
+		# focus = {
+		# id = GER_german_reich
+		# icon = wehrmacht
 		
-		x = 0
-		y = 1
-		relative_position_id = GER_secure_southern_germany_radical
+		# x = 0
+		# y = 1
+		# relative_position_id = GER_secure_southern_germany_radical
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_secure_southern_germany_radical
-		}
-		prerequisite = {
-			focus = GER_secure_western_germany_radical
-		}
-		mutually_exclusive = {
-			focus = GER_german_socialist_republic
-		}
-		available = {
-			has_government = fascism
-		}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_secure_southern_germany_radical
+		# }
+		# prerequisite = {
+			# focus = GER_secure_western_germany_radical
+		# }
+		# mutually_exclusive = {
+			# focus = GER_german_socialist_republic
+		# }
+		# available = {
+			# has_government = fascism
+		# }
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			news_event = GER_news.13
-			add_political_power = 150
-			add_war_support = 0.05
-			add_popularity = { ideology = fascism popularity = 0.10 }
-			set_cosmetic_tag = GER
-		}
+		# completion_reward = {
+			# news_event = GER_news.13
+			# add_political_power = 150
+			# add_war_support = 0.05
+			# add_popularity = { ideology = fascism popularity = 0.10 }
+			# set_cosmetic_tag = GER
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
 	
-		focus = {
-		id = GER_german_socialist_republic
-		icon = wehrmacht
+		# focus = {
+		# id = GER_german_socialist_republic
+		# icon = wehrmacht
 		
-		x = 0
-		y = 1
-		relative_position_id = GER_secure_western_germany_radical
+		# x = 0
+		# y = 1
+		# relative_position_id = GER_secure_western_germany_radical
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_secure_southern_germany_radical
-		}
-		prerequisite = {
-			focus = GER_secure_western_germany_radical
-		}
-		mutually_exclusive = {
-			focus = GER_german_reich
-		}
-		available = {
-			has_government = communism
-		}
-		bypass = {}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_secure_southern_germany_radical
+		# }
+		# prerequisite = {
+			# focus = GER_secure_western_germany_radical
+		# }
+		# mutually_exclusive = {
+			# focus = GER_german_reich
+		# }
+		# available = {
+			# has_government = communism
+		# }
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			news_event = GER_news.14
-			add_political_power = 150
-			add_war_support = 0.05
-			add_popularity = { ideology = communism popularity = 0.10 }
-			set_cosmetic_tag = GER
-		}
+		# completion_reward = {
+			# news_event = GER_news.14
+			# add_political_power = 150
+			# add_war_support = 0.05
+			# add_popularity = { ideology = communism popularity = 0.10 }
+			# set_cosmetic_tag = GER
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
 	
-	focus = {
-		id = GER_take_silesia_radical
-		icon = wehrmacht
+	# focus = {
+		# id = GER_take_silesia_radical
+		# icon = wehrmacht
 		
-		x = 1
-		y = 1
-		relative_position_id = GER_german_reich
+		# x = 1
+		# y = 1
+		# relative_position_id = GER_german_reich
 		
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_german_reich
-			focus = GER_german_socialist_republic
-		}
+		# prerequisite = {
+			# focus = GER_german_reich
+			# focus = GER_german_socialist_republic
+		# }
 	
-		bypass = {}
-		select_effect = {}
+		# bypass = {}
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 2
-				name = "Challenge to Austria"
-			}
-			create_wargoal = {
-				type = take_state_focus
-				generator = { 66 67 }
-				target = AUS
-			}
-		}
-	}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 2
+				# name = "Challenge to Austria"
+			# }
+			# create_wargoal = {
+				# type = take_state_focus
+				# generator = { 66 67 }
+				# target = AUS
+			# }
+		# }
+	# }
 	
-		focus = {
-		id = GER_secure_alsace_lorraine_radical
-		icon = war3
+		# focus = {
+		# id = GER_secure_alsace_lorraine_radical
+		# icon = war3
 		
-		x = 0
-		y = 1
-		relative_position_id = GER_take_silesia_radical
+		# x = 0
+		# y = 1
+		# relative_position_id = GER_take_silesia_radical
 
-		cost = 10
+		# cost = 10
 		
-		prerequisite = {
-			focus = GER_take_silesia_radical
-		}
-		mutually_exclusive = {}
-		available = {
-			is_subject = no
-			FRA = { NOT = { is_subject_of = ROOT } }
-			NOT = { is_in_faction_with = FRA }
-			FRA = {
-				OR = {
-					owns_state = 28
-					owns_state = 42
-					owns_state = 51
-				}
-			}
-		}
-		bypass = {
-			has_war_with = FRA
-		}
-		select_effect = {}
+		# prerequisite = {
+			# focus = GER_take_silesia_radical
+		# }
+		# mutually_exclusive = {}
+		# available = {
+			# is_subject = no
+			# FRA = { NOT = { is_subject_of = ROOT } }
+			# NOT = { is_in_faction_with = FRA }
+			# FRA = {
+				# OR = {
+					# owns_state = 28
+					# owns_state = 42
+					# owns_state = 51
+				# }
+			# }
+		# }
+		# bypass = {
+			# has_war_with = FRA
+		# }
+		# select_effect = {}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		# cancel_if_invalid = yes
+		# continue_if_invalid = no
+		# available_if_capitulated = no
 
-		completion_reward = {
-			add_named_threat = {
-				threat = 2
-				name = "Challenge to France"
-			}
-			add_state_core = 28
-			add_state_core = 42
-			add_state_core = 51
-			create_wargoal = {
-				type = take_state_focus
-				generator = { 28 42 51 }
-				target = FRA
-			}
-		}
+		# completion_reward = {
+			# add_named_threat = {
+				# threat = 2
+				# name = "Challenge to France"
+			# }
+			# add_state_core = 28
+			# add_state_core = 42
+			# add_state_core = 51
+			# create_wargoal = {
+				# type = take_state_focus
+				# generator = { 28 42 51 }
+				# target = FRA
+			# }
+		# }
 
-		ai_will_do = {
-			base = 10
-		}
-	}
+		# ai_will_do = {
+			# base = 10
+		# }
+	# }
+}

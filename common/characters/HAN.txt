@@ -31,7 +31,7 @@ characters={
 	}
 	
 	HAN_wilhelm_keitel = {
-		name = "Ernst Thälmann" 
+		name = "Wilhelm Keitel" 
 		portraits = {
 			army = {
 				large = "gfx/leaders/HAN/HAN_wilhelm_keitel.png"

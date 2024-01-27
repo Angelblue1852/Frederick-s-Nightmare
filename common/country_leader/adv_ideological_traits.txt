@@ -9,31 +9,31 @@ leader_traits = {
 		ai_will_do = { factor = 1 }
 	}
 
-	communist_revolutionary = {
-		random = no
+	# communist_revolutionary = {
+		# random = no
 		
 		 
-		communism_drift = 0.1
+		# communism_drift = 0.1
 		
-		ai_will_do = { factor = 1 }
-	}
+		# ai_will_do = { factor = 1 }
+	# }
 	
-	democratic_reformer = {
-		random = no
+	# democratic_reformer = {
+		# random = no
 		
 		 
-		democratic_drift = 0.1
+		# democratic_drift = 0.1
 		
-		ai_will_do = { factor = 1 }
-	}
+		# ai_will_do = { factor = 1 }
+	# }
 	
-	fascist_demagogue = {
-		random = no
+	# fascist_demagogue = {
+		# random = no
 		
 		 
-		fascism_drift = 0.1
+		# fascism_drift = 0.1
 		
-		ai_will_do = { factor = 1 }
-	}
+		# ai_will_do = { factor = 1 }
+	# }
 	
 }

@@ -936,13 +936,22 @@ country_event = {
 	
 	option = {
 		name = USA.26.a
-		create_wargoal = { type = take_claimed_state target = SPR. }
+		ai_chance = { factor = 25 }
+		create_wargoal = { type = take_claimed_state target = SPR }
 		add_state_claim = 624
 		add_state_claim = 628
 		add_state_claim = 626
 		add_state_claim = 625
 		add_state_claim = 627
 		add_state_claim = 638
+	}
+	option = {
+		name = USA.26.b
+		ai_chance = { factor = 75 }
+		add_opinion_modifier = {
+					target = SPR
+					modifier = diplomatic_insult
+				}
 	}
 }
 
@@ -970,7 +979,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-			USA = { country_event = { id = USA.27 hours = 12 } }
+			USA = { country_event = { id = USA.28 hours = 12 } }
 	}
 }
 
@@ -988,8 +997,17 @@ country_event = {
 	option = {
 		name = USA.28.a
 		create_wargoal = { type = take_claimed_state target = SWE }
+		ai_chance = { factor = 25 }
 		add_state_claim = 327
 		add_state_claim = 623
+	}
+	option = {
+		name = USA.28.b
+		ai_chance = { factor = 75 }
+		add_opinion_modifier = {
+					target = SWE
+					modifier = diplomatic_insult
+				}
 	}
 }
 
@@ -1012,22 +1030,38 @@ country_event = {
 	option = { # Never!
 		name =  USA.29.b
 		ai_chance = { factor = 50 }
-			USA = { country_event = { id = USA.29 hours = 12 } }
+			USA = { 
+				add_opinion_modifier = {
+					target = CAN
+					modifier = diplomatic_insult
+				}
+			}
 	}
 }
 
-#country_event = {
-#	id = USA.30
-#	title = USA.30.t
-#	desc = USA.30.d
-#	
-#	picture = "blank"
-#		
-#	is_triggered_only = yes
-#	
-#	fire_only_once = yes
-#	
-#	option = {
-#		name = USA.30.a
-#	}
-#}
+country_event = {
+	id = USA.30
+	title = USA.30.t
+	desc = USA.30.d
+	
+	picture = "blank"
+		
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = USA.30.a
+		create_wargoal = { type = take_claimed_state target = CAN }
+		ai_chance = { factor = 25 }
+		add_state_claim = 463
+	}
+	option = {
+		name = USA.30.b
+		ai_chance = { factor = 75 }
+		add_opinion_modifier = {
+					target = CAN
+					modifier = diplomatic_insult
+				}
+	}
+}

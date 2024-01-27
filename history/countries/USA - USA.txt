@@ -170,8 +170,8 @@ recruit_character = USA_adna_chaffee
 recruit_character = USA_john_pershing
 recruit_character = USA_theodor_geisel
 
-
-
+recruit_character = USA_fort_advisor
+recruit_character = USA_quartermaster
 
 
 

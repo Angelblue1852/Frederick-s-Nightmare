@@ -462,7 +462,122 @@ characters={
 			maneuvering_skill = 1
 		}
 	}
-	
+	GER_heinz_guderian ={
+	name=GER_heinz_guderian
+		portraits={
+			army={
+				large=GFX_portrait_GER_heinz_guderian
+				small="GFX_idea_heinz_guderian"
+			}
+		}
+		advisor={
+		available = {
+			has_completed_focus = GER_expand_the_general_staff
+		}
+			cost = 200
+			slot = theorist
+			idea_token = heinz_guderian
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				blitzkrieg_theorist
+			}
+		}
+	}
+	GER_friedrich_paulus={
+		name=GER_friedrich_paulus
+		portraits={
+			army={
+				large=GFX_portrait_GER_friedrich_paulus
+				small=GFX_portrait_GER_friedrich_paulus_small
+			}
+		}
+	}
+	GER_wilhelm_list={
+		name=GER_wilhelm_list
+		portraits={
+			army={
+				large=GFX_portrait_GER_wilhelm_list
+				small=GFX_portrait_GER_wilhelm_list_small
+			}
+		}
+	}
+
+	GER_ewald_von_kleist={
+		name=GER_ewald_von_kleist
+		portraits={
+			army={
+				large=GFX_portrait_GER_ewald_von_kleist
+				small=GFX_portrait_GER_ewald_von_kleist_small
+			}
+		}
+	}
+	GER_albert_kesselring={
+		name = GER_albert_kesselring
+		portraits={
+			army={
+				small="GFX_idea_albert_kesselring"
+			}
+			army={
+				large=GFX_portrait_GER_albert_kesselring
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = albert_kesselring
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_expand_the_general_staff
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	GER_wilhelm_ritter_von_leeb={
+		name=GER_wilhelm_ritter_von_leeb
+		portraits={
+			army={
+				large=GFX_portrait_GER_wilhelm_ritter_von_leeb
+				small=GFX_portrait_GER_wilhelm_ritter_von_leeb_small
+			}
+		}
+	}
+	GER_friedrich_schulz={
+		name=GER_friedrich_schulz
+		portraits={
+			army={
+				large=GFX_portrait_GER_friedrich_schulz
+				small=GFX_portrait_GER_friedrich_schulz_small
+			}
+		}
+	}
+	GER_weapons_advisor ={
+		name=GER_weapons
+		portraits={
+			army={
+				small=GFX_idea_GER_generic_3
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_Muller
+			available = {
+				has_completed_focus = GER_invest_in_koenigsberg_artillery
+			}
+			traits  = {
+				armaments_organizer
+			}
+		}
+	}
 	
 }
 	

@@ -1,19 +1,22 @@
 ﻿l_english:
  ####Decisions####
-JAP_fengtian_war:0 "Third Sino-Japanese Conflict"
-JAP_fengtian_deadline:0 "Japanese-Fengtian War"
-JAP_fengtian_deadline_desc:0 "Displeased by the slower and methodical approach taken by the general staff, a cabal of young officers have staged a false flag against the Mantetsu to justify an invasion against Fengtian. If the ploy is to succeed, the war against Zhang must be quick. For we risk the public's interest turning against us the longer the war drags on, and the government may become sufficiently emboldened to stop us."
-JAP_conquest_of_siberia:0 "Conquest of Siberia"
-JAP_conquest_of_siberia_desc:0 "Conquest of Siberia"
-JAP_establish_the_femd:0 "Establish the Far East Military Area"
-JAP_fate_of_yakutia:0 "Fate of Yakutia"
-JAP_fate_of_west_siberia:0 "Fate of Siberia"
-JAP_fate_of_transamur:0 "Fate of Transamur"
+ JAP_fengtian_war:0 "Third Sino-Japanese Conflict"
+ JAP_fengtian_deadline:0 "Japanese-Fengtian War"
+ JAP_fengtian_deadline_desc:0 "Displeased by the slower and methodical approach taken by the general staff, a cabal of young officers have staged a false flag against the Mantetsu to justify an invasion against Fengtian. If the ploy is to succeed, the war against Zhang must be quick. For we risk the public's interest turning against us the longer the war drags on, and the government may become sufficiently emboldened to stop us."
+ JAP_conquest_of_siberia:0 "Conquest of Siberia"
+ JAP_conquest_of_siberia_desc:0 "Conquest of Siberia"
+ JAP_establish_the_femd:0 "Establish the Far East Military Area"
+ JAP_fate_of_yakutia:0 "Fate of Yakutia"
+ JAP_fate_of_west_siberia:0 "Fate of Siberia"
+ JAP_fate_of_transamur:0 "Fate of Transamur"
 
 
-####country flags####
-fema_established:0 "The Far East Military Area has been established"
-fema_expanded:0 "The Far East Military Area has been expanded"
-siberia_established:0 "Siberia has been established"
-siberia_expanded:0 "Siberia has been expanded"
-yakutia_established:0 "Yakutia has been established"
+ ####country flags####
+ fema_established:0 "The Far East Military Area has been established"
+ fema_expanded:0 "The Far East Military Area has been expanded"
+ siberia_established:0 "Siberia has been established"
+ siberia_expanded:0 "Siberia has been expanded"
+ yakutia_established:0 "Yakutia has been established"
+ 
+ freedom_league:0 "Freedom League"
+ german_confederation:0 "German Confederation"

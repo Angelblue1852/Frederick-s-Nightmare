@@ -704,5 +704,42 @@ characters={
 		}
 	}
 	
+	USA_fort_advisor ={
+		name = "Braxton Tyler"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_5
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Tyler
+			available = {
+				has_completed_focus = USA_army_focus
+			}
+			traits  = {
+				fortification_engineer
+			}
+		}
+	}
+	USA_quartermaster = {
+		name = "Edmund Washington"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Washington
+			available = {
+				has_completed_focus = USA_army_focus
+			}
+			traits  = {
+				quartermaster_general
+			}
+		}
+	}
+	
 }
 	

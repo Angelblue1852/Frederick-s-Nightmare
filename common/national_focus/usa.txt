@@ -193,7 +193,7 @@ focus_tree = {
 				add_popularity = { ideology = democratic popularity = 0.01 }
 			}
 			random_country = {
-				limit = { original_tag = LOU has_government = democratic }
+				limit = { original_tag = LOU OR = { has_government = democratic has_government = neutrality} }
 				add_opinion_modifier = {
 					target = USA
 					modifier = diplomatic_friendship
@@ -366,12 +366,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_chief_of_navy
-			show_ideas_tooltip = generic_capital_ship_navy_chief
-			custom_effect_tooltip = available_chief_of_navy
-			show_ideas_tooltip = generic_maneuver_navy_chief
-			custom_effect_tooltip = available_chief_of_navy
-			show_ideas_tooltip = generic_submarine_navy_chief
+			#custom_effect_tooltip = available_chief_of_navy
+			#show_ideas_tooltip = generic_capital_ship_navy_chief
+			#custom_effect_tooltip = available_chief_of_navy
+			#show_ideas_tooltip = generic_maneuver_navy_chief
+			#custom_effect_tooltip = available_chief_of_navy
+			#show_ideas_tooltip = generic_submarine_navy_chief
 			navy_experience = 50
 			add_tech_bonus = {
 				name = ss_bonus
@@ -471,7 +471,7 @@ focus_tree = {
 				add_popularity = { ideology = democratic popularity = 0.01 }
 			}
 			random_country = {
-				limit = { original_tag = SOU has_government = democratic }
+				limit = { original_tag = SOU OR = { has_government = democratic has_government = neutrality} }
 				add_opinion_modifier = {
 					target = USA
 					modifier = diplomatic_friendship
@@ -846,8 +846,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_chief_of_navy
-			show_ideas_tooltip = generic_high_command_navy_amphibious_assaulter
+			#custom_effect_tooltip = available_chief_of_navy
+			#show_ideas_tooltip = generic_high_command_navy_amphibious_assaulter
 			add_tech_bonus = {
 				name = special_forces_bonus
 				bonus = 0.75
@@ -1131,13 +1131,13 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_fortification_engineer
+			show_ideas_tooltip = USA_Tyler
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_quartermaster_general
-			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = generic_organization_army_chief
-			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = generic_offensive_army_chief
+			show_ideas_tooltip = USA_Washington
+			#custom_effect_tooltip = available_chief_of_army
+			#show_ideas_tooltip = generic_organization_army_chief
+			#custom_effect_tooltip = available_chief_of_army
+			#show_ideas_tooltip = generic_offensive_army_chief
 			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -1238,8 +1238,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = generic_high_command_air_airborne_commander
+			#custom_effect_tooltip = available_chief_of_army
+			#show_ideas_tooltip = generic_high_command_air_airborne_commander
 			army_experience = 15
 			add_tech_bonus = {
 				name = special_forces_bonus
@@ -1988,6 +1988,7 @@ focus_tree = {
 			custom_effect_tooltip = "This will create three synthetic refineries."
 			create_random_refinery_1 = yes
 			create_random_refinery_1 = yes
+			create_random_refinery_1 = yes
 		}
 
 		ai_will_do = {
@@ -2256,12 +2257,15 @@ focus_tree = {
 				create_wargoal = { type = annex_everything target = TEX }
 				create_wargoal = {
 				type = take_state_focus
-				generator = { 375 376 377 }
+				generator = { 376 377 937 943 944 }
 				target = MEX
 			}
 				add_state_core = 375
 				add_state_core = 376
-				add_state_core = 377	
+				add_state_core = 377
+				add_state_core = 937
+				add_state_core = 943
+				add_state_core = 944		
 			}
 			else_if = {
 				limit = {
@@ -2271,575 +2275,578 @@ focus_tree = {
 			add_state_core = 375
 			add_state_core = 376
 			add_state_core = 377	
+			add_state_core = 937
+			add_state_core = 943
+			add_state_core = 944	
 		}
 	}
 }
-		focus = {
-		id = USA_Looking_Out
-		prerequisite = { focus = USA_integrate_farwest }
-		x = 0
-		y = 3
-		relative_position_id = USA_integrate_farwest
-		cost = 10
-		available_if_capitulated = yes
+		# focus = {
+		# id = USA_Looking_Out
+		# prerequisite = { focus = USA_integrate_farwest }
+		# x = 0
+		# y = 3
+		# relative_position_id = USA_integrate_farwest
+		# cost = 10
+		# available_if_capitulated = yes
 			
-		completion_reward = {
-			add_political_power = 50
-			}
-		}
+		# completion_reward = {
+			# add_political_power = 50
+			# }
+		# }
 		
-		focus = {
-		id = USA_Communist_Alliance
-		prerequisite = { focus = USA_Looking_Out }
-		available = {
-			has_government = communism
-		}
-		mutually_exclusive = {
-			focus = USA_Neutral_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Democratic_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Freedom_League
-		}
-		mutually_exclusive = {
-			focus = USA_Fascist_Alliance
-		}
-		x = -6
-		y = 1
-		relative_position_id = USA_Looking_Out
-		cost = 10
-		available_if_capitulated = yes
+		# focus = {
+		# id = USA_Communist_Alliance
+		# prerequisite = { focus = USA_Looking_Out }
+		# available = {
+			# has_government = communism
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Neutral_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Democratic_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Freedom_League
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Fascist_Alliance
+		# }
+		# x = -6
+		# y = 1
+		# relative_position_id = USA_Looking_Out
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = USA_Join_Comitern
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = USA_Communist_Alliance }
-		available = {
-			has_government = communism
-			SOV = { has_government = communism }
-			is_subject = no
-			SOV = { is_subject = no }
-			SOV = { is_faction_leader = yes }
-			is_in_faction = no
-			}
-		x = 1
-		y = 1
-		relative_position_id = USA_Communist_Alliance
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+		# }
+	# }
+	# focus = {
+		# id = USA_Join_Comitern
+		# icon = GFX_goal_generic_major_alliance
+		# prerequisite = { focus = USA_Communist_Alliance }
+		# available = {
+			# has_government = communism
+			# SOV = { has_government = communism }
+			# is_subject = no
+			# SOV = { is_subject = no }
+			# SOV = { is_faction_leader = yes }
+			# is_in_faction = no
+			# }
+		# x = 1
+		# y = 1
+		# relative_position_id = USA_Communist_Alliance
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			SOV = { 
-				country_event = {
-					id = SOV.10 days = 2
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_Join_Socialist_Alliance
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = USA_Communist_Alliance }
-		available = {
-			has_government = communism
-			MEX = { has_government = communism }
-			is_subject = no
-			MEX = { is_subject = no }
-			MEX = { is_faction_leader = yes }
-			is_in_faction = no
-			}
-		x = -1
-		y = 1
-		relative_position_id = USA_Communist_Alliance
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+			# SOV = { 
+				# country_event = {
+					# id = SOV.10 days = 2
+				# }
+			# }
+		# }
+	# }
+	# focus = {
+		# id = USA_Join_Socialist_Alliance
+		# icon = GFX_goal_generic_major_alliance
+		# prerequisite = { focus = USA_Communist_Alliance }
+		# available = {
+			# has_government = communism
+			# MEX = { has_government = communism }
+			# is_subject = no
+			# MEX = { is_subject = no }
+			# MEX = { is_faction_leader = yes }
+			# is_in_faction = no
+			# }
+		# x = -1
+		# y = 1
+		# relative_position_id = USA_Communist_Alliance
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			MEX = { 
-				country_event = {
-					id = MEX.7 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# MEX = { 
+				# country_event = {
+					# id = MEX.7 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_Neutral_Alliance
-		prerequisite = { focus = USA_Looking_Out }
-		available = {
-			has_government = neutrality
-		}
-		mutually_exclusive = {
-			focus = USA_Freedom_League
-		}
-		mutually_exclusive = {
-			focus = USA_Democratic_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Communist_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Fascist_Alliance
-		}
-		x = 7
-		y = 1
-		relative_position_id = USA_Looking_Out
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Neutral_Alliance
+		# prerequisite = { focus = USA_Looking_Out }
+		# available = {
+			# has_government = neutrality
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Freedom_League
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Democratic_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Communist_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Fascist_Alliance
+		# }
+		# x = 7
+		# y = 1
+		# relative_position_id = USA_Looking_Out
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-		}
-	}
-		focus = {
-		id = USA_Join_Holy_Alliance
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = USA_Neutral_Alliance }
-		available = {
-			has_government = neutrality
-			SOV = { has_government = neutrality }
-			is_subject = no
-			SOV = { is_subject = no }
-			SOV = { is_faction_leader = yes }
-			is_in_faction = no
-			}
-		x = -1
-		y = 1
-		relative_position_id = USA_Neutral_Alliance
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+		# }
+	# }
+		# focus = {
+		# id = USA_Join_Holy_Alliance
+		# icon = GFX_goal_generic_major_alliance
+		# prerequisite = { focus = USA_Neutral_Alliance }
+		# available = {
+			# has_government = neutrality
+			# SOV = { has_government = neutrality }
+			# is_subject = no
+			# SOV = { is_subject = no }
+			# SOV = { is_faction_leader = yes }
+			# is_in_faction = no
+			# }
+		# x = -1
+		# y = 1
+		# relative_position_id = USA_Neutral_Alliance
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			SOV = { 
-				country_event = {
-					id = SOV.7 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# SOV = { 
+				# country_event = {
+					# id = SOV.7 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_join_danube_pact
-		icon = major_alliance
-		prerequisite = { focus = USA_Neutral_Alliance }
-		available = {
-			has_government = neutrality
-			AUS = { has_government = neutrality }
-			is_subject = no
-			AUS = { is_subject = no }
-			AUS = { is_faction_leader = yes }
-			is_in_faction = no
-			}
-		x = 1
-		y = 1
-		relative_position_id = USA_Neutral_Alliance
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_join_danube_pact
+		# icon = major_alliance
+		# prerequisite = { focus = USA_Neutral_Alliance }
+		# available = {
+			# has_government = neutrality
+			# AUS = { has_government = neutrality }
+			# is_subject = no
+			# AUS = { is_subject = no }
+			# AUS = { is_faction_leader = yes }
+			# is_in_faction = no
+			# }
+		# x = 1
+		# y = 1
+		# relative_position_id = USA_Neutral_Alliance
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			AUS = { 
-				country_event = {
-					id = AUS.3 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# AUS = { 
+				# country_event = {
+					# id = AUS.3 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_Democratic_Alliance
-		prerequisite = { focus = USA_Looking_Out }
-		available = {
-			has_government = democratic
-			has_completed_focus = USA_american_idealism
-			is_faction_leader = no
-		}
-		mutually_exclusive = {
-			focus = USA_Neutral_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Freedom_League
-		}
-		mutually_exclusive = {
-			focus = USA_Communist_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Fascist_Alliance
-		}
-		x = 11
-		y = 1
-		relative_position_id = USA_Looking_Out
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Democratic_Alliance
+		# prerequisite = { focus = USA_Looking_Out }
+		# available = {
+			# has_government = democratic
+			# has_completed_focus = USA_american_idealism
+			# is_faction_leader = no
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Neutral_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Freedom_League
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Communist_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Fascist_Alliance
+		# }
+		# x = 11
+		# y = 1
+		# relative_position_id = USA_Looking_Out
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = USA_Join_Commonwealth
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = USA_Democratic_Alliance }
-		available = {
-			has_government = democratic
-			ENG = { has_government = democratic }
-			is_subject = no
-			ENG = { is_subject = no }
-			ENG = { is_faction_leader = yes }
-			is_in_faction = no
-			}
-		x = 1
-		y = 1
-		relative_position_id = USA_Democratic_Alliance
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+		# }
+	# }
+	# focus = {
+		# id = USA_Join_Commonwealth
+		# icon = GFX_goal_generic_major_alliance
+		# prerequisite = { focus = USA_Democratic_Alliance }
+		# available = {
+			# has_government = democratic
+			# ENG = { has_government = democratic }
+			# is_subject = no
+			# ENG = { is_subject = no }
+			# ENG = { is_faction_leader = yes }
+			# is_in_faction = no
+			# }
+		# x = 1
+		# y = 1
+		# relative_position_id = USA_Democratic_Alliance
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			ENG = { 
-				country_event = {
-					id = ENG.6 days = 2
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_Join_German_Alliance
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = USA_Democratic_Alliance }
-		available = {
-			has_government = democratic
-			GER = { has_government = democratic }
-			is_subject = no
-			GER = { is_subject = no }
-			GER = { is_faction_leader = yes }
-			is_in_faction = no
-			}
-		x = -1
-		y = 1
-		relative_position_id = USA_Democratic_Alliance
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+			# ENG = { 
+				# country_event = {
+					# id = ENG.6 days = 2
+				# }
+			# }
+		# }
+	# }
+	# focus = {
+		# id = USA_Join_German_Alliance
+		# icon = GFX_goal_generic_major_alliance
+		# prerequisite = { focus = USA_Democratic_Alliance }
+		# available = {
+			# has_government = democratic
+			# GER = { has_government = democratic }
+			# is_subject = no
+			# GER = { is_subject = no }
+			# GER = { is_faction_leader = yes }
+			# is_in_faction = no
+			# }
+		# x = -1
+		# y = 1
+		# relative_position_id = USA_Democratic_Alliance
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			GER = { 
-				country_event = {
-					id = GER.11 days = 2
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_Fascist_Alliance
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = USA_Looking_Out }
-		available = {
-			has_government = fascism
-		}
-		mutually_exclusive = {
-			focus = USA_Neutral_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Democratic_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Communist_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Freedom_League
-		}
-		x = -9
-		y = 1
-		relative_position_id = USA_Looking_Out
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+			# GER = { 
+				# country_event = {
+					# id = GER.11 days = 2
+				# }
+			# }
+		# }
+	# }
+	# focus = {
+		# id = USA_Fascist_Alliance
+		# icon = GFX_goal_generic_major_alliance
+		# prerequisite = { focus = USA_Looking_Out }
+		# available = {
+			# has_government = fascism
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Neutral_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Democratic_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Communist_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Freedom_League
+		# }
+		# x = -9
+		# y = 1
+		# relative_position_id = USA_Looking_Out
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-		}
-	}
-		focus = {
-		id = USA_Join_Imperial_Alliance
-		prerequisite = { focus = USA_Fascist_Alliance }
-		available = {
-			has_government = fascism
-			JAP = { has_government = fascism }
-			is_subject = no
-			JAP = { is_subject = no }
-			JAP = { is_faction_leader = yes }
-			is_in_faction = no
-			}
-		x = 0
-		y = 1
-		relative_position_id = USA_Fascist_Alliance
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+		# }
+	# }
+		# focus = {
+		# id = USA_Join_Imperial_Alliance
+		# prerequisite = { focus = USA_Fascist_Alliance }
+		# available = {
+			# has_government = fascism
+			# JAP = { has_government = fascism }
+			# is_subject = no
+			# JAP = { is_subject = no }
+			# JAP = { is_faction_leader = yes }
+			# is_in_faction = no
+			# }
+		# x = 0
+		# y = 1
+		# relative_position_id = USA_Fascist_Alliance
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			JAP = { 
-				country_event = {
-					id = JAP.4 days = 2
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_Freedom_League
-		prerequisite = { focus = USA_Looking_Out }
-		available = {
-			is_faction_leader = yes
-		}
-		mutually_exclusive = {
-			focus = USA_Neutral_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Democratic_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Communist_Alliance
-		}
-		mutually_exclusive = {
-			focus = USA_Fascist_Alliance
-		}
-		x = 0
-		y = 1
-		relative_position_id = USA_Looking_Out
-		cost = 10
-		available_if_capitulated = yes
+		# completion_reward = {
+			# JAP = { 
+				# country_event = {
+					# id = JAP.4 days = 2
+				# }
+			# }
+		# }
+	# }
+	# focus = {
+		# id = USA_Freedom_League
+		# prerequisite = { focus = USA_Looking_Out }
+		# available = {
+			# is_faction_leader = yes
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Neutral_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Democratic_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Communist_Alliance
+		# }
+		# mutually_exclusive = {
+			# focus = USA_Fascist_Alliance
+		# }
+		# x = 0
+		# y = 1
+		# relative_position_id = USA_Looking_Out
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			ENG = { 
-				country_event = {
-					id = USA.21 days = 2
-				}
-			}
-			FRA = {
-				country_event = {
-					id = USA.24 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# ENG = { 
+				# country_event = {
+					# id = USA.21 days = 2
+				# }
+			# }
+			# FRA = {
+				# country_event = {
+					# id = USA.24 days = 2
+				# }
+			# }
+		# }
+	# }
 	
 	
-	focus = {
-		id = USA_Invite_Quebec
-		prerequisite = { focus = USA_Freedom_League }
-		available = {
-			has_government = democratic
-			is_faction_leader = yes
-			CAN = { has_government = democratic }
-			is_subject = no
-			CAN = { is_subject = no }
-			CAN = { is_faction_leader = yes }
-		}
-		x = -2
-		y = 2
-		relative_position_id = USA_Freedom_League
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Invite_Quebec
+		# prerequisite = { focus = USA_Freedom_League }
+		# available = {
+			# has_government = democratic
+			# is_faction_leader = yes
+			# CAN = { has_government = democratic }
+			# is_subject = no
+			# CAN = { is_subject = no }
+			# CAN = { is_faction_leader = yes }
+		# }
+		# x = -2
+		# y = 2
+		# relative_position_id = USA_Freedom_League
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			CAN = {
-				country_event = {
-					id = USA.22 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# CAN = {
+				# country_event = {
+					# id = USA.22 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_invite_japan
-		icon = major_alliance2
-		prerequisite = { focus = USA_Freedom_League }
-		available = {
-			has_government = democratic
-			is_faction_leader = yes
-			JAP = { has_government = democratic }
-			is_subject = no
-			JAP = { is_subject = no }
-			AND = {JAP = { is_in_faction = no }
-				  JAP = { NOT = { is_in_faction_with = USA } }
-		}
-		}
-		x = 2
-		y = 2
-		relative_position_id = USA_Freedom_League
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_invite_japan
+		# icon = major_alliance2
+		# prerequisite = { focus = USA_Freedom_League }
+		# available = {
+			# has_government = democratic
+			# is_faction_leader = yes
+			# JAP = { has_government = democratic }
+			# is_subject = no
+			# JAP = { is_subject = no }
+			# AND = {JAP = { is_in_faction = no }
+				  # JAP = { NOT = { is_in_faction_with = USA } }
+		# }
+		# }
+		# x = 2
+		# y = 2
+		# relative_position_id = USA_Freedom_League
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			JAP = {
-				country_event = {
-					id = USA.60 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# JAP = {
+				# country_event = {
+					# id = USA.60 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_Expand_Freedom_League
-		prerequisite = { focus = USA_Freedom_League }
-		available = {
-			is_faction_leader = yes
-		}
-		x = 0
-		y = 5
-		relative_position_id = USA_Freedom_League
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Expand_Freedom_League
+		# prerequisite = { focus = USA_Freedom_League }
+		# available = {
+			# is_faction_leader = yes
+		# }
+		# x = 0
+		# y = 5
+		# relative_position_id = USA_Freedom_League
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			if = {
-				limit = {
-					COL = { has_government = democratic }
-					COL = { is_subject = no }
-					COL = { is_in_faction = no }
-					COL = { NOT = { has_war_with = USA } }
-				}
-				COL = { country_event = { id = generic.1 days = 1 } }
-			}
-			if = {
-				limit = {
-					DEN = { has_government = democratic }
-					DEN = { is_subject = no }
-					DEN = { is_in_faction = no }
-					DEN = { NOT = { has_war_with = USA } }
-				}
-				DEN = { country_event = { id = generic.1 days = 1 } }
-			}
-			if = {
-				limit = {
-					GUA = { has_government = democratic }
-					GUA = { is_subject = no }
-					GUA = { is_in_faction = no }
-					GUA = { NOT = { has_war_with = USA } }
-				}
-				GUA = { country_event = { id = generic.1 days = 1 } }
-			}
-			if = {
-				limit = {
-					NOR = { has_government = democratic }
-					NOR = { is_subject = no }
-					NOR = { is_in_faction = no }
-					NOR = { NOT = { has_war_with = USA } }
-				}
-				NOR = { country_event = { id = generic.1 days = 1 } }
-			}
-		}
-	}
+		# completion_reward = {
+			# if = {
+				# limit = {
+					# COL = { has_government = democratic }
+					# COL = { is_subject = no }
+					# COL = { is_in_faction = no }
+					# COL = { NOT = { has_war_with = USA } }
+				# }
+				# COL = { country_event = { id = generic.1 days = 1 } }
+			# }
+			# if = {
+				# limit = {
+					# DEN = { has_government = democratic }
+					# DEN = { is_subject = no }
+					# DEN = { is_in_faction = no }
+					# DEN = { NOT = { has_war_with = USA } }
+				# }
+				# DEN = { country_event = { id = generic.1 days = 1 } }
+			# }
+			# if = {
+				# limit = {
+					# GUA = { has_government = democratic }
+					# GUA = { is_subject = no }
+					# GUA = { is_in_faction = no }
+					# GUA = { NOT = { has_war_with = USA } }
+				# }
+				# GUA = { country_event = { id = generic.1 days = 1 } }
+			# }
+			# if = {
+				# limit = {
+					# NOR = { has_government = democratic }
+					# NOR = { is_subject = no }
+					# NOR = { is_in_faction = no }
+					# NOR = { NOT = { has_war_with = USA } }
+				# }
+				# NOR = { country_event = { id = generic.1 days = 1 } }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_Invite_Ireland
-		prerequisite = { focus = USA_Freedom_League }
-		available = {
-			has_government = democratic
-			is_faction_leader = yes
-			IRE = { has_government = democratic }
-			is_subject = no
-			IRE = { is_subject = no }
-			AND = {IRE = { is_in_faction = no }
-				  IRE = { NOT = { is_in_faction_with = USA } }
-		}
-	}
-		x = -3
-		y = 1
-		relative_position_id = USA_Freedom_League
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Invite_Ireland
+		# prerequisite = { focus = USA_Freedom_League }
+		# available = {
+			# has_government = democratic
+			# is_faction_leader = yes
+			# IRE = { has_government = democratic }
+			# is_subject = no
+			# IRE = { is_subject = no }
+			# AND = {IRE = { is_in_faction = no }
+				  # IRE = { NOT = { is_in_faction_with = USA } }
+		# }
+	# }
+		# x = -3
+		# y = 1
+		# relative_position_id = USA_Freedom_League
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			IRE = { 
-				country_event = {
-					id = USA.46 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# IRE = { 
+				# country_event = {
+					# id = USA.46 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_Invite_Netherlands
-		prerequisite = { focus = USA_Freedom_League }
-		available = {
-			has_government = democratic
-			is_faction_leader = yes
-			HOL = { has_government = democratic }
-			is_subject = no
-			HOL = { is_subject = no }
-			AND = {HOL = { is_in_faction = no }
-				  HOL = { NOT = { is_in_faction_with = USA } }
-		}
-	}
-		x = -1
-		y = 1
-		relative_position_id = USA_Freedom_League
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Invite_Netherlands
+		# prerequisite = { focus = USA_Freedom_League }
+		# available = {
+			# has_government = democratic
+			# is_faction_leader = yes
+			# HOL = { has_government = democratic }
+			# is_subject = no
+			# HOL = { is_subject = no }
+			# AND = {HOL = { is_in_faction = no }
+				  # HOL = { NOT = { is_in_faction_with = USA } }
+		# }
+	# }
+		# x = -1
+		# y = 1
+		# relative_position_id = USA_Freedom_League
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			HOL = { 
-				country_event = {
-					id = USA.49 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# HOL = { 
+				# country_event = {
+					# id = USA.49 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_Invite_Greece
-		prerequisite = { focus = USA_Freedom_League }
-		available = {
-			has_government = democratic
-			is_faction_leader = yes
-			GRE = { has_government = democratic }
-			is_subject = no
-			GRE = { is_subject = no }
-			AND = {GRE = { is_in_faction = no }
-				  GRE = { NOT = { is_in_faction_with = USA } }
-		}
-	}
-		x = 1
-		y = 1
-		relative_position_id = USA_Freedom_League
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Invite_Greece
+		# prerequisite = { focus = USA_Freedom_League }
+		# available = {
+			# has_government = democratic
+			# is_faction_leader = yes
+			# GRE = { has_government = democratic }
+			# is_subject = no
+			# GRE = { is_subject = no }
+			# AND = {GRE = { is_in_faction = no }
+				  # GRE = { NOT = { is_in_faction_with = USA } }
+		# }
+	# }
+		# x = 1
+		# y = 1
+		# relative_position_id = USA_Freedom_League
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			GRE = { 
-				country_event = {
-					id = USA.22 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# GRE = { 
+				# country_event = {
+					# id = USA.22 days = 2
+				# }
+			# }
+		# }
+	# }
 	
-	focus = {
-		id = USA_Invite_Sweden
-		prerequisite = { focus = USA_Freedom_League }
-		available = {
-			has_government = democratic
-			is_faction_leader = yes
-			SWE = { has_government = democratic }
-			is_subject = no
-			SWE = { is_subject = no }
-			AND = {SWE = { is_in_faction = no }
-				  SWE = { NOT = { is_in_faction_with = USA } }
-		}
-	}
-		x = 3
-		y = 1
-		relative_position_id = USA_Freedom_League
-		cost = 10
-		available_if_capitulated = yes
+	# focus = {
+		# id = USA_Invite_Sweden
+		# prerequisite = { focus = USA_Freedom_League }
+		# available = {
+			# has_government = democratic
+			# is_faction_leader = yes
+			# SWE = { has_government = democratic }
+			# is_subject = no
+			# SWE = { is_subject = no }
+			# AND = {SWE = { is_in_faction = no }
+				  # SWE = { NOT = { is_in_faction_with = USA } }
+		# }
+	# }
+		# x = 3
+		# y = 1
+		# relative_position_id = USA_Freedom_League
+		# cost = 10
+		# available_if_capitulated = yes
 		
-		completion_reward = {
-			SWE = { 
-				country_event = {
-					id = USA.55 days = 2
-				}
-			}
-		}
-	}
+		# completion_reward = {
+			# SWE = { 
+				# country_event = {
+					# id = USA.55 days = 2
+				# }
+			# }
+		# }
+	# }
 			
 	focus = {
 		id = USA_Buy_Spanish_Phillippines
@@ -2882,7 +2889,7 @@ focus_tree = {
 		available_if_capitulated = yes
 			
 		completion_reward = {	
-			CAN = { country_event = { id = USA.28 hours = 12 } }
+			CAN = { country_event = { id = USA.29 hours = 12 } }
 			}
 		}
 		
