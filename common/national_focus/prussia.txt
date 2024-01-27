@@ -3573,10 +3573,14 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = GER_communist_coup
+			focus = GER_fascist_coup
 		}
 		mutually_exclusive = {}
 		available = {	
-			has_government = communism
+			OR = { 
+				has_government = communism
+				has_government = fascism
+			}
 		}
 		bypass = {
 			HAN = {
@@ -3595,11 +3599,8 @@ focus_tree = {
 				name = "Aggression in Northern Germany"
 			}
 			HAN = {
-			every_unit_leader = {
-				set_nationality = ROOT
+				country_event = HAN.2
 			}
-		}
-			annex_country = { target = HAN transfer_troops = yes }
 		}
 
 		ai_will_do = {
@@ -3730,7 +3731,10 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
+			OR {
 			has_government = fascism
+			has_government = communism
+			}
 		}
 		bypass = {
 			WUR = {
@@ -3749,12 +3753,8 @@ focus_tree = {
 				name = "Aggression in Southern Germany"
 			}
 			WUR = {
-			every_unit_leader = {
-				set_nationality = ROOT
+				country_event = WUR.6
 			}
-		}
-			annex_country = { target = WUR transfer_troops = yes }
-			
 		}
 
 		ai_will_do = {
