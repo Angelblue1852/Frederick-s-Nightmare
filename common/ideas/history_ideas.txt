@@ -32,6 +32,8 @@ ideas = {
 		aef = {
 			picture = aef
 			modifier = {
+				command_power_gain_mult = 0.1
+				experience_gain_army = 0.025
 			}
 		}
 	}

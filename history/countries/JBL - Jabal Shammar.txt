@@ -16,7 +16,9 @@ recruit_character = JBL_saud_bin_abdulaziz
 
 
 
-
+add_ideas = {
+	turkish_partnership
+}
 
 set_war_support = 0.1
 set_convoys = 20

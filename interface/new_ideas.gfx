@@ -7,6 +7,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/manchuria/GFX_puyi.png"
 	}
 	spriteType = {
+		name = "GFX_idea_turkish_partnership"
+		texturefile = "gfx/interface/ideas/turkey/GFX_turkish_support.png"
+	}
+	spriteType = {
 		name = "GFX_idea_yakut_japanese_dominion"
 		texturefile = "gfx/interface/ideas/GFX_yakut_japanese_dominion.png"
 	}
