@@ -13,3 +13,38 @@ country_event = {
 		name = HAN.1.o1
 	}
 }
+
+#German Annexation
+country_event = {
+	id = HAN.2
+	title = HAN.2.t
+	desc = HAN.2.d
+	#Needs picture
+
+	is_triggered_only = yes
+
+	option = {
+		ai_will_do = {
+			base = 5
+
+			modifier = { GER = { is_major = yes } add = 2}
+			modifier = {is_major = yes factor = 0}
+			modifier = { GER = {  has_same_ideology = yes } factor = 5 }
+		}
+		name = HAN.2.o1 #accepts German annexation
+		every_unit_leader = {
+			set_nationality = GER
+		}
+		GER = {
+			annex_country = { target = WUR transfer_troops = yes }
+		}
+	}
+
+	option = {
+		ai_will_do = {
+			base = 10
+		}
+		name = HAN.2.o2 #declines German annexation
+		
+	}
+}
