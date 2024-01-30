@@ -86,10 +86,28 @@ leader_traits = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	reactionary_author = {
+		
+
+		neutrality_drift = 0.03
+		fascism_drift = 0.02
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 	liberal_italian_nationalist = {
 		
 		democratic_drift = 0.05
 		war_support_factor = 0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	pro_czarist_minority = {
+		
+
+		neutrality_drift = 0.02
+		political_power_gain = 0.5
 		
 		ai_will_do = { factor = 1 }
 	}

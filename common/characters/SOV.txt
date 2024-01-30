@@ -97,14 +97,65 @@ characters={
 		}
 	}
 	
+	####Advisors####
 	
+	SOV_stepan_krasovsky = {
+		name = "Stepan Krasovsky" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/SOV_stepan_krasovsky.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_stepan_krasovsky.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = stepan_krasovsky
+			available = {  }
+			ledger = air
+			traits = { air_air_combat_training_2 }
+		}
+	}
 	
+	SOV_sergei_taboritsky = {
+		name = "Sergey Taboritsky" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/russia/advisors/SOV_sergei_taboritsky.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = sergei_taboritsky
+			available = {  }
+			ledger = civilian
+			traits = { reactionary_author }
+		}
+	}
+	
+	SOV_mukhamedzhan_tynyshpaev = {
+		name = "Mukhamedzhan Tynyshpaev" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/russia/advisors/SOV_mukhamedzhan_tynyshpaev.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = stepan_krasovsky
+			available = { KYR = { exists = no } }
+			ledger = civilian
+			traits = { pro_czarist_minority }
+		}
+	}
+	
+	####Generals####
 	
 	SOV_abram_dragomirov = {
 		name = "Abram Dragomirov" 
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_abram_dragomirov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_abram_dragomirov.png"
 			}
 		}
 		field_marshal = {
@@ -115,6 +166,13 @@ characters={
 			planning_skill = 4
 			logistics_skill = 3
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = abram_dragomirov
+			available = {  }
+			ledger = army
+			traits = { army_chief_old_guard }
+		}
 	}
 	
 	SOV_aleksandr_gorbatov = {
@@ -122,6 +180,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_aleksandr_gorbatov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_aleksandr_gorbatov.png"
 			}
 		}
 		corps_commander = {
@@ -139,6 +198,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_aleksandr_vasilevsky.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_aleksandr_vasilevsky.png"
 			}
 		}
 		corps_commander = {
@@ -149,6 +209,13 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = high_command
+			idea_token = aleksandr_vasilevsky
+			available = {  }
+			ledger = army
+			traits = { army_regrouping_2 }
+		}
 	}
 	
 	SOV_alexander_yegorov = {
@@ -156,6 +223,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_alexander_yegorov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_alexander_yegorov.png"
 			}
 		}
 		corps_commander = {
@@ -173,6 +241,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_alexey_kaledin.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_alexey_kaledin.png"
 			}
 		}
 		field_marshal = {
@@ -190,6 +259,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_anatoly_pepelyayev.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_anatoly_pepelyayev.png"
 			}
 		}
 		corps_commander = {
@@ -207,6 +277,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_andrey_vlasov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_andrey_vlasov.png"
 			}
 		}
 		corps_commander = {
@@ -224,6 +295,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_anton_denikin.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_anton_denikin.png"
 			}
 		}
 		corps_commander = {
@@ -241,6 +313,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_georgy_zhukov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_georgy_zhukov.png"
 			}
 		}
 		corps_commander = {
@@ -251,6 +324,13 @@ characters={
 			planning_skill = 4
 			logistics_skill = 5
 		}
+		advisor = {
+			slot = high_command
+			idea_token = georgy_zhukov
+			available = {  }
+			ledger = army
+			traits = { army_armored_2 }
+		}
 	}
 	
 	SOV_grigory_kulik = {
@@ -258,6 +338,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_grigory_kulik.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_grigory_kulik.png"
 			}
 		}
 		corps_commander = {
@@ -275,6 +356,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_grigory_semyonov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_grigory_semyonov.png"
 			}
 		}
 		corps_commander = {
@@ -292,6 +374,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_jukums_vacietis.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_jukums_vacietis.png"
 			}
 		}
 		corps_commander = {
@@ -309,6 +392,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_mikhail_diterikhs.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_mikhail_diterikhs.png"
 			}
 		}
 		corps_commander = {
@@ -326,6 +410,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_mikhail_drozdovsky.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_mikhail_drozdovsky.png"
 			}
 		}
 		corps_commander = {
@@ -343,6 +428,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_mikhail_tukhachevsky.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_mikhail_tukhachevsky.png"
 			}
 		}
 		corps_commander = {
@@ -360,6 +446,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_pyotr_krasnov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_pyotr_krasnov.png"
 			}
 		}
 		corps_commander = {
@@ -377,6 +464,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_pyotr_wrangel.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_pyotr_wrangel.png"
 			}
 		}
 		field_marshal = {
@@ -394,6 +482,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_semyon_budyonny.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_semyon_budyonny.png"
 			}
 		}
 		corps_commander = {
@@ -411,6 +500,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_semyon_timoshenko.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_semyon_timoshenko.png"
 			}
 		}
 		corps_commander = {
@@ -428,6 +518,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_andrei_shkuro.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_andrei_shkuro.png"
 			}
 		}
 		corps_commander = {
@@ -445,6 +536,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_pavlo_skoropadskyi.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_pavlo_skoropadskyi.png"
 			}
 		}
 		corps_commander = {
@@ -462,6 +554,7 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/SOV_alexander_filimonov.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_alexander_filimonov.png"
 			}
 		}
 		corps_commander = {
