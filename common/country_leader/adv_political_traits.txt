@@ -52,8 +52,8 @@ leader_traits = {
 	fascist_paramilitary = {
 		
 		 
-		conscription = 0.01
-		fascism_drift = 0.02
+		conscription = 0.1
+		fascism_drift = 0.2
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -61,8 +61,8 @@ leader_traits = {
 	radical_reformer = {
 		
 		 stability_factor = -0.1
-		democratic_drift = 0.05
-		communism_drift = 0.02
+		democratic_drift = 0.1
+		communism_drift = 0.05
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -71,8 +71,8 @@ leader_traits = {
 		
 		 
 		conscription_factor = -0.2
-		neutrality_drift = 0.05
-		fascism_drift = 0.02
+		neutrality_drift = 0.1
+		fascism_drift = 0.05
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -89,8 +89,8 @@ leader_traits = {
 	reactionary_author = {
 		
 
-		neutrality_drift = 0.03
-		fascism_drift = 0.02
+		neutrality_drift = 0.1
+		fascism_drift = 0.05
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -106,7 +106,7 @@ leader_traits = {
 	pro_czarist_minority = {
 		
 
-		neutrality_drift = 0.02
+		neutrality_drift = 0.05
 		political_power_gain = 0.5
 		
 		ai_will_do = { factor = 1 }

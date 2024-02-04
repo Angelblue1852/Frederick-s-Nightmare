@@ -18,12 +18,20 @@ characters={
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/SOV/SOV_alexander_kerensky.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_alexander_kerensky.png"
 			}
 		}
 		country_leader = {
 			ideology = socialism
 			expire = "1960.1.1.1"
 			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = alexander_kerensky
+			available = { is_country_leader = no }
+			ledger = civilian
+			traits = { democratic_reformer }
 		}
 	}
 	
@@ -98,6 +106,23 @@ characters={
 	}
 	
 	####Advisors####
+	
+	SOV_anastasy_vonsiatsky = {
+		name = "Anastasy Vonsiatsky" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/SOV_anastasy_vonsiatsky.png"
+				small = "gfx/interface/ideas/russia/advisors/SOV_anastasy_vonsiatsky.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = anastasy_vonsiatsky
+			available = {  }
+			ledger = civilian
+			traits = { fascist_paramilitary }
+		}
+	}
 	
 	SOV_stepan_krasovsky = {
 		name = "Stepan Krasovsky" 
@@ -475,6 +500,13 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = pyotr_wrangel
+			available = {  }
+			ledger = army
+			traits = { army_chief_organizational_2 }
+		}
 	}
 	
 	SOV_semyon_budyonny = {
@@ -492,6 +524,13 @@ characters={
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = semyon_budyonny
+			available = {  }
+			ledger = army
+			traits = { army_cavalry_1 }
 		}
 	}
 	
