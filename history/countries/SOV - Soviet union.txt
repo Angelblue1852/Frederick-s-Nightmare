@@ -178,6 +178,9 @@ recruit_character = SOV_stepan_krasovsky
 recruit_character = SOV_sergei_taboritsky
 recruit_character = SOV_mukhamedzhan_tynyshpaev
 recruit_character = SOV_anastasy_vonsiatsky
+recruit_character = SOV_nikolai_kondratiev
+recruit_character = SOV_wassily_leontief
+
 
 
 recruit_character = EST_ernst_podder

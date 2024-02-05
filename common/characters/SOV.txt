@@ -107,6 +107,22 @@ characters={
 	
 	####Advisors####
 	
+	SOV_nikolai_kondratiev = {
+		name = "Nikolai Kondratiev" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/russia/advisors/SOV_nikolai_kondratiev.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = nikolai_kondratiev
+			available = {  }
+			ledger = civilian
+			traits = { socialist_economist }
+		}
+	}
+	
 	SOV_anastasy_vonsiatsky = {
 		name = "Anastasy Vonsiatsky" 
 		portraits = {
@@ -121,6 +137,22 @@ characters={
 			available = {  }
 			ledger = civilian
 			traits = { fascist_paramilitary }
+		}
+	}
+	
+	SOV_wassily_leontief = {
+		name = "Wassily Leontief" 
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/russia/advisors/SOV_wassily_leontief.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = wassily_leontief
+			available = {  }
+			ledger = civilian
+			traits = { brilliant_economist }
 		}
 	}
 	
@@ -446,6 +478,13 @@ characters={
 			planning_skill = 3
 			logistics_skill = 3
 		}
+		advisor = {
+			slot = theorist
+			idea_token = mikhail_drozdovsky
+			available = {  }
+			ledger = military
+			traits = { grand_battle_plan_expert }
+		}
 	}
 	
 	SOV_mikhail_tukhachevsky = {
@@ -463,6 +502,13 @@ characters={
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 1
+		}
+		advisor = {
+			slot = theorist
+			idea_token = mikhail_tukhachevsky
+			available = {  }
+			ledger = military
+			traits = { mobile_warfare_expert }
 		}
 	}
 	
