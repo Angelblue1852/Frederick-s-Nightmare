@@ -16,4 +16,24 @@ leader_traits = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	brilliant_economist = {
+		random = no
+		
+		consumer_goods_factor = -0.05
+		production_speed_buildings_factor = 0.05
+		trade_opinion_factor = 0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	socialist_economist = {
+		random = no
+		
+		consumer_goods_factor = -0.05
+		global_building_slots = 1
+		communism_drift = 0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 }

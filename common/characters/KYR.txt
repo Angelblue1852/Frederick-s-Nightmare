@@ -34,7 +34,7 @@ characters={
 			idea_token = mukhamedzhan_tynyshpaev
 			available = { is_country_leader = no }
 			ledger = civilian
-			traits = { local_administrator }
+			traits = { pro_czarist_minority }
 		}
 	}
 }
