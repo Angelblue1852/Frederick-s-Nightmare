@@ -1,4 +1,4 @@
-﻿capital = 333
+﻿capital = 4
 
 if = {
 	limit = {

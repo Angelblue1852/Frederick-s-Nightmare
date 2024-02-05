@@ -23,9 +23,15 @@ recruit_character = BAY_hans_beimler
 recruit_character = BAY_rupprecht_i
 recruit_character = BAY_prince_karl
 recruit_character = BAY_prince_franz
+recruit_character = GER_wilhelm_ritter_von_leeb
+recruit_character = GER_alfred_jodl
+recruit_character = GER_sepp_dietrich
+recruit_character = BAY_konrad_dellmensingen
+recruit_character = GER_franz_halder
+recruit_character = GER_albert_kesselring
+recruit_character = GER_wilhelm_marschall
 
-
-
+recruit_character = GER_ferdinand_schorner
 
 AUS = {
     if = {
@@ -48,15 +54,16 @@ set_convoys = 20
 
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
+	last_election = "1935.5.25"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 set_popularities = {
-	neutrality = 30
-	democratic = 50
-	communism = 10
-	fascism = 10
-}
+		democratic = 18
+		fascism = 4
+		communism = 31
+		neutrality = 47
+	}
 
 

@@ -114,5 +114,85 @@ characters={
 			logistics_skill = 1
 		}
 	}
+	GER_erhard_milch={
+		name=GER_erhard_milch
+		portraits={
+			army={
+				small="GFX_idea_erhard_milch"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = erhard_milch
+			ledger = air
+			allowed = {
+			OR ={
+				original_tag = GER
+				original_tag = HAN
+			}
+			}
+			traits = {
+				air_bomber_interception_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GER_erich_bey={
+		name=GER_erich_bey
+		portraits={
+			army={
+				small="GFX_idea_erich_bey"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = erich_bey
+			ledger = navy
+			allowed = {
+			OR ={
+				original_tag = GER
+				original_tag = HAN
+			}
+			}
+			traits = {
+				navy_naval_air_defense_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	GER_viktor_schutze={
+		name=GER_viktor_schutze
+		portraits={
+			army={
+				small="GFX_idea_viktor_schutze"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = viktor_schutze
+			ledger = navy
+			allowed = {
+			OR ={
+				original_tag = GER
+				original_tag = HAN
+			}
+			}
+			traits = {
+				navy_anti_submarine_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 }
 	

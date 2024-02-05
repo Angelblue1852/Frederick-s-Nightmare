@@ -378,6 +378,10 @@ leader_traits = {
 		random = no
 		production_speed_buildings_factor = 0.01
 	}
+	great_architect2 = {
+		random = no
+		production_speed_buildings_factor = 0.1
+	}
 
 	#ESPIONAGE IDEAS#
 

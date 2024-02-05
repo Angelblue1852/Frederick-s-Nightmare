@@ -14,7 +14,7 @@ characters={
 	}
 	
 	HES_max_hoelz = {
-		name = "Ludwig Landmann" 
+		name = "Max Hoelz" 
 		portraits = {
 			army = {
 				large = "gfx/leaders/HES/HES_max_hoelz.png"
@@ -27,6 +27,81 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
+		}
+	}
+	GER_friedrich_paulus={
+		name=GER_friedrich_paulus
+		portraits={
+			army={
+				large=GFX_portrait_GER_friedrich_paulus
+				small=GFX_portrait_GER_friedrich_paulus_small
+			}
+		}
+		field_marshal={
+			traits={ trait_cautious armor_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=3
+		}
+	}
+	HES_karl_hollidt={
+		name=HES_karl_hollidt
+		portraits={
+			army={
+				large="gfx/leaders/HES/generals/Karl_Adolf_Hollidt.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id=10002
+		}
+	}
+	GER_gunther_lutjens={
+		name=GER_gunther_lutjens
+		portraits={
+			army={
+				large=GFX_portrait_GER_gunther_lutjens
+				small=GFX_portrait_GER_gunther_lutjens_small
+			}
+			army={
+				small="GFX_idea_gunther_lutjens"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = gunther_lutjens
+			ledger = navy
+			allowed = {
+			OR ={
+				original_tag = HES
+				original_tag = GER
+			}
+			}
+			traits = {
+				navy_fleet_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		navy_leader={
+			traits={ gentlemanly navy_career_officer superior_tactician }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=4
+			legacy_id=31
 		}
 	}
 }

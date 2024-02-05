@@ -1,4 +1,4 @@
-﻿capital = 315
+﻿capital = 613
 
 oob = "CHI_1936"
 if = {

@@ -17,7 +17,9 @@ add_ideas = {
 
 recruit_character = HES_ludwig_landmann
 recruit_character = HES_max_hoelz
-
+recruit_character = GER_friedrich_paulus
+recruit_character = GER_gunther_lutjens
+recruit_character = HES_karl_hollidt
 
 
 

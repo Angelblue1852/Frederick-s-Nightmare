@@ -132,5 +132,198 @@ characters={
 			logistics_skill = 1
 		}
 	}
+	BAY_konrad_dellmensingen={
+		name=BAY_konrad_dellmensingen
+		portraits={
+			army={
+				large="gfx/leaders/BAY/generals/Konrad_von_Dellmensingen.dds"
+			}
+		}
+		field_marshal={
+			traits = { defensive_doctrine }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id=13
+		}
+	}
+	GER_wilhelm_ritter_von_leeb={
+		name=GER_wilhelm_ritter_von_leeb
+		portraits={
+			army={
+				large=GFX_portrait_GER_wilhelm_ritter_von_leeb
+				small=GFX_portrait_GER_wilhelm_ritter_von_leeb_small
+			}
+		}
+		corps_commander={
+			traits={ old_guard infantry_officer }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=13
+		}
+	}
+	GER_sepp_dietrich={
+		name=GER_sepp_dietrich
+		portraits={
+			army={
+				large=GFX_portrait_GER_sepp_dietrich
+				small=GFX_portrait_GER_sepp_dietrich_small
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist trait_reckless armor_officer politically_connected }
+			skill=4
+			attack_skill=2
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=24
+		}
+	}
+	GER_alfred_jodl={
+		name=GER_alfred_jodl
+		portraits={
+			army={
+				large=GFX_portrait_GER_alfred_jodl
+				small=GFX_portrait_GER_alfred_jodl_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer politically_connected }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=23
+		}
+	}
+	GER_franz_halder={
+		name=GER_franz_halder
+		portraits={
+			army={
+				small="GFX_idea_franz_halder"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = franz_halder
+			allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = BAY
+				}
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	GER_albert_kesselring={
+		name = GER_albert_kesselring
+		portraits={
+			army={
+				small="GFX_idea_albert_kesselring"
+			}
+			army={
+				large=GFX_portrait_GER_albert_kesselring
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = albert_kesselring
+			allowed = {
+			OR ={
+				original_tag = GER
+				original_tag = BAY
+			}
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	GER_wilhelm_marschall={
+		name=GER_wilhelm_marschall
+		portraits={
+			army={
+				large=GFX_portrait_GER_wilhelm_marschall
+				small=GFX_portrait_GER_wilhelm_marschall_small
+			}
+		}
+		navy_leader={
+			traits={ old_guard_navy bold }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=4
+			legacy_id=30
+		}
+	}
+	GER_ferdinand_schorner={
+		name=GER_ferdinand_schorner
+		portraits={
+			army={
+				small="GFX_idea_ferdinand_schorner"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ferdinand_schorner
+			ledger = army
+			allowed = {
+			OR ={
+				original_tag = GER
+				original_tag = BAY
+			}
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	GER_ritter_von_greim={
+		name=GER_ritter_von_greim
+		portraits={
+			army={
+				small="GFX_idea_ritter_von_greim"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ritter_von_greim
+			allowed = {
+			OR ={
+				original_tag = GER
+				original_tag = BAY
+			}
+			}
+			traits = {
+				air_chief_all_weather_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.500
+			}
+		}
+	}
 }
 	

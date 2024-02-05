@@ -16,6 +16,8 @@ add_ideas = {
 }
 
 recruit_character = WES_konrad
+recruit_character = GER_ewald_von_kleist
+recruit_character = GER_werner_von_fritsch
 
 
 

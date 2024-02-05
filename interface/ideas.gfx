@@ -5405,5 +5405,42 @@ spriteTypes = {
 		name = "GFX_idea_yugoslavian_militias"
 		texturefile = "gfx/interface/ideas/yugoslavia/yugoslavian_militias.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_ger_wilhelm_canaris"
+		texturefile = "gfx/interface/ideas/idea_ger_wilhelm_canaris.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_todt"
+		texturefile = "gfx/interface/ideas/idea_todt.dds"
+
+	}
 	
+	spriteType = {
+		name = "GFX_idea_kurt_student"
+		texturefile = "gfx/interface/ideas/idea_kurt_student.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gunther_lutjens"
+		texturefile = "gfx/interface/ideas/idea_gunther_lutjens.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_viktor_schutze"
+		texturefile = "gfx/interface/ideas/idea_viktor_schutze.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ernst_udet"
+		texturefile = "gfx/interface/ideas/idea_ernst_udet.dds"
+
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ritter_von_greim"
+		texturefile = "gfx/interface/ideas/idea_ritter_von_greim.dds"
+
+	}
+	SpriteType = {
+		name = "GFX_idea_walther_wever"
+		texturefile = "gfx/interface/ideas/idea_walther_wever.dds"
+
+	}
 }

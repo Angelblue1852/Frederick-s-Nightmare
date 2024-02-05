@@ -21,6 +21,9 @@ recruit_character = HAN_ernst_thalmann
 recruit_character = HAN_ernst_eberhard_hell
 recruit_character = HAN_erwin_jaenecke
 recruit_character = HAN_wilhelm_keitel
+recruit_character = GER_erhard_milch
+recruit_character = GER_erich_bey
+recruit_character = GER_viktor_schutze
 
 
 

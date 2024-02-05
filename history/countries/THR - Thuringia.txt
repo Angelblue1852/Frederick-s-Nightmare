@@ -15,6 +15,7 @@ add_ideas = {
 }
 
 recruit_character = THR_hermann_kastner
+recruit_character = THR_reinhard_gehlen
 
 
 

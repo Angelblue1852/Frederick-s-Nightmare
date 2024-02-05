@@ -115,51 +115,7 @@ focus_tree = {
 			planning_skill = 4
 			logistics_skill = 3
 		}
-		add_corps_commander_role = {
-			Character = GER_friedrich_paulus
-			traits={ trait_cautious armor_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}	
-		add_corps_commander_role = {
-			Character = GER_wilhelm_list
-			traits={ inflexible_strategist career_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-		}
-		add_corps_commander_role = {
-			Character = GER_ewald_von_kleist
-			traits={ trait_cautious armor_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-		}
-		add_corps_commander_role = {
-			Character = GER_albert_kesselring
-			traits={ brilliant_strategist trait_cautious war_hero }
-			skill = 4
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 4
-		}
-		add_corps_commander_role = {
-			Character = GER_wilhelm_ritter_von_leeb
-			traits={ old_guard infantry_officer }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 2
-		}	
+		
 		add_corps_commander_role = {
 			Character = GER_friedrich_schulz
 			traits={ infantry_officer }
@@ -168,7 +124,8 @@ focus_tree = {
 			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 3
-		}	
+		}
+		
 
 		ai_will_do = {
 			base = 10
@@ -239,25 +196,38 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			#create_navy_leader = {
-			#	name = "Alfred Saalwächter"
-			#	picture = "admirals/Alfred_Saalwaechter.dds"
-			#	traits = { blockade_runner }
-			#	skill = 3
-			#	id = 119
-			#}
-			#create_navy_leader = {
-			#	name = "Max Bastian"
-			#	picture = "admirals/Max_Bastian.dds"
-			#	traits = { air_controller ironside }
-			#	skill = 2
-			#	id = 120
-			#}
+			add_naval_commander_role = {
+			  Character = GER_alfred_saalwachter
+			traits={ old_guard_navy bold superior_tactician german_nationalist blockade_runner}
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=4
+			}
+			add_naval_commander_role = {
+			  Character = GER_hermann_boehm
+			  traits={ craven superior_tactician spotter fly_swatter}
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=2
+			}
+			add_naval_commander_role = {
+			  Character = GER_max_bastian
+			 skill = 2
+			traits = { german_nationalist seawolf }
+			attack_skill = 2
+			defense_skill = 1
+			coordination_skill = 3
+			maneuvering_skill = 2
 		}
 
 		ai_will_do = {
 			base = 10
 		}
+	}
 	}
 	focus = {
 		id = GER_invest_in_koenigsberg_artillery
@@ -418,7 +388,8 @@ focus_tree = {
 		completion_reward = {
 			news_event = GER_news.1
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_fortification_engineer
+			show_ideas_tooltip = todt
+			
 			add_named_threat = {
 				name = "Schutzplan Ost"
 				threat = 0.5
@@ -637,7 +608,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_quartermaster_general
+			show_ideas_tooltip = GER_Duttmann
 			add_named_threat = {
 				name = "Schutzplan Süd"
 				threat = 0.5
@@ -855,7 +826,7 @@ focus_tree = {
 		mutually_exclusive = {}
 		available = {
 			any_country = {
-				original_tag = THU
+				original_tag = THR
 				has_civil_war = no
 				NOT = {
 					has_government = communism
@@ -880,7 +851,7 @@ focus_tree = {
 		completion_reward = {
 			random_country = {
 				limit = {
-					original_tag = THU
+					original_tag = THR
 					NOT = {
 						has_government = communism
 						has_government = fascism
@@ -921,8 +892,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			#custom_effect_tooltip = available_political_advisor
-			#show_ideas_tooltip = generic_financial_expert
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_Kraus
 			add_stability = 0.05
 			create_random_factory_CIV_1 = yes
 			create_random_factory_CIV_1 = yes
@@ -1416,7 +1387,7 @@ focus_tree = {
 		mutually_exclusive = {}
 		available = {
 			any_country = {
-				original_tag = THU
+				original_tag = THR
 				has_government = democratic
 				NOT = { has_war_with = GER }
 				is_subject = no
@@ -1431,7 +1402,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			THU = {
+			THR = {
 				country_event = { id = generic.1 days = 1 }
 			}
 		}
@@ -1706,7 +1677,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_real_estate_developer
+			show_ideas_tooltip = GER_Huber
 		}
 
 		ai_will_do = {
@@ -1779,7 +1750,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_war_industrialist
+			show_ideas_tooltip = walther_funk
 			create_random_factory_MIL_1 = yes
 			create_random_factory_MIL_1 = yes
 			create_random_factory_MIL_1 = yes
@@ -1815,7 +1786,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_captain_of_industry
+			show_ideas_tooltip = hjalmar_schacht
 			create_random_factory_CIV_1 = yes
 			create_random_factory_CIV_1 = yes
 			create_random_factory_CIV_1 = yes
@@ -1850,8 +1821,11 @@ focus_tree = {
 		completion_reward = {
 			every_owned_state = {
 				limit = {
-					is_core_of = ROOT
-					is_core_of = POL
+				OR = {
+					state = 5
+					state = 807
+					state = 86
+				}
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1860,6 +1834,23 @@ focus_tree = {
 				add_building_construction = {
 					type = industrial_complex level = 1 instant_build = yes
 				}
+			}
+			POL = {
+				every_owned_state = {
+				limit = {
+				OR = {
+					state = 98
+					state = 87
+				}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure level = 2 instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex level = 1 instant_build = yes
+				}
+			}
 			}
 		}
 
@@ -1911,7 +1902,7 @@ focus_tree = {
 				elections_allowed = yes
 			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_authoritarian_ideologue
+			show_ideas_tooltip = GER_alfred_hugenberg
 		}
 
 		ai_will_do = {
@@ -1956,7 +1947,7 @@ focus_tree = {
 			add_popularity = { ideology = communism popularity = -0.05 }
 			add_popularity = { ideology = fascism popularity = -0.05 }
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_democratic_reformer
+			show_ideas_tooltip = kurt_schumacher
 		}
 
 		ai_will_do = {
@@ -2193,7 +2184,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.025
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_popular_figurehead
+			show_ideas_tooltip = GER_Stotz
 		}
 
 		ai_will_do = {
@@ -2237,7 +2228,7 @@ focus_tree = {
 				ideology = conservatism
 			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_silent_workhorse
+			show_ideas_tooltip = GER_Brandt
 		}
 
 		ai_will_do = {
@@ -2575,7 +2566,7 @@ focus_tree = {
 			add_popularity = { ideology = neutrality popularity = 0.05 }
 			add_war_support = 0.05
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_prince_of_terror
+			show_ideas_tooltip = GER_Kirschner
 		}
 
 		ai_will_do = {
@@ -2665,7 +2656,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						original_tag = SAX
-						original_tag = THU
+						original_tag = THR
 					}
 					NOT = { is_in_faction_with = GER }
 					NOT = { is_subject_of = GER }
@@ -2717,7 +2708,7 @@ focus_tree = {
 			every_country = {
 				limit = {
 					OR = {
-						original_tag = BAV
+						original_tag = BAY
 						original_tag = BAD
 						original_tag = WUR
 					}
@@ -3219,12 +3210,12 @@ focus_tree = {
 					OR = {
 						is_core_of = HAN
 						is_core_of = SAX
-						is_core_of = THU
+						is_core_of = THR
 						is_core_of = HES
 						is_core_of = WES
 						is_core_of = BAD
 						is_core_of = WUR
-						is_core_of = BAV
+						is_core_of = BAY
 						is_core_of = GER
 					}
 				}
@@ -3301,38 +3292,38 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = GER_Freedom_League
-		prerequisite = { focus = GER_call_the_constitutional_assembly }
-		available = {
-			has_government = democratic
-			USA = { has_government = democratic }
-			is_subject = no
-			USA = { is_subject = no }
-			USA = { is_faction_leader = yes }
-			NOT = {
-			is_faction_leader = yes
-		}
-			is_in_faction = no
-		}
-		x = 0
-		y = 1
-		relative_position_id = GER_call_the_constitutional_assembly
-		cost = 10
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			USA = { 
-				country_event = {
-					id = USA.21 days = 2
-				}
-			}
-		}
+	#focus = {
+	#	id = GER_Freedom_League
+	#	prerequisite = { focus = GER_call_the_constitutional_assembly }
+	#	available = {
+	#		has_government = democratic
+	#		USA = { has_government = democratic }
+	#		is_subject = no
+	#		USA = { is_subject = no }
+	#		USA = { is_faction_leader = yes }
+	#		NOT = {
+	#		is_faction_leader = yes
+	#	}
+	#		is_in_faction = no
+	#	}
+	#	x = 0
+	#	y = 1
+	#	relative_position_id = GER_call_the_constitutional_assembly
+	#	cost = 10
+	#	available_if_capitulated = yes
+	#	
+	#	completion_reward = {
+	#		USA = { 
+	#			country_event = {
+	#				id = USA.21 days = 2
+	#			}
+	#		}
+	#	}
 
-		ai_will_do = {
-			base = 10
-		}
-	}
+	#	ai_will_do = {
+	#		base = 10
+	#	}
+	#}
 	
 	focus = {
 		id = GER_take_silesia
@@ -3616,7 +3607,7 @@ focus_tree = {
 				# limit = {
 					# OR = {
 						# original_tag = SAX
-						# original_tag = THU
+						# original_tag = THR
 					# }
 					# NOT = { is_in_faction_with = GER }
 					# NOT = { is_subject_of = GER }
@@ -3668,7 +3659,7 @@ focus_tree = {
 			# every_country = {
 				# limit = {
 					# OR = {
-						# original_tag = BAV
+						# original_tag = BAY
 						# original_tag = BAD
 						# original_tag = WUR
 					# }
