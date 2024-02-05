@@ -17,7 +17,9 @@ add_ideas = {
 }
 
 recruit_character = WUR_alfred_rosenberg
-
+recruit_character = GER_wilhelm_list
+recruit_character = GER_erwin_rommel
+recruit_character = GER_hugo_sperrle
 
 
 

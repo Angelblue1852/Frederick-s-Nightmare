@@ -15,6 +15,8 @@ add_ideas = {
 }
 
 recruit_character = SAX_rudolf_friedrichs
+recruit_character = GER_georghans_reinhardt
+recruit_character = GER_maximilian_von_weichs
 
 
 
@@ -40,15 +42,16 @@ set_convoys = 20
 
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
+	last_election = "1932.9.21"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 set_popularities = {
-	neutrality = 25
-	democratic = 55
-	communism = 10
-	fascism = 10
-}
+		democratic = 11
+		fascism = 29
+		communism = 16
+		neutrality = 44
+	}
 
 

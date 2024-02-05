@@ -1,4 +1,4 @@
-﻿capital = 315
+﻿capital = 64
 
 
 # Starting tech
@@ -158,7 +158,7 @@ if = {
 give_guarantee = HAN
 give_guarantee = SAX
 give_guarantee = SHX
-give_guarantee = THU
+give_guarantee = THR
 
 set_variable = {
     var = prussia_jcaz_influence
@@ -169,6 +169,7 @@ add_ideas = {
 	prussia_history_01
 	economic_crisis
 	colonial_upkeep
+	prussian_militarism
 }
 
 recruit_character = GER_otto_wels
@@ -201,21 +202,25 @@ recruit_character = GER_reinhard_heydrich
 recruit_character = GER_walter_model
 
 recruit_character = GER_heinz_guderian
-recruit_character = GER_friedrich_paulus
-recruit_character = GER_wilhelm_list
-recruit_character = GER_ewald_von_kleist
-recruit_character = GER_albert_kesselring
-recruit_character = GER_wilhelm_ritter_von_leeb
-recruit_character = GER_friedrich_schulz
+
+recruit_character = GER_quarter_advisor
+recruit_character = GER_finance_advisor
+recruit_character = GER_construction_advisor
+recruit_character = GER_figurehead_advisor
+recruit_character = GER_silent_advisor
+recruit_character = GER_prince_advisor
+recruit_character = GER_fritz_todt
 recruit_character = GER_weapons_advisor
-
-
-
-
-
-
-
-
+recruit_character = GER_hjalmar_schacht
+recruit_character = GER_walther_funk
+recruit_character = GER_alfred_hugenberg
+recruit_character = GER_kurt_schumacher
+recruit_character = GER_wilhelm_canaris
+recruit_character = GER_hermann_boehm
+recruit_character = GER_ludwig_beck
+recruit_character = GER_walther_von_brauchitsch
+recruit_character = GER_kurt_student
+recruit_character = GER_friedrich_schulz
 
 set_war_support = 0.1
 set_convoys = 20

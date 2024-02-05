@@ -12,5 +12,86 @@ characters={
 			id = -1
 		}
 	}
+	GER_wilhelm_list={
+		name=GER_wilhelm_list
+		portraits={
+			army={
+				large=GFX_portrait_GER_wilhelm_list
+				small=GFX_portrait_GER_wilhelm_list_small
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=7
+		}
+	}
+	GER_erwin_rommel={
+		name=GER_erwin_rommel
+		portraits={
+			army={
+				large=GFX_portrait_GER_erwin_rommel
+				small="GFX_idea_erwin_rommel"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = erwin_rommel
+			ledger = army
+			allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = WUR
+			}
+			}
+			traits = {
+				army_armored_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		
+		corps_commander={
+			traits={ trait_reckless media_personality armor_officer war_hero trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=4
+		}
+	}
+	GER_hugo_sperrle={
+		name=GER_hugo_sperrle
+		portraits={
+			army={
+				small="GFX_idea_hugo_sperrle"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = hugo_sperrle
+			ledger = air
+			allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = WUR
+				}
+			}
+			traits = {
+				air_close_air_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 }
 	

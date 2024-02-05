@@ -54,5 +54,74 @@ characters={
 			id = -1
 		}
 	}
+	BAD_walther_reichenau={
+		name=BAD_walther_reichenau
+		portraits={
+			army={
+				large="gfx/leaders/BAD/generals/Walther_von_Reichenau.dds"
+			}
+		}
+		field_marshal={
+			traits = { offensive_doctrine }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id=10004
+		}
+	}
+	BAD_walter_kruger={
+		name=BAD_walter_kruger
+		portraits={
+			army={
+				large="gfx/leaders/BAD/generals/Walter_Kruger.dds"
+			}
+		}
+		corps_commander={
+			traits = { organizer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+			legacy_id=10005
+		}
+	}
+	BAD_hermann_ehrhardt={
+		name=BAD_hermann_ehrhardt
+		portraits={
+			army={
+				large="gfx/leaders/BAD/generals/Hermann_Ehrhardt.dds"
+			}
+		}
+		corps_commander={
+			traits = { trickster }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=10006
+		}
+	}
+	BAD_rudolf_hoss={
+		name=BAD_rudolf_hoss
+		portraits={
+			army={
+				large="gfx/leaders/BAD/generals/Rudolf_Hoess.dds"
+			}
+		}
+		corps_commander={
+			traits = { fortress_buster }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=10007
+		}
+	}
+	
 }
 	

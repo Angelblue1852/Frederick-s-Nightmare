@@ -20,6 +20,10 @@ recruit_character = BAD_berthold
 recruit_character = BAD_max_bock
 recruit_character = BAD_joseph_wirth
 
+recruit_character = BAD_walther_reichenau
+recruit_character = BAD_walter_kruger
+recruit_character = BAD_hermann_ehrhardt
+recruit_character = BAD_rudolf_hoss
 
 
 

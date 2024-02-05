@@ -7,9 +7,45 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = socialism
+			ideology = authoritarian_conservatism
 			expire = "1960.1.1.1"
 			id = -1
+		}
+	}
+	GER_georghans_reinhardt={
+		name=GER_georghans_reinhardt
+		portraits={
+			army={
+				large=GFX_portrait_GER_georghans_reinhardt
+				small=GFX_portrait_GER_georghans_reinhardt_small
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious armor_officer }
+			skill=3
+			attack_skill=1
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=14
+		}
+	}
+	GER_maximilian_von_weichs={
+		name=GER_maximilian_von_weichs
+		portraits={
+			army={
+				large=GFX_portrait_GER_maximilian_von_weichs
+				small=GFX_portrait_GER_maximilian_von_weichs_small
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=11
 		}
 	}
 }

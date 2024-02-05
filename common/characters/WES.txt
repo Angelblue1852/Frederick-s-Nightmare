@@ -12,5 +12,58 @@ characters={
 			id = -1
 		}
 	}
+	GER_ewald_von_kleist={
+		name=GER_ewald_von_kleist
+		portraits={
+			army={
+				large=GFX_portrait_GER_ewald_von_kleist
+				small=GFX_portrait_GER_ewald_von_kleist_small
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=8
+		}
+	}
+	GER_werner_von_fritsch={
+		name=GER_werner_von_fritsch
+		portraits={
+			army={
+				small="GFX_idea_werner_von_fritsch"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = werner_von_fritsch
+			ledger = army
+			allowed = {
+			OR = {
+				original_tag = WES
+				original_tag = GER
+			}
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+		corps_commander={
+			traits={}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=10001
+		}
+	}
 }
 	

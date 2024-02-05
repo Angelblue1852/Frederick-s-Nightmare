@@ -12,5 +12,22 @@ characters={
 			id = -1
 		}
 	}
+	THR_reinhard_gehlen={
+		name=THR_reinhard_gehlen
+		portraits={
+			army={
+				large="gfx/leaders/THR/generals/Reinhard_Gehlen.dds"
+			}
+		}
+		corps_commander={
+			traits = { commando trickster }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id=10003
+		}
+	}
 }
 	

@@ -1592,8 +1592,8 @@ is_minor_german_state = {
 		original_tag = HES
 		original_tag = BAD
 		original_tag = WUR
-		original_tag = BAV
-		original_tag = THU
+		original_tag = BAY
+		original_tag = THR
 		original_tag = SAX
 	}
 }
