@@ -172,9 +172,18 @@ recruit_character = USA_theodor_geisel
 
 recruit_character = USA_fort_advisor
 recruit_character = USA_quartermaster
+recruit_character = USA_silent_advisor
+recruit_character = USA_armyorg_advisor
+recruit_character = USA_armyoff_advisor
 
-
-
+recruit_character = USA_communist_advisor
+recruit_character = USA_fascist_advisor
+recruit_character = USA_democratic_advisor
+recruit_character = USA_neutrality_advisor
+recruit_character = USA_henry_ford
+recruit_character = USA_finance_advisor
+recruit_character = USA_prince_advisor
+recruit_character = USA_armaments_advisor
 
 
 

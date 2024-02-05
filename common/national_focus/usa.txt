@@ -154,7 +154,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.01 }
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_silent_workhorse
+			show_ideas_tooltip = USA_Beatty
 			add_stability = 0.05
 			ford_crisis_downgrade = yes
 		}
@@ -1134,10 +1134,10 @@ focus_tree = {
 			show_ideas_tooltip = USA_Tyler
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = USA_Washington
-			#custom_effect_tooltip = available_chief_of_army
-			#show_ideas_tooltip = generic_organization_army_chief
-			#custom_effect_tooltip = available_chief_of_army
-			#show_ideas_tooltip = generic_offensive_army_chief
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = USA_Miller
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = USA_Ward
 			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -1640,9 +1640,9 @@ focus_tree = {
 				ideology = fascism popularity = 0.15
 			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_communist_revolutionary
+			show_ideas_tooltip = USA_Williams
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_fascist_demagogue
+			show_ideas_tooltip = USA_Ross
 		}
 
 		ai_will_do = {
@@ -2915,7 +2915,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_financial_expert
+			show_ideas_tooltip = USA_Roberts
 			economic_crisis_downgrade = yes
 		}
 
@@ -2949,7 +2949,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_captain_of_industry
+			show_ideas_tooltip = gerald_macguire
 			create_random_factory_CIV_1 = yes
 			create_random_factory_CIV_1 = yes
 			create_random_factory_CIV_1 = yes
@@ -2990,7 +2990,7 @@ focus_tree = {
 				name = "MacGuire Plan"
 			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_war_industrialist
+			show_ideas_tooltip = felix_warburg
 			create_random_factory_MIL_1 = yes
 			create_random_factory_MIL_1 = yes
 			create_random_factory_MIL_1 = yes
@@ -3101,7 +3101,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_armaments_organizer
+			show_ideas_tooltip = USA_Green
 			create_random_factory_MIL_1 = yes
 			create_random_factory_MIL_1 = yes
 		}
@@ -3318,7 +3318,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_prince_of_terror
+			show_ideas_tooltip = USA_Reynolds
 		}
 
 		ai_will_do = {
@@ -3394,7 +3394,7 @@ focus_tree = {
 		completion_reward = {
 			news_event = USA_news.4
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_democratic_reformer
+			show_ideas_tooltip = USA_Rees
 			remove_ideas = racial_segregation
 			add_popularity = { ideology = neutrality popularity = -0.05 }
 			add_popularity = { ideology = fascism popularity = -0.05 }
@@ -3466,7 +3466,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_authoritarian_ideologue
+			show_ideas_tooltip = USA_Baker
 			add_popularity = { ideology = democratic popularity = -0.05 }
 			add_popularity = { ideology = communism popularity = -0.05 }
 			every_country = {
