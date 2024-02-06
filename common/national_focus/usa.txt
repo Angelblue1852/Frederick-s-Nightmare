@@ -570,45 +570,30 @@ focus_tree = {
 					modifier = diplomatic_hostility
 				}
 			}
-			if = {
-				limit = {
-					LOU = { is_subject = no }
-					NOT = { is_in_faction_with = LOU } LOU = { is_neighbor_of = MEX }
-					LOU = { NOT = { has_government = communism } } LOU = { NOT = { has_government = fascism } }
+			every_country = {
+			limit = {
+				OR = {
+					original_tag = SOU
+					original_tag = LOU
+					original_tag = CAL
+					original_tag = GUA
+					original_tag = NVJ
+					original_tag = PIM
+					original_tag = SHO
+					original_tag = SEQ
+					original_tag = UTE
+					original_tag = DES
 				}
-				give_guarantee = LOU
+				NOT = {
+					is_in_faction_with = USA
+				}
+				is_neighbor_of = MEX
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
 			}
-			if = {
-				limit = {
-					CAL = { is_subject = no }
-					NOT = { is_in_faction_with = CAL } CAL = { is_neighbor_of = MEX }
-					CAL = { NOT = { has_government = communism } } CAL = { NOT = { has_government = fascism } }
-				}
-				give_guarantee = CAL
+			USA = {
+				give_guarantee = PREV
 			}
-			if = {
-				limit = {
-					SOU = { is_subject = no }
-					NOT = { is_in_faction_with = SOU } SOU = { is_neighbor_of = MEX }
-					SOU = { NOT = { has_government = communism } } SOU = { NOT = { has_government = fascism } }
-				}
-				give_guarantee = SOU
-			}
-			if = {
-				limit = {
-					GUA = { is_subject = no }
-					NOT = { is_in_faction_with = GUA } GUA = { is_neighbor_of = MEX }
-					GUA = { NOT = { has_government = communism } } GUA = { NOT = { has_government = fascism } }
-				}
-				give_guarantee = GUA
-			}
-			if = {
-				limit = {
-					NIC = { is_subject = no }
-					NOT = { is_in_faction_with = NIC } NIC = { is_neighbor_of = MEX }
-					NIC = { NOT = { has_government = communism } } NIC = { NOT = { has_government = fascism } }
-				}
-				give_guarantee = NIC
 			}
 			unlock_decision_tooltip = offer_statehood_to_texas
 		}

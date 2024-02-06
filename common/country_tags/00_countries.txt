@@ -282,6 +282,7 @@ JBL = "countries/Jabal Shammar.txt"
 HYD = "countries/Hyderabad.txt"
 GUJ = "countries/Gujarat.txt"
 WTR = "countries/Westralia.txt"
+WSA = "countries/Western Sahara"
 
 
 

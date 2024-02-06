@@ -1,0 +1,32 @@
+﻿##### NAVAL UNITS #####
+units = {
+	### CUBLY ###
+	fleet = {
+		name = "Comando Navale Ionio e Basso Adriatico"
+		naval_base = 7622 # Taranto, CUBly
+		task_force = {
+			name = "Squadra di Napoli" # Dipartimento MilCUBre Marittimo 'Basso Tirreno'
+			location = 7622 # Naples, CUBly
+
+			# III Squadriglia Torpediniere
+			ship = { name = "RCT Generale Marcello Prestinari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "RCT Generale Antonio Cantore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "RCT Giuseppe La Masa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "RCT Giacinto Carini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			# IV Squadriglia Torpediniere
+			
+		}
+
+		task_force = {
+			name = "II Gruppo Sommergibili"
+			location = 7622 # Naples, CUBly
+
+			# XXI Squadriglia Sommergibili
+			ship = { name = "RSmg Diamante" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CUB version_name = "Barracuda Class" } } }
+			ship = { name = "RSmg Topazio" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CUB version_name = "Barracuda Class" } } }
+			ship = { name = "RSmg Galatea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CUB version_name = "Barracuda Class" } } }
+			ship = { name = "RSmg Nereide" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CUB version_name = "Barracuda Class" } } }
+		}
+	}
+}
+

@@ -14,11 +14,18 @@ set_technology = {
 add_ideas = {
 	economic_crisis1
 }
+add_ideas = {
+	agreement_of_1827
+}
 
 recruit_character = OHI_george_v
-
-
-
+recruit_character = OHI_edward_viii
+recruit_character = OHI_george_vi
+recruit_character = OHI_te_lawrence
+recruit_character = OHI_edmund_allenby
+recruit_character = OHI_captain_advisor
+recruit_character = OHI_monarch_advisor
+recruit_character = OHI_sierra_stachowicz
 
 
 

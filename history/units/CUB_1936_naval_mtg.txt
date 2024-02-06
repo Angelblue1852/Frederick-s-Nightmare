@@ -1,0 +1,28 @@
+﻿
+units= {
+	##### NAVAL UNITS #####
+	### CUBLY ###
+	fleet = {
+		name = "Comando Navale Ionio e Basso Adriatico"			
+		naval_base = 7622 # Taranto, CUBly
+		task_force = { 
+			name = "I Squadra Navale" # Dipartimento MilCUBre Marittimo 'Ionio e Basso Adriatico' / I Squadra
+			location = 7622 # Taranto, CUBly
+			# VI Squadriglia Torpediniere
+			ship = { name = "RCT Rosolino Pilo" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = CUB version_name = "Clemson Class" } } } 
+			ship = { name = "RCT Giuseppe Missori" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = CUB version_name = "Clemson Class" } } } 
+			ship = { name = "RCT Francesco Stocco" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = CUB version_name = "Clemson Class" } } } 
+			ship = { name = "RCT Giuseppe Sirtori" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = CUB version_name = "Clemson Class" } } } 
+			# VII Squadriglia Cacciatorpediniere
+		} 
+		task_force = { 
+			name = "IV Gruppo Sommergibili"	
+			location = 7622 # Taranto, CUBly
+			# XLI Squadriglia Sommergibili
+			ship = { name = "RSmg Balilla" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CUB version_name = "S Class" } } } 
+			ship = { name = "RSmg Antonio Sciesa" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CUB version_name = "S Class" } } } 
+			ship = { name = "RSmg Enrico Toti" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CUB version_name = "S Class" } } } 
+			ship = { name = "RSmg Domenico Millelire" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CUB version_name = "S Class" } } } 
+		} 
+	}
+} 

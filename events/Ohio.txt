@@ -35,9 +35,8 @@ country_event = {
 	option = {
 		name = OHI.2.o1
 		kill_country_leader = yes
-		create_country_leader = {
-			name = "Edward VIII"
-			picture = "Edward_VIII.dds"
+		promote_character = {
+			character = OHI_edward_viii
 			ideology = despotism
 		}
 		hidden_effect = {

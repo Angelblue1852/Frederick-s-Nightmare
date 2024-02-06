@@ -1,0 +1,19 @@
+defined_text = { # Country
+	name = GetMexicanUniversitiesName
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MEX_mexican_universities_COM
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MEX_mexican_universities_DEM
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MEX_mexican_universities_FAS
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MEX_mexican_universities_NEU
+	}
+}

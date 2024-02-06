@@ -277,7 +277,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_captain_of_industry
+			show_ideas_tooltip = OHI_Stewart
 		}
 
 		ai_will_do = {
@@ -488,7 +488,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_ideas = military_industrialists
+			#add_ideas = military_industrialists
 		}
 
 		ai_will_do = {
@@ -846,7 +846,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_authoritarian_ideologue
+			show_ideas_tooltip = OHI_Russell
 		}
 
 		ai_will_do = {
