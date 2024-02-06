@@ -740,6 +740,215 @@ characters={
 			}
 		}
 	}
-	
+	USA_silent_advisor = {
+		name = "Ezra Beatty"
+		portraits={
+			army={
+				small=GFX_idea_USA_generic_land_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Beatty
+			available = {
+				has_completed_focus = USA_the_ford_investigations
+			}
+			traits  = {
+				silent_workhorse
+			}
+		}
+	}
+	USA_armyorg_advisor = {
+		name = "Grayson Miller"
+		portraits={
+			army={
+				small=GFX_idea_USA_generic_2
+			}
+		}
+		advisor={
+			cost = 150
+			
+			slot = theorist
+			idea_token = USA_Miller
+			ledger = army
+				allowed = {
+					original_tag = USA
+				}
+				available = {
+					has_completed_focus = USA_army_focus
+				}
+				traits = {
+					army_chief_organizational_2
+				}
+		}
+	}
+	USA_armyoff_advisor = {
+		name = "Kieran Ward"
+		portraits={
+			army={
+				small=GFX_idea_USA_generic_land_9
+			}
+		}
+		advisor={
+			cost = 150
+			
+			slot = theorist
+			idea_token = USA_Ward
+			ledger = army
+				allowed = {
+					original_tag = USA
+				}
+				available = {
+					has_completed_focus = USA_army_focus
+				}
+				traits = {
+					army_chief_organizational_2
+				}
+		}
+	}
+	USA_communist_advisor = {
+		name = "Lennon Williams"
+		portraits={
+			army={
+				small=GFX_idea_USA_generic_land_4
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Williams
+			available = {
+				has_completed_focus = USA_ideological_reform
+			}
+			traits  = {
+				communist_revolutionary
+			}
+		}
+	}
+	USA_fascist_advisor = {
+		name = "Abel Ross"
+		portraits={
+			army={
+				small=GFX_idea_USA_generic_land_1
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Ross
+			available = {
+				has_completed_focus = USA_ideological_reform
+			}
+			traits  = {
+				fascist_demagogue
+			}
+		}
+	}
+	USA_democratic_advisor = {
+		name = "Morgan Rees"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Rees
+			available = {
+				has_completed_focus = USA_pass_the_civil_rights_act
+			}
+			traits  = {
+				democratic_reformer
+			}
+		}
+	}
+	USA_neutrality_advisor = {
+		name = "Phoenix Baker"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_land_4
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Baker
+			available = {
+				has_completed_focus = USA_maintain_segregation
+			}
+			traits  = {
+				strict_neutrality_adherent
+			}
+		}
+	}
+	USA_henry_ford = {
+		name = "Henry Ford"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_land_13
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Ford
+			available = {
+				has_completed_focus = USA_invite_henry_ford_into_the_government
+			}
+			traits  = {
+				fascist_corporatist
+			}
+		}
+	}
+	USA_finance_advisor = {
+		name = "Brook Roberts"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_land_13
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Roberts
+			available = {
+				has_completed_focus = USA_economic_recovery
+			}
+			traits  = {
+				financial_expert
+			}
+		}
+	}
+	USA_prince_advisor = {
+		name = "Orion Reynolds"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_land_5
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Reynolds
+			available = {
+				has_completed_focus = USA_create_the_cia
+			}
+			traits  = {
+				prince_of_terror
+			}
+		}
+	}
+	USA_armaments_advisor = {
+		name = "Silver Green"
+		portraits={
+			army={
+				small=GFX_idea_USA_generic_land_3
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_Green
+			available = {
+				has_completed_focus = USA_expand_sherman_industries
+			}
+			traits  = {
+				armaments_organizer
+			}
+		}
+	}
 }
 	

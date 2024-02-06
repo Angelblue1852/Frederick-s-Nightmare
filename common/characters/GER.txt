@@ -162,6 +162,19 @@ characters={
 		portraits = {
 			army = {
 				large = "gfx/leaders/GER/GER_erich_von_manstein.png"
+				small="GFX_idea_manstein"
+			}
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = manstein
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				mobile_warfare_expert
 			}
 		}
 		corps_commander = {

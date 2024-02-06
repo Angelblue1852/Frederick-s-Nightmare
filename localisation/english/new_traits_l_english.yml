@@ -22,15 +22,8 @@
  radical_reformer_desc:0 ""
  southern_segregationist:0 "Southern Segregationist"
  southern_segregationist_desc:0 ""
- reactionary_author:0 "Reactionary Author"
- reactionary_author_desc:0 ""
  anti_reactionary_author:0 "Anti-Reactionary Author"
  anti_reactionary_author_desc:0 ""
- pro_czarist_minority:0 "Loyalist Local Administrator"
- pro_czarist_minority_desc:0 ""
- 
- brilliant_economist:0 "Brilliant Economist"
- socialist_economist:0 "Socialist Economist"
  
  national_bolshevik:0 "National Bolshevik"
  
@@ -66,4 +59,6 @@
  soviet:0 "Bolshevik"
  soviet_desc:0 ""
  
- great_architect2:0 "Great Architect"
+ great_architect2:0 "Excellent Architect"
+ strict_neutrality_adherent:0 "Strict Neutrality Adherent"
+ 
