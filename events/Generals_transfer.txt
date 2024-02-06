@@ -1,0 +1,16 @@
+add_namespace = general_transfer
+
+#Hannover Basic Generals
+country_event = {
+	id = general_transfer.1
+	title = general_transfer.1.t
+	desc = general_transfer.1.d
+	picture = GFX_report_event_wehrmacht2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = general_transfer.1.o1
+		W
+	}
+}

@@ -1,0 +1,194 @@
+﻿division_template = {
+	name = "Infantry Division"
+
+	division_names_group = SPAN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+	}
+}
+#division_template = {
+#	name = "Armored Division"
+#
+#	division_names_group = SPAN_ARM_01
+#
+#	regiments = {
+#		light_armor = { x = 0 y = 0 }
+#		light_armor = { x = 0 y = 1 }
+#		light_armor = { x = 0 y = 2 }
+#       motorized = { x = 1 y = 0 }
+#		motorized = { x = 1 y = 1 }
+#		motorized = { x = 1 y = 2 }
+#       motorized = { x = 2 y = 0 }
+#		motorized = { x = 2 y = 1 }
+#		motorized = { x = 2 y = 2 }
+#	}
+#	
+#	support = {
+#	}
+#}
+
+units = {
+	#division = {
+	#	name = "Revolutionary Guard"
+	#	location = 1965
+	#	division_template = "Armored Division"
+	#	start_experience_factor = 0.25
+	#	start_equipment_factor = 0.85
+	#}
+	division = {
+		name = "1st Revolutionary Division"
+		location = 1965
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "2nd Revolutionary Division"
+		location = 4904
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "3rd Revolutionary Division"
+		location = 12782
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "4th Revolutionary Division"
+		location = 4908
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "5th Revolutionary Division"
+		location = 10337
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "6th Revolutionary Division"
+		location = 12810
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "7th Revolutionary Division"
+		location = 853
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "8th Revolutionary Division"
+		location = 12835
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "9th Revolutionary Division"
+		location = 12552
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "10th Revolutionary Division"
+		location = 12736
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "1st Revolutionary Division"
+		location = 1965
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "11th Revolutionary Division"
+		location = 1965
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "12th Revolutionary Division"
+		location = 12712
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "13th Revolutionary Division"
+		location = 13088
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "14th Revolutionary Division"
+		location = 2055
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "15th Revolutionary Division"
+		location = 13088
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "16th Revolutionary Division"
+		location = 1965
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "17th Revolutionary Division"
+		location = 3960
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "18th Revolutionary Division"
+		location = 1965
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "19th Revolutionary Division"
+		location = 1965
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.85
+	}
+}
+
+
+instant_effect = {
+}

@@ -1,0 +1,84 @@
+﻿capital = 329
+
+oob = "TAN_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+# = TAN_salchak_toka
+# = TAN_rugalinskij
+# = TAN_v_i_kulikovskij
+# = TAN_grinchik
+# = TAN_tulberdiev
+# = TAN_tanchak_shoma
+# = TAN_alaverdov
+# = TAN_homushku_churguj_ool
+# = TAN_i_p_rugalinskij
+# = TAN_ruzhenko
+# = TAN_konstantinov
+# = TAN_kechir_ool
+# = TAN_democratic_guy
+# = TAN_communist_guy
+# = TAN_fascist_guy
+# = TAN_s_t_perilenko
+# = TAN_vladimir_sokoline
+# = TAN_sodmon_balchor
+
+
+add_ideas = {
+	limited_conscription
+}
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = construction_effort_2
+	complete_national_focus = production_effort_2
+	complete_national_focus = infrastructure_effort
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "TAN_1939"
+	set_technology = {
+		infantry_weapons = 1
+
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 100
+}

@@ -1,0 +1,112 @@
+﻿capital = 316
+
+oob = "COS_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+# = COS_ricardo_jiménez_oreamuno
+# = COS_josé_maría_barahona
+# = COS_lisandro_barillas
+# = COS_jorge_peralta
+# = COS_baptista_e_gutierrez
+# = COS_hugo_montes_ramirez
+# = COS_roberto_juarez_camposino
+# = COS_guillermo_macho_nunez
+# = COS_luis_fernandez_rodriguez
+# = COS_jorge_volio_jimenez
+# = COS_manuel_mora_valverde
+# = COS_carlos_uribe_alpoveda
+# = COS_felipe_abreu_castro
+# = COS_francisco_rosendo_arguello
+# = COS_tobias_picado_cortes
+# = COS_oscar_padilla_sellean
+# = COS_hugo_siedler_mendoza
+# = COS_otto_cortes_fernandez
+# = COS_jose_figueres_ferrer
+# = COS_roberto_brenes_mesen
+# = COS_julio_acosta_garcia
+# = COS_chico_orlich_bolmarich
+
+
+set_country_flag = monroe_doctrine
+set_war_support = 0.1
+set_convoys = 10
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "COS_1939"
+	set_technology = {
+		infantry_weapons1 = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.2.14"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 98
+	fascism = 2
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.9"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	set_popularities = {
+		democratic = 95
+		communism = 5
+	}
+
+	# = COS_leon_cortes_castro
+	promote_character = COS_leon_cortes_castro
+	retire_character = COS_ricardo_jiménez_oreamuno
+
+}

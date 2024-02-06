@@ -6,3 +6,17 @@ german_decisions = {
 		OR = { original_tag = GER original_tag = AUS is_minor_german_state = yes }
 	}
 }
+general_transfer = {
+	allowed = {
+		OR = {
+			original_tag = GER
+			is_minor_german_state = yes
+		}
+	}
+	visible = {
+		OR = {
+			original_tag = GER
+			is_minor_german_state = yes
+		}
+	}
+}

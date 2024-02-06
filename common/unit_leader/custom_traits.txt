@@ -20,14 +20,6 @@ leader_traits = {
 		}
 	}
 	
-	natsoc = {
-		type = all
-		trait_type = personality_trait
-		new_commander_weight = {
-			base = 0
-		}
-	}
-	
 	bavarian_nationalist = {
 		type = all
 		trait_type = personality_trait
