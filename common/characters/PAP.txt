@@ -12,6 +12,45 @@ characters={
 			id = -1
 		}
 	}
+	PAP_vacancy = {
+		name = "Vancancy" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAP/Vacancy.dds"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	PAP_pius_xii = {
+		name = "Pius XII" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAP/Pius_XII.dds"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	PAP_john_xxiii = {
+		name = "John XXIII" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAP/John_XXIII.dds"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
 	
 	PAP_rodolfo_graziani = {
 		name = "Rodolfo Graziani" 
@@ -22,12 +61,12 @@ characters={
 			}
 		}
 		field_marshal = {
-			skill = 2
-			traits = { }
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
+			skill = 3
+			traits = { panzer_leader trait_cautious politically_connected offensive_doctrine desert_fox}
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
 		}
 		country_leader = {
 			ideology = rexism
@@ -38,9 +77,26 @@ characters={
 			slot = army_chief
 			idea_token = rodolfo_graziani
 			available = { 
+				NOT = {
+					is_hired_as_advisor = yes
+				}
 			}
 			ledger = army
 			traits = { army_chief_planning_2 }
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = rodolfo_graziani
+			ledger = army
+			available = { 
+				NOT = {
+					is_hired_as_advisor = yes
+				}
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
 		}
 	}
 	
@@ -84,6 +140,27 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 		}
+	}
+	PAP_rino_fougier = {
+		name = "Rino Corso Fougier" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/PAP/generals/Rino_Corso_Fougier.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { skilled_staffer }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		#advisor = {
+		#	slot = air_chief
+		#	idea_token = rodolfo_graziani
+		#	traits = { air_chief_reform_2 }
+		#}
 	}
 	
 	PAP_peppino_garibaldi = {

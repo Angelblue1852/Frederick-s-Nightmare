@@ -17,6 +17,8 @@
  siberia_established:0 "Siberia has been established"
  siberia_expanded:0 "Siberia has been expanded"
  yakutia_established:0 "Yakutia has been established"
- hannover_started_transfer:0 "Has Recruited Hannoverian Generals"
+ 
  freedom_league:0 "Freedom League"
  german_confederation:0 "German Confederation"
+ papal_league:0 "Papal League"
+ axis_powers:0 "Axis Powers"

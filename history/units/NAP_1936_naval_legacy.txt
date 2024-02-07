@@ -1,0 +1,64 @@
+﻿##### NAVAL UNITS #####
+units = {
+	### NAPLY ###
+	fleet = {
+		name = "Comando Navale Ionio e Basso Adriatico"
+		naval_base = 11837 # Taranto, NAPly
+
+		task_force = {
+			name = "I Squadra Navale" # Dipartimento MilNAPre Marittimo 'Ionio e Basso Adriatico' / I Squadra
+			location = 11837 # Taranto, NAPly
+
+			# V Divisione Corazzate
+			ship = { name = "RN Caio Duilio" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RN Andrea Doria" definition = battleship equipment = { battleship_1 = { amount = 1 owner = NAP } } }
+			# I Divisione Incrociatori
+			ship = { name = "RI Zara" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = NAP version_name = "Zara Class" } } }
+			ship = { name = "RI Gorizia" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = NAP version_name = "Zara Class" } } }
+			ship = { name = "RI Fiume" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = NAP version_name = "Zara Class" } } }
+			# IV Divisione Incrociatori
+			ship = { name = "RI Luigi Cadorna" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP version_name = "Giussano Class" } } }
+			ship = { name = "RI Armando Diaz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP version_name = "Giussano Class" } } }
+			ship = { name = "RI Alberico da Barbiano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP version_name = "Giussano Class" } } }
+			ship = { name = "RI Alberto da Giussano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP version_name = "Giussano Class" } } }
+			# Gruppo Incrociatori (Obsoleti)
+			ship = { name = "RI San Giorgio" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RI Taranto" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RI Bari" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+	}
+		name = "Comando Navale Basso Tirreno"
+		naval_base = 819 # Naples, NAPly
+
+		task_force = {
+			name = "Squadra di Napoli" # Dipartimento MilNAPre Marittimo 'Basso Tirreno'
+			location = 819 # Naples, NAPly
+
+			# III Squadriglia Torpediniere
+			ship = { name = "RCT Generale Marcello Prestinari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Generale Antonio Cantore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Giuseppe La Masa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Giacinto Carini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			# IV Squadriglia Torpediniere
+			ship = { name = "RCT Calatafimi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Castelfidardo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Curtatone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Monzambano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+		}
+
+		task_force = {
+			name = "II Gruppo Sommergibili"
+			location = 819 # Naples, NAPly
+
+			# XXI Squadriglia Sommergibili
+			ship = { name = "RSmg Jalea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+			ship = { name = "RSmg Jantina" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+			ship = { name = "RSmg Ametista" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+			ship = { name = "RSmg Zaffiro" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+			# XXII Squadriglia Sommergibili
+			ship = { name = "RSmg Diamante" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+			ship = { name = "RSmg Topazio" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+			ship = { name = "RSmg Galatea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+			ship = { name = "RSmg Nereide" definition = submarine equipment = { submarine_1 = { amount = 1 owner = NAP version_name = "Sirena Class" } } }
+		}
+	}
+}

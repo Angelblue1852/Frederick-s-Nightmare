@@ -126,5 +126,83 @@ characters={
 			logistics_skill = 1
 		}
 	}
+	TTS_taddeo_orlando = {
+		name = "Taddeo Orlando" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TTS/generals/Taddeo_Orlando.dds"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { skilled_staffer }
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	TTS_antonio_sorice = {
+		name = "Antonio Sorice" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/TTS/generals/Antonio_Sorice.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { infantry_leader }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	TTS_mobile_advisor = {
+		name = "Secondo China" 
+		portraits = {
+			army = {
+				small=GFX_idea_ITA_generic_land_7
+			}
+		}
+		available = {
+			has_completed_focus = TTS_doctrinal_reform
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = TTS_China
+			ledger = army
+			allowed = {
+				original_tag = TTS
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+	}
+	TTS_grandbattle_advisor = {
+		name = "Abele Femino" 
+		portraits = {
+			army = {
+				small=GFX_idea_ITA_generic_land_3
+			}
+		}
+		available = {
+			has_completed_focus = TTS_doctrinal_reform
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = TTS_Femino
+			ledger = army
+			allowed = {
+				original_tag = TTS
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+		}
+	}
 }
 	

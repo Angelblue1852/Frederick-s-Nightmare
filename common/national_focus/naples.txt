@@ -128,9 +128,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
-			show_ideas_tooltip = generic_mobile_warfare_theorist
+			show_ideas_tooltip = TTS_China
 			custom_effect_tooltip = available_theorist
-			show_ideas_tooltip = generic_grand_battleplan_theorist
+			show_ideas_tooltip = TTS_Femino
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 2
@@ -645,11 +645,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = 0.15 }
-			create_country_leader = {
-				name = "Achille Starace"
-				picture = "Achille_Starace.dds"
-				ideology = authoritarian_conservatism
+			add_country_leader_role = {
+			character = TTS_achille_starace
+			promote_leader = yes
+			country_leader = {
+				ideology = centrism
+				expire = "1965.1.1.1"
+				traits = { }
 			}
+		}
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
@@ -1220,7 +1224,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			set_capital = 2
+			set_capital = {state = 2}
 			add_political_power = 150
 		}
 
@@ -1402,7 +1406,7 @@ focus_tree = {
 				create_wargoal = {
 					target = AUS
 					type = take_core_state
-					generator = { 39 160 736 }
+					generator = { 39 160 736 852}
 				}
 			
 				else = {
@@ -1414,6 +1418,9 @@ focus_tree = {
 					}
 					736 = {
 						OWNER = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 736 } } } }
+					}
+					852 = {
+						OWNER = { ROOT = { create_wargoal = { target = PREV type = take_core_state generator = { 852 } } } }
 					}
 				}
 			}

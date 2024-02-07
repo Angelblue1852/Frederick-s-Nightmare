@@ -7,7 +7,46 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = leninism
+			ideology = marxism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	ITA_vittorio_emanuele = {
+		name = "Vittorio Emanuele III" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/Vittorio_Emanuele.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	ITA_edmondo_rossoni = {
+		name = "Edmondo Rossoni" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/Edmondo_Rossoni.dds"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	ITA_alcide_gasperi = {
+		name = "Alcide de Gasperi" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/Alcide_De_Gasperi.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
 			expire = "1960.1.1.1"
 			id = -1
 		}
@@ -34,19 +73,24 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = fascism_ideology
+			ideology = stalinism
 			expire = "1960.1.1.1"
 			id = -1
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = benito_mussolini
-			available = {
-				is_country_leader = no
-			}
-			ledger = civilian
-			traits = { national_bolshevik }
-		}
+		#country_leader = {
+		#	ideology = fascism_ideology
+		#	expire = "1960.1.1.1"
+		#	id = -1
+		#}
+		#advisor = {
+		#	slot = political_advisor
+		#	idea_token = benito_mussolini
+		#	available = {
+		#		is_country_leader = no
+		#	}
+		#	ledger = civilian
+		#	traits = { national_bolshevik }
+		#}
 	}
 	
 	ITA_emilio_de_bono = {
@@ -103,7 +147,7 @@ characters={
 		}
 		corps_commander = {
 			skill = 1
-			traits = { old_guard cautious }
+			traits = { old_guard trait_cautious }
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
@@ -134,6 +178,178 @@ characters={
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
+		}
+	}
+	ITA_italo_gariboldi = {
+		name = "Italo Gariboldi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Italo_Gariboldi.dds"
+			}
+		}
+		
+		field_marshal = {
+			traits = { old_guard offensive_doctrine }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ITA_vittorio_ambrosio = {
+		name = "Vittorio Ambrosio"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Vittorio_Ambrosio.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { skilled_staffer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ITA_guglielmo_giraldi = {
+		name = "Guglielmo Giraldi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Guglielmo_Giraldi.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { infantry_leader trickster }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ITA_giuseppe_castellano = {
+		name = "Giuseppe Castellano"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Giuseppe_Castellano.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { trickster infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ITA_edmondo_rossoni = {
+		name = "Edmondo Rossoni"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Edmondo_Rossoni.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { politically_connected trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ITA_alfredo_guzzoni = {
+		name = "Alfredo Guzzoni"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Alfredo_Guzzoni.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { skilled_staffer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 1
+		}
+	}
+	ITA_ettore_bastico = {
+		name = "Ettore Bastico"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Ettore_Bastico.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { bearer_of_artillery infantry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ITA_pietro_gazzera = {
+		name = "Pietro Gazzera"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/generals/Pietro_Gazzera.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { skilled_staffer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ITA_prince_advisor = {
+		name = "Fabrizio Sacchi"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_Sacchi
+			available = {
+				has_completed_focus = ITA_strengthen_the_secret_police
+			}
+			traits  = {
+				prince_of_terror
+			}
+		}
+	}
+	ITA_construct_advisor = {
+		name = "Andrea Acton"
+		portraits={
+			army={
+				small=GFX_idea_europe_generic_4
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_Acton
+			available = {
+				has_completed_focus = ITA_reform_factory_control_policy
+			}
+			traits  = {
+				great_architect2
+			}
 		}
 	}
 }

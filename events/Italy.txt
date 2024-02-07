@@ -472,7 +472,7 @@ country_event = {
 		ITA = {
 			annex_country = { target = ROOT transfer_troops = yes }
 		}
-		ai_chance = { base = 185 }
+		ai_chance = { base = 50 }
 	}
 	option = {
 		name = ITA.14.b
@@ -484,6 +484,7 @@ country_event = {
 				target = PAP
 			}
 		}
+		ai_chance = { base = 50 }
 	}
 }
 
@@ -506,7 +507,7 @@ country_event = {
 		ITA = {
 			annex_country = { target = ROOT transfer_troops = yes }
 		}
-		ai_chance = { base = 185 }
+		ai_chance = { base = 50 }
 	}
 	option = {
 		name = ITA.15.b
@@ -518,5 +519,6 @@ country_event = {
 				target = TTS
 			}
 		}
+		ai_chance = { base = 50 }
 	}
 }

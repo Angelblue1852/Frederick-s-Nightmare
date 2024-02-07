@@ -353,7 +353,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = -0.05
-			remove_ideas = liberal_reformers
+			#remove_ideas = liberal_reformers
 		}
 
 		ai_will_do = {
@@ -674,7 +674,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = secret_police
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_prince_of_terror
+			show_ideas_tooltip = ITA_Sacchi
 		}
 
 		ai_will_do = {
@@ -706,7 +706,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = generic_real_estate_developer
+			show_ideas_tooltip = ITA_Acton
 			add_political_power = 150
 		}
 
@@ -822,11 +822,10 @@ focus_tree = {
 				long_name = "Avanguardia Operaia di Sinistra"
 				name = "AOS"
 			}
-			create_country_leader = {
-				name = "Benito Mussolini"
-				ideology = stalinism
-				picture = "Benito_Mussolini.dds"
-			}
+			promote_character = {
+			character = ITA_benito_mussolini
+			ideology = stalinism
+		}
 			if = {
 				limit = { has_idea = pci_divided }
 				remove_ideas = pci_divided
@@ -991,7 +990,7 @@ focus_tree = {
 			create_wargoal = {
 				target = AUS
 				type = take_core_state
-				generator = { 39 160 736 }
+				generator = { 39 160 736 852}
 			}
 			if = {
 				limit = { has_idea = pci_divided }
@@ -1027,7 +1026,7 @@ focus_tree = {
 
 		completion_reward = {
 			create_wargoal = {
-				target = AUS
+				target = SWI
 				type = puppet_wargoal_focus
 			}
 		}
@@ -1506,7 +1505,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				target = AUS
-				generator = { 39 160 736 }
+				generator = { 39 160 736 852}
 				type = take_core_state
 			}
 		}
@@ -1571,7 +1570,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = generic_captain_of_industry
-			add_ideas = labor_unions
+			#add_ideas = labor_unions
 		}
 
 		ai_will_do = {

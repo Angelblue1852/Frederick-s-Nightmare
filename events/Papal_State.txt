@@ -70,10 +70,9 @@ country_event = {
 		add_war_support = 0.05
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 		kill_country_leader = yes
-		create_country_leader = {
-			name = "Vacancy"
-			ideology = despotism
-			picture = "Vacancy.dds"
+			promote_character = {
+			character = PAP_vacancy
+			ideology = oligarchism
 		}
 		add_opinion_modifier = { target = FROM modifier = diplomatic_hostility }
 	}
@@ -93,10 +92,9 @@ country_event = {
 	option = {
 		name = PAP.4.o1
 		kill_country_leader = yes
-		create_country_leader = {
-			name = "Vacancy"
-			ideology = despotism
-			picture = "Vacancy.dds"
+			promote_character = {
+			character = PAP_vacancy
+			ideology = oligarchism
 		}
 	}
 }

@@ -112,7 +112,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = middle_class_businesses
+			#add_ideas = middle_class_businesses
 		}
 
 		ai_will_do = {
@@ -152,7 +152,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = military_industrialists
+			#add_ideas = military_industrialists
 		}
 
 		ai_will_do = {
@@ -266,7 +266,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = aristocratic_elites
+			#add_ideas = aristocratic_elites
 		}
 
 		ai_will_do = {
@@ -456,11 +456,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			create_country_leader = {
-				name = "Pius XII"
-				picture = "Pius_XII.dds"
-				ideology = despotism
-			}
+		retire_country_leader = yes
+			promote_character = {
+			character = PAP_pius_xii
+			ideology = oligarchism
+		}
 			add_stability = 0.05
 		}
 
@@ -495,11 +495,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			create_country_leader = {
-				name = "John XXIII"
-				picture = "John_XXIII.dds"
-				ideology = despotism
-			}
+		retire_country_leader = yes
+			promote_character = {
+			character = PAP_john_xxiii
+			ideology = oligarchism
+		}
 			add_war_support = 0.05
 		}
 
@@ -562,7 +562,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = volunteer_only
+			add_ideas = limited_conscription
 			add_war_support = 0.025
 		}
 
@@ -701,8 +701,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			has_idea = catholic_clergy
-			WES = { has_idea = catholic_clergy }
+			#has_idea = catholic_clergy
+			#WES = { has_idea = catholic_clergy }
 			NOT = { has_war_with = WES }
 			country_exists = WES
 		}
@@ -736,8 +736,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			has_idea = catholic_clergy
-			AUS = { has_idea = catholic_clergy }
+			#has_idea = catholic_clergy
+			#AUS = { has_idea = catholic_clergy }
 			NOT = { has_war_with = AUS }
 			country_exists = AUS
 		}
@@ -771,8 +771,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {}
 		available = {
-			has_idea = catholic_clergy
-			TUR = { has_idea = sunni_clergy }
+			#has_idea = catholic_clergy
+			#TUR = { has_idea = sunni_clergy }
 			NOT = { has_war_with = TUR }
 			country_exists = TUR
 		}
@@ -1022,7 +1022,45 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {}
+		completion_reward = {
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard level = 1 instant_build = yes
+				}
+			}
+			157 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard level = 1 instant_build = yes
+				}
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 11751
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 11846
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 925
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 6831
+			}
+		
+		}
 
 		ai_will_do = {
 			base = 10
@@ -1498,7 +1536,8 @@ focus_tree = {
 			focus = PAP_glorify_the_military
 		}
 		mutually_exclusive = {}
-		available = { has_government = neutrality has_idea = catholic_clergy }
+		available = { has_government = neutrality 
+		#has_idea = catholic_clergy }
 		bypass = {}
 		select_effect = {}
 

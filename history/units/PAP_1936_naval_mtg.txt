@@ -1,0 +1,28 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	### ROYAL NAVY ###
+	fleet = {
+		name = "Koninklijke Marine"			
+		naval_base = 11751  # Amsterdam
+		task_force = {				
+			name = "Koninklijke Vloot"			
+			location = 11751  # Amsterdam
+			ship = { name = "RI Pola" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PAP version_name = "Zara Class" } } }		
+			ship = { name = "RI Zara" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PAP version_name = "Zara Class" } } }		
+			ship = { name = "RCT Espero" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PAP version_name = "Curtatone Class" } } }		
+		}	
+		task_force = {				
+			name = "Koninklijke Onderzeeboot Smaldeel"			
+			location = 11751  # Amsterdam
+			ship = { name = "RSmg H 1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+			ship = { ordered_name = 2 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+			ship = { ordered_name = 3 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+			ship = { ordered_name = 4 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+			ship = { ordered_name = 5 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+			ship = { ordered_name = 6 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+			ship = { ordered_name = 7 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+			ship = { ordered_name = 8 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PAP version_name = "Sirena Class" } } }
+		}	
+	}	
+}
