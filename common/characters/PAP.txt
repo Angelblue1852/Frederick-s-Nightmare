@@ -145,7 +145,7 @@ characters={
 		name = "Rino Corso Fougier" 
 		portraits = {
 			army = {
-				large = "gfx/leaders/PAP/generals/Rino_Corso_Fougier.dds"
+				large = "gfx/leaders/PAP/PAP_rino_corso_fougier.png"
 			}
 		}
 		corps_commander = {
@@ -156,11 +156,11 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 		}
-		#advisor = {
-		#	slot = air_chief
-		#	idea_token = rodolfo_graziani
-		#	traits = { air_chief_reform_2 }
-		#}
+		advisor = {
+			slot = air_chief
+			idea_token = rodolfo_graziani
+			traits = { air_chief_reform_2 }
+		}
 	}
 	
 	PAP_peppino_garibaldi = {

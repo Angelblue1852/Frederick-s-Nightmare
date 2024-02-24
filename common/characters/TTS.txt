@@ -130,7 +130,7 @@ characters={
 		name = "Taddeo Orlando" 
 		portraits = {
 			army = {
-				large = "gfx/leaders/TTS/generals/Taddeo_Orlando.dds"
+				large = "gfx/leaders/TTS/TTS_taddeo_orlando.png"
 			}
 		}
 		corps_commander = {
@@ -146,7 +146,7 @@ characters={
 		name = "Antonio Sorice" 
 		portraits = {
 			army = {
-				large = "gfx/leaders/TTS/generals/Antonio_Sorice.dds"
+				large = "gfx/leaders/TTS/TTS_antonio_sorice.png"
 			}
 		}
 		corps_commander = {
