@@ -283,6 +283,7 @@ HYD = "countries/Hyderabad.txt"
 GUJ = "countries/Gujarat.txt"
 WTR = "countries/Westralia.txt"
 WSA = "countries/Western Sahara"
+RIG = "countries/Rio Grande"
 
 
 

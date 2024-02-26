@@ -10,6 +10,7 @@ state={
 
 		}
 		add_core_of = MEX
+		add_core_of = RIG
 		victory_points = {
 			8097 10 
 		}
@@ -20,7 +21,7 @@ state={
 	}
 
 	provinces={
-		2037 4898 5044 7935 8097 10809 10830 10916 12745 12827 12850 12897 
+		2037 5044 5071 7920 8097 10809 10830 12745 12827 13214 
 	}
 	manpower=520751
 	buildings_max_level_factor=1.000

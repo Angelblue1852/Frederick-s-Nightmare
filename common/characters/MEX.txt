@@ -12,5 +12,71 @@ characters={
 			id = -1
 		}
 	}
+	MEX_salvador_abascal = {
+		name = "Salvador Abascal" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MEX/MEX_salvador_abascal.png"
+			}
+		}
+		country_leader = {
+			ideology = rexism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	MEX_lazaro_cardenas = {
+		name = "Lázaro Cárdenas" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MEX/MEX_lazaro_cardenas.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			skill = 3
+			traits = {  }
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MEX_alvaro_obregon = {
+		name = "Álvaro Obregón" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/MEX/MEX_alvaro_obregon.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = { }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MEX_plutarco_e_calles = {
+		name = "Plutarco Elías Calles" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MEX/MEX_plutarco_e_calles.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = { }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
 }
 	

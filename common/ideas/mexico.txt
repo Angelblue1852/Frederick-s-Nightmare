@@ -1,0 +1,19 @@
+ideas = {
+
+	country = {
+	
+		anti_nationalist_crackdown = {
+			picture = anti_nationalist_crackdown
+			
+			allowed = { tag = MEX }
+			available = {
+			}
+			cancel = {}
+			
+			
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+	}
+}

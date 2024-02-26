@@ -1011,14 +1011,13 @@ SHO = {
 	color_ui = rgb { 11 89 70 }
 }
 
-CHY = {
-	color = rgb { 155 121 175 }
-	color_ui = rgb { 155 121 175 }
+RIG = {
+	color = rgb { 200 85 45 }
+	color_ui = rgb { 200 85 45 }
 }
 
 OHI = {
 	color = rgb { 170 170 170 }
 	color_ui = rgb { 170 170 170 }
 }
-
 

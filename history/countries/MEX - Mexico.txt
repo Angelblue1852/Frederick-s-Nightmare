@@ -10,6 +10,36 @@ if = {
 	}
 }
 
+add_ideas = {
+	
+	anti_nationalist_crackdown
+}
+
+set_variable = {
+    var = MEX_central_authority
+    value = 20
+}
+set_variable = {
+    var = MEX_texan_agitation
+    value = 10
+}
+set_variable = {
+    var = MEX_navajo_agitation
+    value = 8
+}
+set_variable = {
+    var = MEX_rio_grandese_agitation
+    value = 4
+}
+set_variable = {
+    var = MEX_pima_agitation
+    value = 4
+}
+set_variable = {
+    var = MEX_yucatan_agitation
+    value = 3
+}
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -54,6 +84,11 @@ if = {
 }
 
 recruit_character = MEX_pedro_rodriguez_triana
+recruit_character = MEX_salvador_abascal
+recruit_character = MEX_lazaro_cardenas
+recruit_character = MEX_alvaro_obregon
+recruit_character = MEX_plutarco_e_calles
+recruit_character = RIG_manuel_perez_trevino
 
 
 

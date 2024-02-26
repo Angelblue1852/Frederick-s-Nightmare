@@ -1,0 +1,9 @@
+MEX_seperatism_crisis = {
+	icon = GFX_decision_category_spr_political_assassination
+	allowed = {
+		original_tag = MEX
+	}
+	visible = {
+	}
+	visible_when_empty = yes
+}

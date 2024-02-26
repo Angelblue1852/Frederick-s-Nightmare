@@ -9,12 +9,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = {
-		hidden_effect = {
-			country_event = { id = MEX.2 days = 50 }
-		}
-	}
-	
 	option = {
 		name = MEX.1.o1
 	}
@@ -259,5 +253,69 @@ country_event = {
 			}
 		}
 		ai_chance = { base = 0 }
+	}
+}
+
+#Revolutionary Ideals
+country_event = {
+	id = MEX.8
+	title = MEX.8.t
+	desc = MEX.8.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MEX.8.o1
+		add_to_variable = {
+			var = MEX_rio_grandese_agitation
+			value = 5
+			tooltip = add_10_to_var_ra
+		}
+		add_to_variable = {
+			var = MEX_pima_agitation
+			value = 10
+			tooltip = add_10_to_var_pa
+		}
+		add_to_variable = {
+			var = MEX_navajo_agitation
+			value = 10
+			tooltip = add_10_to_var_na
+		}
+		add_to_variable = {
+			var = MEX_yucatan_agitation
+			value = 5
+			tooltip = add_10_to_var_ya
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = MEX.9
+	title = MEX.9.t
+	desc = MEX.9.d
+	picture = GFX_report_event_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MEX.9.o1
+		add_to_variable = {
+			var = MEX_texan_agitation
+			value = 5
+			tooltip = add_5_to_var_ta
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = MEX.9.o2
+		add_to_variable = {
+			var = MEX_texan_agitation
+			value = 10
+			tooltip = add_10_to_var_ta
+		}
+		add_political_power = 50
+		ai_chance = { base = 100 }
 	}
 }

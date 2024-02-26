@@ -1,0 +1,27 @@
+characters={
+	RIG_manuel_perez_trevino = {
+		name = "Manuel Pérez Treviño" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RIG/RIG_manuel_perez_trevino.png"
+			}
+			army = {
+				large = "gfx/leaders/RIG/RIG_manuel_perez_trevino_2.png"
+			}
+		}
+		#country_leader = {
+		#	ideology = socialism
+		#	expire = "1960.1.1.1"
+		#	id = -1
+		#}
+		corps_commander = {
+			skill = 2
+			traits = { }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+	

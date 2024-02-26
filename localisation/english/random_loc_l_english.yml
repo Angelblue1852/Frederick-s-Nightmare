@@ -9,6 +9,18 @@
  JAP_fate_of_yakutia:0 "Fate of Yakutia"
  JAP_fate_of_west_siberia:0 "Fate of Siberia"
  JAP_fate_of_transamur:0 "Fate of Transamur"
+ 
+ MEX_seperatism_crisis:0 "The Seperatism Crisis"
+ MEX_seperatism_crisis_desc:0 "WIP\n\n\n------------------------------------------------------------------------------\n§YCurrent Central Authority§!:\n£occupation_costs [?MEX_central_authority] \n§YCurrent Texan Agitation§!:\n£texan_agitation [?MEX_texan_agitation] \n§YCurrent Navajo Agitation§!:\n£navajo_agitation [?MEX_navajo_agitation] \n§YCurrent Pima Agitation§!:\n£pima_agitation [?MEX_pima_agitation] \n§YCurrent Rio Grandese Agitation§!:\n£rio_grandese_agitation [?MEX_rio_grandese_agitation] \n§YCurrent Yucatan Agitation§!:\n£yucatan_agitation [?MEX_yucatan_agitation]"
+ MEX_fund_texan_bureucracy:0 "Fund Bureucracy in the Texian's Territory"
+ MEX_fund_pima_bureucracy:0 "Fund Bureucracy in the Pima's Territory"
+ MEX_fund_rio_grandese_bureucracy:0 "Fund Bureucracy in the Rio Grandese Territory"
+ MEX_fund_navajo_bureucracy:0 "Fund Bureucracy in the Navajo's Territory"
+ MEX_fund_yucatan_bureucracy:0 "Fund Bureucracy in the Yucatan's Territory"
+ MEX_appease_particularist_agitators:0 "Appease Particularist Agitators"
+ MEX_anti_revolutionary_policy:0 "Anti-Revolutionary Policy"
+ MEX_agitation_grows:0 "Growing Agitation"
+ MEX_texan_revolution:0 "Fourth Texan Revolution"
 
 
  ####country flags####
@@ -22,3 +34,28 @@
  german_confederation:0 "German Confederation"
  papal_league:0 "Papal League"
  axis_powers:0 "Axis Powers"
+ 
+ 
+ ####Custom Cost Loc####
+ decision_cost_CA_15:0 "£occupation_costs  §Y15§!"
+ decision_cost_CA_15_blocked:0 "£occupation_costs  §R15§!"
+ decision_cost_CA_15_tooltip:0 "It costs £occupation_costs  §Y15§! to take the decision"
+ decision_cost_CA_20:0 "£occupation_costs  §Y20§!"
+ decision_cost_CA_20_blocked:0 "£occupation_costs  §R20§!"
+ decision_cost_CA_20_tooltip:0 "It costs £occupation_costs  §Y20§! to take the decision"
+ texan_agitation_reduction:0 "§YYucatan Agitation§!\n will decrease by £texan_agitation §G5§!"
+ rio_grandese_agitation_reduction:0 "§YYucatan Agitation§!\n will decrease by £rio_grandese_agitation §G5§!"
+ pima_agitation_reduction:0 "§YYucatan Agitation§!\n will decrease by £pima_agitation §G5§!"
+ navajo_agitation_reduction:0 "§YYucatan Agitation§!\n will decrease by £navajo_agitation §G5§!"
+ yucatan_agitation_reduction:0 "§YYucatan Agitation§!\n will decrease by £yucatan_agitation §G5§!"
+ 
+ 
+ ####Variable Loc####
+ add_10_to_var_ca:0 "§YCentral Authority§!\n increases by £occupation_costs §G10§!"
+ add_5_to_var_ta:0 "§YTexian Agitation§!\n increasing by £texan_agitation §R5§!"
+ add_10_to_var_ta:0 "§YTexian Agitation§!\n increasing by £texan_agitation §R10§!"
+ add_5_to_var_ra:0 "§YRio Grandese Agitation§!\n increasing by £rio_grandese_agitation §R5§!"
+ add_5_to_var_na:0 "§YNavajo Agitation§!\n increasing by £navajo_agitation §R5§!"
+ add_5_to_var_pa:0 "§YPima Agitation§!\n increasing by £pima_agitation §R5§!"
+ add_5_to_var_ya:0 "§YYucatan Agitation§!\n increasing by £yucatan_agitation §R5§!"
+ texan_revolt_fail:0 "§YTexian Agitation§!\n is less than £texan_agitation §G25§!"

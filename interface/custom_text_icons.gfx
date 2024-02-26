@@ -1,0 +1,32 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_navajo_agitation"
+		texturefile = "gfx/texticons/navajo_agitation.png"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_pima_agitation"
+		texturefile = "gfx/texticons/pima_agitation.png"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_rio_grandese_agitation"
+		texturefile = "gfx/texticons/rio_grandese_agitation.png"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_texan_agitation"
+		texturefile = "gfx/texticons/texan_agitation.png"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_yucatan_agitation"
+		texturefile = "gfx/texticons/yucatan_agitation.png"
+		legacy_lazy_load = no
+	}
+}

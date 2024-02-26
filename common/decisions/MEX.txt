@@ -1,0 +1,403 @@
+MEX_seperatism_crisis = {
+	
+	MEX_fund_texan_bureucracy = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		#cost = 35
+
+		days_remove = 100
+		#modifier = {
+		#	communism_drift = -0.03
+		#}
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		available = {
+		}
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 30
+				check_variable = {
+					var = MEX_texan_agitation
+					value = 15
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_central_authority
+					value = 15
+				}
+			}
+		}
+		
+		remove_effect = {
+			subtract_from_variable = {
+				var = MEX_texan_agitation
+				value = 10
+			}
+			custom_effect_tooltip = texan_agitation_reduction
+		}
+	
+	}
+	MEX_fund_pima_bureucracy = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		#cost = 35
+
+		days_remove = 100
+		#modifier = {
+		#	communism_drift = -0.03
+		#}
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		available = {
+		}
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 30
+				check_variable = {
+					var = MEX_pima_agitation
+					value = 15
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_central_authority
+					value = 15
+				}
+			}
+		}
+		
+		remove_effect = {
+			subtract_from_variable = {
+				var = MEX_pima_agitation
+				value = 10
+			}
+			custom_effect_tooltip = pima_agitation_reduction
+		}
+	
+	}
+	MEX_fund_rio_grandese_bureucracy = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		#cost = 35
+
+		days_remove = 100
+		#modifier = {
+		#	communism_drift = -0.03
+		#}
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		available = {
+		}
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 30
+				check_variable = {
+					var = MEX_rio_grandese_agitation
+					value = 15
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_central_authority
+					value = 15
+				}
+			}
+		}
+		
+		remove_effect = {
+			subtract_from_variable = {
+				var = MEX_rio_grandese_agitation
+				value = 10
+			}
+			custom_effect_tooltip = rio_grandese_agitation_reduction
+		}
+	
+	}
+	MEX_fund_navajo_bureucracy = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		#cost = 35
+
+		days_remove = 100
+		#modifier = {
+		#	communism_drift = -0.03
+		#}
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		available = {
+		}
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 30
+				check_variable = {
+					var = MEX_navajo_agitation
+					value = 15
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_central_authority
+					value = 15
+				}
+			}
+		}
+		
+		remove_effect = {
+			subtract_from_variable = {
+				var = MEX_navajo_agitation
+				value = 10
+			}
+			custom_effect_tooltip = navajo_agitation_reduction
+		}
+	
+	}
+	MEX_fund_yucatan_bureucracy = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		#cost = 35
+
+		days_remove = 100
+		#modifier = {
+		#	communism_drift = -0.03
+		#}
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		available = {
+		}
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 30
+				check_variable = {
+					var = MEX_yucatan_agitation
+					value = 15
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_central_authority
+					value = 15
+				}
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_yucatan_agitation
+					value = 10
+				}
+			}
+			custom_effect_tooltip = yucatan_agitation_reduction
+		}
+	
+	}
+	
+	MEX_appease_particularist_agitators = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		cost = 35
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		available = {
+		}
+		
+		ai_will_do = {
+			base = 15
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 19
+			}
+		}
+		custom_cost_text = decision_cost_CA_20
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_central_authority
+					value = 20
+				}
+			}
+			add_days_mission_timeout = {
+				mission = MEX_agitation_grows
+				days = 30
+			}
+		}
+	}
+	
+	MEX_anti_revolutionary_policy = {
+		is_good = yes
+		days_mission_timeout = 50
+		activation = {
+		}
+		
+		available = {
+			NOT = {
+				has_idea = anti_nationalist_crackdown
+			}
+		}
+		
+		timeout_effect = {
+			add_to_variable = {
+				var = MEX_central_authority
+				value = 10
+				tooltip = add_10_to_var_ca
+			}
+		}
+	}
+	
+	MEX_agitation_grows = {
+		days_mission_timeout = 30
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			random_list = {
+				10 = {
+					add_to_variable = {
+						var = MEX_texan_agitation
+						value = 5
+						tooltip = add_5_to_var_ta
+					}
+				}
+				10 = {
+					add_to_variable = {
+						var = MEX_navajo_agitation
+						value = 5
+						tooltip = add_5_to_var_na
+					}
+				}
+				10 = {
+					add_to_variable = {
+						var = MEX_pima_agitation
+						value = 5
+						tooltip = add_5_to_var_pa
+					}
+				}
+				10 = {
+					add_to_variable = {
+						var = MEX_rio_grandese_agitation
+						value = 5
+						tooltip = add_5_to_var_ra
+					}
+				}
+				10 = {
+					add_to_variable = {
+						var = MEX_yucatan_agitation
+						value = 5
+						tooltip = add_5_to_var_ya
+					}
+				}
+			}
+		}
+	}
+	
+	MEX_texan_revolution = {
+		days_mission_timeout = 100
+		activation = { 
+			check_variable = {
+				var = MEX_texan_agitation
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		
+		available = {
+			check_variable = {
+				var = MEX_texan_agitation
+				value = 25
+				compare = less_than 
+				tooltip = texan_revolt_fail
+			}
+		}
+		
+		timeout_effect = {
+			country_event = MEX.2
+		}
+	}
+}
