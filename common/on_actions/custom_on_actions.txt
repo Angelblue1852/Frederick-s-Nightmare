@@ -34,6 +34,12 @@ on_actions = {
 					X = "[This.GetTag]"
 				}
 			}
+			MEX = {
+				country_event = {
+					id = MEX.9
+					days = 95
+				}
+			}
 		}
     }
 	

@@ -36,6 +36,11 @@
  MAL_ENG_neutrality_subject_ADJ:0 "Malaysian"
  
  
+ PAK_timirud:0 "Second Timirud Empire"
+ PAK_timirud_DEF:0 "the Second Timirud Empire"
+ PAK_timirud_ADJ:0 "Timirud"
+ 
+ 
  BUL_TUR_neutrality:0 "Principality of Bulgaria"
  BUL_TUR_neutrality_DEF:0 "the Principality of Bulgaria"
  BUL_TUR_neutrality_ADJ:0 "Bulgarian"

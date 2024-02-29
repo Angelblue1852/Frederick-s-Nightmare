@@ -54,60 +54,7 @@ MEX_seperatism_crisis = {
 		}
 	
 	}
-	MEX_fund_pima_bureucracy = {
-		
-		icon = GFX_decision_ger_mefo_bills
-		
-		#cost = 35
-
-		days_remove = 100
-		#modifier = {
-		#	communism_drift = -0.03
-		#}
 	
-		allowed = { original_tag = MEX }
-		visible = {
-		}
-		available = {
-		}
-		
-		ai_will_do = {
-			base = 15
-			modifier = {
-				add = 30
-				check_variable = {
-					var = MEX_pima_agitation
-					value = 15
-					compare = greater_than_or_equals
-				}
-			}
-		}
-		
-		custom_cost_trigger = {
-			check_variable = {
-				MEX_central_authority > 14
-			}
-		}
-		custom_cost_text = decision_cost_CA_15
-		
-		complete_effect = {
-			hidden_effect = {
-				subtract_from_variable = {
-					var = MEX_central_authority
-					value = 15
-				}
-			}
-		}
-		
-		remove_effect = {
-			subtract_from_variable = {
-				var = MEX_pima_agitation
-				value = 10
-			}
-			custom_effect_tooltip = pima_agitation_reduction
-		}
-	
-	}
 	MEX_fund_rio_grandese_bureucracy = {
 		
 		icon = GFX_decision_ger_mefo_bills
@@ -216,6 +163,62 @@ MEX_seperatism_crisis = {
 		}
 	
 	}
+	
+	MEX_fund_pima_bureucracy = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		#cost = 35
+
+		days_remove = 100
+		#modifier = {
+		#	communism_drift = -0.03
+		#}
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		available = {
+		}
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 30
+				check_variable = {
+					var = MEX_pima_agitation
+					value = 15
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = MEX_central_authority
+					value = 15
+				}
+			}
+		}
+		
+		remove_effect = {
+			subtract_from_variable = {
+				var = MEX_pima_agitation
+				value = 10
+			}
+			custom_effect_tooltip = pima_agitation_reduction
+		}
+	
+	}
+	
 	MEX_fund_yucatan_bureucracy = {
 		
 		icon = GFX_decision_ger_mefo_bills
@@ -304,9 +307,269 @@ MEX_seperatism_crisis = {
 				}
 			}
 			add_days_mission_timeout = {
-				mission = MEX_agitation_grows
-				days = 30
+					mission = MEX_agitation_grows
+					days = 30
+				}
+		}
+	}
+	
+	MEX_tejas_martial_law_01 = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		cost = 35
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 375
+				state = 943
+				state = 944
+				state = 376
 			}
+		}
+		
+		days_re_enable = 150
+		
+		available = {
+			NOT = {
+				has_active_mission = MEX_texan_revolution
+				TEX = {
+					exists = yes
+				}
+			}
+			num_divisions_in_states = {
+				count >  14
+				states = { 375 376 943 944 }
+			}
+			check_variable = {
+				MEX_texan_agitation > 10
+				tooltip = ta_level_10
+			}
+		}
+		
+		ai_will_do = {
+			base = 15
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 29
+			}
+		}
+		custom_cost_text = decision_cost_CA_30
+		
+		complete_effect = {
+			activate_mission = MEX_tejas_martial_law_02
+		}
+	}
+	
+	MEX_rio_grandese_martial_law_01 = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		cost = 35
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 479
+				state = 480
+				state = 482
+			}
+		}
+		
+		days_re_enable = 150
+		
+		available = {
+			NOT = {
+				has_active_mission = MEX_rio_grandese_revolution
+				RIG = {
+					exists = yes
+				}
+			}
+			num_divisions_in_states = {
+				count >  14
+				states = { 479 480 482 }
+			}
+			check_variable = {
+				MEX_rio_grandese_agitation > 10
+				tooltip = ra_level_10
+			}
+		}
+		
+		ai_will_do = {
+			base = 15
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 29
+			}
+		}
+		custom_cost_text = decision_cost_CA_30
+		
+		complete_effect = {
+			activate_mission = MEX_rio_grandese_martial_law_02
+		}
+	}
+	
+	MEX_navajo_martial_law_01 = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		cost = 35
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 937
+			}
+		}
+		
+		days_re_enable = 150
+		
+		available = {
+			NOT = {
+				has_active_mission = MEX_navajo_revolution
+				NAV = {
+					exists = yes
+				}
+			}
+			num_divisions_in_states = {
+				count >  9
+				states = { 937 }
+			}
+			check_variable = {
+				MEX_navajo_agitation > 10
+				tooltip = na_level_10
+			}
+		}
+		
+		ai_will_do = {
+			base = 15
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			activate_mission = MEX_navajo_martial_law_02
+		}
+	}
+	
+	MEX_pima_martial_law_01 = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		cost = 35
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 377
+			}
+		}
+		
+		days_re_enable = 150
+		
+		available = {
+			NOT = {
+				has_active_mission = MEX_pima_revolution
+				PIM = {
+					exists = yes
+				}
+			}
+			num_divisions_in_states = {
+				count >  9
+				states = { 377 }
+			}
+			check_variable = {
+				MEX_pima_agitation > 10
+				tooltip = pa_level_10
+			}
+		}
+		
+		ai_will_do = {
+			base = 15
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			activate_mission = MEX_pima_martial_law_02
+		}
+	}
+	
+	MEX_yucatan_martial_law_01 = {
+		
+		icon = GFX_decision_ger_mefo_bills
+		
+		cost = 35
+	
+		allowed = { original_tag = MEX }
+		visible = {
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 474
+			}
+		}
+		
+		days_re_enable = 150
+		
+		available = {
+			NOT = {
+				has_active_mission = MEX_yucatan_revolution
+				YUC = {
+					exists = yes
+				}
+			}
+			num_divisions_in_states = {
+				count >  9
+				states = { 474 }
+			}
+			check_variable = {
+				MEX_pima_agitation > 10
+				tooltip = ya_level_10
+			}
+		}
+		
+		ai_will_do = {
+			base = 15
+		}
+		
+		custom_cost_trigger = {
+			check_variable = {
+				MEX_central_authority > 14
+			}
+		}
+		custom_cost_text = decision_cost_CA_15
+		
+		complete_effect = {
+			activate_mission = MEX_yucatan_martial_law_02
 		}
 	}
 	
@@ -332,7 +595,7 @@ MEX_seperatism_crisis = {
 	}
 	
 	MEX_agitation_grows = {
-		days_mission_timeout = 30
+		days_mission_timeout = 15
 		available = {
 			always = no
 		}
@@ -398,6 +661,216 @@ MEX_seperatism_crisis = {
 		
 		timeout_effect = {
 			country_event = MEX.2
+		}
+	}
+	
+	MEX_tejas_martial_law_02 = {
+		days_mission_timeout = 25
+		
+		is_good = yes
+		
+		activation = {
+			always = no
+		}
+		
+		available = {
+			num_divisions_in_states = {
+				count <  15
+				states = { 375 376 943 944 }
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 375
+				state = 376
+				state = 943
+				state = 944
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		
+		complete_effect = {
+			add_to_variable = {
+				var = MEX_texan_agitation
+				value = 10
+				tooltip = add_10_to_var_ta
+			}
+		}
+		
+		timeout_effect = {
+			add_to_variable = {
+				var = MEX_texan_agitation
+				value = -10  
+				tooltip = remove_10_to_var_ta
+			}
+		}
+	}
+	
+	MEX_rio_grandese_martial_law_02 = {
+		days_mission_timeout = 25
+		
+		is_good = yes
+		
+		activation = {
+			always = no
+		}
+		
+		available = {
+			num_divisions_in_states = {
+				count <  15
+				states = { 479 480 482 }
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 479
+				state = 480
+				state = 482
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		
+		complete_effect = {
+			add_to_variable = {
+				var = MEX_rio_grandese_agitation
+				value = 10
+				tooltip = add_10_to_var_ra
+			}
+		}
+		
+		timeout_effect = {
+			add_to_variable = {
+				var = MEX_rio_grandese_agitation
+				value = -10  
+				tooltip = remove_10_to_var_ra
+			}
+		}
+	}
+	
+	MEX_navajo_martial_law_02 = {
+		days_mission_timeout = 25
+		
+		is_good = yes
+		
+		activation = {
+			always = no
+		}
+		
+		available = {
+			num_divisions_in_states = {
+				count <  10
+				states = { 937 }
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 937
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		
+		complete_effect = {
+			add_to_variable = {
+				var = MEX_navajo_agitation
+				value = 10
+				tooltip = add_10_to_var_na
+			}
+		}
+		
+		timeout_effect = {
+			add_to_variable = {
+				var = MEX_navajo_agitation
+				value = -10  
+				tooltip = remove_10_to_var_na
+			}
+		}
+	}
+	
+	MEX_pima_martial_law_02 = {
+		days_mission_timeout = 25
+		
+		is_good = yes
+		
+		activation = {
+			always = no
+		}
+		
+		available = {
+			num_divisions_in_states = {
+				count <  10
+				states = { 377 }
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 377
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		
+		complete_effect = {
+			add_to_variable = {
+				var = MEX_pima_agitation
+				value = 10
+				tooltip = add_10_to_var_pa
+			}
+		}
+		
+		timeout_effect = {
+			add_to_variable = {
+				var = MEX_pima_agitation
+				value = -10  
+				tooltip = remove_10_to_var_pa
+			}
+		}
+	}
+	
+	MEX_yucatan_martial_law_02= {
+		days_mission_timeout = 25
+		
+		is_good = yes
+		
+		activation = {
+			always = no
+		}
+		
+		available = {
+			num_divisions_in_states = {
+				count <  10
+				states = { 474 }
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 474
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		
+		complete_effect = {
+			add_to_variable = {
+				var = MEX_yucatan_agitation
+				value = 10
+				tooltip = add_10_to_var_ya
+			}
+		}
+		
+		timeout_effect = {
+			add_to_variable = {
+				var = MEX_yucatan_agitation
+				value = -10  
+				tooltip = remove_10_to_var_ya
+			}
 		}
 	}
 }
