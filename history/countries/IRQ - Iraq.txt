@@ -12,7 +12,11 @@ set_technology = {
 	fuel_silos = 1
 }
 
-
+add_ideas = {
+	IRQ_british_influence
+	IRQ_ottoman_nobility
+	economic_crisis5
+}
 
 set_convoys = 5
 
@@ -29,3 +33,12 @@ set_popularities = {
 	communism = 10
 }
 
+set_variable = { var = british_control value = 50 }
+set_variable = { british_control_percent = british_control }
+IRQ_set_british_effects = yes
+add_dynamic_modifier = {
+  modifier = IRQ_british_political_control
+}
+add_dynamic_modifier = {
+	modifier = IRQ_pashatic_approval_control
+}

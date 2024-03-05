@@ -403,3 +403,20 @@
  OHI_sierra_stachowicz_desc:0 "Sierra Stachowicz has become one of the Polish secession movement's most notable faces after the death of her father Daniel, who was one of the military and political leaders of the Polish insurgency against Russian rule during the 1920s.\n\nSince the death of her father in 1934, Sierra has taken on his political issues and has travelled through North America and western Europe advocating for a breakdown of the old reactionary tsarist system. Although she is viewed as potentially politically dangerous by the crown loyalists, she has become somewhat of a sweetheart to the people of Ohio."
  USA_henry_ford:0 "Henry Ford"
  USA_henry_ford_desc:0 "The founder of the Ford Motor Company and head of the corporate Ford empire, Henry Ford is the center of a new corporate fascistic movement in the American upper class."
+
+  IRQ_british_influence: "[IRQ_british_influence_loc]"
+  IRQ_british_influence_high: "British Influence - §tHigh§!"
+  IRQ_british_influence_medium: "British Influence - §GModerate§!"
+  IRQ_british_influence_low: "British Influence - §CLow§!"
+  IRQ_british_influence_undef: "British Influence"
+  IRQ_british_control: "British Aid"
+  IRQ_british_political_control: "British Interference"
+
+  IRQ_ottoman_nobility: "[IRQ_ottoman_nobility_loc]"
+  IRQ_ottoman_nobility_high: "Pashas' Approval - §tHigh§!"
+  IRQ_ottoman_nobility_medium: "Pashas' Approval - §GModerate§!"
+  IRQ_ottoman_nobility_low: "Pashas' Approval - §CLow§!"
+  IRQ_ottoman_nobility_undef: "Pashas' Approval"
+
+IRQ_increase_british_control_tt: "Increase [ENG.GetAdjective] Influence by: §Y[?british_control_temp|*]§!"
+IRQ_decrease_british_control_tt: "Decrease [ENG.GetAdjective] Influence by: §Y[?british_control_temp|*]§!"

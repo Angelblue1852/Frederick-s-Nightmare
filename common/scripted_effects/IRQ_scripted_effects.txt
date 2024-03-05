@@ -1,0 +1,89 @@
+IRQ_increase_british_control = {
+	if = {
+		limit = { has_variable = british_control_temp }
+		custom_effect_tooltip = IRQ_increase_british_control_tt
+		hidden_effect = {
+			add_to_variable = { british_control = british_control_temp }
+			IRQ_set_british_effects = yes
+		}
+	}
+}
+
+IRQ_decrease_british_control = {
+	if = {
+		limit = { has_variable = british_control_temp }
+		custom_effect_tooltip = IRQ_decrease_british_control_tt
+		hidden_effect = {
+			subtract_from_variable = { british_control = british_control_temp }
+			IRQ_set_british_effects = yes
+		}
+	}
+}
+
+IRQ_set_british_effects = {
+	multiply_variable = { var = british_control_percent value = 0.01 }
+	set_variable = { ENG_effect_pp = british_control }
+	multiply_variable = { var = ENG_effect_pp value = -0.004 }
+	set_variable = { ENG_effect_construction = british_control }
+	multiply_variable = { var = ENG_effect_construction value = 0.003 }
+	set_variable = { ENG_effect_extraction = british_control }
+	multiply_variable = { var = ENG_effect_extraction value = 0.003 }
+
+	if = {
+		limit = {
+			check_variable = {
+				var = british_control
+				value = 80
+				compare = greater_than_or_equals
+			}
+		}
+		ROOT = {
+			country_event = { id = iraqbrit.1 days = 30 }
+		}
+	}
+}
+
+IRQ_increase_pashatic_approval = {
+	if = {
+		limit = { has_variable = pashatic_approval_temp }
+		custom_effect_tooltip = IRQ_increase_pashatic_approval_tt
+		hidden_effect = {
+			add_to_variable = { pashatic_approval = pashatic_approval_temp }
+			IRQ_set_british_effects = yes
+		}
+	}
+}
+
+IRQ_decrease_pashatic_approval = {
+	if = {
+		limit = { has_variable = pashatic_approval_temp }
+		custom_effect_tooltip = IRQ_decrease_pashatic_approval_tt
+		hidden_effect = {
+			subtract_from_variable = { pashatic_approval = pashatic_approval_temp }
+			IRQ_set_british_effects = yes
+		}
+	}
+}
+
+IRQ_set_pashatic_approval_effects = {
+	multiply_variable = { var = pashatic_approval_percent value = 0.01 }
+	set_variable = { IRQ_effect_pp = pashatic_approval }
+	multiply_variable = { var = IRQ_effect_pp value = -0.004 }
+	set_variable = { IRQ_effect_construction = pashatic_approval }
+	multiply_variable = { var = IRQ_effect_construction value = 0.003 }
+	set_variable = { IRQ_effect_extraction = pashatic_approval }
+	multiply_variable = { var = IRQ_effect_extraction value = 0.003 }
+
+	if = {
+		limit = {
+			check_variable = {
+				var = pashatic_approval
+				value = 80
+				compare = greater_than_or_equals
+			}
+		}
+		ROOT = {
+			country_event = { id = iraqott.1 days = 30 }
+		}
+	}
+}

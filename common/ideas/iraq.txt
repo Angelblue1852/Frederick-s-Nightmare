@@ -1,0 +1,20 @@
+ideas={
+	country={
+		IRQ_british_influence = {
+			allowed = { original_tag = IRQ }
+			picture = british_stoicism
+		}
+		IRQ_british_influence_dummy = {
+			allowed = { always = no }
+			picture = british_stoicism
+		}
+		IRQ_ottoman_nobility = {
+			allowed = { original_tag = IRQ }
+			picture = ottoman_minorities
+		}
+		IRQ_ottoman_nobility_dummy = {
+			allowed = { original_tag = IRQ }
+			picture = ottoman_minorities
+		}
+	}
+}

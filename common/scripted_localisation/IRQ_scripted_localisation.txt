@@ -1,0 +1,80 @@
+defined_text = {
+	name = IRQ_british_influence_loc
+	text = {
+	  trigger = {
+		check_variable = {
+		  var = british_control
+		  value = 70
+		  compare = greater_than_or_equals
+		}
+	  }
+	  localization_key = IRQ_british_influence_high
+	}
+	text = {
+	  trigger = {
+		AND = {
+		  check_variable = {
+			var = british_control
+			value = 70
+			compare = less_than
+		  }
+		  check_variable = {
+			var = british_control
+			value = 30
+			compare = greater_than
+		  }
+		}
+	  }
+	  localization_key = IRQ_british_influence_medium
+	}
+	text = {
+	  trigger = {
+		check_variable = {
+		  var = british_control
+		  value = 30
+		  compare = less_than_or_equals
+		}
+	  }
+	  localization_key = IRQ_british_influence_low
+	}
+  }
+  defined_text = {
+	name = IRQ_ottoman_nobility_loc
+	text = {
+	  trigger = {
+		check_variable = {
+		  var = pashatic_approval
+		  value = 70
+		  compare = greater_than_or_equals
+		}
+	  }
+	  localization_key = IRQ_ottoman_nobility_high
+	}
+	text = {
+	  trigger = {
+		AND = {
+		  check_variable = {
+			var = pashatic_approval
+			value = 70
+			compare = less_than
+		  }
+		  check_variable = {
+			var = pashatic_approval
+			value = 30
+			compare = greater_than
+		  }
+		}
+	  }
+	  localization_key = IRQ_ottoman_nobility_medium
+	}
+	text = {
+	  trigger = {
+		check_variable = {
+		  var = pashatic_approval
+		  value = 30
+		  compare = less_than_or_equals
+		}
+	  }
+	  localization_key = IRQ_ottoman_nobility_low
+	}
+  }

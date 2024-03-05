@@ -1253,3 +1253,14 @@ RAJ_industrialized_personnel = {
 	state_resources_factor = 0.15
 	state_production_speed_buildings_factor = 0.15
 }
+
+IRQ_british_political_control = {
+	political_power_gain = ENG_effect_pp
+	production_speed_buildings_factor = ENG_effect_construction
+	local_resources_factor = ENG_effect_extraction
+  }
+IRQ_pashatic_approval_control = {
+	political_power_gain = IRQ_effect_pp
+	production_speed_buildings_factor = IRQ_effect_construction
+	local_resources_factor = IRQ_effect_extraction
+  }
