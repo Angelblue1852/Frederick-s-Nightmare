@@ -35,6 +35,7 @@ add_to_faction = SPR
 add_to_faction = ITA
 
 give_guarantee = GXC
+give_guarantee = GUJ
 
 set_politics = {
 	ruling_party = communism

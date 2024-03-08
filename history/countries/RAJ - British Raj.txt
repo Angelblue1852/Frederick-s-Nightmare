@@ -16,6 +16,9 @@ add_ideas = {
 }
 
 recruit_character = RAJ_jcaz
+recruit_character = RAJ_abani_mukherji
+recruit_character = RAJ_subhas_chandra_bose
+recruit_character = RAJ_b_r_ambedkar
 
 
 set_cosmetic_tag = RAJ_JCAZ

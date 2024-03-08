@@ -12,5 +12,44 @@ characters={
 			id = -1
 		}
 	}
+	RAJ_abani_mukherji = {
+		name = "Abani Mukherji"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RAJ/RAJ_abani_mukherji.png"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	RAJ_subhas_chandra_bose = {
+		name = "Subhas Chandra Bose"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RAJ/RAJ_subhas_chandra_bose.png"
+			}
+		}
+		country_leader = {
+			ideology = national_bolshevism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	RAJ_b_r_ambedkar = {
+		name = "B.R. Ambedkar"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RAJ/RAJ_b_r_ambedkar.png"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
 }
 	

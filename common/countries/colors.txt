@@ -299,8 +299,8 @@ SLO = {
 	color_ui = rgb { 255 255 255 }
 }
 RAJ = {
-	color = rgb { 67 84 61 }
-	color_ui = rgb { 67 84 61 }
+	color = rgb { 204 102 0 }
+	color_ui = rgb { 204 102 0 }
 }
 
 CRO = {

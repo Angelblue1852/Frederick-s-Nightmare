@@ -11,6 +11,7 @@ state={
 
 	history={
 		owner = PAK
+		add_core_of = TIB
 		buildings = {
 			infrastructure = 1
 		}

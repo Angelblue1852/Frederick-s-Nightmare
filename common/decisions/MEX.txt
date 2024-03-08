@@ -2,7 +2,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_fund_texan_bureucracy = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_funding_texas_bureucracy
 		
 		#cost = 35
 
@@ -57,7 +57,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_fund_rio_grandese_bureucracy = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_funding_rio_grande_bureucracy
 		
 		#cost = 35
 
@@ -111,7 +111,7 @@ MEX_seperatism_crisis = {
 	}
 	MEX_fund_navajo_bureucracy = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_funding_navajo_bureucracy
 		
 		#cost = 35
 
@@ -166,7 +166,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_fund_pima_bureucracy = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_funding_pima_bureucracy
 		
 		#cost = 35
 
@@ -221,7 +221,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_fund_yucatan_bureucracy = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_funding_yucatan_bureucracy
 		
 		#cost = 35
 
@@ -315,7 +315,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_tejas_martial_law_01 = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_crush_texas
 		
 		cost = 35
 	
@@ -369,7 +369,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_rio_grandese_martial_law_01 = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_crush_rio_grande
 		
 		cost = 35
 	
@@ -422,7 +422,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_navajo_martial_law_01 = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_crush_navajo
 		
 		cost = 35
 	
@@ -473,7 +473,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_pima_martial_law_01 = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_crush_pima
 		
 		cost = 35
 	
@@ -524,7 +524,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_yucatan_martial_law_01 = {
 		
-		icon = GFX_decision_ger_mefo_bills
+		icon = GFX_crush_yucatan
 		
 		cost = 35
 	
@@ -595,6 +595,7 @@ MEX_seperatism_crisis = {
 	}
 	
 	MEX_agitation_grows = {
+		icon = GFX_growing_agitation
 		days_mission_timeout = 15
 		available = {
 			always = no
@@ -664,9 +665,105 @@ MEX_seperatism_crisis = {
 		}
 	}
 	
+	MEX_rio_grandese_revolution = {
+		days_mission_timeout = 100
+		activation = { 
+			check_variable = {
+				var = MEX_rio_grandese_agitation
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		
+		available = {
+			check_variable = {
+				var = MEX_rio_grandese_agitation
+				value = 25
+				compare = less_than 
+				tooltip = rio_grande_revolt_fail
+			}
+		}
+		
+		timeout_effect = {
+			country_event = MEX.10
+		}
+	}
+	
+	MEX_navajo_revolution = {
+		days_mission_timeout = 100
+		activation = { 
+			check_variable = {
+				var = MEX_navajo_agitation
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		
+		available = {
+			check_variable = {
+				var = MEX_navajo_agitation
+				value = 25
+				compare = less_than 
+				tooltip = navajo_revolt_fail
+			}
+		}
+		
+		timeout_effect = {
+			country_event = MEX.11
+		}
+	}
+	
+	MEX_pima_revolution = {
+		days_mission_timeout = 100
+		activation = { 
+			check_variable = {
+				var = MEX_pima_agitation
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		
+		available = {
+			check_variable = {
+				var = MEX_pima_agitation
+				value = 25
+				compare = less_than 
+				tooltip = pima_revolt_fail
+			}
+		}
+		
+		timeout_effect = {
+			country_event = MEX.12
+		}
+	}
+	
+	MEX_yucatan_revolution = {
+		days_mission_timeout = 100
+		activation = { 
+			check_variable = {
+				var = MEX_yucatan_agitation
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		
+		available = {
+			check_variable = {
+				var = MEX_yucatan_agitation
+				value = 25
+				compare = less_than 
+				tooltip = yucatan_revolt_fail
+			}
+		}
+		
+		timeout_effect = {
+			country_event = MEX.13
+		}
+	}
+	
 	MEX_tejas_martial_law_02 = {
 		days_mission_timeout = 25
-		
+		icon = GFX_crush_texas
 		is_good = yes
 		
 		activation = {
@@ -710,7 +807,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_rio_grandese_martial_law_02 = {
 		days_mission_timeout = 25
-		
+		icon = GFX_crush_rio_grande
 		is_good = yes
 		
 		activation = {
@@ -753,7 +850,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_navajo_martial_law_02 = {
 		days_mission_timeout = 25
-		
+		icon = GFX_crush_navajo
 		is_good = yes
 		
 		activation = {
@@ -794,7 +891,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_pima_martial_law_02 = {
 		days_mission_timeout = 25
-		
+		icon = GFX_crush_pima
 		is_good = yes
 		
 		activation = {
@@ -835,7 +932,7 @@ MEX_seperatism_crisis = {
 	
 	MEX_yucatan_martial_law_02= {
 		days_mission_timeout = 25
-		
+		icon = GFX_crush_yucatan
 		is_good = yes
 		
 		activation = {

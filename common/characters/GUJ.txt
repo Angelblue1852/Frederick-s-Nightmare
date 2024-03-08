@@ -12,5 +12,31 @@ characters={
 			id = -1
 		}
 	}
+	GUJ_sayajirao_gaekwad_iii = {
+		name = "Sayajirao Gaekwad III" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUJ/GUJ_sayajirao_gaekwad_iii.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	GUJ_pratap_gaekwad = {
+		name = "Pratap Singh Rao Gaekwad" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUJ/GUJ_pratap_gaekwad.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
 }
 	

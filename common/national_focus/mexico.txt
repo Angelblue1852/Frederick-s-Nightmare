@@ -706,7 +706,7 @@ focus_tree = {
 	#Reinforce Anti-Imperialism
 	focus = {
 		id = MEX_reintegrate_texas
-		icon = texas
+		icon = GFX_MEX_intergrate_texas
 		
 		x = 5
 		y = 0

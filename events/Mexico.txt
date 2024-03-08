@@ -34,60 +34,37 @@ country_event = {
 	immediate = {
 		set_global_flag = texan_uprising
 		hidden_effect = {
-			add_political_power = -100
-			declare_war_on = { target = TEX type = annex_everything }
-			every_country = {
-				limit = { 
-					OR = { original_tag = USA original_tag = CAL } 
-					exists = yes 
-					is_subject = no
-				}
-				country_event = { id = MEX.3 days = 1 hours = 8 }
-			}
-			
-			TEX = { 
-				transfer_state = 375
-				country_event = { id = MEX.4 days = 100 }
-				load_oob = TEX_rebels
-				add_ideas = extensive_conscription
-				add_ideas = closed_economy
-				add_ideas = war_economy
-			}
-			MEX = {
-				set_province_controller = 10740
-				set_province_controller = 10894
-				set_province_controller = 5038
-				set_province_controller = 1954
-			}
 			news_event = { id = MEX_news.1 days = 1 }
 		}
 	}
 	
 	option = {
 		name = MEX.2.o1
-			add_political_power = -100
-			TEX = { transfer_state = 375 }
-			MEX = {
-				set_province_controller = 10740
-				set_province_controller = 10894
-				set_province_controller = 5038
-				set_province_controller = 1954
-			}
-			declare_war_on = { target = TEX type = annex_everything }
+		add_political_power = -100
+		TEX = {
+			transfer_state = 375
+			transfer_state = 943
+			transfer_state = 944
+		}
+		declare_war_on = {
+			target = TEX
+			type = annex_everything
+		}
 	}
 	
 	option = {
 		name = MEX.2.o2
-			add_political_power = -100
-			TEX = { transfer_state = 375 }
-			MEX = {
-				set_province_controller = 10740
-				set_province_controller = 10894
-				set_province_controller = 5038
-				set_province_controller = 1954
-			}
-			declare_war_on = { target = TEX type = annex_everything }
-		TEX = { change_tag_from = MEX }
+		add_political_power = -100
+		TEX = {
+			transfer_state = 375
+			transfer_state = 943
+			transfer_state = 944
+		}
+		declare_war_on = { target = TEX type = annex_everything }
+		declare_war_on = {
+			target = TEX
+			type = annex_everything
+		}
 	}
 }
 
@@ -317,5 +294,128 @@ country_event = {
 		}
 		add_political_power = 50
 		ai_chance = { base = 100 }
+	}
+}
+
+#Rio Grande Uprising
+country_event = {
+	id = MEX.10
+	title = MEX.10.t
+	desc = MEX.10.d
+	picture = GFX_report_event_mexican_civil_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = rio_grande_uprising
+	}
+	
+	option = {
+		name = MEX.10.o1
+		add_political_power = -100
+		RIG = {
+			transfer_state = 479
+			transfer_state = 480
+			transfer_state = 482
+		}
+		declare_war_on = {
+			target = RIG
+			type = annex_everything
+		}
+	}
+	
+	option = {
+		name = MEX.10.o2
+		add_political_power = -100
+		RIG = {
+			transfer_state = 479
+			transfer_state = 480
+			transfer_state = 482
+		}
+		declare_war_on = {
+			target = RIG
+			type = annex_everything
+		}
+		RIG = {
+			change_tag_from = MEX
+		}
+	}
+}
+
+#Navajo Uprising
+country_event = {
+	id = MEX.11
+	title = MEX.11.t
+	desc = MEX.11.d
+	picture = GFX_report_event_mexican_civil_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = navajo_uprising
+	}
+	
+	option = {
+		name = MEX.11.o1
+		add_political_power = -50
+		NVJ = {
+			transfer_state = 937
+		}
+		declare_war_on = {
+			target = NVJ
+			type = annex_everything
+		}
+	}
+}
+
+#Pima Uprising
+country_event = {
+	id = MEX.12
+	title = MEX.12.t
+	desc = MEX.12.d
+	picture = GFX_report_event_mexican_civil_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = navajo_uprising
+	}
+	
+	option = {
+		name = MEX.12.o1
+		add_political_power = -50
+		PIM = {
+			transfer_state = 377
+		}
+		declare_war_on = {
+			target = PIM
+			type = annex_everything
+		}
+	}
+}
+
+#Pima Uprising
+country_event = {
+	id = MEX.13
+	title = MEX.13.t
+	desc = MEX.13.d
+	picture = GFX_report_event_mexican_civil_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = navajo_uprising
+	}
+	
+	option = {
+		name = MEX.13.o1
+		add_political_power = -50
+		YUC = {
+			transfer_state = 474
+		}
+		declare_war_on = {
+			target = YUC
+			type = annex_everything
+		}
 	}
 }

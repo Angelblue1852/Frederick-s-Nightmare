@@ -17,6 +17,7 @@ replace_path="common/bop"
 replace_path="common/ai_templates"
 replace_path="common/characters"
 replace_path="history/general"
+replace_path="history/states"
 tags={
 	"Alternative History"
 	"Map"
