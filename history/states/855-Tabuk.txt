@@ -6,11 +6,12 @@ state={
 	history={
 		owner = TUR
 		add_core_of = SAU
+        add_core_of = JBL
 
 	}
 
 	provinces={
-		1033 2027 2095 8092 10835 
+		1033 2027 2033 2095 4981 7934 8092 10835 
 	}
 	manpower=500000
 	buildings_max_level_factor=1.000

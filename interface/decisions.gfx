@@ -608,7 +608,57 @@ spriteTypes = {
 
 
 	### decision icons
-
+	
+	spriteType = {
+		name = "GFX_crush_navajo"
+		texturefile = "gfx/interface/decisions/mexico/GFX_crush_navajo.png"
+	}
+	spriteType = {
+		name = "GFX_crush_pima"
+		texturefile = "gfx/interface/decisions/mexico/GFX_crush_pima.png"
+	}
+	spriteType = {
+		name = "GFX_crush_rio_grande"
+		texturefile = "gfx/interface/decisions/mexico/GFX_crush_rio_grande.png"
+	}
+	spriteType = {
+		name = "GFX_crush_texas"
+		texturefile = "gfx/interface/decisions/mexico/GFX_crush_texas.png"
+	}
+	spriteType = {
+		name = "GFX_crush_yucatan"
+		texturefile = "gfx/interface/decisions/mexico/GFX_crush_yucatan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_funding_navajo_bureucracy"
+		texturefile = "gfx/interface/decisions/mexico/GFX_funding_navajo_bureucracy.png"
+	}
+	spriteType = {
+		name = "GFX_funding_pima_bureucracy"
+		texturefile = "gfx/interface/decisions/mexico/GFX_funding_pima_bureucracy.png"
+	}
+	spriteType = {
+		name = "GFX_funding_rio_grande_bureucracy"
+		texturefile = "gfx/interface/decisions/mexico/GFX_funding_rio_grande_bureucracy.png"
+	}
+	spriteType = {
+		name = "GFX_funding_texas_bureucracy"
+		texturefile = "gfx/interface/decisions/mexico/GFX_funding_texas_bureucracy.png"
+	}
+	spriteType = {
+		name = "GFX_funding_yucatan_bureucracy"
+		texturefile = "gfx/interface/decisions/mexico/GFX_funding_yucatan_bureucracy.png"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_growing_agitation"
+		texturefile = "gfx/interface/decisions/mexico/GFX_growing_agitation.png"
+	}
+	
+	
+	
 	spriteType = {
 		name = "GFX_decision_unknown"
 		texturefile = "gfx/interface/decisions/decision_generic_decision.dds"

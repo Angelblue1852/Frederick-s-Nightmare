@@ -6,8 +6,11 @@ state={
 	history={
 		owner = TUR
 		add_core_of = SAU
+        add_core_of = JBL
+		add_core_of = JBL
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
 			12883 = {
 				naval_base = 5
 
@@ -17,11 +20,14 @@ state={
 		victory_points = {
 			12883 1 
 		}
+		victory_points = {
+			5037 5 
+		}
 
 	}
 
 	provinces={
-		1923 2033 4981 5006 5037 7934 8073 12883 
+		1923 5006 5037 8073 12883 
 	}
 	manpower=500000
 	buildings_max_level_factor=1.000

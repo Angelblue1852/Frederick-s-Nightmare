@@ -19,7 +19,10 @@
  
  india_hindu:0 "State of Bharat"
  india_hindu_DEF:0 "Bharat"
- india_hindu_ADJ:0 "Bharat"
+ india_hindu_ADJ:0 "Bharati"
+ india_hindu_communism:0 "Union of Bharatiya"
+ india_hindu_communism_DEF:0 "the Union of Bharatiya"
+ india_hindu_communism_ADJ:0 "Bharati"
  
  
  BRM_UK_neutrality:0 "British Burma"
