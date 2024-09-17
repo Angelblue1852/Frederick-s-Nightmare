@@ -25,15 +25,15 @@ on_actions = {
 	}
 	
 	on_startup = {
-			effect = {
-				every_country = {
-				meta_effect = {
-					text = {
-						[X] = { country_event = [X].1 }
-					}
-					X = "[This.GetTag]"
-				}
-			}
+			#effect = {
+			#	every_country = {
+			#	meta_effect = {
+			#		text = {
+			#			[X] = { country_event = [X].1 }
+			#		}
+			#		X = "[This.GetTag]"
+			#	}
+			#}
 			MEX = {
 				country_event = {
 					id = MEX.9

@@ -18,6 +18,7 @@ replace_path="common/ai_templates"
 replace_path="common/characters"
 replace_path="history/general"
 replace_path="history/states"
+replace_path="history/countries"
 tags={
 	"Alternative History"
 	"Map"
@@ -25,5 +26,5 @@ tags={
 	"National Focuses"
 }
 name="Fredricks Nightmare: A New Redux"
-supported_version="1.13.6"
+supported_version="1.14.8"
 remote_file_id="3112469836"
